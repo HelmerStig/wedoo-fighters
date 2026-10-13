@@ -1,0 +1,5 @@
+.runtime/
+sprite-agent/.venv/
+sprite-agent/__pycache__/
+sprite-agent/output/
+sprite-agent/tests/__pycache__/

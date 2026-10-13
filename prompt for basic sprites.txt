@@ -1,0 +1,3 @@
+Devo creare, un poersonaggio per un picchiaduro 16 bit (512px x 512px), il personaggio è l'immagine di riferimento 1,
+In posa di guardia, rivolto a destra, vista laterale. usa uno stile bit pixel art tipo Fatal fury, mantieni lo stile delle immagini di riferimento 1 e 2. Usa uno sfondo trasparente, il corpo dev'essere interamente visibile.
+Per il viso usa l'immagne di riferimento 2  per lo stile grafico usa l'immagine di riferimento 3.
