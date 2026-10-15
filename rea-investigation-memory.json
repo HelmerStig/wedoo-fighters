@@ -1,0 +1,2812 @@
+{
+  "updated_local_date": "2026-10-15",
+  "language": "it",
+  "goal": "Creare e usare un agente per sprite e animazioni tramite API ufficiali AutoSprite. Versione indipendente abbandonata su richiesta utente.",
+  "current_task": "Su richiesta utente Elisa caricata da PNG/Elisa.png tramite API ufficiale e assegnata alla guild esistente WEDOO tramite UI browser autenticata. Appartenenza verificata rileggendo personaggio e guild. Job API aggiornato al nuovo ID. Nessuna animazione generata.",
+  "browser": {
+    "cdp_endpoint": "http://127.0.0.1:9222",
+    "profile": "%TEMP%\\rea-ludo-profile",
+    "executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "note": "Usare la stessa finestra collegata a REA. In precedenza l'utente ha animato in un'altra finestra e chiuso quella osservata. Riscoprire sempre il target ID. Non chiudere, navigare o azionare la pagina senza considerare il lavoro preparato.",
+    "last_autosprite_check": "Pagina AutoSprite autenticata raggiungibile. Riscoprire target ID al prossimo turno."
+  },
+  "targets": {
+    "ludo": "https://app.ludo.ai/sprite-generator",
+    "autosprite": "https://www.autosprite.io/app"
+  },
+  "ludo_findings": {
+    "runtime_verified": [
+      "POST https://api.ludo.ai/api/jobs/generate-image-to-spritesheet: tentativo senza crediti HTTP 402.",
+      "Prova pugno accettata con HTTP 202. Risposta con campi jobId, status, queue_position, request_id, task_type, origin, description; valori dei payload non conservati dalla cattura passiva.",
+      "Richiesta con duration, frame_size, frames, hints (array di stringhe), image_type, initial_image_file (id,url,width,height), loop, margin_ratio_mode, model, request_id.",
+      "Editor: Hydra, massimo 36 frame, dimensione Max, loop Off. Costo visualizzato 9 crediti; saldo da 21 a 12.",
+      "Interfaccia successivamente Ready con una nuova miniatura. Non acquisito il contenuto del risultato mediante rete.",
+      "Analizzati 9 script caricati con REA. Nessuna identificazione confermata del modello AI sottostante."
+    ],
+    "evidence": {
+      "accepted_request": "ev_45b1ad26c422ffbd779940ded6e5fae41572bc19be0fee2286434403a8f24d44",
+      "ready_ui": "ev_f640ee23a7943b5a1bfbcc82580a49ea35c5b4d430029e5cd712f27d25462aae",
+      "insufficient_credits": "ev_bfff8b00de45fbe6583dbc9cd19c3ee5af61cb3ddde24315e72e0f40a00b5334",
+      "bundle_analysis": "ev_e199b5c08604ee09b059419061318576065d819580a5f99a8134b4a6e2810b7c"
+    },
+    "punch_prompt": "Side-view punch animation, facing right. The character starts in a fighting stance, pulls the fist back, throws one straight punch forward, then returns to the starting stance. Feet stay planted in the same position. Fixed camera, full body always visible, consistent character design, proportions, colors and outfit. No opponent, no camera movement, no zoom, no added effects.",
+    "uploaded_sheet": {
+      "original_dimensions_reported": [
+        3024,
+        3672
+      ],
+      "grid": [
+        6,
+        6
+      ],
+      "cell_dimensions_derived": [
+        504,
+        612
+      ],
+      "visual_observations": [
+        "36 frame, personaggio rivolto a destra",
+        "Watermark Ludo e sfondo viola visibili nell'anteprima",
+        "Molti frame simili all'inizio e alla fine",
+        "Possibile secondo colpo, assumendo lettura per righe; non verificato tramite riproduzione"
+      ],
+      "limits": [
+        "Anteprima ridimensionata; nessuna lettura del PNG originale su filesystem",
+        "Canale alpha e timing non verificati",
+        "Nessun JSON o video allegato"
+      ]
+    }
+  },
+  "autosprite_findings": {
+    "public_documentation_only": [
+      "Flusso personaggio -> richiesta animazioni -> job asincrono -> download PNG/atlas",
+      "REST API documentata https://www.autosprite.io/api/v1; integrazione MCP dichiarata",
+      "Supporto documentato per prompt e frame iniziale/finale personalizzati"
+    ],
+    "runtime": "Workflow POST /api/apiv5/workflows HTTP 201; polling GET /api/apiv5/workflows/{id}; preview pronta con sheet e video, campi atlasUrl, sheetUrl, frameCount, frameWidth, frameHeight, sourceVideoId e metadata.model. Payload conservati solo come forme/tipi. Costo osservato 5 crediti."
+  },
+  "next_steps": [
+    "Aprire AutoSprite nella finestra Chrome con debug attivo ed effettuare accesso PRO personalmente",
+    "Riscoprire pagina e verificare UI prima di chiedere Generate",
+    "Preparare preferibilmente stesso personaggio e stesso pugno per confronto",
+    "Avviare osservazione REA, poi invitare l'utente a un solo clic con costo visibile; non generare autonomamente nÃ© consumare crediti senza autorizzazione",
+    "Osservare accettazione, avanzamento, risultato e export; distinguere parametri osservati da inferenze",
+    "Definire agente con generatore sostituibile, controlli coerenza/allineamento, selezione frame, esportazione PNG+metadati"
+  ],
+  "limitations": [
+    "REA passivo conserva forme e tipi dei payload JSON, non valori, token o cookie",
+    "Le catture coprono solo le finestre temporali osservate; assenza di richieste non prova assenza di attivitÃ ",
+    "I nomi Hydra e Forge non identificano pesi o fornitori del modello",
+    "Questa memoria riassume la conversazione e gli ID, non contiene le catture complete; disponibilitÃ  futura degli ID non garantita"
+  ],
+  "autosprite_elisa_runtime": {
+    "date": "2026-10-15",
+    "evidence_id": "ev_aae9689225c506e4479ffeef21a69c9dd6fb05a9bfdf415d717e4d18dd6f5ed7",
+    "character": "Elisa",
+    "animation": "Light Punch",
+    "settings_observed": {
+      "frames": 49,
+      "frame_size": 512,
+      "ui_tier": "Turbo Â· 2s",
+      "credit_cost": 5,
+      "balance_before": 2374,
+      "balance_after": 2369
+    },
+    "creation": [
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows",
+        "status": 201,
+        "body_shapes": {
+          "status": "included",
+          "request": {
+            "root_type": "object",
+            "node_count": 24,
+            "max_depth_observed": 2,
+            "properties": [
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "animationId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "characterId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  }
+                ],
+                "types": [
+                  "object"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "animationActionPrompt"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFramePrompt"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFrameR2Key"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFrameTier"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "isAutoSpriteMode"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "isLooping"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "lastFramePrompt"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "lastFrameR2Key"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "name"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "useReferenceImage"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "videoDurationSec"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "withSound"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "quality"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  }
+                ],
+                "types": [
+                  "object"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "compression"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "frameSize"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "frames"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "mode"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "sharpen"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "videoTier"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              }
+            ]
+          },
+          "response": {
+            "root_type": "object",
+            "node_count": 4,
+            "max_depth_observed": 1,
+            "properties": [
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "creditCost"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "jobId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "videoId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "request_inventory": [
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows",
+        "method": "POST",
+        "status": 201
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/engagement",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32/animations",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32/animations",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32/spritesheets",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/api/apiv5/initial-data?limit=1",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/_next/static/chunks/bd904a5c.780b187e28965bc8.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/_next/static/chunks/b536a0f1.57ccf427041628b0.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/_next/static/chunks/6121.af50fd4b2caabf69.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/_next/static/chunks/3330.55eec8378f2507fa.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/_next/static/chunks/5992.e1437e92442b0782.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "url": "https://www.autosprite.io/_next/static/chunks/7876.006cb33a12490518.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+        "method": "GET",
+        "status": 200
+      }
+    ],
+    "preview_text": [
+      "Light Punch",
+      "WASD move Â· SHIFT run Â· SPACE jump Â· 1-9 abilities 1 â˜… Light Punch",
+      "Light Punch",
+      "Frame ",
+      "30",
+      "49",
+      "512",
+      "512",
+      "Frame ",
+      "30",
+      "49",
+      "512",
+      "512",
+      "Download Spritesheet",
+      "1 â˜… Light Punch",
+      "Elisa Elisa",
+      "Video",
+      "Generation info",
+      "Light Punch",
+      "Rebuild Sheet",
+      "Download Spritesheet",
+      "Light Punch",
+      "Elisa",
+      "Video",
+      "Light Punch",
+      "Elisa"
+    ],
+    "limitations": [
+      "Artifact identity is unavailable for this observation.",
+      "Observation starts when REA attaches; prior network and console activity is unavailable.",
+      "Raw network headers, bodies, cookies, storage values, console objects, and WebSocket payloads are never retained; explicitly requested primitive console text is retained verbatim, while payload captures retain value-free shapes.",
+      "Source maps are reported only as declarative URLs and are not fetched.",
+      "URL-less scripts and console events without an allowed source URL are excluded because their origin cannot be proven.",
+      "CDP discovery omitted the target attachment state; attached is reported as unknown.",
+      "Browser host platform and architecture were not observed."
+    ],
+    "unresolved": [
+      "Modello/provider effettivo dietro Turbo non identificato",
+      "Valori dei payload non acquisiti: forme JSON e UI soltanto",
+      "Interfaccia mostra Frame ... /30 (49); significato del contatore da verificare",
+      "PNG, atlas e video non ancora scaricati o analizzati"
+    ]
+  },
+  "autosprite_generation_info": {
+    "evidence_id": "ev_f225218bde7a6625dba6399146fdafff908f57875a0a4d7046f158091710dea8",
+    "character": "Elisa",
+    "animation": "Light Punch",
+    "source": "First frame",
+    "engine_displayed": "Turbo",
+    "duration_seconds": 2,
+    "loop_setup": "First = last frame",
+    "sheet_frame_width": 512,
+    "sheet_frame_height": 512,
+    "sheet_frames": 49,
+    "generation_elapsed_seconds_displayed": 47,
+    "first_frame_note": "Idle pose",
+    "last_frame_note": "Same as first frame (loop)",
+    "limitations": [
+      "Generation info conferma Turbo come etichetta UI, non identifica provider o modello sottostante.",
+      "49 frame confermati nella UI; conteggio e alpha del PNG non ancora verificati.",
+      "First=last e una condizione dei keyframe, non prova un ciclo visivo perfetto."
+    ]
+  },
+  "autosprite_sheet_visual_review": {
+    "source": "Immagine allegata in chat, ispezione visiva",
+    "original_dimensions_reported": [
+      3584,
+      3584
+    ],
+    "grid": [
+      7,
+      7
+    ],
+    "cell_dimensions_derived": [
+      512,
+      512
+    ],
+    "observations": [
+      "49 celle in griglia 7x7, coerenti con Generation info.",
+      "Effetti luminosi/proiettili visibili pur avendo richiesto no added effects.",
+      "Assumendo lettura per righe, sono visibili due estensioni del pugno separate da un rientro in guardia.",
+      "Un effetto appare troncato al bordo destro di una cella nella seconda e terza riga.",
+      "Ultime tre righe di pose visivamente molto simili alla guardia.",
+      "Aspetto del personaggio abbastanza coerente; nessun watermark visibile nell anteprima.",
+      "Sfondo verde uniforme visibile nell anteprima."
+    ],
+    "limitations": [
+      "Anteprima ridimensionata da 3584 a 1600 pixel; PNG originale non letto dal filesystem.",
+      "Trasparenza e differenze pixel tra frame non misurate.",
+      "Ordine di riproduzione e timing non confermati da atlas o video.",
+      "Due secondi e 49 frame non bastano a dedurre FPS effettivi."
+    ]
+  },
+  "autosprite_atlas_review": {
+    "source": "Atlas JSON fornito dall utente",
+    "frame_count": 49,
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "grid_order": "Da sinistra a destra, poi riga successiva; verificata formula x=(i%7)*512, y=floor(i/7)*512",
+    "grid_validation_errors": 0,
+    "sheet_width": 3584,
+    "sheet_height": 3584,
+    "frame_width": 512,
+    "frame_height": 512,
+    "per_frame_duration_values": [
+      1
+    ],
+    "duration_s": 2.333,
+    "background_mode": "default",
+    "derived_uniform_fps": 21.00300042863266,
+    "derived_uniform_frame_ms": 47.61224489795919,
+    "timing_limits": [
+      "duration:1 non specifica unita o semantica nel file; non interpretare come un secondo.",
+      "FPS circa 21 solo se tutti i 49 frame sono riprodotti uniformemente in 2.333s.",
+      "Generation info riportava 2s e la preview /30(49): corrispondenza ancora non verificata.",
+      "background_mode:default non prova la presenza o assenza di alpha."
+    ]
+  },
+  "autosprite_pro_review": {
+    "date": "2026-10-15",
+    "character": "Elisa",
+    "animation": "Light Punch",
+    "tier_ui": "Pro",
+    "duration_ui_seconds": 2,
+    "sheet_settings": {
+      "frames": 49,
+      "frameSize": 512
+    },
+    "cost_observed": 5,
+    "balance_before": 2369,
+    "balance_after": 2364,
+    "evidence_ids": {
+      "before": "ev_69aaa80885f98723f940f02b17e0c06fd680469a915322bcc9c8ca6d2d41d2ed",
+      "request": "ev_28c0ee1d77f239838677cdec64748ca57eb963e6962c1b327565c96faa25702f",
+      "preview": "ev_d30a5c43e375add980a61d5dbc85f51313767fcb917d3e26876d520ab24da7a2"
+    },
+    "creation": [
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows",
+        "status": 201,
+        "body_shapes": {
+          "status": "included",
+          "request": {
+            "root_type": "object",
+            "node_count": 16,
+            "max_depth_observed": 2,
+            "properties": [
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "animationId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "characterId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  }
+                ],
+                "types": [
+                  "object"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFrameTier"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "name"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "videoDurationSec"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "withSound"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "quality"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  }
+                ],
+                "types": [
+                  "object"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "compression"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "frameSize"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "frames"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "mode"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "sharpen"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "videoTier"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              }
+            ]
+          },
+          "response": {
+            "root_type": "object",
+            "node_count": 4,
+            "max_depth_observed": 1,
+            "properties": [
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "creditCost"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "jobId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "videoId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "observed_flow": [
+      "POST /api/apiv5/workflows HTTP201",
+      "GET /api/apiv5/workflows/{job} polling HTTP200",
+      "Characters/animations/spritesheets refreshed",
+      "Preview version2/2"
+    ],
+    "preview": {
+      "range_start": 0,
+      "range_end": 43,
+      "displayed_count": 44,
+      "sheet_cells": 49,
+      "frame_size": 512,
+      "speed_fps_current": 48,
+      "reset_label": 24,
+      "unsaved": true
+    },
+    "limits": [
+      "Valori dei payload JSON non acquisiti dalla cattura passiva",
+      "Config Pro omette animationActionPrompt, first/lastFrameR2Key e isLooping presenti nella richiesta Turbo. Recupero di configurazione salvata e un'ipotesi da verificare, non prova di equivalenza degli input.",
+      "Generation info Pro, durata export, modello sottostante e qualita visiva ancora non verificati",
+      "48 FPS e valore UI corrente con modifiche non salvate, non default confermato del motore Pro"
+    ],
+    "generation_info": {
+      "evidence_id": "ev_14f37915eebfd9023a53266c08636791d97e7aadbf2bbc99a7bc1c136cef09d0",
+      "version": "2 of 2",
+      "engine_displayed": "Turbo",
+      "tier_selected_before_generation": "Pro",
+      "duration_seconds": 2,
+      "sheet_frames": 49,
+      "frame_size": 512,
+      "first_frame_note": "Idle pose",
+      "last_frame_note": "Same as first frame (loop)",
+      "prompt_matches_turbo_text": true,
+      "elapsed_seconds_displayed": 66,
+      "discrepancy": "Selettore prima della generazione mostrava Pro, ma Generation info della versione2 mostra Engine Turbo. Non stabilito se etichetta obsoleta, metadati errati, fallback o effettivo stesso motore."
+    }
+  },
+  "autosprite_pro_files_review": {
+    "source_directory": "C:\\Users\\o.bresolin\\Desktop\\test",
+    "png": {
+      "width": 3584,
+      "height": 3584,
+      "bit_depth": 8,
+      "color_type": 3,
+      "alpha_pixel_counts": {
+        "transparent": 11711074,
+        "partial": 106485,
+        "opaque": 1027497
+      },
+      "top_left_rgba": [
+        71,
+        112,
+        76,
+        0
+      ],
+      "unique_frame_pixels": 49,
+      "identical_frame_groups": [],
+      "frame_alpha_bounds": [
+        {
+          "index": 0,
+          "bbox": [
+            161,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 1,
+          "bbox": [
+            160,
+            127,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 2,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 3,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 4,
+          "bbox": [
+            160,
+            127,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 5,
+          "bbox": [
+            160,
+            128,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 6,
+          "bbox": [
+            160,
+            129,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 7,
+          "bbox": [
+            160,
+            130,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 8,
+          "bbox": [
+            160,
+            132,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 9,
+          "bbox": [
+            160,
+            134,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 10,
+          "bbox": [
+            160,
+            134,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 11,
+          "bbox": [
+            160,
+            133,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 12,
+          "bbox": [
+            160,
+            131,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 13,
+          "bbox": [
+            160,
+            130,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 14,
+          "bbox": [
+            160,
+            128,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 15,
+          "bbox": [
+            160,
+            127,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 16,
+          "bbox": [
+            160,
+            126,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 17,
+          "bbox": [
+            160,
+            126,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 18,
+          "bbox": [
+            160,
+            126,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 19,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 20,
+          "bbox": [
+            160,
+            128,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 21,
+          "bbox": [
+            160,
+            130,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 22,
+          "bbox": [
+            160,
+            132,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 23,
+          "bbox": [
+            161,
+            133,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 24,
+          "bbox": [
+            160,
+            134,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 25,
+          "bbox": [
+            162,
+            134,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 26,
+          "bbox": [
+            162,
+            134,
+            364,
+            431
+          ]
+        },
+        {
+          "index": 27,
+          "bbox": [
+            163,
+            135,
+            392,
+            431
+          ]
+        },
+        {
+          "index": 28,
+          "bbox": [
+            162,
+            135,
+            406,
+            431
+          ]
+        },
+        {
+          "index": 29,
+          "bbox": [
+            163,
+            135,
+            412,
+            431
+          ]
+        },
+        {
+          "index": 30,
+          "bbox": [
+            163,
+            136,
+            411,
+            431
+          ]
+        },
+        {
+          "index": 31,
+          "bbox": [
+            163,
+            136,
+            409,
+            431
+          ]
+        },
+        {
+          "index": 32,
+          "bbox": [
+            162,
+            136,
+            405,
+            431
+          ]
+        },
+        {
+          "index": 33,
+          "bbox": [
+            162,
+            137,
+            400,
+            431
+          ]
+        },
+        {
+          "index": 34,
+          "bbox": [
+            161,
+            136,
+            394,
+            431
+          ]
+        },
+        {
+          "index": 35,
+          "bbox": [
+            162,
+            135,
+            385,
+            430
+          ]
+        },
+        {
+          "index": 36,
+          "bbox": [
+            161,
+            134,
+            377,
+            430
+          ]
+        },
+        {
+          "index": 37,
+          "bbox": [
+            161,
+            133,
+            368,
+            431
+          ]
+        },
+        {
+          "index": 38,
+          "bbox": [
+            161,
+            132,
+            358,
+            431
+          ]
+        },
+        {
+          "index": 39,
+          "bbox": [
+            160,
+            130,
+            350,
+            431
+          ]
+        },
+        {
+          "index": 40,
+          "bbox": [
+            161,
+            129,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 41,
+          "bbox": [
+            161,
+            129,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 42,
+          "bbox": [
+            160,
+            128,
+            349,
+            431
+          ]
+        },
+        {
+          "index": 43,
+          "bbox": [
+            160,
+            128,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 44,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 45,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 46,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 47,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        },
+        {
+          "index": 48,
+          "bbox": [
+            160,
+            127,
+            349,
+            430
+          ]
+        }
+      ]
+    },
+    "video": {
+      "tracks": [
+        {
+          "type": "vide",
+          "timescale": 12288,
+          "duration_ticks": 25088,
+          "duration_seconds": 2.0416666666666665,
+          "sample_count": 49,
+          "sample_duration_ticks": 25088,
+          "average_fps": 24,
+          "codec": "avc1",
+          "width": 640,
+          "height": 640
+        }
+      ]
+    },
+    "atlas": {
+      "frame_count": 49,
+      "meta": {
+        "size": {
+          "w": 3584,
+          "h": 3584
+        },
+        "frame_size": {
+          "w": 512,
+          "h": 512
+        },
+        "background_mode": "default",
+        "duration_s": 2.042
+      }
+    },
+    "limitations": [
+      "Analisi locale dei file, non evidenza REA del modello generativo.",
+      "Hash dei frame confronta indici di palette nello stesso file.",
+      "Alpha bounding boxes includono anche pixel debolmente opachi."
+    ],
+    "comparison": {
+      "original_atlas_duration_s": 2.333,
+      "new_atlas_duration_s": 2.042,
+      "new_grid_errors": 0,
+      "new_video_duration_s": 2.0416666666666665,
+      "new_video_fps": 24,
+      "alpha_confirmed": true,
+      "visual_observations": [
+        "Foglio versione2 mostra un solo pugno seguito da rientro in guardia, con ordine per righe confermato dall atlas.",
+        "Non visibili effetti luminosi/proiettili della versione1.",
+        "Molti frame iniziali simili alla guardia; 49 frame tutti distinti pixel per pixel.",
+        "Alpha0 nel pixel di sfondo verde dimostra che il verde visibile nell anteprima non e uno sfondo opaco in quel pixel."
+      ],
+      "limitations": [
+        "Modello/provider non identificato. Generation info resta Turbo nonostante selezione Pro.",
+        "Due risultati singoli non stabiliscono superiorita generale di una modalita.",
+        "FPS24 confermati soltanto per MP4 versione2; non assegnarli automaticamente alla versione1."
+      ]
+    }
+  },
+  "autosprite_ultra_review": {
+    "date": "2026-10-15",
+    "character": "Elisa",
+    "animation_ui": "Light punch Ultra",
+    "tier_selected": "Ultra",
+    "duration_selected_seconds": 2,
+    "settings_ui": {
+      "frames": 49,
+      "frame_size": 512
+    },
+    "cost_observed": 20,
+    "balance_before": 2364,
+    "balance_after": 2344,
+    "evidence_ids": {
+      "before": "ev_bd349e0eec7f0a7a34176e0705f00c6e92e73be1d1e18655a49049c752949f59",
+      "creation": "ev_98b0171a7083ee2603be8e0d62005c172046b7fd99abde30a666cdd624bdf103",
+      "preview": "ev_e8ae434848d71fad19010c59cec64e124ce057714441e3f9930741813ec53882"
+    },
+    "creation_requests": [
+      {
+        "url": "https://www.autosprite.io/api/apiv5/workflows",
+        "status": 201,
+        "body_shapes": {
+          "status": "included",
+          "request": {
+            "root_type": "object",
+            "node_count": 23,
+            "max_depth_observed": 2,
+            "properties": [
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "animationId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "characterId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  }
+                ],
+                "types": [
+                  "object"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "animationActionPrompt"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFramePrompt"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFrameR2Key"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "firstFrameTier"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "isAutoSpriteMode"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "isLooping"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "lastFramePrompt"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "lastFrameR2Key"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "name"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "videoDurationSec"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "config"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "withSound"
+                  }
+                ],
+                "types": [
+                  "boolean"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "quality"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  }
+                ],
+                "types": [
+                  "object"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "compression"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "frameSize"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "frames"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "mode"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "spritesheetSettings"
+                  },
+                  {
+                    "kind": "property",
+                    "name": "sharpen"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "videoTier"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              }
+            ]
+          },
+          "response": {
+            "root_type": "object",
+            "node_count": 4,
+            "max_depth_observed": 1,
+            "properties": [
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "creditCost"
+                  }
+                ],
+                "types": [
+                  "number"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "jobId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              },
+              {
+                "path": [
+                  {
+                    "kind": "property",
+                    "name": "videoId"
+                  }
+                ],
+                "types": [
+                  "string"
+                ],
+                "observations": 1
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "preview": {
+      "available": true,
+      "frame_counter_denominator": 47,
+      "sheet_cells": 49,
+      "frame_size": 512,
+      "unsaved_playback": true,
+      "unmute_button_present": true
+    },
+    "limitations": [
+      "Generation info non ancora acquisita per Ultra",
+      "Valori dei payload non conservati: tipi/forme soltanto",
+      "Due animazioni elencate nella preview; pannello corrente mostra Light punch Ultra",
+      "Configurazione input/primo/ultimo frame da confrontare in Generation info",
+      "Qualita e alpha/timing output non verificati senza nuovi export"
+    ],
+    "generation_info": {
+      "evidence_id": "ev_761fb9e2262595c0f614946432f0b6b683b3a4ff481c7dcd0a8e7418c34717ae",
+      "animation": "Light punch Ultra",
+      "character": "Elisa",
+      "source": "First frame",
+      "engine_displayed": "Ultra",
+      "duration_seconds": 2,
+      "loop_setup": "First = last frame",
+      "sound": "On",
+      "frame_width": 512,
+      "frame_height": 512,
+      "sheet_frames": 49,
+      "elapsed_seconds_displayed": 59,
+      "prompt_matches_previous_visible_text": true,
+      "first_frame_note": "Idle pose",
+      "last_frame_note": "Same as first frame (loop)",
+      "limitations": [
+        "Ultra e etichetta UI confermata, non identificazione del provider o dei pesi.",
+        "Sound On e una differenza di configurazione da considerare nel confronto.",
+        "Contenuti dei file non ancora analizzati."
+      ]
+    }
+  },
+  "autosprite_ultra_files_review": {
+    "source_directory": "C:\\Users\\o.bresolin\\Desktop\\test-ultra",
+    "png": {
+      "width": 3584,
+      "height": 3584,
+      "bit_depth": 8,
+      "color_type": 3,
+      "alpha_pixel_counts": {
+        "transparent": 11621835,
+        "partial": 104960,
+        "opaque": 1118261
+      },
+      "top_left_rgba": [
+        71,
+        112,
+        76,
+        0
+      ],
+      "unique_frame_pixels": 49,
+      "identical_frame_groups": [],
+      "frame_alpha_bounds": [
+        {
+          "index": 0,
+          "bbox": [
+            158,
+            125,
+            351,
+            434
+          ]
+        },
+        {
+          "index": 1,
+          "bbox": [
+            159,
+            125,
+            351,
+            433
+          ]
+        },
+        {
+          "index": 2,
+          "bbox": [
+            159,
+            125,
+            351,
+            434
+          ]
+        },
+        {
+          "index": 3,
+          "bbox": [
+            159,
+            125,
+            358,
+            434
+          ]
+        },
+        {
+          "index": 4,
+          "bbox": [
+            159,
+            126,
+            370,
+            434
+          ]
+        },
+        {
+          "index": 5,
+          "bbox": [
+            160,
+            128,
+            391,
+            434
+          ]
+        },
+        {
+          "index": 6,
+          "bbox": [
+            159,
+            131,
+            408,
+            434
+          ]
+        },
+        {
+          "index": 7,
+          "bbox": [
+            159,
+            134,
+            420,
+            434
+          ]
+        },
+        {
+          "index": 8,
+          "bbox": [
+            160,
+            135,
+            419,
+            434
+          ]
+        },
+        {
+          "index": 9,
+          "bbox": [
+            160,
+            135,
+            419,
+            434
+          ]
+        },
+        {
+          "index": 10,
+          "bbox": [
+            160,
+            135,
+            420,
+            434
+          ]
+        },
+        {
+          "index": 11,
+          "bbox": [
+            160,
+            135,
+            417,
+            434
+          ]
+        },
+        {
+          "index": 12,
+          "bbox": [
+            159,
+            134,
+            408,
+            435
+          ]
+        },
+        {
+          "index": 13,
+          "bbox": [
+            157,
+            134,
+            383,
+            434
+          ]
+        },
+        {
+          "index": 14,
+          "bbox": [
+            156,
+            133,
+            363,
+            435
+          ]
+        },
+        {
+          "index": 15,
+          "bbox": [
+            155,
+            132,
+            352,
+            433
+          ]
+        },
+        {
+          "index": 16,
+          "bbox": [
+            154,
+            131,
+            352,
+            434
+          ]
+        },
+        {
+          "index": 17,
+          "bbox": [
+            154,
+            132,
+            367,
+            434
+          ]
+        },
+        {
+          "index": 18,
+          "bbox": [
+            153,
+            133,
+            403,
+            433
+          ]
+        },
+        {
+          "index": 19,
+          "bbox": [
+            153,
+            133,
+            422,
+            433
+          ]
+        },
+        {
+          "index": 20,
+          "bbox": [
+            153,
+            133,
+            421,
+            434
+          ]
+        },
+        {
+          "index": 21,
+          "bbox": [
+            153,
+            133,
+            422,
+            434
+          ]
+        },
+        {
+          "index": 22,
+          "bbox": [
+            153,
+            133,
+            422,
+            433
+          ]
+        },
+        {
+          "index": 23,
+          "bbox": [
+            154,
+            133,
+            411,
+            434
+          ]
+        },
+        {
+          "index": 24,
+          "bbox": [
+            153,
+            131,
+            388,
+            433
+          ]
+        },
+        {
+          "index": 25,
+          "bbox": [
+            155,
+            128,
+            350,
+            433
+          ]
+        },
+        {
+          "index": 26,
+          "bbox": [
+            158,
+            125,
+            364,
+            434
+          ]
+        },
+        {
+          "index": 27,
+          "bbox": [
+            158,
+            125,
+            403,
+            434
+          ]
+        },
+        {
+          "index": 28,
+          "bbox": [
+            158,
+            127,
+            419,
+            434
+          ]
+        },
+        {
+          "index": 29,
+          "bbox": [
+            158,
+            128,
+            412,
+            434
+          ]
+        },
+        {
+          "index": 30,
+          "bbox": [
+            158,
+            128,
+            411,
+            434
+          ]
+        },
+        {
+          "index": 31,
+          "bbox": [
+            158,
+            128,
+            412,
+            434
+          ]
+        },
+        {
+          "index": 32,
+          "bbox": [
+            158,
+            128,
+            412,
+            434
+          ]
+        },
+        {
+          "index": 33,
+          "bbox": [
+            158,
+            128,
+            412,
+            434
+          ]
+        },
+        {
+          "index": 34,
+          "bbox": [
+            158,
+            129,
+            412,
+            435
+          ]
+        },
+        {
+          "index": 35,
+          "bbox": [
+            158,
+            129,
+            412,
+            434
+          ]
+        },
+        {
+          "index": 36,
+          "bbox": [
+            158,
+            129,
+            412,
+            434
+          ]
+        },
+        {
+          "index": 37,
+          "bbox": [
+            158,
+            127,
+            409,
+            434
+          ]
+        },
+        {
+          "index": 38,
+          "bbox": [
+            159,
+            127,
+            409,
+            433
+          ]
+        },
+        {
+          "index": 39,
+          "bbox": [
+            160,
+            125,
+            392,
+            434
+          ]
+        },
+        {
+          "index": 40,
+          "bbox": [
+            160,
+            125,
+            392,
+            434
+          ]
+        },
+        {
+          "index": 41,
+          "bbox": [
+            159,
+            125,
+            378,
+            434
+          ]
+        },
+        {
+          "index": 42,
+          "bbox": [
+            159,
+            125,
+            373,
+            434
+          ]
+        },
+        {
+          "index": 43,
+          "bbox": [
+            159,
+            125,
+            362,
+            434
+          ]
+        },
+        {
+          "index": 44,
+          "bbox": [
+            158,
+            125,
+            356,
+            434
+          ]
+        },
+        {
+          "index": 45,
+          "bbox": [
+            159,
+            125,
+            351,
+            434
+          ]
+        },
+        {
+          "index": 46,
+          "bbox": [
+            158,
+            125,
+            351,
+            434
+          ]
+        },
+        {
+          "index": 47,
+          "bbox": [
+            158,
+            125,
+            351,
+            434
+          ]
+        },
+        {
+          "index": 48,
+          "bbox": [
+            158,
+            125,
+            351,
+            433
+          ]
+        }
+      ]
+    },
+    "video": {
+      "present": true,
+      "tracks": [
+        {
+          "type": "vide",
+          "timescale": 12288,
+          "duration_ticks": 25088,
+          "duration_seconds": 2.0416666666666665,
+          "sample_count": 49,
+          "sample_duration_ticks": 25088,
+          "average_fps": 24,
+          "codec": "avc1",
+          "width": 544,
+          "height": 544
+        },
+        {
+          "type": "soun",
+          "timescale": 44100,
+          "duration_ticks": 91061,
+          "duration_seconds": 2.064875283446712,
+          "sample_count": 89,
+          "sample_duration_ticks": 91061,
+          "average_fps": 43.10187676392748,
+          "codec": "mp4a"
+        }
+      ]
+    },
+    "audio": {
+      "mp3_present": true,
+      "content_analyzed": false
+    },
+    "atlas": {
+      "frame_count": 49,
+      "meta": {
+        "size": {
+          "w": 3584,
+          "h": 3584
+        },
+        "frame_size": {
+          "w": 512,
+          "h": 512
+        },
+        "background_mode": "default",
+        "duration_s": 2.042
+      }
+    },
+    "limitations": [
+      "Analisi locale dei file, non evidenza REA del modello generativo.",
+      "Hash dei frame confronta indici di palette nello stesso file.",
+      "Alpha bounding boxes includono anche pixel debolmente opachi."
+    ],
+    "comparison": {
+      "atlas_equals_pro": true,
+      "grid_validation_errors": 0,
+      "visual_observations": [
+        "Ordine per righe confermato. Foglio Ultra mostra tre estensioni del pugno con rientri intermedi, non un singolo colpo.",
+        "Nessun effetto luminoso/proiettile visibile, a differenza della prima prova Turbo.",
+        "Busto e postura ruotano e si spostano maggiormente rispetto al foglio versione2 selezionata Pro.",
+        "Aspetto generale di Elisa riconoscibile."
+      ],
+      "quality_assessment": "In questa singola prova la versione2 selezionata Pro aderisce meglio al requisito di un solo pugno; Ultra costa4volte e non e automaticamente migliore.",
+      "limits": [
+        "Audio MP3 presente; metadati audio MP4 acquisiti, ma contenuto sonoro non ascoltato e sincronizzazione percettiva non verificata.",
+        "Video Ultra confermato49frame24FPS2.041667s,544x544. Durata traccia audio2.064875s; tempi dei campioni non equivalgono a sincronizzazione percepita.",
+        "Provider del modello non identificato; confronto qualitativo limitato a un esempio per modalita."
+      ]
+    },
+    "audio_review": {
+      "mp3_present": true,
+      "mp4_now_present": true,
+      "mp4_audio_codec": "mp4a",
+      "mp4_audio_timescale": 44100,
+      "mp4_audio_track_duration_s": 2.064875283446712,
+      "video_duration_s": 2.0416666666666665,
+      "video_fps": 24,
+      "video_dimensions": [
+        544,
+        544
+      ],
+      "content_listened": false,
+      "synchronization_verified": false
+    }
+  },
+  "independent_agent": {
+    "root": "C:\\wedoo-fighters\\sprite-agent",
+    "stage": "Prima versione indipendente implementata e pipeline verificata. Qualita del pugno non pronta.",
+    "backend": "ComfyUI locale + Wan2.2 TI2V5B, nessuna chiamata AutoSprite/Ludo",
+    "runtime": "C:\\wedoo-fighters\\.runtime\\comfy-venv\\Scripts\\python.exe",
+    "endpoint": "http://127.0.0.1:8188",
+    "commands": [
+      "serve",
+      "doctor",
+      "plan",
+      "generate",
+      "resume",
+      "export",
+      "review"
+    ],
+    "launchers": [
+      "sprite-agent\\run.cmd",
+      "sprite-agent\\start-comfy.cmd"
+    ],
+    "model_files_preexisting": true,
+    "tests_passed": 9,
+    "outputs": [
+      "frames PNG RGBA",
+      "spritesheet.png",
+      "atlas.json con FPS/duration_ms",
+      "preview.webp",
+      "preview.mp4",
+      "quality.json"
+    ],
+    "first_real_test": "17frame256px4step: pipeline completata, respinta per deformazioni",
+    "second_real_test": "49frame512px20step: pipeline completata, respinta per quasiidle e flicker",
+    "decode_check": "VAEDecode standard su stesso latent, sampler riusato dalla cache1..9; stesso difetto visivo. Decoder standard ora default.",
+    "pending": "Nessun job da completare. Seconda generazione completata: movimento presente ma calcio aggiunto e piedi mobili, respinta.",
+    "limitations": [
+      "Nessun vincolo sull ultimo frame con Wan5B",
+      "Nessuna generazione audio",
+      "Nessuna verifica semantica automatica; revisione visiva registrata separatamente",
+      "Nessuna interfaccia conversazionaleLLM incorporata; orchestratoreCLI richiamabile da assistente tramite AGENT.md",
+      "Integrazione API AutoSprite richiesta per fase successiva, non implementata"
+    ],
+    "validation": {
+      "date": "2026-10-15",
+      "automated_tests": {
+        "command": "python -m unittest discover -s tests -v",
+        "passed": 9,
+        "failed": 0
+      },
+      "backend": "Local ComfyUI + Wan2.2 TI2V5B",
+      "real_gpu_runs": [
+        {
+          "directory": "output\\elisa-smoke-01",
+          "frames": 17,
+          "fps": 24,
+          "duration_s": 0.7083333333333334,
+          "sheet_size": [
+            1280,
+            1024
+          ],
+          "transparent": true,
+          "visual_review": {
+            "decision": "reject",
+            "notes": "Prova ridotta4step: forti deformazioni, non utilizzabile.",
+            "at": "2026-10-15T09:36:30.650611+00:00"
+          }
+        },
+        {
+          "directory": "output\\elisa-punch-01",
+          "frames": 49,
+          "fps": 24,
+          "duration_s": 2.0416666666666665,
+          "sheet_size": [
+            3584,
+            3584
+          ],
+          "transparent": true,
+          "visual_review": {
+            "decision": "reject",
+            "notes": "Animazione quasi idle, non esegue il pugno richiesto; variazioni periodiche di colore. Verificare decodifica.",
+            "at": "2026-10-15T09:36:30.205537+00:00"
+          }
+        },
+        {
+          "directory": "output\\elisa-punch-decode-01",
+          "frames": 49,
+          "fps": 24,
+          "duration_s": 2.0416666666666665,
+          "sheet_size": [
+            3584,
+            3584
+          ],
+          "transparent": true,
+          "visual_review": {
+            "decision": "reject",
+            "notes": "La decodifica standard conserva le variazioni e il movimento quasi idle: non e un problema risolto dal decoder.",
+            "at": "2026-10-15T09:38:19.201325+00:00"
+          }
+        },
+        {
+          "directory": "output\\elisa-punch-motion-01",
+          "frames": 49,
+          "fps": 24,
+          "duration_s": 2.0416666666666665,
+          "sheet_size": [
+            3584,
+            3584
+          ],
+          "transparent": true,
+          "visual_review": {
+            "decision": "reject",
+            "notes": "Movimento evidente ma aggiunge un calcio, cambia postura e sposta i piedi; non rispetta un pugno singolo con piedi piantati. Richiede migliore controllo delle pose.",
+            "at": "2026-10-15T09:50:21.472561+00:00"
+          }
+        }
+      ],
+      "orchestration_verified": true,
+      "production_quality_approved": false,
+      "next_work": "Migliorare il controllo delle pose e del movimento; API AutoSprite in fase successiva.",
+      "limits": [
+        "Nessun vincolo su frame finale",
+        "Nessun audio generato",
+        "Revisione semantica visiva, non automatica",
+        "Qualita del pugno non ancora soddisfacente"
+      ]
+    },
+    "status": "removed_by_user_request",
+    "removed_on": "2026-10-15",
+    "next_work": "Abbandonato: usare autosprite-agent API",
+    "output_files_present": false
+  },
+  "api_agent": {
+    "directory": "C:\\wedoo-fighters\\autosprite-agent",
+    "status": "implemented_and_readonly_verified",
+    "runtime": "Node >=22, nessuna dipendenza",
+    "base_url": "https://www.autosprite.io/api/v1",
+    "authentication": "AUTOSPRITE_API_KEY environment variable; value never stored",
+    "features": [
+      "account",
+      "paginated characters",
+      "upload PNG",
+      "catalog",
+      "poses",
+      "sheets",
+      "recent jobs",
+      "plan",
+      "batch generation",
+      "persistent manifest",
+      "resume without resubmission",
+      "PNG atlas audio download with bounds checks"
+    ],
+    "live_verification": {
+      "date": "2026-10-15",
+      "authenticated": true,
+      "characters_count": 12,
+      "elisa_present": false,
+      "existing_download_sheet_id": "cmv98ott6008zqounefyx9jks",
+      "existing_download_character": "Oscare",
+      "png_size": [
+        3584,
+        2560
+      ],
+      "frames": 34,
+      "new_generations": 0,
+      "credits_spent": 0
+    },
+    "important_findings": [
+      "Pro durationSec=2 selects legacy Turbo: use 4s for current Pro.",
+      "Ultra does not honor last frame or seamless loops.",
+      "Public API account differs from earlier browser account: Elisa absent.",
+      "Never retry generation POST automatically: uncertain submissions require checking jobs."
+    ],
+    "next_step": "Elisa pronta nella guild WEDOO; attendere richiesta di animazione.",
+    "sources": [
+      "https://www.autosprite.io/docs/api",
+      "https://www.autosprite.io/docs/api-spritesheets",
+      "https://www.autosprite.io/docs/api-jobs"
+    ],
+    "tests": {
+      "passed": 11,
+      "failed": 0,
+      "command": "node --test autosprite-agent/test/agent.test.mjs"
+    },
+    "elisa": {
+      "id": "cmv9dyrs900045e49mr49cdz9",
+      "name": "Elisa",
+      "guildId": "cmv6isuc9000a8evgfug6p59n",
+      "guildName": "WEDOO",
+      "source": "PNG/Elisa.png",
+      "verifiedAt": "2026-10-15T10:23:51.560Z"
+    }
+  }
+}

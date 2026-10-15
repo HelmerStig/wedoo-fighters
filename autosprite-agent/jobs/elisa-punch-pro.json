@@ -1,0 +1,20 @@
+{
+  "characterId": "cmv9dyrs900045e49mr49cdz9",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Single Punch API",
+        "rawPrompt": true,
+        "loop": false,
+        "prompt": "Fixed side view, facing right. Keep the same character, outfit, proportions and scale. Begin in idle fighting guard. Perform exactly one quick straight punch with the front arm, retract it, then return to the initial idle guard. Both feet stay planted. No kicks, no second strike, no projectiles, no fire, no visual effects. Static camera, full body visible, no zoom or translation."
+      }
+    ]
+  }
+}

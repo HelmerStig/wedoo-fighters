@@ -1,0 +1,701 @@
+﻿{
+    "date":  "2026-10-15",
+    "evidence_id":  "ev_aae9689225c506e4479ffeef21a69c9dd6fb05a9bfdf415d717e4d18dd6f5ed7",
+    "character":  "Elisa",
+    "animation":  "Light Punch",
+    "settings_observed":  {
+                              "frames":  49,
+                              "frame_size":  512,
+                              "ui_tier":  "Turbo Â· 2s",
+                              "credit_cost":  5,
+                              "balance_before":  2374,
+                              "balance_after":  2369
+                          },
+    "creation":  [
+                     {
+                         "url":  "https://www.autosprite.io/api/apiv5/workflows",
+                         "status":  201,
+                         "body_shapes":  {
+                                             "status":  "included",
+                                             "request":  {
+                                                             "root_type":  "object",
+                                                             "node_count":  24,
+                                                             "max_depth_observed":  2,
+                                                             "properties":  [
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "animationId"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "characterId"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "object"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "animationActionPrompt"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "firstFramePrompt"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "firstFrameR2Key"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "firstFrameTier"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "isAutoSpriteMode"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "boolean"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "isLooping"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "boolean"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "lastFramePrompt"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "lastFrameR2Key"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "name"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "useReferenceImage"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "boolean"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "videoDurationSec"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "number"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "config"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "withSound"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "boolean"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "quality"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "spritesheetSettings"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "object"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "spritesheetSettings"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "compression"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "spritesheetSettings"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "frameSize"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "number"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "spritesheetSettings"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "frames"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "number"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "spritesheetSettings"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "mode"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "spritesheetSettings"
+                                                                                                 },
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "sharpen"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                },
+                                                                                {
+                                                                                    "path":  [
+                                                                                                 {
+                                                                                                     "kind":  "property",
+                                                                                                     "name":  "videoTier"
+                                                                                                 }
+                                                                                             ],
+                                                                                    "types":  [
+                                                                                                  "string"
+                                                                                              ],
+                                                                                    "observations":  1
+                                                                                }
+                                                                            ]
+                                                         },
+                                             "response":  {
+                                                              "root_type":  "object",
+                                                              "node_count":  4,
+                                                              "max_depth_observed":  1,
+                                                              "properties":  [
+                                                                                 {
+                                                                                     "path":  [
+                                                                                                  {
+                                                                                                      "kind":  "property",
+                                                                                                      "name":  "creditCost"
+                                                                                                  }
+                                                                                              ],
+                                                                                     "types":  [
+                                                                                                   "number"
+                                                                                               ],
+                                                                                     "observations":  1
+                                                                                 },
+                                                                                 {
+                                                                                     "path":  [
+                                                                                                  {
+                                                                                                      "kind":  "property",
+                                                                                                      "name":  "jobId"
+                                                                                                  }
+                                                                                              ],
+                                                                                     "types":  [
+                                                                                                   "string"
+                                                                                               ],
+                                                                                     "observations":  1
+                                                                                 },
+                                                                                 {
+                                                                                     "path":  [
+                                                                                                  {
+                                                                                                      "kind":  "property",
+                                                                                                      "name":  "videoId"
+                                                                                                  }
+                                                                                              ],
+                                                                                     "types":  [
+                                                                                                   "string"
+                                                                                               ],
+                                                                                     "observations":  1
+                                                                                 }
+                                                                             ]
+                                                          }
+                                         }
+                     }
+                 ],
+    "request_inventory":  [
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows",
+                                  "method":  "POST",
+                                  "status":  201
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/engagement",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32/animations",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/workflows/wf_7ee5925d-178d-4f1a-8e17-bc8e498735f0",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32/animations",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/characters/cmv9agfh60005xq0bw06vje32/spritesheets",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/api/apiv5/initial-data?limit=1",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/_next/static/chunks/bd904a5c.780b187e28965bc8.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/_next/static/chunks/b536a0f1.57ccf427041628b0.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/_next/static/chunks/6121.af50fd4b2caabf69.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/_next/static/chunks/3330.55eec8378f2507fa.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/_next/static/chunks/5992.e1437e92442b0782.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+                                  "method":  "GET",
+                                  "status":  200
+                              },
+                              {
+                                  "url":  "https://www.autosprite.io/_next/static/chunks/7876.006cb33a12490518.js?dpl=dpl_8H5qZ7gJszKXN4Ag6NiCeg4mMDCU",
+                                  "method":  "GET",
+                                  "status":  200
+                              }
+                          ],
+    "preview_text":  [
+                         "Light Punch",
+                         "WASD move Â· SHIFT run Â· SPACE jump Â· 1-9 abilities 1 â˜… Light Punch",
+                         "Light Punch",
+                         "Frame ",
+                         "30",
+                         "49",
+                         "512",
+                         "512",
+                         "Frame ",
+                         "30",
+                         "49",
+                         "512",
+                         "512",
+                         "Download Spritesheet",
+                         "1 â˜… Light Punch",
+                         "Elisa Elisa",
+                         "Video",
+                         "Generation info",
+                         "Light Punch",
+                         "Rebuild Sheet",
+                         "Download Spritesheet",
+                         "Light Punch",
+                         "Elisa",
+                         "Video",
+                         "Light Punch",
+                         "Elisa"
+                     ],
+    "limitations":  [
+                        "Artifact identity is unavailable for this observation.",
+                        "Observation starts when REA attaches; prior network and console activity is unavailable.",
+                        "Raw network headers, bodies, cookies, storage values, console objects, and WebSocket payloads are never retained; explicitly requested primitive console text is retained verbatim, while payload captures retain value-free shapes.",
+                        "Source maps are reported only as declarative URLs and are not fetched.",
+                        "URL-less scripts and console events without an allowed source URL are excluded because their origin cannot be proven.",
+                        "CDP discovery omitted the target attachment state; attached is reported as unknown.",
+                        "Browser host platform and architecture were not observed."
+                    ],
+    "unresolved":  [
+                       "Modello/provider effettivo dietro Turbo non identificato",
+                       "Valori dei payload non acquisiti: forme JSON e UI soltanto",
+                       "Interfaccia mostra Frame ... /30 (49); significato del contatore da verificare",
+                       "PNG, atlas e video non ancora scaricati o analizzati"
+                   ],
+    "generation_info":  {
+                            "evidence_id":  "ev_f225218bde7a6625dba6399146fdafff908f57875a0a4d7046f158091710dea8",
+                            "character":  "Elisa",
+                            "animation":  "Light Punch",
+                            "source":  "First frame",
+                            "engine_displayed":  "Turbo",
+                            "duration_seconds":  2,
+                            "loop_setup":  "First = last frame",
+                            "sheet_frame_width":  512,
+                            "sheet_frame_height":  512,
+                            "sheet_frames":  49,
+                            "generation_elapsed_seconds_displayed":  47,
+                            "first_frame_note":  "Idle pose",
+                            "last_frame_note":  "Same as first frame (loop)",
+                            "limitations":  [
+                                                "Generation info conferma Turbo come etichetta UI, non identifica provider o modello sottostante.",
+                                                "49 frame confermati nella UI; conteggio e alpha del PNG non ancora verificati.",
+                                                "First=last e una condizione dei keyframe, non prova un ciclo visivo perfetto."
+                                            ]
+                        },
+    "sheet_visual_review":  {
+                                "source":  "Immagine allegata in chat, ispezione visiva",
+                                "original_dimensions_reported":  [
+                                                                     3584,
+                                                                     3584
+                                                                 ],
+                                "grid":  [
+                                             7,
+                                             7
+                                         ],
+                                "cell_dimensions_derived":  [
+                                                                512,
+                                                                512
+                                                            ],
+                                "observations":  [
+                                                     "49 celle in griglia 7x7, coerenti con Generation info.",
+                                                     "Effetti luminosi/proiettili visibili pur avendo richiesto no added effects.",
+                                                     "Assumendo lettura per righe, sono visibili due estensioni del pugno separate da un rientro in guardia.",
+                                                     "Un effetto appare troncato al bordo destro di una cella nella seconda e terza riga.",
+                                                     "Ultime tre righe di pose visivamente molto simili alla guardia.",
+                                                     "Aspetto del personaggio abbastanza coerente; nessun watermark visibile nell anteprima.",
+                                                     "Sfondo verde uniforme visibile nell anteprima."
+                                                 ],
+                                "limitations":  [
+                                                    "Anteprima ridimensionata da 3584 a 1600 pixel; PNG originale non letto dal filesystem.",
+                                                    "Trasparenza e differenze pixel tra frame non misurate.",
+                                                    "Ordine di riproduzione e timing non confermati da atlas o video.",
+                                                    "Due secondi e 49 frame non bastano a dedurre FPS effettivi."
+                                                ]
+                            },
+    "atlas_review":  {
+                         "source":  "Atlas JSON fornito dall utente",
+                         "frame_count":  49,
+                         "indices":  [
+                                         0,
+                                         1,
+                                         2,
+                                         3,
+                                         4,
+                                         5,
+                                         6,
+                                         7,
+                                         8,
+                                         9,
+                                         10,
+                                         11,
+                                         12,
+                                         13,
+                                         14,
+                                         15,
+                                         16,
+                                         17,
+                                         18,
+                                         19,
+                                         20,
+                                         21,
+                                         22,
+                                         23,
+                                         24,
+                                         25,
+                                         26,
+                                         27,
+                                         28,
+                                         29,
+                                         30,
+                                         31,
+                                         32,
+                                         33,
+                                         34,
+                                         35,
+                                         36,
+                                         37,
+                                         38,
+                                         39,
+                                         40,
+                                         41,
+                                         42,
+                                         43,
+                                         44,
+                                         45,
+                                         46,
+                                         47,
+                                         48
+                                     ],
+                         "grid_order":  "Da sinistra a destra, poi riga successiva; verificata formula x=(i%7)*512, y=floor(i/7)*512",
+                         "grid_validation_errors":  0,
+                         "sheet_width":  3584,
+                         "sheet_height":  3584,
+                         "frame_width":  512,
+                         "frame_height":  512,
+                         "per_frame_duration_values":  [
+                                                           1
+                                                       ],
+                         "duration_s":  2.333,
+                         "background_mode":  "default",
+                         "derived_uniform_fps":  21.003000428632661808829832833,
+                         "derived_uniform_frame_ms":  47.612244897959183673469387755,
+                         "timing_limits":  [
+                                               "duration:1 non specifica unita o semantica nel file; non interpretare come un secondo.",
+                                               "FPS circa 21 solo se tutti i 49 frame sono riprodotti uniformemente in 2.333s.",
+                                               "Generation info riportava 2s e la preview /30(49): corrispondenza ancora non verificata.",
+                                               "background_mode:default non prova la presenza o assenza di alpha."
+                                           ]
+                     }
+}

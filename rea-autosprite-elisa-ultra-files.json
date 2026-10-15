@@ -1,0 +1,549 @@
+﻿{
+    "source_directory":  "C:\\Users\\o.bresolin\\Desktop\\test-ultra",
+    "png":  {
+                "width":  3584,
+                "height":  3584,
+                "bit_depth":  8,
+                "color_type":  3,
+                "alpha_pixel_counts":  {
+                                           "transparent":  11621835,
+                                           "partial":  104960,
+                                           "opaque":  1118261
+                                       },
+                "top_left_rgba":  [
+                                      71,
+                                      112,
+                                      76,
+                                      0
+                                  ],
+                "unique_frame_pixels":  49,
+                "identical_frame_groups":  [
+
+                                           ],
+                "frame_alpha_bounds":  [
+                                           {
+                                               "index":  0,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            351,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  1,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            351,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  2,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            351,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  3,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            358,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  4,
+                                               "bbox":  [
+                                                            159,
+                                                            126,
+                                                            370,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  5,
+                                               "bbox":  [
+                                                            160,
+                                                            128,
+                                                            391,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  6,
+                                               "bbox":  [
+                                                            159,
+                                                            131,
+                                                            408,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  7,
+                                               "bbox":  [
+                                                            159,
+                                                            134,
+                                                            420,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  8,
+                                               "bbox":  [
+                                                            160,
+                                                            135,
+                                                            419,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  9,
+                                               "bbox":  [
+                                                            160,
+                                                            135,
+                                                            419,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  10,
+                                               "bbox":  [
+                                                            160,
+                                                            135,
+                                                            420,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  11,
+                                               "bbox":  [
+                                                            160,
+                                                            135,
+                                                            417,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  12,
+                                               "bbox":  [
+                                                            159,
+                                                            134,
+                                                            408,
+                                                            435
+                                                        ]
+                                           },
+                                           {
+                                               "index":  13,
+                                               "bbox":  [
+                                                            157,
+                                                            134,
+                                                            383,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  14,
+                                               "bbox":  [
+                                                            156,
+                                                            133,
+                                                            363,
+                                                            435
+                                                        ]
+                                           },
+                                           {
+                                               "index":  15,
+                                               "bbox":  [
+                                                            155,
+                                                            132,
+                                                            352,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  16,
+                                               "bbox":  [
+                                                            154,
+                                                            131,
+                                                            352,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  17,
+                                               "bbox":  [
+                                                            154,
+                                                            132,
+                                                            367,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  18,
+                                               "bbox":  [
+                                                            153,
+                                                            133,
+                                                            403,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  19,
+                                               "bbox":  [
+                                                            153,
+                                                            133,
+                                                            422,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  20,
+                                               "bbox":  [
+                                                            153,
+                                                            133,
+                                                            421,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  21,
+                                               "bbox":  [
+                                                            153,
+                                                            133,
+                                                            422,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  22,
+                                               "bbox":  [
+                                                            153,
+                                                            133,
+                                                            422,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  23,
+                                               "bbox":  [
+                                                            154,
+                                                            133,
+                                                            411,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  24,
+                                               "bbox":  [
+                                                            153,
+                                                            131,
+                                                            388,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  25,
+                                               "bbox":  [
+                                                            155,
+                                                            128,
+                                                            350,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  26,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            364,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  27,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            403,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  28,
+                                               "bbox":  [
+                                                            158,
+                                                            127,
+                                                            419,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  29,
+                                               "bbox":  [
+                                                            158,
+                                                            128,
+                                                            412,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  30,
+                                               "bbox":  [
+                                                            158,
+                                                            128,
+                                                            411,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  31,
+                                               "bbox":  [
+                                                            158,
+                                                            128,
+                                                            412,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  32,
+                                               "bbox":  [
+                                                            158,
+                                                            128,
+                                                            412,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  33,
+                                               "bbox":  [
+                                                            158,
+                                                            128,
+                                                            412,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  34,
+                                               "bbox":  [
+                                                            158,
+                                                            129,
+                                                            412,
+                                                            435
+                                                        ]
+                                           },
+                                           {
+                                               "index":  35,
+                                               "bbox":  [
+                                                            158,
+                                                            129,
+                                                            412,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  36,
+                                               "bbox":  [
+                                                            158,
+                                                            129,
+                                                            412,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  37,
+                                               "bbox":  [
+                                                            158,
+                                                            127,
+                                                            409,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  38,
+                                               "bbox":  [
+                                                            159,
+                                                            127,
+                                                            409,
+                                                            433
+                                                        ]
+                                           },
+                                           {
+                                               "index":  39,
+                                               "bbox":  [
+                                                            160,
+                                                            125,
+                                                            392,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  40,
+                                               "bbox":  [
+                                                            160,
+                                                            125,
+                                                            392,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  41,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            378,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  42,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            373,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  43,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            362,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  44,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            356,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  45,
+                                               "bbox":  [
+                                                            159,
+                                                            125,
+                                                            351,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  46,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            351,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  47,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            351,
+                                                            434
+                                                        ]
+                                           },
+                                           {
+                                               "index":  48,
+                                               "bbox":  [
+                                                            158,
+                                                            125,
+                                                            351,
+                                                            433
+                                                        ]
+                                           }
+                                       ]
+            },
+    "video":  {
+                  "present":  true,
+                  "tracks":  [
+                                 {
+                                     "type":  "vide",
+                                     "timescale":  12288,
+                                     "duration_ticks":  25088,
+                                     "duration_seconds":  2.0416666666666665,
+                                     "sample_count":  49,
+                                     "sample_duration_ticks":  25088,
+                                     "average_fps":  24,
+                                     "codec":  "avc1",
+                                     "width":  544,
+                                     "height":  544
+                                 },
+                                 {
+                                     "type":  "soun",
+                                     "timescale":  44100,
+                                     "duration_ticks":  91061,
+                                     "duration_seconds":  2.064875283446712,
+                                     "sample_count":  89,
+                                     "sample_duration_ticks":  91061,
+                                     "average_fps":  43.10187676392748,
+                                     "codec":  "mp4a"
+                                 }
+                             ]
+              },
+    "audio":  {
+                  "mp3_present":  true,
+                  "content_analyzed":  false
+              },
+    "atlas":  {
+                  "frame_count":  49,
+                  "meta":  {
+                               "size":  {
+                                            "w":  3584,
+                                            "h":  3584
+                                        },
+                               "frame_size":  {
+                                                  "w":  512,
+                                                  "h":  512
+                                              },
+                               "background_mode":  "default",
+                               "duration_s":  2.042
+                           }
+              },
+    "limitations":  [
+                        "Analisi locale dei file, non evidenza REA del modello generativo.",
+                        "Hash dei frame confronta indici di palette nello stesso file.",
+                        "Alpha bounding boxes includono anche pixel debolmente opachi."
+                    ],
+    "comparison":  {
+                       "atlas_equals_pro":  true,
+                       "grid_validation_errors":  0,
+                       "visual_observations":  [
+                                                   "Ordine per righe confermato. Foglio Ultra mostra tre estensioni del pugno con rientri intermedi, non un singolo colpo.",
+                                                   "Nessun effetto luminoso/proiettile visibile, a differenza della prima prova Turbo.",
+                                                   "Busto e postura ruotano e si spostano maggiormente rispetto al foglio versione2 selezionata Pro.",
+                                                   "Aspetto generale di Elisa riconoscibile."
+                                               ],
+                       "quality_assessment":  "In questa singola prova la versione2 selezionata Pro aderisce meglio al requisito di un solo pugno; Ultra costa4volte e non e automaticamente migliore.",
+                       "limits":  [
+                                      "Audio MP3 presente; metadati audio MP4 acquisiti, ma contenuto sonoro non ascoltato e sincronizzazione percettiva non verificata.",
+                                      "Video Ultra confermato49frame24FPS2.041667s,544x544. Durata traccia audio2.064875s; tempi dei campioni non equivalgono a sincronizzazione percepita.",
+                                      "Provider del modello non identificato; confronto qualitativo limitato a un esempio per modalita."
+                                  ]
+                   },
+    "audio_review":  {
+                         "mp3_present":  true,
+                         "mp4_now_present":  true,
+                         "mp4_audio_codec":  "mp4a",
+                         "mp4_audio_timescale":  44100,
+                         "mp4_audio_track_duration_s":  2.0648752834467121,
+                         "video_duration_s":  2.0416666666666665,
+                         "video_fps":  24,
+                         "video_dimensions":  [
+                                                  544,
+                                                  544
+                                              ],
+                         "content_listened":  false,
+                         "synchronization_verified":  false
+                     }
+}

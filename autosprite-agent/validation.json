@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-15",
+  "live": {
+    "authentication": true,
+    "characters": 12,
+    "elisaFound": false,
+    "download": {
+      "sheetId": "cmv98ott6008zqounefyx9jks",
+      "width": 3584,
+      "height": 2560,
+      "frames": 34
+    }
+  },
+  "generationSubmitted": false,
+  "creditsSpent": 0,
+  "limitations": [
+    "Nuova generazione non ancora verificata live",
+    "Qualita mossa richiede revisione visiva",
+    "Elisa richiede altra chiave o upload nel conto attuale"
+  ],
+  "tests": {
+    "passed": 11,
+    "failed": 0,
+    "command": "node --test autosprite-agent/test/agent.test.mjs"
+  }
+}
