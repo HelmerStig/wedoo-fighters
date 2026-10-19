@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Idle Loop",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Seamless fighting idle loop starting and ending in the exact reference guard pose. Preserve pixel art, face, black outfit, proportions, scale and right-facing view. Gentle visible breathing, subtle torso and shoulder sway, small natural arm and fist movements while keeping both hands raised in guard. Soft rhythmic knee bends and ankle flexion; smoothly alternate weight between front and rear foot with slight heel lifts, feet staying in place. Stay alert and combat-ready. No attacks, walking, jumping or turning. Fixed camera, full body visible, no zoom, no effects."
+      }
+    ]
+  }
+}
