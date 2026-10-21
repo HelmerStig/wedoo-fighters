@@ -1,0 +1,28 @@
+WEDOO FIGHTERS - DEMO MOSSE
+
+Apri index.html nel browser: non servono installazioni o connessioni a Internet.
+Mantieni demo-moves accanto alle cartelle PNG e animation del repository.
+
+La pagina iniziale mostra i personaggi. Dal menu laterale o da una scheda si apre
+personaggio.html?id=nome-personaggio con le animazioni disponibili.
+
+Il player rispetta i frame esportati e la trasparenza. Tutte le animazioni sono
+riprodotte a 18 fps di base, indipendentemente dalla velocita salvata su AutoSprite.
+Sono disponibili pausa, avanzamento per frame, loop, velocita e sfondo.
+Quando il canvas ha il focus: Spazio per pausa/riproduzione, frecce per i frame.
+
+Catalogo aggiornato dai file locali:
+  node demo-moves/scripts/build-catalog.mjs
+
+Server locale facoltativo, dalla radice del repository:
+  node demo-moves/scripts/serve.mjs
+  Apri http://127.0.0.1:4173/demo-moves/
+
+Verifica dei dati, della riproduzione e dei percorsi:
+  node --test demo-moves/scripts/verify.test.cjs
+
+Anteprime dalla cartella PNG. Se manca un PNG, lo script di aggiornamento copia
+il riferimento originale gia scaricato da AutoSprite nella cartella assets.
+Gli spritesheet vengono caricati solo all'apertura dell'animazione.
+Il catalogo include gia tutti i rettangoli dei frame, cosi funziona anche tramite
+file locale senza richieste fetch bloccate dal browser.

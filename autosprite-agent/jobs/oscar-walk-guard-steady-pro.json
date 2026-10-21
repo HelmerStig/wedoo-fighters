@@ -1,0 +1,20 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "Guard Walk Steady Pro",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmveysix0000g5g1g5vakv945",
+      "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+      "prompt": "Oscar walks steadily to the right on a treadmill, slow walking cadence. Complete one left step AND one right step, repeating forward, never reversing. Each foot passes the other: heel lands ahead, planted foot moves backward, toe pushes off, knee swings forward. At least one foot always grounded. UPPER BODY: both fists stay beside cheeks, elbows tucked, guard raised throughout; no arm pumping. Upright torso, slight natural bob. Seamless loop, no pause. Locked camera, full body centered at reference scale and margins. Preserve face and outfit. No running, hopping, attacks, turns or sliding."
+    }]
+  }
+}

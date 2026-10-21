@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Guard Walk Pro",
+        "rawPrompt": true,
+        "loop": true,
+        "prompt": "Right-facing side-view fighting guard walk in place, seamless loop. Both fists stay raised protecting the face, elbows bent; preserve reference guard posture throughout. Repeat a controlled shuffle: lead foot steps forward, rear foot follows to restore stance. Feet never cross. Knees stay slightly bent with natural weight transfer. Legs must visibly step, not idle. Keep character centered with no drift. Start and end in exact reference guard. Preserve face, outfit, pixel scale and margins. Fixed camera, full body visible head to toe. No attacks, kicks, jumps, running, turns, effects or zoom.",
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "lastFramePoseId": "cmveysix0000g5g1g5vakv945"
+      }
+    ]
+  }
+}
