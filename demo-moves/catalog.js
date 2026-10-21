@@ -2940,30 +2940,12 @@ window.MOVES_CATALOG = {
               3072,
               512,
               512
-            ],
-            [
-              2048,
-              3072,
-              512,
-              512
-            ],
-            [
-              2560,
-              3072,
-              512,
-              512
-            ],
-            [
-              3072,
-              3072,
-              512,
-              512
             ]
           ],
           "frameWidth": 512,
           "frameHeight": 512,
-          "trimmed": false,
-          "baseFps": 23.996,
+          "trimmed": true,
+          "baseFps": 24,
           "savedSpeed": 1
         }
       ]
@@ -7331,8 +7313,8 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "baseFps": 23.996,
-          "savedSpeed": 1
+          "baseFps": 24,
+          "savedSpeed": 1.5
         }
       ]
     },

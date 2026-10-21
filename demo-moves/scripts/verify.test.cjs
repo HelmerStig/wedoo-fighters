@@ -19,6 +19,7 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
       const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
       for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
       assert.ok(effectiveFps(a,1)>0);
+      assert.equal(effectiveFps(a,1),18,c.name);
     }
   }
   assert.match(characters.find(c=>c.id==='oscar').thumbnail,/OSCARE\.png$/);
@@ -30,10 +31,11 @@ test('il loop usa solo i frame esportati e conserva il tempo frazionario',()=>{
   assert.equal(state.frame,0);assert.ok(Math.abs(state.remainder-(50-1000/24))<1e-8);assert.equal(state.ended,false);
   assert.equal(advance({frame:23,remainder:0},1000/24+1e-6,24,24,true).frame,0);
 });
-test('riproduzione singola e velocità salvata',()=>{
+test('riproduzione singola e base uniforme a 18 fps',()=>{
   assert.equal(advance({frame:46,remainder:0},200,24,48,false).frame,47);
   assert.equal(advance({frame:46,remainder:0},200,24,48,false).ended,true);
-  assert.equal(effectiveFps({baseFps:24,savedSpeed:1.5},.5),18);
+  assert.equal(effectiveFps({baseFps:24,savedSpeed:1.5},.5),9);
+  assert.equal(effectiveFps({baseFps:60,savedSpeed:2},1),18);
   assert.throws(()=>advance({frame:0,remainder:0},20,0,49,true));
 });
 test('il server locale serve la demo e protegge il resto del repository',async t=>{
