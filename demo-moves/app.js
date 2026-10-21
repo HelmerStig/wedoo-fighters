@@ -130,6 +130,8 @@
     slider.disabled = true; playButton.disabled = true; $('#step-button').disabled = true;
     canvas.width = animation.frameWidth; canvas.height = animation.frameHeight;
     $('#animation-title').textContent = animation.name;
+    $('#speed-select option[value="1"]').textContent = `1× · ${MovesCore.effectiveFps(animation,1)} fps`;
+    $('#speed-select').setAttribute('aria-label','Velocità rispetto a quella base');
     $('#version-tag').textContent = animation.trimmed ? 'TRIMMED' : 'COMPLETA';
     $('#info-frames').textContent = animation.frames.length;
     $('#info-size').textContent = `${animation.frameWidth} × ${animation.frameHeight}`;

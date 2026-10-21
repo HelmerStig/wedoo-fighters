@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Walk Full Stride v4",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Normal continuous forward WALK cycle facing right, animated in place. Take full alternating steps: left leg passes right, right leg passes left. Each foot lifts, swings forward, lands heel first, rolls to toes and pushes off behind. Clear passing poses and long natural strides, not shuffling or rocking. Keep the reference upper-body guard throughout: fists beside face, elbows bent, no arm swing or arm extension. Mild natural hip and torso bob. Seamless complete gait cycle, never reverse playback. Preserve face, black outfit, proportions and pixel art. Fixed camera, centered full body."
+      }
+    ]
+  }
+}

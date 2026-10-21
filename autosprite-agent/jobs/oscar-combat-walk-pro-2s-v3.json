@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Walk Guard Locked v3",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Continuous rightward walk on a treadmill, body centered, seamless full stride cycle. BOTH fists stay beside the cheeks for EVERY frame, matching reference guard. Elbows stay bent at a constant angle and tucked near ribs. Arms move only with torso: NO arm extension, punches, jabs, reaching or arm swing. Animate legs and hips: support foot moves LEFT relative to hips, lifts, recovers RIGHT and lands heel-to-toe; alternate legs continuously. Gentle torso bob. No backward steps or reversed playback. Preserve face, black outfit, proportions, pixel art, right-facing view. Fixed camera, full body."
+      }
+    ]
+  }
+}

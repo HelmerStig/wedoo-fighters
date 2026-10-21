@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Walk Forward Loop",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Seamless forward combat walk cycle, facing right, starting and ending in the reference guard. Animate in place, body centered, as if advancing right. Front foot steps forward then rear foot follows, preserving fighting stance without crossing legs. Clear foot lift, heel-to-toe contact, natural knee and ankle flexion, realistic weight transfer and gentle hip and torso bob. Hands stay raised protecting face; elbows and shoulders move subtly for balance. Preserve face, black outfit, proportions, scale and pixel art. Fixed side camera, full body visible. No attacks, running, jumping or turning."
+      }
+    ]
+  }
+}

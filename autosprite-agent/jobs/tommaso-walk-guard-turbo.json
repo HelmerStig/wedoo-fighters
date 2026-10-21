@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hx0l00001gk5qklnniyt5",
+  "request": {
+    "videoTier": "turbo",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Walk Guard",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmveyxp9r00f0rym9lvt97hym",
+        "prompt": "Profile view, facing east/right, WALKING IN PLACE treadmill-style, 2D side-scroller. Arms remain in guard while swinging; slight head and torso sway, relaxed walking, not running. No root motion: pelvis and hips fixed horizontally at center, constant size and position. Perfect continuous loop, first and last frames match. No reversal, boomerang, backward steps or sliding. Exactly six steps (three full strides) in two seconds at steady cadence. Static orthographic side camera, no pan, zoom or perspective change. Neutral gray background, no ground line or shadows."
+      }
+    ]
+  }
+}

@@ -6,8 +6,11 @@ Mantieni demo-moves accanto alle cartelle PNG e animation del repository.
 La pagina iniziale mostra i personaggi. Dal menu laterale o da una scheda si apre
 personaggio.html?id=nome-personaggio con le animazioni disponibili.
 
-Il player rispetta i frame esportati e la trasparenza. Tutte le animazioni sono
+Il player rispetta i frame esportati e la trasparenza. Le animazioni idle sono
 riprodotte a 18 fps di base, indipendentemente dalla velocita salvata su AutoSprite.
+Le animazioni walk sono riprodotte a 18 fps di base e usano solo i frame del
+taglio salvato su AutoSprite, dove presente. Il moltiplicatore di velocita
+salvato su AutoSprite e mostrato come informazione e non altera queste basi.
 Sono disponibili pausa, avanzamento per frame, loop, velocita e sfondo.
 Quando il canvas ha il focus: Spazio per pausa/riproduzione, frecce per i frame.
 

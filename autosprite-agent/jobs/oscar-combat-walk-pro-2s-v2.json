@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Walk Forward Loop v2",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Continuous rightward treadmill walk cycle in fighting guard. Body stays centered. Each planted foot travels LEFT relative to hips during support, then lifts and swings RIGHT to land ahead. Legs alternate this cycle continuously with heel-to-toe contact and knee flexion. Complete a full stride cycle, matching the starting gait phase seamlessly. Never reverse gait, step backward, rewind or rock forward then back. Hands guard face, subtle torso bob and weight transfer. Preserve reference face, black outfit, scale, pixel art and right-facing view. Fixed camera, full body. No attacks or jumps."
+      }
+    ]
+  }
+}

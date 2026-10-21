@@ -36,14 +36,29 @@ test('riproduzione singola e base uniforme a 18 fps',()=>{
   assert.equal(advance({frame:46,remainder:0},200,24,48,false).ended,true);
   assert.equal(effectiveFps({baseFps:24,savedSpeed:1.5},.5),9);
   assert.equal(effectiveFps({baseFps:60,savedSpeed:2},1),18);
+  assert.equal(effectiveFps({id:'walk',playbackFps:18,savedSpeed:2},1),18);
+  assert.equal(effectiveFps({id:'walk',playbackFps:18},.5),9);
   assert.throws(()=>advance({frame:0,remainder:0},20,0,49,true));
+});
+
+test('walk usa esattamente il taglio salvato e 18 fps',async()=>{
+  const {characters}=await catalog();
+  const manifest=JSON.parse(await fs.readFile(path.resolve(demo,'../animation/walk-manifest.json'),'utf8'));
+  assert.ok(manifest.items.length>=40);
+  for(const item of manifest.items){
+    const animation=characters.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='walk');
+    assert.equal(animation.name,'walk');assert.equal(effectiveFps(animation,1),18);
+    assert.equal(animation.frames.length,item.sourceEnd-item.sourceStart+1);
+    const atlas=JSON.parse(await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8'));
+    assert.equal(atlas.meta.source_frame_start,item.sourceStart);assert.equal(atlas.meta.source_frame_end,item.sourceEnd);
+  }
 });
 test('il server locale serve la demo e protegge il resto del repository',async t=>{
   const {createDemoServer}=await import('./serve.mjs');
   const server=createDemoServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));
   t.after(()=>new Promise(r=>server.close(r)));
   const base='http://127.0.0.1:'+server.address().port;
-  for(const route of ['/demo-moves/','/demo-moves/personaggio.html?id=antonino','/demo-moves/styles.css','/demo-moves/app.js','/demo-moves/catalog.js','/PNG/ALBERTO.png','/animation/mori/mori-idle.png']){
+  for(const route of ['/demo-moves/','/demo-moves/personaggio.html?id=antonino','/demo-moves/styles.css','/demo-moves/app.js','/demo-moves/catalog.js','/PNG/ALBERTO.png','/animation/mori/mori-idle.png','/animation/tommaso/tommaso-walk.png','/animation/tommaso/tommaso-walk.json']){
     const response=await fetch(base+route);assert.equal(response.status,200,route);await response.arrayBuffer();
   }
   assert.equal((await fetch(base+'/autosprite-agent/session.ps1')).status,403);

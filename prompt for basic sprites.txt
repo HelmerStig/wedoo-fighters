@@ -12,3 +12,8 @@ Anche piccoli movimenti delle gambe devono essere inclusi per rendere l'animazio
 Se vuoi anche cambiamento continuo del piede d'appoggio durante l'idle, può rendere l'animazione ancora più dinamica e realistica.
 
 VOrrei riutilizzare il prompt di oscar su autosprite: Combat Idle Dynamic Pro per creare animazioni simili per altri personaggi, mantenendo lo stesso stile e dinamica. Prova con Tommaso ad applicare gli stessi parametri per creare l'animazione. Pro - 2secondi
+
+Ora devo generare la camminata, inizierei da Oscar, partendo dalla posa di guardia come base reference. Deve essere un loop di 49 fotogrammi, con movimenti realistici delle gambe e del corpo, mantenendo l'aspetto pronto al combattimento.
+
+Ora ho salvato Walk Guard in nuove versioni per tutti, dove presenti scarica le versioni trimmed per avere solo i fotogrammi effettivamente utilizzati nell'animazione.
+Devo includere in demo-moves le nuove animazioni, come nome usa walk, walk deve andare a 24fps
