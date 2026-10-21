@@ -1,0 +1,19 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Victory Turbo 49 Centered v2",
+        "rawPrompt": true,
+        "prompt": "Compact victory for Oscar in 16-bit pixel art, right-facing side view, preserving exact identity, outfit, and proportions. Fixed camera, full body always visible, no zoom, no crop, no frame-edge contact. Keep scale close to idle: body about 340-360 px high inside 512x512, with stable margins like idle (top 80-100 px, bottom 70-90 px). Use restrained celebration: chest-level fist pump, subtle torso rhythm, small footwork and weight shifts. Avoid overhead arms. Transparent background."
+      }
+    ]
+  }
+}

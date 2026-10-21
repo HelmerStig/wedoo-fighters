@@ -15,7 +15,7 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
       const png=await fs.readFile(path.resolve(demo,decodeURIComponent(a.image)));
       const atlas=JSON.parse((await fs.readFile(path.resolve(demo,decodeURIComponent(a.atlas)),'utf8')).replace(/^\uFEFF/,''));
       assert.equal(a.frames.length,Object.keys(atlas.frames).length,c.name);
-      assert.equal(a.frames.length,atlas.meta.frame_count,c.name);
+      assert.equal(a.frames.length,atlas.meta?.frame_count??Object.keys(atlas.frames).length,c.name);
       const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
       for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
       assert.ok(effectiveFps(a,1)>0);
@@ -53,12 +53,24 @@ test('walk usa esattamente il taglio salvato e 18 fps',async()=>{
     assert.equal(atlas.meta.source_frame_start,item.sourceStart);assert.equal(atlas.meta.source_frame_end,item.sourceEnd);
   }
 });
+test('victory usa i frame esportati e 18 fps',async()=>{
+  const {characters}=await catalog();
+  const manifest=JSON.parse(await fs.readFile(path.resolve(demo,'../animation/victory-manifest.json'),'utf8'));
+  assert.equal(manifest.items.length,41);
+  for(const item of manifest.items){
+    const animation=characters.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='victory');
+    assert.equal(animation.name,'Victory');assert.equal(effectiveFps(animation,1),18);
+    assert.equal(animation.frames.length,item.frames);
+    const atlas=JSON.parse(await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8'));
+    assert.equal(atlas.meta?.frame_count??Object.keys(atlas.frames).length,item.frames);
+  }
+});
 test('il server locale serve la demo e protegge il resto del repository',async t=>{
   const {createDemoServer}=await import('./serve.mjs');
   const server=createDemoServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));
   t.after(()=>new Promise(r=>server.close(r)));
   const base='http://127.0.0.1:'+server.address().port;
-  for(const route of ['/demo-moves/','/demo-moves/personaggio.html?id=antonino','/demo-moves/styles.css','/demo-moves/app.js','/demo-moves/catalog.js','/PNG/ALBERTO.png','/animation/mori/mori-idle.png','/animation/tommaso/tommaso-walk.png','/animation/tommaso/tommaso-walk.json']){
+  for(const route of ['/demo-moves/','/demo-moves/personaggio.html?id=antonino','/demo-moves/styles.css','/demo-moves/app.js','/demo-moves/catalog.js','/PNG/ALBERTO.png','/animation/mori/mori-idle.png','/animation/tommaso/tommaso-walk.png','/animation/tommaso/tommaso-walk.json','/animation/tommaso/tommaso-victory.png','/animation/tommaso/tommaso-victory.json']){
     const response=await fetch(base+route);assert.equal(response.status,200,route);await response.arrayBuffer();
   }
   assert.equal((await fetch(base+'/autosprite-agent/session.ps1')).status,403);

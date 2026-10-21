@@ -17,3 +17,14 @@ Ora devo generare la camminata, inizierei da Oscar, partendo dalla posa di guard
 
 Ora ho salvato Walk Guard in nuove versioni per tutti, dove presenti scarica le versioni trimmed per avere solo i fotogrammi effettivamente utilizzati nell'animazione.
 Devo includere in demo-moves le nuove animazioni, come nome usa walk, walk deve andare a 24fps
+
+Perfetto, vorrei che implementassi per Oscar, su autosprite, l'animazione "Victory", già presente su autosprite, 49 frames in turbo
+
+per Angela usa "Victory" normale che ho creato su autosprite e non "Victory Turbo 49 Centered - ANGELA"
+
+
+Side-scrolling animation facing right (east). Camera locked, character centered with full body visible. Character performs the following action in place: character does a victory dance.Maintain constant camera distance and framing, no zoom, no crop, no tilt, no panning. Preserve the original sprite dimension. Keep feet fully visible at all times and avoid touching any frame edge. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout.
+
+Create a victory animation in 16-bit pixel art style while preserving Oscar's exact identity, outfit, proportions, and right-facing side view. Keep the full body visible in every frame with generous top and bottom margins inside 512x512. Maintain constant camera distance and framing, no zoom, no crop, no tilt, no panning. Keep feet fully visible at all times and avoid touching any frame edge. Movement should be celebratory but compact and controlled: confident arm raise, subtle torso rhythm, small footwork and weight shifts. Transparent background.
+
+Ho creato per tutti: Victory custom 2, solo per oscar si chiama "Victory custom", puoi scaricare tutti gli spritesheet e ed inserirli nella pagina demo-moves sotto la voce "Victory". Sempre a 18 fps.

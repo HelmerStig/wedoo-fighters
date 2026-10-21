@@ -1,0 +1,19 @@
+{
+  "characterId": "cmv9hwv09001us3clif88425m",
+  "request": {
+    "videoTier": "turbo",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Victory custom - Marco-Rossetti",
+        "rawPrompt": true,
+        "prompt": "Side-scrolling animation facing right (east). Camera locked, character centered with full body visible. Character performs the following action in place: character does a victory dance.Maintain constant camera distance and framing, no zoom, no crop, no tilt, no panning. Preserve the original sprite dimension. Keep feet fully visible at all times and avoid touching any frame edge. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout."
+      }
+    ]
+  }
+}

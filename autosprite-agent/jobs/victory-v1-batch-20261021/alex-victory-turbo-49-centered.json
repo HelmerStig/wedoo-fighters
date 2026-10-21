@@ -1,0 +1,19 @@
+{
+  "characterId": "cmv9hw437001x83r83e8e09hl",
+  "request": {
+    "videoTier": "turbo",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Victory Turbo 49 Centered - ALEX",
+        "rawPrompt": true,
+        "prompt": "Create a victory animation in 16-bit pixel art style while preserving Oscar's exact identity, outfit, proportions, and right-facing side view. Keep the full body visible in every frame with generous top and bottom margins inside 512x512. Maintain constant camera distance and framing, no zoom, no crop, no tilt, no panning. Keep feet fully visible at all times and avoid touching any frame edge. Movement should be celebratory but compact and controlled: confident arm raise, subtle torso rhythm, small footwork and weight shifts. Transparent background."
+      }
+    ]
+  }
+}
