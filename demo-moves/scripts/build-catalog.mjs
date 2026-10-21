@@ -40,7 +40,7 @@ for(const item of manifest.items){
 }
 characters.sort((a,b)=>new Intl.Collator('it',{sensitivity:'base',ignorePunctuation:true}).compare(a.name,b.name));
 const extraAnimations=[
-  {manifest:'walk-manifest.json',id:'walk',name:'walk',description:'Camminata in guardia'},
+  {manifest:'walk-manifest.json',id:'walk',name:'Walk',description:'Camminata in guardia'},
   {manifest:'victory-manifest.json',id:'victory',name:'Victory',description:'Mossa di vittoria'}
 ];
 for(const extra of extraAnimations){

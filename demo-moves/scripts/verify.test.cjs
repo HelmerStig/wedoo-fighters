@@ -47,7 +47,7 @@ test('walk usa esattamente il taglio salvato e 18 fps',async()=>{
   assert.ok(manifest.items.length>=40);
   for(const item of manifest.items){
     const animation=characters.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='walk');
-    assert.equal(animation.name,'walk');assert.equal(effectiveFps(animation,1),18);
+    assert.equal(animation.name,'Walk');assert.equal(effectiveFps(animation,1),18);
     assert.equal(animation.frames.length,item.sourceEnd-item.sourceStart+1);
     const atlas=JSON.parse(await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8'));
     assert.equal(atlas.meta.source_frame_start,item.sourceStart);assert.equal(atlas.meta.source_frame_end,item.sourceEnd);

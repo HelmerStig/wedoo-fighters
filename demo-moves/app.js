@@ -9,9 +9,15 @@
   }
   const characters = data.characters;
   const isDetail = document.body.dataset.page === 'character';
-  const selectedId = isDetail ? new URLSearchParams(location.search).get('id') : null;
+  const params = new URLSearchParams(location.search);
+  const storedAnimationId = (() => {
+    try { return sessionStorage.getItem('wedoo-last-animation'); }
+    catch { return null; }
+  })();
+  const selectedId = isDetail ? params.get('id') : null;
+  const selectedAnimationId = isDetail ? params.get('anim') : storedAnimationId;
   const selected = characters.find(c => c.id === selectedId);
-  const href = character => 'personaggio.html?id=' + encodeURIComponent(character.id);
+  const href = (character, animationId = selectedAnimationId) => 'personaggio.html?id=' + encodeURIComponent(character.id) + (animationId ? '&anim=' + encodeURIComponent(animationId) : '');
   const number = n => String(n).padStart(2, '0');
   const sidebar = $('#sidebar');
   sidebar.innerHTML = `
@@ -75,14 +81,14 @@
   $('#breadcrumb-name').textContent = selected.name;
   const position = characters.indexOf(selected);
   const previous = characters[position - 1], next = characters[position + 1];
-  const pager = (character, direction) => character ? `<a class="icon-button" href="${href(character)}" aria-label="${direction === '←' ? 'Precedente' : 'Successivo'}: ${escape(character.name)}">${direction}</a>` : `<span class="icon-button pager-disabled" aria-hidden="true">${direction}</span>`;
+  const pager = (character, direction) => character ? `<a class="icon-button" data-character-link="${escape(character.id)}" href="${href(character)}" aria-label="${direction === '←' ? 'Precedente' : 'Successivo'}: ${escape(character.name)}">${direction}</a>` : `<span class="icon-button pager-disabled" aria-hidden="true">${direction}</span>`;
   $('#character-detail').innerHTML = `
     <a class="back-link" href="index.html">← Torna al roster</a>
     <section class="detail-heading"><div><p class="eyebrow">PERSONAGGIO ${number(position + 1)} / ${number(characters.length)}</p><h1>${escape(selected.name.toUpperCase())}<span class="accent">.</span></h1><p class="intro">Esplora le mosse, osserva ogni frame.</p></div><nav class="character-pager" aria-label="Personaggio precedente e successivo">${pager(previous, '←')}${pager(next, '→')}</nav></section>
     <div class="detail-layout"><section class="player-panel" aria-label="Anteprima animazione"><div class="panel-header"><h2><span class="playing-dot" aria-hidden="true"></span><span id="animation-title">Idle</span></h2><span class="version-tag" id="version-tag"></span></div>
       <div class="stage" data-background="dark" aria-busy="true"><span class="stage-label">ANIMATION PREVIEW</span><canvas id="sprite-canvas" width="512" height="512" tabindex="0" role="img" aria-label="Animazione del personaggio ${escape(selected.name)}">Anteprima animata di ${escape(selected.name)}.</canvas><div class="stage-loading" role="status">Caricamento animazione…</div><div class="stage-error" role="alert" hidden></div></div>
       <div class="player-controls"><div class="timeline"><input id="frame-slider" type="range" min="0" max="0" value="0" step="1" aria-label="Seleziona un frame" disabled><span class="frame-counter" aria-hidden="true">00 / 00</span></div><div class="controls-row"><div class="transport"><button class="play-button" id="play-button" type="button" disabled>▶ Riproduci</button><button class="step-button" id="step-button" type="button" aria-label="Frame successivo" title="Frame successivo" disabled>▹|</button></div><label class="loop-control"><input type="checkbox" id="loop-toggle" checked> Loop</label><label class="speed-control">Velocità<select id="speed-select" aria-label="Velocità rispetto a quella salvata"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1? ? 18 fps</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div></div></section>
-      <aside class="animation-sidebar" aria-label="Animazioni e impostazioni"><div class="animation-navigation"><div class="animation-list-label"><span>ANIMAZIONI</span><span>${number(selected.animations.length)}</span></div><div id="animation-list"></div></div>
+      <aside class="animation-sidebar" aria-label="Animazioni e impostazioni"><div class="animation-navigation"><label class="move-picker" for="animation-select"><span>ANIMAZIONI</span><span>${number(selected.animations.length)}</span></label><select id="animation-select" aria-label="Seleziona l'animazione da visualizzare"></select></div>
       <section class="info-panel"><h3>Questa animazione</h3><dl><dt>Frame</dt><dd id="info-frames">—</dd><dt>Dimensioni frame</dt><dd id="info-size">—</dd><dt>Riproduzione</dt><dd id="info-fps">—</dd><dt>Velocità salvata</dt><dd id="info-speed">—</dd></dl></section>
       <section class="info-panel"><h3>Sfondo anteprima</h3><div class="swatches" role="group" aria-label="Sfondo dell'anteprima"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" title="Scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" title="Chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" title="Scacchi" aria-pressed="false"></button></div></section>
       <a class="download-button" id="download-png" download>Scarica spritesheet <span aria-hidden="true">↓</span></a><p class="keyboard-tip"><kbd>Spazio</kbd> riproduci / pausa<br><kbd>← →</kbd> scorri i frame nell'anteprima</p></aside></div>`;
@@ -92,6 +98,11 @@
   let animation, image, loaded = false, playing = false, frameState = {frame:0,remainder:0}, lastTime = null, loadId = 0;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fps = () => MovesCore.effectiveFps(animation, Number($('#speed-select').value));
+  function updateCharacterLinks(animationId) {
+    const linkFor = characterId => 'personaggio.html?id=' + encodeURIComponent(characterId) + '&anim=' + encodeURIComponent(animationId);
+    document.querySelectorAll('.character-nav [data-character]').forEach(link => link.href = linkFor(link.dataset.character));
+    document.querySelectorAll('.character-pager [data-character-link]').forEach(link => link.href = linkFor(link.dataset.characterLink));
+  }
   function draw() {
     if (!loaded) return;
     const [x,y,w,h] = animation.frames[frameState.frame];
@@ -139,7 +150,13 @@
     $('#download-png').href = animation.image;
     $('#download-png').download = `${selected.id}-${animation.id}.png`;
     updateFps();
-    document.querySelectorAll('[data-animation]').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.animation === animation.id)));
+    if ($('#animation-select').value !== animation.id) $('#animation-select').value = animation.id;
+    try { sessionStorage.setItem('wedoo-last-animation', animation.id); } catch {}
+    const url = new URL(location.href);
+    url.searchParams.set('id', selected.id);
+    url.searchParams.set('anim', animation.id);
+    history.replaceState(null, '', url.pathname + url.search);
+    updateCharacterLinks(animation.id);
     try {
       const nextImage = await new Promise((resolve,reject) => {
         const img = new Image(); img.onload = () => resolve(img); img.onerror = () => reject(new Error('Impossibile caricare lo spritesheet. Controlla che la cartella animation sia accanto a demo-moves.')); img.src = animation.image;
@@ -154,8 +171,11 @@
       $('.stage-loading').hidden = true; $('.stage-error').hidden = false; $('.stage-error').textContent = error.message; stage.setAttribute('aria-busy','false');
     }
   }
-  $('#animation-list').innerHTML = selected.animations.map(a => `<button class="animation-option" type="button" data-animation="${escape(a.id)}" aria-pressed="false"><span class="motion-icon" aria-hidden="true">◈</span><span><strong>${escape(a.name)}</strong><small>${escape(a.description)}</small></span><span class="animation-check" aria-hidden="true">✓</span></button>`).join('');
-  document.querySelectorAll('[data-animation]').forEach(button => button.addEventListener('click', () => openAnimation(selected.animations.find(a => a.id === button.dataset.animation))));
+  $('#animation-select').innerHTML = selected.animations.map(a => `<option value="${escape(a.id)}">${escape(a.name)}</option>`).join('');
+  $('#animation-select').addEventListener('change', () => {
+    const next = selected.animations.find(a => a.id === $('#animation-select').value);
+    if (next) openAnimation(next);
+  });
   playButton.addEventListener('click', () => {
     if (!playing && frameState.frame === animation.frames.length - 1 && !$('#loop-toggle').checked) { frameState = {frame:0,remainder:0}; draw(); }
     setPlaying(!playing);
@@ -175,5 +195,6 @@
   });
   const activeLink = sidebar.querySelector('[aria-current="page"]');
   if (activeLink) activeLink.scrollIntoView({block:'nearest'});
-  requestAnimationFrame(tick); openAnimation(selected.animations[0]);
+  const initialAnimation = selected.animations.find(a => a.id === selectedAnimationId) || selected.animations[0];
+  requestAnimationFrame(tick); openAnimation(initialAnimation);
 })();

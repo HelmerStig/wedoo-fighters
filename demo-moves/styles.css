@@ -14,3 +14,4 @@
 @media(max-width:700px){body.menu-open{overflow:hidden}}
 .sidebar .sidebar-close{display:none}
 @media(max-width:700px){body.menu-open .sidebar .sidebar-close{display:inline-grid}}
+.move-picker{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.move-picker span{font-size:9px;font-weight:700;letter-spacing:1.8px;color:var(--muted)}#animation-select{background:#20251f;border:1px solid var(--border);border-radius:7px;padding:8px 10px;width:100%}

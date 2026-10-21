@@ -316,7 +316,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/alberto/alberto-walk.png",
           "atlas": "../animation/alberto/alberto-walk.json",
@@ -1079,7 +1079,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/alex/alex-walk.png",
           "atlas": "../animation/alex/alex-walk.json",
@@ -1842,7 +1842,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/angela/angela-walk.png",
           "atlas": "../animation/angela/angela-walk.json",
@@ -2515,7 +2515,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/antonino/antonino-walk.png",
           "atlas": "../animation/antonino/antonino-walk.json",
@@ -3260,7 +3260,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/barbara-fiocca/barbara-fiocca-walk.png",
           "atlas": "../animation/barbara-fiocca/barbara-fiocca-walk.json",
@@ -4023,7 +4023,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/bonazzi/bonazzi-walk.png",
           "atlas": "../animation/bonazzi/bonazzi-walk.json",
@@ -4642,7 +4642,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/chiara-molina/chiara-molina-walk.png",
           "atlas": "../animation/chiara-molina/chiara-molina-walk.json",
@@ -5267,7 +5267,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/chiara-toniol/chiara-toniol-walk.png",
           "atlas": "../animation/chiara-toniol/chiara-toniol-walk.json",
@@ -6036,7 +6036,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/condello/condello-walk.png",
           "atlas": "../animation/condello/condello-walk.json",
@@ -6805,7 +6805,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/dino/dino-walk.png",
           "atlas": "../animation/dino/dino-walk.json",
@@ -7556,7 +7556,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/elisa/elisa-walk.png",
           "atlas": "../animation/elisa/elisa-walk.json",
@@ -8319,7 +8319,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/emma/emma-walk.png",
           "atlas": "../animation/emma/emma-walk.json",
@@ -8944,7 +8944,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/eros/eros-walk.png",
           "atlas": "../animation/eros/eros-walk.json",
@@ -9713,7 +9713,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/fabio-clara/fabio-clara-walk.png",
           "atlas": "../animation/fabio-clara/fabio-clara-walk.json",
@@ -10482,7 +10482,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/fara/fara-walk.png",
           "atlas": "../animation/fara/fara-walk.json",
@@ -11251,7 +11251,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/fra-amato/fra-amato-walk.png",
           "atlas": "../animation/fra-amato/fra-amato-walk.json",
@@ -12008,7 +12008,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/francesca-rivella/francesca-rivella-walk.png",
           "atlas": "../animation/francesca-rivella/francesca-rivella-walk.json",
@@ -12633,7 +12633,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/francesco-leoni/francesco-leoni-walk.png",
           "atlas": "../animation/francesco-leoni/francesco-leoni-walk.json",
@@ -13408,7 +13408,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/fra-tavarone/fra-tavarone-walk.png",
           "atlas": "../animation/fra-tavarone/fra-tavarone-walk.json",
@@ -14171,7 +14171,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/gennaro/gennaro-walk.png",
           "atlas": "../animation/gennaro/gennaro-walk.json",
@@ -14934,7 +14934,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/giordano/giordano-walk.png",
           "atlas": "../animation/giordano/giordano-walk.json",
@@ -15709,7 +15709,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/giorgio/giorgio-walk.png",
           "atlas": "../animation/giorgio/giorgio-walk.json",
@@ -16358,7 +16358,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/livio/livio-walk.png",
           "atlas": "../animation/livio/livio-walk.json",
@@ -17127,7 +17127,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/luana/luana-walk.png",
           "atlas": "../animation/luana/luana-walk.json",
@@ -17860,7 +17860,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/manu/manu-walk.png",
           "atlas": "../animation/manu/manu-walk.json",
@@ -18479,7 +18479,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/marco-balpo/marco-balpo-walk.png",
           "atlas": "../animation/marco-balpo/marco-balpo-walk.json",
@@ -19254,7 +19254,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/marco-rossetti/marco-rossetti-walk.png",
           "atlas": "../animation/marco-rossetti/marco-rossetti-walk.json",
@@ -20017,7 +20017,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/mario/mario-walk.png",
           "atlas": "../animation/mario/mario-walk.json",
@@ -20774,7 +20774,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/marsan/marsan-walk.png",
           "atlas": "../animation/marsan/marsan-walk.json",
@@ -21519,7 +21519,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/martini/martini-walk.png",
           "atlas": "../animation/martini/martini-walk.json",
@@ -22288,7 +22288,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/matteo/matteo-walk.png",
           "atlas": "../animation/matteo/matteo-walk.json",
@@ -22907,7 +22907,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/mike/mike-walk.png",
           "atlas": "../animation/mike/mike-walk.json",
@@ -23538,7 +23538,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/mori/mori-walk.png",
           "atlas": "../animation/mori/mori-walk.json",
@@ -24313,7 +24313,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/oscar/oscar-walk.png",
           "atlas": "../animation/oscar/oscar-walk.json",
@@ -25190,7 +25190,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/peirolo/peirolo-walk.png",
           "atlas": "../animation/peirolo/peirolo-walk.json",
@@ -25815,7 +25815,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/peppo/peppo-walk.png",
           "atlas": "../animation/peppo/peppo-walk.json",
@@ -26584,7 +26584,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/pippo/pippo-walk.png",
           "atlas": "../animation/pippo/pippo-walk.json",
@@ -27359,7 +27359,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/sboz/sboz-walk.png",
           "atlas": "../animation/sboz/sboz-walk.json",
@@ -28122,7 +28122,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/simona/simona-walk.png",
           "atlas": "../animation/simona/simona-walk.json",
@@ -28885,7 +28885,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/tommaso/tommaso-walk.png",
           "atlas": "../animation/tommaso/tommaso-walk.json",
@@ -29654,7 +29654,7 @@ window.MOVES_CATALOG = {
         },
         {
           "id": "walk",
-          "name": "walk",
+          "name": "Walk",
           "description": "Camminata in guardia",
           "image": "../animation/zichella/zichella-walk.png",
           "atlas": "../animation/zichella/zichella-walk.json",
