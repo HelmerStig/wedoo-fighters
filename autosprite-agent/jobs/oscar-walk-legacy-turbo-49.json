@@ -1,0 +1,18 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "walk",
+      "name": "Walk Legacy Turbo 49",
+      "loop": true,
+      "poseId": "cmveysix0000g5g1g5vakv945",
+      "lastFramePoseId": "cmveysix0000g5g1g5vakv945"
+    }]
+  }
+}

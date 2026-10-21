@@ -12,3 +12,5 @@
 .animation-option[aria-pressed="false"]{background:var(--surface);border-color:var(--border)}
 .animation-option[aria-pressed="false"] .animation-check{visibility:hidden}
 @media(max-width:700px){body.menu-open{overflow:hidden}}
+.sidebar .sidebar-close{display:none}
+@media(max-width:700px){body.menu-open .sidebar .sidebar-close{display:inline-grid}}

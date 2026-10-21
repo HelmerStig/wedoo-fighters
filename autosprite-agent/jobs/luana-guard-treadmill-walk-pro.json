@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwmqt004983r88g09f29g",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Guard Treadmill Walk Pro",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmvez7npg005i826w46mxql4i",
+        "lastFramePoseId": "cmvez7npg005i826w46mxql4i",
+        "prompt": "Right-facing (east) profile, 2D side-scrolling treadmill walk in place. Relaxed walk, not run. Natural arm movement, hands in guard; slight head and torso sway. Legs alternate continuously: each foot lifts, swings forward, plants, then travels backward while the other swings forward. No reversing or boomerang. No root motion: pelvis centered horizontally, fixed size and position. Seamless cycle, first and last pose match. Locked camera, full body visible. Plain grey background. No parallax, extra characters, props, attacks or jumps. Preserve outfit, scale, lighting and proportions."
+      }
+    ]
+  }
+}
