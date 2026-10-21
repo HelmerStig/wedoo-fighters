@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hw61a002583r8u5lff8oy",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Combat Idle Dynamic Pro",
+        "rawPrompt": true,
+        "loop": true,
+        "prompt": "Dynamic full-body fighting idle, seamless loop. Start and end in reference guard. Visible chest breathing; torso rocks forward/back, shoulders roll, elbows flex and guarded fists trace small circles. Hips shift weight rear-to-front-to-rear as BOTH knees bend and straighten rhythmically, making the whole body bob. Both feet stay grounded without sliding. Coordinate arms, trunk and legs throughout, not isolated foot tapping. Keep guard raised, face, reference outfit, pixel art and right-facing view. Match reference scale and framing. Fixed camera, no zoom. No attacks, steps, jumps or effects.",
+        "poseId": "cmvezgb9900chwo3i85sa3imk",
+        "lastFramePoseId": "cmvezgb9900chwo3i85sa3imk"
+      }
+    ]
+  }
+}

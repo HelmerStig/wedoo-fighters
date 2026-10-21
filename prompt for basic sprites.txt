@@ -5,3 +5,6 @@ Per il viso usa l'immagne di riferimento 2  per lo stile grafico usa l'immagine 
 Devo creare, uno stage per un picchiaduro 16 bit, l'ambientazione è qulla dell'immagine di riferimento 1.
 Ricrea l'ambiente usando uno stile 16 bit pixel art tipo Fatal fury
 
+Ho creato l'animazione: Combat Idle Dynamic Pro per Oscar (non Oscare) su autosprite.io, ora vorrei applicarla al perosonaggio Elisa
+
+Dynamic full-body fighting idle, seamless loop. Start and end in reference guard. Visible chest breathing; torso rocks forward/back, shoulders roll, elbows flex and guarded fists trace small circles. Hips shift weight rear-to-front-to-rear as BOTH knees bend and straighten rhythmically, making the whole body bob. Both feet stay grounded without sliding. Coordinate arms, trunk and legs throughout, not isolated foot tapping. Keep guard raised, face, black outfit, pixel art, scale and right-facing view. Fixed camera, full body visible. No attacks, steps, jumps or effects.
