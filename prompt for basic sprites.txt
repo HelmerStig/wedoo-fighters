@@ -10,3 +10,5 @@ Ora vorrei che caricassi come posa su outosprite, per i personaggi in: /PNG, i p
 Ora vorrei creare per Oscar (non Oscare), l'animazione di idle, deve partire dalla posa di guardia che trovi come base reference, deve essere un loop di 49 fotogrammi. E' un idle da combattimento, quindi respirazione, piccoli movimenti del corpo e delle braccia, mantenendo l'aspetto pronto al combattimento.
 Anche piccoli movimenti delle gambe devono essere inclusi per rendere l'animazione più realistica.
 Se vuoi anche cambiamento continuo del piede d'appoggio durante l'idle, può rendere l'animazione ancora più dinamica e realistica.
+
+VOrrei riutilizzare il prompt di oscar su autosprite: Combat Idle Dynamic Pro per creare animazioni simili per altri personaggi, mantenendo lo stesso stile e dinamica. Prova con Tommaso ad applicare gli stessi parametri per creare l'animazione. Pro - 2secondi
