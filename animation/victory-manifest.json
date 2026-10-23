@@ -422,6 +422,26 @@
       "sourceAnimationName": "Victory custom 2"
     },
     {
+      "character": "JERRY",
+      "characterId": "cmvkop6gq017x142gwof7kzeu",
+      "sourceSheetId": "cmvkpc51s01ir142g1qoaigrn",
+      "createdAt": "2026-10-23T08:22:22.864Z",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "sourceFrames": 49,
+      "frames": 49,
+      "columns": 7,
+      "rows": 7,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "speedMultiplier": 1,
+      "trimmed": false,
+      "png": "animation/jerry/jerry-victory.png",
+      "atlas": "animation/jerry/jerry-victory.json",
+      "pixelVerification": "downloadSheet validated",
+      "playbackFps": 18
+    },
+    {
       "character": "LIVIO",
       "characterId": "cmv9hwltm004583r8k33xnjju",
       "sourceSheetId": "cmvi92ayq0027ydshu6a74xck",

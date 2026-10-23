@@ -1,7 +1,7 @@
 {
-  "characters": 41,
+  "characters": 42,
   "trimmed": 35,
-  "complete": 6,
+  "complete": 7,
   "creditsUsed": 0,
   "items": [
     {
@@ -279,6 +279,23 @@
       "pixelVerification": "decoded RGBA SHA256"
     },
     {
+      "character": "FRA-TAVARONE",
+      "animation": "Combat Idle Dynamic Pro",
+      "sourceSheetId": "cmvhux24400mbreso55drkj0i",
+      "trimmed": true,
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "frames": 48,
+      "columns": 7,
+      "rows": 7,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "speedMultiplier": 1.5,
+      "png": "animation/fra-tavarone/fra-tavarone-idle.png",
+      "atlas": "animation/fra-tavarone/fra-tavarone-idle.json",
+      "pixelVerification": "decoded RGBA SHA256"
+    },
+    {
       "character": "FRANCESCA-RIVELLA",
       "animation": "Combat Idle Dynamic Pro",
       "sourceSheetId": "cmvhuwcw100zou7eshwprjyg5",
@@ -310,23 +327,6 @@
       "speedMultiplier": 1.5,
       "png": "animation/francesco-leoni/francesco-leoni-idle.png",
       "atlas": "animation/francesco-leoni/francesco-leoni-idle.json",
-      "pixelVerification": "decoded RGBA SHA256"
-    },
-    {
-      "character": "FRA-TAVARONE",
-      "animation": "Combat Idle Dynamic Pro",
-      "sourceSheetId": "cmvhux24400mbreso55drkj0i",
-      "trimmed": true,
-      "sourceStart": 0,
-      "sourceEnd": 47,
-      "frames": 48,
-      "columns": 7,
-      "rows": 7,
-      "frameWidth": 512,
-      "frameHeight": 512,
-      "speedMultiplier": 1.5,
-      "png": "animation/fra-tavarone/fra-tavarone-idle.png",
-      "atlas": "animation/fra-tavarone/fra-tavarone-idle.json",
       "pixelVerification": "decoded RGBA SHA256"
     },
     {
@@ -379,6 +379,23 @@
       "png": "animation/giorgio/giorgio-idle.png",
       "atlas": "animation/giorgio/giorgio-idle.json",
       "pixelVerification": "identical source file SHA256"
+    },
+    {
+      "character": "JERRY",
+      "animation": "Combat Idle Dynamic Pro",
+      "sourceSheetId": "cmvkp2idm00dyb8dlzt1bwobn",
+      "trimmed": false,
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "frames": 49,
+      "columns": 7,
+      "rows": 7,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "speedMultiplier": 2,
+      "png": "animation/jerry/jerry-idle.png",
+      "atlas": "animation/jerry/jerry-idle.json",
+      "pixelVerification": "downloadSheet validated"
     },
     {
       "character": "LIVIO",

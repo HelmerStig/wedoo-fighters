@@ -1,5 +1,5 @@
 Devo creare, un poersonaggio per un picchiaduro 16 bit (512px x 512px), il personaggio è l'immagine di riferimento 1,
-In posa di guardia, rivolto a destra, vista laterale. usa uno stile bit pixel art tipo Fatal fury, mantieni lo stile delle immagini di riferimento 1 e 2. Usa uno sfondo trasparente, il corpo dev'essere interamente. Il volto deve essere visibile per intero. Il personaggio è Magro.
+In posa di guardia, rivolto a destra, vista laterale. usa uno stile bit pixel art tipo Fatal fury, mantieni lo stile delle immagini di riferimento 1 e 2. Usa uno sfondo trasparente, il corpo dev'essere interamente visibile. Il volto deve essere visibile per intero. Il personaggio è un po' in sovrappeso.
 Per il viso usa l'immagne di riferimento 2  per lo stile grafico usa l'immagine di riferimento 3.
 
 Devo creare, uno stage per un picchiaduro 16 bit, l'ambientazione è qulla dell'immagine di riferimento 1.
@@ -28,3 +28,20 @@ Side-scrolling animation facing right (east). Camera locked, character centered 
 Create a victory animation in 16-bit pixel art style while preserving Oscar's exact identity, outfit, proportions, and right-facing side view. Keep the full body visible in every frame with generous top and bottom margins inside 512x512. Maintain constant camera distance and framing, no zoom, no crop, no tilt, no panning. Keep feet fully visible at all times and avoid touching any frame edge. Movement should be celebratory but compact and controlled: confident arm raise, subtle torso rhythm, small footwork and weight shifts. Transparent background.
 
 Ho creato per tutti: Victory custom 2, solo per oscar si chiama "Victory custom", puoi scaricare tutti gli spritesheet e ed inserirli nella pagina demo-moves sotto la voce "Victory". Sempre a 18 fps.
+
+Ho creato un nuovo personaggio Jerry devo fare le animazioni già presenti per gli altri personaggi su autosprite:
+	- Combat Idle Dynamic Pro
+	- Walk Guard
+	- Victory Custom
+
+
+Ora vorrei creare i portrait di ogni personaggio.
+Ogni portrait deve mostrare il volto del personaggio in primo piano, mantenendo lo stile pixel art a 16-bit. Usa uno sfondo trasparente e assicurati che il volto sia completamente visibile.
+Iniziamo con Oscar:
+I rifferimenti per il volto li trovi in F:\Personali\wedoo-fighters\original-images\oscare
+lo sprite del corpo genrato qui: PNG\OSCARE.png
+Puoi generare un portrait e salvarlo come PNG nella cartella /portraits/oscar.png ?
+
+Perfetto, puoi farlo con tutti i personaggi?
+i percorsi dei riferimenti e delle immagini dei corpi per gli altri personaggi li trovi nelle rispettive cartelle sotto F:\Personali\wedoo-fighters\original-images\nome_personaggio e PNG\nome_personaggio.
+
