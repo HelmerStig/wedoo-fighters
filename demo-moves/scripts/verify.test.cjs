@@ -80,6 +80,11 @@ test('il server locale serve la demo e protegge il resto del repository',async t
     const response=await fetch(base+route);assert.equal(response.status,200,route);await response.arrayBuffer();
   }
   assert.equal((await fetch(base+'/autosprite-agent/session.ps1')).status,403);
+  assert.equal((await fetch(base+'/portraits/oscar.png')).status,200);
+  const fire=await fetch(base+'/portraits/fire.mp4');
+  assert.equal(fire.status,200);assert.equal(fire.headers.get('content-type'),'video/mp4');
+  assert.equal((await fire.arrayBuffer()).byteLength,(await fs.stat(path.resolve(demo,'../portraits/fire.mp4'))).size);
+  assert.equal((await fetch(base+'/portraits/portraits.psd')).status,403);
   assert.equal((await fetch(base+'/.git/config')).status,403);
   assert.equal((await fetch(base+'/demo-moves/missing.png')).status,404);
 });

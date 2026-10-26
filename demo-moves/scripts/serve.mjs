@@ -5,7 +5,7 @@ import {dirname,resolve,relative,extname,sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.txt':'text/plain; charset=utf-8'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.mp4':'video/mp4','.txt':'text/plain; charset=utf-8'};
 export function createDemoServer(){
   return http.createServer(async(req,res)=>{
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{Allow:'GET, HEAD'});res.end();return;}
@@ -15,7 +15,7 @@ export function createDemoServer(){
       if(pathname==='/demo-moves'||pathname==='/demo-moves/')pathname='/demo-moves/index.html';
       const file=resolve(root,'.'+pathname),local=relative(root,file);
       const parts=local.split(sep);
-      if(local.startsWith('..')||!['demo-moves','PNG','animation'].includes(parts[0])||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
+      if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
       const info=await stat(file);
       if(!info.isFile()){res.writeHead(404);res.end('File non trovato');return;}
       res.writeHead(200,{'Content-Type':mime[extname(file).toLowerCase()]??'application/octet-stream','Content-Length':info.size,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});
