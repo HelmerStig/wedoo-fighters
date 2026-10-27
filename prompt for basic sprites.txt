@@ -45,3 +45,4 @@ Puoi generare un portrait e salvarlo come PNG nella cartella /portraits/oscar.pn
 Perfetto, puoi farlo con tutti i personaggi?
 i percorsi dei riferimenti e delle immagini dei corpi per gli altri personaggi li trovi nelle rispettive cartelle sotto F:\Personali\wedoo-fighters\original-images\nome_personaggio e PNG\nome_personaggio.
 
+sullo sfondo trasparente del portrait, vorrei inserire quasto video in looop portraits\fire.mp4

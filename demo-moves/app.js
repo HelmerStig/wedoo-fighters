@@ -57,16 +57,19 @@
       img.parentElement.append(message);
     }, {once:true}));
   }
+  let rosterPreviews;
   if (!isDetail) {
     $('#total-count').textContent = characters.length;
     $('#visible-count').textContent = characters.length;
     $('#character-grid').innerHTML = characters.map((c, i) => `<a class="character-card" data-character="${escape(c.id)}" href="${href(c)}" aria-label="Esplora le animazioni di ${escape(c.name)}"><div class="card-portrait"><span class="card-number" aria-hidden="true">${number(i + 1)} / ${number(characters.length)}</span><img data-portrait src="${escape(c.thumbnail)}" alt="${escape(c.name)}, posa originale" loading="lazy" decoding="async" width="512" height="512"></div><div class="card-label"><div><h3>${escape(c.name)}</h3><p>${c.animations.length} ${c.animations.length === 1 ? 'animazione disponibile' : 'animazioni disponibili'}</p></div><span class="card-arrow" aria-hidden="true">↗</span></div></a>`).join('');
     installImageFallbacks();
+    rosterPreviews = MovesRoster.install($('#character-grid'), characters);
   }
   $('#character-search').addEventListener('input', event => {
     const query = event.target.value.trim().toLocaleLowerCase('it');
     const matches = new Set(characters.filter(c => c.name.toLocaleLowerCase('it').includes(query)).map(c => c.id));
     document.querySelectorAll('[data-character]').forEach(el => el.hidden = !matches.has(el.dataset.character));
+    rosterPreviews?.refresh();
     $('#nav-count').textContent = matches.size;
     $('.nav-empty').hidden = matches.size > 0;
     if (!isDetail) { $('#visible-count').textContent = matches.size; $('#empty-state').hidden = matches.size > 0; }
@@ -84,7 +87,7 @@
   const pager = (character, direction) => character ? `<a class="icon-button" data-character-link="${escape(character.id)}" href="${href(character)}" aria-label="${direction === '←' ? 'Precedente' : 'Successivo'}: ${escape(character.name)}">${direction}</a>` : `<span class="icon-button pager-disabled" aria-hidden="true">${direction}</span>`;
   $('#character-detail').innerHTML = `
     <a class="back-link" href="index.html">← Torna al roster</a>
-    <section class="detail-heading"><div class="detail-identity"><div class="detail-portrait-frame"><video class="detail-portrait-fire" src="../portraits/fire.mp4" autoplay loop muted playsinline aria-hidden="true"></video><img class="detail-portrait" src="../portraits/${encodeURIComponent(selected.id)}.png" alt="" width="100" height="100" decoding="async"></div><div class="detail-name"><p class="eyebrow">PERSONAGGIO ${number(position + 1)} / ${number(characters.length)}</p><h1>${escape(selected.name.toUpperCase())}<span class="accent">.</span></h1><p class="intro">Esplora le mosse, osserva ogni frame.</p></div></div><nav class="character-pager" aria-label="Personaggio precedente e successivo">${pager(previous, '←')}${pager(next, '→')}</nav></section>
+    <section class="detail-heading"><div class="detail-identity"><div class="detail-portrait-frame"><video class="detail-portrait-fire" src="../portraits/fire.mp4" autoplay loop muted playsinline aria-hidden="true"></video><img class="detail-portrait" src="../portrait-pixeled/${encodeURIComponent(selected.id)}.png" alt="" width="100" height="100" decoding="async"></div><div class="detail-name"><p class="eyebrow">PERSONAGGIO ${number(position + 1)} / ${number(characters.length)}</p><h1>${escape(selected.name.toUpperCase())}<span class="accent">.</span></h1><p class="intro">Esplora le mosse, osserva ogni frame.</p></div></div><nav class="character-pager" aria-label="Personaggio precedente e successivo">${pager(previous, '←')}${pager(next, '→')}</nav></section>
     <div class="detail-layout"><section class="player-panel" aria-label="Anteprima animazione"><div class="panel-header"><h2><span class="playing-dot" aria-hidden="true"></span><span id="animation-title">Idle</span></h2><span class="version-tag" id="version-tag"></span></div>
       <div class="stage" data-background="dark" aria-busy="true"><span class="stage-label">ANIMATION PREVIEW</span><canvas id="sprite-canvas" width="512" height="512" tabindex="0" role="img" aria-label="Animazione del personaggio ${escape(selected.name)}">Anteprima animata di ${escape(selected.name)}.</canvas><div class="stage-loading" role="status">Caricamento animazione…</div><div class="stage-error" role="alert" hidden></div></div>
       <div class="player-controls"><div class="timeline"><input id="frame-slider" type="range" min="0" max="0" value="0" step="1" aria-label="Seleziona un frame" disabled><span class="frame-counter" aria-hidden="true">00 / 00</span></div><div class="controls-row"><div class="transport"><button class="play-button" id="play-button" type="button" disabled>▶ Riproduci</button><button class="step-button" id="step-button" type="button" aria-label="Frame successivo" title="Frame successivo" disabled>▹|</button></div><label class="loop-control"><input type="checkbox" id="loop-toggle" checked> Loop</label><label class="speed-control">Velocità<select id="speed-select" aria-label="Velocità rispetto a quella salvata"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1? ? 18 fps</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div></div></section>

@@ -15,7 +15,7 @@ export function createDemoServer(){
       if(pathname==='/demo-moves'||pathname==='/demo-moves/')pathname='/demo-moves/index.html';
       const file=resolve(root,'.'+pathname),local=relative(root,file);
       const parts=local.split(sep);
-      if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
+      if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits','portrait-pixeled'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||(parts[0]==='portrait-pixeled'&&extname(file).toLowerCase()!=='.png')||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
       const info=await stat(file);
       if(!info.isFile()){res.writeHead(404);res.end('File non trovato');return;}
       res.writeHead(200,{'Content-Type':mime[extname(file).toLowerCase()]??'application/octet-stream','Content-Length':info.size,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});
