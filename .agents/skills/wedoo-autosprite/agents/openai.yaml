@@ -1,0 +1,4 @@
+interface:
+  display_name: "WEDOO AutoSprite"
+  short_description: "Genera e recupera animazioni WEDOO su AutoSprite"
+  default_prompt: "Usa $wedoo-autosprite per gestire la richiesta di animazione su AutoSprite verificando personaggio, modello e costo."

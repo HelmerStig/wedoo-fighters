@@ -1,0 +1,4 @@
+interface:
+  display_name: "WEDOO Animation Assets"
+  short_description: "Integra spritesheet, tagli, atlas e manifest locali"
+  default_prompt: "Usa $wedoo-animation-assets per aggiornare gli asset richiesti mantenendo tagli, pixel e provenienza delle versioni selezionate."

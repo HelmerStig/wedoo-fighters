@@ -1,0 +1,4 @@
+interface:
+  display_name: "WEDOO Demo Moves"
+  short_description: "Aggiorna navigazione e player della demo HTML locale"
+  default_prompt: "Usa $wedoo-demo-moves per modificare la demo locale preservando navigazione responsive e riproduzione delle animazioni a 18 fps."
