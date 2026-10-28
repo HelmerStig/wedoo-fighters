@@ -1,0 +1,20 @@
+{
+  "characterId": "cmvkop6gq017x142gwof7kzeu",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [{
+      "kind": "custom",
+      "name": "light punch one strike",
+      "rawPrompt": true,
+      "loop": false,
+      "poseId": "cmvkoq2f9008og3nguz3zl585",
+      "lastFramePoseId": "cmvkoq2f9008og3nguz3zl585",
+      "prompt": "A SINGLE isolated lead-hand jab, facing right. Only the front fist, nearest the right edge of the image, punches. The rear fist stays pressed beside the cheek for the ENTIRE clip and NEVER strikes. Timeline: 0-0.5s hold guard then draw front fist slightly back; 0.5-0.8s extend front fist ONCE straight forward at opponent face height, with a small shoulder twist; 0.8-1.2s retract that same fist to guard; 1.2-2s remain STILL in guard. Exactly one outward extension and one return. After the jab, the action is finished: HOLD the final pose. This is a one-shot action, not repeated boxing practice. No second strike, cross, combination, hand switching, extra gestures or steps. Fixed camera, whole body visible, constant scale and position. Preserve the reference character, clothes and proportions."
+    }]
+  }
+}

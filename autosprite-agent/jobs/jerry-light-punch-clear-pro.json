@@ -1,0 +1,20 @@
+{
+  "characterId": "cmvkop6gq017x142gwof7kzeu",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [{
+      "kind": "custom",
+      "name": "light punch single v2",
+      "rawPrompt": true,
+      "loop": false,
+      "poseId": "cmvkoq2f9008og3nguz3zl585",
+      "lastFramePoseId": "cmvkoq2f9008og3nguz3zl585",
+      "prompt": "The fighter throws ONE clear straight right-hand punch at face height toward the right. From guard, pull the right fist back to load, rotate the shoulder and torso, then DRIVE THE RIGHT FIST FORWARD until the elbow is fully extended and the fist reaches far beyond the face. Brief impact pose. Retract the same arm to guard and stop. The left fist protects the chin throughout. Show the entire visible punch, not just preparation. A single strike followed by recovery; no jab before it, no follow-up. Feet planted. Locked camera, full body visible, unchanged character, outfit, size and position."
+    }]
+  }
+}

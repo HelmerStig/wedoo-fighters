@@ -1,0 +1,20 @@
+{
+  "characterId": "cmvkop6gq017x142gwof7kzeu",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [{
+      "kind": "custom",
+      "name": "light punch",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmvkoq2f9008og3nguz3zl585",
+      "lastFramePoseId": "cmvkoq2f9008og3nguz3zl585",
+      "prompt": "In a defensive stance, the character bends their knees slightly, keeping their fists raised near their chest; the arm intended for the strike is pulled back and held under tension, the shoulders are well-aligned, and the body remains motionless. The character readies the punch by drawing the arm further back with a quick, sharp motion, then launches a direct, swift, and forceful strike forward—pausing briefly at the point of full extension upon impact. Finally, the character returns to the initial defensive stance, releasing the tension in their shoulders and bringing both fists back toward their chest."
+    }]
+  }
+}

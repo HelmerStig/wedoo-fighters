@@ -51,7 +51,7 @@ export function plan(config) {
     id(a.kind);
     if (a.kind === 'custom') {
       assert(typeof a.name === 'string' && a.name.trim().length > 0, 'Custom richiede name');
-      assert(typeof a.prompt === 'string' && a.prompt.trim().length > 0 && a.prompt.length <= 600, 'Custom richiede prompt di 1..600 caratteri');
+      assert(typeof a.prompt === 'string' && a.prompt.trim().length > 0 && a.prompt.length <= 1000, 'Custom richiede prompt di 1..1000 caratteri');
     } else {
       assert(a.prompt === undefined && a.rawPrompt === undefined, 'I preset non accettano prompt/rawPrompt: usa custom');
     }

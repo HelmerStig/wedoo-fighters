@@ -1,0 +1,20 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "Jump custom",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmveysix0000g5g1g5vakv945",
+      "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+      "prompt": "One complete vertical tuck jump in place, facing right. Start in the reference idle guard. Bend both knees to prepare, push off with both feet together. At the apex pull BOTH knees high toward the chest and spread both arms outward to the sides. Extend legs down, land on both feet at the exact takeoff position, bend knees to absorb impact, then return to the exact initial idle guard. Seamless idle-jump-idle loop. Fixed camera, full body visible including raised hands and feet. Preserve face, outfit, scale and proportions. No forward travel, turns, flips, attacks, extra hops or effects."
+    }]
+  }
+}

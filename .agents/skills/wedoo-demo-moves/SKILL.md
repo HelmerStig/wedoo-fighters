@@ -22,7 +22,7 @@ Non editare manualmente `catalog.js` per modifiche permanenti ai dati: aggiorna 
 ## Comportamenti da preservare
 
 - Anteprime dal PNG originale, spritesheet caricati all'apertura dell'animazione; il player mantiene le celle e i margini degli asset esportati.
-- Base uniforme di 18 fps per idle, walk e victory, salvo nuova richiesta dell'utente. `savedSpeed` è informativo; il selettore applica il moltiplicatore scelto dall'utente alla base.
+- Base di 18 fps per idle, walk e victory, 24 fps per jump, salvo nuova richiesta dell'utente. `savedSpeed` è informativo; il selettore applica il moltiplicatore scelto dall'utente alla base.
 - Il loop usa soltanto i frame esportati; non ricostruisce i frame esclusi dal taglio e non applica una sequenza avanti-indietro.
 - Mantieni accumulatori temporali, pausa, avanzamento singolo, riproduzione senza loop e caricamenti asincroni coerenti quando si cambia animazione.
 - Il pulsante di chiusura della barra laterale serve al menu mobile aperto e resta nascosto su desktop. Controlla la specificità CSS: `.icon-button` può sovrascrivere regole meno specifiche di `.sidebar-close`.

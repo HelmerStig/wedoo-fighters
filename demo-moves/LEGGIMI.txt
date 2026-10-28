@@ -12,6 +12,8 @@ Le animazioni walk sono riprodotte a 18 fps di base e usano solo i frame del
 taglio salvato su AutoSprite, dove presente. Il moltiplicatore di velocita
 salvato su AutoSprite e mostrato come informazione e non altera queste basi.
 Le animazioni victory sono riprodotte a 18 fps di base.
+Le animazioni Jump provengono da "jump custom 2", rispettano il taglio salvato
+su AutoSprite e sono riprodotte a 24 fps di base.
 Sono disponibili pausa, avanzamento per frame, loop, velocita e sfondo.
 Quando il canvas ha il focus: Spazio per pausa/riproduzione, frecce per i frame.
 

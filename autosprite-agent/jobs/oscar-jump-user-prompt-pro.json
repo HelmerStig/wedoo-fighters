@@ -1,0 +1,20 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "jump custom",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmveysix0000g5g1g5vakv945",
+      "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+      "prompt": "Side-scrolling animation facing right (east). Camera locked, character centered with full body visible. Character performs the following action in place: Jump animation for a side-scrolling game, with the character facing right. The character begins the jump with knees slightly bent, ready to launch off the ground, extends upwards, and finally lands after assuming a tucked position in mid-air with knees drawn to the chest. Create a loop lasting approximately 1–2 seconds, ensuring the movement remains fluid and consistent. Character stays centered, fixed size. Plain grey background. No camera movement.. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout."
+    }]
+  }
+}

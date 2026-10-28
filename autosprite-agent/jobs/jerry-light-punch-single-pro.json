@@ -1,0 +1,20 @@
+{
+  "characterId": "cmvkop6gq017x142gwof7kzeu",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [{
+      "kind": "custom",
+      "name": "light punch single",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmvkoq2f9008og3nguz3zl585",
+      "lastFramePoseId": "cmvkoq2f9008og3nguz3zl585",
+      "prompt": "Facing right, perform exactly ONE light straight punch aimed at an imaginary opponent's face. Choose either the left OR right arm for this clip; only that arm strikes. Begin in defensive guard. Clearly load the chosen fist by drawing it back and coiling the shoulders and torso naturally. Snap that fist forward at face height, briefly reaching full extension, then retract it and return to the initial guard. The other hand stays guarding. Feet remain planted. One preparation, ONE strike, one recovery. No second punch, alternating arms, combinations, hooks or uppercuts. Fixed camera, full body visible, constant scale, unchanged appearance and outfit."
+    }]
+  }
+}

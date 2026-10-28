@@ -1,0 +1,20 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "Jump custom 2",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmveysix0000g5g1g5vakv945",
+      "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+      "prompt": "Vertical TUCK JUMP in place, facing right. Idle guard, crouch, take off with BOTH feet. At the apex BOTH thighs press toward the chest, BOTH knees above waist, heels tucked close under buttocks: compact airborne ball, no dangling legs. Upper arms spread sideways, elbows bent 90 degrees, fists near shoulder height; never straight arms. Unfold legs, land on both feet at takeoff spot, absorb impact, return to initial idle guard. One complete seamless idle-jump-idle loop. Fixed camera, entire body visible, reference scale and outfit unchanged. No travel, splits, kicks, flips or effects."
+    }]
+  }
+}

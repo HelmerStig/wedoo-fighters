@@ -41,7 +41,8 @@ for(const item of manifest.items){
 characters.sort((a,b)=>new Intl.Collator('it',{sensitivity:'base',ignorePunctuation:true}).compare(a.name,b.name));
 const extraAnimations=[
   {manifest:'walk-manifest.json',id:'walk',name:'Walk',description:'Camminata in guardia'},
-  {manifest:'victory-manifest.json',id:'victory',name:'Victory',description:'Mossa di vittoria'}
+  {manifest:'victory-manifest.json',id:'victory',name:'Victory',description:'Mossa di vittoria'},
+  {manifest:'jump-manifest.json',id:'jump',name:'Jump',description:'Salto sul posto',playbackFps:24}
 ];
 for(const extra of extraAnimations){
   const data=await readJson(join(root,'animation',extra.manifest));
@@ -51,7 +52,7 @@ for(const extra of extraAnimations){
     const atlas=await readJson(resolve(root,item.atlas));
     const frames=frameRects(atlas);
     if(frames.length!==item.frames)throw Error(`Frame ${extra.id} non corrispondenti: ${item.character}`);
-    character.animations.push({id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:18,savedSpeed:item.speedMultiplier});
+    character.animations.push({id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.playbackFps??18,savedSpeed:item.speedMultiplier});
   }
 }
 await writeFile(join(demo,'catalog.js'),'/* Generato da scripts/build-catalog.mjs: dati locali, nessuna chiamata esterna. */\nwindow.MOVES_CATALOG = '+JSON.stringify({characters},null,2)+';\n');

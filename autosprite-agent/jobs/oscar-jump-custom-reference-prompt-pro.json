@@ -1,0 +1,20 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "jump custom",
+      "rawPrompt": true,
+      "loop": true,
+      "poseId": "cmveysix0000g5g1g5vakv945",
+      "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+      "prompt": "One vertical tuck jump, facing right. Start in idle guard, crouch and spring off both feet. APEX: both knees pulled HIGH to the chest and spread wide sideways; thighs almost horizontal, ankles close together beneath the pelvis, shins folded down. Upper arms raised OUT to the sides at shoulder level, elbows bent, forearms angled down, clenched fists beside the body. Compact airborne crouch, torso leaning slightly forward. Unfold, land at the same spot, return to idle guard. Seamless loop. Fixed camera, full body visible, same scale, face and black outfit. No travel, rotation, kicks or effects."
+    }]
+  }
+}

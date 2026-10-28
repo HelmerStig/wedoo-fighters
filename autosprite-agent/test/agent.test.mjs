@@ -53,6 +53,16 @@ test('legge JSON UTF-8 con BOM creati da editor Windows', async t => {
   assert.equal(plan(await readJson(path)).characterId, 'elisa');
 });
 
+test('conserva prompt custom fino al limite API di 1000 caratteri', () => {
+  const c = config();
+  c.request.animations[0].prompt = 'a'.repeat(1000);
+  assert.equal(plan(c).request.animations[0].prompt, c.request.animations[0].prompt);
+  c.request.animations[0].prompt += 'a';
+  assert.throws(() => plan(c), /1\.\.1000/);
+  c.request.animations[0].prompt = '   ';
+  assert.throws(() => plan(c), /1\.\.1000/);
+});
+
 test('rifiuta prompt nei preset e limiti frame Ultra ignorati dal server', () => {
   const c = config(); c.request.animations[0].kind = 'punch';
   assert.throws(() => plan(c), /preset/);

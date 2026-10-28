@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "jump custom",
+        "rawPrompt": true,
+        "loop": true,
+        "poseId": "cmvez5xck00hbrym9nwdyrplr",
+        "lastFramePoseId": "cmvez5xck00hbrym9nwdyrplr",
+        "prompt": "One vertical TUCK JUMP in place, facing right. Idle guard, crouch, spring off both feet. APEX: pull BOTH knees tightly up against the chest, knees close together, thighs parallel and narrower than hips. Fold both shins back, heels tucked against buttocks, feet together beneath pelvis. Compact ball in midair; NO sideways leg spread or wide squat. Upper arms open sideways, elbows bent, forearms angled down, fists clenched. Unfold, land on both feet at takeoff spot, return to idle guard. Seamless loop. Fixed camera, whole body visible, same scale and outfit. No travel, turns, kicks or effects."
+      }
+    ]
+  }
+}

@@ -12,6 +12,7 @@ Lavora dalla radice del repository. Le selezioni correnti sono in:
 | idle | `animation/manifest.json` |
 | walk | `animation/walk-manifest.json` |
 | victory | `animation/victory-manifest.json` |
+| jump | `animation/jump-manifest.json` |
 
 Leggi la struttura effettiva di questi file e degli atlas prima di modificarli. Non fissare il numero di personaggi: ricavalo dai dati correnti.
 
@@ -39,4 +40,4 @@ Modifica soltanto le voci richieste. Gli script storici negli output possono usa
 - Confronta scala, margini e abiti con il PNG originale; segnala anomalie senza correggere la scala arbitrariamente.
 - Se la richiesta comprende l'aggiornamento della demo, rigenera `demo-moves/catalog.js` con `node demo-moves/scripts/build-catalog.mjs` e verifica con `node --test demo-moves/scripts/verify.test.cjs`.
 
-La demo usa attualmente 18 fps per idle, walk e victory; `speedMultiplier` del servizio è conservato come informazione, non moltiplicato automaticamente per la velocità di riproduzione.
+La demo usa attualmente 18 fps per idle, walk e victory e 24 fps per jump (versioni "jump custom 2"); `speedMultiplier` del servizio è conservato come informazione, non moltiplicato automaticamente per la velocità di riproduzione.

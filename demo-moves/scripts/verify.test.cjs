@@ -21,7 +21,7 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
       const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
       for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
       assert.ok(effectiveFps(a,1)>0);
-      assert.equal(effectiveFps(a,1),18,c.name);
+      assert.equal(effectiveFps(a,1),a.id==='jump'?24:18,c.name);
     }
   }
   assert.match(characters.find(c=>c.id==='oscar').thumbnail,/OSCARE\.png$/);
@@ -69,6 +69,26 @@ test('victory usa i frame esportati e 18 fps',async()=>{
     assert.equal(animation.frames.length,item.frames);
     const atlas=JSON.parse(await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8'));
     assert.equal(atlas.meta?.frame_count??Object.keys(atlas.frames).length,item.frames);
+  }
+});
+test('jump custom 2 copre il roster, conserva il taglio e usa 24 fps',async()=>{
+  const {characters}=await catalog();
+  const manifest=JSON.parse((await fs.readFile(path.resolve(demo,'../animation/jump-manifest.json'),'utf8')).replace(/^\uFEFF/,''));
+  assert.equal(manifest.items.length,characters.length);
+  assert.deepEqual(manifest.missing,[]);
+  for(const item of manifest.items){
+    assert.equal(item.sourceAnimationName.toLowerCase(),'jump custom 2');
+    const animation=characters.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='jump');
+    assert.equal(animation.name,'Jump');
+    assert.equal(effectiveFps(animation,1),24);
+    assert.equal(effectiveFps(animation,.5),12);
+    assert.equal(animation.frames.length,item.sourceEnd-item.sourceStart+1);
+    const atlas=JSON.parse((await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8')).replace(/^\uFEFF/,''));
+    assert.equal(atlas.meta.source_frame_start,item.sourceStart);
+    assert.equal(atlas.meta.source_frame_end,item.sourceEnd);
+    assert.equal(atlas.frames['0'].source_frame,item.sourceStart);
+    assert.equal(atlas.frames[String(item.frames-1)].source_frame,item.sourceEnd);
+    assert.equal(advance({frame:0,remainder:0},1000,24,item.frames,true).frame,24%item.frames);
   }
 });
 test('il server locale serve la demo e protegge il resto del repository',async t=>{
