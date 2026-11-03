@@ -1,0 +1,122 @@
+{
+  "frames": {
+    "0": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 0,
+      "x": 0,
+      "w": 512,
+      "source_frame": 0
+    },
+    "1": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 0,
+      "x": 512,
+      "w": 512,
+      "source_frame": 1
+    },
+    "2": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 0,
+      "x": 1024,
+      "w": 512,
+      "source_frame": 2
+    },
+    "3": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 0,
+      "x": 1536,
+      "w": 512,
+      "source_frame": 3
+    },
+    "4": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 512,
+      "x": 0,
+      "w": 512,
+      "source_frame": 4
+    },
+    "5": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 512,
+      "x": 512,
+      "w": 512,
+      "source_frame": 5
+    },
+    "6": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 512,
+      "x": 1024,
+      "w": 512,
+      "source_frame": 6
+    },
+    "7": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 512,
+      "x": 1536,
+      "w": 512,
+      "source_frame": 7
+    },
+    "8": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 1024,
+      "x": 0,
+      "w": 512,
+      "source_frame": 8
+    },
+    "9": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 1024,
+      "x": 512,
+      "w": 512,
+      "source_frame": 9
+    },
+    "10": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 1024,
+      "x": 1024,
+      "w": 512,
+      "source_frame": 10
+    },
+    "11": {
+      "h": 512,
+      "duration": 41.666666666666664,
+      "y": 1024,
+      "x": 1536,
+      "w": 512,
+      "source_frame": 11
+    }
+  },
+  "meta": {
+    "image": "sboz-light-punch.png",
+    "size": {
+      "h": 1536,
+      "w": 2048
+    },
+    "frame_size": {
+      "h": 512,
+      "w": 512
+    },
+    "frame_count": 12,
+    "columns": 4,
+    "rows": 3,
+    "fps": 24,
+    "trimmed": true,
+    "source_sheet_id": "cmw0dzvr0001zyc0hi0m8ftcl",
+    "source_frame_count": 13,
+    "source_frame_start": 0,
+    "source_frame_end": 11,
+    "speed_multiplier": 2,
+    "duration_ms": 500
+  }
+}

@@ -23731,6 +23731,171 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/jerry/jerry-light-punch.png",
+          "atlas": "../animation/jerry/jerry-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ],
+            [
+              1536,
+              2048,
+              512,
+              512
+            ],
+            [
+              2048,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": false,
+          "playbackFps": 50,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -25693,6 +25858,165 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/luana/luana-light-punch.png",
+          "atlas": "../animation/luana/luana-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ],
+            [
+              1536,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 48,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -26710,6 +27034,105 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/manu/manu-light-punch.png",
+          "atlas": "../animation/manu/manu-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 28,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -27619,6 +28042,129 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/marco-balpo/marco-balpo-light-punch.png",
+          "atlas": "../animation/marco-balpo/marco-balpo-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 36,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -28671,6 +29217,105 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "playbackFps": 24,
+          "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/marco-rossetti/marco-rossetti-light-punch.png",
+          "atlas": "../animation/marco-rossetti/marco-rossetti-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 28,
+          "durationMs": 500,
           "savedSpeed": 1
         }
       ]
@@ -29731,6 +30376,81 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/mario/mario-light-punch.png",
+          "atlas": "../animation/mario/mario-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -30790,6 +31510,165 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/marsan/marsan-light-punch.png",
+          "atlas": "../animation/marsan/marsan-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ],
+            [
+              1536,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 48,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -31813,6 +32692,153 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/martini/martini-light-punch.png",
+          "atlas": "../animation/martini/martini-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 44,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -32824,6 +33850,129 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/matteo/matteo-light-punch.png",
+          "atlas": "../animation/matteo/matteo-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 36,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -33745,6 +34894,159 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/mike/mike-light-punch.png",
+          "atlas": "../animation/mike/mike-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 46,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -34684,6 +35986,123 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/mori/mori-light-punch.png",
+          "atlas": "../animation/mori/mori-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 34,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -35887,6 +37306,159 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/oscar/oscar-light-punch.png",
+          "atlas": "../animation/oscar/oscar-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 46,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -36904,6 +38476,99 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/peirolo/peirolo-light-punch.png",
+          "atlas": "../animation/peirolo/peirolo-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 26,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -37831,6 +39496,111 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/peppo/peppo-light-punch.png",
+          "atlas": "../animation/peppo/peppo-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 30,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -38884,6 +40654,81 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/pippo/pippo-light-punch.png",
+          "atlas": "../animation/pippo/pippo-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -39931,6 +41776,93 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/sboz/sboz-light-punch.png",
+          "atlas": "../animation/sboz/sboz-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 24,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -40990,6 +42922,105 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/simona/simona-light-punch.png",
+          "atlas": "../animation/simona/simona-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 28,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -42043,6 +44074,159 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/tommaso/tommaso-light-punch.png",
+          "atlas": "../animation/tommaso/tommaso-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 46,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },
@@ -43090,6 +45274,165 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/zichella/zichella-light-punch.png",
+          "atlas": "../animation/zichella/zichella-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ],
+            [
+              1024,
+              1536,
+              512,
+              512
+            ],
+            [
+              1536,
+              1536,
+              512,
+              512
+            ],
+            [
+              2048,
+              1536,
+              512,
+              512
+            ],
+            [
+              0,
+              2048,
+              512,
+              512
+            ],
+            [
+              512,
+              2048,
+              512,
+              512
+            ],
+            [
+              1024,
+              2048,
+              512,
+              512
+            ],
+            [
+              1536,
+              2048,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 48,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     }

@@ -5,6 +5,9 @@ Mantieni demo-moves accanto alle cartelle PNG e animation del repository.
 
 La pagina iniziale mostra i personaggi. Dal menu laterale o da una scheda si apre
 personaggio.html?id=nome-personaggio con le animazioni disponibili.
+Tutte le animazioni del personaggio sono mostrate insieme, con un player per
+mossa: pausa, frame, loop, velocita, sfondo e download sono indipendenti.
+"Riproduci tutte" e "Pausa tutte" controllano l'intera galleria.
 
 Il player rispetta i frame esportati e la trasparenza. Le animazioni idle sono
 riprodotte a 18 fps di base, indipendentemente dalla velocita salvata su AutoSprite.
@@ -14,6 +17,9 @@ salvato su AutoSprite e mostrato come informazione e non altera queste basi.
 Le animazioni victory sono riprodotte a 18 fps di base.
 Le animazioni Jump provengono da "jump custom 2", rispettano il taglio salvato
 su AutoSprite e sono riprodotte a 24 fps di base.
+"Pugno leggero" e disponibile per i personaggi con un Light Punch gia creato:
+usa l'ultima versione disponibile e il taglio salvato. A velocita 1x dura
+mezzo secondo: gli fps sono il numero di frame moltiplicato per 2.
 Sono disponibili pausa, avanzamento per frame, loop, velocita e sfondo.
 Quando il canvas ha il focus: Spazio per pausa/riproduzione, frecce per i frame.
 
@@ -29,6 +35,7 @@ Verifica dei dati, della riproduzione e dei percorsi:
 
 Anteprime dalla cartella PNG. Se manca un PNG, lo script di aggiornamento copia
 il riferimento originale gia scaricato da AutoSprite nella cartella assets.
-Gli spritesheet vengono caricati solo all'apertura dell'animazione.
+Gli spritesheet della galleria vengono caricati avvicinandosi alle anteprime;
+le animazioni fuori schermo vengono sospese per limitare il lavoro del browser.
 Il catalogo include gia tutti i rettangoli dei frame, cosi funziona anche tramite
 file locale senza richieste fetch bloccate dal browser.

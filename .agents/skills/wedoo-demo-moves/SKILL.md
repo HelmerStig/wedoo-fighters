@@ -13,6 +13,7 @@ La demo è HTML, CSS e JavaScript senza build o dipendenze frontend. Deve funzio
 - `personaggio.html?id=slug`: dettaglio delle animazioni.
 - `app.js`: navigazione, ricerca, caricamento immagini e controlli canvas.
 - `player-core.js`: tempo, avanzamento frame, loop e fps.
+- `animation-gallery.js`: player indipendenti per tutte le mosse della pagina personaggio, caricamento progressivo e controlli globali.
 - `styles.css`: layout e comportamento responsive.
 - `scripts/build-catalog.mjs`: genera `catalog.js` dai manifest in `animation/` e dalle anteprime in `PNG/`.
 - `scripts/serve.mjs`: server locale con percorsi consentiti limitati alla demo e agli asset previsti.
@@ -21,8 +22,8 @@ Non editare manualmente `catalog.js` per modifiche permanenti ai dati: aggiorna 
 
 ## Comportamenti da preservare
 
-- Anteprime dal PNG originale, spritesheet caricati all'apertura dell'animazione; il player mantiene le celle e i margini degli asset esportati.
-- Base di 18 fps per idle, walk e victory, 24 fps per jump, salvo nuova richiesta dell'utente. `savedSpeed` è informativo; il selettore applica il moltiplicatore scelto dall'utente alla base.
+- Anteprime dal PNG originale. La pagina personaggio mostra tutte le animazioni in una griglia, senza select per cambiare mossa: ogni player ha controlli indipendenti; gli spritesheet si caricano in prossimità del viewport. I player mantengono celle e margini degli asset esportati.
+- Base di 18 fps per idle, walk e victory, 24 fps per jump; light-punch (Pugno leggero) dura 500 ms a 1x con fps = frame esportati * 2, salvo nuova richiesta dell'utente. `savedSpeed` è informativo; il selettore applica il moltiplicatore scelto dall'utente alla base.
 - Il loop usa soltanto i frame esportati; non ricostruisce i frame esclusi dal taglio e non applica una sequenza avanti-indietro.
 - Mantieni accumulatori temporali, pausa, avanzamento singolo, riproduzione senza loop e caricamenti asincroni coerenti quando si cambia animazione.
 - Il pulsante di chiusura della barra laterale serve al menu mobile aperto e resta nascosto su desktop. Controlla la specificità CSS: `.icon-button` può sovrascrivere regole meno specifiche di `.sidebar-close`.

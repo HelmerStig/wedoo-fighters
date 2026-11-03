@@ -42,7 +42,8 @@ characters.sort((a,b)=>new Intl.Collator('it',{sensitivity:'base',ignorePunctuat
 const extraAnimations=[
   {manifest:'walk-manifest.json',id:'walk',name:'Walk',description:'Camminata in guardia'},
   {manifest:'victory-manifest.json',id:'victory',name:'Victory',description:'Mossa di vittoria'},
-  {manifest:'jump-manifest.json',id:'jump',name:'Jump',description:'Salto sul posto',playbackFps:24}
+  {manifest:'jump-manifest.json',id:'jump',name:'Jump',description:'Salto sul posto',playbackFps:24},
+  {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500}
 ];
 for(const extra of extraAnimations){
   const data=await readJson(join(root,'animation',extra.manifest));
@@ -52,7 +53,7 @@ for(const extra of extraAnimations){
     const atlas=await readJson(resolve(root,item.atlas));
     const frames=frameRects(atlas);
     if(frames.length!==item.frames)throw Error(`Frame ${extra.id} non corrispondenti: ${item.character}`);
-    character.animations.push({id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.playbackFps??18,savedSpeed:item.speedMultiplier});
+    character.animations.push({id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.durationMs?frames.length*1000/extra.durationMs:(extra.playbackFps??18),...(extra.durationMs?{durationMs:extra.durationMs}:{}),savedSpeed:item.speedMultiplier});
   }
 }
 await writeFile(join(demo,'catalog.js'),'/* Generato da scripts/build-catalog.mjs: dati locali, nessuna chiamata esterna. */\nwindow.MOVES_CATALOG = '+JSON.stringify({characters},null,2)+';\n');

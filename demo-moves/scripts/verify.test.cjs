@@ -21,7 +21,7 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
       const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
       for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
       assert.ok(effectiveFps(a,1)>0);
-      assert.equal(effectiveFps(a,1),a.id==='jump'?24:18,c.name);
+      assert.equal(effectiveFps(a,1),a.id==='light-punch'?a.frames.length*2:(a.id==='jump'?24:18),c.name);
     }
   }
   assert.match(characters.find(c=>c.id==='oscar').thumbnail,/OSCARE\.png$/);
@@ -91,6 +91,37 @@ test('jump custom 2 copre il roster, conserva il taglio e usa 24 fps',async()=>{
     assert.equal(advance({frame:0,remainder:0},1000,24,item.frames,true).frame,24%item.frames);
   }
 });
+test('Pugno leggero rispetta i tagli e dura 500 ms per ogni personaggio',async()=>{
+  const {characters}=await catalog();
+  const manifest=JSON.parse((await fs.readFile(path.resolve(demo,'../animation/light-punch-manifest.json'),'utf8')).replace(/^\uFEFF/,''));
+  assert.ok(manifest.items.length>0);
+  const imported=new Map(manifest.items.map(item=>[item.character.toLowerCase(),item]));
+  assert.equal(imported.size,manifest.items.length);
+  for(const character of characters){
+    const animation=character.animations.find(a=>a.id==='light-punch');
+    const item=imported.get(character.id);
+    assert.equal(Boolean(animation),Boolean(item),character.name);
+    if(!item)continue;
+    assert.ok(item.sourceAnimationName.toLowerCase().replace(/[_-]+/g,' ').includes('light punch'));
+    assert.equal(animation.name,'Pugno leggero');
+    assert.equal(effectiveFps(animation,1),item.frames*2);
+    assert.equal(effectiveFps(animation,.5),item.frames);
+    assert.equal(item.frames/effectiveFps(animation,1)*1000,500);
+    assert.equal(animation.durationMs,500);
+    assert.equal(advance({frame:0,remainder:0},500,effectiveFps(animation,1),item.frames,true).frame,0);
+    assert.equal(advance({frame:0,remainder:0},500,effectiveFps(animation,1),item.frames,false).ended,true);
+    assert.equal(animation.frames.length,item.sourceEnd-item.sourceStart+1);
+    const atlas=JSON.parse((await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8')).replace(/^\uFEFF/,''));
+    assert.equal(atlas.meta.source_sheet_id,item.sourceSheetId);
+    assert.equal(atlas.frames['0'].source_frame,item.sourceStart);
+    assert.equal(atlas.frames[String(item.frames-1)].source_frame,item.sourceEnd);
+    assert.equal(atlas.meta.fps,item.frames*2);
+    assert.equal(atlas.meta.duration_ms,500);
+    assert.ok(Math.abs(Object.values(atlas.frames).reduce((total,f)=>total+f.duration,0)-500)<1e-8);
+  }
+  for(const missing of manifest.missing)assert.equal(imported.has(missing.toLowerCase()),false);
+});
+
 test('il server locale serve la demo e protegge il resto del repository',async t=>{
   const {createDemoServer}=await import('./serve.mjs');
   const server=createDemoServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));
