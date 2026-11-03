@@ -2,7 +2,7 @@
     "animation":  "light-punch",
     "sourceAnimation":  "names containing light punch",
     "creditsUsed":  0,
-    "importedAt":  "2026-11-03T11:00:38.0110990Z",
+    "importedAt":  "2026-11-03T11:20:18.2396231Z",
     "items":  [
                   {
                       "character":  "JERRY",
@@ -444,6 +444,69 @@
                       "pixelHash":  "mtcbRGcjSRj6XmMkxmh1g1IfQK3Oge7ho/qpLe1a1UQ=",
                       "playbackFps":  34,
                       "durationMs":  500
+                  },
+                  {
+                      "character":  "GIORGIO",
+                      "characterId":  "cmv9hwk40003x83r8xyctuziq",
+                      "sourceSheetId":  "cmw0lc75x01hlf6ex0ubo0vuk",
+                      "sourceAnimationName":  "light punch",
+                      "createdAt":  "2026-11-03T11:14:45.958Z",
+                      "sourceStart":  0,
+                      "sourceEnd":  13,
+                      "sourceFrames":  14,
+                      "frames":  14,
+                      "frameWidth":  512,
+                      "frameHeight":  512,
+                      "speedMultiplier":  1,
+                      "trimmed":  true,
+                      "png":  "animation/giorgio/giorgio-light-punch.png",
+                      "atlas":  "animation/giorgio/giorgio-light-punch.json",
+                      "pixelVerification":  "decoded RGBA SHA256",
+                      "pixelHash":  "b7X5F/kZidSpuuF8kekhLGGi9YDy/qsTzfG/wwv6cmE=",
+                      "playbackFps":  28,
+                      "durationMs":  500
+                  },
+                  {
+                      "character":  "GENNARO",
+                      "characterId":  "cmv9hwj7q003t83r81ul7vcq1",
+                      "sourceSheetId":  "cmw0l8ruj00mbpx1wgu3yslhs",
+                      "sourceAnimationName":  "light punch",
+                      "createdAt":  "2026-11-03T11:12:06.139Z",
+                      "sourceStart":  0,
+                      "sourceEnd":  11,
+                      "sourceFrames":  25,
+                      "frames":  12,
+                      "frameWidth":  512,
+                      "frameHeight":  512,
+                      "speedMultiplier":  2,
+                      "trimmed":  true,
+                      "png":  "animation/gennaro/gennaro-light-punch.png",
+                      "atlas":  "animation/gennaro/gennaro-light-punch.json",
+                      "pixelVerification":  "decoded RGBA SHA256",
+                      "pixelHash":  "Hgvbo8XKCkwGcY9lwgJSg3Zf81L0+XtK85u+kEfh+GA=",
+                      "playbackFps":  24,
+                      "durationMs":  500
+                  },
+                  {
+                      "character":  "FRANCESCO-LEONI",
+                      "characterId":  "cmv9hwict003p83r8u0jolqm6",
+                      "sourceSheetId":  "cmw0lgl530011o0w81gmo6ezk",
+                      "sourceAnimationName":  "light punch",
+                      "createdAt":  "2026-11-03T11:18:10.695Z",
+                      "sourceStart":  0,
+                      "sourceEnd":  24,
+                      "sourceFrames":  25,
+                      "frames":  25,
+                      "frameWidth":  512,
+                      "frameHeight":  512,
+                      "speedMultiplier":  1,
+                      "trimmed":  false,
+                      "png":  "animation/francesco-leoni/francesco-leoni-light-punch.png",
+                      "atlas":  "animation/francesco-leoni/francesco-leoni-light-punch.json",
+                      "pixelVerification":  "identical source file SHA256",
+                      "pixelHash":  "BE78A581576C7BB2E432C082773F38AFF40BDF8EF7252170A7184C6ED6D5A455",
+                      "playbackFps":  50,
+                      "durationMs":  500
                   }
               ],
     "missing":  [
@@ -464,10 +527,7 @@
                     "FARA",
                     "FRA-AMATO",
                     "FRA-TAVARONE",
-                    "FRANCESCA-RIVELLA",
-                    "FRANCESCO-LEONI",
-                    "GENNARO",
-                    "GIORGIO"
+                    "FRANCESCA-RIVELLA"
                 ],
     "durationMs":  500
 }
