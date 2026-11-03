@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwys4000o72jnrpng2i85",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "Light Punch Single Jab 25",
+      "rawPrompt": true,
+      "loop": false,
+      "poseId": "cmveyznuz005kwo3iymky7hyg",
+      "lastFramePoseId": "cmveyznuz005kwo3iymky7hyg",
+      "prompt": "Side view facing right. One isolated light jab with the FRONT hand, the fist already closest to the right edge. That fist draws slightly toward the chin, reaches straight forward to opponent eye height until its elbow straightens completely, then smoothly returns to its exact starting position. This out-and-back arm movement happens ONCE during the whole clip. Keep the other fist beside the cheek from beginning to end. Chest, hips and planted feet retain their orientation; only the striking arm and shoulder move. Show a clear, readable extension and recovery with continuous motion between poses. End in the reference idle guard. No follow-up or second extension. Locked camera, full body visible, original size, margins, face, hat and clothes."
+    }]
+  }
+}

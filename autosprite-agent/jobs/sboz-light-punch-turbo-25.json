@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwys4000o72jnrpng2i85",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [{
+      "kind": "custom",
+      "name": "Light Punch Single 25",
+      "rawPrompt": true,
+      "loop": false,
+      "poseId": "cmveyznuz005kwo3iymky7hyg",
+      "lastFramePoseId": "cmveyznuz005kwo3iymky7hyg",
+      "prompt": "Right-facing side-view fighter performs ONE right-hand straight punch at an imaginary opponent's face. A single continuous action fills the clip: first draw the right fist slightly back and coil the shoulder; next extend that arm fully forward to head height with a small torso turn; finally smoothly retract the same fist and unwind into the exact starting idle guard. Show clearly changing arm positions throughout preparation, extension and recovery, at a controlled readable pace. The left fist stays at the chin. Feet stay planted and the body stays centered. One extension, one return, action finished. No second punch or combination. Fixed camera, full body and extended fist visible, constant scale. Preserve the reference face, hat, clothes and proportions."
+    }]
+  }
+}

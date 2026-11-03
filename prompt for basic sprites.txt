@@ -42,7 +42,5 @@ I rifferimenti per il volto li trovi in F:\Personali\wedoo-fighters\original-ima
 lo sprite del corpo genrato qui: PNG\OSCARE.png
 Puoi generare un portrait e salvarlo come PNG nella cartella /portraits/oscar.png ?
 
-Perfetto, puoi farlo con tutti i personaggi?
-i percorsi dei riferimenti e delle immagini dei corpi per gli altri personaggi li trovi nelle rispettive cartelle sotto F:\Personali\wedoo-fighters\original-images\nome_personaggio e PNG\nome_personaggio.
-
-sullo sfondo trasparente del portrait, vorrei inserire quasto video in looop portraits\fire.mp4
+Vorrei creare un light punch su autosprite 25fotogrammi, partenza e ritorno in idle pose, iniziando da SBOZ. Tutti i tentativi che ho fatto non hanno ottenuto i risultati sperati, qusi sempre il pugo ruisultava doppio  o con 3/4 forogrammi di animazione, ho usato questo prompt:
+The fighter throws ONE clear straight right-hand punch at face height toward the right. From guard, pull the right fist back to load, rotate the shoulder and torso, then DRIVE THE RIGHT FIST FORWARD until the elbow is fully extended and the fist reaches far beyond the face. Brief impact pose. Retract the same arm to guard and stop. The left fist protects the chin throughout. Show the entire visible punch, not just preparation. A single strike followed by recovery; no jab before it, no follow-up. Feet planted. Locked camera, full body visible, unchanged character, outfit, size and position.
