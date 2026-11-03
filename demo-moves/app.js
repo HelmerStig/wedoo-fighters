@@ -9,6 +9,9 @@
   }
   const characters = data.characters;
   const isDetail = document.body.dataset.page === 'character';
+  const isMoves = document.body.dataset.page === 'moves';
+  const isRoster = !isDetail && !isMoves;
+  const moveGroups = MovesGroups.group(characters);
   const params = new URLSearchParams(location.search);
   const storedAnimationId = (() => {
     try { return sessionStorage.getItem('wedoo-last-animation'); }
@@ -16,6 +19,7 @@
   })();
   const selectedId = isDetail ? params.get('id') : null;
   const selectedAnimationId = isDetail ? params.get('anim') : storedAnimationId;
+  const currentMove = moveGroups.find(move=>move.id===params.get('move')) ?? moveGroups[0];
   const selected = characters.find(c => c.id === selectedId);
   const href = (character, animationId = selectedAnimationId) => 'personaggio.html?id=' + encodeURIComponent(character.id) + (animationId ? '&anim=' + encodeURIComponent(animationId) : '');
   const number = n => String(n).padStart(2, '0');
@@ -24,7 +28,8 @@
     <a class="brand" href="index.html" aria-label="WEDOO Fighters, tutti i personaggi"><span class="brand-mark" aria-hidden="true">WF</span><span class="brand-name">WEDOO<small>FIGHTERS</small></span></a>
     <button class="sidebar-close icon-button" type="button" aria-label="Chiudi il menu">×</button>
     <label class="sidebar-search"><span aria-hidden="true">⌕</span><span class="screen-reader-only">Cerca un personaggio</span><input id="character-search" type="search" placeholder="Cerca personaggio…" autocomplete="off" spellcheck="false"></label>
-    <a class="all-link" href="index.html" ${!isDetail ? 'aria-current="page"' : ''}><span><b class="grid-symbol" aria-hidden="true">▦</b> Tutti i personaggi</span><span>${characters.length}</span></a>
+    <a class="all-link" href="index.html" ${isRoster ? 'aria-current="page"' : ''}><span><b class="grid-symbol" aria-hidden="true">▦</b> Tutti i personaggi</span><span>${characters.length}</span></a>
+    <nav class="moves-nav" aria-label="Per mossa"><div class="sidebar-label"><span>PER MOSSA</span></div>${moveGroups.map(move=>`<a class="nav-link move-nav-link" href="mosse.html?move=${encodeURIComponent(move.id)}" ${isMoves && move.id===currentMove.id ? 'aria-current="page"' : ''}><span>${escape(move.name)}</span><span class="move-count">${move.animations.length}</span></a>`).join('')}</nav>
     <div class="sidebar-label"><span>PERSONAGGI</span><span id="nav-count">${characters.length}</span></div>
     <nav class="character-nav" aria-label="Elenco personaggi">${characters.map((c, i) => `<a class="nav-link" data-character="${escape(c.id)}" href="${href(c)}" ${c.id === selectedId ? 'aria-current="page"' : ''}><span class="nav-number" aria-hidden="true">${number(i + 1)}</span><span>${escape(c.name.toUpperCase())}</span></a>`).join('')}<p class="nav-empty" hidden>Nessun risultato.</p></nav>
     <div class="sidebar-bottom">MOVE LIBRARY <span aria-hidden="true">/</span> VOL. 01</div>`;
@@ -57,8 +62,29 @@
       img.parentElement.append(message);
     }, {once:true}));
   }
-  let rosterPreviews;
-  if (!isDetail) {
+  let rosterPreviews, moveGallery;
+  function renderMove(query = '') {
+    moveGallery?.destroy();
+    const filtered = MovesGroups.filter(currentMove, query);
+    const container = $('#move-gallery');
+    $('#move-visible-count').textContent = filtered.animations.length;
+    $('#move-empty').hidden = filtered.animations.length > 0;
+    container.hidden = filtered.animations.length === 0;
+    if (!filtered.animations.length) {container.innerHTML='';return;}
+    moveGallery = MovesGallery.install(container, filtered, {
+      title: currentMove.name + ' - Personaggi',
+      description: 'Controlla ogni personaggio oppure riproduci tutte le anteprime.'
+    });
+  }
+  if (isMoves) {
+    document.title = currentMove.name + ' - Per mossa - WEDOO Fighters';
+    $('#breadcrumb-name').textContent = currentMove.name;
+    $('#move-name').textContent = currentMove.name;
+    $('#move-total-count').textContent = currentMove.animations.length;
+    renderMove();
+    window.addEventListener('pagehide',()=>moveGallery?.destroy());
+  }
+  if (isRoster) {
     $('#total-count').textContent = characters.length;
     $('#visible-count').textContent = characters.length;
     $('#character-grid').innerHTML = characters.map((c, i) => `<a class="character-card" data-character="${escape(c.id)}" href="${href(c)}" aria-label="Esplora le animazioni di ${escape(c.name)}"><div class="card-portrait"><span class="card-number" aria-hidden="true">${number(i + 1)} / ${number(characters.length)}</span><img data-portrait src="${escape(c.thumbnail)}" alt="${escape(c.name)}, posa originale" loading="lazy" decoding="async" width="512" height="512"></div><div class="card-label"><div><h3>${escape(c.name)}</h3><p>${c.animations.length} ${c.animations.length === 1 ? 'animazione disponibile' : 'animazioni disponibili'}</p></div><span class="card-arrow" aria-hidden="true">↗</span></div></a>`).join('');
@@ -70,9 +96,10 @@
     const matches = new Set(characters.filter(c => c.name.toLocaleLowerCase('it').includes(query)).map(c => c.id));
     document.querySelectorAll('[data-character]').forEach(el => el.hidden = !matches.has(el.dataset.character));
     rosterPreviews?.refresh();
+    if (isMoves) renderMove(query);
     $('#nav-count').textContent = matches.size;
     $('.nav-empty').hidden = matches.size > 0;
-    if (!isDetail) { $('#visible-count').textContent = matches.size; $('#empty-state').hidden = matches.size > 0; }
+    if (isRoster) { $('#visible-count').textContent = matches.size; $('#empty-state').hidden = matches.size > 0; }
   });
   if (!isDetail) return;
   if (!selected) {

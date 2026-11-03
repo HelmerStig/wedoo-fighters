@@ -5,7 +5,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const core=require('../player-core.js');
 
-function fixture({reducedMotion=false,lazy=false}={}){
+function fixture({reducedMotion=false,lazy=false,byMove=false}={}){
   const images=[],callbacks=new Map();let sequence=0,observer;
   function element(){return {listeners:{},attributes:{},dataset:{},hidden:false,disabled:false,value:'',checked:true,textContent:'',
     classList:{values:new Set(),toggle(name,on){on?this.values.add(name):this.values.delete(name);},add(name){this.values.add(name);}},
@@ -33,7 +33,8 @@ function fixture({reducedMotion=false,lazy=false}={}){
   if(lazy)sandbox.IntersectionObserver=class {constructor(fn){this.callback=fn;observer=this;}observe(){}disconnect(){this.disconnected=true;}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
-  const gallery=sandbox.MovesGallery.install(container,character);
+  if(byMove) character.animations.forEach((a,i)=>{a.characterId=i?'luana':'marco-balpo';a.characterName=i?'Luana':'Marco Balpo';});
+  const gallery=sandbox.MovesGallery.install(container,character,byMove?{title:'Pugno leggero - Personaggi',description:'Confronta i personaggi.'}:{});
   return {cards,images,document,media,gallery,container,playAll,pauseAll,callbacks,
     load(){images.forEach(image=>image.onload());},
     step(time){const pending=[...callbacks.values()];callbacks.clear();pending.forEach(fn=>fn(time));},
@@ -87,4 +88,16 @@ test('un errore di caricamento resta nella propria scheda; riproduzione singola 
   f.cards[1].nodes.canvas.fire('keydown',{key:'ArrowLeft'});assert.equal(f.frame(1),58);
   f.cards[1].nodes['[data-action="play"]'].fire('click');f.step(500);f.step(750);assert.equal(f.frame(1),59);
   f.cards[1].nodes['[data-action="play"]'].fire('click');assert.equal(f.frame(1),0);
+});
+
+test('la vista per mossa distingue titoli, link e download dei personaggi e conserva i controlli',()=>{
+  const f=fixture({byMove:true});
+  assert.match(f.container.innerHTML,/Pugno leggero - Personaggi/);
+  assert.match(f.container.innerHTML,/personaggio\.html\?id=marco-balpo&amp;anim=idle/);
+  assert.match(f.container.innerHTML,/>Marco Balpo<\/a>/);
+  assert.match(f.container.innerHTML,/download="luana-jump\.png"/);
+  assert.match(f.container.innerHTML,/Jump di Luana/);
+  f.load();f.step(0);f.step(250);
+  assert.equal(f.frame(0),4);assert.equal(f.frame(1),6);
+  f.gallery.destroy();assert.equal(f.callbacks.size,0);
 });

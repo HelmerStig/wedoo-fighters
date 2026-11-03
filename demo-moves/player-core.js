@@ -12,7 +12,7 @@
     return {frame: loop ? next % frameCount : Math.min(next, frameCount - 1), remainder: Math.max(0, elapsed - steps * duration), ended: !loop && next >= frameCount - 1};
   }
   function effectiveFps(animation, multiplier) {
-    return (animation?.playbackFps ?? 18) * multiplier;
+    return (animation?.playbackFps ?? 24) * multiplier;
   }
   return Object.freeze({advance, effectiveFps});
 });

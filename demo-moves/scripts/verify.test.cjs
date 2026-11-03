@@ -21,7 +21,7 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
       const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
       for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
       assert.ok(effectiveFps(a,1)>0);
-      assert.equal(effectiveFps(a,1),a.id==='light-punch'?a.frames.length*2:(a.id==='jump'?24:18),c.name);
+      assert.equal(effectiveFps(a,1),a.id==='light-punch'?a.frames.length*2:24,c.name);
     }
   }
   assert.match(characters.find(c=>c.id==='oscar').thumbnail,/OSCARE\.png$/);
@@ -33,23 +33,23 @@ test('il loop usa solo i frame esportati e conserva il tempo frazionario',()=>{
   assert.equal(state.frame,0);assert.ok(Math.abs(state.remainder-(50-1000/24))<1e-8);assert.equal(state.ended,false);
   assert.equal(advance({frame:23,remainder:0},1000/24+1e-6,24,24,true).frame,0);
 });
-test('riproduzione singola e base uniforme a 18 fps',()=>{
+test('riproduzione singola e base uniforme a 24 fps',()=>{
   assert.equal(advance({frame:46,remainder:0},200,24,48,false).frame,47);
   assert.equal(advance({frame:46,remainder:0},200,24,48,false).ended,true);
-  assert.equal(effectiveFps({baseFps:24,savedSpeed:1.5},.5),9);
-  assert.equal(effectiveFps({baseFps:60,savedSpeed:2},1),18);
-  assert.equal(effectiveFps({id:'walk',playbackFps:18,savedSpeed:2},1),18);
-  assert.equal(effectiveFps({id:'walk',playbackFps:18},.5),9);
+  assert.equal(effectiveFps({baseFps:24,savedSpeed:1.5},.5),12);
+  assert.equal(effectiveFps({baseFps:60,savedSpeed:2},1),24);
+  assert.equal(effectiveFps({id:'walk',playbackFps:24,savedSpeed:2},1),24);
+  assert.equal(effectiveFps({id:'walk',playbackFps:24},.5),12);
   assert.throws(()=>advance({frame:0,remainder:0},20,0,49,true));
 });
 
-test('walk usa esattamente il taglio salvato e 18 fps',async()=>{
+test('walk usa esattamente il taglio salvato e 24 fps',async()=>{
   const {characters}=await catalog();
   const manifest=JSON.parse(await fs.readFile(path.resolve(demo,'../animation/walk-manifest.json'),'utf8'));
   assert.ok(manifest.items.length>=40);
   for(const item of manifest.items){
     const animation=characters.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='walk');
-    assert.equal(animation.name,'Walk');assert.equal(effectiveFps(animation,1),18);
+    assert.equal(animation.name,'Walk');assert.equal(effectiveFps(animation,1),24);
     assert.equal(animation.frames.length,item.sourceEnd-item.sourceStart+1);
     const atlas=JSON.parse(await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8'));
     if(atlas.meta?.source_frame_start!==undefined||atlas.meta?.source_frame_end!==undefined){
@@ -59,13 +59,13 @@ test('walk usa esattamente il taglio salvato e 18 fps',async()=>{
     }
   }
 });
-test('victory usa i frame esportati e 18 fps',async()=>{
+test('victory usa i frame esportati e 24 fps',async()=>{
   const {characters}=await catalog();
   const manifest=JSON.parse(await fs.readFile(path.resolve(demo,'../animation/victory-manifest.json'),'utf8'));
   assert.ok(manifest.items.length>=1);
   for(const item of manifest.items){
     const animation=characters.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='victory');
-    assert.equal(animation.name,'Victory');assert.equal(effectiveFps(animation,1),18);
+    assert.equal(animation.name,'Victory');assert.equal(effectiveFps(animation,1),24);
     assert.equal(animation.frames.length,item.frames);
     const atlas=JSON.parse(await fs.readFile(path.resolve(demo,decodeURIComponent(animation.atlas)),'utf8'));
     assert.equal(atlas.meta?.frame_count??Object.keys(atlas.frames).length,item.frames);

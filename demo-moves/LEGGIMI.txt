@@ -9,12 +9,17 @@ Tutte le animazioni del personaggio sono mostrate insieme, con un player per
 mossa: pausa, frame, loop, velocita, sfondo e download sono indipendenti.
 "Riproduci tutte" e "Pausa tutte" controllano l'intera galleria.
 
+La sezione "PER MOSSA" del menu apre mosse.html?move=idle (o walk, jump,
+victory, light-punch): mostra tutti i personaggi con quella mossa disponibile.
+La ricerca filtra i nomi; i titoli delle schede aprono il dettaglio del personaggio.
+Velocita, tagli e controlli sono gli stessi della vista per personaggio.
+
 Il player rispetta i frame esportati e la trasparenza. Le animazioni idle sono
-riprodotte a 18 fps di base, indipendentemente dalla velocita salvata su AutoSprite.
-Le animazioni walk sono riprodotte a 18 fps di base e usano solo i frame del
+riprodotte a 24 fps di base, indipendentemente dalla velocita salvata su AutoSprite.
+Le animazioni walk sono riprodotte a 24 fps di base e usano solo i frame del
 taglio salvato su AutoSprite, dove presente. Il moltiplicatore di velocita
 salvato su AutoSprite e mostrato come informazione e non altera queste basi.
-Le animazioni victory sono riprodotte a 18 fps di base.
+Le animazioni victory sono riprodotte a 24 fps di base.
 Le animazioni Jump provengono da "jump custom 2", rispettano il taglio salvato
 su AutoSprite e sono riprodotte a 24 fps di base.
 "Pugno leggero" e disponibile per i personaggi con un Light Punch gia creato:

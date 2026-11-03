@@ -41,4 +41,4 @@ Modifica soltanto le voci richieste. Gli script storici negli output possono usa
 - Confronta scala, margini e abiti con il PNG originale; segnala anomalie senza correggere la scala arbitrariamente.
 - Se la richiesta comprende l'aggiornamento della demo, rigenera `demo-moves/catalog.js` con `node demo-moves/scripts/build-catalog.mjs` e verifica con `node --test demo-moves/scripts/verify.test.cjs`.
 
-La demo usa attualmente 18 fps per idle, walk e victory e 24 fps per jump (versioni "jump custom 2") ; light-punch ("Pugno leggero") dura 500 ms a 1x con fps = frame esportati * 2; `speedMultiplier` del servizio è conservato come informazione, non moltiplicato automaticamente per la velocità di riproduzione.
+La demo usa attualmente 24 fps per idle, walk, victory e jump (versioni "jump custom 2") ; light-punch ("Pugno leggero") dura 500 ms a 1x con fps = frame esportati * 2; `speedMultiplier` del servizio è conservato come informazione, non moltiplicato automaticamente per la velocità di riproduzione.

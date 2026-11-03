@@ -23,7 +23,7 @@ Non editare manualmente `catalog.js` per modifiche permanenti ai dati: aggiorna 
 ## Comportamenti da preservare
 
 - Anteprime dal PNG originale. La pagina personaggio mostra tutte le animazioni in una griglia, senza select per cambiare mossa: ogni player ha controlli indipendenti; gli spritesheet si caricano in prossimità del viewport. I player mantengono celle e margini degli asset esportati.
-- Base di 18 fps per idle, walk e victory, 24 fps per jump; light-punch (Pugno leggero) dura 500 ms a 1x con fps = frame esportati * 2, salvo nuova richiesta dell'utente. `savedSpeed` è informativo; il selettore applica il moltiplicatore scelto dall'utente alla base.
+- Base di 24 fps per idle, walk, victory e jump; light-punch (Pugno leggero) dura 500 ms a 1x con fps = frame esportati * 2, salvo nuova richiesta dell'utente. `savedSpeed` è informativo; il selettore applica il moltiplicatore scelto dall'utente alla base.
 - Il loop usa soltanto i frame esportati; non ricostruisce i frame esclusi dal taglio e non applica una sequenza avanti-indietro.
 - Mantieni accumulatori temporali, pausa, avanzamento singolo, riproduzione senza loop e caricamenti asincroni coerenti quando si cambia animazione.
 - Il pulsante di chiusura della barra laterale serve al menu mobile aperto e resta nascosto su desktop. Controlla la specificità CSS: `.icon-button` può sovrascrivere regole meno specifiche di `.sidebar-close`.

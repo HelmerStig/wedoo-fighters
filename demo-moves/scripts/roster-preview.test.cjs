@@ -23,14 +23,14 @@ function fixture({reducedMotion=false}={}){
   return {cards,images,frames,draws,document,preview,enter(card){card.hover=true;return card.listeners.mouseenter();},leave(card){card.hover=false;card.listeners.mouseleave();},step(time){const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn(time));}};
 }
 
-test('hover carica idle su richiesta, anima a 18 fps e ripristina la posa all’uscita',async()=>{
+test('hover carica idle su richiesta, anima a 24 fps e ripristina la posa all’uscita',async()=>{
   const f=fixture(),card=f.cards[0];
   assert.equal(f.images.length,0);
   const pending=f.enter(card);assert.equal(f.images[0].src,'alberto.png');
   assert.equal(card.canvas.hidden,true);
   f.images[0].onload();await pending;
   assert.equal(card.canvas.hidden,false);assert.ok(card.classes.has('is-idle'));
-  f.step(100);assert.equal(f.draws.at(-1)[1],512);
+  f.step(100);assert.equal(f.draws.at(-1)[1],1024);
   f.leave(card);assert.equal(card.canvas.hidden,true);assert.equal(f.frames.size,0);assert.ok(!card.classes.has('is-idle'));
   await f.enter(card);assert.equal(f.images.length,1);
 });

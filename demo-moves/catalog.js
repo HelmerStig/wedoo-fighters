@@ -312,6 +312,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -457,7 +458,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -765,7 +766,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -1383,6 +1384,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -1528,7 +1530,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -1836,7 +1838,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -2448,6 +2450,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -2647,7 +2650,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -2955,7 +2958,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -3423,6 +3426,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -3574,7 +3578,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -3882,7 +3886,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -4452,6 +4456,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -4597,7 +4602,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -4905,7 +4910,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -5499,6 +5504,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.333333333333333
         },
         {
@@ -5644,7 +5650,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -5952,7 +5958,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -6420,6 +6426,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -6559,7 +6566,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -6867,7 +6874,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -7347,6 +7354,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -7498,7 +7506,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -7806,7 +7814,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -8412,6 +8420,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -8563,7 +8572,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -8871,7 +8880,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -9477,6 +9486,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -9622,7 +9632,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -9930,7 +9940,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -10506,6 +10516,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 24,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -10651,7 +10662,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -10959,7 +10970,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -11553,6 +11564,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -11704,7 +11716,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -12012,7 +12024,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -12480,6 +12492,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -12631,7 +12644,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -12939,7 +12952,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -13533,6 +13546,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -13684,7 +13698,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -13992,7 +14006,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -14580,6 +14594,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -14731,7 +14746,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -15039,7 +15054,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -15633,6 +15648,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -15784,7 +15800,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -16092,7 +16108,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -16692,6 +16708,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -16843,7 +16860,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -17151,7 +17168,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -17613,6 +17630,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -17770,7 +17788,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -18078,7 +18096,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -18672,6 +18690,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -18817,7 +18836,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -19125,7 +19144,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -19719,6 +19738,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -19864,7 +19884,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -20172,7 +20192,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -20760,6 +20780,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -20911,7 +20932,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -21219,7 +21240,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -21819,6 +21840,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.333333333333333
         },
         {
@@ -21964,7 +21986,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -22272,7 +22294,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -22812,6 +22834,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 24,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -23119,7 +23142,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -23427,7 +23450,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -24090,6 +24113,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -24241,7 +24265,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -24549,7 +24573,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -25113,6 +25137,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -25258,7 +25283,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -25566,7 +25591,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -26295,6 +26320,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -26440,7 +26466,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -26748,7 +26774,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -27297,6 +27323,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -27448,7 +27475,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -27756,7 +27783,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -28479,6 +28506,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 24,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -28624,7 +28652,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -28932,7 +28960,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -29303,20 +29331,14 @@ window.MOVES_CATALOG = {
               1536,
               512,
               512
-            ],
-            [
-              512,
-              1536,
-              512,
-              512
             ]
           ],
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 28,
+          "playbackFps": 26,
           "durationMs": 500,
-          "savedSpeed": 1
+          "savedSpeed": 2
         }
       ]
     },
@@ -29625,6 +29647,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -29764,7 +29787,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -30072,7 +30095,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -30759,6 +30782,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -30910,7 +30934,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -31218,7 +31242,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -31953,6 +31977,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -32098,7 +32123,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -32406,7 +32431,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -33153,6 +33178,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -33298,7 +33324,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -33606,7 +33632,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -34137,6 +34163,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -34282,7 +34309,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -34590,7 +34617,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -35223,6 +35250,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -35374,7 +35402,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -35682,7 +35710,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -36417,6 +36445,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -36700,7 +36729,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -37008,7 +37037,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -37743,6 +37772,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -37888,7 +37918,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -38196,7 +38226,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -38739,6 +38769,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -38890,7 +38921,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -39198,7 +39229,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -39909,6 +39940,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -40060,7 +40092,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -40368,7 +40400,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -41043,6 +41075,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": false,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -41188,7 +41221,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -41496,7 +41529,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -42171,6 +42204,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -42316,7 +42350,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -42624,7 +42658,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -43329,6 +43363,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -43480,7 +43515,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -43788,7 +43823,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
@@ -44535,6 +44570,7 @@ window.MOVES_CATALOG = {
           "frameHeight": 512,
           "trimmed": true,
           "baseFps": 23.996,
+          "playbackFps": 24,
           "savedSpeed": 1.5
         },
         {
@@ -44680,7 +44716,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": true,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 2
         },
         {
@@ -44988,7 +45024,7 @@ window.MOVES_CATALOG = {
           "frameWidth": 512,
           "frameHeight": 512,
           "trimmed": false,
-          "playbackFps": 18,
+          "playbackFps": 24,
           "savedSpeed": 1
         },
         {
