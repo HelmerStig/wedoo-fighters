@@ -2,7 +2,7 @@
     "animation":  "light-punch",
     "sourceAnimation":  "names containing light punch",
     "creditsUsed":  0,
-    "importedAt":  "2026-11-03T10:50:47.9159686Z",
+    "importedAt":  "2026-11-03T11:00:38.0110990Z",
     "items":  [
                   {
                       "character":  "JERRY",
@@ -402,6 +402,48 @@
                       "pixelHash":  "1ezmAAVsNJUu7uyGpO6SXvfOgBadmc+3uR47rueGsD4=",
                       "playbackFps":  48,
                       "durationMs":  500
+                  },
+                  {
+                      "character":  "LIVIO",
+                      "characterId":  "cmv9hwltm004583r8k33xnjju",
+                      "sourceSheetId":  "cmw0kr6ct018xf6exiwzjwjc9",
+                      "sourceAnimationName":  "light punch",
+                      "createdAt":  "2026-11-03T10:58:25.133Z",
+                      "sourceStart":  0,
+                      "sourceEnd":  9,
+                      "sourceFrames":  13,
+                      "frames":  10,
+                      "frameWidth":  512,
+                      "frameHeight":  512,
+                      "speedMultiplier":  2,
+                      "trimmed":  true,
+                      "png":  "animation/livio/livio-light-punch.png",
+                      "atlas":  "animation/livio/livio-light-punch.json",
+                      "pixelVerification":  "decoded RGBA SHA256",
+                      "pixelHash":  "3R2Azei3oBbD7VXTgpymCudT8DuAWxdUnoeOc/Y4GIE=",
+                      "playbackFps":  20,
+                      "durationMs":  500
+                  },
+                  {
+                      "character":  "Giordano",
+                      "characterId":  "cmv9hwkyn004183r8zh8wx8he",
+                      "sourceSheetId":  "cmw0ktgk300wc83c7hdz3ew0y",
+                      "sourceAnimationName":  "light punch",
+                      "createdAt":  "2026-11-03T11:00:11.667Z",
+                      "sourceStart":  0,
+                      "sourceEnd":  16,
+                      "sourceFrames":  17,
+                      "frames":  17,
+                      "frameWidth":  512,
+                      "frameHeight":  512,
+                      "speedMultiplier":  1,
+                      "trimmed":  true,
+                      "png":  "animation/giordano/giordano-light-punch.png",
+                      "atlas":  "animation/giordano/giordano-light-punch.json",
+                      "pixelVerification":  "decoded RGBA SHA256",
+                      "pixelHash":  "mtcbRGcjSRj6XmMkxmh1g1IfQK3Oge7ho/qpLe1a1UQ=",
+                      "playbackFps":  34,
+                      "durationMs":  500
                   }
               ],
     "missing":  [
@@ -425,9 +467,7 @@
                     "FRANCESCA-RIVELLA",
                     "FRANCESCO-LEONI",
                     "GENNARO",
-                    "Giordano",
-                    "GIORGIO",
-                    "LIVIO"
+                    "GIORGIO"
                 ],
     "durationMs":  500
 }

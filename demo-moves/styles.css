@@ -30,3 +30,15 @@
 .sidebar{overflow-y:auto}
 .sidebar>*{flex-shrink:0}
 .character-nav{flex:0 0 auto;overflow:visible}
+
+/* Dropdown nativi: supportano tastiera e annunciano lo stato aperto/chiuso. */
+.sidebar-dropdown{border-bottom:1px solid var(--border)}
+.sidebar-dropdown-toggle{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:17px 24px;cursor:pointer;font-size:11px;font-weight:650;letter-spacing:.5px;color:var(--text);user-select:none}
+.sidebar-dropdown-toggle::-webkit-details-marker{display:none}
+.sidebar-dropdown-toggle:hover{color:var(--accent);background:var(--surface)}
+.sidebar-dropdown-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:-4px;border-radius:6px}
+.dropdown-summary-end{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:10px}
+.dropdown-chevron{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+.sidebar-dropdown[open]>.sidebar-dropdown-toggle .dropdown-chevron{transform:rotate(225deg);margin-top:4px}
+.sidebar-dropdown .moves-nav{border-bottom:0;padding:0 12px 12px}
+.sidebar-dropdown .character-nav{padding-bottom:12px}

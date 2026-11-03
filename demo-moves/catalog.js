@@ -21526,6 +21526,123 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/giordano/giordano-light-punch.png",
+          "atlas": "../animation/giordano/giordano-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ],
+            [
+              2048,
+              1024,
+              512,
+              512
+            ],
+            [
+              0,
+              1536,
+              512,
+              512
+            ],
+            [
+              512,
+              1536,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 34,
+          "durationMs": 500,
+          "savedSpeed": 1
         }
       ]
     },
@@ -24829,6 +24946,81 @@ window.MOVES_CATALOG = {
           "trimmed": true,
           "playbackFps": 24,
           "savedSpeed": 1
+        },
+        {
+          "id": "light-punch",
+          "name": "Pugno leggero",
+          "description": "Pugno leggero e ritorno in guardia",
+          "image": "../animation/livio/livio-light-punch.png",
+          "atlas": "../animation/livio/livio-light-punch.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 2
         }
       ]
     },

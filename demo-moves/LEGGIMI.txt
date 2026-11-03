@@ -9,6 +9,10 @@ Tutte le animazioni del personaggio sono mostrate insieme, con un player per
 mossa: pausa, frame, loop, velocita, sfondo e download sono indipendenti.
 "Riproduci tutte" e "Pausa tutte" controllano l'intera galleria.
 
+I menu "Per mossa" e "Per personaggio" si aprono e chiudono con un click
+sul titolo (o con Invio/Spazio da tastiera). La sezione della vista attiva
+e aperta inizialmente.
+
 La sezione "PER MOSSA" del menu apre mosse.html?move=idle (o walk, jump,
 victory, light-punch): mostra tutti i personaggi con quella mossa disponibile.
 La ricerca filtra i nomi; i titoli delle schede aprono il dettaglio del personaggio.
