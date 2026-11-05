@@ -85,7 +85,14 @@
     document.title = currentMove.name + ' - Per mossa - WEDOO Fighters';
     $('#breadcrumb-name').textContent = currentMove.name;
     $('#move-name').textContent = currentMove.name;
-    $('#move-report').hidden = currentMove.id !== 'light-punch';
+    const reportPaths={'light-punch':'reports/light-punch-timing.html',block:'reports/block-timing.html',jump:'reports/jump-timing.html'};
+    const reportPath=reportPaths[currentMove.id];
+    $('#move-report').hidden = !reportPath;
+    if(reportPath){
+      const link=$('#move-report').querySelector('a');
+      link.href=reportPath;
+      link.textContent='Apri il report: '+currentMove.name+' →';
+    }
     $('#move-total-count').textContent = currentMove.animations.length;
     renderMove();
     window.addEventListener('pagehide',()=>moveGallery?.destroy());

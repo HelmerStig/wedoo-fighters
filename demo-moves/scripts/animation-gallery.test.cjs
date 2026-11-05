@@ -33,7 +33,8 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false}={}){
   if(lazy)sandbox.IntersectionObserver=class {constructor(fn){this.callback=fn;observer=this;}observe(){}disconnect(){this.disconnected=true;}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
-  if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
+  if(timed==='jump')character.animations.forEach((a,i)=>{a.apexFrame=i?40:10;a.apexMs=500;a.durationMs=1000;a.frameDurations=a.frames.map((_,f)=>f<a.apexFrame?500/a.apexFrame:500/(a.frames.length-a.apexFrame));});
+  else if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
   if(byMove) character.animations.forEach((a,i)=>{a.characterId=i?'luana':'marco-balpo';a.characterName=i?'Luana':'Marco Balpo';});
   const gallery=sandbox.MovesGallery.install(container,character,byMove?{title:'Pugno leggero - Personaggi',description:'Confronta i personaggi.'}:{});
   return {cards,images,document,media,gallery,container,playAll,pauseAll,callbacks,
@@ -113,4 +114,21 @@ test('i pugni restano allineati anche quando la seconda scheda si carica in rita
   f.playAll.fire('click');assert.equal(f.frame(0),0);assert.equal(f.frame(1),0);
   f.step(400);f.step(650);assert.equal(f.frame(0),10);assert.equal(f.frame(1),40);
   f.step(900);assert.equal(f.frame(0),0);assert.equal(f.frame(1),0);
+});
+
+test('gli apici dei salti restano allineati con caricamento progressivo e nei loop successivi',()=>{
+  const f=fixture({lazy:true,timed:'jump'});
+  assert.match(f.container.innerHTML,/apice 0,5 s/);
+  assert.doesNotMatch(f.container.innerHTML,/impatto/);
+  f.observe(0,true);f.images[0].onload();f.step(0);f.step(250);
+  f.observe(1,true);f.images[1].onload();f.step(250);f.step(500);
+  assert.equal(f.frame(0),10);assert.equal(f.frame(1),40);
+  f.step(750);f.step(1000);
+  assert.equal(f.frame(0),0);assert.equal(f.frame(1),0);
+  f.step(1250);f.step(1500);
+  assert.equal(f.frame(0),10);assert.equal(f.frame(1),40);
+  f.cards[1].nodes['[data-role="speed"]'].value='0.5';
+  f.cards[1].nodes['[data-role="speed"]'].fire('change');
+  assert.match(f.cards[1].nodes['[data-role="fps"]'].textContent,/apice 1 s/);
+  f.gallery.destroy();
 });

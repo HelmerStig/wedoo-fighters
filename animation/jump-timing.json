@@ -1,0 +1,345 @@
+{
+  "updatedAt": "2026-11-05",
+  "apexMs": 500,
+  "durationMs": 1000,
+  "frameIndexBase": 0,
+  "selectionMethod": "Confronto visivo dei fotogrammi intorno alla massima elevazione, assistito dal bordo superiore della silhouette; nei casi di clipping, valutazione del corpo visibile.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmvrwvtwf004491x07gww8t3p",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "ALEX",
+      "sourceSheetId": "cmvrw8kz700n3ykc1di17h3f5",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 19,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "ANGELA",
+      "sourceSheetId": "cmvrw8eye00mwykc19g40mmdk",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "ANTONINO",
+      "sourceSheetId": "cmvrw884h00mjykc1fpz6igfo",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "BARBARA-FIOCCA",
+      "sourceSheetId": "cmvrwb4w3001vr3ytcgdy8yqm",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 19,
+      "note": "Alla quota massima i capelli toccano il bordo superiore; apice stimato dalla posa visibile e dalla traiettoria."
+    },
+    {
+      "character": "Bonazzi",
+      "sourceSheetId": "cmvrw7vo700m7ykc1w9128srx",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 19,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Chiara-Molina",
+      "sourceSheetId": "cmvrw649v00l1ykc1rv6e13em",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 22,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "CHIARA-TONIOL",
+      "sourceSheetId": "cmvrw6ijx00laykc1d3bunvzi",
+      "sourceStart": 0,
+      "sourceEnd": 46,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "CONDELLO",
+      "sourceSheetId": "cmvrw691s00epqjr5nl6y40co",
+      "sourceStart": 0,
+      "sourceEnd": 46,
+      "apexFrame": 24,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "DINO",
+      "sourceSheetId": "cmvrw5v7u00khykc160yhbhc6",
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "apexFrame": 22,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmvrwag7e0011r3yty1e6eefa",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 20,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "EMMA",
+      "sourceSheetId": "cmvrw419k00edqjr5x5zdq32w",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 24,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "EROS",
+      "sourceSheetId": "cmvrvy43f005mogrxazvsstbe",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmvrw5gcy00kcykc144dzp6i5",
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "apexFrame": 22,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "FARA",
+      "sourceSheetId": "cmvrw350600d6qjr54wnjfp3x",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 20,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "FRA-AMATO",
+      "sourceSheetId": "cmvrvxcxf0054iu0821q9tpxh",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmvrvxb0o0050iu0818ghe2qh",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 18,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "FRANCESCA-RIVELLA",
+      "sourceSheetId": "cmvrvv4mg003ziu08qym9jaad",
+      "sourceStart": 0,
+      "sourceEnd": 46,
+      "apexFrame": 18,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "FRANCESCO-LEONI",
+      "sourceSheetId": "cmvrvuyur00glykc182shnbla",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "GENNARO",
+      "sourceSheetId": "cmvrvtah900epykc13sw53f54",
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Giordano",
+      "sourceSheetId": "cmvrvt29w004lctmg37cw9vhh",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 25,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "GIORGIO",
+      "sourceSheetId": "cmvrvszoh004dctmg9mnwsvja",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "apexFrame": 14,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "JERRY",
+      "sourceSheetId": "cmvrvfo5z00esg4thk0ujmchx",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "LIVIO",
+      "sourceSheetId": "cmvrvvfwu00gvykc10ze3v77z",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "apexFrame": 21,
+      "note": "Alla quota massima i capelli toccano il bordo superiore; apice stimato dalla posa visibile e dalla traiettoria."
+    },
+    {
+      "character": "LUANA",
+      "sourceSheetId": "cmvrvvkpb005yctmgdi7vkzxm",
+      "sourceStart": 0,
+      "sourceEnd": 45,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MANU",
+      "sourceSheetId": "cmvrvvpmu0063ctmgvchykzi8",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MARCO-BALPO",
+      "sourceSheetId": "cmvrvp9ms00c1ykc1u3keccdo",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Marco-Rossetti",
+      "sourceSheetId": "cmvrvn1sc0045y2m1j82ycree",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 24,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MARIO",
+      "sourceSheetId": "cmvrvw0oz00h6ykc1eztk4y9c",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 24,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmvrvotll0063y2m1y2gqz4qa",
+      "sourceStart": 0,
+      "sourceEnd": 45,
+      "apexFrame": 28,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MARTINI",
+      "sourceSheetId": "cmvrvq17i001yctmgksx766xv",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 24,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MATTEO",
+      "sourceSheetId": "cmvrvoa7s004zqjr5wpjaaxr7",
+      "sourceStart": 0,
+      "sourceEnd": 37,
+      "apexFrame": 16,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MIKE",
+      "sourceSheetId": "cmvrvpz7c0014iu08n8d2oqdw",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 22,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "MORI",
+      "sourceSheetId": "cmvrvoc4v0053qjr55lg52xcg",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmvrv8ocd005zvzlmtm6vv0j5",
+      "sourceStart": 0,
+      "sourceEnd": 46,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "PEIROLO",
+      "sourceSheetId": "cmvrvmi8p003ry2m1hb7mlrot",
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmvrvm5zw002wy2m1o6z21j81",
+      "sourceStart": 0,
+      "sourceEnd": 46,
+      "apexFrame": 26,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmvrvkpfs001yqjr5io733ibg",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 24,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmvrvkvws009yykc1mgr9g281",
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "apexFrame": 17,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Simona",
+      "sourceSheetId": "cmvrvfdvq008sykc1gq01106z",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "apexFrame": 24,
+      "note": "Apice stimato dal corpo visibile al frame 25; capelli al bordo superiore. Riesportazione Jump Custom 2 verificata sui 40 frame del taglio salvato."
+    },
+    {
+      "character": "TOMMASO",
+      "sourceSheetId": "cmvrvfj15008zykc1olfu86hp",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 23,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "ZICHELLA",
+      "sourceSheetId": "cmvrvfdiv00elg4thnzc0zwba",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "apexFrame": 21,
+      "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    }
+  ]
+}

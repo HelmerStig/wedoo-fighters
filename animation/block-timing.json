@@ -1,0 +1,344 @@
+{
+  "updatedAt": "2026-11-05",
+  "blockMs": 100,
+  "frameIndexBase": 0,
+  "selectionMethod": "Revisione visiva dei frame esportati; primo assetto di parata alta stabilito. FPS costante per personaggio = blockFrame * 1000 / blockMs.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmw3r53jh011rxihot7yuxdvx",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "ALEX",
+      "sourceSheetId": "cmw3r4txv0115xihou5qlrumd",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "ANGELA",
+      "sourceSheetId": "cmw3r3iqs00jybh7kgglbqmlo",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "ANTONINO",
+      "sourceSheetId": "cmw3r4h1w00ksbh7ku094qf54",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "BARBARA-FIOCCA",
+      "sourceSheetId": "cmw3r4i8000l0bh7kcq8fs3zs",
+      "sourceStart": 0,
+      "sourceEnd": 11,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Bonazzi",
+      "sourceSheetId": "cmw3r3ezq00e19dugb4g21fdz",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Chiara-Molina",
+      "sourceSheetId": "cmw3r2ikg00gcbh7k0m713j6k",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "CHIARA-TONIOL",
+      "sourceSheetId": "cmw3r4l1h00lxbh7ksaj47bi1",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "CONDELLO",
+      "sourceSheetId": "cmw3r329400nn2jiygu2xqhkp",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 5,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "DINO",
+      "sourceSheetId": "cmw3r3fwy00izbh7k3qgrbnz7",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmw3r6j03000lp9b5yc2tlk1x",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "EMMA",
+      "sourceSheetId": "cmw3r20pn00g0bh7knl4gtrlm",
+      "sourceStart": 0,
+      "sourceEnd": 12,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "EROS",
+      "sourceSheetId": "cmw3r1zb800fibh7kkf0qy273",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmw3r1hay00egbh7kst0xl36z",
+      "sourceStart": 0,
+      "sourceEnd": 12,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "FARA",
+      "sourceSheetId": "cmw3r169200dvbh7kj0hiwtq8",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "FRA-AMATO",
+      "sourceSheetId": "cmw3r227p016cii5bcts4c1n9",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmw3r1mly00eobh7k2fwhx23p",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "FRANCESCA-RIVELLA",
+      "sourceSheetId": "cmw3r20r000g4bh7k4dxgpg13",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 2,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "FRANCESCO-LEONI",
+      "sourceSheetId": "cmw3r0rz900brbh7krdfuytaa",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "GENNARO",
+      "sourceSheetId": "cmw3r0nct00cz9dugpvmnnons",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Giordano",
+      "sourceSheetId": "cmw3r05s600iv2jiy1eg6pa8w",
+      "sourceStart": 0,
+      "sourceEnd": 10,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "GIORGIO",
+      "sourceSheetId": "cmw3r04sp00ik2jiyt6xx8j8k",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "JERRY",
+      "sourceSheetId": "cmw3qs0rp007u2jiywyntf8dq",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "LIVIO",
+      "sourceSheetId": "cmw3qzxda00i12jiy9k457xuo",
+      "sourceStart": 0,
+      "sourceEnd": 9,
+      "blockFrame": 2,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "LUANA",
+      "sourceSheetId": "cmw3qzyaz00ig2jiyt3ixn1ek",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MANU",
+      "sourceSheetId": "cmw3qzxdn00i32jiyunwco1m3",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MARCO-BALPO",
+      "sourceSheetId": "cmw3qzwf2013lii5bzy0g7w1z",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Marco-Rossetti",
+      "sourceSheetId": "cmw3qys7900fs2jiyxdsmka81",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MARIO",
+      "sourceSheetId": "cmw3qzoql00h52jiygrt06ufd",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmw3qz9xh00go2jiymxq0eajt",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MARTINI",
+      "sourceSheetId": "cmw3qy9s700f72jiyoddqbmv2",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MATTEO",
+      "sourceSheetId": "cmw3qybrd00ff2jiyo97mk0cz",
+      "sourceStart": 0,
+      "sourceEnd": 11,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MIKE",
+      "sourceSheetId": "cmw3qys7v011nii5b36zxoiyn",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 5,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "MORI",
+      "sourceSheetId": "cmw3qyb1000a39dugkab0ypzm",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmw3qmle4005b9dug81gnwveu",
+      "sourceStart": 0,
+      "sourceEnd": 15,
+      "blockFrame": 5,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "PEIROLO",
+      "sourceSheetId": "cmw3qycfx010lii5bwdp62m4d",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmw3qy9c800f32jiygcx1kyz3",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmw3qtnbp00a22jiy2nla5rnz",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmw3qtnrp00aj2jiy5b2pehq2",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "Simona",
+      "sourceSheetId": "cmw3qtnfu00a62jiyb7cbna0v",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 4,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "TOMMASO",
+      "sourceSheetId": "cmw3qtnl700ab2jiy641doaaq",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "blockFrame": 3,
+      "note": "Prima posa di parata alta stabilita, scelta visivamente."
+    },
+    {
+      "character": "ZICHELLA",
+      "sourceSheetId": "cmw3r86uy003c19x2b5fjogin",
+      "sourceStart": 0,
+      "sourceEnd": 9,
+      "blockFrame": 1,
+      "note": "Parata con padella sollevata; posa difensiva diversa dalla guardia con avambracci degli altri personaggi."
+    }
+  ]
+}

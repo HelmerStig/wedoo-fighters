@@ -1,5 +1,19 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+PARATA ALTA (BLOCK)
+Disponibile per tutti i personaggi: mosse.html?move=block.
+La posa difensiva selezionata inizia a 100 ms dalla partenza a velocita 1x.
+Ogni personaggio usa fps costanti = indice frame parata (da 0) * 10.
+La durata del ciclo varia; tutti i frame esportati vengono conservati.
+Selezioni e provenienza: animation/block-timing.json e block-manifest.json.
+Report con pose, fps e timing: reports/block-timing.html (anche CSV).
+Il link al report si trova sotto il titolo della mossa, come per Pugno leggero.
+Per aggiornare gli asset: node autosprite-agent/import-block.mjs
+Poi: python autosprite-agent/export-block.py autosprite-agent/output/block-import-20261105/export-plan.json
+Rivedere visivamente le pose e aggiornare animation/block-timing.json, quindi:
+  node demo-moves/scripts/build-catalog.mjs
+  python demo-moves/scripts/build-block-report.py
+
 Apri index.html nel browser: non servono installazioni o connessioni a Internet.
 Mantieni demo-moves accanto alle cartelle PNG e animation del repository.
 
@@ -24,8 +38,18 @@ Le animazioni walk sono riprodotte a 24 fps di base e usano solo i frame del
 taglio salvato su AutoSprite, dove presente. Il moltiplicatore di velocita
 salvato su AutoSprite e mostrato come informazione e non altera queste basi.
 Le animazioni victory sono riprodotte a 24 fps di base.
-Le animazioni Jump provengono da "jump custom 2", rispettano il taglio salvato
-su AutoSprite e sono riprodotte a 24 fps di base.
+Le animazioni "Salto" rispettano il taglio salvato su AutoSprite.
+Tutti gli apici selezionati iniziano a 500 ms, con ciclo di 1000 ms a 1x.
+I framerate di salita e seconda fase sono adattati ai frame di ogni personaggio.
+Il report con apici, fps e note e reports/jump-timing.html (anche CSV),
+collegato sotto il titolo in mosse.html?move=jump.
+Selezioni e provenienza: animation/jump-timing.json e jump-manifest.json.
+Riproduci tutte sincronizza anche i cicli successivi e i caricamenti progressivi.
+Per rileggere le ultime versioni remote: node autosprite-agent/import-jump-latest.mjs
+Dopo una sostituzione degli asset, rivedere visivamente i frame di apice, poi:
+  python autosprite-agent/apply-jump-timing.py
+  node demo-moves/scripts/build-catalog.mjs
+  python demo-moves/scripts/build-jump-report.py
 "Pugno leggero" e disponibile per i personaggi con un Light Punch gia creato:
 usa l'ultima versione disponibile e il taglio salvato. A velocita 1x dura
 mezzo secondo: gli fps sono il numero di frame moltiplicato per 2.

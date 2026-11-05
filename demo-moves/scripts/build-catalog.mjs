@@ -9,6 +9,13 @@ const manifest=await readJson(join(root,'animation/manifest.json'));
 const pngs=(await readdir(join(root,'PNG'))).filter(name=>name.toLowerCase().endsWith('.png'));
 const url=path=>relative(demo,path).split(/[\\/]/).map(part=>encodeURIComponent(part)).join('/');
 const characters=[];
+// Conserva i metadati informativi se gli output sorgente opzionali non sono locali.
+let previousCharacters=[];
+try{
+  const previous=await readFile(join(demo,'catalog.js'),'utf8');
+  const payload=previous.slice(previous.indexOf('window.MOVES_CATALOG = ')+'window.MOVES_CATALOG = '.length).trim().replace(/;$/,'');
+  previousCharacters=JSON.parse(payload).characters;
+}catch{}
 const frameRects=atlas=>Object.entries(atlas.frames).sort(([a],[b])=>Number(a)-Number(b)).map(([,entry])=>{const f=entry.frame??entry;return [f.x,f.y,f.w,f.h];});
 await mkdir(join(demo,'assets'),{recursive:true});
 for(const item of manifest.items){
@@ -30,7 +37,7 @@ for(const item of manifest.items){
     const destination=join(demo,'assets',id+'.png');
     await copyFile(reference,destination);thumbnail=url(destination);
   }
-  let baseFps=24;
+  let baseFps=previousCharacters.find(c=>c.id===id)?.animations.find(a=>a.id==='idle')?.baseFps??24;
   try{
     const source=await readJson(join(root,'autosprite-agent/output/idle-download-raw',id,item.sourceSheetId+'-atlas.json'));
     if(Number(source.meta?.duration_s)>0)baseFps=Number(((atlas.meta.source_frame_count??item.frames)/source.meta.duration_s).toFixed(3));
@@ -42,10 +49,13 @@ characters.sort((a,b)=>new Intl.Collator('it',{sensitivity:'base',ignorePunctuat
 const extraAnimations=[
   {manifest:'walk-manifest.json',id:'walk',name:'Walk',description:'Camminata in guardia'},
   {manifest:'victory-manifest.json',id:'victory',name:'Victory',description:'Mossa di vittoria'},
-  {manifest:'jump-manifest.json',id:'jump',name:'Jump',description:'Salto sul posto',playbackFps:24},
-  {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500}
+  {manifest:'jump-manifest.json',id:'jump',name:'Salto',description:'Salto con apice sincronizzato',durationMs:1000},
+  {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500},
+  {manifest:'block-manifest.json',id:'block',name:'Parata alta',description:'Parata alta pronta in 0,1 secondi'}
 ];
 const punchTiming=await readJson(join(root,'animation/light-punch-timing.json'));
+const blockTiming=await readJson(join(root,'animation/block-timing.json'));
+const jumpTiming=await readJson(join(root,'animation/jump-timing.json'));
 for(const extra of extraAnimations){
   const data=await readJson(join(root,'animation',extra.manifest));
   for(const item of data.items){
@@ -55,6 +65,21 @@ for(const extra of extraAnimations){
     const frames=frameRects(atlas);
     if(frames.length!==item.frames)throw Error(`Frame ${extra.id} non corrispondenti: ${item.character}`);
     let timing={};
+    if(extra.id==='jump'){
+      const entry=jumpTiming.items.find(t=>t.character.toLowerCase()===character.id);
+      if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di apice per '+item.character);
+      const peak=entry.apexFrame,ms=jumpTiming.apexMs,total=jumpTiming.durationMs;
+      if(!Number.isInteger(peak)||peak<1||peak>=frames.length||!Number.isFinite(ms)||ms<=0||!Number.isFinite(total)||total<=ms)throw Error('Timing salto non valido: '+item.character);
+      if(total!==extra.durationMs)throw Error('Durata salto incoerente');
+      timing={apexFrame:peak,apexMs:ms,ascentFps:peak*1000/ms,descentFps:(frames.length-peak)*1000/(total-ms),frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
+    }
+    if(extra.id==='block'){
+      const entry=blockTiming.items.find(t=>t.character.toLowerCase()===character.id);
+      if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di parata per '+item.character);
+      const peak=entry.blockFrame,ms=blockTiming.blockMs;
+      if(!Number.isInteger(peak)||peak<1||peak>=frames.length||!Number.isFinite(ms)||ms<=0)throw Error('Timing parata non valido: '+item.character);
+      timing={blockFrame:peak,blockMs:ms,durationMs:frames.length*ms/peak,frameDurations:frames.map(()=>ms/peak)};
+    }
     if(extra.id==='light-punch'){
       const entry=punchTiming.items.find(t=>t.character.toLowerCase()===character.id);
       if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di impatto per '+item.character);
@@ -62,7 +87,7 @@ for(const extra of extraAnimations){
       if(!Number.isInteger(peak)||peak<1||peak>=frames.length)throw Error('Frame impatto non valido: '+item.character);
       timing={impactFrame:peak,impactMs:punchTiming.impactMs,frameDurations:frames.map((_,i)=>i<peak?punchTiming.impactMs/peak:(punchTiming.durationMs-punchTiming.impactMs)/(frames.length-peak))};
     }
-    character.animations.push({...timing,id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.durationMs?frames.length*1000/extra.durationMs:(extra.playbackFps??24),...(extra.durationMs?{durationMs:extra.durationMs}:{}),savedSpeed:item.speedMultiplier});
+    character.animations.push({...timing,id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.id==='block'?timing.blockFrame*1000/timing.blockMs:extra.durationMs?frames.length*1000/extra.durationMs:(extra.playbackFps??24),...(extra.durationMs?{durationMs:extra.durationMs}:{}),savedSpeed:item.speedMultiplier});
   }
 }
 await writeFile(join(demo,'catalog.js'),'/* Generato da scripts/build-catalog.mjs: dati locali, nessuna chiamata esterna. */\nwindow.MOVES_CATALOG = '+JSON.stringify({characters},null,2)+';\n');

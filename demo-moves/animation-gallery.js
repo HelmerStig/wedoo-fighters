@@ -7,7 +7,7 @@
     const reduced = root.matchMedia('(prefers-reduced-motion: reduce)');
     const cleanups = [];
     let frameRequest = null, disposed = false, groupElapsed=0, groupLast=null;
-    const timingLabel=(animation,multiplier=1)=>animation.frameDurations ? `${format(animation.durationMs/1000/multiplier)} s / impatto ${format(animation.impactMs/1000/multiplier)} s` : `${format(core.effectiveFps(animation,multiplier))} fps`;
+    const timingLabel=(animation,multiplier=1)=>animation.apexMs ? `${format(animation.durationMs/1000/multiplier)} s / apice ${format(animation.apexMs/1000/multiplier)} s` : animation.blockMs ? `${format(core.effectiveFps(animation,multiplier))} fps / parata ${format(animation.blockMs/1000/multiplier)} s` : animation.frameDurations ? `${format(animation.durationMs/1000/multiplier)} s / impatto ${format(animation.impactMs/1000/multiplier)} s` : `${format(core.effectiveFps(animation,multiplier))} fps`;
     const listen = (node, type, callback) => {
       node.addEventListener(type, callback);
       cleanups.push(() => node.removeEventListener(type, callback));

@@ -11,7 +11,9 @@
         groups.get(animation.id).animations.push({...animation, characterId:character.id, characterName:character.name});
       }
     }
-    return [...groups.values()];
+    const baseOrder=['idle','walk','jump','block','victory'];
+    const rank=id=>{const index=baseOrder.indexOf(id);return index<0?baseOrder.length:index;};
+    return [...groups.values()].sort((a,b)=>rank(a.id)-rank(b.id));
   }
   function filter(group, query) {
     const text = query.trim().toLocaleLowerCase('it');
