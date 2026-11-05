@@ -42,3 +42,4 @@
 .sidebar-dropdown[open]>.sidebar-dropdown-toggle .dropdown-chevron{transform:rotate(225deg);margin-top:4px}
 .sidebar-dropdown .moves-nav{border-bottom:0;padding:0 12px 12px}
 .sidebar-dropdown .character-nav{padding-bottom:12px}
+#move-report{margin-top:30px}

@@ -48,3 +48,4 @@ Ogni personaggio ha un fotogramma con il pugno a massima estensione in avanti, v
 
 Ho creato altre versioni di light punch per alcuni personaggi che mancavano, me le integri in demo-moves e mi fai l'update del report con i nuovi fotogrammi, in modo che tutti i personaggi abbiano il fotogramma del pugno a massima estensione sincronizzato nello stesso timing ?
 
+Ho rifatto la versione di light punch di Bonazzi su autosprite, puoi fare l'update di demo-moves e reports?

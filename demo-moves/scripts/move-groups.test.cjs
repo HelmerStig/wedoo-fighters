@@ -36,6 +36,7 @@ test('la pagina per mossa inizializza la galleria, filtra e distrugge i player p
   const nodes=new Map(),installs=[];
   function node(){return {dataset:{},hidden:false,innerHTML:'',textContent:'',listeners:{},setAttribute(){},focus(){},querySelector(){return null;},querySelectorAll(){return [];},addEventListener(type,fn){this.listeners[type]=fn;}};}
   for(const selector of ['#sidebar','.menu-toggle','.sidebar-close','#character-search','#nav-count','.nav-empty','#breadcrumb-name','#move-name','#move-total-count','#move-visible-count','#move-empty','#move-gallery'])nodes.set(selector,node());
+  nodes.set('#move-report',node());
   const document={body:{dataset:{page:'moves'},append(){},classList:{contains(){return false;},toggle(){}}},querySelector:s=>nodes.get(s),querySelectorAll:()=>[],createElement:node,addEventListener(){}};
   const sandbox={document,window:{MOVES_CATALOG:{characters:characters()},addEventListener(){}},location:{search:'?move=light-punch'},URLSearchParams,sessionStorage:{getItem(){return null;}},MovesGroups:{group,filter},MovesGallery:{install(container,selected,options){const instance={selected,options,destroy(){this.destroyed=true;}};installs.push(instance);return instance;}}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);

@@ -85,6 +85,7 @@
     document.title = currentMove.name + ' - Per mossa - WEDOO Fighters';
     $('#breadcrumb-name').textContent = currentMove.name;
     $('#move-name').textContent = currentMove.name;
+    $('#move-report').hidden = currentMove.id !== 'light-punch';
     $('#move-total-count').textContent = currentMove.animations.length;
     renderMove();
     window.addEventListener('pagehide',()=>moveGallery?.destroy());
