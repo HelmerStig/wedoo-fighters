@@ -1,9 +1,19 @@
 ﻿Personaggio,Frame totali,Frame impatto (da 1),Frame sorgente (da 0),Impatto precedente uniforme ms,Impatto nuovo ms,Preparazione ms,Impatto e recupero ms,Totale ms,Durata frame prima ms,Durata frame dopo ms,Note,Source sheet ID
+ALBERTO,16,9,8,250.0,250,250,250,500,31.25,31.25,,cmw3g3cl6012iolstdkbcdbgr
+ALEX,14,10,9,321.429,250,250,250,500,27.778,50.0,,cmw3fu2uy005f6plaey1pm5bx
+ANGELA,18,11,10,277.778,250,250,250,500,25.0,31.25,,cmw3fvpbl00bv1186noi50juu
+ANTONINO,20,12,11,275.0,250,250,250,500,22.727,27.778,,cmw3fwvxf00cc1186y7b6oipy
+BARBARA-FIOCCA,19,10,9,236.842,250,250,250,500,27.778,25.0,,cmw3fjqek003cpqg1995p53is
+Bonazzi,17,9,8,235.294,250,250,250,500,31.25,27.778,"Due estensioni visibili; allineata la seconda, piu avanzata.",cmw3g22eg002faomy5gxgmkee
 Chiara-Molina,22,16,15,340.909,250,250,250,500,16.667,35.714,,cmw3ewfbu019rrimiypy3r3t1
+CHIARA-TONIOL,17,12,11,323.529,250,250,250,500,22.727,41.667,,cmw3fh5go00il8uosq74dbm98
+CONDELLO,10,6,5,250.0,250,250,250,500,50.0,50.0,,cmw3fif7a00kf8uosif4tf5fm
 DINO,18,13,12,333.333,250,250,250,500,20.833,41.667,,cmw3ev2s400l9olstw37jqai4
+Elisa,18,12,11,305.556,250,250,250,500,22.727,35.714,,cmw3fm7ne00rxw4mk1lo7iwl7
 EMMA,19,12,11,289.474,250,250,250,500,22.727,31.25,,cmw3etsjp01dtcehg7z1bj6zg
 EROS,25,11,10,200.0,250,250,250,500,25.0,16.667,,cmw3et9ni00j1olsth1129av7
 FABIO-CLARA,20,13,12,300.0,250,250,250,500,20.833,31.25,,cmw3erk5r014lrimi3vnwpyjg
+FARA,11,6,5,227.273,250,250,250,500,50.0,41.667,,cmw3e8iau00a9w4mkxq55ivc8
 FRA-AMATO,12,4,4,125.0,250,250,250,500,83.333,27.778,,cmw3e0vzx00warimiickf7asy
 FRA-TAVARONE,13,7,6,230.769,250,250,250,500,41.667,35.714,,cmw3dzakd00vtrimi0e49qnqm
 FRANCESCA-RIVELLA,14,9,8,285.714,250,250,250,500,31.25,41.667,,cmw3dh78i00mcrimikr6jkwoa
@@ -26,7 +36,7 @@ MORI,17,11,17,294.118,250,250,250,500,25.0,35.714,,cmw0ez8ap00big1mhnsnwsnla
 Oscar,23,13,12,260.87,250,250,250,500,20.833,22.727,,cmvrz7c6t00iayccmnrq8chjt
 PEIROLO,13,8,7,269.231,250,250,250,500,35.714,41.667,,cmw0e3gbo008kipslsgw7cgtw
 PEPPO,15,11,10,333.333,250,250,250,500,25.0,50.0,"Due estensioni visibili; allineata la seconda, piu avanzata.",cmw0e1tk90061yc0h9tbyq17u
-PIPPO,10,5,4,200.0,250,250,250,500,62.5,41.667,,cmw0eecb500y8gtv173wwncy0
+PIPPO,16,11,10,312.5,250,250,250,500,25.0,41.667,,cmw3fyntv00dj1186z7jrxxhc
 SBOZ,12,9,8,333.333,250,250,250,500,31.25,62.5,Il taglio termina prima del ritorno completo in guardia.,cmw0dzvr0001zyc0hi0m8ftcl
 Simona,14,7,6,214.286,250,250,250,500,41.667,31.25,,cmw0dow8m00smgtv1a3cb8dp1
 TOMMASO,23,15,14,304.348,250,250,250,500,17.857,27.778,,cmvs14y9501h5yccmlsc992te

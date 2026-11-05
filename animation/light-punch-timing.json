@@ -110,11 +110,11 @@
     },
     {
       "character": "PIPPO",
-      "sourceSheetId": "cmw0eecb500y8gtv173wwncy0",
-      "impactFrame": 4,
+      "sourceSheetId": "cmw3fyntv00dj1186z7jrxxhc",
+      "impactFrame": 10,
       "note": "",
       "sourceStart": 0,
-      "sourceEnd": 9
+      "sourceEnd": 15
     },
     {
       "character": "SBOZ",
@@ -259,6 +259,86 @@
       "note": "",
       "sourceStart": 0,
       "sourceEnd": 13
+    },
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmw3g3cl6012iolstdkbcdbgr",
+      "impactFrame": 8,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 15
+    },
+    {
+      "character": "ALEX",
+      "sourceSheetId": "cmw3fu2uy005f6plaey1pm5bx",
+      "impactFrame": 9,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 13
+    },
+    {
+      "character": "ANGELA",
+      "sourceSheetId": "cmw3fvpbl00bv1186noi50juu",
+      "impactFrame": 10,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 17
+    },
+    {
+      "character": "ANTONINO",
+      "sourceSheetId": "cmw3fwvxf00cc1186y7b6oipy",
+      "impactFrame": 11,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 19
+    },
+    {
+      "character": "BARBARA-FIOCCA",
+      "sourceSheetId": "cmw3fjqek003cpqg1995p53is",
+      "impactFrame": 9,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 18
+    },
+    {
+      "character": "Bonazzi",
+      "sourceSheetId": "cmw3g22eg002faomy5gxgmkee",
+      "impactFrame": 8,
+      "note": "Due estensioni visibili; allineata la seconda, piu avanzata.",
+      "sourceStart": 0,
+      "sourceEnd": 16
+    },
+    {
+      "character": "CHIARA-TONIOL",
+      "sourceSheetId": "cmw3fh5go00il8uosq74dbm98",
+      "impactFrame": 11,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 16
+    },
+    {
+      "character": "CONDELLO",
+      "sourceSheetId": "cmw3fif7a00kf8uosif4tf5fm",
+      "impactFrame": 5,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 9
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmw3fm7ne00rxw4mk1lo7iwl7",
+      "impactFrame": 11,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 17
+    },
+    {
+      "character": "FARA",
+      "sourceSheetId": "cmw3e8iau00a9w4mkxq55ivc8",
+      "impactFrame": 5,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 10
     }
   ],
   "updatedAt": "2026-11-05"

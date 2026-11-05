@@ -102,7 +102,7 @@ test('Pugno leggero rispetta i tagli e dura 500 ms per ogni personaggio',async()
     const item=imported.get(character.id);
     assert.equal(Boolean(animation),Boolean(item),character.name);
     if(!item)continue;
-    assert.ok(item.sourceAnimationName.toLowerCase().replace(/[_-]+/g,' ').includes('light punch'));
+    assert.ok(item.sourceAnimationName.toLowerCase().replace(/[_-]+/g,' ').replace(/\bligth\b/g,'light').includes('light punch'));
     assert.equal(animation.name,'Pugno leggero');
     assert.equal(effectiveFps(animation,1),item.frames*2);
     assert.equal(effectiveFps(animation,.5),item.frames);

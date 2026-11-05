@@ -14,7 +14,7 @@ if(requested.length){
 const characters=await api.characters();
 const plan={animation:'light-punch',sourceAnimation:'names containing light punch',durationMs:500,creditsUsed:0,createdAt:new Date().toISOString(),items:[],missing:[],inventory:[]};
 const newest=(a,b)=>String(b.createdAt).localeCompare(String(a.createdAt));
-const matchesName=name=>name.toLowerCase().replace(/[_-]+/g,' ').replace(/\s+/g,' ').includes('light punch');
+const matchesName=name=>name.toLowerCase().replace(/[_-]+/g,' ').replace(/\s+/g,' ').replace(/\bligth\b/g,'light').includes('light punch');
 async function downloadListedSheet(sheet,directory,characterId){
   try{return await downloadSheet(api,sheet.id,directory);}catch(error){
     if(!error.message.includes('HTTP 404')||!sheet.isUnlocked||!sheet.sheetUrl||!sheet.atlasUrl)throw error;
