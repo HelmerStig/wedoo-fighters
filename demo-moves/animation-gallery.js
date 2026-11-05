@@ -1,12 +1,13 @@
 (function (root) {
   'use strict';
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const format = value => new Intl.NumberFormat('it', {maximumFractionDigits:1}).format(value);
+  const format = value => new Intl.NumberFormat('it', {maximumFractionDigits:2}).format(value);
   function install(container, character, options = {}) {
     const core = root.MovesCore;
     const reduced = root.matchMedia('(prefers-reduced-motion: reduce)');
     const cleanups = [];
-    let frameRequest = null, disposed = false;
+    let frameRequest = null, disposed = false, groupElapsed=0, groupLast=null;
+    const timingLabel=(animation,multiplier=1)=>animation.frameDurations ? `${format(animation.durationMs/1000/multiplier)} s / impatto ${format(animation.impactMs/1000/multiplier)} s` : `${format(core.effectiveFps(animation,multiplier))} fps`;
     const listen = (node, type, callback) => {
       node.addEventListener(type, callback);
       cleanups.push(() => node.removeEventListener(type, callback));
@@ -17,8 +18,8 @@
         <div class="stage" data-background="dark" aria-busy="true"><canvas width="${animation.frameWidth}" height="${animation.frameHeight}" tabindex="0" role="img" aria-label="${escape(animation.name)} di ${escape(animation.characterName ?? character.name)}">Anteprima di ${escape(animation.name)}.</canvas><div class="stage-loading" role="status">Caricamento ${escape(animation.name)}…</div><div class="stage-error" role="alert" hidden></div></div>
         <div class="player-controls">
           <div class="timeline"><input data-role="timeline" type="range" min="0" max="${animation.frames.length-1}" value="0" step="1" aria-label="Frame di ${escape(animation.name)}" disabled><span class="frame-counter">01 / ${animation.frames.length}</span></div>
-          <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" disabled>▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di ${escape(animation.name)}" disabled>▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di ${escape(animation.name)}"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1× · ${core.effectiveFps(animation,1)} fps</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
-          <div class="gallery-card-meta"><span>${animation.frames.length} frame · ${animation.frameWidth} × ${animation.frameHeight}</span><span data-role="fps">${core.effectiveFps(animation,1)} fps</span></div>
+          <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" disabled>▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di ${escape(animation.name)}" disabled>▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di ${escape(animation.name)}"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1× · ${timingLabel(animation)}</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
+          <div class="gallery-card-meta"><span>${animation.frames.length} frame · ${animation.frameWidth} × ${animation.frameHeight}</span><span data-role="fps">${timingLabel(animation)}</span></div>
           <div class="gallery-card-bottom"><div class="swatches" role="group" aria-label="Sfondo di ${escape(animation.name)}"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" aria-pressed="false"></button></div><a class="download-button" href="${escape(animation.image)}" download="${escape(animation.characterId ?? character.id)}-${escape(animation.id)}.png">Scarica PNG ↓</a></div>
         </div>
       </section>`).join('')}</div>`;
@@ -31,7 +32,7 @@
       const stage = $('.stage'), slider = $('[data-role="timeline"]');
       const play = $('[data-action="play"]'), step = $('[data-action="step"]');
       const speed = $('[data-role="speed"]'), loop = $('[data-role="loop"]');
-      const state = {loaded:false, requested:!reduced.matches, playing:false, visible:!root.IntersectionObserver, frame:0, remainder:0, lastTime:null};
+      const state = {loaded:false, requested:!reduced.matches, playing:false, visible:!root.IntersectionObserver, frame:0, remainder:0, lastTime:null, following:Boolean(animation.frameDurations)};
       let image = null, started = false;
       const fps = () => core.effectiveFps(animation, Number(speed.value));
       function sync() {
@@ -51,7 +52,7 @@
         $('.frame-counter').textContent = `${String(state.frame+1).padStart(2,'0')} / ${animation.frames.length}`;
       }
       function setPlaying(value) {
-        state.requested = value; state.lastTime = null;
+        state.following=false;state.requested = value; state.lastTime = null;
         if (value && state.frame === animation.frames.length-1 && !loop.checked) {state.frame=0;state.remainder=0;draw();}
         sync(); schedule();
       }
@@ -82,7 +83,7 @@
       listen(play,'click',()=>setPlaying(!state.requested));
       listen(step,'click',()=>showFrame((state.frame+1)%animation.frames.length));
       listen(slider,'input',()=>showFrame(Number(slider.value)));
-      listen(speed,'change',()=>{state.remainder=0;state.lastTime=null;$('[data-role="fps"]').textContent=format(fps())+' fps';});
+      listen(speed,'change',()=>{state.following=false;state.lastTime=null;$('[data-role="fps"]').textContent=timingLabel(animation,Number(speed.value));});
       listen(canvas,'keydown',event=>{
         if(!state.loaded)return;
         if(event.code==='Space'){event.preventDefault();setPlaying(!state.requested);}
@@ -94,8 +95,8 @@
       }));
       return {card,animation,state,load,setPlaying,draw,tick(time){
         if(!state.playing||!state.visible||document.hidden){state.lastTime=null;return;}
-        if(state.lastTime!==null){
-          const next=core.advance(state,Math.min(time-state.lastTime,250),fps(),animation.frames.length,loop.checked);
+        if(state.lastTime!==null||state.following){
+          const next=state.following ? core.advanceAnimation({frame:0,remainder:0},groupElapsed,animation,Number(speed.value),loop.checked) : core.advanceAnimation(state,Math.min(time-state.lastTime,250),animation,Number(speed.value),loop.checked);
           const changed=next.frame!==state.frame;state.frame=next.frame;state.remainder=next.remainder;
           if(changed)draw();
           if(next.ended){state.requested=false;sync();}
@@ -104,14 +105,18 @@
       }};
     });
     function active(){return !disposed&&!document.hidden&&players.some(p=>p.state.playing&&p.state.visible);}
-    function tick(time){frameRequest=null;players.forEach(p=>p.tick(time));schedule();}
+    function tick(time){frameRequest=null;if(groupLast!==null)groupElapsed+=Math.min(Math.max(0,time-groupLast),250);groupLast=time;players.forEach(p=>p.tick(time));schedule();}
     function schedule(){if(frameRequest===null&&active())frameRequest=root.requestAnimationFrame(tick);}
     function resetClock(){
+      groupLast=null;
       players.forEach(p=>p.state.lastTime=null);
       if(frameRequest!==null){root.cancelAnimationFrame(frameRequest);frameRequest=null;}
       schedule();
     }
-    const playAll=()=>players.forEach(p=>p.setPlaying(true));
+    const playAll=()=>{
+      groupElapsed=0;groupLast=null;
+      players.forEach(p=>{p.state.frame=0;p.state.remainder=0;p.setPlaying(true);p.state.following=Boolean(p.animation.frameDurations);p.draw();});
+    };
     const pauseAll=()=>{players.forEach(p=>p.setPlaying(false));resetClock();};
     listen(container.querySelector('[data-action="play-all"]'),'click',playAll);
     listen(container.querySelector('[data-action="pause-all"]'),'click',pauseAll);

@@ -48,3 +48,15 @@ Gli spritesheet della galleria vengono caricati avvicinandosi alle anteprime;
 le animazioni fuori schermo vengono sospese per limitare il lavoro del browser.
 Il catalogo include gia tutti i rettangoli dei frame, cosi funziona anche tramite
 file locale senza richieste fetch bloccate dal browser.
+
+SINCRONIZZAZIONE PUGNI
+Il frame scelto di massima estensione inizia a 250 ms, con ciclo di 500 ms.
+Le durate dei frame variano prima e dopo il marcatore. Riproduci tutte
+riparte dal primo frame e sincronizza le schede anche con caricamento progressivo.
+Selezioni associate agli ID sorgente: animation/light-punch-timing.json.
+Dopo la sostituzione di uno spritesheet occorre rivedere il suo frame di impatto;
+il generatore del catalogo segnala gli ID sorgente non aggiornati.
+Report con pose e timing: reports/light-punch-timing.html (anche CSV).
+
+Per rigenerare il report dalle selezioni correnti (richiede Python e Pillow):
+  python demo-moves/scripts/build-punch-report.py

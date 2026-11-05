@@ -1,0 +1,33 @@
+﻿Personaggio,Frame totali,Frame impatto (da 1),Frame sorgente (da 0),Impatto precedente uniforme ms,Impatto nuovo ms,Preparazione ms,Impatto e recupero ms,Totale ms,Durata frame prima ms,Durata frame dopo ms,Note,Source sheet ID
+Chiara-Molina,22,16,15,340.909,250,250,250,500,16.667,35.714,,cmw3ewfbu019rrimiypy3r3t1
+DINO,18,13,12,333.333,250,250,250,500,20.833,41.667,,cmw3ev2s400l9olstw37jqai4
+EMMA,19,12,11,289.474,250,250,250,500,22.727,31.25,,cmw3etsjp01dtcehg7z1bj6zg
+EROS,25,11,10,200.0,250,250,250,500,25.0,16.667,,cmw3et9ni00j1olsth1129av7
+FABIO-CLARA,20,13,12,300.0,250,250,250,500,20.833,31.25,,cmw3erk5r014lrimi3vnwpyjg
+FRA-AMATO,12,4,4,125.0,250,250,250,500,83.333,27.778,,cmw3e0vzx00warimiickf7asy
+FRA-TAVARONE,13,7,6,230.769,250,250,250,500,41.667,35.714,,cmw3dzakd00vtrimi0e49qnqm
+FRANCESCA-RIVELLA,14,9,8,285.714,250,250,250,500,31.25,41.667,,cmw3dh78i00mcrimikr6jkwoa
+FRANCESCO-LEONI,24,17,16,333.333,250,250,250,500,15.625,31.25,,cmw0lgl530011o0w81gmo6ezk
+GENNARO,12,4,3,125.0,250,250,250,500,83.333,27.778,,cmw0l8ruj00mbpx1wgu3yslhs
+Giordano,16,11,10,312.5,250,250,250,500,25.0,41.667,,cmw0ktgk300wc83c7hdz3ew0y
+GIORGIO,14,6,5,178.571,250,250,250,500,50.0,27.778,,cmw0lc75x01hlf6ex0ubo0vuk
+JERRY,25,16,15,300.0,250,250,250,500,16.667,25.0,,cmvs0ep3a002a78a63x8mi4xz
+LIVIO,10,8,7,350.0,250,250,250,500,35.714,83.333,Il taglio termina durante il recupero.,cmw0kr6ct018xf6exiwzjwjc9
+LUANA,24,18,17,354.167,250,250,250,500,14.706,35.714,,cmw0jokcj002e17gq04fn2acu
+MANU,14,4,3,107.143,250,250,250,500,83.333,22.727,,cmw0j906i000ny6isyh61xgae
+MARCO-BALPO,18,10,9,250.0,250,250,250,500,27.778,27.778,,cmw0jsli90059398pfdsyyx4t
+Marco-Rossetti,13,12,11,423.077,250,250,250,500,22.727,125.0,Il taglio termina con il braccio ancora esteso: manca il ritorno in guardia.,cmw0kf4p600vgf6exduql3d6f
+MARIO,10,5,4,200.0,250,250,250,500,62.5,41.667,,cmw0ikkt700g0f6exzrlnnrqa
+MARSAN,24,15,14,291.667,250,250,250,500,17.857,25.0,,cmw0hwx9k000ir422fn42qyn7
+MARTINI,22,18,17,386.364,250,250,250,500,14.706,50.0,,cmw0h8a7800ke13mgc1vdos8l
+MATTEO,18,12,11,305.556,250,250,250,500,22.727,35.714,,cmw0ggojq005ks0lgo8zorhce
+MIKE,23,18,17,369.565,250,250,250,500,14.706,41.667,,cmw0fkaqf00kcch4qle92lmam
+MORI,17,11,17,294.118,250,250,250,500,25.0,35.714,,cmw0ez8ap00big1mhnsnwsnla
+Oscar,23,13,12,260.87,250,250,250,500,20.833,22.727,,cmvrz7c6t00iayccmnrq8chjt
+PEIROLO,13,8,7,269.231,250,250,250,500,35.714,41.667,,cmw0e3gbo008kipslsgw7cgtw
+PEPPO,15,11,10,333.333,250,250,250,500,25.0,50.0,"Due estensioni visibili; allineata la seconda, piu avanzata.",cmw0e1tk90061yc0h9tbyq17u
+PIPPO,10,5,4,200.0,250,250,250,500,62.5,41.667,,cmw0eecb500y8gtv173wwncy0
+SBOZ,12,9,8,333.333,250,250,250,500,31.25,62.5,Il taglio termina prima del ritorno completo in guardia.,cmw0dzvr0001zyc0hi0m8ftcl
+Simona,14,7,6,214.286,250,250,250,500,41.667,31.25,,cmw0dow8m00smgtv1a3cb8dp1
+TOMMASO,23,15,14,304.348,250,250,250,500,17.857,27.778,,cmvs14y9501h5yccmlsc992te
+ZICHELLA,24,18,17,354.167,250,250,250,500,14.706,35.714,,cmvs0njgl007678a6jhmc11p2

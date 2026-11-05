@@ -42,3 +42,11 @@ Modifica soltanto le voci richieste. Gli script storici negli output possono usa
 - Se la richiesta comprende l'aggiornamento della demo, rigenera `demo-moves/catalog.js` con `node demo-moves/scripts/build-catalog.mjs` e verifica con `node --test demo-moves/scripts/verify.test.cjs`.
 
 La demo usa attualmente 24 fps per idle, walk, victory e jump (versioni "jump custom 2") ; light-punch ("Pugno leggero") dura 500 ms a 1x con fps = frame esportati * 2; `speedMultiplier` del servizio è conservato come informazione, non moltiplicato automaticamente per la velocità di riproduzione.
+
+## Timing del Pugno leggero
+La demo usa un ciclo di 500 ms con il frame scelto di massima estensione a 250 ms.
+`animation/light-punch-timing.json` associa ciascun frame (indice da 0) al suo sourceSheetId.
+Il catalogo incorpora frameDurations variabili; gli fps medi non descrivono le singole fasi.
+Dopo un aggiornamento dello spritesheet, rivedere visivamente il frame di impatto e
+aggiornare il relativo ID: il generatore rifiuta selezioni riferite ad asset superati.
+Il report con pose e timing si trova in demo-moves/reports/light-punch-timing.html.

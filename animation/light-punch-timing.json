@@ -1,0 +1,265 @@
+{
+  "durationMs": 500,
+  "impactMs": 250,
+  "frameIndexBase": 0,
+  "selectionMethod": "Controllo visivo dei fotogrammi; scelta di una posa di massima estensione nel tratto di impatto.",
+  "items": [
+    {
+      "character": "JERRY",
+      "sourceSheetId": "cmvs0ep3a002a78a63x8mi4xz",
+      "impactFrame": 15,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 24
+    },
+    {
+      "character": "MANU",
+      "sourceSheetId": "cmw0j906i000ny6isyh61xgae",
+      "impactFrame": 3,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 13
+    },
+    {
+      "character": "MARCO-BALPO",
+      "sourceSheetId": "cmw0jsli90059398pfdsyyx4t",
+      "impactFrame": 9,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 17
+    },
+    {
+      "character": "Marco-Rossetti",
+      "sourceSheetId": "cmw0kf4p600vgf6exduql3d6f",
+      "impactFrame": 11,
+      "note": "Il taglio termina con il braccio ancora esteso: manca il ritorno in guardia.",
+      "sourceStart": 0,
+      "sourceEnd": 12
+    },
+    {
+      "character": "MARIO",
+      "sourceSheetId": "cmw0ikkt700g0f6exzrlnnrqa",
+      "impactFrame": 4,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 9
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmw0hwx9k000ir422fn42qyn7",
+      "impactFrame": 14,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 23
+    },
+    {
+      "character": "MARTINI",
+      "sourceSheetId": "cmw0h8a7800ke13mgc1vdos8l",
+      "impactFrame": 17,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 21
+    },
+    {
+      "character": "MATTEO",
+      "sourceSheetId": "cmw0ggojq005ks0lgo8zorhce",
+      "impactFrame": 11,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 17
+    },
+    {
+      "character": "MIKE",
+      "sourceSheetId": "cmw0fkaqf00kcch4qle92lmam",
+      "impactFrame": 17,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 22
+    },
+    {
+      "character": "MORI",
+      "sourceSheetId": "cmw0ez8ap00big1mhnsnwsnla",
+      "impactFrame": 10,
+      "note": "",
+      "sourceStart": 7,
+      "sourceEnd": 23
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmvrz7c6t00iayccmnrq8chjt",
+      "impactFrame": 12,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 22
+    },
+    {
+      "character": "PEIROLO",
+      "sourceSheetId": "cmw0e3gbo008kipslsgw7cgtw",
+      "impactFrame": 7,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 12
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmw0e1tk90061yc0h9tbyq17u",
+      "impactFrame": 10,
+      "note": "Due estensioni visibili; allineata la seconda, piu avanzata.",
+      "sourceStart": 0,
+      "sourceEnd": 14
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmw0eecb500y8gtv173wwncy0",
+      "impactFrame": 4,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 9
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmw0dzvr0001zyc0hi0m8ftcl",
+      "impactFrame": 8,
+      "note": "Il taglio termina prima del ritorno completo in guardia.",
+      "sourceStart": 0,
+      "sourceEnd": 11
+    },
+    {
+      "character": "Simona",
+      "sourceSheetId": "cmw0dow8m00smgtv1a3cb8dp1",
+      "impactFrame": 6,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 13
+    },
+    {
+      "character": "TOMMASO",
+      "sourceSheetId": "cmvs14y9501h5yccmlsc992te",
+      "impactFrame": 14,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 22
+    },
+    {
+      "character": "ZICHELLA",
+      "sourceSheetId": "cmvs0njgl007678a6jhmc11p2",
+      "impactFrame": 17,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 23
+    },
+    {
+      "character": "LUANA",
+      "sourceSheetId": "cmw0jokcj002e17gq04fn2acu",
+      "impactFrame": 17,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 23
+    },
+    {
+      "character": "LIVIO",
+      "sourceSheetId": "cmw0kr6ct018xf6exiwzjwjc9",
+      "impactFrame": 7,
+      "note": "Il taglio termina durante il recupero.",
+      "sourceStart": 0,
+      "sourceEnd": 9
+    },
+    {
+      "character": "Giordano",
+      "sourceSheetId": "cmw0ktgk300wc83c7hdz3ew0y",
+      "impactFrame": 10,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 15
+    },
+    {
+      "character": "GIORGIO",
+      "sourceSheetId": "cmw0lc75x01hlf6ex0ubo0vuk",
+      "impactFrame": 5,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 13
+    },
+    {
+      "character": "GENNARO",
+      "sourceSheetId": "cmw0l8ruj00mbpx1wgu3yslhs",
+      "impactFrame": 3,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 11
+    },
+    {
+      "character": "FRANCESCO-LEONI",
+      "sourceSheetId": "cmw0lgl530011o0w81gmo6ezk",
+      "impactFrame": 16,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 23
+    },
+    {
+      "character": "Chiara-Molina",
+      "sourceSheetId": "cmw3ewfbu019rrimiypy3r3t1",
+      "impactFrame": 15,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 21
+    },
+    {
+      "character": "DINO",
+      "sourceSheetId": "cmw3ev2s400l9olstw37jqai4",
+      "impactFrame": 12,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 17
+    },
+    {
+      "character": "EMMA",
+      "sourceSheetId": "cmw3etsjp01dtcehg7z1bj6zg",
+      "impactFrame": 11,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 18
+    },
+    {
+      "character": "EROS",
+      "sourceSheetId": "cmw3et9ni00j1olsth1129av7",
+      "impactFrame": 10,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 24
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmw3erk5r014lrimi3vnwpyjg",
+      "impactFrame": 12,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 19
+    },
+    {
+      "character": "FRA-AMATO",
+      "sourceSheetId": "cmw3e0vzx00warimiickf7asy",
+      "impactFrame": 3,
+      "note": "",
+      "sourceStart": 1,
+      "sourceEnd": 12
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmw3dzakd00vtrimi0e49qnqm",
+      "impactFrame": 6,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 12
+    },
+    {
+      "character": "FRANCESCA-RIVELLA",
+      "sourceSheetId": "cmw3dh78i00mcrimikr6jkwoa",
+      "impactFrame": 8,
+      "note": "",
+      "sourceStart": 0,
+      "sourceEnd": 13
+    }
+  ],
+  "updatedAt": "2026-11-05"
+}

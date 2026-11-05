@@ -5,7 +5,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const core=require('../player-core.js');
 
-function fixture({reducedMotion=false,lazy=false,byMove=false}={}){
+function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false}={}){
   const images=[],callbacks=new Map();let sequence=0,observer;
   function element(){return {listeners:{},attributes:{},dataset:{},hidden:false,disabled:false,value:'',checked:true,textContent:'',
     classList:{values:new Set(),toggle(name,on){on?this.values.add(name):this.values.delete(name);},add(name){this.values.add(name);}},
@@ -33,6 +33,7 @@ function fixture({reducedMotion=false,lazy=false,byMove=false}={}){
   if(lazy)sandbox.IntersectionObserver=class {constructor(fn){this.callback=fn;observer=this;}observe(){}disconnect(){this.disconnected=true;}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
+  if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
   if(byMove) character.animations.forEach((a,i)=>{a.characterId=i?'luana':'marco-balpo';a.characterName=i?'Luana':'Marco Balpo';});
   const gallery=sandbox.MovesGallery.install(container,character,byMove?{title:'Pugno leggero - Personaggi',description:'Confronta i personaggi.'}:{});
   return {cards,images,document,media,gallery,container,playAll,pauseAll,callbacks,
@@ -100,4 +101,16 @@ test('la vista per mossa distingue titoli, link e download dei personaggi e cons
   f.load();f.step(0);f.step(250);
   assert.equal(f.frame(0),4);assert.equal(f.frame(1),6);
   f.gallery.destroy();assert.equal(f.callbacks.size,0);
+});
+
+test('i pugni restano allineati anche quando la seconda scheda si carica in ritardo',()=>{
+  const f=fixture({lazy:true,timed:true});
+  f.observe(0,true);f.images[0].onload();f.step(0);f.step(100);
+  f.observe(1,true);f.images[1].onload();f.step(100);f.step(250);
+  assert.equal(f.frame(0),10);assert.equal(f.frame(1),40);
+  f.pauseAll.fire('click');f.step(350);
+  assert.equal(f.frame(0),10);assert.equal(f.frame(1),40);
+  f.playAll.fire('click');assert.equal(f.frame(0),0);assert.equal(f.frame(1),0);
+  f.step(400);f.step(650);assert.equal(f.frame(0),10);assert.equal(f.frame(1),40);
+  f.step(900);assert.equal(f.frame(0),0);assert.equal(f.frame(1),0);
 });

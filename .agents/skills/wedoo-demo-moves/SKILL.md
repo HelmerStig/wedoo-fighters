@@ -37,3 +37,11 @@ Per modifiche ai dati esegui `node demo-moves/scripts/build-catalog.mjs`. Per mo
 Per vedere la demo usa `node demo-moves/scripts/serve.mjs` e l'indirizzo riportato dal server. Se gli strumenti browser sono disponibili, verifica le viste desktop e mobile coinvolte. Se manca l'accesso visivo, dichiaralo: i test dei dati non verificano il layout.
 
 Non estendere il server all'intero repository per servire un nuovo asset. Aggiungi soltanto la cartella necessaria e mantieni la protezione contro percorsi esterni e file privati. Non pubblicare o fare deploy come conseguenza implicita di una modifica locale.
+
+## Timing del Pugno leggero
+La demo usa un ciclo di 500 ms con il frame scelto di massima estensione a 250 ms.
+`animation/light-punch-timing.json` associa ciascun frame (indice da 0) al suo sourceSheetId.
+Il catalogo incorpora frameDurations variabili; gli fps medi non descrivono le singole fasi.
+Dopo un aggiornamento dello spritesheet, rivedere visivamente il frame di impatto e
+aggiornare il relativo ID: il generatore rifiuta selezioni riferite ad asset superati.
+Il report con pose e timing si trova in demo-moves/reports/light-punch-timing.html.

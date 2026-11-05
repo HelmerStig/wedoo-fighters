@@ -145,3 +145,27 @@ test('il server locale serve la demo e protegge il resto del repository',async t
   assert.equal((await fetch(base+'/.git/config')).status,403);
   assert.equal((await fetch(base+'/demo-moves/missing.png')).status,404);
 });
+
+test('tutti i pugni raggiungono il frame di impatto a 250 ms e completano il ciclo a 500 ms',async()=>{
+  const {advanceAnimation}=require('../player-core.js');
+  const {characters}=await catalog();
+  for(const c of characters){
+    const a=c.animations.find(a=>a.id==='light-punch');if(!a)continue;
+    assert.equal(a.frameDurations.length,a.frames.length);
+    assert.ok(a.frameDurations.every(d=>d>0));
+    assert.ok(Math.abs(a.frameDurations.reduce((a,b)=>a+b,0)-500)<1e-8);
+    for(const speed of [0.5,1,2]){
+      const origin={frame:0,remainder:0};
+      assert.ok(advanceAnimation(origin,249/speed,a,speed,true).frame<a.impactFrame,c.name);
+      assert.equal(advanceAnimation(origin,250/speed,a,speed,true).frame,a.impactFrame,c.name);
+      assert.equal(advanceAnimation(origin,500/speed,a,speed,true).frame,0,c.name);
+      assert.equal(advanceAnimation(origin,500/speed,a,speed,false).ended,true,c.name);
+      assert.equal(advanceAnimation(origin,499/speed,a,speed,false).ended,false,c.name);
+    }
+    let state={frame:0,remainder:0};
+    for(let i=0;i<25;i++)state=advanceAnimation(state,10,a,1,true);
+    assert.equal(state.frame,a.impactFrame,c.name);
+    for(let i=0;i<25;i++)state=advanceAnimation(state,10,a,1,true);
+    assert.equal(state.frame,0,c.name);
+  }
+});
