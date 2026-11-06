@@ -17,7 +17,7 @@
     });
     const player=StagesPlayer.install(card.querySelector('canvas'),card.querySelector('[data-stage-cloud-toggle]'),card.querySelector('[role="status"]'),{...stage,fighters});
     const fullscreen=StageFullscreen.install(card);
-    const crt=StageCrt.install(card,player,stage.id);
+    const crt=StageCrt.install(card,player,stage.id,globalThis,window.STAGE_CRT_PRESETS?.[stage.id]);
     const effects=StageEffects.install(card,player,crt);
 
     return {destroy(){effects.destroy();crt.destroy();fullscreen.destroy();player.destroy();}};

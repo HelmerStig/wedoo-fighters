@@ -274,7 +274,7 @@ test('il server espone soltanto le cinque immagini dello stage e la nuova pagina
   const {createDemoServer}=await import('./serve.mjs');const server=createDemoServer();
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));t.after(()=>new Promise(resolve=>server.close(resolve)));
   const base='http://127.0.0.1:'+server.address().port;
-  for(const route of ['/demo-moves/stages.html',...stages[0].layers.map(l=>'/'+l.image.replace('../',''))]){
+  for(const route of ['/demo-moves/stages.html','/demo-moves/crt-presets.js',...stages[0].layers.map(l=>'/'+l.image.replace('../',''))]){
     const response=await fetch(base+route,{method:'HEAD'});assert.equal(response.status,200,route);
   }
   for(const route of ['/original-backgrounds/stages-1.png','/original-backgrounds/villa-arduino/nuvole-parallax-5000x1080.zip','/original-backgrounds/villa-arduino/anteprima-su-cielo.png'])assert.equal((await fetch(base+route)).status,403,route);

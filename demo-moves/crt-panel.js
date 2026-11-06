@@ -41,26 +41,34 @@
     if(value?.schema!=='wedoo.crt-preset'||value.version!==1||!value.settings||typeof value.settings!=='object'||Array.isArray(value.settings))throw Error('Questo file non è un preset CRT WEDOO valido.');
     return preset(value.settings,value.strength,value.enabled);
   }
+  function presetKey(stageId,basePreset){
+    const key='wedoo-crt-preset-v1:'+stageId;
+    if(!basePreset)return key;
+    const text=JSON.stringify(preset(basePreset.settings,basePreset.strength,basePreset.enabled));
+    let hash=5381;for(let i=0;i<text.length;i++)hash=(Math.imul(hash,33)^text.charCodeAt(i))>>>0;
+    return key+':base-'+hash.toString(16);
+  }
   function markup(id,basicControls=''){
     const prefix='crt-'+String(id).replace(/[^a-z0-9-]/gi,'-');
-    return `<aside class="crt-drawer" id="${prefix}-drawer" data-crt-drawer role="dialog" aria-labelledby="${prefix}-title" hidden><header class="crt-drawer-header"><h2 id="${prefix}-title">Parametri CRT</h2><button class="icon-button" type="button" data-crt-close aria-label="Chiudi parametri CRT">×</button></header><div class="crt-drawer-scroll">${basicControls}<section class="crt-advanced-group" aria-label="CRT avanzato"><h3>CRT avanzato · fosfori e luce</h3><div class="crt-master-controls"><label for="${prefix}-enabled"><input id="${prefix}-enabled" type="checkbox" data-crt-enabled checked> Attiva CRT avanzato</label><label for="${prefix}-strength">Intensità avanzato</label><div class="crt-param-inputs"><input id="${prefix}-strength" type="range" min="0" max="100" step="1" value="100" data-crt-strength><output data-crt-strength-output>100%</output></div></div><p class="crt-help">Indipendente dal CRT base. I parametri numerici partono da zero. Gamma e luminosità a 0 sono neutre; punto del bianco a 0 equivale a 255. Per vedere la maschera dei fosfori, aumenta sia dimensione sia passo.</p><p class="crt-runtime" data-crt-runtime role="status"></p><div class="crt-groups">${groups.map(([name,items])=>`<fieldset><legend>${name}</legend>${items.map(f=>{
+    return `<aside class="crt-drawer" id="${prefix}-drawer" data-crt-drawer role="dialog" aria-labelledby="${prefix}-title" hidden><header class="crt-drawer-header"><h2 id="${prefix}-title">Parametri CRT</h2><button class="icon-button" type="button" data-crt-close aria-label="Chiudi parametri CRT">×</button></header><div class="crt-drawer-scroll">${basicControls}<section class="crt-advanced-group" aria-label="CRT avanzato"><h3>CRT avanzato · fosfori e luce</h3><div class="crt-master-controls"><label for="${prefix}-enabled"><input id="${prefix}-enabled" type="checkbox" data-crt-enabled checked> Attiva CRT avanzato</label><label for="${prefix}-strength">Intensità avanzato</label><div class="crt-param-inputs"><input id="${prefix}-strength" type="range" min="0" max="100" step="1" value="100" data-crt-strength><output data-crt-strength-output>100%</output></div></div><p class="crt-help">Indipendente dal CRT base. Usa “Base di lavoro” per il preset dello stage o “Azzera avanzato” per ripartire da zero. Gamma e luminosità a 0 sono neutre; punto del bianco a 0 equivale a 255. Per vedere la maschera dei fosfori, aumenta sia dimensione sia passo.</p><p class="crt-runtime" data-crt-runtime role="status"></p><div class="crt-groups">${groups.map(([name,items])=>`<fieldset><legend>${name}</legend>${items.map(f=>{
       const [key,label,min,max,step]=f,domId=prefix+'-'+key;
       return Array.isArray(min)?`<label class="crt-choice" for="${domId}">${label}<select id="${domId}" data-crt-param="${key}">${min.map(value=>`<option value="${value}">${value.toUpperCase()}</option>`).join('')}</select></label>`:
         `<div class="crt-param"><label for="${domId}">${label}</label><div class="crt-param-inputs"><input type="range" id="${domId}" data-crt-param="${key}" min="${min}" max="${max}" step="${step}"><input type="number" data-crt-number="${key}" min="${min}" max="${max}" step="${step}" aria-label="Valore: ${label}"></div></div>`;
-    }).join('')}</fieldset>`).join('')}</div></section></div><footer class="crt-drawer-footer"><div class="crt-preset-actions"><button type="button" class="play-button" data-crt-save>Fissa preset avanzato</button><button type="button" class="step-button" data-crt-export>Esporta JSON</button><button type="button" class="step-button" data-crt-import>Importa JSON</button><button type="button" class="step-button" data-crt-reset>Azzera avanzato</button><input type="file" accept="application/json,.json" data-crt-file hidden></div><p class="crt-preset-status" data-crt-status aria-live="polite"></p></footer></aside>`;
+    }).join('')}</fieldset>`).join('')}</div></section></div><footer class="crt-drawer-footer"><div class="crt-preset-actions"><button type="button" class="play-button" data-crt-save>Fissa preset avanzato</button><button type="button" class="step-button" data-crt-export>Esporta JSON</button><button type="button" class="step-button" data-crt-import>Importa JSON</button><button type="button" class="step-button" data-crt-base>Base di lavoro</button><button type="button" class="step-button" data-crt-reset>Azzera avanzato</button><input type="file" accept="application/json,.json" data-crt-file hidden></div><p class="crt-preset-status" data-crt-status aria-live="polite"></p></footer></aside>`;
   }
   function launcher(id){
     const prefix='crt-'+String(id).replace(/[^a-z0-9-]/gi,'-');
     return `<button class="step-button crt-launcher" type="button" data-crt-open aria-expanded="false" aria-controls="${prefix}-drawer">Parametri CRT</button>`;
   }
   let activePanel=null;
-  function install(card,player,stageId,env=globalThis){
+  function install(card,player,stageId,env=globalThis,basePreset=null){
     const source=card.querySelector('.stage-preview canvas');
     const output=card.querySelector('.stage-crt-output');
     const enabledControl=card.querySelector('[data-crt-enabled]'),strengthInput=card.querySelector('[data-crt-strength]'),strengthOutput=card.querySelector('[data-crt-strength-output]');
     const status=card.querySelector('[data-crt-status]'),runtime=card.querySelector('[data-crt-runtime]');
-    const storageKey='wedoo-crt-preset-v1:'+stageId;
-    let settings={...defaults},strength=1,enabled=true,original=false,time=0,disposed=false,available=false;
+    const initial=basePreset?parsePreset(JSON.stringify(basePreset)):preset(defaults);
+    const storageKey=presetKey(stageId,basePreset);
+    let settings={...initial.settings},strength=initial.strength,enabled=initial.enabled,original=false,time=0,disposed=false,available=false;
     const cleanups=[];
     function listen(node,event,handler){node.addEventListener(event,handler);cleanups.push(()=>node.removeEventListener(event,handler));}
     const drawer=card.querySelector('[data-crt-drawer]'),openButton=card.querySelector('[data-crt-open]'),closeButton=card.querySelector('[data-crt-close]');
@@ -112,6 +120,10 @@
     });
     function reset(){settings={...defaults};sync();render();status.textContent='Parametri avanzati azzerati. Il CRT base resta invariato.';}
     listen(card.querySelector('[data-crt-reset]'),'click',reset);
+    listen(card.querySelector('[data-crt-base]'),'click',()=>{
+      settings={...initial.settings};strength=initial.strength;enabled=initial.enabled;sync();render();
+      status.textContent='Base di lavoro dello stage ripristinata.';
+    });
     listen(card.querySelector('[data-crt-save]'),'click',()=>{
       try{env.localStorage.setItem(storageKey,JSON.stringify(preset(settings,strength,enabled)));status.textContent='Preset avanzato fissato in questo browser. Il CRT base resta separato.';}
       catch{status.textContent='Salvataggio locale non disponibile. Usa “Esporta JSON” per conservare il preset.';}
@@ -139,5 +151,5 @@
     return {setStrength(value){strength=Math.max(0,Math.min(1,Number(value)||0));sync();render();},setOriginal(value){original=Boolean(value);render();},reset,
       destroy(){disposed=true;closePanel(false);player.setPostProcess(null);cleanups.forEach(cleanup=>cleanup());renderer.destroy();output.hidden=true;}};
   }
-  return Object.freeze({groups,fields,defaults,normalize,preset,parsePreset,markup,launcher,install});
+  return Object.freeze({groups,fields,defaults,normalize,preset,parsePreset,presetKey,markup,launcher,install});
 });

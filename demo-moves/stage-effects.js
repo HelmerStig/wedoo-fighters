@@ -4,7 +4,7 @@
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
   // Intensità normalizzate: gli asset originali rimangono invariati.
-  const defaults=Object.freeze({shadows:0.8,color:0.35,crt:1,fog:0.65,dust:1,scanlines:1,rgbMask:1,vignette:1,contrast:1,saturation:1,brightness:1,glass:1});
+  const defaults=Object.freeze({shadows:0.8,color:0.35,crt:1,fog:0.65,dust:1,scanlines:0.5,rgbMask:0.5,vignette:0.8,contrast:0.5,saturation:0.7,brightness:1,glass:1});
   function amount(value){const n=Number(value);return Number.isFinite(n)?Math.max(0,Math.min(1,n)):0;}
   function controlMarkup(id,list){
     return list.map(([key,label])=>`<div class="stage-effect"><label class="stage-effect-toggle" for="${id}-${key}-on"><input id="${id}-${key}-on" data-fx-toggle="${key}" type="checkbox" checked>${label}</label><div class="stage-effect-range"><label class="screen-reader-only" for="${id}-${key}-amount">Intensità: ${label}</label><input id="${id}-${key}-amount" data-fx-amount="${key}" type="range" min="0" max="100" step="1" value="${defaults[key]*100}"><output for="${id}-${key}-amount" data-fx-output="${key}">${defaults[key]*100}%</output></div></div>`).join('');
@@ -48,7 +48,7 @@
     listen(original,'click',()=>{showOriginal=!showOriginal;apply();});
     listen(reset,'click',()=>{showOriginal=false;controls.forEach(({key,toggle,range})=>{toggle.checked=true;range.value=defaults[key]*100;});apply();});
     apply();
-    return {setCrtStrength(value){const control=controls.find(c=>c.key==='crt');control.range.value=amount(value)*100;control.toggle.checked=value>0;showOriginal=false;apply();},destroy(){cleanups.forEach(cleanup=>cleanup());}};
+    return {destroy(){cleanups.forEach(cleanup=>cleanup());}};
   }
   return Object.freeze({defaults,amount,markup,crtMarkup,install});
 });

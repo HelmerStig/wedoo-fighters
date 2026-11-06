@@ -16,7 +16,7 @@ function fixture(advanced=null){
 
 test('i cinque effetti hanno intensità indipendenti, confronto originale e ripristino',()=>{
   const f=fixture();assert.deepEqual(f.calls.at(-1),defaults);
-  assert.equal(f.nodes.get('canvas').style.filter,'contrast(1.22) saturate(1.18) brightness(1.08)');
+  assert.equal(f.nodes.get('canvas').style.filter,'contrast(1.11) saturate(1.126) brightness(1.08)');
   const strength=f.nodes.get('[data-fx-amount="color"]');strength.value='80';strength.listeners.input();
   assert.equal(f.calls.at(-1).color,.8);assert.equal(f.calls.at(-1).shadows,defaults.shadows);
   const shadow=f.nodes.get('[data-fx-toggle="shadows"]');shadow.checked=false;shadow.listeners.change();
@@ -39,7 +39,7 @@ test('CRT base e avanzato sono indipendenti; il confronto originale sospende ent
   assert.equal(f.nodes.get('.stage-crt-output').style.filter,f.nodes.get('canvas').style.filter);
   const rgb=f.nodes.get('[data-fx-toggle="rgbMask"]');rgb.checked=false;rgb.listeners.change();
   assert.equal(f.nodes.get('.stage-crt').style['--crt-mask-rb'],'0');
-  assert.equal(f.nodes.get('.stage-crt').style['--crt-scanline-alpha'],'0.38');
+  assert.equal(f.nodes.get('.stage-crt').style['--crt-scanline-alpha'],'0.19');
   f.nodes.get('[data-fx-original]').listeners.click();assert.equal(suspended,true);
   f.nodes.get('[data-fx-original]').listeners.click();assert.equal(suspended,false);assert.equal(base.value,'50');
   f.nodes.get('[data-fx-reset]').listeners.click();assert.equal(base.value,100);

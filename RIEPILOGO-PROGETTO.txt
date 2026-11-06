@@ -1,0 +1,180 @@
+WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
+Aggiornato: 6 novembre 2026
+
+SCOPO E STATO
+demo-moves è il catalogo locale degli asset e il banco di prova visivo.
+Lo sviluppo del gioco avverrà in Godot. Le modifiche visive della demo non
+alterano i PNG o le animazioni originali. Il porting degli effetti in Godot
+resta da realizzare e confrontare visivamente: il JSON CRT non è uno shader.
+Questo file fotografa le scelte attuali; i file indicati sotto sono le fonti
+effettive da aggiornare se cambiano impostazioni o asset.
+
+RIPRENDERE SU UN ALTRO COMPUTER
+1. Trasferire il repository completo, inclusi asset e modifiche non committate.
+   Un clone recupera solo quanto è stato committato e inviato al remoto.
+   Controllare git status --short prima di lasciare questa postazione.
+   I file ignorati da Git richiedono una copia separata se servono al lavoro.
+2. Conservare la struttura relativa delle cartelle: i percorsi F: e quelli
+   della cartella Downloads sono propri di questa macchina, non necessari
+   per riprodurre la demo. I preset approvati sono già nel repository.
+3. Installare Node.js (su questa postazione è stato usato Node 20.19.6).
+   La demo non richiede dipendenze frontend o servizi remoti.
+4. Dalla radice del repository avviare:
+     node demo-moves/scripts/serve.mjs
+   Aprire http://127.0.0.1:4173/demo-moves/stages.html
+   Porta alternativa: node demo-moves/scripts/serve.mjs 4184
+   Il server rimane aperto nel terminale; Ctrl+C lo arresta.
+5. Usare il server per il CRT avanzato: aprire direttamente il file HTML può
+   impedire a WebGL di leggere le immagini locali. Il CRT base ha un fallback.
+6. Per rigenerare report o contatti dei piedi serve anche Python con Pillow.
+   Credenziali AutoSprite, se necessarie per nuovi download, vanno configurate
+   separatamente; la visualizzazione degli asset locali non le richiede.
+
+VILLA ARDUINO — COMPOSIZIONE
+Fonte: demo-moves/stages-catalog.js
+Mondo: 2550 × 1080. Finestra: 1920 × 1080, rapporto 16:9.
+Camera iniziale centrata (x=315); escursione orizzontale da 0 a 630.
+Drag mouse/touch; frecce, Home ed End con focus sul canvas.
+Fullscreen usa la Fullscreen API sul riquadro stage, con eventuali bande nere.
+Il movimento della camera non modifica il tempo di scorrimento delle nuvole.
+
+Immagini in original-backgrounds/villa-arduino/:
+- cielo.png: 2550 × 1080, z=0.
+- 01-nuvole-lontane.png: 5000 × 1080, z=2, velocità 6 px/s verso sinistra.
+- 02-nuvole-intermedie.png: 5000 × 1080, z=3, velocità 12 px/s verso sinistra.
+- 03-nuvole-vicine.png: 5000 × 1080, z=4, velocità 20 px/s verso sinistra.
+- villa-arduino.png: 2550 × 1080, z=4, disegnata dopo le nuvole vicine.
+Le nuvole partono centrate, conservano le dimensioni native e si ripetono
+in loop. La vista è una finestra sul mondo: le parti laterali si esplorano
+con la camera. I layer occupano l'intera altezza dello stage.
+
+PERSONAGGI E OMBRE
+Alberto a sinistra: idle, x=675, groundY=1025, scala=4/3,
+anchorX=253, anchorY=430, senza riflessione.
+Marsan a destra: idle, x=1890, groundY=1025, scala=4/3,
+anchorX=256, anchorY=433, riflesso orizzontalmente.
+Entrambi a 24 fps. Pausa nuvole non ferma le idle o la polvere.
+La preferenza di movimento ridotto mantiene le animazioni statiche.
+
+Ombra dalla sagoma alpha del frame corrente, sincronizzata all'animazione.
+Luce assunta alta da sinistra; proiezione verso destra e verso il basso.
+Colore #1d1625, shearX=0.5, flattenY=0.11, opacity=0.72,
+contactOpacity=0.28. Intensità generale ombre=80%:
+opacità sagoma=0.576, contatto=0.224 prima delle altre modulazioni.
+La proiezione conserva entrambi i contatti dei piedi, anche per Marsan riflesso.
+Fonte contatti: animation/stage-foot-contacts.json.
+Copia incorporata: demo-moves/stage-foot-contacts.js.
+Dopo un cambio delle idle di Alberto/Marsan rigenerare:
+  python demo-moves/scripts/build-stage-foot-contacts.py
+La risposta dell'ombra all'altezza del salto resta da integrare nello stage.
+
+EFFETTI GENERALI APPROVATI
+Fonte: demo-moves/stage-effects.js, rendering in stage-player.js.
+- Ombre a terra: 80%.
+- Toni caldi sui personaggi: 35%; colore #ffb878, alpha base 0.16,
+  quindi alpha attuale 0.056, limitato alla sagoma del personaggio.
+- CRT base: intensità generale 100%.
+- Foschia lontana: 65%; colore #dae4ef, bande di 24 px fino al 70%
+  dell'altezza, massimo al 45%. Coefficiente alpha 0.5 × intensità × profondità.
+  Passaggi dopo nuvole lontane (profondità 1) e intermedie (0.35).
+- Polvere: 100%; 160 particelle, dimensioni 2/4/6 px, griglia di 2 px,
+  colori #d3bd99, #b49d7d, #e1cba7. Vita 4–7.6 s, deriva a sinistra/in alto.
+  Alpha = intensità × 0.65 × sin(pi × fase).
+  Il cursore cambia l'opacità; il numero delle particelle resta 160.
+
+CRT BASE — VALORI APPROVATI
+Tutti gli interruttori attivi; intensità generale 100%.
+Righe scanline: 50%.
+Trama RGB: 50%.
+Vignettatura: 80%.
+Contrasto: 50%.
+Saturazione: 70%.
+Luminosità: 100%.
+Riflesso del vetro: 100%.
+Fonte: defaults in demo-moves/stage-effects.js; aspetto in styles.css.
+Coefficienti massimi: scanline scura 0.38, chiara 0.045;
+maschera rosso/blu 0.12, verde 0.065; vignettatura 0.68.
+I cursori moltiplicano questi coefficienti. Le scanline CSS hanno passo di
+4 pixel visualizzati, la maschera RGB di 3: considerare questa scala nel porting.
+Filtri attuali: contrast(1.11) saturate(1.126) brightness(1.08).
+Il CRT base è indipendente dal CRT avanzato; entrambi sono attivi insieme.
+
+CRT AVANZATO — BASE APPROVATA
+Fonte canonica: original-backgrounds/villa-arduino/crt-preset.json.
+Schema wedoo.crt-preset, versione 1, riferimento 1920 × 1080,
+enabled=true, strength=1.
+Valori:
+  blur=0; grain=0.05; gamma=0.96; blackPoint=3; whitePoint=255;
+  type=lcd; distortion=0; dotScale=0.11; dotPitch=6.5; falloff=0.57;
+  brightnessBoost=3; vignette=0.11; glowRadius=0.07; glowIntensity=0.08;
+  blend=screen; bloomThreshold=0.56; bloomIntensity=0.86; bloomRadius=1.2;
+  redX=-0.6; redY=0.3; blueX=1.6; blueY=-6; convergenceStrength=0.
+Gli offset sono conservati ma la convergenza è disattivata dall'intensità a 0.
+
+Dopo modifiche al JSON eseguire:
+  node demo-moves/scripts/build-crt-presets.mjs
+Questo genera demo-moves/crt-presets.js, caricato automaticamente da stages.html
+anche su hosting statico. Non modificare a mano la copia generata.
+Il JSON esportato contiene soltanto il CRT avanzato: per recuperare tutto
+servono anche i valori del CRT base e degli effetti generali riportati qui.
+
+CONTROLLI E SALVATAGGI
+Parametri CRT apre un offcanvas con scroll interno, lasciando visibile lo stage.
+- Base di lavoro ripristina il preset avanzato del repository.
+- Azzera avanzato riporta a zero i parametri numerici avanzati.
+- Fissa preset avanzato salva soltanto l'avanzato nel browser corrente.
+- Esporta/Importa JSON trasferisce soltanto la configurazione avanzata.
+- Ripristina sotto lo stage ripristina effetti generali e CRT base.
+- Vista originale sospende temporaneamente gli effetti conservando i valori.
+I salvataggi nel localStorage non seguono il repository su un'altra macchina
+e dipendono anche dall'origine del sito (dominio/porta). Sono distinti per
+stage e revisione della base: una nuova base non è coperta da vecchie prove.
+Un preset personale fissato sulla stessa revisione può prevalere sulla base.
+
+ONLINE
+Per una nuova visita il preset del repository è già il default.
+Caricare anche crt-presets.js e conservare tutti i percorsi relativi degli
+asset necessari alla demo. Il server locale è soltanto per l'anteprima locale.
+La disponibilità di WebGL è necessaria per vedere il CRT avanzato.
+Nessuna pubblicazione è stata eseguita come parte di queste modifiche.
+
+PORTING IN GODOT — DA REALIZZARE
+Riutilizzare PNG, atlas, frame, timing e dati dei contatti del repository.
+Ricostruire stage/layer/camera, animazioni, particelle e ombre con lo stesso
+ordine di disegno. Ricostruire il CRT avanzato tramite shader e passaggi
+intermedi; applicare poi CRT base e relativi filtri, come nella demo.
+Pipeline attuale avanzata: preparazione in spazio lineare, selezione luci,
+blur bloom orizzontale e verticale, fosfori/glow, composizione finale/gamma.
+Buffer RGBA8; il bloom precede la maschera dei fosfori.
+Riferimenti implementativi: demo-moves/crt-webgl.js e styles.css.
+I valori sono riferimenti artistici; confrontare screenshot a 1920 × 1080
+per verificare gamma, spazio colore, campionamento e scala delle scanline.
+Non è ancora stata verificata una corrispondenza visiva in Godot.
+
+ALTRE SCELTE DEL CATALOGO MOSSE
+Menu: mosse di base prima dei colpi.
+Pugno leggero: ciclo 500 ms, massima estensione a 250 ms.
+Parata alta (block): posa selezionata raggiunta a 100 ms.
+Salto (jump): apice a 500 ms e ciclo 1000 ms, con timing adattato ai frame.
+Link ai report sotto il titolo della mossa, stile play-button, margin-top 30px.
+Fonti timing: animation/light-punch-timing.json, block-timing.json,
+jump-timing.json. Per importazioni e rigenerazione report seguire LEGGIMI.
+Non riportare idle/walk/victory a velocità remote: base della demo 24 fps.
+
+MAPPA DEI FILE E VERIFICHE
+demo-moves/LEGGIMI.txt: istruzioni dettagliate e comandi per mosse/report.
+demo-moves/stages.html e stages-app.js: pagina e collegamento dei componenti.
+demo-moves/stages-catalog.js: stage, layer, velocità, personaggi e luce.
+demo-moves/stage-player.js: rendering, camera, animazioni, ombre, foschia, polvere.
+demo-moves/stage-effects.js: valori iniziali, CRT base e confronto originale.
+demo-moves/crt-webgl.js: shader e pipeline CRT avanzata.
+demo-moves/crt-panel.js: pannello, import/export e salvataggi browser.
+demo-moves/stage-fullscreen.js: fullscreen del riquadro.
+demo-moves/scripts/build-catalog.mjs: ricostruzione catalogo dai manifest.
+.agents/skills/: istruzioni locali per demo, animazioni e AutoSprite.
+
+Test completi da PowerShell nella radice del repository:
+  $testFiles = @(Get-ChildItem demo-moves/scripts/*.test.cjs | ForEach-Object { $_.FullName })
+  node --test @testFiles
+Controllo modifiche: git diff --check
+I test automatici non sostituiscono il confronto visivo nel browser o in Godot.
