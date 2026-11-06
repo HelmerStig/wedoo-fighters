@@ -80,3 +80,11 @@ Perfetto, ora vorrei provare ad inserire due personaggi nello stage in animazion
 Ho visto che hai creato un canvas, vorrei provare ad usare degli effetti visivi, o filtri, puoi suggerirmi qualcosa di adatto?
 
 Bellissimno. Per quanto riguarda le ombre, è possibile utilizzare la sagoma del personaggio per creare un'ombra coerente con la luce dello stage? e animarla in base al movimento del personaggio?
+
+Con godot vorrei ripartire in un secondo momento, magari da 0, ora vorrei creare una demo-moves come fatto per wedoo-fighters, ma per gli altri personaggi, potresti in una cartella separata, tipo /demo-moves-sanmauro inizia dall'elenco dei personaggi come fatto per wedoo-fighters, iniziamo dalla schermata principale con l'elenco dei personaggi, stesso principio di wedoo-fighters.
+
+Ora dovremmo integrare gli altri movimenti di base presenti, iniziamo dalla camminata, per tutti i personaggi, in demo-moves-sanmauro, come fatto per wedoo-fighters, verifica quelli realmente utilizzati in godot e importa solo quelli. divisi sempre per player e per moves come fatto per demo-moves di wedoo-fighters.
+
+Presta attenzione in particolare a Mangler, ad esempio la camminata, alcuni spritesheet hanno un ingombro maggiore rispetto agli altri personaggi, in godot venivano ridimensionati, puoi verificare ed uniformare le dimnensioni anche su demo-moves-sanmauro, in modo che tutti i personaggi abbiano lo stesso ingombro e siano centrati correttamente ?.
+
+Perfetto, passa al Salto sempre prestando attenzione a Mangler

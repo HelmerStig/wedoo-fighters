@@ -1,0 +1,147 @@
+SANMAURO FIGHTERS — DEMO MOSSE
+
+Schermata principale con i sette personaggi del vecchio progetto, ricerca
+per nome, menu mobile e anteprime idle su hover/focus.
+Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
+ogni personaggio ha tre player indipendenti: Idle, Camminata e Salto.
+Il menu Per mossa apre mosse.html?move=idle, move=walk oppure move=jump:
+confronta la stessa animazione sui sette personaggi, filtrabili per nome.
+Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
+e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
+Le altre mosse non sono ancora importate.
+
+Aprire index.html direttamente oppure, dalla radice del repository:
+  node demo-moves-sanmauro/scripts/serve.mjs
+  http://127.0.0.1:4185/
+Porta alternativa come argomento finale, ad esempio 4186.
+
+Anche il server WEDOO aggiornato serve la nuova cartella:
+  node demo-moves/scripts/serve.mjs
+  http://127.0.0.1:4173/demo-moves-sanmauro/
+Se il server era già avviato prima della modifica, riavviarlo.
+
+La cartella è autonoma: HTML, CSS, JS e asset si possono copiare insieme su
+un'altra postazione o su hosting statico, senza il progetto Godot originario.
+Non servono connessioni o dipendenze frontend.
+
+assets/characters/<id>/idle.png: copia integrale dello spritesheet sorgente.
+assets/characters/<id>/walk.png: copia integrale della camminata usata in Godot.
+assets/characters/<id>/jump.png: copia integrale del foglio salto usato in Godot;
+il catalogo seleziona esclusivamente i frame effettivamente configurati.
+assets/characters/<id>/portrait.png: anteprima derivata dalla prima cella idle,
+normalizzata con lo stesso allineamento dei player su un canvas 512 × 512.
+assets/manifest.json: frame, dimensioni e provenienza con SHA-256.
+catalog.js: copia incorporata per funzionare anche da file://.
+Sono copiati soltanto gli asset di idle, camminata e salto realmente referenziati.
+Fonte: F:/Personali/Godot/assets/sprites/characters, senza modifiche ai sorgenti.
+Per Arianna è usata basic-moves/idle.png, come nel controller Godot;
+per Mangler 01-mangler-idle.png; per gli altri il foglio indicato nella scena.
+Frame: Arianna 24, Mangler 49, Torpe 61, Bue/Mileto/Oscare/Peirò 63.
+Camminata: celle 512 × 512, 7 colonne, ordine avanti, loop a 24 fps.
+Fonti verificate nei controller e nei cataloghi di Arianna/Mangler, nelle
+scene degli altri e in IdleRosterFighter._configure_animations:
+- Arianna: arianna/basic-moves/01-walk.png, 48 frame.
+- Mangler: mangler/02-walk.png, 48 frame.
+- Bue: bue/walk-spritesheet.png, 49 frame.
+- Mileto: mileto/walk-spritesheet.png, 49 frame.
+- Oscare: oscare/walk-spritesheet.png, 49 frame.
+- Peirò: peirolo/walk-spritesheet.png, 49 frame.
+- Torpe: torpe/Torpe-walk-trimmed.png, 21 frame, come nella scena attuale.
+I percorsi sono relativi ad assets/sprites/characters nel progetto sorgente.
+Non sono importate backwalk, corsa o versioni alternative dei fogli walk.
+Il tag TRIMMED di Torpe indica il foglio già tagliato usato in Godot: la demo
+lo copia senza modificarlo e riproduce tutti i suoi 21 frame in avanti.
+Idle e camminata a 24 fps per tutti, come nella demo WEDOO; gli fps del vecchio
+progetto (18 per i cinque fighter del roster) sono annotati come sourceFps.
+Con movimento ridotto le anteprime restano statiche fino alla riproduzione
+esplicita nei player. Nessun ritaglio della sagoma o ritorno inverso.
+
+Per aggiornare da una copia del vecchio progetto (Python con Pillow):
+  python demo-moves-sanmauro/scripts/import-roster.py F:/Personali/Godot
+Lo script ricava numero frame, colonne e foglio dai controller/scene, copia
+idle, camminate e salti e rigenera le immagini statiche, manifest e catalogo.
+Il manifest conserva anche il percorso della configurazione Godot sorgente.
+I player e gli stili sono copie locali della demo WEDOO, senza collegamenti
+alla vecchia cartella demo-moves; le modifiche future sono indipendenti.
+
+DIMENSIONI E ALLINEAMENTO DELLE ANTEPRIME
+Gli spritesheet idle.png e walk.png restano copie integrali dei sorgenti.
+Il manifest conserva sourceTransform con scala e posizione usate in Godot:
+- Mangler: idle/salto scala 0.85, posizione (0,-115); walk scala 0.70, (0,-120).
+- Arianna: scala 0.78, posizione (0,-110).
+- Gli altri: override della scena o default di IdleRosterFighter.
+La demo rende confrontabili gli ingombri con un'altezza idle mediana di 344 px
+su canvas 512 × 512. Applica un solo fattore aggiuntivo per personaggio,
+conservando il rapporto delle scale Godot fra idle e camminata.
+Non forza la stessa larghezza: le proporzioni e le corporature restano naturali.
+Il centro orizzontale dell'ingombro dell'intero ciclo va a x=256 e il fondo
+della sagoma a y=430, vicino alla linea di appoggio della preview.
+La posizione Godot è registrata come provenienza; il posizionamento nella
+demo è sostituito da questo ancoraggio comune, ricavato dai pixel visibili.
+Bounds misurati con alpha >=32; la scala usa l'altezza mediana delle pose idle.
+Scala e ancoraggio restano costanti per tutta l'animazione: niente zoom o
+ricentramento per frame. Le piccole oscillazioni del movimento sono conservate.
+I rettangoli di destinazione sono in animation.preview.drawRect: applicati
+da animation-gallery.js e roster-preview.js anche nella vista Per mossa.
+Gli interi frame sorgenti sono disegnati con filtro nearest, senza ritagliare
+la sagoma. Solo portrait.png è rigenerata con la stessa trasformazione.
+Dopo modifiche a scale, offset o asset Godot rieseguire import-roster.py.
+
+SALTO — SELEZIONI E TIMING GODOT
+Il playback della demo è ora sincronizzato: apice visivo selezionato a 500 ms,
+ciclo di 1000 ms a 1x, come nella demo WEDOO. I dettagli Godot sotto descrivono
+la provenienza; le durate originali restano nei campi sourceFrameDurations,
+sourceDurationMs e sourceTakeoffMs del manifest.
+Le pose approvate e gli hash di PNG/sequenze sono in assets/jump-timing.json.
+Il report è reports/jump-timing.html, anche CSV, collegato sotto il titolo
+Salto con stile play-button e margin-top 30 px.
+Gli apici visivi (frame della selezione, da 1) sono: Arianna 23, Bue 17,
+Mangler 15, Mileto 22, Oscare 19, Peirò 22, Torpe 17.
+Sono riferiti al corpo visibile: il report annota plateau, ginocchia raccolte
+e il bordo superiore tagliato di Arianna, senza fingere una misura fisica.
+Prima dell'apice: indice apice (da 0) / 0.5 FPS; seconda fase:
+frame rimanenti / 0.5 FPS. Tutti i frame restano in ordine e la posa apice
+inizia esattamente a 500 ms. Cambiando velocità cambia anche questo tempo.
+Riproduci tutte riallinea i player e mantiene i cicli sincronizzati.
+Il nuovo timing modifica anche lo stacco; non preserva i 66.67 ms del gioco.
+Per rivedere le selezioni e rigenerare timing, catalogo e report senza Godot:
+  python demo-moves-sanmauro/scripts/build-jump-report.py
+L'importazione completa rigenera automaticamente anche il report. Una modifica
+a PNG o rettangoli richiede la revisione delle selezioni, altrimenti fallisce.
+
+Percorsi relativi ad assets/sprites/characters nel progetto sorgente.
+Le celle restano 512 × 512; i numeri visivi sotto sono 1-based:
+- Arianna: arianna/basic-moves/custom_jump.png; frame 1-49, 7 colonne,
+  32 fps nominali. Fonte: Arianna.gd e AriannaAnimationCatalog.gd.
+- Mangler: mangler/04-jump.png; 25 frame, 5 colonne, 24 fps nominali.
+  La sequenza arriva dalla risorsa SpriteFrames referenziata in Mangler.tscn,
+  assets/sprites/characters/mangler/idle_frames.tres. Importati i rettangoli
+  AtlasTexture e le durate effettive, senza usare fogli alternativi.
+- Bue: bue/Bue-jump.png; frame 4-40, 37 frame.
+- Mileto: mileto/Mileto-jump.png; frame 5-43, 39 frame.
+- Oscare: oscare/Oscare-jump.png; frame 6-43, 38 frame.
+- Peirò: peirolo/Peirolo-jump.png; frame 5-44, 40 frame.
+- Torpe: torpe/Torpe-jump.png; frame 5-38, 34 frame.
+Gli ultimi cinque usano 7 colonne e 24 fps nominali; selezioni e stacco
+derivano dalle scene e da IdleRosterFighter._configure_animations.
+In Godot tutti usano la preparazione compressa a 4/60 s (66.67 ms) applicata
+da Fighter.configure_jump_startup_timing; dopo lo stacco valgono le durate
+originarie. In Mangler alcuni frame aerei hanno peso 1.942857: le durate originali
+restano archiviate nei campi source, mentre il playback demo usa le nuove fasi.
+Le durate Godot in millisecondi sono archiviate nei campi sourceFrameDurations
+e sourceDurationMs. frameDurations/durationMs sono ora i timing sincronizzati;
+apexFrame/apexMs identificano l'apice e takeoffFrame/takeoffMs lo stacco demo.
+Il player mostra durata del ciclo e apice.
+Il salto usa lo stesso fattore di normalizzazione della idle del personaggio,
+con le scale Godot corrette. Nessun ridimensionamento per singolo frame.
+Questa è una galleria degli asset: allinea le pose di apice ma non riproduce
+la traiettoria fisica del CharacterBody2D.
+Non sono aggiunti frame di atterraggio o pose mancanti: Mangler mantiene
+anche l'ultima posa prevista dalla sua risorsa, mentre il gioco gestisce
+la caduta e il rientro in idle tramite la fisica e il controller.
+Godot usa jump senza loop (sourceLoop=false); il player della demo permette
+di ripeterlo col checkbox Loop, senza invertire la sequenza.
+
+Verifica:
+  node --test demo-moves-sanmauro/scripts/verify.test.cjs demo-moves-sanmauro/scripts/animation-gallery.test.cjs demo-moves-sanmauro/scripts/roster-preview.test.cjs
+  python demo-moves-sanmauro/scripts/test_jump_timing.py

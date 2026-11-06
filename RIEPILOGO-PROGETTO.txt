@@ -2,6 +2,37 @@ WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
 Aggiornato: 6 novembre 2026
 
 SCOPO E STATO
+È stata aggiunta anche demo-moves-sanmauro, separata e autonoma, per il roster
+del vecchio progetto Godot: Arianna, Bue, Mangler, Mileto, Oscare, Peirò, Torpe.
+Contiene la schermata principale con ricerca e anteprime idle e le gallerie
+Per personaggio (personaggio.html?id=<id>) e Per mossa (mosse.html?move=walk).
+Sono importate Idle, Camminata e Salto per tutti: walk a 24 fps con i fogli realmente
+usati in Godot; Arianna/Mangler 48 frame, Bue/Mileto/Oscare/Peirò 49,
+Torpe 21 da Torpe-walk-trimmed.png. Non importate altre varianti o backwalk.
+Salti: Arianna 49 frame, Mangler 25, Bue 37, Mileto 39, Oscare 38,
+Peirò 40, Torpe 34. Selezioni e durate sorgenti derivano da Godot, incluse
+preparazione di 66.67 ms e durate variabili di Mangler, conservate nei campi
+sourceFrameDurations/sourceDurationMs/sourceTakeoffMs del manifest.
+Il playback demo è sincronizzato: apice selezionato a 500 ms e ciclo 1000 ms.
+Selezioni vincolate agli hash in assets/jump-timing.json; report HTML/CSV in
+reports/jump-timing.html, collegato sotto il titolo Salto. Rigenerazione:
+python demo-moves-sanmauro/scripts/build-jump-report.py (funziona senza Godot).
+I casi di plateau e il bordo tagliato di Arianna sono annotati nel report.
+Mangler jump usa scala 0.85 e
+04-jump.png con rettangoli dalla risorsa idle_frames.tres (5 colonne).
+Vista: mosse.html?move=jump. È l'anteprima degli asset, senza fisica del salto.
+Anteprime normalizzate: altezza idle mediana 344 px, centro x=256 e appoggio
+y=430 su canvas 512 × 512, trasformazione fissa per animazione. Conservato
+il rapporto Godot delle scale fra mosse: Mangler idle 0.85 / walk 0.70.
+Scale/posizioni sorgenti e trasformazioni di preview sono nel manifest;
+gli spritesheet originali non sono modificati. Dettagli nel LEGGIMI Sanmauro.
+Immagini e spritesheet necessari sono copiati dentro la sua cartella assets/;
+non dipende dal percorso F:/Personali/Godot per essere visualizzata.
+Avvio: node demo-moves-sanmauro/scripts/serve.mjs → http://127.0.0.1:4185/
+Importazione e dettagli: demo-moves-sanmauro/LEGGIMI.txt.
+L'analisi del progetto precedente è in ANALISI-VECCHIO-PROGETTO-GODOT.txt.
+La ripartenza dello sviluppo Godot è rimandata; nessuna migrazione eseguita.
+
 demo-moves è il catalogo locale degli asset e il banco di prova visivo.
 Lo sviluppo del gioco avverrà in Godot. Le modifiche visive della demo non
 alterano i PNG o le animazioni originali. Il porting degli effetti in Godot

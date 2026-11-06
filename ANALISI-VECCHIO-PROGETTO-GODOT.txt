@@ -1,0 +1,133 @@
+ANALISI DEL VECCHIO PROGETTO GODOT — SANMO
+Data: 6 novembre 2026
+Sorgente analizzata: F:\Personali\Godot
+Analisi in lettura; nessuna modifica al vecchio progetto.
+
+VALUTAZIONE
+È un prototipo di picchiaduro locale già articolato, utile come base da cui
+recuperare il combattimento. Non contiene ancora la presentazione di Villa
+Arduino costruita in demo-moves. Il riuso richiede un adattamento esplicito
+di asset, timing, coordinate e shader; copiare i nuovi PNG non basta.
+
+CONFIGURAZIONE VERIFICATA
+project.godot dichiara Godot 4.7, Forward Plus, driver Windows d3d12.
+Eseguibile indicato da .vscode/settings.json:
+  C:\Program Files (x86)\Godot_v4.7-stable_win64.exe
+Il comando --version ha restituito 4.7.stable.official.5b4e0cb0f.
+Il percorso dell'eseguibile è specifico della postazione.
+La configurazione usa canvas_items e aspect expand; non imposta una
+risoluzione logica esplicita 1920 × 1080 né un rapporto fisso 16:9.
+
+Flusso: TitleScreen → CharacterSelect → LoadingScreen → MainArena.
+Autoload: CharacterSelection e ScreenNavigation.
+Roster: Arianna, Mangler, Bue, Peirò, Oscare, Torpe, Mileto.
+Arena in training: timer da 99, KO e vittoria; timeout e progressione dei
+round intenzionalmente disabilitati. IA e rete non risultano implementate
+nel flusso esaminato e sono dichiarate assenti nel README.
+
+ARCHITETTURA DA CONSERVARE
+- Fighter.gd: CharacterBody2D, stati, facing, segnali, collisioni e reset.
+- FighterInputBuffer.gd: input separati per giocatore, direzioni relative
+  all'avversario, buffer attacchi 10 tick, movimenti speciali 36 tick.
+- FighterCombat.gd: vita, attacchi, finestre attive, hitbox e bersagli colpiti.
+- FighterCombatReactions.gd: parate, hitstun, knockdown e KO.
+- AttackData / AttackVariantData: danni, timing e geometria delle varianti.
+- MainArena → ArenaUI: aggiornamento dell'interfaccia tramite segnali.
+- LoadingScreen e ScreenNavigation: caricamento e navigazione dei menu.
+- FighterDebugOverlay e MovementTest: strumenti per collisioni e animazioni.
+- action_generation e round_generation: invalidazione di azioni asincrone
+  superate da interruzioni o reset. Preservare questo comportamento nel riuso.
+
+Arianna e Mangler hanno controller e cataloghi animazioni propri.
+Gli altri cinque derivano da IdleRosterFighter; il nome della classe è ormai
+riduttivo: il codice include corsa, salto, attacchi, guardie, KO e vittoria.
+Bue, Oscare, Torpe e Mileto aggiungono inoltre speciali specifiche.
+Esempi verificati: evocazioni di Bue, sigaretta/fumo di Oscare, bottiglia e
+saldatura di Torpe, chitarra/spallata di Mileto.
+
+DIFFERENZE RISPETTO A WEDOO ATTUALE
+1. Stage e camera
+   MainArena.gd usa larghezza mondo 2304, margini 60, pavimento y=600.
+   MainArena.tscn imposta i limiti della camera a 2304 × 648.
+   Villa Arduino richiede mondo 2550 × 1080, vista 1920 × 1080 e pavimento
+   dei personaggi a y=1025 nella demo. Coordinate, scale, collisioni e UI
+   vanno allineate a un sistema comune prima dell'integrazione.
+   Larghezza e pavimento sono costanti nel controller, non dati dello stage.
+
+2. Sfondi
+   DefaultStage.tscn usa un unico wide-background-v2.png e uccelli animati
+   da StageAmbientEffects.gd. Non è la composizione a cinque layer di Villa.
+   TitleScreen.gd contiene già un sistema di nuvole ripetute, utile come
+   riferimento, ma costruito con Control/TextureRect per il menu.
+
+3. Animazioni e timing
+   IdleRosterFighter usa idle a 18 FPS, walk/jump/block a 24 FPS e diversi
+   slicing espliciti con celle 512 × 512. Non legge i manifest WEDOO attuali.
+   L'helper _add_sheet_animation supporta anche sequenze inverse: verificare
+   ogni mossa, perché la nuova demo usa solo i frame esportati in avanti.
+   Nuovi contratti WEDOO da rispettare: idle 24 FPS; pugno leggero 500 ms
+   con estensione a 250 ms; parata a 100 ms; salto apice 500 ms/ciclo 1000 ms.
+   Il vecchio salto applica gravità e velocità: sincronizzare anche la
+   traiettoria fisica, non soltanto la riproduzione dello spritesheet.
+   Frame d'impatto, scala e offset cambiano con gli asset: le vecchie hitbox
+   non sono automaticamente calibrate sui nuovi sprite.
+
+4. Ombre
+   Fighter.tscn usa GroundShadow di tipo Polygon2D, con forma ellittica.
+   Fighter.update_ground_shadow ne varia scala e alpha in base all'altezza.
+   Non segue la sagoma del frame né i due punti di contatto delle scarpe.
+   Per Villa portare la proiezione e i dati stage-foot-contacts della demo.
+   L'idea del distacco da terra durante il salto può essere recuperata,
+   adattandola alla nuova ombra: questo caso non è ancora integrato in demo.
+
+5. CRT ed effetti
+   I due shader presenti sono title_background_filter e title_water_effect.
+   Il primo contiene contrasto, saturazione, tinta, vignetta e luce pulsante;
+   non implementa il CRT avanzato approvato per Villa Arduino.
+   Portare separatamente CRT avanzato, CRT base, foschia, polvere e colore.
+   I valori approvati sono in RIEPILOGO-PROGETTO.txt e nel JSON canonico:
+   original-backgrounds/villa-arduino/crt-preset.json.
+
+MANUTENZIONE E PUNTI DA SISTEMARE
+- README e PROJECT_MEMORY descrivono ancora i cinque fighter come idle/walk,
+  ma i controller e i test contengono molte altre mosse. Non usarli come
+  inventario affidabile delle funzionalità attuali.
+- I controller sono grandi: Arianna 2787 righe, IdleRosterFighter 1749,
+  Mangler 1544, FighterCombat 917 e Fighter 863 al momento dell'analisi.
+  Per un roster più ampio conviene spostare slicing, offset e timing in dati
+  generati dai manifest, mantenendo codice specifico per le sole speciali.
+- La camera calcola i propri limiti senza dividere per camera.zoom.x,
+  mentre i limiti visibili dei fighter lo fanno. Non è un problema dimostrato
+  con zoom predefinito, ma va uniformato se introdurremo zoom dinamico.
+- Non è stato trovato export_presets.cfg tra i file esaminati: la preparazione
+  delle build distribuibili resta un passaggio da verificare.
+
+TEST E LIMITI DELLA VERIFICA
+Inventario dei sorgenti esaminati: 128 .gd (compresi i test), 16 .tscn,
+17 .tres e 2 .gdshader, escludendo cache e repository Git.
+tests/suite_catalog.gd centralizza cinque suite: input, arianna, mangler,
+combat, arena. Sono presenti casi per input, collisioni, guardie, mosse,
+speciali, reset, caricamento e navigazione.
+La documentazione riporta 709 asserzioni al 25 settembre 2026: è una baseline
+storica, non un risultato verificato in questa analisi.
+Non sono state eseguite le suite né una prova grafica del gioco.
+La scansione dei riferimenti espliciti preload/load/path nei sorgenti non
+ha rilevato file mancanti, esclusi due percorsi parametrizzati con %s.
+La scansione non certifica risorse dinamiche, import, parsing o runtime.
+Git status mostra una modifica preesistente ad autosprite-backhop-prompt.txt;
+non è stata toccata. Nessuna impostazione Git globale è stata modificata.
+
+PERCORSO DI RIUSO PROPOSTO
+1. Conservare una baseline del vecchio progetto ed eseguire le cinque suite
+   con il Godot previsto, registrando i risultati aggiornati.
+2. Creare una scena VillaArduino isolata con coordinate e vista nuove,
+   senza cambiare inizialmente il combattimento storico.
+3. Generare SpriteFrames dai manifest WEDOO, includendo durate per frame,
+   tagli, offset e ancoraggi. Provare prima Alberto/Marsan in idle.
+4. Portare ombre, contatti dei piedi, foschia, polvere e i due gruppi CRT.
+   Confrontare screenshot alla risoluzione di riferimento 1920 × 1080.
+5. Collegare i nuovi fighter al contratto Fighter/FighterCombat e ricalibrare
+   fisica, hitbox e finestre attive sui nuovi timing.
+6. Solo dopo estendere il roster e riportare le speciali compatibili.
+
+Questa sequenza è una proposta; non è stata eseguita alcuna migrazione.
