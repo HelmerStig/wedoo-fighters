@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
-const {cloudPositions,install,dustParticles}=require('../stage-player.js');
+const {cloudPositions,install,dustParticles,shadowProjection}=require('../stage-player.js');
 const stages=require('../stages-catalog.js');
 const demo=path.resolve(__dirname,'..');
 
@@ -19,6 +19,41 @@ test('Villa Arduino usa le cinque immagini reali nelle dimensioni native e la vi
   assert.equal(stage.width,main.width);assert.equal(stage.height,main.height);
   assert.deepEqual(stage.layers.map(l=>l.zIndex),[0,2,3,4,4]);
   assert.equal(stage.layers.at(-1).id,'foreground');
+});
+
+test('il post processing riceve il quadro completo e non modifica la fase delle idle',async()=>{
+  const f=fixture(false,true);await f.load();const frames=[];
+  f.player.setPostProcess((canvas,time)=>frames.push({canvas,time,actor:f.draws.at(-1)[0]}));
+  f.tick(0);f.tick(100);
+  assert.equal(frames.at(-1).canvas,f.canvas);assert.equal(frames.at(-1).actor,f.images[6]);
+  assert.equal(frames.at(-1).time,100);
+  f.canvas.listeners.keydown({key:'Home',preventDefault(){}});assert.equal(frames.at(-1).time,100);
+  const length=frames.length;f.player.setPostProcess(null);f.tick(200);assert.equal(frames.length,length);
+  f.player.destroy();
+});
+
+test('entrambi i piedi restano attaccati alla proiezione in tutti i frame idle, anche dopo riflesso e drag',()=>{
+  const data=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
+  const crypto=require('node:crypto');
+  for(const fighter of stages[0].fighters){
+    const item=data.items.find(i=>i.characterId===fighter.characterId);
+    const bytes=fs.readFileSync(path.resolve(demo,item.image));
+    assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),item.pngSha256,'Rigenera i contatti dopo aver cambiato lo spritesheet');
+    for(const feet of item.frames){
+      assert.equal(feet.length,2);
+      for(const camera of [0,315,630]){
+        const [a,b,c,d,tx,ty]=shadowProjection(fighter,stages[0].shadow,feet,camera);
+        for(const foot of feet){
+          const u=foot.x-fighter.anchorX,v=foot.y-fighter.anchorY;
+          const shadowX=a*u+c*v+tx,shadowY=b*u+d*v+ty;
+          const actorX=fighter.x-camera+(fighter.flipX?-1:1)*fighter.scale*u;
+          const actorY=fighter.groundY+fighter.scale*v;
+          assert.ok(Math.abs(shadowX-actorX)<1e-8,fighter.characterId+' contatto X');
+          assert.ok(Math.abs(shadowY-actorY)<1e-8,fighter.characterId+' contatto Y');
+        }
+      }
+    }
+  }
 });
 
 test('nuvole centrate con abbondaggio nativo, moto verso sinistra e loop senza salti',()=>{
@@ -56,7 +91,8 @@ function fixture(reduced=false,withFighters=false){
   canvas.releasePointerCapture=()=>{captured=null;};
   canvas.getContext=()=>({clearRect(){paint.push({kind:'clear'});},fillRect(...args){fills.push(args);paint.push({kind:'fill',color:this.fillStyle,alpha:this.globalAlpha,args});},drawImage(...args){draws.push(args);paint.push({kind:'image',image:args[0]});},save(){},restore(){},transform(...args){transforms.push(['project',...args]);},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(demo,'catalog.js'),'utf8'),sandbox);
-  const fighters=withFighters?stages[0].fighters.map(f=>({...f,animation:sandbox.window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
+  const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
+  const fighters=withFighters?stages[0].fighters.map(f=>({...f,footContacts:contacts.items.find(i=>i.characterId===f.characterId).frames,animation:sandbox.window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
   const player=install(canvas,button,status,{...stages[0],fighters},env);
   function load(){images.forEach((image,i)=>{
     if(i<5)Object.assign(image,{naturalWidth:stages[0].layers[i].width,naturalHeight:1080});
@@ -74,7 +110,7 @@ test('foschia soltanto dietro villa e personaggi; polvere a terra coerente con l
   const f=fixture(false,true);await f.load();
   f.paint.length=0;f.player.setEffects({fog:.4});
   const haze=f.paint.filter(p=>p.kind==='fill');assert.ok(haze.length>0);
-  assert.ok(haze.every(p=>p.color==='#cbddec'&&p.alpha<=.4*.24&&p.args[1]<1080*.7));
+  assert.ok(haze.every(p=>p.color==='#dae4ef'&&p.alpha<=.4*.5&&p.args[1]<1080*.7));
   const firstFog=f.paint.indexOf(haze[0]),lastFog=f.paint.indexOf(haze.at(-1));
   assert.ok(firstFog>f.paint.findIndex(p=>p.image===f.images[1]));
   assert.ok(lastFog<f.paint.findIndex(p=>p.image===f.images[3]),'nuvole vicine, villa e personaggi restano davanti alla foschia');
@@ -116,8 +152,8 @@ test('effetti reversibili: colorazione limitata ai pixel dei personaggi, ombre a
   const f=fixture(false,true);await f.load();f.tick(0);f.tick(100);
   const frame=f.draws.at(-2).slice(1,5),position=f.transforms.slice(-4)[0];
   f.player.setEffects({shadows:.55,color:.35});
-  assert.equal(f.fills.length,6,'tre piccole bande di contatto per ciascun personaggio');
-  assert.equal(f.fills[0][0],675-315-88);
+  assert.equal(f.fills.length,12,'tre piccole bande per ciascun piede');
+  assert.ok(f.fills[0][0]<675-315,'contatto sotto il piede sinistro');
   assert.equal(f.buffers.length,4,'sagoma e colore hanno buffer separati');
   const colored=f.draws.at(-2)[0];
   assert.equal(colored.calls.at(-1)[1],'source-atop','colore applicato soltanto all’alpha del frame');
@@ -137,7 +173,7 @@ test('la sagoma usa lo stesso frame della idle, segue la camera e mantiene una l
     assert.deepEqual(mask.calls[0].slice(2,6),[0,0,512,512]);
   }
   const projects=f.transforms.filter(t=>t[0]==='project');
-  assert.equal(projects[0][1],4/3);assert.equal(projects[1][1],-4/3);
+  assert.ok(projects[0][1]>0);assert.ok(projects[1][1]<0);
   assert.equal(projects[0][3],projects[1][3],'stessa direzione orizzontale della luce');
   assert.equal(projects[0][4],projects[1][4],'stessa profondita sul pavimento');
   assert.ok(projects[0][3]<0&&projects[0][4]<0,'testa proiettata verso destra e in basso');
@@ -146,8 +182,9 @@ test('la sagoma usa lo stesso frame della idle, segue la camera e mantiene una l
   assert.deepEqual(masks[0].calls.filter(c=>c[0]==='draw').at(-1).slice(2,6),actorFrame);
   const cached=masks[0].calls.length;
   f.player.setEffects({shadows:1});assert.equal(masks[0].calls.length,cached,'intensita non ricrea la sagoma');
+  const before=f.transforms.filter(t=>t[0]==='project').at(-2)[5];
   f.canvas.listeners.keydown({key:'End',preventDefault(){}});
-  assert.equal(f.transforms.filter(t=>t[0]==='project').at(-2)[5],675-630);
+  assert.ok(Math.abs(f.transforms.filter(t=>t[0]==='project').at(-2)[5]-(before-315))<1e-8);
   assert.equal(masks[0].calls.length,cached,'drag non altera il frame o la sagoma');
   f.button.listeners.click();f.tick(200);f.tick(300);
   assert.ok(masks[0].calls.length>cached,'ombra e idle continuano con nuvole ferme');

@@ -78,3 +78,5 @@ Perfetto, lo stage del gioco, quando lo sbilupperò sarà lanciato a fullscreen,
 Perfetto, ora vorrei provare ad inserire due personaggi nello stage in animazione idle, una sinistra e l'alto a destra, entrambi in idle, usa Alberto sulla sinistra e Marsan sulla destra, Marsan deve essere riflesso. COme posizionamento e dimensioniguarda l'immagine di riferimento che incollo:
 
 Ho visto che hai creato un canvas, vorrei provare ad usare degli effetti visivi, o filtri, puoi suggerirmi qualcosa di adatto?
+
+Bellissimno. Per quanto riguarda le ombre, è possibile utilizzare la sagoma del personaggio per creare un'ombra coerente con la luce dello stage? e animarla in base al movimento del personaggio?

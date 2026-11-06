@@ -22,27 +22,37 @@
         alpha:amount*0.65*Math.sin(Math.PI*phase),color:['#d3bd99','#b49d7d','#e1cba7'][i%3]};
     });
   }
+  function shadowProjection(fighter,style,feet,camera){
+    const slope=feet?.length===2?(feet[1].y-feet[0].y)/(feet[1].x-feet[0].x):0;
+    const offset=feet?.length===2?feet[0].y-fighter.anchorY-slope*(feet[0].x-fighter.anchorX):0;
+    const s=fighter.scale,flip=fighter.flipX?-1:1;
+    // I punti sulla linea delle suole restano fermi; si proietta solo l'altezza sopra quella linea.
+    return [s*(flip+style.shearX*slope),s*slope*(1+style.flattenY),
+      -style.shearX*s,-style.flattenY*s,
+      fighter.x-camera+style.shearX*s*offset,fighter.groundY+s*offset*(1+style.flattenY)];
+  }
   function install(canvas,button,status,stage,env=globalThis){
     const context=canvas.getContext('2d');
     const media=env.matchMedia('(prefers-reduced-motion: reduce)');
     let disposed=false,ready=false,playing=!media.matches,elapsed=0,last=null,request=null;
     let fighterElapsed=0,animateFighters=!media.matches;
+    let postProcess=null;
     const viewportWidth=stage.viewportWidth??stage.height*16/9;
     const maxCamera=Math.max(0,stage.width-viewportWidth);
     let camera=maxCamera/2,drag=null;
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
     const assets=[...layers,...fighters];
-    const shadowStyle={color:'#2c2030',shearX:0.5,flattenY:0.11,opacity:0.45,contactOpacity:0.16,...stage.shadow};
+    const shadowStyle={color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};
     function fog(depth){
       if(!effects.fog)return;
-      context.save();context.fillStyle='#cbddec';
+      context.save();context.fillStyle='#dae4ef';
       const end=stage.height*0.7;
       for(let y=0;y<end;y+=24){
         const altitude=y/stage.height;
         const weight=altitude<0.45?0.12+altitude/0.45*0.88:Math.max(0,(0.7-altitude)/0.25);
-        context.globalAlpha=effects.fog*0.24*depth*weight;
+        context.globalAlpha=effects.fog*0.5*depth*weight;
         context.fillRect(0,y,viewportWidth,Math.min(24,end-y));
       }
       context.restore();
@@ -62,6 +72,7 @@
       if(!effects.shadows)return;
       const animation=fighter.animation;
       const frame=currentFrame(animation);
+      const feet=fighter.footContacts?.[frame];
       const [sx,sy,w,h]=animation.frames[frame];
       if(!fighter.shadowCanvas){
         fighter.shadowCanvas=env.document.createElement('canvas');
@@ -79,11 +90,16 @@
       }
       context.save();
       context.fillStyle=shadowStyle.color;context.globalAlpha=effects.shadows*shadowStyle.contactOpacity;
-      [176,224,176].forEach((width,i)=>context.fillRect(fighter.x-camera-width/2,fighter.groundY-4+i*3,width,3));
+      for(const foot of feet??[{x:fighter.anchorX,y:fighter.anchorY,width:168}]){
+        const x=fighter.x-camera+(fighter.flipX?-1:1)*fighter.scale*(foot.x-fighter.anchorX);
+        const y=fighter.groundY+fighter.scale*(foot.y-fighter.anchorY);
+        const width=Math.max(24,Math.min(100,foot.width*fighter.scale));
+        [0.75,1,0.75].forEach((ratio,i)=>context.fillRect(x-width*ratio/2,y-2+i*2,width*ratio,2));
+      }
       context.restore();
       context.save();context.globalAlpha=effects.shadows*shadowStyle.opacity;
       // Il ribaltamento riguarda la sagoma, non la direzione della luce nel mondo.
-      context.transform((fighter.flipX?-1:1)*fighter.scale,0,-shadowStyle.shearX*fighter.scale,-shadowStyle.flattenY*fighter.scale,fighter.x-camera,fighter.groundY);
+      context.transform(...shadowProjection(fighter,shadowStyle,feet,camera));
       context.drawImage(fighter.shadowCanvas,-fighter.anchorX,-fighter.anchorY,w,h);
       context.restore();
     }
@@ -131,6 +147,7 @@
         context.drawImage(tinted??fighter.imageObject,tinted?0:sx,tinted?0:sy,w,h,-fighter.anchorX,-fighter.anchorY,w,h);
         context.restore();
       }
+      postProcess?.(canvas,fighterElapsed);
     }
     function sync(){
       button.disabled=!ready;
@@ -178,7 +195,7 @@
       event.preventDefault();moveCamera(next);
     }
     button.disabled=true;
-    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},destroy(){}};}
+    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},setPostProcess(){},destroy(){}};}
     button.addEventListener('click',toggle);
     canvas.addEventListener('pointerdown',pointerDown);
     canvas.addEventListener('pointermove',pointerMove);
@@ -209,12 +226,12 @@
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setEffects(values){
+    return {loaded,setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
-      disposed=true;resetClock();
+      disposed=true;postProcess=null;resetClock();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});
       for(const [type,handler] of [['pointerdown',pointerDown],['pointermove',pointerMove],['pointerup',pointerEnd],['pointercancel',pointerEnd],['lostpointercapture',pointerEnd],['keydown',keyDown]])canvas.removeEventListener(type,handler);
@@ -224,5 +241,5 @@
       fighters.forEach(fighter=>{for(const canvas of [fighter.colorCanvas,fighter.shadowCanvas])if(canvas){canvas.width=0;canvas.height=0;}});
     }};
   }
-  return Object.freeze({install,cloudPositions,dustParticles});
+  return Object.freeze({install,cloudPositions,dustParticles,shadowProjection});
 });

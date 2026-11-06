@@ -5,7 +5,7 @@ const {defaults,amount,markup,install}=require('../stage-effects.js');
 function fixture(){
   const nodes=new Map(),calls=[];
   function node(){return {style:{},checked:true,disabled:false,textContent:'',value:'',attributes:{},listeners:{},setAttribute(k,v){this.attributes[k]=v;},addEventListener(k,f){this.listeners[k]=f;},removeEventListener(k){delete this.listeners[k];}};}
-  for(const key of ['[data-fx-original]','[data-fx-reset]','.stage-crt','[data-fx-status]'])nodes.set(key,node());
+  for(const key of ['[data-fx-original]','[data-fx-reset]','.stage-crt','canvas','[data-fx-status]'])nodes.set(key,node());
   for(const key of Object.keys(defaults)){
     for(const type of ['toggle','amount','output'])nodes.set(`[data-fx-${type}="${key}"]`,node());
     nodes.get(`[data-fx-amount="${key}"]`).value=String(defaults[key]*100);
@@ -16,12 +16,14 @@ function fixture(){
 
 test('i cinque effetti hanno intensità indipendenti, confronto originale e ripristino',()=>{
   const f=fixture();assert.deepEqual(f.calls.at(-1),defaults);
+  assert.equal(f.nodes.get('canvas').style.filter,'contrast(1.22) saturate(1.18) brightness(1.08)');
   const strength=f.nodes.get('[data-fx-amount="color"]');strength.value='80';strength.listeners.input();
   assert.equal(f.calls.at(-1).color,.8);assert.equal(f.calls.at(-1).shadows,defaults.shadows);
   const shadow=f.nodes.get('[data-fx-toggle="shadows"]');shadow.checked=false;shadow.listeners.change();
   assert.equal(f.calls.at(-1).shadows,0);assert.equal(f.nodes.get('[data-fx-amount="shadows"]').disabled,true);
   const original=f.nodes.get('[data-fx-original]');original.listeners.click();
   assert.deepEqual(f.calls.at(-1),{shadows:0,color:0,crt:0,fog:0,dust:0});assert.equal(f.nodes.get('.stage-crt').style.opacity,'0');
+  assert.equal(f.nodes.get('canvas').style.filter,'none');
   original.listeners.click();assert.equal(f.calls.at(-1).color,.8);assert.equal(f.calls.at(-1).shadows,0);
   f.nodes.get('[data-fx-reset]').listeners.click();assert.deepEqual(f.calls.at(-1),defaults);
   assert.equal(original.attributes['aria-pressed'],'false');

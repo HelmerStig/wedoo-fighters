@@ -4,38 +4,95 @@ SCOPO DELLA DEMO
 Catalogo e banco di prova degli asset: lo sviluppo del gioco avverra in Godot.
 Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
 
+CRT AVANZATO E PRESET
+Sotto gli effetti dello stage apri "CRT avanzato - parametri e preset".
+Il nuovo renderer locale WebGL ricostruisce la logica osservata nel riferimento
+https://www.tooooools.app/effects/crt, con implementazione autonoma.
+Non richiede connessioni Internet o librerie esterne e non copia shader del sito.
+La resa e una ricostruzione artistica, non una corrispondenza esatta al riferimento.
+
+Per la preview completa usa il server locale:
+  node demo-moves/scripts/serve.mjs
+  http://127.0.0.1:4173/demo-moves/stages.html
+Aprendo da file://, alcuni browser impediscono a WebGL di leggere il canvas con
+immagini locali. In quel caso, o senza supporto WebGL, resta il CRT CSS di base.
+Il messaggio nel pannello indica quale anteprima e attiva.
+
+Parametri disponibili, indipendenti dal cursore di intensita generale CRT:
+- Preparazione: blur (px), grana, gamma, punto del nero e punto del bianco (0-255).
+- Schermo: Monitor (punti), TV (celle RGB sfalsate), LCD (celle RGB allineate).
+  Curvatura, dimensione/passo/morbidezza dei fosfori, luminosita e vignettatura.
+- Luce: raggio e intensita del glow, soglia/raggio/intensita del bloom.
+  Fusione Screen, Light (massimo dei canali) o HDR (somma con tone mapping).
+- Convergenza: spostamenti X/Y in pixel di rosso e blu e intensita generale.
+La risoluzione resta quella della vista 1920 x 1080; non cambia il quadro 16:9.
+Il CRT e applicato dopo la composizione di stage, polvere, ombre e personaggi,
+prima della visualizzazione: camera, hitbox e frame sorgenti restano invariati.
+Il renderer fa sei passaggi: preparazione in spazio lineare, selezione delle luci,
+blur orizzontale e verticale del bloom, fosfori/glow, composizione finale e gamma.
+Il bloom viene calcolato prima della maschera dei fosfori per non amplificare
+soltanto le scanline. Buffer RGBA8 per compatibilita; la modalita HDR e una
+simulazione di fusione, non una pipeline di output HDR a precisione estesa.
+
+Fissa preset: memorizza parametri e intensita generale CRT nel browser per stage.
+Esporta JSON: salva un preset versionato wedoo.crt-preset v1, da conservare nel
+repository e riutilizzare come riferimento in Godot. Importa JSON lo carica senza
+fissarlo automaticamente. Valori iniziali ripristina la configurazione di prova,
+lasciando intatto l'eventuale preset fissato; per sostituirlo premi Fissa preset.
+Vista originale sospende anche il renderer avanzato e conserva le regolazioni.
+Le regolazioni di foschia, polvere, colore e ombre sono escluse dal preset CRT.
+Le unita degli offset sono pixel della vista 1080p; glowRadius e misurato in passi
+dei fosfori. In Godot usare questi valori come riferimento artistico da validare
+nel motore, non come shader importabile direttamente.
+Codice: crt-webgl.js (renderer), crt-panel.js (controlli, normalizzazione, preset).
+
 EFFETTI DI ANTEPRIMA DEGLI STAGE
 Sotto ogni stage trovi cinque controlli indipendenti, con checkbox e intensita:
-ombre a terra (80%), toni caldi sui personaggi (35%), CRT leggero (100%),
-foschia lontana (40%) e polvere in pixel art (100%).
+ombre a terra (80%), toni caldi sui personaggi (35%), CRT arcade (100%),
+foschia lontana (65%) e polvere in pixel art (100%).
 Vista originale sospende gli effetti conservando le regolazioni. Ripristina
 riattiva i cinque effetti con le intensita iniziali. Le regolazioni valgono per
 la sessione della pagina; non vengono scritte negli asset.
 
 Parametri di riferimento per riprodurre il risultato in Godot:
-- Ombre: sagoma alpha dello stesso frame della idle, colorata #2c2030;
-  opacita = intensita * 0.45 (default 0.36). Proiezione ancorata ai piedi,
+- Ombre: sagoma alpha dello stesso frame della idle, colorata #1d1625;
+  opacita = intensita * 0.72 (default 0.576). Proiezione ancorata ai piedi,
   verso destra e verso il basso, assumendo luce alta da sinistra.
   In stages-catalog.js, shadow.shearX=0.5 e flattenY=0.11 regolano inclinazione
-  ed estensione sul pavimento. Matrice: (facing*scala, 0, -0.5*scala,
-  -0.11*scala, x-camera, groundY); sagoma disegnata da (-anchorX,-anchorY).
+  ed estensione sul pavimento. La base della proiezione passa per i due punti
+  di appoggio misurati sulle suole del frame corrente, anche a quote diverse.
+  La funzione shadowProjection in stage-player.js conserva esattamente questi
+  due contatti nella trasformazione, proiettando l'altezza sopra la linea delle suole.
   Il riflesso di Marsan modifica la sagoma, ma non la direzione della luce.
-  Contatto ai piedi: tre bande alte 3 px, larghe 176,224,176 px, da groundY-4;
-  opacita = intensita * 0.16 (default 0.128). Entrambe le ombre sono sopra
+  Contatto separato per ogni scarpa: tre bande alte 2 px, dalla quota della
+  suola meno 2 px; larghezza misurata sulla scarpa, scalata e limitata a 24-100 px;
+  le bande esterne sono larghe il 75% della banda centrale.
+  opacita = intensita * 0.28 (default 0.224). Entrambe le ombre sono sopra
   il pavimento e sotto i personaggi. Nessuna sfocatura o modifica agli asset.
   La sagoma corrente viene conservata in memoria e aggiornata insieme al frame;
   il drag e le regolazioni di intensita non alterano l'animazione.
+  Misure per frame in animation/stage-foot-contacts.json, incorporate nella demo
+  da stage-foot-contacts.js per funzionare anche da file locale.
+  Dopo un aggiornamento delle idle di Alberto o Marsan eseguire:
+    python demo-moves/scripts/build-stage-foot-contacts.py
+  I test verificano la provenienza tramite hash dei PNG e l'aggancio di entrambi
+  i piedi per tutti i frame, anche con camera spostata e personaggio riflesso.
   Questa anteprima usa idle: la risposta all'altezza del salto resta da integrare
   quando saranno inseriti personaggi in salto nello stage.
 - Colore: sovrapposizione #ffb878 limitata all'alpha del personaggio;
   opacita = intensita * 0.16 (default 0.056). Nessuna sfocatura o modifica
   ai pixel sorgenti; la demo conserva in memoria solo il frame colorato corrente.
-- CRT: sovrapposizione statica sull'intera vista; opacita globale = intensita.
-  Scanline #080610 al 22%, 1 pixel ogni 4 pixel della vista visualizzata.
-  Vignettatura ellittica: centro trasparente fino al 45%, bordo #0f0814 al 42%.
-  Non sono presenti sfarfallio, distorsione o aberrazione cromatica.
-- Foschia: colore #cbddec in bande orizzontali di 24 px, fino al 70% dell'altezza;
-  massima densita al 45% dell'altezza. Opacita massima = intensita * 0.24 * profondita.
+- CRT arcade: sovrapposizione statica sull'intera vista; opacita globale = intensita.
+  Scanline #05030c al 38%, una riga scura ogni 4 pixel della vista visualizzata,
+  seguita da una riga chiara al 4.5%. Maschera verticale RGB di 3 pixel:
+  rosso #ff2d1e al 12%, verde #23ff5a al 6.5%, blu #2d55ff al 12%.
+  Vignettatura ellittica: centro trasparente fino al 30%, bordo #0a0512 al 68%.
+  Bordo interno scuro e riflesso diagonale tenue per simulare il vetro.
+  Sul canvas: contrasto = 1 + intensita * 0.22; saturazione = 1 + intensita * 0.18;
+  luminosita = 1 + intensita * 0.08. Vista originale rimuove anche questi filtri.
+  Non sono presenti sfarfallio, distorsione geometrica o aberrazione cromatica.
+- Foschia: colore #dae4ef in bande orizzontali di 24 px, fino al 70% dell'altezza;
+  massima densita al 45% dell'altezza. Opacita massima = intensita * 0.5 * profondita.
   Due passaggi: dopo le nuvole lontane (profondita 1), dopo le intermedie (0.35).
   Villa, nuvole vicine e personaggi sono disegnati successivamente.
 - Polvere: 160 granelli distribuiti nel mondo; dimensioni 2,4,6 px, colori
