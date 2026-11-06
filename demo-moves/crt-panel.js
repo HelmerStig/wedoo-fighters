@@ -32,22 +32,22 @@
     if(result.whitePoint>0&&result.whitePoint<=result.blackPoint)result.whitePoint=result.blackPoint+1;
     return result;
   }
-  function preset(settings,strength=1){
+  function preset(settings,strength=1,enabled=true){
     return {schema:'wedoo.crt-preset',version:1,referenceResolution:[1920,1080],
-      strength:Math.max(0,Math.min(1,Number.isFinite(strength)?strength:1)),settings:normalize(settings)};
+      strength:Math.max(0,Math.min(1,Number.isFinite(strength)?strength:1)),enabled:enabled!==false,settings:normalize(settings)};
   }
   function parsePreset(text){
     const value=JSON.parse(text);
     if(value?.schema!=='wedoo.crt-preset'||value.version!==1||!value.settings||typeof value.settings!=='object'||Array.isArray(value.settings))throw Error('Questo file non è un preset CRT WEDOO valido.');
-    return preset(value.settings,value.strength);
+    return preset(value.settings,value.strength,value.enabled);
   }
-  function markup(id){
+  function markup(id,basicControls=''){
     const prefix='crt-'+String(id).replace(/[^a-z0-9-]/gi,'-');
-    return `<aside class="crt-drawer" id="${prefix}-drawer" data-crt-drawer role="dialog" aria-labelledby="${prefix}-title" hidden><header class="crt-drawer-header"><h2 id="${prefix}-title">CRT avanzato</h2><button class="icon-button" type="button" data-crt-close aria-label="Chiudi parametri CRT">×</button></header><div class="crt-drawer-scroll"><p class="crt-help">Regola i parametri osservando lo stage. Fissa una configurazione o esportala per il lavoro in Godot.</p><p class="crt-runtime" data-crt-runtime role="status"></p><div class="crt-groups">${groups.map(([name,items])=>`<fieldset><legend>${name}</legend>${items.map(f=>{
+    return `<aside class="crt-drawer" id="${prefix}-drawer" data-crt-drawer role="dialog" aria-labelledby="${prefix}-title" hidden><header class="crt-drawer-header"><h2 id="${prefix}-title">Parametri CRT</h2><button class="icon-button" type="button" data-crt-close aria-label="Chiudi parametri CRT">×</button></header><div class="crt-drawer-scroll">${basicControls}<section class="crt-advanced-group" aria-label="CRT avanzato"><h3>CRT avanzato · fosfori e luce</h3><div class="crt-master-controls"><label for="${prefix}-enabled"><input id="${prefix}-enabled" type="checkbox" data-crt-enabled checked> Attiva CRT avanzato</label><label for="${prefix}-strength">Intensità avanzato</label><div class="crt-param-inputs"><input id="${prefix}-strength" type="range" min="0" max="100" step="1" value="100" data-crt-strength><output data-crt-strength-output>100%</output></div></div><p class="crt-help">Indipendente dal CRT base. I parametri numerici partono da zero. Gamma e luminosità a 0 sono neutre; punto del bianco a 0 equivale a 255. Per vedere la maschera dei fosfori, aumenta sia dimensione sia passo.</p><p class="crt-runtime" data-crt-runtime role="status"></p><div class="crt-groups">${groups.map(([name,items])=>`<fieldset><legend>${name}</legend>${items.map(f=>{
       const [key,label,min,max,step]=f,domId=prefix+'-'+key;
       return Array.isArray(min)?`<label class="crt-choice" for="${domId}">${label}<select id="${domId}" data-crt-param="${key}">${min.map(value=>`<option value="${value}">${value.toUpperCase()}</option>`).join('')}</select></label>`:
         `<div class="crt-param"><label for="${domId}">${label}</label><div class="crt-param-inputs"><input type="range" id="${domId}" data-crt-param="${key}" min="${min}" max="${max}" step="${step}"><input type="number" data-crt-number="${key}" min="${min}" max="${max}" step="${step}" aria-label="Valore: ${label}"></div></div>`;
-    }).join('')}</fieldset>`).join('')}</div></div><footer class="crt-drawer-footer"><div class="crt-preset-actions"><button type="button" class="play-button" data-crt-save>Fissa preset</button><button type="button" class="step-button" data-crt-export>Esporta JSON</button><button type="button" class="step-button" data-crt-import>Importa JSON</button><button type="button" class="step-button" data-crt-reset>Valori iniziali</button><input type="file" accept="application/json,.json" data-crt-file hidden></div><p class="crt-preset-status" data-crt-status aria-live="polite"></p></footer></aside>`;
+    }).join('')}</fieldset>`).join('')}</div></section></div><footer class="crt-drawer-footer"><div class="crt-preset-actions"><button type="button" class="play-button" data-crt-save>Fissa preset avanzato</button><button type="button" class="step-button" data-crt-export>Esporta JSON</button><button type="button" class="step-button" data-crt-import>Importa JSON</button><button type="button" class="step-button" data-crt-reset>Azzera avanzato</button><input type="file" accept="application/json,.json" data-crt-file hidden></div><p class="crt-preset-status" data-crt-status aria-live="polite"></p></footer></aside>`;
   }
   function launcher(id){
     const prefix='crt-'+String(id).replace(/[^a-z0-9-]/gi,'-');
@@ -56,10 +56,11 @@
   let activePanel=null;
   function install(card,player,stageId,env=globalThis){
     const source=card.querySelector('.stage-preview canvas');
-    const output=card.querySelector('.stage-crt-output'),overlay=card.querySelector('.stage-crt');
+    const output=card.querySelector('.stage-crt-output');
+    const enabledControl=card.querySelector('[data-crt-enabled]'),strengthInput=card.querySelector('[data-crt-strength]'),strengthOutput=card.querySelector('[data-crt-strength-output]');
     const status=card.querySelector('[data-crt-status]'),runtime=card.querySelector('[data-crt-runtime]');
     const storageKey='wedoo-crt-preset-v1:'+stageId;
-    let settings={...defaults},strength=1,time=0,disposed=false,available=false,strengthControl=null,savedStrength=null;
+    let settings={...defaults},strength=1,enabled=true,original=false,time=0,disposed=false,available=false;
     const cleanups=[];
     function listen(node,event,handler){node.addEventListener(event,handler);cleanups.push(()=>node.removeEventListener(event,handler));}
     const drawer=card.querySelector('[data-crt-drawer]'),openButton=card.querySelector('[data-crt-open]'),closeButton=card.querySelector('[data-crt-close]');
@@ -77,24 +78,29 @@
     });
     listen(closeButton,'click',()=>closePanel());
     listen(env.document,'keydown',event=>{if(event.key==='Escape'&&!drawer.hidden){event.preventDefault();closePanel();}});
-    try{const saved=env.localStorage.getItem(storageKey);if(saved){const value=parsePreset(saved);settings=value.settings;savedStrength=value.strength;status.textContent='Preset fissato caricato.';}}catch{}
+    try{const saved=env.localStorage.getItem(storageKey);if(saved){const value=parsePreset(saved);settings=value.settings;strength=value.strength;enabled=value.enabled;status.textContent='Preset avanzato fissato caricato.';}}catch{}
+    function effectiveStrength(){return enabled&&!original?strength:0;}
     function appearance(){
-      output.hidden=!available||strength<=0;
-      overlay.style.opacity=available?'0':String(strength);
-      source.style.filter=available||strength<=0?'none':`contrast(${1+strength*.22}) saturate(${1+strength*.18}) brightness(${1+strength*.08})`;
+      output.hidden=!available||effectiveStrength()<=0;
     }
     const renderer=env.CrtWebGL.create(source,output,()=>{
-      available=false;runtime.textContent='CRT avanzato non disponibile. Resta attivo il CRT di base. Apri la demo tramite il server locale e ricarica per riprovare.';appearance();
+      available=false;runtime.textContent='CRT avanzato non disponibile. I controlli CRT base restano utilizzabili. Apri la demo tramite il server locale e ricarica per riprovare.';appearance();
     });
     available=renderer.supported;
-    runtime.textContent=available?'Anteprima CRT WebGL · 1920 × 1080.':'WebGL non disponibile: resta attivo il CRT di base. Puoi comunque preparare ed esportare un preset.';
+    runtime.textContent=available?'Anteprima CRT WebGL · 1920 × 1080.':'WebGL non disponibile: puoi usare il CRT base e preparare un preset avanzato.';
     function render(){
       if(disposed)return;
       appearance();
-      if(available&&strength>0&&!renderer.render(settings,strength,time)){available=false;appearance();}
+      const value=effectiveStrength();
+      if(available&&value>0&&!renderer.render(settings,value,time)){available=false;appearance();}
     }
     const controls=fields.map(field=>({field,input:card.querySelector(`[data-crt-param="${field[0]}"]`),number:Array.isArray(field[2])?null:card.querySelector(`[data-crt-number="${field[0]}"]`)}));
-    function sync(){controls.forEach(({field,input,number})=>{input.value=settings[field[0]];if(number)number.value=settings[field[0]];});}
+    function sync(){
+      controls.forEach(({field,input,number})=>{input.value=settings[field[0]];if(number)number.value=settings[field[0]];});
+      enabledControl.checked=enabled;strengthInput.value=strength*100;strengthInput.disabled=!enabled;strengthOutput.textContent=Math.round(strength*100)+'%';
+    }
+    listen(enabledControl,'change',()=>{enabled=enabledControl.checked;sync();render();});
+    listen(strengthInput,'input',()=>{strength=Math.max(0,Math.min(1,Number(strengthInput.value)/100||0));sync();render();});
     controls.forEach(({field,input,number})=>{
       function change(node){
         const value=Array.isArray(field[2])?node.value:Number(node.value);
@@ -104,14 +110,14 @@
       listen(input,Array.isArray(field[2])?'change':'input',()=>change(input));
       if(number)listen(number,'change',()=>change(number));
     });
-    function reset(){settings={...defaults};sync();render();status.textContent='Valori iniziali ripristinati. Il preset fissato resta disponibile al prossimo caricamento.';}
+    function reset(){settings={...defaults};sync();render();status.textContent='Parametri avanzati azzerati. Il CRT base resta invariato.';}
     listen(card.querySelector('[data-crt-reset]'),'click',reset);
     listen(card.querySelector('[data-crt-save]'),'click',()=>{
-      try{env.localStorage.setItem(storageKey,JSON.stringify(preset(settings,strength)));status.textContent='Preset fissato in questo browser. Esporta JSON per conservarlo nel repository o usarlo in Godot.';}
+      try{env.localStorage.setItem(storageKey,JSON.stringify(preset(settings,strength,enabled)));status.textContent='Preset avanzato fissato in questo browser. Il CRT base resta separato.';}
       catch{status.textContent='Salvataggio locale non disponibile. Usa “Esporta JSON” per conservare il preset.';}
     });
     listen(card.querySelector('[data-crt-export]'),'click',()=>{
-      const blob=new env.Blob([JSON.stringify(preset(settings,strength),null,2)+'\n'],{type:'application/json'});
+      const blob=new env.Blob([JSON.stringify(preset(settings,strength,enabled),null,2)+'\n'],{type:'application/json'});
       const url=env.URL.createObjectURL(blob),link=env.document.createElement('a');
       link.href=url;link.download=stageId+'-crt-preset.json';env.document.body.append(link);link.click();link.remove();
       env.setTimeout(()=>env.URL.revokeObjectURL(url),1000);status.textContent='Preset esportato in JSON.';
@@ -123,17 +129,15 @@
       try{
         if(file.size>65536)throw Error('Il preset è troppo grande.');
         const value=parsePreset(await file.text());if(disposed)return;
-        settings=value.settings;sync();
-        if(strengthControl)strengthControl(value.strength);else strength=value.strength;
+        settings=value.settings;strength=value.strength;enabled=value.enabled;sync();
         render();status.textContent='Preset importato. Premi “Fissa preset” per usarlo ai prossimi avvii.';
       }catch(error){if(!disposed)status.textContent='Importazione non riuscita: '+error.message;}
       fileInput.value='';
     });
     sync();appearance();
     player.setPostProcess((canvas,elapsed)=>{time=elapsed;render();});
-    return {setStrength(value){strength=Math.max(0,Math.min(1,Number(value)||0));render();},reset,
-      setStrengthControl(callback){strengthControl=callback;if(savedStrength!==null){const value=savedStrength;savedStrength=null;callback(value);}},
-      destroy(){disposed=true;closePanel(false);player.setPostProcess(null);cleanups.forEach(cleanup=>cleanup());renderer.destroy();output.hidden=true;source.style.filter='none';overlay.style.opacity='0';}};
+    return {setStrength(value){strength=Math.max(0,Math.min(1,Number(value)||0));sync();render();},setOriginal(value){original=Boolean(value);render();},reset,
+      destroy(){disposed=true;closePanel(false);player.setPostProcess(null);cleanups.forEach(cleanup=>cleanup());renderer.destroy();output.hidden=true;}};
   }
   return Object.freeze({groups,fields,defaults,normalize,preset,parsePreset,markup,launcher,install});
 });

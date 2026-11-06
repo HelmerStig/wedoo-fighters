@@ -18,10 +18,11 @@ test('preset versionati: round trip, limiti e livelli del bianco/nero validi',()
 function fixture({supported=true,stored=null,storageDenied=false}={}){
   const nodes=new Map(),draws=[],writes=[],downloads=[];let hook=null,failure;
   function node(){return {style:{},hidden:false,value:'',textContent:'',listeners:{},attributes:{},files:[],focus(){this.focused=true;},setAttribute(k,v){this.attributes[k]=v;},addEventListener(k,f){this.listeners[k]=f;},removeEventListener(k){delete this.listeners[k];},click(){this.clicked=true;},remove(){}};}
-  for(const selector of ['.stage-preview canvas','.stage-crt-output','.stage-crt','[data-crt-status]','[data-crt-runtime]','[data-crt-reset]','[data-crt-save]','[data-crt-export]','[data-crt-import]','[data-crt-file]','[data-crt-open]','[data-crt-close]','[data-crt-drawer]'])nodes.set(selector,node());
+  for(const selector of ['.stage-preview canvas','.stage-crt-output','.stage-crt','[data-crt-status]','[data-crt-runtime]','[data-crt-reset]','[data-crt-save]','[data-crt-export]','[data-crt-import]','[data-crt-file]','[data-crt-open]','[data-crt-close]','[data-crt-drawer]','[data-crt-enabled]','[data-crt-strength]','[data-crt-strength-output]'])nodes.set(selector,node());
   nodes.get('[data-crt-drawer]').hidden=true;
   for(const field of crt.fields){nodes.set(`[data-crt-param="${field[0]}"]`,node());if(!Array.isArray(field[2]))nodes.set(`[data-crt-number="${field[0]}"]`,node());}
   const source=nodes.get('.stage-preview canvas');source.width=1920;source.height=1080;
+  source.style.filter='contrast(1.1)';nodes.get('.stage-crt').style.opacity='0.6';
   const classes=new Set(),document={...node(),body:{append(){},classList:{add:k=>classes.add(k),remove:k=>classes.delete(k)}},createElement:node};
   const env={localStorage:{getItem(){if(storageDenied)throw Error();return stored;},setItem(key,text){if(storageDenied)throw Error();writes.push([key,text]);}},
     CrtWebGL:{create(input,output,fail){failure=fail;return {supported,render(...args){draws.push(args);return true;},destroy(){}};}},
@@ -64,7 +65,7 @@ test('controlli CRT, confronto originale, fissaggio ed esportazione mantengono i
   f.controller.setStrength(.6);f.render(750);
   assert.equal(f.draws.at(-1)[0].dotPitch,7);assert.equal(f.draws.at(-1)[0].type,'lcd');
   assert.equal(f.draws.at(-1)[1],.6);assert.equal(f.draws.at(-1)[2],750);
-  assert.equal(f.nodes.get('.stage-preview canvas').style.filter,'none','nessun doppio CRT CSS');
+  assert.equal(f.nodes.get('.stage-preview canvas').style.filter,'contrast(1.1)','CRT base lasciato indipendente');
   const before=f.draws.length;f.controller.setStrength(0);f.render();assert.equal(f.draws.length,before);
   assert.equal(f.nodes.get('.stage-crt-output').hidden,true);
   f.controller.setStrength(.6);assert.equal(f.draws.at(-1)[0].dotPitch,7);
@@ -76,13 +77,13 @@ test('controlli CRT, confronto originale, fissaggio ed esportazione mantengono i
   f.controller.destroy();assert.equal(f.hook(),null);assert.equal(Object.keys(pitch.listeners).length,0);
 });
 
-test('preset fissato e importazione aggiornano anche la forza generale del CRT',async()=>{
+test('preset fissato e importazione aggiornano soltanto la forza del CRT avanzato',async()=>{
   const saved=JSON.stringify(crt.preset({...crt.defaults,glowIntensity:.8},.4));
-  const f=fixture({stored:saved});let strength;
-  f.controller.setStrengthControl(value=>{strength=value;f.controller.setStrength(value);});
-  assert.equal(strength,.4);f.render();assert.equal(f.draws.at(-1)[0].glowIntensity,.8);
+  const f=fixture({stored:saved});
+  f.render();assert.equal(f.draws.at(-1)[1],.4);assert.equal(f.draws.at(-1)[0].glowIntensity,.8);
   const input=f.nodes.get('[data-crt-file]');input.files=[{size:100,text:async()=>JSON.stringify(crt.preset({...crt.defaults,type:'monitor'},.9))}];
-  await input.listeners.change();assert.equal(strength,.9);assert.equal(f.draws.at(-1)[0].type,'monitor');
+  await input.listeners.change();assert.equal(f.draws.at(-1)[1],.9);assert.equal(f.draws.at(-1)[0].type,'monitor');
+  assert.equal(f.nodes.get('.stage-preview canvas').style.filter,'contrast(1.1)');
   input.files=[{size:10,text:async()=>'{'}];await input.listeners.change();
   assert.match(f.nodes.get('[data-crt-status]').textContent,/Importazione non riuscita/);
   assert.equal(f.draws.at(-1)[0].type,'monitor');f.controller.destroy();
@@ -90,9 +91,9 @@ test('preset fissato e importazione aggiornano anche la forza generale del CRT',
 
 test('assenza WebGL, perdita contesto e storage negato non bloccano la demo',()=>{
   const f=fixture({supported:false,storageDenied:true});f.controller.setStrength(.8);f.render();
-  assert.equal(f.nodes.get('.stage-crt-output').hidden,true);assert.equal(f.nodes.get('.stage-crt').style.opacity,'0.8');
+  assert.equal(f.nodes.get('.stage-crt-output').hidden,true);assert.equal(f.nodes.get('.stage-crt').style.opacity,'0.6');
   assert.match(f.nodes.get('.stage-preview canvas').style.filter,/contrast/);
   f.nodes.get('[data-crt-save]').listeners.click();assert.match(f.nodes.get('[data-crt-status]').textContent,/Salvataggio locale non disponibile/);f.controller.destroy();
   const lost=fixture();lost.controller.setStrength(1);lost.fail();
-  assert.equal(lost.nodes.get('.stage-crt-output').hidden,true);assert.equal(lost.nodes.get('.stage-crt').style.opacity,'1');lost.controller.destroy();
+  assert.equal(lost.nodes.get('.stage-crt-output').hidden,true);assert.equal(lost.nodes.get('.stage-crt').style.opacity,'0.6');lost.controller.destroy();
 });

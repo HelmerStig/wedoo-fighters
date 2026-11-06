@@ -5,7 +5,11 @@ Catalogo e banco di prova degli asset: lo sviluppo del gioco avverra in Godot.
 Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
 
 CRT AVANZATO E PRESET
-Sotto gli effetti dello stage apri "CRT avanzato - parametri e preset".
+Premi "Parametri CRT" accanto al titolo dello stage: si apre un pannello laterale
+con scorrimento interno. La pagina riserva spazio al pannello per tenere visibile
+lo stage; sui display piccoli i parametri si aprono in basso. Chiudi con la X,
+con Escape o premendo di nuovo il pulsante. I valori restano quando lo richiudi.
+Il pannello non e modale: puoi continuare a trascinare la vista dello stage.
 Il nuovo renderer locale WebGL ricostruisce la logica osservata nel riferimento
 https://www.tooooools.app/effects/crt, con implementazione autonoma.
 Non richiede connessioni Internet o librerie esterne e non copia shader del sito.
@@ -26,6 +30,12 @@ Parametri disponibili, indipendenti dal cursore di intensita generale CRT:
   Fusione Screen, Light (massimo dei canali) o HDR (somma con tone mapping).
 - Convergenza: spostamenti X/Y in pixel di rosso e blu e intensita generale.
 La risoluzione resta quella della vista 1920 x 1080; non cambia il quadro 16:9.
+Tutti i parametri numerici avanzati partono da zero. A zero gamma e luminosita
+sono neutre (fattore 1), il punto del bianco equivale a 255. La maschera dei
+fosfori si attiva quando dimensione e passo sono entrambi maggiori di zero.
+Con tutti i valori a zero il renderer copia direttamente il quadro originale,
+senza passare per gamma, maschera o bloom. Valori iniziali riporta tutto a zero;
+un eventuale preset fissato in precedenza viene conservato fino al suo rimpiazzo.
 Il CRT e applicato dopo la composizione di stage, polvere, ombre e personaggi,
 prima della visualizzazione: camera, hitbox e frame sorgenti restano invariati.
 Il renderer fa sei passaggi: preparazione in spazio lineare, selezione delle luci,
@@ -109,6 +119,9 @@ stage-player.js; sovrapposizione CRT: styles.css (.stage-crt).
 
 STAGES
 Apri stages.html o scegli Stages dal menu della demo.
+Fullscreen manda a schermo intero soltanto il riquadro dello stage, tramite
+Fullscreen API. Si esce con Esc o con il pulsante nel riquadro. Il rapporto 16:9
+rimane invariato, con eventuali bande nere; drag, CRT e animazioni restano attivi.
 Villa Arduino usa un mondo di 2550 x 1080, visto da una finestra 16:9 di 1920 x 1080.
 La vista parte centrata: trascina con mouse o touch per esplorare i due lati.
 Sono disponibili anche frecce, Home ed End da tastiera quando il quadro ha il focus.
