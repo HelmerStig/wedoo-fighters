@@ -49,3 +49,24 @@ Ogni personaggio ha un fotogramma con il pugno a massima estensione in avanti, v
 Ho creato altre versioni di light punch per alcuni personaggi che mancavano, me le integri in demo-moves e mi fai l'update del report con i nuovi fotogrammi, in modo che tutti i personaggi abbiano il fotogramma del pugno a massima estensione sincronizzato nello stesso timing ?
 
 Ho rifatto la versione di light punch di Bonazzi su autosprite, puoi fare l'update di demo-moves e reports?
+Sotto al titolo mosse.html (in questo caso Pugno leggero) puoi mettermi un link al report della mossa?
+
+ora ho fatto l'animazione di block per tutti i personaggi, puoi aggiornare demo-moves e report con le nuove animazioni di block? Il titolo di block sarà "Parata alta" e il link al report della mossa sarà sotto al titolo mosse.
+La posizione di blocco deve appararire in 0.1 s, scegli tu i framerate più adatti a seconda dello spritesheet, tutto chiaro?
+
+Ora co lo stesso principio per il salto, vorrei che la massima altezza fosse raggiunta con lo stesso timing per tutti i personaggi. Puoi fare l'update di demo-moves e report con le nuove animazioni di salto? Il titolo del salto sarà "Salto" e il link al report della mossa sarà sotto al titolo mosse. scegli tu i framerate più adatti a seconda dello spritesheet, tutto chiaro?
+
+Ora nel menu di demo moves puoi mettere in ordine prima le mosse di base, salto camminata idle etc e a seguire i colpi?
+
+RIfacciamo, lo stage sarà questo: original-backgrounds\stages-1.png
+Mi servono tre immagini di nuvole in pixel art 16 bit, in stile Fatal Fury, con sfondo trasparente. Le nuvole devono essere di dimensioni diverse e avere un aspetto coerente con lo stage., mi erverianno poi per fare un parallax dietro l'immagine di riferimento dello stage. 5000 x 1080 in modo da avere molo spazio per il parallax.
+Come esempio di nuvole puoi guardare: "F:\Personali\Godot\assets\backgrounds\default_stage\nuvole.png"
+
+okay, ora in demo-moves vorrei creare una sezione Stages dove inserire gli stage creati, con il titolo "Stages".
+Il primo sarà Villa Arduino.
+Sarà composto da 5 immagini:
+- original-backgrounds\villa-arduino\cielo.png z-index 0
+- original-backgrounds\villa-arduino\villa-arduino.png: z-index 4, sfondo principale, le proprorzioni dell'immagine sono determinate da quest'immagine, non deve essere ritagliata, deve essere visibile per intero.
+- original-backgrounds\villa-arduino\01-nuvole-lontane.png z-index 2, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi lentamente da destra verso sinistra, in loop, per dare l'effetto di parallax.
+- original-backgrounds\villa-arduino\02-nuvole-intermedie.png z-index 3, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole lontane da destra verso sinistra, in loop, per dare l'effetto di parallax.
+- original-backgrounds\villa-arduino\03-nuvole-prossime.png z-index 4, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole intermedie da destra verso sinistra, in loop, per dare l'effetto di parallax.
