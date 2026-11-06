@@ -70,3 +70,11 @@ Sarà composto da 5 immagini:
 - original-backgrounds\villa-arduino\01-nuvole-lontane.png z-index 2, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi lentamente da destra verso sinistra, in loop, per dare l'effetto di parallax.
 - original-backgrounds\villa-arduino\02-nuvole-intermedie.png z-index 3, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole lontane da destra verso sinistra, in loop, per dare l'effetto di parallax.
 - original-backgrounds\villa-arduino\03-nuvole-prossime.png z-index 4, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole intermedie da destra verso sinistra, in loop, per dare l'effetto di parallax.
+
+Tutto chiaro o hai domande?
+
+Perfetto, lo stage del gioco, quando lo sbilupperò sarà lanciato a fullscreen, vorrei che la proporzione dello stage fosse di 16:9, i layer occuperanno l'altezza intera dello stage, saranno centrati orizzontalemte, quindi avrai spazio che avanzerà a destra e sinistra, quindi lo stage sarà più largo di 1920px, ma l'altezza sarà di 1080px. nella demo degli stage puoi mettere un drag per visualizzare la parte mancante a destra e sinistra? Le nuvole continueranno a muoversi come ora non verranno influenzate dal drag. Tutto chiaro?
+
+Perfetto, ora vorrei provare ad inserire due personaggi nello stage in animazione idle, una sinistra e l'alto a destra, entrambi in idle, usa Alberto sulla sinistra e Marsan sulla destra, Marsan deve essere riflesso. COme posizionamento e dimensioniguarda l'immagine di riferimento che incollo:
+
+Ho visto che hai creato un canvas, vorrei provare ad usare degli effetti visivi, o filtri, puoi suggerirmi qualcosa di adatto?

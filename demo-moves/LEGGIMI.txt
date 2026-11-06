@@ -1,5 +1,33 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+SCOPO DELLA DEMO
+Catalogo e banco di prova degli asset: lo sviluppo del gioco avverra in Godot.
+Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
+
+EFFETTI DI ANTEPRIMA DEGLI STAGE
+Sotto ogni stage trovi tre controlli indipendenti, con checkbox e intensita:
+ombre a terra (55%), toni caldi sui personaggi (35%) e CRT leggero (100%).
+Vista originale sospende gli effetti conservando le regolazioni. Ripristina
+riattiva i tre effetti con le intensita iniziali. Le regolazioni valgono per
+la sessione della pagina; non vengono scritte negli asset.
+
+Parametri di riferimento per riprodurre il risultato in Godot:
+- Ombre: colore #2c2030; opacita = intensita * 0.45 (default 0.2475).
+  Sei bande orizzontali alte 4 px, larghe 168,240,280,280,240,168 px,
+  centrate sul personaggio da groundY - 12 a groundY + 12 nel mondo 1080p.
+  Le ombre sono disegnate sopra il pavimento e sotto i personaggi.
+- Colore: sovrapposizione #ffb878 limitata all'alpha del personaggio;
+  opacita = intensita * 0.16 (default 0.056). Nessuna sfocatura o modifica
+  ai pixel sorgenti; la demo conserva in memoria solo il frame colorato corrente.
+- CRT: sovrapposizione statica sull'intera vista; opacita globale = intensita.
+  Scanline #080610 al 22%, 1 pixel ogni 4 pixel della vista visualizzata.
+  Vignettatura ellittica: centro trasparente fino al 45%, bordo #0f0814 al 42%.
+  Non sono presenti sfarfallio, distorsione o aberrazione cromatica.
+I valori sono un riferimento artistico per Godot: la resa finale andra
+confrontata nel motore, soprattutto per scanline, scala e gestione del colore.
+Configurazione e controlli: stage-effects.js; rendering di ombre e colore:
+stage-player.js; sovrapposizione CRT: styles.css (.stage-crt).
+
 STAGES
 Apri stages.html o scegli Stages dal menu della demo.
 Villa Arduino usa un mondo di 2550 x 1080, visto da una finestra 16:9 di 1920 x 1080.

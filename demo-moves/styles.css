@@ -52,6 +52,23 @@
 .stage-preview canvas:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .stage-status{position:absolute;inset:0;display:grid;place-items:center;margin:0;padding:20px;background:var(--surface);color:var(--muted);font-size:12px;text-align:center}
 .stage-status[hidden]{display:none}
+.stage-status{z-index:2}
+.stage-crt{position:absolute;inset:0;pointer-events:none;opacity:0;z-index:1;background-image:radial-gradient(ellipse at center,transparent 45%,rgba(15,8,20,.42) 100%),repeating-linear-gradient(to bottom,rgba(8,6,16,.22) 0,rgba(8,6,16,.22) 1px,transparent 1px,transparent 4px)}
+.stage-effects{padding:18px;border-top:1px solid var(--border)}
+.stage-effects-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+.stage-effects-heading h3{font-size:12px;font-weight:600}
+.stage-effects-actions{display:flex;gap:8px}
+.stage-effects-actions .step-button{font-size:10px;padding:7px 10px}
+.stage-effects-actions [aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
+.stage-effects-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.stage-effect-toggle{display:flex;align-items:center;gap:8px;font-size:11px}
+.stage-effect-toggle input{accent-color:var(--accent);margin:0}
+.stage-effect-range{display:flex;align-items:center;gap:10px;margin-top:14px}
+.stage-effect-range input{width:100%;min-width:0;accent-color:var(--accent)}
+.stage-effect-range output{min-width:34px;text-align:right;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums}
+.stage-effect-range input:disabled{opacity:.35}
+.stage-effects-status{margin-top:16px;font-size:10px;color:var(--muted)}
+@media(max-width:700px){.stage-effects-grid{grid-template-columns:1fr;gap:20px}.stage-effects-actions{flex-wrap:wrap}}
 .stage-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border-top:1px solid var(--border)}
 .stage-toolbar p{font-size:11px;color:var(--muted)}
 .stage-toolbar button{flex:none}

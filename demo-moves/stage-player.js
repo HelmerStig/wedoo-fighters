@@ -21,6 +21,33 @@
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
     const assets=[...layers,...fighters];
+    let effects={shadows:0,color:0};
+    function shadow(fighter){
+      if(!effects.shadows)return;
+      context.save();
+      context.fillStyle='#2c2030';context.globalAlpha=effects.shadows*0.45;
+      // Bande senza sovrapposizioni, per un'ombra a gradini coerente con la pixel art.
+      [168,240,280,280,240,168].forEach((width,i)=>context.fillRect(fighter.x-camera-width/2,fighter.groundY-12+i*4,width,4));
+      context.restore();
+    }
+    function coloredFrame(fighter,frame,sx,sy,w,h){
+      if(!fighter.colorCanvas){
+        fighter.colorCanvas=env.document.createElement('canvas');
+        fighter.colorCanvas.width=w;fighter.colorCanvas.height=h;
+        fighter.colorContext=fighter.colorCanvas.getContext('2d');
+      }
+      const buffer=fighter.colorContext;
+      if(!buffer)return null;
+      if(fighter.colorFrame!==frame||fighter.colorAmount!==effects.color){
+        buffer.clearRect(0,0,w,h);buffer.imageSmoothingEnabled=false;
+        buffer.drawImage(fighter.imageObject,sx,sy,w,h,0,0,w,h);
+        buffer.save();buffer.globalCompositeOperation='source-atop';
+        buffer.fillStyle=`rgba(255,184,120,${effects.color*0.16})`;
+        buffer.fillRect(0,0,w,h);buffer.restore();
+        fighter.colorFrame=frame;fighter.colorAmount=effects.color;
+      }
+      return fighter.colorCanvas;
+    }
     canvas.width=viewportWidth;canvas.height=stage.height;
     function draw(){
       if(!ready||disposed)return;
@@ -30,6 +57,7 @@
         const positions=layer.speed?cloudPositions(stage.width,layer.width,elapsed,layer.speed):[(stage.width-layer.width)/2];
         for(const x of positions)context.drawImage(layer.imageObject,x-camera,0);
       }
+      fighters.forEach(shadow);
       for(const fighter of fighters){
         const animation=fighter.animation;
         const frame=Math.floor(fighterElapsed*(animation.playbackFps??24)/1000+1e-10)%animation.frames.length;
@@ -37,7 +65,8 @@
         context.save();
         context.translate(fighter.x-camera,fighter.groundY);
         context.scale(fighter.flipX?-fighter.scale:fighter.scale,fighter.scale);
-        context.drawImage(fighter.imageObject,sx,sy,w,h,-fighter.anchorX,-fighter.anchorY,w,h);
+        const tinted=effects.color?coloredFrame(fighter,frame,sx,sy,w,h):null;
+        context.drawImage(tinted??fighter.imageObject,tinted?0:sx,tinted?0:sy,w,h,-fighter.anchorX,-fighter.anchorY,w,h);
         context.restore();
       }
     }
@@ -87,7 +116,7 @@
       event.preventDefault();moveCamera(next);
     }
     button.disabled=true;
-    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {destroy(){}};}
+    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},destroy(){}};}
     button.addEventListener('click',toggle);
     canvas.addEventListener('pointerdown',pointerDown);
     canvas.addEventListener('pointermove',pointerMove);
@@ -118,7 +147,11 @@
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,destroy(){
+    return {loaded,setEffects(values){
+      const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
+      effects={shadows:clamp(values.shadows),color:clamp(values.color)};
+      draw();
+    },destroy(){
       disposed=true;resetClock();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});
@@ -126,6 +159,7 @@
       env.document.removeEventListener('visibilitychange',visibility);
       media.removeEventListener?.('change',reduced);
       assets.forEach(layer=>{layer.imageObject.onload=null;layer.imageObject.onerror=null;});
+      fighters.forEach(fighter=>{if(fighter.colorCanvas){fighter.colorCanvas.width=0;fighter.colorCanvas.height=0;}});
     }};
   }
   return Object.freeze({install,cloudPositions});

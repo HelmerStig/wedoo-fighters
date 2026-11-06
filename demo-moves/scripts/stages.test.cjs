@@ -38,8 +38,13 @@ test('nuvole centrate con abbondaggio nativo, moto verso sinistra e loop senza s
 
 function fixture(reduced=false,withFighters=false){
   function node(){return {listeners:{},hidden:false,disabled:false,textContent:'',setAttribute(){},addEventListener(k,f){this.listeners[k]=f;},removeEventListener(k){delete this.listeners[k];}};}
-  const images=[],draws=[],transforms=[],callbacks=new Map();let next=0;
+  const images=[],draws=[],transforms=[],fills=[],buffers=[],callbacks=new Map();let next=0;
   const document=node(),media=node();document.hidden=false;media.matches=reduced;
+  document.createElement=()=>{
+    const calls=[];
+    const context={clearRect(){},drawImage(...args){calls.push(['draw',...args]);},save(){},restore(){},fillRect(...args){calls.push(['tint',this.globalCompositeOperation,this.fillStyle,...args]);}};
+    const canvas={width:0,height:0,getContext:()=>context,calls};buffers.push(canvas);return canvas;
+  };
   const env={document,matchMedia:()=>media,Image:class{constructor(){images.push(this);}},requestAnimationFrame:f=>{callbacks.set(++next,f);return next;},cancelAnimationFrame:id=>callbacks.delete(id)};
   const canvas=node(),button=node(),status=node();
   let captured=null;
@@ -49,7 +54,7 @@ function fixture(reduced=false,withFighters=false){
   canvas.setPointerCapture=id=>{captured=id;};
   canvas.hasPointerCapture=id=>captured===id;
   canvas.releasePointerCapture=()=>{captured=null;};
-  canvas.getContext=()=>({clearRect(){},drawImage(...args){draws.push(args);},save(){},restore(){},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
+  canvas.getContext=()=>({clearRect(){},fillRect(...args){fills.push(args);},drawImage(...args){draws.push(args);},save(){},restore(){},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(demo,'catalog.js'),'utf8'),sandbox);
   const fighters=withFighters?stages[0].fighters.map(f=>({...f,animation:sandbox.window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
   const player=install(canvas,button,status,{...stages[0],fighters},env);
@@ -62,8 +67,25 @@ function fixture(reduced=false,withFighters=false){
     image.onload();
   });return player.loaded;}
   function tick(time){const pending=[...callbacks.values()];callbacks.clear();pending.forEach(f=>f(time));}
-  return {canvas,button,status,player,images,draws,transforms,callbacks,document,media,load,tick};
+  return {canvas,button,status,player,images,draws,transforms,fills,buffers,callbacks,document,media,load,tick};
 }
+
+test('effetti reversibili: colorazione limitata ai pixel dei personaggi, ombre ancorate al mondo e frame invariati',async()=>{
+  const f=fixture(false,true);await f.load();f.tick(0);f.tick(100);
+  const frame=f.draws.at(-2).slice(1,5),position=f.transforms.slice(-4)[0];
+  f.player.setEffects({shadows:.55,color:.35});
+  assert.equal(f.fills.length,12,'sei bande per ciascuna ombra');
+  assert.equal(f.fills[0][0],675-315-84);
+  assert.equal(f.buffers.length,2);
+  assert.equal(f.buffers[0].calls.at(-1)[1],'source-atop','colore applicato soltanto all’alpha del frame');
+  assert.equal(f.draws.at(-2)[0],f.buffers[0]);
+  const cached=f.buffers[0].calls.length;
+  f.player.setEffects({shadows:.55,color:.35});assert.equal(f.buffers[0].calls.length,cached,'riusa il frame colorato');
+  assert.deepEqual(f.transforms.slice(-4)[0],position);
+  f.player.setEffects({shadows:0,color:0});
+  assert.equal(f.draws.at(-2)[0],f.images[5]);assert.deepEqual(f.draws.at(-2).slice(1,5),frame);
+  f.player.destroy();assert.equal(f.buffers[0].width,0);
+});
 
 test('Alberto e Marsan sono in idle a 24 fps sopra la villa; solo Marsan è riflesso',async()=>{
   const f=fixture(false,true);await f.load();
