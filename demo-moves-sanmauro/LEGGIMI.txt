@@ -3,11 +3,11 @@ SANMAURO FIGHTERS — DEMO MOSSE
 Schermata principale con i sette personaggi del vecchio progetto, ricerca
 per nome, menu mobile e anteprime idle su hover/focus.
 Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
-ogni personaggio ha tredici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
+ogni personaggio ha quattordici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
 Parata media, Parata bassa, Hurt alto, Hurt medio, Hurt basso, Hurt accovacciato,
-Vittoria e Sconfitta.
+Vittoria, Sconfitta e Pugno leggero.
 Il menu Per mossa usa gli id idle, walk, jump, crouch, block-high, block-mid,
-block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory e ko:
+block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory, ko e light-punch:
 confronta la stessa animazione sui sette personaggi, filtrabili per nome.
 Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
 e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
@@ -37,7 +37,7 @@ assets/characters/<id>/portrait.png: anteprima derivata dalla prima cella idle,
 normalizzata con lo stesso allineamento dei player su un canvas 512 × 512.
 assets/manifest.json: frame, dimensioni e provenienza con SHA-256.
 catalog.js: copia incorporata per funzionare anche da file://.
-Sono copiati soltanto gli asset delle tredici mosse realmente referenziate.
+Sono copiati soltanto gli asset delle quattordici mosse realmente referenziate.
 Fonte: F:/Personali/Godot/assets/sprites/characters, senza modifiche ai sorgenti.
 Per Arianna è usata basic-moves/idle.png, come nel controller Godot;
 per Mangler 01-mangler-idle.png; per gli altri il foglio indicato nella scena.
@@ -382,3 +382,27 @@ L'importazione delle animazioni rigenera automaticamente anche questi dati.
 I test controllano hash dei PNG, aggancio dei piedi, riflesso, camera, effetti,
 fullscreen, pannello e pipeline WebGL. I test GPU usano un contesto simulato;
 non certificano la resa finale del driver grafico nel browser.
+
+PUGNO LEGGERO
+Disponibile per tutti in mosse.html?move=light-punch e nelle pagine personaggio.
+Durata comune 750 ms a 1x; massima estensione a 300 ms per tutti.
+Timing variabile: primi 300 ms fino al frame selezionato, poi 450 ms fino
+alla fine, incluso il frame finale. FPS medi = frame / 0.75.
+Arianna: 17 frame 0-8,7-0, 7 colonne, sorgente 48 fps. Ultimo frame di
+andata (indice 8) a 300 ms, poi ritorno inverso fino all’idle a fine ciclo.
+Il picco non viene duplicato; la sequenza composta resta esplicita nel manifest.
+Mangler: 18 frame 0-17, 5 colonne, sorgente 48 fps, scala reworked 0.85.
+Bue, Mileto, Oscare, Peiro e Torpe: 13 frame (0-6,5-0), 5 colonne,
+sorgente 24 fps. Il ritorno appartiene alla sequenza principale Godot.
+PNG copiati integri in assets/characters/<id>/light-punch.png.
+Proporzioni fisiche e scale Godot conservate. Frame selezionati (indici da 0):
+Arianna 8, Bue 4, Mangler 10, Mileto 6, Oscare 5, Peiro 4, Torpe 6.
+Selezioni verificate visivamente e vincolate a hash PNG e sequenza.
+Dopo una sostituzione degli asset occorre rivedere il frame di estensione.
+Configurazione: assets/light-punch-timing.json. Timing originali nel manifest.
+Report HTML/CSV con pose: reports/light-punch-timing.html, link sotto il titolo.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-light-punch-report.py
+L'importazione completa rigenera anche questo report.
+Il campo light_punch_sheet viene letto per nome esatto, senza confonderlo con
+jump_light_punch_sheet. Bue, Mileto, Peirò e Torpe usano light_punch_spritesheet.png;
+Oscare usa Oscare-light_punch.png. Sono tutti pugni leggeri a terra.

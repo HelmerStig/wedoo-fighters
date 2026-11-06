@@ -39,3 +39,7 @@ page+='<p><a href="crouch-timing.csv" download>Scarica CSV</a> · <a href="../as
 page+=''.join(rows)+'</tbody></table></div></main></body></html>'
 (report/'crouch-timing.html').write_text(page,encoding='utf-8')
 print('Report Accovacciata: HTML, CSV e 7 confronti di pose; durata comune 250 ms.')
+
+import subprocess
+import sys
+subprocess.run([sys.executable,str(root/"scripts/build-light-punch-report.py")],check=True)

@@ -2,7 +2,7 @@ WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
 Aggiornato: 6 novembre 2026
 
 SCOPO E STATO
-Totale attuale Sanmauro: 91 animazioni, 13 per personaggio. È presente anche
+Totale attuale Sanmauro: 98 animazioni, 14 per personaggio. È presente anche
 Hurt accovacciato (hurt-crouched): i 12 frame a 24 fps della configurazione
 Fighter.gd, durata 500 ms, senza recupero inverso concatenato. Mangler usa
 scala reworked 0.85 per questa reazione, mentre gli hurt in piedi usano 0.70.
@@ -272,3 +272,23 @@ Test completi da PowerShell nella radice del repository:
   node --test @testFiles
 Controllo modifiche: git diff --check
 I test automatici non sostituiscono il confronto visivo nel browser o in Godot.
+
+Pugno leggero Sanmauro integrato per tutti: 750 ms a 1x, incluso ultimo frame.
+Arianna 17 frame / 22.666667 fps medi demo, Mangler 18 / 24 fps, altri 13 / 17.333333 fps.
+Sequenze Godot: Arianna 0-8,7-0 (ritorno inverso richiesto), Mangler 0-17 (scala 0.85),
+altri 0-6,5-0 con ritorno integrato. Sorgenti 48/48/24 fps conservate.
+assets/light-punch-timing.json e reports/light-punch-timing.html/.csv dentro
+demo-moves-sanmauro; report collegato sotto il titolo Pugno leggero.
+Rigenerare con scripts/build-light-punch-report.py o import-roster.py.
+Pugni leggeri corretti: campo light_punch_sheet letto per nome esatto, distinto
+da jump_light_punch_sheet. Bue, Mileto, Peirò e Torpe: light_punch_spritesheet.png;
+Oscare: Oscare-light_punch.png. Tutti usano il pugno a terra, durata 750 ms.
+
+Massima estensione Pugno leggero Sanmauro sincronizzata a 300 ms (0.30 s),
+durata totale 750 ms. Indici frame da 0: Arianna 8, Bue 4, Mangler 10,
+Mileto 6, Oscare 5, Peiro 4, Torpe 6. Timing variabili prima/dopo estensione.
+Configurazione light-punch-timing.json vincolata a hash PNG/sequenza; dopo
+nuovi asset rivedere la selezione. Report aggiornato con pose e timing.
+
+Arianna: ultimo frame del pugno (indice 8) a 0.30 s, poi ritorno al
+contrario 7-0 fino all’idle. Ciclo completo di 17 frame, durata 0.75 s.

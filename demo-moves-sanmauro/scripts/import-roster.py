@@ -15,6 +15,7 @@ from jump_timing import apply_timing
 from guard_timing import apply_guard_timing
 from hurt_timing import apply_hurt_timing
 from crouch_timing import apply_crouch_timing
+from light_punch_timing import apply_light_punch_timing
 from character_proportions import apply_proportions, write_portraits
 
 root = Path(__file__).resolve().parents[1]
@@ -100,10 +101,44 @@ for ident, name, scene in roster:
             ('block-high','Parata alta'),('block-mid','Parata media'),('block-low','Parata bassa'),
             ('hurt-high','Hurt alto'),('hurt-medium','Hurt medio'),('hurt-low','Hurt basso'),
             ('hurt-crouched','Hurt accovacciato'),
-            ('victory','Vittoria'), ('ko','Sconfitta')]:
+            ('victory','Vittoria'), ('ko','Sconfitta'), ('light-punch','Pugno leggero')]:
         start, explicit_frames, weights, jump_timing, skipped = 0, None, None, {}, []
         animation_config_path = config_path
-        if move=='hurt-crouched':
+        if move=='light-punch':
+            if custom:
+                prefix=('ARIANNA_' if ident=='arianna' else '')+'LIGHT_PUNCH'
+                relative=re.search(r'const '+prefix+r'_SHEET\s*:=\s*preload\(\s*"res://([^"]+)"',code)[1]
+                count=int(number(code,prefix+('_LAST_PLAYED_FRAME' if ident=='arianna' else '_FRAME_COUNT')))
+                columns=int(number(code,prefix+'_COLUMNS'))
+                fw,fh=cell_size(code,prefix+'_CELL_SIZE')
+                catalog=(source/'scripts'/(scene+'AnimationCatalog.gd')).read_text(encoding='utf-8-sig')
+                setup=re.search(r'func configure_light_punch_frames\(\).*?(?=\nfunc |\Z)',catalog,re.S)[0]
+                original_fps=float(re.search(r'set_animation_speed\([^,]+,\s*([\d.]+)',setup)[1])
+                indices=list(range(count))
+                if ident=='arianna':
+                    # Eccezione richiesta: andata fino all'ultimo frame, poi ritorno
+                    # inverso fino all'idle, senza duplicare il frame di estensione.
+                    indices+=list(range(count-2,-1,-1))
+                runtime_move='arianna_light_punch' if ident=='arianna' else 'light_punch_single'
+            else:
+                resource_id=re.search(r'^light_punch_sheet = ExtResource\("([^"]+)"\)',code,re.M)[1]
+                relative=re.search(r'path="res://([^"]+)" id="'+re.escape(resource_id)+'"',code)[1]
+                setup=re.search(r'_add_sheet_animation\(frames, &"light_punch", light_punch_sheet,\s*(\d+),\s*(\d+),\s*Vector2\(([^)]+)\),\s*([\d.]+)',shared)
+                count,columns=int(setup[1]),int(setup[2])
+                fw,fh=[int(float(v.strip())) for v in setup[3].split(',')]
+                original_fps=float(setup[4])
+                recovery=re.search(r'for source_index in range\((\d+),\s*-1,\s*-1\):',shared[setup.end():])[1]
+                indices=list(range(count))+list(range(int(recovery),-1,-1))
+                runtime_move='light_punch'
+            explicit_frames=[[i%columns*fw,i//columns*fh,fw,fh] for i in indices]
+            durations=[1000/original_fps]*len(indices)
+            jump_timing=dict(loop=False,sourceLoop=False,sourceAnimation=runtime_move,
+                sourceSetupPath='scripts/'+(scene+'AnimationCatalog.gd' if custom else 'IdleRosterFighter.gd'),
+                frameDurations=durations,durationMs=sum(durations))
+            if ident=='arianna':
+                jump_timing.update(sourceForwardFrameCount=count,sourceRecoveryAnimation='arianna_light_punch_recovery',
+                    playbackComposition='forward-then-reverse-without-repeated-peak')
+        elif move=='hurt-crouched':
             animation_config_path='scenes/'+scene+'.tscn'
             scene_code=(source/animation_config_path).read_text(encoding='utf-8-sig')
             resource_id=re.search(r'hurt_crouched_sheet = ExtResource\("([^"]+)"\)',scene_code)[1]
@@ -268,7 +303,7 @@ for ident, name, scene in roster:
             union = [min(b[0] for b in bounds), min(b[1] for b in bounds), max(b[2] for b in bounds), max(b[3] for b in bounds)]
         shutil.copy2(sheet, destination / (move + '.png'))
         animations.append(dict(id=move, name=label, image=f'assets/characters/{ident}/{move}.png',
-            frameWidth=fw, frameHeight=fh, frames=frames, playbackFps=original_fps if move in ('jump','crouch') or move.startswith(('block-','hurt-')) else 24,
+            frameWidth=fw, frameHeight=fh, frames=frames, playbackFps=original_fps if move in ('jump','crouch','light-punch') or move.startswith(('block-','hurt-')) else 24,
             sourceFps=original_fps, sheetWidth=width, sheetHeight=height,
             sourcePath=relative, sourceConfigPath=animation_config_path,
             sourceTransform=source_transform(ident, move, code),
@@ -300,6 +335,7 @@ if timing_path.exists():
 apply_guard_timing(data,json.loads((root/'assets/guard-timing.json').read_text(encoding='utf-8')))
 apply_hurt_timing(data,json.loads((root/'assets/hurt-timing.json').read_text(encoding='utf-8')))
 apply_crouch_timing(data,json.loads((root/'assets/crouch-timing.json').read_text(encoding='utf-8')))
+apply_light_punch_timing(data,json.loads((root/'assets/light-punch-timing.json').read_text(encoding='utf-8')))
 (root / 'assets' / 'manifest.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 (root / 'catalog.js').write_text('// Generato da scripts/import-roster.py.\nwindow.SANMAURO_CATALOG = ' + json.dumps(data, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 print(f'Copiate {sum(len(c["animations"]) for c in characters)} animazioni e {len(characters)} anteprime in {root / "assets"}')
