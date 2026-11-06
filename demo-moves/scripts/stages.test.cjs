@@ -54,7 +54,7 @@ function fixture(reduced=false,withFighters=false){
   canvas.setPointerCapture=id=>{captured=id;};
   canvas.hasPointerCapture=id=>captured===id;
   canvas.releasePointerCapture=()=>{captured=null;};
-  canvas.getContext=()=>({clearRect(){paint.push({kind:'clear'});},fillRect(...args){fills.push(args);paint.push({kind:'fill',color:this.fillStyle,alpha:this.globalAlpha,args});},drawImage(...args){draws.push(args);paint.push({kind:'image',image:args[0]});},save(){},restore(){},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
+  canvas.getContext=()=>({clearRect(){paint.push({kind:'clear'});},fillRect(...args){fills.push(args);paint.push({kind:'fill',color:this.fillStyle,alpha:this.globalAlpha,args});},drawImage(...args){draws.push(args);paint.push({kind:'image',image:args[0]});},save(){},restore(){},transform(...args){transforms.push(['project',...args]);},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(demo,'catalog.js'),'utf8'),sandbox);
   const fighters=withFighters?stages[0].fighters.map(f=>({...f,animation:sandbox.window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
   const player=install(canvas,button,status,{...stages[0],fighters},env);
@@ -116,17 +116,42 @@ test('effetti reversibili: colorazione limitata ai pixel dei personaggi, ombre a
   const f=fixture(false,true);await f.load();f.tick(0);f.tick(100);
   const frame=f.draws.at(-2).slice(1,5),position=f.transforms.slice(-4)[0];
   f.player.setEffects({shadows:.55,color:.35});
-  assert.equal(f.fills.length,12,'sei bande per ciascuna ombra');
-  assert.equal(f.fills[0][0],675-315-84);
-  assert.equal(f.buffers.length,2);
-  assert.equal(f.buffers[0].calls.at(-1)[1],'source-atop','colore applicato soltanto all’alpha del frame');
-  assert.equal(f.draws.at(-2)[0],f.buffers[0]);
-  const cached=f.buffers[0].calls.length;
-  f.player.setEffects({shadows:.55,color:.35});assert.equal(f.buffers[0].calls.length,cached,'riusa il frame colorato');
+  assert.equal(f.fills.length,6,'tre piccole bande di contatto per ciascun personaggio');
+  assert.equal(f.fills[0][0],675-315-88);
+  assert.equal(f.buffers.length,4,'sagoma e colore hanno buffer separati');
+  const colored=f.draws.at(-2)[0];
+  assert.equal(colored.calls.at(-1)[1],'source-atop','colore applicato soltanto all’alpha del frame');
+  const cached=colored.calls.length;
+  f.player.setEffects({shadows:.55,color:.35});assert.equal(colored.calls.length,cached,'riusa il frame colorato');
   assert.deepEqual(f.transforms.slice(-4)[0],position);
   f.player.setEffects({shadows:0,color:0});
   assert.equal(f.draws.at(-2)[0],f.images[5]);assert.deepEqual(f.draws.at(-2).slice(1,5),frame);
-  f.player.destroy();assert.equal(f.buffers[0].width,0);
+  f.player.destroy();assert.ok(f.buffers.every(b=>b.width===0));
+});
+
+test('la sagoma usa lo stesso frame della idle, segue la camera e mantiene una luce comune dopo il riflesso',async()=>{
+  const f=fixture(false,true);await f.load();f.player.setEffects({shadows:.55});
+  const masks=f.buffers.slice();assert.equal(masks.length,2);
+  for(const mask of masks){
+    assert.equal(mask.calls.at(-1)[1],'source-in','la maschera conserva l’alpha del personaggio');
+    assert.deepEqual(mask.calls[0].slice(2,6),[0,0,512,512]);
+  }
+  const projects=f.transforms.filter(t=>t[0]==='project');
+  assert.equal(projects[0][1],4/3);assert.equal(projects[1][1],-4/3);
+  assert.equal(projects[0][3],projects[1][3],'stessa direzione orizzontale della luce');
+  assert.equal(projects[0][4],projects[1][4],'stessa profondita sul pavimento');
+  assert.ok(projects[0][3]<0&&projects[0][4]<0,'testa proiettata verso destra e in basso');
+  f.tick(0);f.tick(100);
+  const actorFrame=f.draws.at(-2).slice(1,5);
+  assert.deepEqual(masks[0].calls.filter(c=>c[0]==='draw').at(-1).slice(2,6),actorFrame);
+  const cached=masks[0].calls.length;
+  f.player.setEffects({shadows:1});assert.equal(masks[0].calls.length,cached,'intensita non ricrea la sagoma');
+  f.canvas.listeners.keydown({key:'End',preventDefault(){}});
+  assert.equal(f.transforms.filter(t=>t[0]==='project').at(-2)[5],675-630);
+  assert.equal(masks[0].calls.length,cached,'drag non altera il frame o la sagoma');
+  f.button.listeners.click();f.tick(200);f.tick(300);
+  assert.ok(masks[0].calls.length>cached,'ombra e idle continuano con nuvole ferme');
+  f.player.destroy();assert.ok(masks.every(mask=>mask.width===0));
 });
 
 test('Alberto e Marsan sono in idle a 24 fps sopra la villa; solo Marsan è riflesso',async()=>{

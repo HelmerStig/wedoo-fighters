@@ -6,17 +6,27 @@ Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
 
 EFFETTI DI ANTEPRIMA DEGLI STAGE
 Sotto ogni stage trovi cinque controlli indipendenti, con checkbox e intensita:
-ombre a terra (55%), toni caldi sui personaggi (35%), CRT leggero (100%),
+ombre a terra (80%), toni caldi sui personaggi (35%), CRT leggero (100%),
 foschia lontana (40%) e polvere in pixel art (100%).
 Vista originale sospende gli effetti conservando le regolazioni. Ripristina
 riattiva i cinque effetti con le intensita iniziali. Le regolazioni valgono per
 la sessione della pagina; non vengono scritte negli asset.
 
 Parametri di riferimento per riprodurre il risultato in Godot:
-- Ombre: colore #2c2030; opacita = intensita * 0.45 (default 0.2475).
-  Sei bande orizzontali alte 4 px, larghe 168,240,280,280,240,168 px,
-  centrate sul personaggio da groundY - 12 a groundY + 12 nel mondo 1080p.
-  Le ombre sono disegnate sopra il pavimento e sotto i personaggi.
+- Ombre: sagoma alpha dello stesso frame della idle, colorata #2c2030;
+  opacita = intensita * 0.45 (default 0.36). Proiezione ancorata ai piedi,
+  verso destra e verso il basso, assumendo luce alta da sinistra.
+  In stages-catalog.js, shadow.shearX=0.5 e flattenY=0.11 regolano inclinazione
+  ed estensione sul pavimento. Matrice: (facing*scala, 0, -0.5*scala,
+  -0.11*scala, x-camera, groundY); sagoma disegnata da (-anchorX,-anchorY).
+  Il riflesso di Marsan modifica la sagoma, ma non la direzione della luce.
+  Contatto ai piedi: tre bande alte 3 px, larghe 176,224,176 px, da groundY-4;
+  opacita = intensita * 0.16 (default 0.128). Entrambe le ombre sono sopra
+  il pavimento e sotto i personaggi. Nessuna sfocatura o modifica agli asset.
+  La sagoma corrente viene conservata in memoria e aggiornata insieme al frame;
+  il drag e le regolazioni di intensita non alterano l'animazione.
+  Questa anteprima usa idle: la risposta all'altezza del salto resta da integrare
+  quando saranno inseriti personaggi in salto nello stage.
 - Colore: sovrapposizione #ffb878 limitata all'alpha del personaggio;
   opacita = intensita * 0.16 (default 0.056). Nessuna sfocatura o modifica
   ai pixel sorgenti; la demo conserva in memoria solo il frame colorato corrente.

@@ -3,7 +3,10 @@
   else root.STAGES_CATALOG=factory();
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   const base='../original-backgrounds/villa-arduino/';
-  return [{id:'villa-arduino',name:'Villa Arduino',width:2550,height:1080,viewportWidth:1920,layers:[
+  return [{id:'villa-arduino',name:'Villa Arduino',width:2550,height:1080,viewportWidth:1920,
+    // Luce alta da sinistra: proiezione verso destra e verso il basso sul pavimento.
+    shadow:{color:'#2c2030',shearX:0.5,flattenY:0.11,opacity:0.45,contactOpacity:0.16},
+    layers:[
     {id:'sky',image:base+'cielo.png',zIndex:0,width:2550,height:1080},
     {id:'clouds-far',image:base+'01-nuvole-lontane.png',zIndex:2,width:5000,height:1080,speed:6,haze:1},
     {id:'clouds-mid',image:base+'02-nuvole-intermedie.png',zIndex:3,width:5000,height:1080,speed:12,haze:0.35},

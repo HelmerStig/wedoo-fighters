@@ -33,6 +33,7 @@
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
     const assets=[...layers,...fighters];
+    const shadowStyle={color:'#2c2030',shearX:0.5,flattenY:0.11,opacity:0.45,contactOpacity:0.16,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};
     function fog(depth){
       if(!effects.fog)return;
@@ -59,11 +60,35 @@
     }
     function shadow(fighter){
       if(!effects.shadows)return;
+      const animation=fighter.animation;
+      const frame=currentFrame(animation);
+      const [sx,sy,w,h]=animation.frames[frame];
+      if(!fighter.shadowCanvas){
+        fighter.shadowCanvas=env.document.createElement('canvas');
+        fighter.shadowCanvas.width=w;fighter.shadowCanvas.height=h;
+        fighter.shadowContext=fighter.shadowCanvas.getContext('2d');
+      }
+      const buffer=fighter.shadowContext;
+      if(!buffer)return;
+      if(fighter.shadowFrame!==frame){
+        buffer.clearRect(0,0,w,h);buffer.imageSmoothingEnabled=false;
+        buffer.drawImage(fighter.imageObject,sx,sy,w,h,0,0,w,h);
+        buffer.save();buffer.globalCompositeOperation='source-in';
+        buffer.fillStyle=shadowStyle.color;buffer.fillRect(0,0,w,h);buffer.restore();
+        fighter.shadowFrame=frame;
+      }
       context.save();
-      context.fillStyle='#2c2030';context.globalAlpha=effects.shadows*0.45;
-      // Bande senza sovrapposizioni, per un'ombra a gradini coerente con la pixel art.
-      [168,240,280,280,240,168].forEach((width,i)=>context.fillRect(fighter.x-camera-width/2,fighter.groundY-12+i*4,width,4));
+      context.fillStyle=shadowStyle.color;context.globalAlpha=effects.shadows*shadowStyle.contactOpacity;
+      [176,224,176].forEach((width,i)=>context.fillRect(fighter.x-camera-width/2,fighter.groundY-4+i*3,width,3));
       context.restore();
+      context.save();context.globalAlpha=effects.shadows*shadowStyle.opacity;
+      // Il ribaltamento riguarda la sagoma, non la direzione della luce nel mondo.
+      context.transform((fighter.flipX?-1:1)*fighter.scale,0,-shadowStyle.shearX*fighter.scale,-shadowStyle.flattenY*fighter.scale,fighter.x-camera,fighter.groundY);
+      context.drawImage(fighter.shadowCanvas,-fighter.anchorX,-fighter.anchorY,w,h);
+      context.restore();
+    }
+    function currentFrame(animation){
+      return Math.floor(fighterElapsed*(animation.playbackFps??24)/1000+1e-10)%animation.frames.length;
     }
     function coloredFrame(fighter,frame,sx,sy,w,h){
       if(!fighter.colorCanvas){
@@ -97,7 +122,7 @@
       fighters.forEach(shadow);
       for(const fighter of fighters){
         const animation=fighter.animation;
-        const frame=Math.floor(fighterElapsed*(animation.playbackFps??24)/1000+1e-10)%animation.frames.length;
+        const frame=currentFrame(animation);
         const [sx,sy,w,h]=animation.frames[frame];
         context.save();
         context.translate(fighter.x-camera,fighter.groundY);
@@ -196,7 +221,7 @@
       env.document.removeEventListener('visibilitychange',visibility);
       media.removeEventListener?.('change',reduced);
       assets.forEach(layer=>{layer.imageObject.onload=null;layer.imageObject.onerror=null;});
-      fighters.forEach(fighter=>{if(fighter.colorCanvas){fighter.colorCanvas.width=0;fighter.colorCanvas.height=0;}});
+      fighters.forEach(fighter=>{for(const canvas of [fighter.colorCanvas,fighter.shadowCanvas])if(canvas){canvas.width=0;canvas.height=0;}});
     }};
   }
   return Object.freeze({install,cloudPositions,dustParticles});

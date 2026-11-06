@@ -4,7 +4,7 @@
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   'use strict';
   // Intensità normalizzate: gli asset originali rimangono invariati.
-  const defaults=Object.freeze({shadows:0.55,color:0.35,crt:1,fog:0.4,dust:1});
+  const defaults=Object.freeze({shadows:0.8,color:0.35,crt:1,fog:0.4,dust:1});
   function amount(value){const n=Number(value);return Number.isFinite(n)?Math.max(0,Math.min(1,n)):0;}
   function markup(id){
     const prefix=String(id).replace(/[^a-z0-9-]/gi,'-');
