@@ -70,4 +70,9 @@ test('la pagina per mossa inizializza la galleria, filtra e distrugge i player p
   sandbox.location.search='?move=walk';
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);
   assert.equal(nodes.get('#move-report').hidden,true);
+  sandbox.document.body.dataset.page='stages';
+  const installedBeforeStages=installs.length;
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);
+  assert.match(nodes.get('#sidebar').innerHTML,/href="stages\.html" aria-current="page"/);
+  assert.equal(installs.length,installedBeforeStages);
 });

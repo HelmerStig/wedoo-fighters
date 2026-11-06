@@ -1,5 +1,24 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+STAGES
+Apri stages.html o scegli Stages dal menu della demo.
+Villa Arduino usa un mondo di 2550 x 1080, visto da una finestra 16:9 di 1920 x 1080.
+La vista parte centrata: trascina con mouse o touch per esplorare i due lati.
+Sono disponibili anche frecce, Home ed End da tastiera quando il quadro ha il focus.
+La camera si ferma ai limiti del mondo e non modifica il tempo delle nuvole.
+Villa Arduino include Alberto a sinistra e Marsan riflesso a destra, entrambi
+in idle a 24 fps. Sono ancorati al pavimento del mondo: il drag sposta soltanto
+la vista. Posizioni e scala (4/3 dei frame originali) sono in stages-catalog.js.
+Pausa nuvole ferma soltanto il cielo; le idle continuano. Il movimento ridotto
+mantiene anche i personaggi statici.
+I tre layer da 5000 x 1080 mantengono le proporzioni e le dimensioni rispetto
+alla villa; partono centrati, con abbondaggio ai lati. Si muovono verso sinistra
+in loop a 6, 12 e 20 pixel nativi al secondo. La villa resta davanti alle nuvole.
+Il pulsante Pausa nuvole ferma il movimento. Con movimento ridotto, lo stage
+parte statico. Funziona sia da file locale sia tramite il server della demo.
+Gli stage sono definiti in stages-catalog.js; il player e stage-player.js.
+Per aggiungere nuovi asset al server, autorizzare solo i file necessari.
+
 PARATA ALTA (BLOCK)
 Disponibile per tutti i personaggi: mosse.html?move=block.
 La posa difensiva selezionata inizia a 100 ms dalla partenza a velocita 1x.

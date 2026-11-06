@@ -10,7 +10,8 @@
   const characters = data.characters;
   const isDetail = document.body.dataset.page === 'character';
   const isMoves = document.body.dataset.page === 'moves';
-  const isRoster = !isDetail && !isMoves;
+  const isStages = document.body.dataset.page === 'stages';
+  const isRoster = !isDetail && !isMoves && !isStages;
   const moveGroups = MovesGroups.group(characters);
   const params = new URLSearchParams(location.search);
   const storedAnimationId = (() => {
@@ -29,11 +30,12 @@
     <button class="sidebar-close icon-button" type="button" aria-label="Chiudi il menu">×</button>
     <label class="sidebar-search"><span aria-hidden="true">⌕</span><span class="screen-reader-only">Cerca un personaggio</span><input id="character-search" type="search" placeholder="Cerca personaggio…" autocomplete="off" spellcheck="false"></label>
     <a class="all-link" href="index.html" ${isRoster ? 'aria-current="page"' : ''}><span><b class="grid-symbol" aria-hidden="true">▦</b> Tutti i personaggi</span><span>${characters.length}</span></a>
+    <a class="all-link" href="stages.html" ${isStages ? 'aria-current="page"' : ''}><span>Stages</span><span aria-hidden="true">→</span></a>
     <details class="sidebar-dropdown" ${isMoves ? 'open' : ''}>
     <summary class="sidebar-dropdown-toggle">Per mossa<span class="dropdown-chevron" aria-hidden="true"></span></summary>
     <nav class="moves-nav" aria-label="Per mossa">${moveGroups.map(move=>`<a class="nav-link move-nav-link" href="mosse.html?move=${encodeURIComponent(move.id)}" ${isMoves && move.id===currentMove.id ? 'aria-current="page"' : ''}><span>${escape(move.name)}</span><span class="move-count">${move.animations.length}</span></a>`).join('')}</nav>
     </details>
-    <details class="sidebar-dropdown" ${!isMoves ? 'open' : ''}>
+    <details class="sidebar-dropdown" ${!isMoves && !isStages ? 'open' : ''}>
     <summary class="sidebar-dropdown-toggle">Per personaggio<span class="dropdown-summary-end"><span id="nav-count">${characters.length}</span><span class="dropdown-chevron" aria-hidden="true"></span></span></summary>
     <nav class="character-nav" aria-label="Elenco personaggi">${characters.map((c, i) => `<a class="nav-link" data-character="${escape(c.id)}" href="${href(c)}" ${c.id === selectedId ? 'aria-current="page"' : ''}><span class="nav-number" aria-hidden="true">${number(i + 1)}</span><span>${escape(c.name.toUpperCase())}</span></a>`).join('')}<p class="nav-empty" hidden>Nessun risultato.</p></nav>
     </details>
