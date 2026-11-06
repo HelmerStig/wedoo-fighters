@@ -3,10 +3,11 @@ SANMAURO FIGHTERS — DEMO MOSSE
 Schermata principale con i sette personaggi del vecchio progetto, ricerca
 per nome, menu mobile e anteprime idle su hover/focus.
 Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
-ogni personaggio ha dodici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
-Parata media, Parata bassa, Hurt alto, Hurt medio, Hurt basso, Vittoria e Sconfitta.
+ogni personaggio ha tredici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
+Parata media, Parata bassa, Hurt alto, Hurt medio, Hurt basso, Hurt accovacciato,
+Vittoria e Sconfitta.
 Il menu Per mossa usa gli id idle, walk, jump, crouch, block-high, block-mid,
-block-low, hurt-high, hurt-medium, hurt-low, victory e ko:
+block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory e ko:
 confronta la stessa animazione sui sette personaggi, filtrabili per nome.
 Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
 e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
@@ -36,7 +37,7 @@ assets/characters/<id>/portrait.png: anteprima derivata dalla prima cella idle,
 normalizzata con lo stesso allineamento dei player su un canvas 512 × 512.
 assets/manifest.json: frame, dimensioni e provenienza con SHA-256.
 catalog.js: copia incorporata per funzionare anche da file://.
-Sono copiati soltanto gli asset delle dodici mosse realmente referenziate.
+Sono copiati soltanto gli asset delle tredici mosse realmente referenziate.
 Fonte: F:/Personali/Godot/assets/sprites/characters, senza modifiche ai sorgenti.
 Per Arianna è usata basic-moves/idle.png, come nel controller Godot;
 per Mangler 01-mangler-idle.png; per gli altri il foglio indicato nella scena.
@@ -182,6 +183,24 @@ le immagini confrontano tre campioni, senza chiamare il centro un impatto.
 Generazione locale senza accesso al vecchio progetto:
   python demo-moves-sanmauro/scripts/build-hurt-reports.py
 L'importazione e le altre rigenerazioni dei report aggiornano anche questi.
+
+HURT ACCOVACCIATO — HURT_CROUCHED
+Disponibile per tutti come hurt-crouched (runtime Godot hurt_crouched),
+con titolo Hurt accovacciato. Non è la parata bassa né la posa crouch.
+Ogni scena Godot indica hurt_crouched_sheet: per Arianna il PNG si trova in
+basic-moves/hurt_crouched_spritesheet.png, per gli altri direttamente nella
+cartella del personaggio, con lo stesso nome. Copia locale: hurt-crouched.png.
+Fighter._configure_hurt_crouched_animation usa i primi 12 frame, indici 0-11,
+5 colonne, celle 512 × 512, a 24 fps, senza loop. La demo riproduce questa
+sequenza nominale in 500 ms a 1x e mantiene la posa finale; la sequenza
+hurt_crouched_reverse separata non è concatenata.
+Scala Mangler 0.85 e posizione (0,-115), come le animazioni reworked; gli
+hurt in piedi restano a scala sorgente 0.70. Conservate altezze e proporzioni.
+La durata comune è inclusa in assets/hurt-timing.json e sourceSetupPath
+documenta scripts/Fighter.gd, oltre alla scena e al PNG sorgenti.
+Report: reports/hurt-crouched-timing.html e .csv, con ingresso/centro/fine;
+link sotto il titolo. Le reazioni hurt ora sono quattro, per 28 player.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-hurt-reports.py.
 
 VITTORIA E SCONFITTA — FONTI GODOT
 Entrambe disponibili per tutti i sette personaggi, a 24 fps, in ordine avanti,

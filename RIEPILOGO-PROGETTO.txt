@@ -2,6 +2,12 @@ WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
 Aggiornato: 6 novembre 2026
 
 SCOPO E STATO
+Totale attuale Sanmauro: 91 animazioni, 13 per personaggio. È presente anche
+Hurt accovacciato (hurt-crouched): i 12 frame a 24 fps della configurazione
+Fighter.gd, durata 500 ms, senza recupero inverso concatenato. Mangler usa
+scala reworked 0.85 per questa reazione, mentre gli hurt in piedi usano 0.70.
+Report HTML/CSV hurt-crouched-timing sotto il titolo; rigenerazione insieme
+agli altri report hurt. Fonte timing: assets/hurt-timing.json in Sanmauro.
 È stata aggiunta anche demo-moves-sanmauro, separata e autonoma, per il roster
 del vecchio progetto Godot: Arianna, Bue, Mangler, Mileto, Oscare, Peirò, Torpe.
 Contiene la schermata principale con ricerca e anteprime idle e le gallerie
