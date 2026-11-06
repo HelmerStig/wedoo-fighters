@@ -2,7 +2,7 @@
 
 
 def apply_hurt_timing(data, config):
-    ids = ['hurt-high','hurt-medium','hurt-low']
+    ids = ['hurt-high','hurt-medium','hurt-low','hurt-crouched']
     if config.get('schema')!='sanmauro.hurt-timing' or config.get('version')!=1 or config.get('animationIds')!=ids:
         raise ValueError('Configurazione timing hurt non valida')
     duration = config.get('durationMs')

@@ -34,8 +34,8 @@ for ident in config['animationIds']:
         sequence=', '.join(str(i) for i in source)
         name=html.escape(c['name'])
         note='Sequenza sorgente: '+sequence+'.'
-        if c['id']=='arianna':note+=' Ritorno incluso nella sequenza Godot.'
-        if c['id']=='mangler':note+=' Scala legacy 0.70; altezza 183 cm conservata.'
+        if c['id']=='arianna' and ident!='hurt-crouched':note+=' Ritorno incluso nella sequenza Godot.'
+        if c['id']=='mangler':note+=f' Scala Godot {a["sourceTransform"]["scale"][0]:g}; altezza 183 cm conservata.'
         rows.append(f'<tr data-character="{c["id"]}"><th scope="row">{name}</th><td><img src="{ident}-poses/{c["id"]}.png" width="288" height="96" alt="Ingresso, centro e fine di {name}" loading="lazy"><small>Frame {samples[0]+1} / {samples[1]+1} / {samples[2]+1}</small></td><td>{count}</td><td><b>{a["durationMs"]} ms</b></td><td>{a["playbackFps"]:g}</td><td>{a["sourceFps"]:g}</td><td>{html.escape(note)}</td></tr>')
         records.append([c['name'],count,a['durationMs'],a['playbackFps'],a['sourceFps'],a['sourceDurationMs'],sequence,a['sourcePath'],a['sourceSha256'],note])
     title=next(a['name'] for a in data['characters'][0]['animations'] if a['id']==ident)
@@ -43,11 +43,11 @@ for ident in config['animationIds']:
         writer=csv.writer(output);writer.writerow(['Personaggio','Frame','Durata demo ms','FPS demo','FPS Godot','Durata Godot ms','Sequenza sorgente da 1','Fonte','SHA256 PNG','Note']);writer.writerows(records)
     page=f'''<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Timing {title} · Sanmauro Fighters</title><style>body{{margin:0;padding:32px;background:#141815;color:#eff3eb;font:15px/1.6 system-ui}}main{{max-width:1500px;margin:auto}}a,b{{color:#ceef80}}p{{max-width:1050px;color:#bbc7b9}}.table-wrap{{overflow:auto}}table{{width:100%;border-collapse:collapse;font-size:13px}}th,td{{text-align:left;padding:12px;border-bottom:1px solid #3b493c}}thead th{{background:#273329;white-space:nowrap}}img{{image-rendering:pixelated;background:#232923;object-fit:contain;border-radius:8px;max-width:none}}small{{display:block;color:#aab5a8}}td:last-child{{min-width:250px}}@media print{{body{{background:white;color:black;padding:0}}a,b{{color:black}}}}</style></head><body><main><a href="../mosse.html?move={ident}">← Apri {title}</a><h1>Timing {title}</h1>'''
     page+='<p>Tutti i sette personaggi eseguono questa reazione in <b>500 ms (0,5 s)</b> a velocità 1×. FPS demo = numero frame × 2; ogni frame dura 500 / numero frame millisecondi, compreso l’ultimo.</p>'
-    page+='<p>Le tre pose mostrano ingresso, frame centrale e fine: il frame centrale non è un marcatore di impatto sincronizzato. La sequenza include esattamente i ritorni già presenti nell’animazione nominale Godot di Arianna; non sono aggiunti i recovery separati degli altri fighter.</p>'
+    page+='<p>Le tre pose mostrano ingresso, frame centrale e fine: il frame centrale non è un marcatore di impatto sincronizzato. Sono conservati solo i ritorni già inclusi nella sequenza nominale Godot; non sono aggiunti i recovery separati.</p>'
     page+='<p>Senza Loop si mantiene la posa finale; con Loop il ciclo dura 500 ms. “Riproduci tutte” riallinea anche i cicli successivi e i caricamenti progressivi. A 0,5× dura 1 s; a 2× dura 0,25 s. Le sequenze, i PNG, le altezze, le scale e gli ancoraggi restano invariati. Le durate Godot sono conservate come provenienza nel manifest.</p>'
     page+=f'<p><a href="{ident}-timing.csv" download>Scarica CSV</a> · <a href="../assets/hurt-timing.json">Configurazione timing</a></p><div class="table-wrap"><table><thead><tr><th>Personaggio</th><th>Ingresso / centro / fine</th><th>Frame</th><th>Durata</th><th>FPS demo</th><th>FPS Godot</th><th>Sequenza e note</th></tr></thead><tbody>'
     page+=''.join(rows)+'</tbody></table></div></main></body></html>'
     (report/(ident+'-timing.html')).write_text(page,encoding='utf-8')
-print('Report hurt: 3 HTML, 3 CSV e 21 confronti di pose; durata comune 500 ms.')
+print(f'Report hurt: {len(config["animationIds"])} HTML/CSV e {len(config["animationIds"])*len(data["characters"])} confronti di pose; durata comune {config["durationMs"]} ms.')
 if (root/'assets/crouch-timing.json').exists():
     subprocess.run([sys.executable,str(root/'scripts/build-crouch-report.py')],check=True)

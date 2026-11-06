@@ -74,7 +74,7 @@ mosse.html?move=crouch, con titolo Accovacciata.
 Sequenza in avanti di ingresso nella posa bassa, senza rialzata concatenata.
 Default senza Loop: la posa finale resta visibile. Il checkbox consente di
 ripetere la sequenza per confronto, senza generare frame inversi aggiuntivi.
-Durata comune di 500 ms (0.5 s) a 1x, ultimo frame incluso; FPS demo = frame × 2.
+Durata comune di 250 ms (0.25 s) a 1x, ultimo frame incluso; FPS demo = frame × 4.
 Fonti Godot (celle 512 × 512, 5 colonne, tutti i frame da indice 0):
 - Arianna: arianna/basic-moves/crouched.png, 19 frame, 48 fps sorgenti.
 - Mangler: mangler/04-crouching.png, 25 frame, 48 fps sorgenti, scala 0.85.

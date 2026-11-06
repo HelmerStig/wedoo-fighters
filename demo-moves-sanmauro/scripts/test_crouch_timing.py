@@ -17,7 +17,7 @@ class CrouchTimingTests(unittest.TestCase):
         apply_crouch_timing(self.data,self.config)
         self.config['durationMs']=750
         apply_crouch_timing(self.data,self.config)
-        self.config['durationMs']=500
+        self.config['durationMs']=250
         apply_crouch_timing(self.data,self.config)
         self.assertEqual(before,self.data)
 

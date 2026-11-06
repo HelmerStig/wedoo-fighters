@@ -16,20 +16,20 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
   const victoryCounts={arianna:49,bue:49,mangler:45,mileto:49,oscare:49,peirolo:49,torpe:49};
   const koCounts={arianna:25,bue:49,mangler:25,mileto:49,oscare:49,peirolo:49,torpe:49};
   const guardCounts={arianna:[16,13,16],bue:[10,6,11],mangler:[14,8,11],mileto:[6,6,11],oscare:[10,6,11],peirolo:[6,6,11],torpe:[9,6,11]};
-  const hurtCounts={arianna:[8,15,7],bue:[18,11,11],mangler:[16,16,10],mileto:[14,11,11],oscare:[8,11,11],peirolo:[9,11,11],torpe:[8,11,11]};
+  const hurtCounts={arianna:[8,15,7,12],bue:[18,11,11,12],mangler:[16,16,10,12],mileto:[14,11,11,12],oscare:[8,11,11,12],peirolo:[9,11,11,12],torpe:[8,11,11,12]};
   const crouchCounts={arianna:19,bue:7,mangler:25,mileto:13,oscare:9,peirolo:11,torpe:7};
   for(const c of manifest.characters){
-    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','victory','ko']);
+    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko']);
     for(const a of c.animations){
       const sheet=fs.readFileSync(path.join(root,a.image));
       assert.equal(createHash('sha256').update(sheet).digest('hex'),a.sourceSha256,c.name+' '+a.id);
       const width=sheet.readUInt32BE(16),height=sheet.readUInt32BE(20);
       const guard=['block-high','block-mid','block-low'].indexOf(a.id);
-      const hurt=['hurt-high','hurt-medium','hurt-low'].indexOf(a.id);
+      const hurt=['hurt-high','hurt-medium','hurt-low','hurt-crouched'].indexOf(a.id);
       assert.equal(a.frames.length,guard>=0?guardCounts[c.id][guard]:hurt>=0?hurtCounts[c.id][hurt]:({idle:idleCounts,walk:walkCounts,jump:jumpCounts,crouch:crouchCounts,victory:victoryCounts,ko:koCounts})[a.id][c.id]);
       const guardFps=c.id==='arianna'?48:c.id==='mangler'?(guard===0?48:24):(guard===2?48:24);
-      const hurtFps=c.id==='arianna'?(hurt===1?48:24):c.id==='mangler'?24:48;
-      assert.equal(a.playbackFps,a.id==='jump'?a.frames.length:guard>=0?a.frames.length*4:hurt>=0||a.id==='crouch'?a.frames.length*2:24);
+      const hurtFps=a.id==='hurt-crouched'?24:c.id==='arianna'?(hurt===1?48:24):c.id==='mangler'?24:48;
+      assert.equal(a.playbackFps,a.id==='jump'?a.frames.length:guard>=0||a.id==='crouch'?a.frames.length*4:hurt>=0?a.frames.length*2:24);
       if(hurt>=0)assert.equal(a.sourceFps,hurtFps);
       if(guard>=0)assert.equal(a.sourceFps,guardFps);
       assert.equal(width,a.sheetWidth);assert.equal(height,a.sheetHeight);
@@ -45,7 +45,7 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
     }
     const portrait=fs.readFileSync(path.join(root,c.thumbnail));
     assert.equal(portrait.readUInt32BE(16),512);assert.equal(portrait.readUInt32BE(20),512);
-    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','portrait.png','victory.png','walk.png']);
+    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-crouched.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','portrait.png','victory.png','walk.png']);
   }
 });
 
@@ -83,7 +83,7 @@ test('ingombri normalizzati, piedi e centro comuni, rapporto delle scale Godot c
     assert.ok(Math.abs(walk.preview.scale[0]/idle.preview.scale[0]-walk.sourceTransform.scale[0]/idle.sourceTransform.scale[0])<1e-8);
   }
   const mangler=manifest.characters.find(c=>c.id==='mangler');
-  for(const a of mangler.animations){const scale=a.id==='walk'||a.id==='ko'||a.id.startsWith('hurt-')?.7:.85;assert.deepEqual(a.sourceTransform.scale,[scale,scale]);}
+  for(const a of mangler.animations){const legacy=a.id==='walk'||a.id==='ko'||(a.id.startsWith('hurt-')&&a.id!=='hurt-crouched');const scale=legacy?0.7:0.85;assert.deepEqual(a.sourceTransform.scale,[scale,scale]);}
   assert.ok(mangler.animations[1].preview.drawRect[2]<mangler.animations[0].preview.drawRect[2]);
 });
 
@@ -215,7 +215,7 @@ function fixture({page='roster',search=''}={}){
 test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vuoto',()=>{
   const f=fixture(),search=f.nodes.get('#character-search');
   assert.match(f.nodes.get('#character-grid').innerHTML,/personaggio.html\?id=torpe/);
-  assert.match(f.nodes.get('#character-grid').innerHTML,/12 animazioni disponibili/);
+  assert.match(f.nodes.get('#character-grid').innerHTML,/13 animazioni disponibili/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/mosse.html\?move=walk/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/Per personaggio/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/href="stages.html"/);
@@ -230,7 +230,7 @@ test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vu
 test('dettaglio personaggio mostra le tre mosse con navigazione e highlight',()=>{
   const f=fixture({page:'character',search:'?id=torpe&anim=walk'});
   assert.equal(f.document.title,'Torpe · Animazioni · Sanmauro Fighters');
-  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','victory','ko']);
+  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko']);
   assert.equal(f.galleries[0].data.animations[1].frames.length,21);
   assert.equal(f.galleries[0].options.highlightId,'walk');
   assert.match(f.nodes.get('#character-detail').innerHTML,/personaggio.html\?id=peirolo&anim=walk/);
@@ -288,7 +288,7 @@ test('parate alta/media/bassa per sette personaggi: fonti, tagli, scala e naviga
     const detail=fixture({page:'character',search:'?id=mangler&anim='+id});
     assert.equal(detail.galleries[0].options.highlightId,id);
   }
-  assert.deepEqual(require('../move-groups.js').group(manifest.characters).map(g=>g.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','victory','ko']);
+  assert.deepEqual(require('../move-groups.js').group(manifest.characters).map(g=>g.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko']);
 });
 
 test('per mossa confronta sette camminate; ricerca distrugge e ricrea la galleria',()=>{
@@ -389,8 +389,8 @@ test('tutte le reazioni hurt durano 500 ms incluso ultimo frame, a ogni velocit�
   }
 });
 
-test('report hurt: tre HTML/CSV e 21 confronti di pose, con sequenze e collegamenti validi',()=>{
-  for(const id of ['hurt-high','hurt-medium','hurt-low']){
+test('report hurt: quattro HTML/CSV e 28 confronti di pose, con sequenze e collegamenti validi',()=>{
+  for(const id of ['hurt-high','hurt-medium','hurt-low','hurt-crouched']){
     const html=fs.readFileSync(path.join(root,'reports',id+'-timing.html'),'utf8');
     assert.match(html,/500 ms/);assert.equal((html.match(/<tr data-character=/g)??[]).length,7);
     const csv=fs.readFileSync(path.join(root,'reports',id+'-timing.csv'),'utf8');
@@ -403,20 +403,20 @@ test('report hurt: tre HTML/CSV e 21 confronti di pose, con sequenze e collegame
   }
 });
 
-test('Accovacciata: sorgenti Godot e durata completa di 500 ms per tutti i personaggi',()=>{
+test('Accovacciata: sorgenti Godot e durata completa di 250 ms per tutti i personaggi',()=>{
   const {advanceAnimation}=require('../player-core.js');
   for(const c of manifest.characters){
     const a=c.animations.find(a=>a.id==='crouch');
     assert.equal(a.sourceAnimation,'crouch');assert.equal(a.loop,false);
     assert.equal(a.sourceFps,['arianna','mangler'].includes(c.id)?48:24);
-    assert.equal(a.durationMs,500);assert.equal(a.poseDurationMs,500);
+    assert.equal(a.durationMs,250);assert.equal(a.poseDurationMs,250);
     assert.deepEqual(a.frames,Array.from({length:a.frames.length},(_,i)=>[i%5*512,Math.floor(i/5)*512,512,512]));
     assert.ok(a.sourcePath.endsWith(c.id==='arianna'?'/basic-moves/crouched.png':c.id==='mangler'?'/04-crouching.png':'/crouch-spritesheet.png'));
     for(const speed of [.5,1,2]){
       const origin={frame:0,remainder:0};
-      assert.equal(advanceAnimation(origin,499.99/speed,a,speed,false).ended,false);
-      assert.equal(advanceAnimation(origin,500/speed,a,speed,false).ended,true);
-      assert.equal(advanceAnimation(origin,5000/speed,a,speed,true).frame,0);
+      assert.equal(advanceAnimation(origin,249.99/speed,a,speed,false).ended,false);
+      assert.equal(advanceAnimation(origin,250/speed,a,speed,false).ended,true);
+      assert.equal(advanceAnimation(origin,2500/speed,a,speed,true).frame,0);
     }
   }
   const f=fixture({page:'moves',search:'?move=crouch'});
@@ -428,7 +428,34 @@ test('Accovacciata: sorgenti Godot e durata completa di 500 ms per tutti i perso
 
 test('report Accovacciata con sette righe, CSV e confronti di pose disponibili',()=>{
   const html=fs.readFileSync(path.join(root,'reports/crouch-timing.html'),'utf8');
-  assert.match(html,/500 ms/);assert.equal((html.match(/<tr data-character=/g)??[]).length,7);
+  assert.match(html,/250 ms/);assert.equal((html.match(/<tr data-character=/g)??[]).length,7);
   assert.equal(fs.readFileSync(path.join(root,'reports/crouch-timing.csv'),'utf8').trim().split(/\r?\n/).length,8);
   for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g))assert.ok(fs.existsSync(path.resolve(root,'reports',match[1].split('?')[0])));
+});
+
+test('hurt_crouched: dodici frame Godot, scala corretta di Mangler e 500 ms per tutti',()=>{
+  const {advanceAnimation}=require('../player-core.js');
+  for(const c of manifest.characters){
+    const a=c.animations.find(a=>a.id==='hurt-crouched');
+    assert.equal(a.name,'Hurt accovacciato');assert.equal(a.sourceAnimation,'hurt_crouched');
+    assert.equal(a.sourceSetupPath,'scripts/Fighter.gd');assert.equal(a.sourceFps,24);
+    assert.equal(a.playbackFps,24);assert.equal(a.durationMs,500);assert.equal(a.loop,false);
+    assert.match(a.sourcePath,/hurt_crouched_spritesheet.png$/);
+    assert.deepEqual(a.frames,Array.from({length:12},(_,i)=>[i%5*512,Math.floor(i/5)*512,512,512]));
+    for(const speed of [.5,1,2]){
+      const origin={frame:0,remainder:0};
+      assert.equal(advanceAnimation(origin,499.99/speed,a,speed,false).ended,false);
+      assert.equal(advanceAnimation(origin,500/speed,a,speed,false).ended,true);
+    }
+    if(c.id==='mangler')assert.deepEqual(a.sourceTransform.scale,[.85,.85]);
+  }
+});
+
+test('hurt_crouched collegato a report e gallerie per mossa e per personaggio',()=>{
+  const f=fixture({page:'moves',search:'?move=hurt-crouched'});
+  assert.equal(f.nodes.get('#move-name').textContent,'Hurt accovacciato');
+  assert.equal(f.galleries[0].data.animations.length,7);
+  assert.equal(f.nodes.get('#move-report-link').href,'reports/hurt-crouched-timing.html');
+  const detail=fixture({page:'character',search:'?id=mangler&anim=hurt-crouched'});
+  assert.equal(detail.galleries[0].options.highlightId,'hurt-crouched');
 });

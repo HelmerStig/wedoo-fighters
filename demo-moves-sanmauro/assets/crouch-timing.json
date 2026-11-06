@@ -1,5 +1,5 @@
 {
   "schema": "sanmauro.crouch-timing",
   "version": 1,
-  "durationMs": 500
+  "durationMs": 250
 }

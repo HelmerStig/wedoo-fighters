@@ -39,7 +39,7 @@ python demo-moves-sanmauro/scripts/build-hurt-reports.py.
 Arianna usa le sequenze di ritorno incluse nel suo catalogo (8/15/7 frame);
 Mangler usa 16/16/10 frame, scala legacy 0.70 e hurt_low dagli indici 6-15.
 I recovery inversi separati degli altri non sono concatenati automaticamente.
-È integrata anche Accovacciata (crouch) per tutti, durata 500 ms a 1x e posa
+È integrata anche Accovacciata (crouch) per tutti, durata 250 ms a 1x e posa
 finale mantenuta senza rialzata automatica: ora 84 animazioni, 12 per fighter.
 Frame: Arianna 19, Mangler 25, Bue 7, Mileto 13, Oscare 9, Peirò 11, Torpe 7.
 Mangler usa 04-crouching.png, scala 0.85; Arianna basic-moves/crouched.png.

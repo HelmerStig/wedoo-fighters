@@ -54,7 +54,7 @@ def cell_size(code, key, fallback=None):
 def source_transform(ident, move, code):
     if ident == 'mangler':
         # update_sprite_scale: walk/ko/hurt sono legacy, le altre mosse reworked.
-        prefix = 'LEGACY_SPRITE' if move in ('walk','ko') or move.startswith('hurt-') else 'REWORK_SPRITE'
+        prefix = 'LEGACY_SPRITE' if move in ('walk','ko') or (move.startswith('hurt-') and move!='hurt-crouched') else 'REWORK_SPRITE'
         return dict(scale=vector(code, prefix + '_SCALE'), position=vector(code, prefix + '_POSITION'))
     if ident == 'arianna':
         return dict(scale=vector(code, 'ARIANNA_SPRITE_SCALE'), position=vector(code, 'ARIANNA_SPRITE_POSITION'))
@@ -99,10 +99,26 @@ for ident, name, scene in roster:
     for move, label in [('idle', 'Idle'), ('walk', 'Camminata'), ('jump', 'Salto'), ('crouch','Accovacciata'),
             ('block-high','Parata alta'),('block-mid','Parata media'),('block-low','Parata bassa'),
             ('hurt-high','Hurt alto'),('hurt-medium','Hurt medio'),('hurt-low','Hurt basso'),
+            ('hurt-crouched','Hurt accovacciato'),
             ('victory','Vittoria'), ('ko','Sconfitta')]:
         start, explicit_frames, weights, jump_timing, skipped = 0, None, None, {}, []
         animation_config_path = config_path
-        if move.startswith('hurt-'):
+        if move=='hurt-crouched':
+            animation_config_path='scenes/'+scene+'.tscn'
+            scene_code=(source/animation_config_path).read_text(encoding='utf-8-sig')
+            resource_id=re.search(r'hurt_crouched_sheet = ExtResource\("([^"]+)"\)',scene_code)[1]
+            relative=re.search(r'path="res://([^"]+)" id="'+re.escape(resource_id)+'"',scene_code)[1]
+            fighter_code=(source/'scripts/Fighter.gd').read_text(encoding='utf-8-sig')
+            setup=re.search(r'func _configure_hurt_crouched_animation\(\).*?(?=\nfunc |\Z)',fighter_code,re.S)[0]
+            count=int(re.search(r'for source in (\d+):',setup)[1])
+            columns=int(re.search(r'source % (\d+)',setup)[1])
+            rectangle=re.search(r'region = Rect2\(\(source % \d+\) \* (\d+), int\(source / \d+\) \* (\d+), (\d+), (\d+)\)',setup)
+            fw,fh=int(rectangle[3]),int(rectangle[4])
+            original_fps=float(re.search(r'set_animation_speed\(&"hurt_crouched",\s*([\d.]+)',setup)[1])
+            durations=[1000/original_fps]*count
+            jump_timing=dict(loop=False,sourceLoop=False,sourceAnimation='hurt_crouched',sourceSetupPath='scripts/Fighter.gd',
+                frameDurations=durations,durationMs=sum(durations),reactionDurationMs=sum(durations))
+        elif move.startswith('hurt-'):
             part = move.split('-')[1]
             runtime_move = 'hurt_mid' if part == 'medium' else move.replace('-','_')
             if ident == 'mangler':
