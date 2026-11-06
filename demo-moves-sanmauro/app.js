@@ -83,7 +83,9 @@
     }else{
       document.title=currentMove.name+' · Per mossa · Sanmauro Fighters';
       $('#breadcrumb-name').textContent=currentMove.name;$('#move-name').textContent=currentMove.name;
-      $('#move-report').hidden=currentMove.id!=='jump';
+      const reportPath=['jump','crouch'].includes(currentMove.id)||currentMove.id.startsWith('block-')||currentMove.id.startsWith('hurt-')?'reports/'+currentMove.id+'-timing.html':null;
+      $('#move-report').hidden=!reportPath;
+      if(reportPath){$('#move-report-link').href=reportPath;$('#move-report-link').textContent='Apri il report: '+currentMove.name+' →';}
       $('#move-total-count').textContent=currentMove.animations.length;renderMove();
     }
   }

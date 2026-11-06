@@ -1,12 +1,18 @@
 """Genera catalogo stage, contatti delle suole e preset incorporati, da asset locali."""
 import hashlib
 import json
+import subprocess
+import sys
 from pathlib import Path
 from PIL import Image
+from character_proportions import apply_proportions, write_portraits
 
 root = Path(__file__).resolve().parents[1]
 folder = root / 'assets/stages/Piazza Europa'
 manifest = json.loads((root/'assets/manifest.json').read_text(encoding='utf-8'))
+proportions = json.loads((root/'assets/character-proportions.json').read_text(encoding='utf-8'))
+apply_proportions(manifest, proportions)
+write_portraits(root, manifest)
 
 
 def relative(path):
@@ -67,7 +73,9 @@ for ident, position_x, flipped in [('arianna',675,False),('oscare',1890,True)]:
     contacts.append(dict(characterId=ident,image=animation['image'],
         pngSha256=hashlib.sha256((root/animation['image']).read_bytes()).hexdigest(),frames=feet_frames))
     fighters.append(dict(characterId=ident, animationId='idle', x=position_x,
-        groundY=height-55, scale=animation['preview']['scale'][0]*4/3,
+        groundY=height-55,
+        scale=animation['normalizedPreview']['scale'][0]*proportions['stageScale']*character['stageHeightMultiplier'],
+        heightCm=character['heightCm'],heightMultiplier=character['stageHeightMultiplier'],
         anchorX=animation['preview']['anchor'][0],anchorY=animation['preview']['anchor'][1],flipX=flipped))
 
 stage = dict(id='piazza-europa',name='Piazza Europa',width=width,height=height,
@@ -75,6 +83,8 @@ stage = dict(id='piazza-europa',name='Piazza Europa',width=width,height=height,
     shadow=dict(color='#1d1625',shearX=.5,flattenY=.11,opacity=.72,contactOpacity=.28),
     layers=layers,fighters=fighters)
 save(folder/'stage.json',stage)
+save(root/'assets/manifest.json',manifest)
+(root/'catalog.js').write_text('// Generato dai manifest locali Sanmauro.\nwindow.SANMAURO_CATALOG = '+json.dumps(manifest,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 foot_data = dict(method='Suola alpha >64; due contatti per frame, y al bordo inferiore del pixel.',items=contacts)
 save(folder/'foot-contacts.json',foot_data)
 (root/'stages-catalog.js').write_text('/* Generato da scripts/build-stages.py. */\n(function(root){const stages='+json.dumps([stage],ensure_ascii=False,indent=2)+';\nif(typeof module==="object"&&module.exports)module.exports=stages;else root.STAGES_CATALOG=stages;\n})(typeof globalThis!=="undefined"?globalThis:this);\n',encoding='utf-8')
@@ -84,3 +94,5 @@ if preset.get('schema')!='wedoo.crt-preset' or preset.get('version')!=1:
     raise ValueError('Preset CRT non valido')
 (root/'crt-presets.js').write_text('/* Generato da scripts/build-stages.py. */\nwindow.STAGE_CRT_PRESETS = '+json.dumps({'piazza-europa':preset},ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 print('Piazza Europa: layer, contatti di '+str(sum(len(c['frames']) for c in contacts))+' frame idle e preset CRT aggiornati.')
+if (root/'assets/jump-timing.json').exists():
+    subprocess.run([sys.executable,str(root/'scripts/build-jump-report.py')],check=True)

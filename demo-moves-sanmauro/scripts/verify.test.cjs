@@ -13,14 +13,25 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
   const walkCounts={arianna:48,bue:49,mangler:48,mileto:49,oscare:49,peirolo:49,torpe:21};
   const walkPaths={arianna:'basic-moves/01-walk.png',mangler:'02-walk.png',torpe:'Torpe-walk-trimmed.png'};
   const jumpCounts={arianna:49,bue:37,mangler:25,mileto:39,oscare:38,peirolo:40,torpe:34};
+  const victoryCounts={arianna:49,bue:49,mangler:45,mileto:49,oscare:49,peirolo:49,torpe:49};
+  const koCounts={arianna:25,bue:49,mangler:25,mileto:49,oscare:49,peirolo:49,torpe:49};
+  const guardCounts={arianna:[16,13,16],bue:[10,6,11],mangler:[14,8,11],mileto:[6,6,11],oscare:[10,6,11],peirolo:[6,6,11],torpe:[9,6,11]};
+  const hurtCounts={arianna:[8,15,7],bue:[18,11,11],mangler:[16,16,10],mileto:[14,11,11],oscare:[8,11,11],peirolo:[9,11,11],torpe:[8,11,11]};
+  const crouchCounts={arianna:19,bue:7,mangler:25,mileto:13,oscare:9,peirolo:11,torpe:7};
   for(const c of manifest.characters){
-    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump']);
+    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','victory','ko']);
     for(const a of c.animations){
       const sheet=fs.readFileSync(path.join(root,a.image));
       assert.equal(createHash('sha256').update(sheet).digest('hex'),a.sourceSha256,c.name+' '+a.id);
       const width=sheet.readUInt32BE(16),height=sheet.readUInt32BE(20);
-      assert.equal(a.frames.length,({idle:idleCounts,walk:walkCounts,jump:jumpCounts})[a.id][c.id]);
-      assert.equal(a.playbackFps,a.id==='jump'?a.frames.length:24);
+      const guard=['block-high','block-mid','block-low'].indexOf(a.id);
+      const hurt=['hurt-high','hurt-medium','hurt-low'].indexOf(a.id);
+      assert.equal(a.frames.length,guard>=0?guardCounts[c.id][guard]:hurt>=0?hurtCounts[c.id][hurt]:({idle:idleCounts,walk:walkCounts,jump:jumpCounts,crouch:crouchCounts,victory:victoryCounts,ko:koCounts})[a.id][c.id]);
+      const guardFps=c.id==='arianna'?48:c.id==='mangler'?(guard===0?48:24):(guard===2?48:24);
+      const hurtFps=c.id==='arianna'?(hurt===1?48:24):c.id==='mangler'?24:48;
+      assert.equal(a.playbackFps,a.id==='jump'?a.frames.length:guard>=0?a.frames.length*4:hurt>=0||a.id==='crouch'?a.frames.length*2:24);
+      if(hurt>=0)assert.equal(a.sourceFps,hurtFps);
+      if(guard>=0)assert.equal(a.sourceFps,guardFps);
       assert.equal(width,a.sheetWidth);assert.equal(height,a.sheetHeight);
       for(const [i,[x,y,w,h]] of a.frames.entries()){
         assert.equal(w,512);assert.equal(h,512);assert.ok(x>=0&&y>=0&&x+w<=width&&y+h<=height,c.name);
@@ -34,7 +45,7 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
     }
     const portrait=fs.readFileSync(path.join(root,c.thumbnail));
     assert.equal(portrait.readUInt32BE(16),512);assert.equal(portrait.readUInt32BE(20),512);
-    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['idle.png','jump.png','portrait.png','walk.png']);
+    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','portrait.png','victory.png','walk.png']);
   }
 });
 
@@ -55,10 +66,14 @@ test('catalogo offline uguale al manifest, tutte le pagine hanno riferimenti aut
 test('ingombri normalizzati, piedi e centro comuni, rapporto delle scale Godot conservato',()=>{
   for(const c of manifest.characters){
     const [idle,walk]=c.animations;
-    assert.ok(Math.abs(idle.medianContentHeight*idle.preview.scale[1]-344)<1e-8);
-    assert.ok(Math.abs(walk.medianContentHeight*walk.preview.scale[1]-344)<10,c.name);
+    const target=344*c.heightCm/165*manifest.previewScale;
+    assert.ok(Math.abs(idle.medianContentHeight*idle.preview.scale[1]-target)<1e-8);
+    assert.ok(Math.abs(walk.medianContentHeight*walk.preview.scale[1]-target)<10,c.name);
     for(const a of c.animations){
       const [x,y,w,h]=a.preview.drawRect,[sx,sy]=a.preview.scale,[ax,ay]=a.preview.anchor;
+      assert.equal(a.preview.viewScale,manifest.previewScale);
+      assert.equal(a.preview.heightMultiplier,c.heightCm/165);
+      assert.ok(Math.abs(a.normalizedPreview.targetIdleHeight-344)<1e-8);
       assert.ok(Math.abs(sx-sy)<1e-8,'proporzioni conservate');
       assert.ok(Math.abs(x+ax*sx-256)<1e-8);assert.ok(Math.abs(y+ay*sy-430)<1e-8);
       assert.ok(Math.abs(w/a.frameWidth-sx)<1e-8&&Math.abs(h/a.frameHeight-sy)<1e-8);
@@ -68,8 +83,20 @@ test('ingombri normalizzati, piedi e centro comuni, rapporto delle scale Godot c
     assert.ok(Math.abs(walk.preview.scale[0]/idle.preview.scale[0]-walk.sourceTransform.scale[0]/idle.sourceTransform.scale[0])<1e-8);
   }
   const mangler=manifest.characters.find(c=>c.id==='mangler');
-  assert.deepEqual(mangler.animations.map(a=>a.sourceTransform.scale),[[.85,.85],[.7,.7],[.85,.85]]);
+  for(const a of mangler.animations){const scale=a.id==='walk'||a.id==='ko'||a.id.startsWith('hurt-')?.7:.85;assert.deepEqual(a.sourceTransform.scale,[scale,scale]);}
   assert.ok(mangler.animations[1].preview.drawRect[2]<mangler.animations[0].preview.drawRect[2]);
+});
+
+test('proporzioni fisiche condivise da anteprime, hover, player e report senza cambiare scala dello stage',()=>{
+  const arianna=manifest.characters.find(c=>c.id==='arianna'),oscare=manifest.characters.find(c=>c.id==='oscare');
+  const visibleHeight=c=>c.animations[0].medianContentHeight*c.animations[0].preview.scale[1];
+  assert.ok(Math.abs(visibleHeight(oscare)/visibleHeight(arianna)-183/165)<1e-8);
+  for(const c of manifest.characters){
+    for(const a of c.animations){
+      const [x,y]=a.preview.drawRect,[sx,sy]=a.preview.scale,[l,t,r,b]=a.contentBounds;
+      assert.ok(x+l*sx>=16-1e-8&&x+r*sx<=496+1e-8&&y+t*sy>=16-1e-8,c.name+' '+a.id);
+    }
+  }
 });
 
 test('salti rispettano selezioni Godot, preparazione compressa e durate originali di Mangler',()=>{
@@ -118,6 +145,25 @@ test('apici a 500 ms e ciclo di 1000 ms per tutti, anche con velocità e cicli d
   }
 });
 
+test('vittoria e sconfitta usano le selezioni Godot, con esclusioni di Mangler e loop disattivato',()=>{
+  for(const c of manifest.characters){
+    for(const id of ['victory','ko']){
+      const a=c.animations.find(a=>a.id===id);
+      assert.equal(a.name,id==='victory'?'Vittoria':'Sconfitta');
+      assert.equal(a.playbackFps,24);assert.equal(a.sourceFps,24);
+      assert.equal(a.loop,false);assert.equal(a.sourceLoop,false);
+      const columns=id==='ko'&&['arianna','mangler'].includes(c.id)?5:7;
+      const indices=id==='victory'&&c.id==='mangler'?Array.from({length:49},(_,i)=>i).filter(i=>![8,9,10,11].includes(i)):Array.from({length:a.frames.length},(_,i)=>i);
+      assert.deepEqual(a.frames,indices.map(i=>[i%columns*512,Math.floor(i/columns)*512,512,512]));
+      const filename=id==='victory'?'victory.png':c.id==='arianna'||c.id==='mangler'?'ko.png':'death.png';
+      assert.ok(a.sourcePath.endsWith('/'+filename));
+    }
+  }
+  const mangler=manifest.characters.find(c=>c.id==='mangler');
+  assert.deepEqual(mangler.animations.find(a=>a.id==='victory').sourceSkippedFrames,[8,9,10,11]);
+  assert.match(mangler.animations.find(a=>a.id==='ko').sourceConfigPath,/idle_frames.tres$/);
+});
+
 test('report HTML/CSV con sette pose e link locali validi',()=>{
   const html=fs.readFileSync(path.join(root,'reports/jump-timing.html'),'utf8');
   const csv=fs.readFileSync(path.join(root,'reports/jump-timing.csv'),'utf8');
@@ -154,7 +200,7 @@ function fixture({page='roster',search=''}={}){
   function node(){return {hidden:false,value:'',textContent:'',innerHTML:'',dataset:{},listeners:{},attrs:{},
     addEventListener(type,fn){(this.listeners[type]??=[]).push(fn);},emit(type,event={}){for(const fn of this.listeners[type]??[])fn(event);},
     setAttribute(k,v){this.attrs[k]=v;},focus(){focused=this;},getClientRects(){return this.hidden?[]:[1];}};}
-  for(const s of ['#main','#character-grid','#sidebar','.menu-toggle','.menu-overlay','#character-search','#nav-count','#visible-count','#empty-state','.nav-empty','.sidebar-close','#character-detail','#breadcrumb-name','#animation-gallery','#move-gallery','#move-name','#move-total-count','#move-visible-count','#move-empty','#move-report'])nodes.set(s,node());
+  for(const s of ['#main','#character-grid','#sidebar','.menu-toggle','.menu-overlay','#character-search','#nav-count','#visible-count','#empty-state','.nav-empty','.sidebar-close','#character-detail','#breadcrumb-name','#animation-gallery','#move-gallery','#move-name','#move-total-count','#move-visible-count','#move-empty','#move-report','#move-report-link'])nodes.set(s,node());
   const elements=manifest.characters.flatMap(c=>[Object.assign(node(),{dataset:{character:c.id}}),Object.assign(node(),{dataset:{character:c.id}})]);
   nodes.get('#sidebar').querySelectorAll=()=>[nodes.get('#character-search'),...elements];
   const body={dataset:{page},classList:{contains:k=>classes.has(k),add:k=>classes.add(k),remove:k=>classes.delete(k),toggle(k,on){on?classes.add(k):classes.delete(k);}}};
@@ -169,7 +215,7 @@ function fixture({page='roster',search=''}={}){
 test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vuoto',()=>{
   const f=fixture(),search=f.nodes.get('#character-search');
   assert.match(f.nodes.get('#character-grid').innerHTML,/personaggio.html\?id=torpe/);
-  assert.match(f.nodes.get('#character-grid').innerHTML,/3 animazioni disponibili/);
+  assert.match(f.nodes.get('#character-grid').innerHTML,/12 animazioni disponibili/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/mosse.html\?move=walk/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/Per personaggio/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/href="stages.html"/);
@@ -184,7 +230,7 @@ test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vu
 test('dettaglio personaggio mostra le tre mosse con navigazione e highlight',()=>{
   const f=fixture({page:'character',search:'?id=torpe&anim=walk'});
   assert.equal(f.document.title,'Torpe · Animazioni · Sanmauro Fighters');
-  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump']);
+  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','victory','ko']);
   assert.equal(f.galleries[0].data.animations[1].frames.length,21);
   assert.equal(f.galleries[0].options.highlightId,'walk');
   assert.match(f.nodes.get('#character-detail').innerHTML,/personaggio.html\?id=peirolo&anim=walk/);
@@ -200,6 +246,49 @@ test('Salto disponibile per mossa e per personaggio, con highlight e scala corre
   assert.equal(c.galleries[0].options.highlightId,'jump');
   assert.equal(c.galleries[0].data.animations[2].frames.length,25);
   assert.match(c.nodes.get('#sidebar').innerHTML,/mosse.html\?move=jump/);
+});
+
+test('menu Per mossa e gallerie mostrano Vittoria e Sconfitta per tutti i personaggi',()=>{
+  for(const [id,label] of [['victory','Vittoria'],['ko','Sconfitta']]){
+    const f=fixture({page:'moves',search:'?move='+id});
+    assert.equal(f.nodes.get('#move-name').textContent,label);
+    assert.equal(f.galleries[0].data.animations.length,7);
+    assert.ok(f.galleries[0].data.animations.every(a=>a.id===id&&a.loop===false));
+    const c=fixture({page:'character',search:'?id=mangler&anim='+id});
+    assert.equal(c.galleries[0].options.highlightId,id);
+    assert.match(c.nodes.get('#sidebar').innerHTML,new RegExp('mosse.html\\?move='+id));
+  }
+});
+
+test('parate alta/media/bassa per sette personaggi: fonti, tagli, scala e navigazione Godot',()=>{
+  for(const c of manifest.characters){
+    for(const [i,id] of ['block-high','block-mid','block-low'].entries()){
+      const a=c.animations.find(a=>a.id===id),columns=c.id==='arianna'?4:5;
+      assert.equal(a.loop,false);assert.equal(a.sourceLoop,false);
+      assert.equal(a.sourceAnimation,id.replace('-','_'));
+      assert.equal(a.playbackFps,a.frames.length*4);
+      assert.ok([24,48].includes(a.sourceFps));
+      for(const [index,frame] of a.frames.entries()){
+        const source=index+(c.id==='mangler'&&i===0?8:0);
+        assert.deepEqual(frame,[source%columns*512,Math.floor(source/columns)*512,512,512]);
+      }
+      if(c.id==='arianna')assert.ok(a.sourcePath.endsWith('/guard_'+['high','middle','low'][i]+'.png'));
+      else if(c.id==='mangler')assert.ok(a.sourcePath.endsWith('/'+['06-block-high','07-block-middle','08-block-low'][i]+'.png'));
+      else if(i===1)assert.ok(a.sourcePath.endsWith('/block_medium_spritesheet.png'));
+      else if(i===0)assert.ok(a.sourcePath.endsWith('/block-spritesheet.png'));
+      else assert.ok(a.sourcePath.endsWith('-parata_bassa.png'));
+    }
+  }
+  for(const [id,label] of [['block-high','Parata alta'],['block-mid','Parata media'],['block-low','Parata bassa']]){
+    const f=fixture({page:'moves',search:'?move='+id});
+    assert.equal(f.nodes.get('#move-name').textContent,label);
+    assert.equal(f.nodes.get('#move-report').hidden,false);
+    assert.equal(f.nodes.get('#move-report-link').href,'reports/'+id+'-timing.html');
+    assert.equal(f.galleries[0].data.animations.length,7);
+    const detail=fixture({page:'character',search:'?id=mangler&anim='+id});
+    assert.equal(detail.galleries[0].options.highlightId,id);
+  }
+  assert.deepEqual(require('../move-groups.js').group(manifest.characters).map(g=>g.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','victory','ko']);
 });
 
 test('per mossa confronta sette camminate; ricerca distrugge e ricrea la galleria',()=>{
@@ -222,4 +311,124 @@ test('URL di personaggio e mossa inesistenti hanno un recupero, senza gallery er
   const m=fixture({page:'moves',search:'?move=inesistente'});
   assert.match(m.nodes.get('#main').innerHTML,/Mossa non trovata/);assert.equal(m.galleries.length,0);
   m.nodes.get('#character-search').emit('input');
+});
+
+test('tutte le 21 parate durano 250 ms, includendo ultimo frame, velocità e loop',()=>{
+  const {advanceAnimation}=require('../player-core.js');
+  for(const c of manifest.characters){
+    for(const a of c.animations.filter(a=>a.id.startsWith('block-'))){
+      assert.equal(a.durationMs,250);assert.equal(a.guardDurationMs,250);
+      assert.equal(a.frameDurations.length,a.frames.length);
+      assert.ok(a.frameDurations.every(d=>Math.abs(d-250/a.frames.length)<1e-8));
+      assert.ok(Math.abs(a.sourceDurationMs-a.sourceFrameDurations.reduce((n,d)=>n+d,0))<1e-8);
+      for(const speed of [.5,1,2]){
+        const origin={frame:0,remainder:0};
+        assert.equal(advanceAnimation(origin,249.99/speed,a,speed,false).ended,false);
+        const final=advanceAnimation(origin,250/speed,a,speed,false);
+        assert.equal(final.ended,true);assert.equal(final.frame,a.frames.length-1);
+        for(const cycle of [1,2,10])assert.equal(advanceAnimation(origin,250*cycle/speed,a,speed,true).frame,0);
+      }
+    }
+  }
+});
+
+test('hurt: sequenze Godot di Arianna e taglio basso di Mangler, senza alterare scale o durata',()=>{
+  for(const c of manifest.characters){
+    for(const [i,id] of ['hurt-high','hurt-medium','hurt-low'].entries()){
+      const a=c.animations.find(a=>a.id===id),columns=c.id==='mangler'?4:5;
+      let indices=Array.from({length:a.frames.length},(_,j)=>j+(c.id==='mangler'&&i===2?6:0));
+      if(c.id==='arianna')indices=i===0?[0,1,2,3,4,5,6,0]:i===1?[0,1,2,3,4,5,6,7,6,5,4,3,2,1,0]:[0,1,2,3,4,5,0];
+      assert.deepEqual(a.frames,indices.map(j=>[j%columns*512,Math.floor(j/columns)*512,512,512]));
+      assert.equal(a.sourceAnimation,i===1?'hurt_mid':id.replace('-','_'));
+      assert.equal(a.loop,false);assert.equal(a.sourceLoop,false);
+      assert.equal(a.playbackFps,a.frames.length*2);assert.equal(a.guardDurationMs,undefined);
+      assert.equal(a.frameDurations.length,a.frames.length);
+      assert.ok(Math.abs(a.frameDurations.reduce((n,d)=>n+d,0)-a.reactionDurationMs)<1e-8);
+      if(c.id==='mangler')assert.deepEqual(a.sourceTransform.scale,[.7,.7]);
+    }
+  }
+});
+
+test('hurt nelle gallerie per mossa e per personaggio, con tre voci distinte',()=>{
+  for(const [id,label] of [['hurt-high','Hurt alto'],['hurt-medium','Hurt medio'],['hurt-low','Hurt basso']]){
+    const f=fixture({page:'moves',search:'?move='+id});
+    assert.equal(f.nodes.get('#move-name').textContent,label);
+    assert.equal(f.galleries[0].data.animations.length,7);
+    assert.equal(f.nodes.get('#move-report').hidden,false);
+    assert.equal(f.nodes.get('#move-report-link').href,'reports/'+id+'-timing.html');
+    const detail=fixture({page:'character',search:'?id=mangler&anim='+id});
+    assert.equal(detail.galleries[0].options.highlightId,id);
+  }
+});
+
+test('report delle tre parate: HTML, CSV e 21 pose con link validi',()=>{
+  for(const id of ['block-high','block-mid','block-low']){
+    const html=fs.readFileSync(path.join(root,'reports',id+'-timing.html'),'utf8');
+    const csv=fs.readFileSync(path.join(root,'reports',id+'-timing.csv'),'utf8');
+    assert.match(html,/250 ms/);assert.equal((html.match(/<tr data-character=/g)??[]).length,7);
+    assert.equal(csv.trim().split(/\r?\n/).length,8);
+    for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g))assert.ok(fs.existsSync(path.resolve(root,'reports',match[1].split('?')[0])),match[1]);
+  }
+});
+
+test('tutte le reazioni hurt durano 500 ms incluso ultimo frame, a ogni velocità e nei loop',()=>{
+  const {advanceAnimation}=require('../player-core.js');
+  for(const c of manifest.characters){
+    for(const a of c.animations.filter(a=>a.id.startsWith('hurt-'))){
+      assert.equal(a.durationMs,500);assert.equal(a.reactionDurationMs,500);
+      assert.ok(a.frameDurations.every(d=>Math.abs(d-500/a.frames.length)<1e-8));
+      assert.ok(Math.abs(a.sourceFrameDurations.reduce((n,d)=>n+d,0)-a.sourceDurationMs)<1e-8);
+      for(const speed of [.5,1,2]){
+        const origin={frame:0,remainder:0};
+        assert.equal(advanceAnimation(origin,499.99/speed,a,speed,false).ended,false);
+        const end=advanceAnimation(origin,500/speed,a,speed,false);
+        assert.equal(end.ended,true);assert.equal(end.frame,a.frames.length-1);
+        for(const cycle of [1,2,10])assert.equal(advanceAnimation(origin,500*cycle/speed,a,speed,true).frame,0);
+      }
+    }
+  }
+});
+
+test('report hurt: tre HTML/CSV e 21 confronti di pose, con sequenze e collegamenti validi',()=>{
+  for(const id of ['hurt-high','hurt-medium','hurt-low']){
+    const html=fs.readFileSync(path.join(root,'reports',id+'-timing.html'),'utf8');
+    assert.match(html,/500 ms/);assert.equal((html.match(/<tr data-character=/g)??[]).length,7);
+    const csv=fs.readFileSync(path.join(root,'reports',id+'-timing.csv'),'utf8');
+    assert.equal(csv.trim().split(/\r?\n/).length,8);
+    for(const c of manifest.characters){
+      const png=fs.readFileSync(path.join(root,'reports',id+'-poses',c.id+'.png'));
+      assert.equal(png.readUInt32BE(16),1536);assert.equal(png.readUInt32BE(20),512);
+    }
+    for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g))assert.ok(fs.existsSync(path.resolve(root,'reports',match[1].split('?')[0])),match[1]);
+  }
+});
+
+test('Accovacciata: sorgenti Godot e durata completa di 500 ms per tutti i personaggi',()=>{
+  const {advanceAnimation}=require('../player-core.js');
+  for(const c of manifest.characters){
+    const a=c.animations.find(a=>a.id==='crouch');
+    assert.equal(a.sourceAnimation,'crouch');assert.equal(a.loop,false);
+    assert.equal(a.sourceFps,['arianna','mangler'].includes(c.id)?48:24);
+    assert.equal(a.durationMs,500);assert.equal(a.poseDurationMs,500);
+    assert.deepEqual(a.frames,Array.from({length:a.frames.length},(_,i)=>[i%5*512,Math.floor(i/5)*512,512,512]));
+    assert.ok(a.sourcePath.endsWith(c.id==='arianna'?'/basic-moves/crouched.png':c.id==='mangler'?'/04-crouching.png':'/crouch-spritesheet.png'));
+    for(const speed of [.5,1,2]){
+      const origin={frame:0,remainder:0};
+      assert.equal(advanceAnimation(origin,499.99/speed,a,speed,false).ended,false);
+      assert.equal(advanceAnimation(origin,500/speed,a,speed,false).ended,true);
+      assert.equal(advanceAnimation(origin,5000/speed,a,speed,true).frame,0);
+    }
+  }
+  const f=fixture({page:'moves',search:'?move=crouch'});
+  assert.equal(f.nodes.get('#move-name').textContent,'Accovacciata');assert.equal(f.galleries[0].data.animations.length,7);
+  assert.equal(f.nodes.get('#move-report-link').href,'reports/crouch-timing.html');
+  const detail=fixture({page:'character',search:'?id=mangler&anim=crouch'});
+  assert.equal(detail.galleries[0].options.highlightId,'crouch');
+});
+
+test('report Accovacciata con sette righe, CSV e confronti di pose disponibili',()=>{
+  const html=fs.readFileSync(path.join(root,'reports/crouch-timing.html'),'utf8');
+  assert.match(html,/500 ms/);assert.equal((html.match(/<tr data-character=/g)??[]).length,7);
+  assert.equal(fs.readFileSync(path.join(root,'reports/crouch-timing.csv'),'utf8').trim().split(/\r?\n/).length,8);
+  for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g))assert.ok(fs.existsSync(path.resolve(root,'reports',match[1].split('?')[0])));
 });

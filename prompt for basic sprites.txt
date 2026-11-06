@@ -88,3 +88,27 @@ Ora dovremmo integrare gli altri movimenti di base presenti, iniziamo dalla camm
 Presta attenzione in particolare a Mangler, ad esempio la camminata, alcuni spritesheet hanno un ingombro maggiore rispetto agli altri personaggi, in godot venivano ridimensionati, puoi verificare ed uniformare le dimnensioni anche su demo-moves-sanmauro, in modo che tutti i personaggi abbiano lo stesso ingombro e siano centrati correttamente ?.
 
 Perfetto, passa al Salto sempre prestando attenzione a Mangler
+
+
+okay, ora in demo-moves-sanmauro vorrei creare la sezione Stages dove inserire gli stage creati, con il titolo "Stages".
+Il primo sarà Piazza Europa.
+Sarà composto da 5 immagini:
+- demo-moves-sanmauro\assets\stages\Piazza Europa\cielo.png z-index 0
+- demo-moves-sanmauro\assets\stages\Piazza Europa\piazza-europa.png: z-index 4, sfondo principale, le proprorzioni dell'immagine sono determinate da quest'immagine, non deve essere ritagliata, deve essere visibile per intero.
+- demo-moves-sanmauro\assets\stages\Piazza Europa\01-nuvole-lontane.png z-index 2, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi lentamente da destra verso sinistra, in loop, per dare l'effetto di parallax.
+- demo-moves-sanmauro\assets\stages\Piazza Europa\02-nuvole-intermedie.png z-index 3, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole lontane da destra verso sinistra, in loop, per dare l'effetto di parallax.
+- demo-moves-sanmauro\assets\stages\Piazza Europa\03-nuvole-prossime.png z-index 4, devi mantenere la sua dimensione e centrarle orizzontalemente nello stage, quindi avrai abbondaggio a destra e sinistra. Deve muoversi più velocemente delle nuvole intermedie da destra verso sinistra, in loop, per dare l'effetto di parallax.
+
+Stessi criteri di wedoo-fighters, stessi effetti crt.
+
+Metti nello stage Arianna e Oscare in idle come fatto per wedoo-fighters, Arianna a sinistra e Oscare a destra, Oscare deve essere riflesso. INserisci le ombre e tutto quello che cìè in wedoo-fighters, come effetti visivi e filtri.
+
+Oscare: 183cm
+Mangler: 183cm
+Arianna: 165cm
+Torpe: 175cm
+Bue : 170cm
+Mileto : 170cm
+Peirò : 170cm
+
+Perfetto ora possiamo proseguire proseguire con la crouched pose, usa un timing di 0.5s

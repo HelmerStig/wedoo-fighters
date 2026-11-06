@@ -1,0 +1,6 @@
+{
+  "schema": "sanmauro.guard-timing",
+  "version": 1,
+  "durationMs": 250,
+  "animationIds": ["block-high", "block-mid", "block-low"]
+}

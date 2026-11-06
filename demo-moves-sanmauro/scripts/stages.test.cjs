@@ -28,14 +28,28 @@ test('Piazza Europa mantiene le cinque immagini native, i tre piani nuvole e il 
   }
 });
 
-test('Arianna a sinistra e Oscare riflesso: altezza coerente con le anteprime normalizzate',()=>{
+test('Arianna a sinistra e Oscare riflesso: altezze in centimetri applicate sopra le scale normalizzate',()=>{
   assert.deepEqual(stages[0].fighters.map(f=>[f.characterId,f.flipX]),[['arianna',false],['oscare',true]]);
   for(const fighter of stages[0].fighters){
-    const idle=manifest.characters.find(c=>c.id===fighter.characterId).animations[0];
-    assert.ok(Math.abs(fighter.scale*idle.medianContentHeight-344*4/3)<1e-8);
+    const character=manifest.characters.find(c=>c.id===fighter.characterId),idle=character.animations[0];
+    assert.ok(Math.abs(fighter.scale*idle.medianContentHeight-344*4/3*character.heightCm/165)<1e-8);
+    assert.equal(fighter.heightCm,character.heightCm);
     assert.deepEqual([fighter.anchorX,fighter.anchorY],idle.preview.anchor);
     assert.equal(fighter.groundY,1025);
   }
+});
+
+test('altezze definitive salvate per tutti e sette, proporzioni delle mosse e dati Godot conservati',()=>{
+  const config=JSON.parse(fs.readFileSync(path.join(demo,'assets/character-proportions.json'),'utf8'));
+  assert.deepEqual(config.heightsCm,{arianna:165,bue:170,mangler:183,mileto:170,oscare:183,peirolo:170,torpe:175});
+  assert.deepEqual(manifest.characterProportions,config);
+  for(const character of manifest.characters){
+    assert.equal(character.heightCm,config.heightsCm[character.id]);
+    assert.equal(character.stageHeightMultiplier,character.heightCm/165);
+  }
+  const [arianna,oscare]=stages[0].fighters;
+  const idleHeight=f=>manifest.characters.find(c=>c.id===f.characterId).animations[0].medianContentHeight*f.scale;
+  assert.ok(Math.abs(idleHeight(oscare)/idleHeight(arianna)-183/165)<1e-8);
 });
 
 test('ombre animate: entrambi i piedi restano agganciati in tutti gli 87 frame, anche dopo drag e riflesso',()=>{

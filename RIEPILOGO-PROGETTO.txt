@@ -9,6 +9,42 @@ Per personaggio (personaggio.html?id=<id>) e Per mossa (mosse.html?move=walk).
 Sono importate Idle, Camminata e Salto per tutti: walk a 24 fps con i fogli realmente
 usati in Godot; Arianna/Mangler 48 frame, Bue/Mileto/Oscare/Peirò 49,
 Torpe 21 da Torpe-walk-trimmed.png. Non importate altre varianti o backwalk.
+Sono integrate anche Vittoria (victory) e Sconfitta (ko) per tutti: 35
+animazioni prima delle parate. Sono inoltre integrate Parata alta/media/bassa
+(block-high/block-mid/block-low) per tutti: ora 56 animazioni complessive.
+Parate: Arianna 16/13/16 frame a 48 fps; Mangler 14/8/11 a 48/24/24 fps
+con alta dai frame sorgente 9-22 e scala 0.85; Bue 10/6/11, Mileto 6/6/11,
+Oscare 10/6/11, Peirò 6/6/11, Torpe 9/6/11. Per questi cinque: alta/media
+24 fps, bassa 48 fps. Ingresso in guardia senza recovery concatenato, senza
+loop iniziale. Ora tutte le 21 parate durano 250 ms (0.25 s) a 1x, incluso
+l'ultimo frame: FPS demo = numero frame × 4; timing Godot conservati nei campi
+sourceFps/sourceFrameDurations/sourceDurationMs. Config: assets/guard-timing.json.
+Report HTML/CSV block-high-timing, block-mid-timing e block-low-timing nella
+cartella reports/, collegati sotto i titoli delle mosse. Rigenerare con:
+python demo-moves-sanmauro/scripts/build-guard-reports.py.
+Non è un marcatore di posa difensiva a 100 ms; il ritorno resta separato.
+Vittoria e Sconfitta sono a 24 fps, senza loop iniziale,
+con ultima posa mantenuta e possibilità di attivare Loop nel player.
+Vittoria: 49 frame per tutti tranne Mangler, 45, con esclusione degli indici
+sorgente 8-11 prevista nel catalogo Godot. Sconfitta: Arianna e Mangler 25
+frame, gli altri cinque 49. Mangler KO usa la scala legacy 0.70, vittoria 0.85.
+Fonti e selezioni sono registrate nel manifest e nel LEGGIMI Sanmauro.
+Sono integrate anche Hurt alto/medio/basso (hurt-high/hurt-medium/hurt-low)
+per tutti: ora 77 animazioni, 11 per personaggio. Le 21 reazioni durano 500 ms
+a 1x, incluso l'ultimo frame; FPS demo = numero frame × 2. Timing Godot
+conservati come sourceFps/sourceFrameDurations/sourceDurationMs. Config:
+demo-moves-sanmauro/assets/hurt-timing.json. Report HTML/CSV hurt-*-timing
+sotto i titoli, con confronti ingresso/centro/fine. Rigenerazione:
+python demo-moves-sanmauro/scripts/build-hurt-reports.py.
+Arianna usa le sequenze di ritorno incluse nel suo catalogo (8/15/7 frame);
+Mangler usa 16/16/10 frame, scala legacy 0.70 e hurt_low dagli indici 6-15.
+I recovery inversi separati degli altri non sono concatenati automaticamente.
+È integrata anche Accovacciata (crouch) per tutti, durata 500 ms a 1x e posa
+finale mantenuta senza rialzata automatica: ora 84 animazioni, 12 per fighter.
+Frame: Arianna 19, Mangler 25, Bue 7, Mileto 13, Oscare 9, Peirò 11, Torpe 7.
+Mangler usa 04-crouching.png, scala 0.85; Arianna basic-moves/crouched.png.
+Configurazione: assets/crouch-timing.json; report HTML/CSV crouch-timing
+collegato sotto il titolo. Comando: python demo-moves-sanmauro/scripts/build-crouch-report.py.
 Salti: Arianna 49 frame, Mangler 25, Bue 37, Mileto 39, Oscare 38,
 Peirò 40, Torpe 34. Selezioni e durate sorgenti derivano da Godot, incluse
 preparazione di 66.67 ms e durate variabili di Mangler, conservate nei campi
@@ -31,6 +67,27 @@ non dipende dal percorso F:/Personali/Godot per essere visualizzata.
 Avvio: node demo-moves-sanmauro/scripts/serve.mjs → http://127.0.0.1:4185/
 Importazione e dettagli: demo-moves-sanmauro/LEGGIMI.txt.
 L'analisi del progetto precedente è in ANALISI-VECCHIO-PROGETTO-GODOT.txt.
+La demo Sanmauro include ora Stages → Piazza Europa (stages.html): mondo
+2550 × 1080, vista 1920 × 1080 con drag e fullscreen; tre nuvole 5000 × 1080
+a 6/12/20 px/s, fondale davanti. Arianna a sinistra, Oscare riflesso a destra,
+idle a 24 fps e ombre dalle sagome con contatti delle suole per tutti i frame.
+CRT base/avanzato, foschia, polvere e colore hanno gli stessi default WEDOO.
+Tutti gli asset stage sono in demo-moves-sanmauro/assets/stages/Piazza Europa/.
+Il file delle nuvole vicine si chiama 03-nuvole-vicine.png. Preset canonico:
+crt-preset.json nella stessa cartella. Rigenerazione:
+python demo-moves-sanmauro/scripts/build-stages.py.
+Altezze fisiche definitive solo per Sanmauro: Arianna 165 cm, Bue 170 cm,
+Mangler 183 cm, Mileto 170 cm, Oscare 183 cm, Peirò 170 cm, Torpe 175 cm.
+Fonte: demo-moves-sanmauro/assets/character-proportions.json. Arianna è il
+riferimento di scala; il fattore fisico è altezza/165, applicato nello stage
+alla scala normalizzata dello sprite. Anche roster, hover, gallerie per
+personaggio/mossa e report usano le proporzioni in centimetri. Nelle anteprime
+un solo zoom comune conserva un margine per tutti i salti, senza tagli.
+La base normalizedPreview resta separata, così lo stage non raddoppia il
+fattore fisico e mantiene le dimensioni già approvate.
+Altezza e fattore sono incorporati anche nel manifest
+e catalogo per Godot. Rigenerare con build-stages.py dopo modifiche al JSON.
+Questa configurazione non interviene sugli sprite o sulla demo WEDOO.
 La ripartenza dello sviluppo Godot è rimandata; nessuna migrazione eseguita.
 
 demo-moves è il catalogo locale degli asset e il banco di prova visivo.

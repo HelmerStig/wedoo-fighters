@@ -2,13 +2,18 @@
 import csv
 import html
 import json
+import subprocess
+import sys
 from pathlib import Path
 from PIL import Image
 from jump_timing import apply_timing
+from character_proportions import apply_proportions, write_portraits
 
 root = Path(__file__).resolve().parents[1]
 data = json.loads((root / 'assets/manifest.json').read_text(encoding='utf-8'))
 timing = json.loads((root / 'assets/jump-timing.json').read_text(encoding='utf-8'))
+apply_proportions(data,json.loads((root/'assets/character-proportions.json').read_text(encoding='utf-8')))
+write_portraits(root,data)
 apply_timing(data, timing)
 (root / 'assets/manifest.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 (root / 'catalog.js').write_text('// Generato da scripts/import-roster.py.\nwindow.SANMAURO_CATALOG = '+json.dumps(data, ensure_ascii=False, indent=2)+';\n', encoding='utf-8')
@@ -56,3 +61,5 @@ page += '<p><a href="jump-timing.csv" download>Scarica CSV</a> · <a href="../as
 page += ''.join(rows) + '</tbody></table></div></main></body></html>'
 (report / 'jump-timing.html').write_text(page, encoding='utf-8')
 print('Report Salto Sanmauro: 7 apici, HTML e CSV aggiornati.')
+if (root/'assets/guard-timing.json').exists():
+    subprocess.run([sys.executable,str(root/'scripts/build-guard-reports.py')],check=True)

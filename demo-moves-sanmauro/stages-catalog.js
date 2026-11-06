@@ -62,6 +62,8 @@
         "x": 675,
         "groundY": 1025,
         "scale": 1.2865825151940158,
+        "heightCm": 165,
+        "heightMultiplier": 1.0,
         "anchorX": 256.5,
         "anchorY": 428,
         "flipX": false
@@ -71,7 +73,9 @@
         "animationId": "idle",
         "x": 1890,
         "groundY": 1025,
-        "scale": 1.3815261044176708,
+        "scale": 1.5322380430814164,
+        "heightCm": 183,
+        "heightMultiplier": 1.1090909090909091,
         "anchorX": 257.5,
         "anchorY": 414,
         "flipX": true
