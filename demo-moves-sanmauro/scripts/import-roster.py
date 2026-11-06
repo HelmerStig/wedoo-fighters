@@ -192,3 +192,5 @@ if timing_path.exists():
 print(f'Copiate {sum(len(c["animations"]) for c in characters)} animazioni e {len(characters)} anteprime in {root / "assets"}')
 if timing_path.exists():
     subprocess.run([sys.executable, str(root / 'scripts/build-jump-report.py')], check=True)
+if (root / 'scripts/build-stages.py').exists():
+    subprocess.run([sys.executable, str(root / 'scripts/build-stages.py')], check=True)

@@ -42,7 +42,7 @@ test('catalogo offline uguale al manifest, tutte le pagine hanno riferimenti aut
   const context={window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(root,'catalog.js'),'utf8'),context);
   assert.deepEqual(JSON.parse(JSON.stringify(context.window.SANMAURO_CATALOG)),manifest);
-  for(const page of ['index.html','personaggio.html','mosse.html']){
+  for(const page of ['index.html','personaggio.html','mosse.html','stages.html']){
     const html=fs.readFileSync(path.join(root,page),'utf8');
     for(const match of html.matchAll(/(?:src|href)="([^"]+)"/g)){
       if(match[1].startsWith('#'))continue;
@@ -172,6 +172,7 @@ test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vu
   assert.match(f.nodes.get('#character-grid').innerHTML,/3 animazioni disponibili/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/mosse.html\?move=walk/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/Per personaggio/);
+  assert.match(f.nodes.get('#sidebar').innerHTML,/href="stages.html"/);
   search.value='peiro';search.emit('input');
   assert.deepEqual(f.elements.filter(el=>!el.hidden).map(el=>el.dataset.character),['peirolo','peirolo']);
   assert.equal(f.nodes.get('#visible-count').textContent,1);
