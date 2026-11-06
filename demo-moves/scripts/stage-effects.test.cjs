@@ -14,14 +14,14 @@ function fixture(){
   return {nodes,calls,controls};
 }
 
-test('i tre effetti hanno intensità indipendenti, confronto originale e ripristino',()=>{
+test('i cinque effetti hanno intensità indipendenti, confronto originale e ripristino',()=>{
   const f=fixture();assert.deepEqual(f.calls.at(-1),defaults);
   const strength=f.nodes.get('[data-fx-amount="color"]');strength.value='80';strength.listeners.input();
   assert.equal(f.calls.at(-1).color,.8);assert.equal(f.calls.at(-1).shadows,defaults.shadows);
   const shadow=f.nodes.get('[data-fx-toggle="shadows"]');shadow.checked=false;shadow.listeners.change();
   assert.equal(f.calls.at(-1).shadows,0);assert.equal(f.nodes.get('[data-fx-amount="shadows"]').disabled,true);
   const original=f.nodes.get('[data-fx-original]');original.listeners.click();
-  assert.deepEqual(f.calls.at(-1),{shadows:0,color:0,crt:0});assert.equal(f.nodes.get('.stage-crt').style.opacity,'0');
+  assert.deepEqual(f.calls.at(-1),{shadows:0,color:0,crt:0,fog:0,dust:0});assert.equal(f.nodes.get('.stage-crt').style.opacity,'0');
   original.listeners.click();assert.equal(f.calls.at(-1).color,.8);assert.equal(f.calls.at(-1).shadows,0);
   f.nodes.get('[data-fx-reset]').listeners.click();assert.deepEqual(f.calls.at(-1),defaults);
   assert.equal(original.attributes['aria-pressed'],'false');
@@ -33,6 +33,7 @@ test('valori limitati e controlli con etichette associate per ogni stage',()=>{
   const html=markup('villa-arduino');
   assert.match(html,/for="villa-arduino-color-amount"/);
   assert.match(html,/id="villa-arduino-crt-on"/);
-  assert.equal((html.match(/type="range"/g)||[]).length,3);
+  assert.equal((html.match(/type="range"/g)||[]).length,5);
+  assert.match(html,/Foschia lontana/);assert.match(html,/Polvere in pixel art/);
   assert.match(html,/aria-live="polite"/);
 });

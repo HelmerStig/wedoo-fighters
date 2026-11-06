@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
-const {cloudPositions,install}=require('../stage-player.js');
+const {cloudPositions,install,dustParticles}=require('../stage-player.js');
 const stages=require('../stages-catalog.js');
 const demo=path.resolve(__dirname,'..');
 
@@ -38,7 +38,7 @@ test('nuvole centrate con abbondaggio nativo, moto verso sinistra e loop senza s
 
 function fixture(reduced=false,withFighters=false){
   function node(){return {listeners:{},hidden:false,disabled:false,textContent:'',setAttribute(){},addEventListener(k,f){this.listeners[k]=f;},removeEventListener(k){delete this.listeners[k];}};}
-  const images=[],draws=[],transforms=[],fills=[],buffers=[],callbacks=new Map();let next=0;
+  const images=[],draws=[],transforms=[],fills=[],paint=[],buffers=[],callbacks=new Map();let next=0;
   const document=node(),media=node();document.hidden=false;media.matches=reduced;
   document.createElement=()=>{
     const calls=[];
@@ -54,7 +54,7 @@ function fixture(reduced=false,withFighters=false){
   canvas.setPointerCapture=id=>{captured=id;};
   canvas.hasPointerCapture=id=>captured===id;
   canvas.releasePointerCapture=()=>{captured=null;};
-  canvas.getContext=()=>({clearRect(){},fillRect(...args){fills.push(args);},drawImage(...args){draws.push(args);},save(){},restore(){},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
+  canvas.getContext=()=>({clearRect(){paint.push({kind:'clear'});},fillRect(...args){fills.push(args);paint.push({kind:'fill',color:this.fillStyle,alpha:this.globalAlpha,args});},drawImage(...args){draws.push(args);paint.push({kind:'image',image:args[0]});},save(){},restore(){},translate(...args){transforms.push(['translate',...args]);},scale(...args){transforms.push(['scale',...args]);}});
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(demo,'catalog.js'),'utf8'),sandbox);
   const fighters=withFighters?stages[0].fighters.map(f=>({...f,animation:sandbox.window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
   const player=install(canvas,button,status,{...stages[0],fighters},env);
@@ -67,8 +67,50 @@ function fixture(reduced=false,withFighters=false){
     image.onload();
   });return player.loaded;}
   function tick(time){const pending=[...callbacks.values()];callbacks.clear();pending.forEach(f=>f(time));}
-  return {canvas,button,status,player,images,draws,transforms,fills,buffers,callbacks,document,media,load,tick};
+  return {canvas,button,status,player,images,draws,transforms,fills,paint,buffers,callbacks,document,media,load,tick};
 }
+
+test('foschia soltanto dietro villa e personaggi; polvere a terra coerente con la camera',async()=>{
+  const f=fixture(false,true);await f.load();
+  f.paint.length=0;f.player.setEffects({fog:.4});
+  const haze=f.paint.filter(p=>p.kind==='fill');assert.ok(haze.length>0);
+  assert.ok(haze.every(p=>p.color==='#cbddec'&&p.alpha<=.4*.24&&p.args[1]<1080*.7));
+  const firstFog=f.paint.indexOf(haze[0]),lastFog=f.paint.indexOf(haze.at(-1));
+  assert.ok(firstFog>f.paint.findIndex(p=>p.image===f.images[1]));
+  assert.ok(lastFog<f.paint.findIndex(p=>p.image===f.images[3]),'nuvole vicine, villa e personaggi restano davanti alla foschia');
+  f.paint.length=0;f.player.setEffects({dust:.45});
+  const particles=f.paint.filter(p=>p.kind==='fill');assert.ok(particles.length>0);
+  assert.ok(particles.every(p=>p.args[1]>1080*.8&&p.args[2]===p.args[3]&&[2,4,6].includes(p.args[2])));
+  assert.ok(f.paint.indexOf(particles[0])>f.paint.findIndex(p=>p.image===f.images[4]));
+  assert.ok(f.paint.indexOf(particles.at(-1))<f.paint.findIndex(p=>p.image===f.images[5]));
+  f.paint.length=0;f.canvas.listeners.keydown({key:'Home',preventDefault(){}});
+  const worldParticles=f.paint.filter(p=>p.kind==='fill');
+  for(const particle of particles){
+    const x=particle.args[0]+315;
+    if(x+particle.args[2]<0||x>1920)continue;
+    const same=worldParticles.find(p=>p.args[0]===x&&p.args[1]===particle.args[1]);
+    assert.ok(same,'il drag trasla i granelli senza cambiare la fase');
+  }
+  f.paint.length=0;f.player.setEffects({});assert.equal(f.paint.filter(p=>p.kind==='fill').length,0);
+  f.player.destroy();
+});
+
+test('polvere deterministica e limitata, animata anche con le nuvole ferme e statica con movimento ridotto',async()=>{
+  assert.equal(dustParticles(2550,1080,0,0).length,0);
+  const a=dustParticles(2550,1080,0,.45),b=dustParticles(2550,1080,500,.45);
+  assert.equal(a.length,160);assert.equal(dustParticles(2550,1080,0,.65).length,160);assert.notDeepEqual(a,b);
+  assert.deepEqual(a,dustParticles(2550,1080,0,.45));
+  assert.ok(a.every(p=>p.x%2===0&&p.y%2===0&&p.alpha>=0&&p.alpha<=.45*.65));
+  const f=fixture();await f.load();f.button.listeners.click();assert.equal(f.callbacks.size,0);
+  f.player.setEffects({dust:.45});assert.equal(f.callbacks.size,1);
+  f.paint.length=0;f.tick(0);f.tick(100);
+  const lastDraw=f.paint.slice(f.paint.map(p=>p.kind).lastIndexOf('clear'));
+  assert.ok(lastDraw.some(p=>p.kind==='fill'));
+  f.player.setEffects({dust:0});f.tick(200);assert.equal(f.callbacks.size,0);
+  f.player.destroy();
+  const reduced=fixture(true);await reduced.load();reduced.player.setEffects({dust:.45,fog:.4});
+  assert.equal(reduced.callbacks.size,0);assert.ok(reduced.paint.some(p=>p.kind==='fill'));reduced.player.destroy();
+});
 
 test('effetti reversibili: colorazione limitata ai pixel dei personaggi, ombre ancorate al mondo e frame invariati',async()=>{
   const f=fixture(false,true);await f.load();f.tick(0);f.tick(100);

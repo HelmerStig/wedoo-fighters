@@ -5,10 +5,11 @@ Catalogo e banco di prova degli asset: lo sviluppo del gioco avverra in Godot.
 Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
 
 EFFETTI DI ANTEPRIMA DEGLI STAGE
-Sotto ogni stage trovi tre controlli indipendenti, con checkbox e intensita:
-ombre a terra (55%), toni caldi sui personaggi (35%) e CRT leggero (100%).
+Sotto ogni stage trovi cinque controlli indipendenti, con checkbox e intensita:
+ombre a terra (55%), toni caldi sui personaggi (35%), CRT leggero (100%),
+foschia lontana (40%) e polvere in pixel art (100%).
 Vista originale sospende gli effetti conservando le regolazioni. Ripristina
-riattiva i tre effetti con le intensita iniziali. Le regolazioni valgono per
+riattiva i cinque effetti con le intensita iniziali. Le regolazioni valgono per
 la sessione della pagina; non vengono scritte negli asset.
 
 Parametri di riferimento per riprodurre il risultato in Godot:
@@ -23,6 +24,17 @@ Parametri di riferimento per riprodurre il risultato in Godot:
   Scanline #080610 al 22%, 1 pixel ogni 4 pixel della vista visualizzata.
   Vignettatura ellittica: centro trasparente fino al 45%, bordo #0f0814 al 42%.
   Non sono presenti sfarfallio, distorsione o aberrazione cromatica.
+- Foschia: colore #cbddec in bande orizzontali di 24 px, fino al 70% dell'altezza;
+  massima densita al 45% dell'altezza. Opacita massima = intensita * 0.24 * profondita.
+  Due passaggi: dopo le nuvole lontane (profondita 1), dopo le intermedie (0.35).
+  Villa, nuvole vicine e personaggi sono disegnati successivamente.
+- Polvere: 160 granelli distribuiti nel mondo; dimensioni 2,4,6 px, colori
+  #d3bd99, #b49d7d, #e1cba7. Il cursore modifica l'opacita, non il numero.
+  Opacita = intensita * 0.65 * sin(pi * fase); durata 4-7.6 secondi.
+  Deriva lenta verso sinistra e verso l'alto vicino al pavimento, posizioni
+  arrotondate a una griglia di 2 px. Sono granelli ambientali, senza sbuffi da passi.
+  La camera trasla le particelle; pausa nuvole non ferma la polvere.
+  Il movimento ridotto mantiene le particelle statiche. Nessuna modifica agli asset.
 I valori sono un riferimento artistico per Godot: la resa finale andra
 confrontata nel motore, soprattutto per scanline, scala e gestione del colore.
 Configurazione e controlli: stage-effects.js; rendering di ombre e colore:

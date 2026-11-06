@@ -10,6 +10,18 @@
     for(;x<stageWidth;x+=layerWidth)positions.push(x);
     return positions;
   }
+  function dustParticles(width,height,elapsed,intensity){
+    const amount=Number.isFinite(intensity)?Math.max(0,Math.min(1,intensity)):0;
+    const count=amount>0?160:0;
+    return Array.from({length:count},(_,i)=>{
+      const life=4000+i%5*900;
+      const phase=(((elapsed+i*1730)%life)+life)%life/life;
+      const x=(((i*401+137-phase*(30+i%4*12))%width)+width)%width;
+      const y=height*(0.96-(i%7)*0.006)-phase*(24+i%4*12);
+      return {x:Math.round(x/2)*2,y:Math.round(y/2)*2,size:2+i%3*2,
+        alpha:amount*0.65*Math.sin(Math.PI*phase),color:['#d3bd99','#b49d7d','#e1cba7'][i%3]};
+    });
+  }
   function install(canvas,button,status,stage,env=globalThis){
     const context=canvas.getContext('2d');
     const media=env.matchMedia('(prefers-reduced-motion: reduce)');
@@ -21,7 +33,30 @@
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
     const assets=[...layers,...fighters];
-    let effects={shadows:0,color:0};
+    let effects={shadows:0,color:0,fog:0,dust:0};
+    function fog(depth){
+      if(!effects.fog)return;
+      context.save();context.fillStyle='#cbddec';
+      const end=stage.height*0.7;
+      for(let y=0;y<end;y+=24){
+        const altitude=y/stage.height;
+        const weight=altitude<0.45?0.12+altitude/0.45*0.88:Math.max(0,(0.7-altitude)/0.25);
+        context.globalAlpha=effects.fog*0.24*depth*weight;
+        context.fillRect(0,y,viewportWidth,Math.min(24,end-y));
+      }
+      context.restore();
+    }
+    function dust(){
+      if(!effects.dust)return;
+      context.save();
+      for(const particle of dustParticles(stage.width,stage.height,fighterElapsed,effects.dust)){
+        const x=particle.x-camera;
+        if(x+particle.size<0||x>viewportWidth)continue;
+        context.fillStyle=particle.color;context.globalAlpha=particle.alpha;
+        context.fillRect(x,particle.y,particle.size,particle.size);
+      }
+      context.restore();
+    }
     function shadow(fighter){
       if(!effects.shadows)return;
       context.save();
@@ -56,7 +91,9 @@
       for(const layer of layers){
         const positions=layer.speed?cloudPositions(stage.width,layer.width,elapsed,layer.speed):[(stage.width-layer.width)/2];
         for(const x of positions)context.drawImage(layer.imageObject,x-camera,0);
+        if(layer.haze)fog(layer.haze);
       }
+      dust();
       fighters.forEach(shadow);
       for(const fighter of fighters){
         const animation=fighter.animation;
@@ -76,7 +113,7 @@
       button.setAttribute('aria-pressed',String(playing));
     }
     function schedule(){
-      if(!disposed&&ready&&(playing||(animateFighters&&fighters.length))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
+      if(!disposed&&ready&&(playing||(animateFighters&&(fighters.length||effects.dust>0)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
     }
     function tick(time){
       request=null;
@@ -149,8 +186,8 @@
     });
     return {loaded,setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
-      effects={shadows:clamp(values.shadows),color:clamp(values.color)};
-      draw();
+      effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
+      draw();schedule();
     },destroy(){
       disposed=true;resetClock();
       button.removeEventListener('click',toggle);
@@ -162,5 +199,5 @@
       fighters.forEach(fighter=>{if(fighter.colorCanvas){fighter.colorCanvas.width=0;fighter.colorCanvas.height=0;}});
     }};
   }
-  return Object.freeze({install,cloudPositions});
+  return Object.freeze({install,cloudPositions,dustParticles});
 });
