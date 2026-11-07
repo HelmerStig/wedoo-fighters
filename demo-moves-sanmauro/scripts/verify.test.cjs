@@ -7,6 +7,51 @@ const {createHash}=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/manifest.json'),'utf8'));
 
+test('pugno pesante: fonti esatte, sequenze Godot, estensione 500 ms e idle a 1000 ms',()=>{
+  const {advanceAnimation}=require('../player-core.js');
+  const peaks={arianna:23,bue:15,mangler:40,mileto:16,oscare:15,peirolo:10,torpe:15};
+  for(const c of manifest.characters){
+    const a=c.animations.find(a=>a.id==='heavy-punch');
+    assert.equal(a.name,'Pugno pesante');assert.equal(a.impactFrame,peaks[c.id]);
+    assert.equal(a.impactMs,500);assert.equal(a.durationMs,1000);assert.equal(a.returnToIdleMs,1000);
+    assert.equal(a.frameDurations.at(-1),0);
+    assert.ok(!a.sourcePath.includes('jump_')&&!a.sourcePath.includes('low'));
+    if(c.id==='mangler'){
+      assert.equal(a.sourcePath,'assets/sprites/characters/mangler/moves/00-heavy_punch_high.png');
+      assert.equal(a.sourceAnimation,'heavy_punch');assert.deepEqual(a.sourceTransform.scale,[.85,.85]);
+      const indices=[...Array.from({length:49},(_,i)=>i),...Array.from({length:21},(_,i)=>40-i)];
+      assert.deepEqual(a.sourceFrameIndices,indices);
+      assert.deepEqual(a.frames,[...indices,0].map(i=>[i%7*512,Math.floor(i/7)*512,512,512]));
+      assert.equal(a.sourceFrameDurations.length,70);assert.equal(a.terminalIdleAdded,true);
+    }else{
+      assert.deepEqual(a.frames,a.sourceFrameIndices.map(i=>[i%7*512,Math.floor(i/7)*512,512,512]));
+    }
+    for(const speed of [.5,1,2]){
+      const origin={frame:0,remainder:0};
+      for(const cycle of [0,1,10]){
+        assert.equal(advanceAnimation(origin,(cycle*1000+499.99)/speed,a,speed,true).frame,a.impactFrame-1);
+        assert.equal(advanceAnimation(origin,(cycle*1000+500)/speed,a,speed,true).frame,a.impactFrame);
+      }
+      assert.equal(advanceAnimation(origin,999.99/speed,a,speed,false).frame,a.frames.length-2);
+      const final=advanceAnimation(origin,1000/speed,a,speed,false);
+      assert.equal(final.ended,true);assert.equal(final.frame,a.frames.length-1);
+      assert.equal(advanceAnimation(origin,1000/speed,a,speed,true).frame,0);
+    }
+  }
+});
+
+test('pugno pesante: confronto per mossa, report e accesso dal personaggio',()=>{
+  const f=fixture({page:'moves',search:'?move=heavy-punch'});
+  assert.equal(f.nodes.get('#move-report').hidden,false);
+  assert.equal(f.nodes.get('#move-report-link').href,'reports/heavy-punch-timing.html');
+  assert.equal(f.galleries[0].data.animations.length,7);
+  const detail=fixture({page:'character',search:'?id=mangler&anim=heavy-punch'});
+  assert.equal(detail.galleries[0].options.highlightId,'heavy-punch');
+  const html=fs.readFileSync(path.join(root,'reports/heavy-punch-timing.html'),'utf8');
+  assert.match(html,/1000 ms \(1 s\)/);assert.match(html,/500 ms \(0,5 s\)/);
+  assert.equal((html.match(/data-character=/g)||[]).length,7);
+});
+
 test('ritratti originali Godot locali accanto al nome di tutti i personaggi',()=>{
   const filenames={arianna:'arianna-portrait-v2.png',mangler:'mangler-portrait-v1.png',bue:'bue-portrait-v1.png',
     mileto:'mileto-portrait-v1.png',oscare:'oscare-portrait-slim-bust.png',peirolo:'peirolo-portrait-v1.png',torpe:'torpe-portrait-v1.png'};
@@ -144,21 +189,22 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
   const koCounts={arianna:25,bue:49,mangler:25,mileto:49,oscare:49,peirolo:49,torpe:49};
   const guardCounts={arianna:[16,13,16],bue:[10,6,11],mangler:[14,8,11],mileto:[6,6,11],oscare:[10,6,11],peirolo:[6,6,11],torpe:[9,6,11]};
   const hurtCounts={arianna:[8,15,7,12],bue:[18,11,11,12],mangler:[16,16,10,12],mileto:[14,11,11,12],oscare:[8,11,11,12],peirolo:[9,11,11,12],torpe:[8,11,11,12]};
+  const heavyCounts={arianna:49,bue:21,mangler:71,mileto:38,oscare:28,peirolo:25,torpe:31};
   const mediumCounts={arianna:49,bue:47,mangler:42,mileto:24,oscare:43,peirolo:29,torpe:27};
   const punchCounts={arianna:17,bue:13,mangler:18,mileto:13,oscare:13,peirolo:13,torpe:13};
   const crouchCounts={arianna:19,bue:7,mangler:25,mileto:13,oscare:9,peirolo:11,torpe:7};
   for(const c of manifest.characters){
-    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch']);
+    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
     for(const a of c.animations){
       const sheet=fs.readFileSync(path.join(root,a.image));
       assert.equal(createHash('sha256').update(sheet).digest('hex'),a.sourceSha256,c.name+' '+a.id);
       const width=sheet.readUInt32BE(16),height=sheet.readUInt32BE(20);
       const guard=['block-high','block-mid','block-low'].indexOf(a.id);
       const hurt=['hurt-high','hurt-medium','hurt-low','hurt-crouched'].indexOf(a.id);
-      assert.equal(a.frames.length,guard>=0?guardCounts[c.id][guard]*2-1:hurt>=0?hurtCounts[c.id][hurt]:({idle:idleCounts,walk:walkCounts,jump:jumpCounts,crouch:crouchCounts,victory:victoryCounts,ko:koCounts,'light-punch':punchCounts,'medium-punch':mediumCounts})[a.id][c.id]);
+      assert.equal(a.frames.length,guard>=0?guardCounts[c.id][guard]*2-1:hurt>=0?hurtCounts[c.id][hurt]:({idle:idleCounts,walk:walkCounts,jump:jumpCounts,crouch:crouchCounts,victory:victoryCounts,ko:koCounts,'light-punch':punchCounts,'medium-punch':mediumCounts,'heavy-punch':heavyCounts})[a.id][c.id]);
       const guardFps=c.id==='arianna'?48:c.id==='mangler'?(guard===0?48:24):(guard===2?48:24);
       const hurtFps=a.id==='hurt-crouched'?24:c.id==='arianna'?(hurt===1?48:24):c.id==='mangler'?24:48;
-      assert.equal(a.playbackFps,a.id==='medium-punch'?a.frames.length*1000/750:a.id==='light-punch'?a.frames.length*1000/500:a.id==='jump'?a.frames.length:guard>=0?a.frames.length*2:a.id==='crouch'?a.frames.length*4:hurt>=0?a.frames.length*2:24);
+      assert.equal(a.playbackFps,a.id==='heavy-punch'?a.frames.length:a.id==='medium-punch'?a.frames.length*1000/750:a.id==='light-punch'?a.frames.length*1000/500:a.id==='jump'?a.frames.length:guard>=0?a.frames.length*2:a.id==='crouch'?a.frames.length*4:hurt>=0?a.frames.length*2:24);
       if(hurt>=0)assert.equal(a.sourceFps,hurtFps);
       if(guard>=0)assert.equal(a.sourceFps,guardFps);
       assert.equal(width,a.sheetWidth);assert.equal(height,a.sheetHeight);
@@ -174,7 +220,7 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
     }
     const portrait=fs.readFileSync(path.join(root,c.thumbnail));
     assert.equal(portrait.readUInt32BE(16),512);assert.equal(portrait.readUInt32BE(20),512);
-    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-crouched.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','light-punch.png','portrait.png','victory.png','walk.png','medium-punch.png',...(c.id==='mangler'?['medium-punch-preparation.png','medium-punch-hit.png','medium-punch-to-idle.png']:[])].sort());
+    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-crouched.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','light-punch.png','portrait.png','victory.png','walk.png','medium-punch.png','heavy-punch.png',...(c.id==='mangler'?['medium-punch-preparation.png','medium-punch-hit.png','medium-punch-to-idle.png']:[])].sort());
   }
 });
 
@@ -344,7 +390,7 @@ function fixture({page='roster',search=''}={}){
 test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vuoto',()=>{
   const f=fixture(),search=f.nodes.get('#character-search');
   assert.match(f.nodes.get('#character-grid').innerHTML,/personaggio.html\?id=torpe/);
-  assert.match(f.nodes.get('#character-grid').innerHTML,/15 animazioni disponibili/);
+  assert.match(f.nodes.get('#character-grid').innerHTML,/16 animazioni disponibili/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/mosse.html\?move=walk/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/Per personaggio/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/href="stages.html"/);
@@ -359,7 +405,7 @@ test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vu
 test('dettaglio personaggio mostra le tre mosse con navigazione e highlight',()=>{
   const f=fixture({page:'character',search:'?id=torpe&anim=walk'});
   assert.equal(f.document.title,'Torpe · Animazioni · Sanmauro Fighters');
-  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch']);
+  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
   assert.equal(f.galleries[0].data.animations[1].frames.length,21);
   assert.equal(f.galleries[0].options.highlightId,'walk');
   assert.match(f.nodes.get('#character-detail').innerHTML,/personaggio.html\?id=peirolo&anim=walk/);
@@ -418,7 +464,7 @@ test('parate alta/media/bassa per sette personaggi: fonti, tagli, scala e naviga
     const detail=fixture({page:'character',search:'?id=mangler&anim='+id});
     assert.equal(detail.galleries[0].options.highlightId,id);
   }
-  assert.deepEqual(require('../move-groups.js').group(manifest.characters).map(g=>g.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch']);
+  assert.deepEqual(require('../move-groups.js').group(manifest.characters).map(g=>g.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
 });
 
 test('per mossa confronta sette camminate; ricerca distrugge e ricrea la galleria',()=>{

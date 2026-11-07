@@ -3,11 +3,11 @@ SANMAURO FIGHTERS — DEMO MOSSE
 Schermata principale con i sette personaggi del vecchio progetto, ricerca
 per nome, menu mobile e anteprime idle su hover/focus.
 Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
-ogni personaggio ha quindici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
+ogni personaggio ha sedici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
 Parata media, Parata bassa, Hurt alto, Hurt medio, Hurt basso, Hurt accovacciato,
-Vittoria, Sconfitta, Pugno leggero e Pugno medio.
+Vittoria, Sconfitta, Pugno leggero, Pugno medio e Pugno pesante.
 Il menu Per mossa usa gli id idle, walk, jump, crouch, block-high, block-mid,
-block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory, ko, light-punch e medium-punch:
+block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory, ko, light-punch, medium-punch e heavy-punch:
 confronta la stessa animazione sui sette personaggi, filtrabili per nome.
 Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
 e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
@@ -37,7 +37,7 @@ assets/characters/<id>/portrait.png: anteprima derivata dalla prima cella idle,
 normalizzata con lo stesso allineamento dei player su un canvas 512 × 512.
 assets/manifest.json: frame, dimensioni e provenienza con SHA-256.
 catalog.js: copia incorporata per funzionare anche da file://.
-Sono copiati soltanto gli asset delle quindici mosse realmente referenziate.
+Sono copiati soltanto gli asset delle sedici mosse realmente referenziate.
 Fonte: F:/Personali/Godot/assets/sprites/characters, senza modifiche ai sorgenti.
 Per Arianna è usata basic-moves/idle.png, come nel controller Godot;
 per Mangler 01-mangler-idle.png; per gli altri il foglio indicato nella scena.
@@ -431,3 +431,25 @@ Oscare slim-bust. PNG originali copiati in assets/portraits, senza ridimensionar
 Manifest: portrait e portraitSource; thumbnail resta l'anteprima idle del roster.
 Rigenerazione: python demo-moves-sanmauro/scripts/import-portraits.py
 L'importazione completa conserva questa scelta. Nessun riferimento esterno.
+
+PUGNO PESANTE
+Integrato per tutti con estensione a 500 ms, ciclo 1000 ms a 1x e idle terminale
+esatto al termine (durata zero del frame finale). Loop attivo di default.
+Arianna: basic-moves/strong-punch/strong-punch.png, 49 frame, 48 fps sorgenti.
+Mangler: moves/00-heavy_punch_high.png, alias heavy_punch. Godot usa 49 frame
+0-48 poi 40-20 inversi, 70 frame a 48 fps. La demo aggiunge solo la posa
+iniziale terminale per esplicitare il passaggio allo stato idle, 71 frame
+in tutto. Scala reworked 0.85, posizione (0,-115), ancoraggio comune. Il pugno
+raggiunge il bordo destro del PNG originale; nessun ritaglio aggiuntivo.
+Bue: Bue-strong_punch.png, 21 frame, 24 fps sorgenti.
+Mileto: Mileto-strong_punch.png, 38 frame, 30 fps.
+Oscare: Oscare-strong_punch.png, 28 frame, 30 fps.
+Peiro: Peiro-strong_punch.png, 25 frame, 24 fps.
+Torpe: Torpe-strong_punch.png, 31 frame, 30 fps.
+Il campo strong_punch_sheet viene letto per nome esatto, distinto da jump e low.
+Frame estensione (indici da 0): Arianna 23, Bue 15, Mangler 40, Mileto 16,
+Oscare 15, Peiro 10, Torpe 15. Config assets/heavy-punch-timing.json con
+hash PNG/sequenza; rivedere le selezioni dopo un cambio degli asset.
+Report HTML/CSV e pose: reports/heavy-punch-timing.html, sotto il titolo.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-heavy-punch-report.py
+Importazione e altri report lo rigenerano automaticamente.

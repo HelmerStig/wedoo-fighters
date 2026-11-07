@@ -2,7 +2,7 @@ WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
 Aggiornato: 7 novembre 2026
 
 SCOPO E STATO
-Totale attuale Sanmauro: 105 animazioni, 15 per personaggio. È presente anche
+Totale attuale Sanmauro: 112 animazioni, 16 per personaggio. È presente anche
 Hurt accovacciato (hurt-crouched): i 12 frame a 24 fps della configurazione
 Fighter.gd, durata 500 ms, senza recupero inverso concatenato. Mangler usa
 scala reworked 0.85 per questa reazione, mentre gli hurt in piedi usano 0.70.
@@ -310,3 +310,13 @@ Ritratti accanto al nome in personaggio.html: PNG selezionati da Godot
 CharacterSelect.gd, copiati in demo-moves-sanmauro/assets/portraits.
 Arianna portrait-v2; Oscare portrait-slim-bust; altri cinque portrait-v1.
 Rigenerare con scripts/import-portraits.py; richiamato anche da import-roster.py.
+
+Pugno pesante Sanmauro integrato per tutti: estensione 0.5 s, durata 1 s,
+idle terminale esatto a 1000 ms. Proporzioni fisiche e centratura conservate.
+Mangler: solo moves/00-heavy_punch_high.png, 49 frame + recupero inverso
+40-20 di Godot, scala 0.85. La demo aggiunge la posa iniziale terminale
+per il passaggio idle (70 frame sorgenti + 1 terminale). Il PNG originale
+arriva al bordo destro durante il colpo, senza ulteriori tagli della demo.
+Altri conteggi: Arianna 49, Bue 21, Mileto 38, Oscare 28, Peiro 25, Torpe 31.
+assets/heavy-punch-timing.json, reports/heavy-punch-timing.html/.csv,
+rigenerazione con scripts/build-heavy-punch-report.py o import-roster.py.
