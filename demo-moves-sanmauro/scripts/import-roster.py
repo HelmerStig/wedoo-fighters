@@ -21,6 +21,7 @@ from medium_punch_assets import load_medium_punch
 from medium_punch_timing import apply_medium_punch_timing
 from heavy_punch_assets import load_heavy_punch
 from heavy_punch_timing import apply_heavy_punch_timing
+from remaining_moves import import_remaining
 from character_proportions import apply_proportions, write_portraits
 
 root = Path(__file__).resolve().parents[1]
@@ -356,6 +357,8 @@ apply_crouch_timing(data,json.loads((root/'assets/crouch-timing.json').read_text
 apply_light_punch_timing(data,json.loads((root/'assets/light-punch-timing.json').read_text(encoding='utf-8')))
 apply_medium_punch_timing(data,json.loads((root/'assets/medium-punch-timing.json').read_text(encoding='utf-8')))
 apply_heavy_punch_timing(data,json.loads((root/'assets/heavy-punch-timing.json').read_text(encoding='utf-8')))
+if (root/'assets/remaining-moves-source.json').exists():
+    import_remaining(root,source,data)
 (root / 'assets' / 'manifest.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 (root / 'catalog.js').write_text('// Generato da scripts/import-roster.py.\nwindow.SANMAURO_CATALOG = ' + json.dumps(data, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 print(f'Copiate {sum(len(c["animations"]) for c in characters)} animazioni e {len(characters)} anteprime in {root / "assets"}')

@@ -41,3 +41,7 @@ page+='<p><a href="heavy-punch-timing.csv" download>Scarica CSV</a> · <a href="
 page+=''.join(rows)+'</tbody></table></div></main></body></html>'
 (report/'heavy-punch-timing.html').write_text(page,encoding='utf-8')
 print('Report Pugno pesante: HTML, CSV e 7 confronti di pose; estensione a 500 ms e durata comune 1000 ms.')
+import subprocess
+import sys
+if (root/'assets/remaining-moves-source.json').exists():
+    subprocess.run([sys.executable,str(root/'scripts/build-remaining-reports.py')],check=True)

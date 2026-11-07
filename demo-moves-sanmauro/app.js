@@ -83,7 +83,7 @@
     }else{
       document.title=currentMove.name+' · Per mossa · Sanmauro Fighters';
       $('#breadcrumb-name').textContent=currentMove.name;$('#move-name').textContent=currentMove.name;
-      const reportPath=['jump','crouch','light-punch','medium-punch','heavy-punch'].includes(currentMove.id)||currentMove.id.startsWith('block-')||currentMove.id.startsWith('hurt-')?'reports/'+currentMove.id+'-timing.html':null;
+      const reportPath=['jump','crouch','light-punch','medium-punch','heavy-punch'].includes(currentMove.id)||currentMove.id.startsWith('block-')||currentMove.id.startsWith('hurt-')||currentMove.animations.some(a=>a.remainingImport)?'reports/'+currentMove.id+'-timing.html':null;
       $('#move-report').hidden=!reportPath;
       if(reportPath){$('#move-report-link').href=reportPath;$('#move-report-link').textContent='Apri il report: '+currentMove.name+' →';}
       $('#move-total-count').textContent=currentMove.animations.length;renderMove();

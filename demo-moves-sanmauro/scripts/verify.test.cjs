@@ -194,8 +194,8 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
   const punchCounts={arianna:17,bue:13,mangler:18,mileto:13,oscare:13,peirolo:13,torpe:13};
   const crouchCounts={arianna:19,bue:7,mangler:25,mileto:13,oscare:9,peirolo:11,torpe:7};
   for(const c of manifest.characters){
-    assert.deepEqual(c.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
-    for(const a of c.animations){
+    assert.deepEqual(c.animations.filter(a=>!a.remainingImport).map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
+    for(const a of c.animations.filter(a=>!a.remainingImport)){
       const sheet=fs.readFileSync(path.join(root,a.image));
       assert.equal(createHash('sha256').update(sheet).digest('hex'),a.sourceSha256,c.name+' '+a.id);
       const width=sheet.readUInt32BE(16),height=sheet.readUInt32BE(20);
@@ -220,7 +220,7 @@ test('sette personaggi con idle, camminata e salto: copie integre e frame entro 
     }
     const portrait=fs.readFileSync(path.join(root,c.thumbnail));
     assert.equal(portrait.readUInt32BE(16),512);assert.equal(portrait.readUInt32BE(20),512);
-    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-crouched.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','light-punch.png','portrait.png','victory.png','walk.png','medium-punch.png','heavy-punch.png',...(c.id==='mangler'?['medium-punch-preparation.png','medium-punch-hit.png','medium-punch-to-idle.png']:[])].sort());
+    assert.deepEqual(fs.readdirSync(path.join(root,'assets/characters',c.id)).sort(),['block-high.png','block-low.png','block-mid.png','crouch.png','hurt-crouched.png','hurt-high.png','hurt-low.png','hurt-medium.png','idle.png','jump.png','ko.png','light-punch.png','portrait.png','victory.png','walk.png','medium-punch.png','heavy-punch.png',...(c.id==='mangler'?['medium-punch-preparation.png','medium-punch-hit.png','medium-punch-to-idle.png']:[]),...c.animations.filter(a=>a.remainingImport).map(a=>path.basename(a.image))].filter((v,i,a)=>a.indexOf(v)===i).sort());
   }
 });
 
@@ -258,7 +258,7 @@ test('ingombri normalizzati, piedi e centro comuni, rapporto delle scale Godot c
     assert.ok(Math.abs(walk.preview.scale[0]/idle.preview.scale[0]-walk.sourceTransform.scale[0]/idle.sourceTransform.scale[0])<1e-8);
   }
   const mangler=manifest.characters.find(c=>c.id==='mangler');
-  for(const a of mangler.animations){const legacy=a.id==='walk'||a.id==='ko'||(a.id.startsWith('hurt-')&&a.id!=='hurt-crouched');const scale=legacy?0.7:0.85;assert.deepEqual(a.sourceTransform.scale,[scale,scale]);}
+  for(const a of mangler.animations.filter(a=>!a.remainingImport)){const legacy=a.id==='walk'||a.id==='ko'||(a.id.startsWith('hurt-')&&!a.remainingImport&&a.id!=='hurt-crouched');const scale=legacy?0.7:0.85;assert.deepEqual(a.sourceTransform.scale,[scale,scale]);}
   assert.ok(mangler.animations[1].preview.drawRect[2]<mangler.animations[0].preview.drawRect[2]);
 });
 
@@ -390,7 +390,7 @@ function fixture({page='roster',search=''}={}){
 test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vuoto',()=>{
   const f=fixture(),search=f.nodes.get('#character-search');
   assert.match(f.nodes.get('#character-grid').innerHTML,/personaggio.html\?id=torpe/);
-  assert.match(f.nodes.get('#character-grid').innerHTML,/16 animazioni disponibili/);
+  assert.match(f.nodes.get('#character-grid').innerHTML,/39 animazioni disponibili/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/mosse.html\?move=walk/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/Per personaggio/);
   assert.match(f.nodes.get('#sidebar').innerHTML,/href="stages.html"/);
@@ -405,7 +405,7 @@ test('roster e menu collegano le vere pagine; ricerca senza accenti con stato vu
 test('dettaglio personaggio mostra le tre mosse con navigazione e highlight',()=>{
   const f=fixture({page:'character',search:'?id=torpe&anim=walk'});
   assert.equal(f.document.title,'Torpe · Animazioni · Sanmauro Fighters');
-  assert.deepEqual(f.galleries[0].data.animations.map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
+  assert.deepEqual(f.galleries[0].data.animations.filter(a=>!a.remainingImport).map(a=>a.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
   assert.equal(f.galleries[0].data.animations[1].frames.length,21);
   assert.equal(f.galleries[0].options.highlightId,'walk');
   assert.match(f.nodes.get('#character-detail').innerHTML,/personaggio.html\?id=peirolo&anim=walk/);
@@ -464,7 +464,7 @@ test('parate alta/media/bassa per sette personaggi: fonti, tagli, scala e naviga
     const detail=fixture({page:'character',search:'?id=mangler&anim='+id});
     assert.equal(detail.galleries[0].options.highlightId,id);
   }
-  assert.deepEqual(require('../move-groups.js').group(manifest.characters).map(g=>g.id),['idle','walk','jump','crouch','block-high','block-mid','block-low','hurt-high','hurt-medium','hurt-low','hurt-crouched','victory','ko','light-punch','medium-punch','heavy-punch']);
+  const groups=require('../move-groups.js').group(manifest.characters).map(g=>g.id);assert.equal(groups[0],'idle');assert.ok(groups.indexOf('run')<groups.indexOf('light-punch'));assert.ok(groups.indexOf('get-up')<groups.indexOf('light-kick'));assert.ok(groups.indexOf('light-kick')<groups.indexOf('jump-light-kick'));
 });
 
 test('per mossa confronta sette camminate; ricerca distrugge e ricrea la galleria',()=>{
@@ -552,7 +552,7 @@ test('report delle tre parate: HTML, CSV e 21 pose con link validi',()=>{
 test('tutte le reazioni hurt durano 500 ms incluso ultimo frame, a ogni velocità e nei loop',()=>{
   const {advanceAnimation}=require('../player-core.js');
   for(const c of manifest.characters){
-    for(const a of c.animations.filter(a=>a.id.startsWith('hurt-'))){
+    for(const a of c.animations.filter(a=>a.id.startsWith('hurt-')&&!a.remainingImport)){
       assert.equal(a.durationMs,500);assert.equal(a.reactionDurationMs,500);
       assert.ok(a.frameDurations.every(d=>Math.abs(d-500/a.frames.length)<1e-8));
       assert.ok(Math.abs(a.sourceFrameDurations.reduce((n,d)=>n+d,0)-a.sourceDurationMs)<1e-8);

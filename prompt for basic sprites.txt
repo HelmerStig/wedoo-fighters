@@ -123,3 +123,4 @@ La massima estensione deve essere raggiunta a 0.45s, fai durare l'animazione 0.7
 ora di fianco al nome in personaggio.htm c'è un immagine, sostituiscila con il portarit usato in godot, importa gli assets nella cartella /demo-moves-sanmauro/assets/portraits
 
 ora passa a tutte le altre mosse presenti su godot ad eccezione delle special e delle super che vedremo on seguito. per le mosse light medium e heavy, uso lo stesso timing che abbiamo usato per il punch.
+se hai dubbi chiedi
