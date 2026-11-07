@@ -1,0 +1,110 @@
+[
+  {
+    "character": "mangler",
+    "move": "cymbals",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "mangler",
+    "move": "spin",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "mangler",
+    "move": "drums",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "oscare",
+    "move": "cigarette",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "oscare",
+    "move": "smoke",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "torpe",
+    "move": "bottle",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "torpe",
+    "move": "welding",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "mileto",
+    "move": "shoulder",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "mileto",
+    "move": "guitar",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "bue",
+    "move": "baglioni",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "bue",
+    "move": "tom",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  },
+  {
+    "character": "arianna",
+    "move": "cats",
+    "ready": true,
+    "status": [
+      "Anteprima pronta."
+    ],
+    "fallback": false
+  }
+]

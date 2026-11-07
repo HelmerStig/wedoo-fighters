@@ -547,7 +547,7 @@ al canvas. Non simula danni, collisioni fisiche, input da combattimento o audio.
 Le normali mantengono i timing uniformati; per Special/Super si usano i FPS Godot.
 La proiezione usa lo stesso fattore di scala del personaggio nello stage.
 
-Rigenerazione: python demo-moves-sanmauro/scripts/import-arianna-specials.py
+Rigenerazione completa: python demo-moves-sanmauro/scripts/import-specials.py
 Accetta anche il percorso Godot come argomento. Anche import-roster.py
 rigenera questa sezione quando il manifest Special e gia presente.
 Report: reports/arianna-specials.html (timing, varianti, fonti ed eccezioni).
@@ -557,3 +557,60 @@ Valori move: baseball, dog, cats; strength light/medium/heavy; time in ms.
 Anteprima Special/Super: tutti i proiettili rialzati di 30 px sul riferimento
 1080p (preview.projectileOffsetY=-30). Personaggi, scale e timing invariati;
 correzione della sola demo, conservata anche dopo la rigenerazione.
+
+SPECIAL E SUPER - ALTRI PERSONAGGI
+Macchia corrisponde a Torpe (chiarimento dell'autore). Il selettore nella
+pagina specials.html ora comprende 6 personaggi e 14 mosse complessive.
+Peirò rimane escluso. Le 271 animazioni normali e la demo WEDOO non cambiano.
+
+- Mangler: lancio dei piatti, rotazione coi pugni; Super con preparazione,
+  rotazione delle bacchette, corsa e due rullate (8 impatti). Fogli reworked
+  effettivamente usati, scala Godot .85; tutte le sequenze a 48 fps.
+  Piatti al frame 22, 458.33 ms; velocità 520/676/832, scala .82.
+  Rotazione: avanzamento 75 unità/s. Super: corsa 480, arresto a 130;
+  impatti ai frame 4/10/16/22 di ciascuna rullata da 24 frame.
+- Oscare: 20 frame di accensione a 60 fps prima di entrambe le Special.
+  Lancio: 29 frame, rilascio al frame 18 (633.33 ms totali), velocità
+  520/720/920. Come Godot, runtime 18 usa source 19 per togliere la sigaretta
+  già disegnata. Fumata: 49 frame a 60 fps; 26 frame di fumo sincronizzati
+  dal frame 20 (666.67 ms totali), aggancio alla bocca interpolata.
+- Torpe/Macchia: bottiglia e saldatura dalle due risorse SpriteFrames TRES
+  reali, 64 frame riprodotti con duplicazioni e pesi conservati, 64/60 fps.
+  Bottiglia rilasciata al frame 37 (578.125 ms); velocità 520/720/920,
+  rotazioni 1.8/2.2/2.6 giri/s, gravità 600, velocità iniziale Y -150.
+  Come Godot, i 40 px superiori dei runtime 37/38 sono esclusi su un atlas
+  derivato; PNG originale e TRES copiati integri accanto all'atlas.
+  Saldatura dal frame 42 (700 ms): scintille generate nel canvas, intensità
+  600/1000/1400 emissioni/s e raggio 300, senza inventare uno spritesheet.
+- Mileto: spallata 40 frame a 48 fps, corsa dal frame 12; posa 30 mantenuta
+  fino al contatto, poi recupero. Velocità 800/1100/1400.
+  Chitarra: preparazione 45 frame a 100 fps, lancio 23 frame a 60 fps;
+  rilascio al frame 20 (783.33 ms totali). Proiettile 25 frame a 100 fps,
+  scala 2, velocità 600/800/1000.
+- Bue: evocazione 30 frame a 60 fps, cantanti al frame 9 (150 ms).
+  Claudio Baglioni: materializzazione 28@60, corsa 49@48, attacco 49@60,
+  tre colpi ai frame 23/35/40; completa la sequenza prima di uscire.
+  Tom Waits: materializzazione 30@60, corsa 49@48, attacco 49@60,
+  tre colpi ai frame 15/28/41; riparte dopo il terzo contatto.
+  Entrambi: velocità 480, scala .85, offset Y rispettivamente -150/-158.
+
+Ogni personaggio è a sinistra; Oscare è il bersaglio riflesso a destra.
+Per le Special di Oscare il bersaglio è Arianna. Si mantengono altezze in cm,
+normalizzazione idle, ombre, CRT, parallasse e tutti i controlli già presenti.
+Caricamento limitato agli asset del personaggio selezionato.
+Le mosse ravvicinate (fumata, saldatura, rotazione) mantengono la portata:
+il bersaglio lontano non riceve un impatto artificiale. Reazioni della Super
+adattate all'hurt/KO del bersaglio della demo; collisioni, danni e audio non
+sono eseguiti. Frammenti, aura elettrica e scintille sono adattamenti canvas.
+
+Manifest aggregato: assets/specials/manifest.json e specials-catalog.js.
+Importatori: import-specials.py esegue import-arianna-specials.py seguito da
+import-other-specials.py; anche import-roster.py usa questa sequenza completa.
+Non usare il solo importatore Arianna per rigenerare il catalogo completo.
+Report: reports/{arianna,mangler,oscare,torpe,mileto,bue}-specials.html.
+Esempio: specials.html?character=mangler&move=drums&time=3400&paused=1
+character: arianna/mangler/oscare/torpe/mileto/bue.
+move: baseball/dog/cats; cymbals/spin/drums; cigarette/smoke;
+bottle/welding; shoulder/guitar; baglioni/tom. strength: light/medium/heavy.
+I manifest conservano hash dei PNG e script sorgenti, FPS, indici, rettangoli,
+scale e posizioni. Il vecchio progetto Godot viene soltanto letto.

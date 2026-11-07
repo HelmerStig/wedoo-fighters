@@ -353,10 +353,37 @@ CRT, effetti, ombre, parallasse, drag e fullscreen. Riproduci/pausa, loop,
 riavvio, timeline, potenza tornado e nuova ondata. Gallerie asset sotto.
 Anteprima visiva dei proiettili; effetti particellari adattati al canvas.
 Audio, danni e collisioni fisiche non simulati. Normali invariate (271).
-Rigenerazione scripts/import-arianna-specials.py, richiamato anche dalla
+Rigenerazione scripts/import-specials.py, richiamato anche dalla
 importazione completa. Report reports/arianna-specials.html.
 URL campione: specials.html?move=cats&seed=7&time=2600&paused=1
 
 Anteprima Special/Super: tutti i proiettili rialzati di 30 px sul riferimento
 1080p (preview.projectileOffsetY=-30). Personaggi, scale e timing invariati;
 correzione della sola demo, conservata anche dopo la rigenerazione.
+
+SPECIAL E SUPER - ESTENSIONE AGLI ALTRI PERSONAGGI
+Macchia = Torpe, confermato dall'autore. Specials.html ha un selettore per
+Arianna, Mangler, Oscare, Torpe, Mileto e Bue: 14 mosse, 42 sequenze totali.
+Peirò escluso finché le sue mosse non saranno create. WEDOO invariato.
+Mangler: piatti della batteria, rotazione coi pugni; Super con bacchette,
+corsa e due rullate (8 impatti). Oscare: sigaretta e fumata bianca, entrambe
+precedute dall'accensione. Torpe: bottiglia con arco/rotazione/frammenti e
+saldatura. Mileto: spallata elettrica e lancio della chitarra. Bue: Claudio
+Baglioni e Tom Waits con materializzazione/corsa/tre colpi/uscita.
+Spritesheet effettivamente referenziati dal codice Godot, copiati nella
+cartella assets/specials del relativo personaggio; nessuna modifica a Godot.
+FPS e fasi originali, altezze in cm e normalizzazione idle conservate.
+Oscare: source19 sostituisce runtime18 del lancio, come Godot. Torpe: TRES
+con 64 frame e ripetizioni reali; strip superiore rimossa solo nei runtime
+37/38 della bottiglia tramite atlas derivato, originali preservati.
+Stage: personaggio scelto a sinistra, Oscare riflesso a destra; per Oscare
+il bersaglio è Arianna. Stessi CRT/ombre/effetti, fullscreen, drag e timeline.
+Proiettili rialzati di 30px, scale Godot rapportate al personaggio.
+Resta un'anteprima visiva: contatti e particelle adattati al canvas;
+audio, danni e collisioni fisiche non simulati. Mosse ravvicinate mantengono
+la loro portata. Le normali rimangono 271, in catalogo separato.
+Rigenerazione COMPLETA: scripts/import-specials.py (anche da import-roster).
+Manifest aggregato assets/specials/manifest.json, incorporato nel catalogo JS
+per uso file://. Dettagli e parametri in LEGGIMI.txt e nei sei report
+reports/{personaggio}-specials.html.
+URL: specials.html?character=mangler&move=drums&time=3400&paused=1

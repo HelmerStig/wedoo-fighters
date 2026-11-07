@@ -23,11 +23,12 @@ test('proiettili rialzati di 30 px, senza spostare personaggi o cambiare timing 
 });
 
 test('Arianna: due special e una super autonome; nessun asset di Peirò inventato',()=>{
-  assert.deepEqual(data,JSON.parse(fs.readFileSync(path.join(root,'assets/specials/arianna/specials.json'),'utf8')));
-  assert.deepEqual(data.characters.map(c=>c.id),['arianna']);
+  const arianna=JSON.parse(fs.readFileSync(path.join(root,'assets/specials/arianna/specials.json'),'utf8'));
+  assert.deepEqual(data.animations.filter(a=>!a.characterId),arianna.animations);
+  assert.ok(!data.characters.some(c=>c.id==='peirolo'));
   assert.deepEqual(data.characters[0].moves.map(m=>[m.id,m.kind]),[['baseball','Special'],['dog','Special'],['cats','Super']]);
-  assert.equal(data.animations.length,16);
-  for(const a of data.animations){
+  assert.equal(arianna.animations.length,16);
+  for(const a of arianna.animations){
     const bytes=fs.readFileSync(path.join(root,a.image));
     assert.equal(createHash('sha256').update(bytes).digest('hex'),a.sourceSha256);
     assert.equal(bytes.readUInt32BE(16),a.sheetWidth);assert.equal(bytes.readUInt32BE(20),a.sheetHeight);

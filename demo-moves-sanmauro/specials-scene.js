@@ -90,9 +90,9 @@
       const camera=view.camera,effects=view.effects;
       for(const actor of state.actors){
         const a=animations[actor.animation],image=images[actor.animation];if(!a||!image)continue;
-        const index=frame(a,actor.time,actor.animation!=='oscare-hurt'),[sx,sy,w,h]=a.frames[index];
+        const index=frame(a,actor.time,actor.loop??actor.animation!=='oscare-hurt'),[sx,sy,w,h]=a.frames[index];
         const anchorY=actor.projectile?actor.anchorY:(a.normalizedPreview?.anchor?.[1]??a.contentBounds?.[3]??actor.anchorY);
-        if(effects.shadows&&actor.animation!=='tornado'){
+        if(effects.shadows&&actor.shadow!==false&&actor.animation!=='tornado'){
           let item=buffers.get(actor.id);if(!item){const canvas=env.document.createElement('canvas');canvas.width=w;canvas.height=h;item={canvas,ctx:canvas.getContext('2d')};buffers.set(actor.id,item);}
           const b=item.ctx;
           if(b){b.clearRect(0,0,w,h);b.drawImage(image,sx,sy,w,h,0,0,w,h);b.save();b.globalCompositeOperation='source-in';b.fillStyle='#1d1625';b.fillRect(0,0,w,h);b.restore();
@@ -102,11 +102,13 @@
             else{ctx.translate(actor.x-camera,view.stage.height-55);ctx.transform(actor.scale,0,-.5*actor.scale,-.11*actor.scale,0,0);}
             ctx.drawImage(item.canvas,-actor.anchorX,-anchorY);ctx.restore();}
         }
-        if(actor.projectile){ctx.save();ctx.fillStyle=actor.trailColor??(actor.trail==='flame'?'#61ccfc':'#ddcaa7');
+        if(actor.projectile&&actor.trail){ctx.save();ctx.fillStyle=actor.trailColor??(actor.trail==='flame'?'#61ccfc':'#ddcaa7');
           for(let i=0;i<12*actor.intensity;i++){const age=((actor.time+i*71)%360)/360;ctx.globalAlpha=(1-age)*.35;const x=actor.x-camera-age*120,y=actor.y-(actor.trail==='wind'?110:12)-Math.sin(i*2.9)*14;ctx.fillRect(Math.round(x/3)*3,Math.round(y/3)*3,3+(i%3)*2,3+(i%3)*2);}ctx.restore();}
-        ctx.save();ctx.translate(actor.x-camera,actor.y);ctx.scale(actor.flipX?-actor.scale:actor.scale,actor.scale);ctx.imageSmoothingEnabled=false;
+        ctx.save();ctx.translate(actor.x-camera,actor.y);if(actor.rotation)ctx.rotate(actor.rotation);ctx.scale(actor.flipX?-actor.scale:actor.scale,actor.scale);ctx.imageSmoothingEnabled=false;
+        if(actor.opacity!==undefined)ctx.globalAlpha=Math.max(0,Math.min(1,actor.opacity));
         if(actor.flash)ctx.filter='brightness(1.7)';ctx.drawImage(image,sx,sy,w,h,-actor.anchorX,-anchorY,w,h);ctx.restore();
       }
+      for(const particle of state.particles??[]){ctx.save();ctx.globalAlpha=Math.max(0,Math.min(1,particle.alpha));ctx.fillStyle=particle.color;ctx.fillRect(Math.round((particle.x-camera)/3)*3,Math.round(particle.y/3)*3,particle.size,particle.size);ctx.restore();}
       for(const hit of state.hits){const age=(view.sceneTime-hit.time)/180;ctx.save();ctx.fillStyle=hit.color??'#ffe3a6';ctx.globalAlpha=1-age;
         for(let i=0;i<16;i++){const angle=i*Math.PI/8,r=12+age*85,x=hit.x-camera+Math.cos(angle)*r,y=hit.y+Math.sin(angle)*r;ctx.fillRect(Math.round(x/4)*4,Math.round(y/4)*4,4+i%3*2,4+i%3*2);}ctx.restore();}
     }
