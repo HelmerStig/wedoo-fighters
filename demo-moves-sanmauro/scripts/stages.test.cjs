@@ -10,6 +10,16 @@ const demo=path.resolve(__dirname,'..');
 const folder=path.join(demo,'assets/stages/Piazza Europa');
 const manifest=JSON.parse(fs.readFileSync(path.join(demo,'assets/manifest.json'),'utf8'));
 
+test('scene aggiuntive continuano con nuvole in pausa e rispettano il movimento ridotto',async()=>{
+  const f=fixture();await f.load();
+  let calls=0;f.player.setSceneRenderer(()=>calls++);
+  f.button.listeners.click();f.tick(0);f.tick(100);assert.ok(calls>=3);
+  assert.ok(f.callbacks.size>0,'la scena continua anche con nuvole ferme');
+  f.player.setSceneRenderer(null);f.tick(200);assert.equal(f.callbacks.size,0);f.player.destroy();
+  const reduced=fixture(true);await reduced.load();reduced.player.setSceneRenderer(()=>{});
+  assert.equal(reduced.callbacks.size,0);reduced.player.setSceneMotion(true);assert.ok(reduced.callbacks.size>0);reduced.player.destroy();
+});
+
 test('Piazza Europa mantiene le cinque immagini native, i tre piani nuvole e il fondale davanti',()=>{
   const stage=stages[0];assert.equal(stage.name,'Piazza Europa');assert.equal(stage.layers.length,5);
   assert.deepEqual([stage.width,stage.height,stage.viewportWidth],[2550,1080,1920]);

@@ -338,3 +338,25 @@ Audit Godot isolato con scripts/audit-godot-catalogs.py, poi snapshot con
 scripts/build-remaining-source.py. Nessuna modifica al vecchio progetto.
 Importazione: scripts/import-roster.py (include tutto); solo nuove mosse:
 scripts/remaining_moves.py. Report offline: scripts/build-remaining-reports.py.
+
+SPECIAL E SUPER ARIANNA
+Nuova pagina demo-moves-sanmauro/specials.html, voce di menu autonoma.
+Due Special: mazza da baseball con tornado (3 potenze), fischio con Bateau.
+Super: ondata di 12 gatti, 4 Tullio + 4 Tilda + 4 Telma. Peiro non incluso.
+16 PNG originali in assets/specials/arianna; specials.json e catalogo JS
+offline. Timing Godot: mazza 49@48fps/spawn frame23; fischio49@24/spawn12;
+super sorgenti9-42@24/spawn10. Bateau ha corsa/attacco/ritorno alla corsa.
+Ultima cella Bateau-run trasparente: mantenuto il frame precedente per
+un intervallo, PNG e durata invariati; eccezione registrata nel manifest.
+Scena Piazza Europa: Arianna a sinistra, Oscare riflesso come bersaglio,
+CRT, effetti, ombre, parallasse, drag e fullscreen. Riproduci/pausa, loop,
+riavvio, timeline, potenza tornado e nuova ondata. Gallerie asset sotto.
+Anteprima visiva dei proiettili; effetti particellari adattati al canvas.
+Audio, danni e collisioni fisiche non simulati. Normali invariate (271).
+Rigenerazione scripts/import-arianna-specials.py, richiamato anche dalla
+importazione completa. Report reports/arianna-specials.html.
+URL campione: specials.html?move=cats&seed=7&time=2600&paused=1
+
+Anteprima Special/Super: tutti i proiettili rialzati di 30 px sul riferimento
+1080p (preview.projectileOffsetY=-30). Personaggi, scale e timing invariati;
+correzione della sola demo, conservata anche dopo la rigenerazione.

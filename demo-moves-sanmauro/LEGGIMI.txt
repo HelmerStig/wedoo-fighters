@@ -503,3 +503,57 @@ REPORT
 23 report HTML/CSV aggiuntivi con 159 confronti di pose, collegati sotto il
 titolo di ciascuna mossa. reports/remaining-moves.html elenca disponibilità
 e collegamenti. Nessuna voce Combo o già accovacciato resta nella demo.
+
+SPECIAL E SUPER - PRIMO PERSONAGGIO: ARIANNA
+Pagina specials.html, voce autonoma nel menu accanto a Stages. Le mosse
+restano separate dalle 271 animazioni normali: nessuna Special/Super viene
+aggiunta al menu Per mossa normale. Peiro non e incluso: asset ancora da creare.
+
+Arianna dispone di due Special (Mazza da baseball e Fischio/Bateau) e della
+Super Gatti. Asset originali in assets/specials/arianna, 16 PNG totali:
+3 animazioni di Arianna + tornado + 3 fasi Bateau + 9 animazioni dei gatti.
+PNG integri, ritagli e frame usati da Godot, scale e posizioni conservate nel
+manifest specials.json. specials-catalog.js incorpora tutto per file://.
+
+Mazza: 49 frame a 48 fps, tornado al frame 23 (indice 0), 479.17 ms.
+Il tornado ha 49 frame a 48 fps, cresce da .08 a .48 in .5 s, vita massima 4 s.
+Potenza light/medium/heavy: velocita 420/560/700 unita Godot al secondo,
+con particelle e lampo rispettivamente azzurri, gialli o arancio.
+Fischio: sequenza 0-24,23-0, 49 frame a 24 fps; Bateau nasce al frame 12
+a 500 ms. Cane: corsa 49 frame, attacco 25, ritorno alla corsa 25, 24 fps;
+velocita 800, attacco a distanza 620, contatto 70, hit al frame 17.
+Bateau-run ha una cella finale trasparente (indice 48) nel PNG originale:
+la demo mantiene il frame precedente in quel solo intervallo senza alterare
+i pixel o la durata. Eccezione registrata in emptySourceFrames.
+Super: frame sorgenti 9-42, 34 frame a 24 fps; ondata al frame 10 riprodotto
+(416.67 ms). Dodici gatti, quattro Tullio/Tilda/Telma; corse da 42/42/49
+frame, salti 15 e attacchi 12, tutti a 24 fps. Velocita 680/755/625.
+Ordine casuale, ritardi 70-170 ms, moltiplicatore .82-1.22; tre attacchi
+per gatto o salto al volto con probabilita .30. Un seme rende la singola
+ondata ripetibile; Nuova ondata modifica il seme.
+
+PROVA NELLO STAGE
+Arianna a sinistra e Oscare riflesso come bersaglio, Piazza Europa, drag
+orizzontale, parallasse e stesso CRT base/avanzato indipendenti, foschia,
+polvere e ombre. Fullscreen reale e pannello CRT laterale con scroll interno.
+Controlli: selezione mossa, riproduci/pausa, ricomincia, loop, timeline,
+potenza tornado, nuova ondata. La pausa delle nuvole e indipendente dalla
+sequenza. Movimento ridotto rispettato, riproduzione riattivabile dall'utente.
+Sotto lo stage: gallerie autonome delle animazioni e dei proiettili usati.
+
+Anteprima VISIVA: animazioni, spawn, traiettorie e fasi ricostruiti dai dati
+Godot; bersaglio fermo, reazione visiva ai colpi. Particelle e lampi adattati
+al canvas. Non simula danni, collisioni fisiche, input da combattimento o audio.
+Le normali mantengono i timing uniformati; per Special/Super si usano i FPS Godot.
+La proiezione usa lo stesso fattore di scala del personaggio nello stage.
+
+Rigenerazione: python demo-moves-sanmauro/scripts/import-arianna-specials.py
+Accetta anche il percorso Godot come argomento. Anche import-roster.py
+rigenera questa sezione quando il manifest Special e gia presente.
+Report: reports/arianna-specials.html (timing, varianti, fonti ed eccezioni).
+Confronto ripetibile via URL: specials.html?move=cats&seed=7&time=2600&paused=1
+Valori move: baseball, dog, cats; strength light/medium/heavy; time in ms.
+
+Anteprima Special/Super: tutti i proiettili rialzati di 30 px sul riferimento
+1080p (preview.projectileOffsetY=-30). Personaggi, scale e timing invariati;
+correzione della sola demo, conservata anche dopo la rigenerazione.

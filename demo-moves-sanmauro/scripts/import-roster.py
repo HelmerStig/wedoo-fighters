@@ -366,3 +366,5 @@ if (root / 'scripts/build-stages.py').exists():
     subprocess.run([sys.executable, str(root / 'scripts/build-stages.py')], check=True)
 elif timing_path.exists():
     subprocess.run([sys.executable, str(root / 'scripts/build-jump-report.py')], check=True)
+if (root/'assets/specials/arianna/specials.json').exists():
+    subprocess.run([sys.executable,str(root/'scripts/import-arianna-specials.py'),str(source)],check=True)

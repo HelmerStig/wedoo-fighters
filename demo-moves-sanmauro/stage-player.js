@@ -36,7 +36,7 @@
     const media=env.matchMedia('(prefers-reduced-motion: reduce)');
     let disposed=false,ready=false,playing=!media.matches,elapsed=0,last=null,request=null;
     let fighterElapsed=0,animateFighters=!media.matches;
-    let postProcess=null;
+    let postProcess=null,sceneRenderer=null;
     const viewportWidth=stage.viewportWidth??stage.height*16/9;
     const maxCamera=Math.max(0,stage.width-viewportWidth);
     let camera=maxCamera/2,drag=null;
@@ -147,6 +147,7 @@
         context.drawImage(tinted??fighter.imageObject,tinted?0:sx,tinted?0:sy,w,h,-fighter.anchorX,-fighter.anchorY,w,h);
         context.restore();
       }
+      sceneRenderer?.(context,{elapsed:fighterElapsed,camera,effects,stage,viewportWidth});
       postProcess?.(canvas,fighterElapsed);
     }
     function sync(){
@@ -155,7 +156,7 @@
       button.setAttribute('aria-pressed',String(playing));
     }
     function schedule(){
-      if(!disposed&&ready&&(playing||(animateFighters&&(fighters.length||effects.dust>0)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
+      if(!disposed&&ready&&(playing||(animateFighters&&(fighters.length||effects.dust>0||sceneRenderer)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
     }
     function tick(time){
       request=null;
@@ -195,7 +196,7 @@
       event.preventDefault();moveCamera(next);
     }
     button.disabled=true;
-    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},setPostProcess(){},destroy(){}};}
+    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},setPostProcess(){},setSceneRenderer(){},setSceneMotion(){},destroy(){}};}
     button.addEventListener('click',toggle);
     canvas.addEventListener('pointerdown',pointerDown);
     canvas.addEventListener('pointermove',pointerMove);
@@ -226,12 +227,12 @@
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
+    return {loaded,setSceneRenderer(callback){sceneRenderer=callback;draw();schedule();},setSceneMotion(value){animateFighters=Boolean(value);resetClock();draw();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
-      disposed=true;postProcess=null;resetClock();
+      disposed=true;postProcess=null;sceneRenderer=null;resetClock();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});
       for(const [type,handler] of [['pointerdown',pointerDown],['pointermove',pointerMove],['pointerup',pointerEnd],['pointercancel',pointerEnd],['lostpointercapture',pointerEnd],['keydown',keyDown]])canvas.removeEventListener(type,handler);
