@@ -39,6 +39,7 @@ test('Super Mangler: corsa, distanza di arresto, due rullate con otto impatti',(
   assert.equal(scene.sample(p,p.contact+100).actors[0].animation,'drums-roll');
   assert.equal(scene.sample(p,p.contact+100).actors[0].x,p.target.x-130*p.unit);
   assert.equal(scene.sample(p,p.rollEnd+100).actors[1].animation,'target-ko');
+  assert.equal(scene.sample(p,p.rollEnd+p.knockdownMs+100).actors[1].animation,'target-recovery');
   assert.ok(Math.abs(p.rollEnd-p.contact-1000)<1e-6);
 });
 test('cantanti: materializzazione, corsa, tre colpi, uscita dopo la sequenza corretta',()=>{
@@ -61,7 +62,7 @@ test('tutte le nuove mosse: scrub deterministico, coordinate e frame validi, ter
     const p=scene.plan(data,stage(c.id),m.id,strength);assert.ok(Number.isFinite(p.end)&&p.end>0);
     for(let t=0;t<p.end+100;t+=73){
       const sample=scene.sample(p,t);assert.deepEqual(sample,scene.sample(p,t));
-      for(const a of sample.actors){assert.ok(Number.isFinite(a.x)&&Number.isFinite(a.y)&&a.scale>0,m.id);assert.ok(assets[a.animation]||['caster-idle','target-idle','target-hurt','target-ko'].includes(a.animation),a.animation);}
+      for(const a of sample.actors){assert.ok(Number.isFinite(a.x)&&Number.isFinite(a.y)&&a.scale>0,m.id);assert.ok(assets[a.animation]||['caster-idle','target-idle','target-hurt','target-ko','target-recovery'].includes(a.animation),a.animation);}
     }
   }
 });

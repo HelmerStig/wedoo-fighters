@@ -42,12 +42,14 @@
       p.recovery=p.contact;p.castDuration=p.contact+(cast.frames.length-parameters.holdFrame-1)/cast.playbackFps*1000;
       hit(p.contact);p.hitTarget=true;p.end=p.castDuration+1000;
     }else if(move==='drums'){
+      p.spawnMs=parameters.auraFrame/phases[0].playbackFps*1000;
       const rotate=phases[0].durationMs,run=rotate+phases[1].durationMs;
       p.rush=rotate+parameters.moveFrame/phases[1].playbackFps*1000;
       p.contact=Math.max(run,p.rush+Math.max(0,target.x-parameters.stopDistance*unit-caster.x)/(parameters.speed*unit)*1000);
       p.rollEnd=p.contact+phases[3].durationMs*parameters.loops;
       for(let loop=0;loop<parameters.loops;loop++)for(const frame of parameters.hitFrames)hit(p.contact+loop*phases[3].durationMs+frame/phases[3].playbackFps*1000,target.x,target.groundY-260*unit,'#ff6346');
-      p.castDuration=p.rollEnd;p.hitTarget=true;p.end=p.rollEnd+1700;
+      p.knockdownMs=target.knockdownMs??900;p.recoveryMs=target.recoveryMs??500;
+      p.castDuration=p.rollEnd;p.hitTarget=true;p.end=p.rollEnd+p.knockdownMs+p.recoveryMs+600;
     }else if(move==='tom'||move==='baglioni'){
       const x=caster.x+parameters.offset[0]*unit,y=caster.groundY+parameters.offset[1]*unit+p.projectileOffsetY;
       const approach=p.spawnMs+animations[move+'-materialize'].durationMs;
@@ -84,9 +86,10 @@
     }
     actors.push({id:'caster',animation,time,x,y:c.groundY,scale:c.scale,anchorX:c.anchorX,anchorY:c.anchorY,flipX:false,loop:animation==='caster-idle'||animation==='drums-run'});
     const previous=p.events.filter(e=>e.time<=ms).at(-1),hurt=p.hitTarget&&previous&&ms-previous.time<500;
-    const knockdown=move==='drums'&&ms>=p.rollEnd&&ms<p.rollEnd+900;
-    actors.push({id:'target',animation:knockdown?'target-ko':hurt?'target-hurt':'target-idle',time:knockdown?ms-p.rollEnd:hurt?ms-previous.time:move==='drums'&&ms<p.rollEnd?0:ms,
-      x:t.x,y:t.groundY,scale:t.scale,anchorX:t.anchorX,anchorY:t.anchorY,flipX:true,flash:hits.length>0&&p.hitTarget,loop:!knockdown&&!hurt});
+    const knockdown=move==='drums'&&ms>=p.rollEnd&&ms<p.rollEnd+p.knockdownMs;
+    const recovery=move==='drums'&&ms>=p.rollEnd+p.knockdownMs&&ms<p.rollEnd+p.knockdownMs+p.recoveryMs;
+    actors.push({id:'target',animation:knockdown?'target-ko':recovery?'target-recovery':hurt?'target-hurt':'target-idle',time:knockdown?ms-p.rollEnd:recovery?ms-p.rollEnd-p.knockdownMs:hurt?ms-previous.time:move==='drums'&&ms<p.rollEnd?0:ms,
+      x:t.x,y:t.groundY,scale:t.scale,anchorX:t.anchorX,anchorY:t.anchorY,flipX:true,flash:hits.length>0&&p.hitTarget,loop:!knockdown&&!recovery&&!hurt});
     for(const q of p.projectiles){
       if(ms<q.start||ms>=q.end)continue;
       let id=q.animation,elapsed=ms-q.start,px=q.x+q.speed*elapsed/1000,py=q.y,scale,rotation=0;

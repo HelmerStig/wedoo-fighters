@@ -9,7 +9,8 @@
   function fighter(characterId,x,flipX){
     const c=roster.characters.find(c=>c.id===characterId),a=c.animations.find(a=>a.id==='idle'),reference=roster.characters.find(c=>c.id==='arianna').animations.find(a=>a.id==='idle');
     const stageScale=stage.fighters[0].scale/reference.normalizedPreview.scale[0];
-    return {characterId,x,groundY:stage.height-55,scale:a.normalizedPreview.scale[0]*stageScale*c.stageHeightMultiplier,anchorX:a.normalizedPreview.anchor[0],anchorY:a.normalizedPreview.anchor[1],flipX};
+    const duration=id=>{const a=c.animations.find(a=>a.id===id);return a.durationMs??a.frames.length/a.playbackFps*1000;};
+    return {characterId,x,groundY:stage.height-55,scale:a.normalizedPreview.scale[0]*stageScale*c.stageHeightMultiplier,anchorX:a.normalizedPreview.anchor[0],anchorY:a.normalizedPreview.anchor[1],flipX,knockdownMs:duration('knockdown'),recoveryMs:duration('get-up')};
   }
   const sceneStage=character.id==='arianna'?stage:{...stage,fighters:[fighter(character.id,stage.fighters[0].x,false),fighter(targetId,stage.fighters[1].x,true)]};
   container.innerHTML=`<nav class="specials-choices" aria-label="Personaggi con Special e Super">${data.characters.map(c=>`<a class="step-button" href="specials.html?character=${c.id}" ${c.id===character.id?'aria-current="page"':''}>${escape(c.name)}</a>`).join('')}</nav><section class="stage-card" aria-labelledby="specials-title"><div class="panel-header"><h2 id="specials-title">${escape(character.name)} · Piazza Europa</h2><div class="stage-header-actions">${StageCrt.launcher(id)}<button type="button" class="step-button stage-fullscreen-toggle" data-stage-fullscreen aria-pressed="false" aria-controls="stage-screen-${id}">Fullscreen</button></div></div>
@@ -23,7 +24,7 @@
   const fullscreen=StageFullscreen.install(card),crt=StageCrt.install(card,player,id,globalThis,window.STAGE_CRT_PRESETS?.[stage.id]);
   const effects=StageEffects.install(card,player,crt);
   const animations=Object.fromEntries(data.animations.filter(a=>character.id==='arianna'?!a.characterId:a.characterId===character.id).map(a=>[a.id,a]));
-  const aliases=character.id==='arianna'?[['arianna-idle','arianna','idle'],['oscare-idle','oscare','idle'],['oscare-hurt','oscare','hurt-high']]:[['caster-idle',character.id,'idle'],['target-idle',targetId,'idle'],['target-hurt',targetId,'hurt-high'],['target-ko',targetId,'ko']];
+  const aliases=character.id==='arianna'?[['arianna-idle','arianna','idle'],['oscare-idle','oscare','idle'],['oscare-hurt','oscare','hurt-high']]:[['caster-idle',character.id,'idle'],['target-idle',targetId,'idle'],['target-hurt',targetId,'hurt-high'],['target-ko',targetId,'knockdown'],['target-recovery',targetId,'get-up']];
   for(const [key,characterId,animationId] of aliases){
     const a=roster.characters.find(c=>c.id===characterId).animations.find(a=>a.id===animationId);
     const contacts=animationId==='idle'?window.STAGE_FOOT_CONTACTS?.items.find(i=>i.characterId===characterId)?.frames:null;
