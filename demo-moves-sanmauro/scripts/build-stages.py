@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 from PIL import Image
 from character_proportions import apply_proportions, write_portraits
+from feet_contacts import extract_contacts
 
 root = Path(__file__).resolve().parents[1]
 folder = root / 'assets/stages/Piazza Europa'
@@ -45,33 +46,24 @@ for ident, filename, z_index, speed, haze in [
         layers.append(layer)
 
 fighters, contacts = [], []
+for character in manifest['characters']:
+    ident = character['id']
+    animation = next(a for a in character['animations'] if a['id'] == 'idle')
+    feet_frames = extract_contacts(root,animation)
+    if any(len(feet)!=2 or feet[1]['x']-feet[0]['x']<=40 for feet in feet_frames):
+        raise ValueError('Separazione piedi idle non valida: '+ident)
+    reactions={}
+    for reaction in character['animations']:
+        if reaction['id'] in ['hurt-high','knockdown','get-up']:
+            reactions[reaction['id']]=dict(image=reaction['image'],
+                pngSha256=hashlib.sha256((root/reaction['image']).read_bytes()).hexdigest(),
+                frames=extract_contacts(root,reaction))
+    contacts.append(dict(characterId=ident,image=animation['image'],
+        pngSha256=hashlib.sha256((root/animation['image']).read_bytes()).hexdigest(),frames=feet_frames,animations=reactions))
+
 for ident, position_x, flipped in [('arianna',675,False),('oscare',1890,True)]:
     character = next(c for c in manifest['characters'] if c['id'] == ident)
     animation = next(a for a in character['animations'] if a['id'] == 'idle')
-    split = round(animation['preview']['anchor'][0])
-    feet_frames = []
-    with Image.open(root/animation['image']) as sheet:
-        sheet = sheet.convert('RGBA')
-        for x,y,w,h in animation['frames']:
-            alpha = sheet.crop((x,y,x+w,y+h)).getchannel('A')
-            bbox = alpha.point(lambda a:255 if a>64 else 0).getbbox()
-            if not bbox:
-                raise ValueError('Frame idle vuoto: '+ident)
-            low = int(bbox[1]+(bbox[3]-bbox[1])*.7)
-            feet = []
-            for left,right in [(0,split),(split,w)]:
-                pixels = [(xx,yy) for yy in range(low,h) for xx in range(left,right) if alpha.getpixel((xx,yy))>64]
-                if not pixels:
-                    raise ValueError('Suola non rilevata: '+ident)
-                bottom = max(yy for xx,yy in pixels)
-                sole = [xx for xx,yy in pixels if yy>=bottom-2]
-                shoe = [xx for xx,yy in pixels if yy>=bottom-7]
-                feet.append(dict(x=round((min(sole)+max(sole)+1)/2,2),y=bottom+1,width=max(shoe)-min(shoe)+1))
-            if feet[1]['x']-feet[0]['x']<=40:
-                raise ValueError('Separazione piedi non valida: '+ident)
-            feet_frames.append(feet)
-    contacts.append(dict(characterId=ident,image=animation['image'],
-        pngSha256=hashlib.sha256((root/animation['image']).read_bytes()).hexdigest(),frames=feet_frames))
     fighters.append(dict(characterId=ident, animationId='idle', x=position_x,
         groundY=height-55,
         scale=animation['normalizedPreview']['scale'][0]*proportions['stageScale']*character['stageHeightMultiplier'],
@@ -94,5 +86,5 @@ if preset.get('schema')!='wedoo.crt-preset' or preset.get('version')!=1:
     raise ValueError('Preset CRT non valido')
 (root/'crt-presets.js').write_text('/* Generato da scripts/build-stages.py. */\nwindow.STAGE_CRT_PRESETS = '+json.dumps({'piazza-europa':preset},ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
 print('Piazza Europa: layer, contatti di '+str(sum(len(c['frames']) for c in contacts))+' frame idle e preset CRT aggiornati.')
-if (root/'assets/jump-timing.json').exists():
+if '--skip-reports' not in sys.argv and (root/'assets/jump-timing.json').exists():
     subprocess.run([sys.executable,str(root/'scripts/build-jump-report.py')],check=True)

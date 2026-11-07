@@ -66,3 +66,41 @@ test('tutte le nuove mosse: scrub deterministico, coordinate e frame validi, ter
     }
   }
 });
+
+test('Baglioni e Tom Waits: altri 20 px verso alto, senza cambiare Bue o timing',()=>{
+  for(const move of ['baglioni','tom']){
+    const raised=scene.plan(data,stage('bue'),move);
+    const original=scene.plan({...data,parameters:{...data.parameters,[move]:{...data.parameters[move],previewOffsetY:0}}},stage('bue'),move);
+    assert.equal(raised.projectileOffsetY,-50);assert.equal(raised.end,original.end);
+    const time=raised.spawnMs+100,a=scene.sample(raised,time),b=scene.sample(original,time);
+    for(const actor of a.actors){const before=b.actors.find(v=>v.id===actor.id);assert.equal(actor.y,before.y-(actor.projectile?20:0));assert.equal(actor.scale,before.scale);assert.equal(actor.x,before.x);}
+  }
+  assert.equal(scene.plan(data,stage('torpe'),'bottle').projectileOffsetY,-30);
+});
+
+test('renderer: ombra su entrambi i piedi di Bue, piano locale dei cantanti e appoggio singolo',()=>{
+  const renderScene=require('../specials-scene.js'),projection=require('../stage-player.js').shadowProjection;
+  const contacts=JSON.parse(fs.readFileSync(path.join(root,'assets/stages/Piazza Europa/foot-contacts.json'),'utf8'));
+  const idle=roster.characters.find(c=>c.id==='bue').animations.find(a=>a.id==='idle');
+  const animations={'bue-idle':{...idle,footContacts:contacts.items.find(c=>c.characterId==='bue').frames},'tom-run':assets['tom-run'],'one-foot':{...idle,footContacts:[[ {x:330,y:410,width:20} ]]}};
+  const calls=[],noop=()=>{},context={clearRect:noop,drawImage:noop,save:noop,restore:noop,fillRect:noop,translate:noop,scale:noop,rotate:noop,transform:noop};
+  const env={document:{createElement(){return {getContext(){return context;}};}},StagesPlayer:{shadowProjection(f,style,feet,camera){calls.push({f,feet});return projection(f,style,feet,camera);}}};
+  const actors=Object.keys(animations).map((animation,i)=>({id:animation,animation,time:0,x:675+i*200,y:i===1?800:1025,scale:1.4,anchorX:256,anchorY:256,projectile:i===1}));
+  const renderer=renderScene.renderer(animations,Object.fromEntries(Object.keys(animations).map(k=>[k,{}])),env);
+  renderer.draw(context,{actors,hits:[]},{camera:315,effects:{shadows:.8},stage:base,sceneTime:0});
+  assert.equal(calls.length,3);assert.equal(calls[0].feet.length,2);assert.equal(calls[1].f.groundY,800);assert.equal(calls[2].feet.length,1);
+  for(const {f,feet}of calls){const [a,b,c,d,x,y]=projection(f,{shearX:.5,flattenY:.11},feet,315);for(const foot of feet){const u=foot.x-f.anchorX,v=foot.y-f.anchorY;assert.ok(Math.abs(a*u+c*v+x-(f.x-315+f.scale*u))<1e-8);assert.ok(Math.abs(b*u+d*v+y-(f.groundY+f.scale*v))<1e-8);}}
+  renderer.destroy();
+});
+
+test('tutte le sagome Special/Super: appoggi fermi in ogni frame, anche riflessi',()=>{
+  const {shadowProjection}=require('../stage-player.js');
+  for(const a of data.animations)for(const feet of a.footContacts){
+    assert.ok(feet.length===1||feet.length===2,a.id);
+    for(const flipX of [false,true]){
+      const fighter={x:900,groundY:1025,anchorX:a.frameWidth/2,anchorY:a.frameHeight/2,scale:1.6,flipX};
+      const [xx,xy,yx,yy,tx,ty]=shadowProjection(fighter,{shearX:.5,flattenY:.11},feet,315);
+      for(const foot of feet){const u=foot.x-fighter.anchorX,v=foot.y-fighter.anchorY;assert.ok(Math.abs(xx*u+yx*v+tx-(585+(flipX?-1:1)*1.6*u))<1e-7,a.id);assert.ok(Math.abs(xy*u+yy*v+ty-(1025+1.6*v))<1e-7,a.id);}
+    }
+  }
+});

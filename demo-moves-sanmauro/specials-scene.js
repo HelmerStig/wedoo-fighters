@@ -80,7 +80,7 @@
         }else{animation=q.cat+'-run';time=ms-q.exitStart;x=q.exitX+q.speed*time/1000;}
       }
       const a=p.animations[animation],position=a.sourcePosition??[0,0],sourceScale=a.sourceScale?.[0]??1;
-      actors.push({id:q.id,animation,time,x:x+position[0]*p.unit,y:y+p.projectileOffsetY,scale,anchorX:256,anchorY:256-position[1]/sourceScale,projectile:true,trail:p.move==='baseball'?'wind':p.move==='dog'?'flame':'dust',trailColor:p.move==='baseball'?{light:'#bce7fa',medium:'#ffdc45',heavy:'#ff5b29'}[p.strength]:null,intensity:p.move==='baseball'?{light:1,medium:1.35,heavy:1.7}[p.strength]:1});
+      actors.push({id:q.id,animation,time,x:x+position[0]*p.unit,y:y+p.projectileOffsetY,shadowGroundY:q.ground+p.projectileOffsetY,scale,anchorX:256,anchorY:256-position[1]/sourceScale,projectile:true,trail:p.move==='baseball'?'wind':p.move==='dog'?'flame':'dust',trailColor:p.move==='baseball'?{light:'#bce7fa',medium:'#ffdc45',heavy:'#ff5b29'}[p.strength]:null,intensity:p.move==='baseball'?{light:1,medium:1.35,heavy:1.7}[p.strength]:1});
     }
     return {actors,hits,ended:ms>=p.end};
   }
@@ -96,10 +96,10 @@
           let item=buffers.get(actor.id);if(!item){const canvas=env.document.createElement('canvas');canvas.width=w;canvas.height=h;item={canvas,ctx:canvas.getContext('2d')};buffers.set(actor.id,item);}
           const b=item.ctx;
           if(b){b.clearRect(0,0,w,h);b.drawImage(image,sx,sy,w,h,0,0,w,h);b.save();b.globalCompositeOperation='source-in';b.fillStyle='#1d1625';b.fillRect(0,0,w,h);b.restore();
-            const project=env.StagesPlayer?.shadowProjection,feet=a.footContacts?.[index],fighter={...actor,anchorY,groundY:view.stage.height-55};
+            const project=env.StagesPlayer?.shadowProjection,feet=a.footContacts?.[index],fighter={...actor,anchorY,groundY:actor.shadowGroundY??actor.y};
             ctx.save();ctx.globalAlpha=effects.shadows*.6;
-            if(project)ctx.transform(...project(fighter,{shearX:.5,flattenY:.11},feet?.length===2?feet:null,camera));
-            else{ctx.translate(actor.x-camera,view.stage.height-55);ctx.transform(actor.scale,0,-.5*actor.scale,-.11*actor.scale,0,0);}
+            if(project)ctx.transform(...project(fighter,{shearX:.5,flattenY:.11},feet?.length?feet:null,camera));
+            else{ctx.translate(actor.x-camera,fighter.groundY);ctx.transform(actor.scale,0,-.5*actor.scale,-.11*actor.scale,0,0);}
             ctx.drawImage(item.canvas,-actor.anchorX,-anchorY);ctx.restore();}
         }
         if(actor.projectile&&actor.trail){ctx.save();ctx.fillStyle=actor.trailColor??(actor.trail==='flame'?'#61ccfc':'#ddcaa7');

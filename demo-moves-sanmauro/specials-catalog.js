@@ -36150,6 +36150,7 @@
         170,
         26
       ],
+      "previewOffsetY": -20,
       "hitFrames": [
         15,
         28,
@@ -36165,6 +36166,7 @@
         170,
         26
       ],
+      "previewOffsetY": -20,
       "hitFrames": [
         23,
         35,

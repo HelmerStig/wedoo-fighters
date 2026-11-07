@@ -23,8 +23,8 @@
     });
   }
   function shadowProjection(fighter,style,feet,camera){
-    const slope=feet?.length===2?(feet[1].y-feet[0].y)/(feet[1].x-feet[0].x):0;
-    const offset=feet?.length===2?feet[0].y-fighter.anchorY-slope*(feet[0].x-fighter.anchorX):0;
+    const slope=feet?.length===2&&Math.abs(feet[1].x-feet[0].x)>1e-8?(feet[1].y-feet[0].y)/(feet[1].x-feet[0].x):0;
+    const offset=feet?.length?feet[0].y-fighter.anchorY-slope*(feet[0].x-fighter.anchorX):0;
     const s=fighter.scale,flip=fighter.flipX?-1:1;
     // I punti sulla linea delle suole restano fermi; si proietta solo l'altezza sopra quella linea.
     return [s*(flip+style.shearX*slope),s*slope*(1+style.flattenY),

@@ -15,7 +15,7 @@
     const castDuration=phases.reduce((t,a)=>t+a.durationMs,0),cast=animations[move]??phases[0];
     const p={move,strength,power,selected,animations,caster,target,unit,parameters,phases,pre,castDuration,
       spawnMs:pre+(parameters.spawnFrame??0)/cast.playbackFps*1000,events:[],projectiles:[],stage,
-      projectileOffsetY:(data.preview?.projectileOffsetY??0)*stage.height/(data.preview?.referenceHeight??1080)};
+      projectileOffsetY:((data.preview?.projectileOffsetY??0)+(parameters.previewOffsetY??0))*stage.height/(data.preview?.referenceHeight??1080)};
     const hit=(time,x=target.x,y=target.groundY-180*unit,color='#b6eaff')=>p.events.push({time,x,y,color});
     const hand=xy=>[caster.x+(xy[0]-caster.anchorX)*caster.scale,caster.groundY+(xy[1]-caster.anchorY)*caster.scale+p.projectileOffsetY];
     if(['cymbals','cigarette','guitar','bottle'].includes(move)){

@@ -62,15 +62,25 @@ test('altezze definitive salvate per tutti e sette, proporzioni delle mosse e da
   assert.ok(Math.abs(idleHeight(oscare)/idleHeight(arianna)-183/165)<1e-8);
 });
 
-test('ombre animate: entrambi i piedi restano agganciati in tutti gli 87 frame, anche dopo drag e riflesso',()=>{
+test('ombre animate: entrambi i piedi restano agganciati per tutti i personaggi idle, anche dopo drag e riflesso',()=>{
   const data=JSON.parse(fs.readFileSync(path.join(folder,'foot-contacts.json'),'utf8'));
-  assert.equal(data.items.reduce((n,item)=>n+item.frames.length,0),87);
-  for(const fighter of stages[0].fighters){
+  const manifest=JSON.parse(fs.readFileSync(path.join(demo,'assets/manifest.json'),'utf8'));
+  assert.deepEqual(data.items.map(i=>i.characterId),manifest.characters.map(c=>c.id));
+  for(const character of manifest.characters){
+    const idle=character.animations.find(a=>a.id==='idle');
+    const fighter={characterId:character.id,x:675,groundY:1025,scale:idle.normalizedPreview.scale[0]*4/3*character.stageHeightMultiplier,anchorX:idle.normalizedPreview.anchor[0],anchorY:idle.normalizedPreview.anchor[1]};
     const item=data.items.find(i=>i.characterId===fighter.characterId);
+    assert.equal(item.frames.length,idle.frames.length);
+    for(const id of ['hurt-high','knockdown','get-up']){
+      const animation=character.animations.find(a=>a.id===id),contact=item.animations[id];
+      assert.equal(contact.frames.length,animation.frames.length);
+      assert.equal(contact.pngSha256,createHash('sha256').update(fs.readFileSync(path.join(demo,contact.image))).digest('hex'));
+    }
     assert.equal(item.pngSha256,createHash('sha256').update(fs.readFileSync(path.join(demo,item.image))).digest('hex'));
     for(const feet of item.frames){
       assert.equal(feet.length,2);
-      for(const camera of [0,315,630]){
+      for(const camera of [0,315,630])for(const flipX of [false,true]){
+        fighter.flipX=flipX;
         const [a,b,c,d,tx,ty]=shadowProjection(fighter,stages[0].shadow,feet,camera);
         for(const foot of feet){
           const u=foot.x-fighter.anchorX,v=foot.y-fighter.anchorY;

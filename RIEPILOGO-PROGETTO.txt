@@ -387,3 +387,13 @@ Manifest aggregato assets/specials/manifest.json, incorporato nel catalogo JS
 per uso file://. Dettagli e parametri in LEGGIMI.txt e nei sei report
 reports/{personaggio}-specials.html.
 URL: specials.html?character=mangler&move=drums&time=3400&paused=1
+
+OMBRE SANMAURO E PROIETTILI BUE
+Corretto l'appoggio dell'ombra idle di Bue e degli altri personaggi: dati
+delle suole estesi a tutti i 386 frame idle, più hurt-high/knockdown/get-up.
+Proiezione corretta anche con un solo piede rilevabile e piano dell'ombra
+coerente con la posizione della sagoma; test su tutte le 42 sequenze Special.
+Generazione in scripts/build-stages.py, estrazione in scripts/feet_contacts.py.
+Baglioni/Tom Waits: altri 20 px verso l'alto, totale -50 px a 1080p.
+Parametro previewOffsetY=-20 per ciascun cantante; il rialzo comune resta -30.
+Timings, scale e posizione di Bue invariati; rigenerazione conserva la scelta.

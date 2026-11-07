@@ -614,3 +614,18 @@ move: baseball/dog/cats; cymbals/spin/drums; cigarette/smoke;
 bottle/welding; shoulder/guitar; baglioni/tom. strength: light/medium/heavy.
 I manifest conservano hash dei PNG e script sorgenti, FPS, indici, rettangoli,
 scale e posizioni. Il vecchio progetto Godot viene soltanto letto.
+
+CORREZIONI OMBRE E ALTEZZA CANTANTI
+Contatti delle suole per tutti i 386 frame idle dei sette personaggi, più
+hurt-high, knockdown e get-up dei bersagli. Generati da build-stages.py con
+feet_contacts.py e incorporati in stage-foot-contacts.js per uso offline.
+La proiezione mantiene fermo anche un singolo appoggio: alcuni frame delle
+Special hanno una sola suola rilevabile. Il renderer usa il piano verticale
+della sagoma, compresi i cantanti di Bue; i salti dei gatti conservano il
+proprio piano a terra mentre il corpo sale. Controllati tutti i frame delle
+42 sequenze Special/Super, inclusi riflesso e spostamento della camera.
+Baglioni e Tom Waits rialzati di altri 20 px: previewOffsetY=-20 per entrambi,
+oltre ai -30 comuni, per un rialzo totale di 50 px a 1080p. Bue resta fermo;
+timing, scale e file PNG invariati. Valore conservato nella rigenerazione.
+Per rigenerare solo stage/contatti senza concatenare i report delle mosse:
+python demo-moves-sanmauro/scripts/build-stages.py --skip-reports

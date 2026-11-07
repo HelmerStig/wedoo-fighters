@@ -27,7 +27,8 @@
   const aliases=character.id==='arianna'?[['arianna-idle','arianna','idle'],['oscare-idle','oscare','idle'],['oscare-hurt','oscare','hurt-high']]:[['caster-idle',character.id,'idle'],['target-idle',targetId,'idle'],['target-hurt',targetId,'hurt-high'],['target-ko',targetId,'knockdown'],['target-recovery',targetId,'get-up']];
   for(const [key,characterId,animationId] of aliases){
     const a=roster.characters.find(c=>c.id===characterId).animations.find(a=>a.id===animationId);
-    const contacts=animationId==='idle'?window.STAGE_FOOT_CONTACTS?.items.find(i=>i.characterId===characterId)?.frames:null;
+    const contactData=window.STAGE_FOOT_CONTACTS?.items.find(i=>i.characterId===characterId);
+    const contacts=animationId==='idle'?contactData?.frames:contactData?.animations?.[animationId]?.frames;
     animations[key]={...a,footContacts:contacts};
   }
   let move=moves.some(m=>m.id===params.get('move'))?params.get('move'):moves[0].id,strength=['light','medium','heavy'].includes(params.get('strength'))?params.get('strength'):'light',seed=Number(params.get('seed'))||7,elapsed=0,lastRaw=null,playing=!media.matches&&params.get('paused')!=='1',ready=false,disposed=false,gallery;
