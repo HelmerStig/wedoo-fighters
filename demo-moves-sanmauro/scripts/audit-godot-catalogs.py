@@ -9,6 +9,8 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import os
+import shutil
 
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=Path(sys.argv[1]) if len(sys.argv)>1 else Path('F:/Personali/Godot')
@@ -161,7 +163,7 @@ for who in ['Bue','Mileto','Oscare','Peirolo','Torpe']:
     (WORK/(who+'Catalog.gd')).write_text(generic.replace('\t','    '),encoding='utf-8')
     (WORK/(who+'.json')).write_text(json.dumps(dict(values=values,functions=['_configure_animations'],source=str(SOURCE).replace('\\','/'))),encoding='utf-8')
 
-binary=Path('C:/Program Files (x86)/Godot_v4.7-stable_win64.exe')
+binary=Path(os.environ.get('GODOT_BIN') or shutil.which('godot') or 'C:/Program Files (x86)/Godot_v4.7-stable_win64.exe')
 for who in ['Arianna','Mangler','Bue','Mileto','Oscare','Peirolo','Torpe']:
     result=subprocess.run([str(binary),'--headless','--log-file',str(WORK/(who+'-engine.log')),'--path',str(WORK),'--script','res://Audit.gd','--',who],capture_output=True,text=True,timeout=150)
     (WORK/(who+'-audit.log')).write_text(result.stdout+result.stderr,encoding='utf-8')

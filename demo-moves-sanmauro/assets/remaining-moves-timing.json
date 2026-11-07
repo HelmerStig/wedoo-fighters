@@ -373,8 +373,8 @@
       "id": "jump-heavy-punch",
       "sourceSha256": "b997957b6f6c46e41ebe38119dea14438e67214a3c3f428e89cd4e9f75b2f881",
       "framesSha256": "9cdb751078fb4eee100974dc7af91dcdb536ff0b169693948081f4a5cd60195f",
-      "impactFrame": 9,
-      "note": "Posa di estensione verificata nel confronto dei frame runtime."
+      "impactFrame": 12,
+      "note": "Colpo discendente a due mani: posa di estensione verso il basso verificata nella sequenza runtime."
     },
     {
       "characterId": "mileto",

@@ -1,2 +1,0 @@
-﻿Personaggio,Frame demo,Durata demo ms,Estensione ms,Frame estensione indice 0,FPS Godot,Durata Godot ms,Animazione Godot,PNG sorgente,SHA256,Note
-Mangler,20,750,450,6,48.0,395.8333333333333,crouched_medium_punch_crouched,assets/sprites/characters/mangler/basic-moves/medium-kick/crouched_medium_punch.png,308fbb37b100c9599c8134f7fd8ad6e2960d3fd0c8cdb4494aa5f96f55369b82,"Posa di estensione verificata nel confronto dei frame runtime. Scala Godot [0.85, 0.85]."

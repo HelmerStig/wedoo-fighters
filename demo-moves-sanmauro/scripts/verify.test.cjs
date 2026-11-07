@@ -7,6 +7,19 @@ const {createHash}=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/manifest.json'),'utf8'));
 
+test('mosse normali aggiunte: pagine per mossa e per personaggio collegate ai report',()=>{
+  const groups=require('../move-groups.js').group(manifest.characters).filter(g=>g.animations.some(a=>a.remainingImport));
+  for(const group of groups){
+    const f=fixture({page:'moves',search:'?move='+group.id});
+    assert.equal(f.nodes.get('#move-report').hidden,false);
+    assert.equal(f.nodes.get('#move-report-link').href,'reports/'+group.id+'-timing.html');
+    assert.equal(f.galleries[0].data.animations.length,group.animations.length);
+  }
+  const f=fixture({page:'character',search:'?id=mangler&anim=jump-heavy-kick'});
+  assert.equal(f.galleries[0].options.highlightId,'jump-heavy-kick');
+  assert.doesNotMatch(f.nodes.get('#sidebar').innerHTML,/Combo|già accovacciato/);
+});
+
 test('pugno pesante: fonti esatte, sequenze Godot, estensione 500 ms e idle a 1000 ms',()=>{
   const {advanceAnimation}=require('../player-core.js');
   const peaks={arianna:23,bue:15,mangler:40,mileto:16,oscare:15,peirolo:10,torpe:15};

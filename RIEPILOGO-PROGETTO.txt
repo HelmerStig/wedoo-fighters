@@ -2,7 +2,7 @@ WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
 Aggiornato: 7 novembre 2026
 
 SCOPO E STATO
-Totale attuale Sanmauro: 112 animazioni, 16 per personaggio. È presente anche
+Totale attuale Sanmauro: 271 animazioni: 38 per Arianna/Mangler, 39 per gli altri cinque. È presente anche
 Hurt accovacciato (hurt-crouched): i 12 frame a 24 fps della configurazione
 Fighter.gd, durata 500 ms, senza recupero inverso concatenato. Mangler usa
 scala reworked 0.85 per questa reazione, mentre gli hurt in piedi usano 0.70.
@@ -320,3 +320,21 @@ arriva al bordo destro durante il colpo, senza ulteriori tagli della demo.
 Altri conteggi: Arianna 49, Bue 21, Mileto 38, Oscare 28, Peiro 25, Torpe 31.
 assets/heavy-punch-timing.json, reports/heavy-punch-timing.html/.csv,
 rigenerazione con scripts/build-heavy-punch-report.py o import-roster.py.
+
+COMPLETAMENTO NORMALI SANMAURO
+159 animazioni aggiunte, totale 271. Calci in piedi, tutti gli attacchi
+accovacciati e aerei, corsa/backwalk/back-jump, posa aerea dove presente,
+hurt in aria, knockdown e rialzate. Esclusi special, super, prese, Combo e
+le due varianti Mangler già accovacciato, anche nelle rigenerazioni.
+Timing attacchi: light 300/500 ms, medium 450/750 ms, heavy 500/1000 ms
+(estensione/durata). Terminale: ritorno alla posa iniziale, senza pausa extra.
+Neutralità/reazioni nuove: timing sorgente; stand-up 250 ms.
+Mangler: scala runtime .85 reworked, .70 legacy, .80 calci aerei; posizioni
+Godot conservate. Menu con stati/movimenti prima degli attacchi.
+23 report HTML/CSV aggiuntivi, con pose e link sotto il titolo.
+Indice reports/remaining-moves.html. Configurazioni assets/remaining-moves-
+source.json e remaining-moves-timing.json, vincolate agli hash dei sorgenti.
+Audit Godot isolato con scripts/audit-godot-catalogs.py, poi snapshot con
+scripts/build-remaining-source.py. Nessuna modifica al vecchio progetto.
+Importazione: scripts/import-roster.py (include tutto); solo nuove mosse:
+scripts/remaining_moves.py. Report offline: scripts/build-remaining-reports.py.

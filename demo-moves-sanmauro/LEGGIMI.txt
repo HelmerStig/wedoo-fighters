@@ -3,15 +3,14 @@ SANMAURO FIGHTERS — DEMO MOSSE
 Schermata principale con i sette personaggi del vecchio progetto, ricerca
 per nome, menu mobile e anteprime idle su hover/focus.
 Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
-ogni personaggio ha sedici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
-Parata media, Parata bassa, Hurt alto, Hurt medio, Hurt basso, Hurt accovacciato,
-Vittoria, Sconfitta, Pugno leggero, Pugno medio e Pugno pesante.
-Il menu Per mossa usa gli id idle, walk, jump, crouch, block-high, block-mid,
-block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory, ko, light-punch, medium-punch e heavy-punch:
-confronta la stessa animazione sui sette personaggi, filtrabili per nome.
+i player includono tutte le mosse normali presenti e realmente usate in Godot.
+Arianna e Mangler hanno 38 animazioni ciascuno; gli altri cinque ne hanno 39.
+Totale: 271 animazioni. Il menu Per mossa presenta prima movimenti e stati,
+poi attacchi in piedi, accovacciati e in salto. Nessuna variante assente in
+Godot viene inventata; la posa in aria separata esiste solo per cinque personaggi.
 Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
 e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
-Le altre mosse non sono ancora importate.
+Esclusi special, super, prese, combo e varianti Mangler già accovacciato.
 
 Aprire index.html direttamente oppure, dalla radice del repository:
   node demo-moves-sanmauro/scripts/serve.mjs
@@ -453,3 +452,54 @@ hash PNG/sequenza; rivedere le selezioni dopo un cambio degli asset.
 Report HTML/CSV e pose: reports/heavy-punch-timing.html, sotto il titolo.
 Rigenerazione: python demo-moves-sanmauro/scripts/build-heavy-punch-report.py
 Importazione e altri report lo rigenerano automaticamente.
+
+COMPLETAMENTO DELLE MOSSE NORMALI
+Aggiunte 159 animazioni: calci light/medium/heavy in piedi, pugni e calci
+accovacciati, pugni e calci in salto; inoltre corsa, camminata indietro,
+salto indietro (dodge per Mangler), posa in aria dove presente, colpo subito
+in aria, atterramento da spazzata, rialzata da terra e da accovacciata.
+Special, super, prese, combo e le due varianti già accovacciato di Mangler
+sono escluse sia dai menu sia dalle importazioni future.
+
+TIMING DELLE NUOVE MOSSE
+Light: estensione 300 ms / ciclo 500 ms. Medium: 450 / 750 ms. Heavy: 500 / 1000 ms.
+Le recovery definite separatamente da Godot sono concatenate alle sequenze
+principali. Il frame terminale replica la posa iniziale senza aggiungere
+durata al ciclo: guardia in piedi, posa accovacciata o aerea secondo la mossa.
+I montanti sono revisionati per estensione verticale, gli altri attacchi sulle
+pose di distensione dell'arto. Tutte le selezioni sono modificabili e legate
+a hash PNG e sequenza in assets/remaining-moves-timing.json.
+Movimenti e reazioni nuovi mantengono FPS/pesi/durate Godot; la rialzata da
+accovacciata dura 250 ms come l'ingresso. Nessuna simulazione fisica del salto.
+Gli attacchi aerei mostrano la sequenza visiva, senza imporre un atterraggio.
+
+PROPORZIONI MANGLER
+Le scale vengono lette dal comportamento update_sprite_scale di Godot: .85
+per le mosse reworked, .70 per quelle legacy, .80 per i tre calci aerei.
+Posizione sprite .85/reworked (0,-115), legacy (0,-120); alcuni calci in aria
+conservano posizione legacy e scala .80. Le altre altezze fisiche restano
+quelle configurate. Un unico zoom della galleria impedisce ritagli; gli
+stage mantengono la scala approvata tramite normalizedPreview separata.
+
+AUDIT E RIGENERAZIONE
+Snapshot: assets/remaining-moves-source.json (rettangoli/durate runtime e
+hash PNG, script catalogo e configurazione); non legge cartelle per nome.
+Le copie dei cataloghi sono eseguite con Godot in tmp/godot-animation-audit,
+con PNG letti come ImageTexture da percorsi assoluti. Il vecchio progetto
+Godot resta intatto: nessuna scrittura in F:/Personali/Godot.
+Per nuovi asset o modifiche dei cataloghi:
+  python demo-moves-sanmauro/scripts/audit-godot-catalogs.py
+  python demo-moves-sanmauro/scripts/build-remaining-source.py
+Poi rivedere le selezioni in remaining-moves-timing.json e i relativi hash
+prima dell'importazione; i riferimenti obsoleti sono rifiutati.
+Importazione completa:
+  python demo-moves-sanmauro/scripts/import-roster.py
+Solo queste mosse, con gli asset Godot disponibili:
+  python demo-moves-sanmauro/scripts/remaining_moves.py
+Solo report e timing, completamente offline:
+  python demo-moves-sanmauro/scripts/build-remaining-reports.py
+
+REPORT
+23 report HTML/CSV aggiuntivi con 159 confronti di pose, collegati sotto il
+titolo di ciascuna mossa. reports/remaining-moves.html elenca disponibilità
+e collegamenti. Nessuna voce Combo o già accovacciato resta nella demo.

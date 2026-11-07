@@ -1,2 +1,0 @@
-﻿Personaggio,Frame demo,Durata demo ms,Estensione ms,Frame estensione indice 0,FPS Godot,Durata Godot ms,Animazione Godot,PNG sorgente,SHA256,Note
-Mangler,16,500,300,4,48.0,312.5,crouched_punch_crouched,assets/sprites/characters/mangler/basic-moves/light-punch/crouched-light-punch.png,faacfea360928c5fa6708ee293f9bc4480fdc74a06aeb65acd554012f1ed70b7,"Posa di estensione verificata nel confronto dei frame runtime. Scala Godot [0.85, 0.85]."
