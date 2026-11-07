@@ -62,7 +62,7 @@
       document.title=selected.name+' · Animazioni · Sanmauro Fighters';$('#breadcrumb-name').textContent=selected.name;
       const index=characters.indexOf(selected);
       const pager=(c,direction)=>c?`<a class="icon-button" href="${href(c)}" aria-label="${direction==='←'?'Precedente':'Successivo'}: ${escape(c.name)}">${direction}</a>`:`<span class="icon-button pager-disabled" aria-hidden="true">${direction}</span>`;
-      $('#character-detail').innerHTML=`<a class="back-link" href="index.html">← Torna al roster</a><section class="detail-heading"><div class="detail-identity"><img class="detail-portrait" data-portrait src="${escape(selected.thumbnail)}" alt="" width="100" height="100"><div class="detail-name"><p class="eyebrow">PERSONAGGIO ${number(index+1)} / ${number(characters.length)}</p><h1>${escape(selected.name.toUpperCase())}<span class="accent">.</span></h1><p class="intro">Esplora le mosse, osserva ogni frame.</p></div></div><nav class="character-pager" aria-label="Personaggio precedente e successivo">${pager(characters[index-1],'←')}${pager(characters[index+1],'→')}</nav></section><div id="animation-gallery"></div>`;
+      $('#character-detail').innerHTML=`<a class="back-link" href="index.html">← Torna al roster</a><section class="detail-heading"><div class="detail-identity"><img class="detail-portrait" data-portrait src="${escape(selected.portrait ?? selected.thumbnail)}" alt="" width="100" height="100"><div class="detail-name"><p class="eyebrow">PERSONAGGIO ${number(index+1)} / ${number(characters.length)}</p><h1>${escape(selected.name.toUpperCase())}<span class="accent">.</span></h1><p class="intro">Esplora le mosse, osserva ogni frame.</p></div></div><nav class="character-pager" aria-label="Personaggio precedente e successivo">${pager(characters[index-1],'←')}${pager(characters[index+1],'→')}</nav></section><div id="animation-gallery"></div>`;
       imageFallbacks();gallery=MovesGallery.install($('#animation-gallery'),selected,{highlightId:params.get('anim')});
     }
   }
@@ -83,7 +83,7 @@
     }else{
       document.title=currentMove.name+' · Per mossa · Sanmauro Fighters';
       $('#breadcrumb-name').textContent=currentMove.name;$('#move-name').textContent=currentMove.name;
-      const reportPath=['jump','crouch','light-punch'].includes(currentMove.id)||currentMove.id.startsWith('block-')||currentMove.id.startsWith('hurt-')?'reports/'+currentMove.id+'-timing.html':null;
+      const reportPath=['jump','crouch','light-punch','medium-punch','heavy-punch'].includes(currentMove.id)||currentMove.id.startsWith('block-')||currentMove.id.startsWith('hurt-')?'reports/'+currentMove.id+'-timing.html':null;
       $('#move-report').hidden=!reportPath;
       if(reportPath){$('#move-report-link').href=reportPath;$('#move-report-link').textContent='Apri il report: '+currentMove.name+' →';}
       $('#move-total-count').textContent=currentMove.animations.length;renderMove();

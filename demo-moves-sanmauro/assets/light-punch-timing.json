@@ -1,7 +1,7 @@
 {
   "schema": "sanmauro.light-punch-timing",
   "version": 1,
-  "durationMs": 750,
+  "durationMs": 500,
   "impactMs": 300,
   "items": [
     {

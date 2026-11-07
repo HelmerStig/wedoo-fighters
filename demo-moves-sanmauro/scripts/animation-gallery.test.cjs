@@ -34,7 +34,7 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,previe
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
   if(preview)character.animations.forEach(a=>a.preview={drawRect:[60,70,400,400]});
-  if(terminal)character.animations.forEach((a,i)=>{a.id=i?'ko':'victory';a.loop=false;cards[i].nodes['[data-role="loop"]'].checked=false;});
+  if(terminal)character.animations.forEach((a,i)=>{a.id=i?'ko':'victory';a.loop=false;});
   if(timed==='jump')character.animations.forEach((a,i)=>{a.apexFrame=i?40:10;a.apexMs=500;a.durationMs=1000;a.frameDurations=a.frames.map((_,f)=>f<a.apexFrame?500/a.apexFrame:500/(a.frames.length-a.apexFrame));});
   else if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
   if(byMove) character.animations.forEach((a,i)=>{a.characterId=i?'luana':'marco-balpo';a.characterName=i?'Luana':'Marco Balpo';});
@@ -49,7 +49,8 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,previe
 
 test('stati finali senza loop mantengono l’ultima posa e possono essere riavviati',()=>{
   const f=fixture({terminal:true});f.load();
-  assert.doesNotMatch(f.container.innerHTML,/data-role="loop" type="checkbox" checked/);
+  assert.equal((f.container.innerHTML.match(/data-role="loop" type="checkbox" checked/g)||[]).length,2);
+  f.cards.forEach(card=>{card.nodes['[data-role="loop"]'].checked=false;});
   for(let time=0;time<=5000;time+=250)f.step(time);
   assert.equal(f.frame(0),59);assert.equal(f.frame(1),59);assert.equal(f.callbacks.size,0);
   f.cards[0].nodes['[data-action="play"]'].fire('click');assert.equal(f.frame(0),0);
@@ -150,4 +151,12 @@ test('gli apici dei salti restano allineati con caricamento progressivo e nei lo
   f.cards[1].nodes['[data-role="speed"]'].fire('change');
   assert.match(f.cards[1].nodes['[data-role="fps"]'].textContent,/apice 1 s/);
   f.gallery.destroy();
+});
+
+ test('loop attivo di default anche per animazioni Godot non cicliche',()=>{
+  const f=fixture({terminal:true});f.load();
+  assert.equal((f.container.innerHTML.match(/data-role="loop" type="checkbox" checked/g)||[]).length,2);
+  for(let time=0;time<=5000;time+=250)f.step(time);
+  assert.equal(f.frame(0),30);assert.equal(f.frame(1),0);
+  assert.ok(f.callbacks.size>0);f.gallery.destroy();
 });

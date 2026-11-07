@@ -20,9 +20,9 @@ class GuardTimingTests(unittest.TestCase):
 
     def test_source_timing_does_not_change_after_new_demo_duration(self):
         before=copy.deepcopy(self.data)
-        self.config['durationMs']=500
+        self.config['durationMs']=750
         apply_guard_timing(self.data,self.config)
-        self.config['durationMs']=250
+        self.config['durationMs']=500
         apply_guard_timing(self.data,self.config)
         self.assertEqual(before,self.data)
 

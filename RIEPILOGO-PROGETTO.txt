@@ -1,8 +1,8 @@
 WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
-Aggiornato: 6 novembre 2026
+Aggiornato: 7 novembre 2026
 
 SCOPO E STATO
-Totale attuale Sanmauro: 98 animazioni, 14 per personaggio. È presente anche
+Totale attuale Sanmauro: 105 animazioni, 15 per personaggio. È presente anche
 Hurt accovacciato (hurt-crouched): i 12 frame a 24 fps della configurazione
 Fighter.gd, durata 500 ms, senza recupero inverso concatenato. Mangler usa
 scala reworked 0.85 per questa reazione, mentre gli hurt in piedi usano 0.70.
@@ -21,10 +21,11 @@ animazioni prima delle parate. Sono inoltre integrate Parata alta/media/bassa
 Parate: Arianna 16/13/16 frame a 48 fps; Mangler 14/8/11 a 48/24/24 fps
 con alta dai frame sorgente 9-22 e scala 0.85; Bue 10/6/11, Mileto 6/6/11,
 Oscare 10/6/11, Peirò 6/6/11, Torpe 9/6/11. Per questi cinque: alta/media
-24 fps, bassa 48 fps. Ingresso in guardia senza recovery concatenato, senza
-loop iniziale. Ora tutte le 21 parate durano 250 ms (0.25 s) a 1x, incluso
-l'ultimo frame: FPS demo = numero frame × 4; timing Godot conservati nei campi
-sourceFps/sourceFrameDurations/sourceDurationMs. Config: assets/guard-timing.json.
+24 fps, bassa 48 fps. Tutte le 21 parate ora eseguono andata e ritorno
+inverso in 500 ms (0.5 s) a 1x, senza duplicare il picco. N frame sorgenti
+producono 2*N-1 frame demo; FPS demo = frame totali * 2. Loop attivo di default.
+Timing originali in sourceFps/sourceFrameDurations/sourceDurationMs; sequenza
+originale in sourceFrames. Config: assets/guard-timing.json.
 Report HTML/CSV block-high-timing, block-mid-timing e block-low-timing nella
 cartella reports/, collegati sotto i titoli delle mosse. Rigenerare con:
 python demo-moves-sanmauro/scripts/build-guard-reports.py.
@@ -273,8 +274,8 @@ Test completi da PowerShell nella radice del repository:
 Controllo modifiche: git diff --check
 I test automatici non sostituiscono il confronto visivo nel browser o in Godot.
 
-Pugno leggero Sanmauro integrato per tutti: 750 ms a 1x, incluso ultimo frame.
-Arianna 17 frame / 22.666667 fps medi demo, Mangler 18 / 24 fps, altri 13 / 17.333333 fps.
+Pugno leggero Sanmauro integrato per tutti: 500 ms a 1x, incluso ultimo frame.
+Arianna 17 frame / 34 fps medi demo, Mangler 18 / 36 fps, altri 13 / 26 fps.
 Sequenze Godot: Arianna 0-8,7-0 (ritorno inverso richiesto), Mangler 0-17 (scala 0.85),
 altri 0-6,5-0 con ritorno integrato. Sorgenti 48/48/24 fps conservate.
 assets/light-punch-timing.json e reports/light-punch-timing.html/.csv dentro
@@ -282,13 +283,30 @@ demo-moves-sanmauro; report collegato sotto il titolo Pugno leggero.
 Rigenerare con scripts/build-light-punch-report.py o import-roster.py.
 Pugni leggeri corretti: campo light_punch_sheet letto per nome esatto, distinto
 da jump_light_punch_sheet. Bue, Mileto, Peirò e Torpe: light_punch_spritesheet.png;
-Oscare: Oscare-light_punch.png. Tutti usano il pugno a terra, durata 750 ms.
+Oscare: Oscare-light_punch.png. Tutti usano il pugno a terra, durata 500 ms.
 
 Massima estensione Pugno leggero Sanmauro sincronizzata a 300 ms (0.30 s),
-durata totale 750 ms. Indici frame da 0: Arianna 8, Bue 4, Mangler 10,
+durata totale 500 ms. Indici frame da 0: Arianna 8, Bue 4, Mangler 10,
 Mileto 6, Oscare 5, Peiro 4, Torpe 6. Timing variabili prima/dopo estensione.
 Configurazione light-punch-timing.json vincolata a hash PNG/sequenza; dopo
 nuovi asset rivedere la selezione. Report aggiornato con pose e timing.
 
 Arianna: ultimo frame del pugno (indice 8) a 0.30 s, poi ritorno al
-contrario 7-0 fino all’idle. Ciclo completo di 17 frame, durata 0.75 s.
+contrario 7-0 fino all’idle. Ciclo completo di 17 frame, durata 0.5 s.
+
+Demo Sanmauro: Loop attivo di default su tutte le animazioni, in tutte le
+gallerie per personaggio e per mossa. Disattivabile con il checkbox;
+nessuna modifica al comportamento sorgente Godot salvato nel manifest.
+
+Pugno medio Sanmauro: integrato per tutti con estensione 450 ms e idle
+terminale esatto a 750 ms. Config medium-punch-timing.json e report HTML/CSV
+collegato sotto il titolo. Mangler usa medium_open_hand_slap: preparazione
+10 + colpo 16 + ritorno 16, tre PNG originali copiati e atlas derivato a
+pixel invariati. Nessuna variante estranea importata. Scala Godot 0.85.
+Altri conteggi completi: Arianna 49, Bue 47, Mileto 24, Oscare 43, Peiro 29,
+Torpe 27. Proporzioni e centratura condivise con gli altri movimenti.
+
+Ritratti accanto al nome in personaggio.html: PNG selezionati da Godot
+CharacterSelect.gd, copiati in demo-moves-sanmauro/assets/portraits.
+Arianna portrait-v2; Oscare portrait-slim-bust; altri cinque portrait-v1.
+Rigenerare con scripts/import-portraits.py; richiamato anche da import-roster.py.

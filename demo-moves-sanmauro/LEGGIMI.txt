@@ -3,11 +3,11 @@ SANMAURO FIGHTERS — DEMO MOSSE
 Schermata principale con i sette personaggi del vecchio progetto, ricerca
 per nome, menu mobile e anteprime idle su hover/focus.
 Le schede e il menu Per personaggio aprono personaggio.html?id=<id>:
-ogni personaggio ha quattordici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
+ogni personaggio ha quindici player: Idle, Camminata, Salto, Accovacciata, Parata alta,
 Parata media, Parata bassa, Hurt alto, Hurt medio, Hurt basso, Hurt accovacciato,
-Vittoria, Sconfitta e Pugno leggero.
+Vittoria, Sconfitta, Pugno leggero e Pugno medio.
 Il menu Per mossa usa gli id idle, walk, jump, crouch, block-high, block-mid,
-block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory, ko e light-punch:
+block-low, hurt-high, hurt-medium, hurt-low, hurt-crouched, victory, ko, light-punch e medium-punch:
 confronta la stessa animazione sui sette personaggi, filtrabili per nome.
 Ogni player ha pausa, avanzamento frame, timeline, loop, velocità, sfondi
 e download PNG; Riproduci tutte/Pausa tutte controllano la galleria.
@@ -37,7 +37,7 @@ assets/characters/<id>/portrait.png: anteprima derivata dalla prima cella idle,
 normalizzata con lo stesso allineamento dei player su un canvas 512 × 512.
 assets/manifest.json: frame, dimensioni e provenienza con SHA-256.
 catalog.js: copia incorporata per funzionare anche da file://.
-Sono copiati soltanto gli asset delle quattordici mosse realmente referenziate.
+Sono copiati soltanto gli asset delle quindici mosse realmente referenziate.
 Fonte: F:/Personali/Godot/assets/sprites/characters, senza modifiche ai sorgenti.
 Per Arianna è usata basic-moves/idle.png, come nel controller Godot;
 per Mangler 01-mangler-idle.png; per gli altri il foglio indicato nella scena.
@@ -73,7 +73,7 @@ ACCOVACCIATA — CROUCH
 Disponibile per tutti in personaggio.html?id=<id>&anim=crouch e
 mosse.html?move=crouch, con titolo Accovacciata.
 Sequenza in avanti di ingresso nella posa bassa, senza rialzata concatenata.
-Default senza Loop: la posa finale resta visibile. Il checkbox consente di
+Default con Loop attivo. Disattivandolo, la posa finale resta visibile. Il checkbox consente di
 ripetere la sequenza per confronto, senza generare frame inversi aggiuntivi.
 Durata comune di 250 ms (0.25 s) a 1x, ultimo frame incluso; FPS demo = frame × 4.
 Fonti Godot (celle 512 × 512, 5 colonne, tutti i frame da indice 0):
@@ -95,33 +95,22 @@ Rigenerazione locale:
   python demo-moves-sanmauro/scripts/build-crouch-report.py
 L'importazione e le altre rigenerazioni dei report aggiornano anche questo.
 
-PARATE ALTA, MEDIA E BASSA — FONTI GODOT
-Il playback demo è ora uniforme: 250 ms (0.25 s) a 1x per tutte le 21 parate.
-Configurazione: assets/guard-timing.json. FPS demo = numero frame × 4;
-ogni frame dura 250/numero frame ms. La durata comprende l'ultimo frame:
-la posa finale comincia un intervallo prima del termine, poi resta visibile
-quando Loop è disattivato. Non è un marcatore di parata a 100 ms.
-frameDurations, durationMs e guardDurationMs descrivono il timing demo;
-sourceFps, sourceFrameDurations e sourceDurationMs conservano il timing Godot.
-Riproduci tutte riallinea i cicli anche con caricamento progressivo; 0.5x
-dura 500 ms, 2x dura 125 ms. PNG, frame, proporzioni e ancoraggi invariati.
-Report collegati sotto il titolo, stile play-button, margin-top 30 px:
-- reports/block-high-timing.html e .csv.
-- reports/block-mid-timing.html e .csv.
-- reports/block-low-timing.html e .csv.
-Le 21 pose finali sono nelle cartelle reports/block-*-poses/.
-Rigenerazione locale senza accesso a Godot:
-  python demo-moves-sanmauro/scripts/build-guard-reports.py
-Importazione, rigenerazione stage e report Salto aggiornano anche questi report.
-I valori FPS sotto descrivono la provenienza Godot, non il nuovo playback.
-
-Copie locali block-high.png, block-mid.png e block-low.png, con frame in
-ordine avanti e margini originali. Le altezze in cm e le correzioni dei fogli
-restano applicate come nelle altre mosse. Il player parte senza Loop e mantiene
-l'ultima posa difensiva, con possibilità di riavvio o ripetizione esplicita.
-Sono importate le sequenze di ingresso delle tre parate. I recovery inversi
-e l'alias block_low_crouched restano distinti nel gioco: non sono aggiunti
-come ritorni automatici o duplicati nella demo.
+PARATE ALTA, MEDIA E BASSA - FONTI GODOT
+Tutte le 21 parate eseguono andata e ritorno inverso in 500 ms (0.5 s) a 1x.
+Con N frame di ingresso, la demo riproduce 0..N-1,N-2..0: 2*N-1 frame,
+senza duplicare il picco. Disattivando Loop resta visibile la posa iniziale.
+Loop resta attivo di default. FPS medi = frame totali * 2; ogni frame dura
+500/frame totali ms, incluso l'ultimo. A 0.5x il ciclo dura 1000 ms, a 2x 250 ms.
+Configurazione: assets/guard-timing.json, reverseAnimationIds per tutte e tre.
+sourceFrames e sourceForwardFrameCount conservano la sequenza di ingresso;
+sourceFps/sourceFrameDurations/sourceDurationMs conservano i timing Godot.
+playbackComposition descrive il ritorno inverso della demo. PNG, proporzioni,
+scale e ancoraggi restano invariati. Nessun tempo comune di ingresso imposto.
+Report HTML/CSV sotto il titolo di ciascuna parata, stile play-button,
+margin-top 30 px; pose difensive in reports/block-*-poses/.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-guard-reports.py
+Anche importazione e rigenerazione degli altri report aggiornano le parate.
+I conteggi qui sotto descrivono soltanto l'andata sorgente Godot.
 
 Frame alta / media / bassa:
 - Arianna: 16 / 13 / 16; 48 fps per tutte, 4 colonne; guard_high.png,
@@ -151,7 +140,7 @@ Gli spritesheet locali sono hurt-high.png, hurt-medium.png e hurt-low.png.
 Tutte le 21 reazioni durano 500 ms (0.5 s) a 1x, ultimo frame compreso:
 FPS demo = numero frame × 2. Frame, ordine, proporzioni fisiche e pixel
 originali sono conservati. Non sono sincronizzati specifici frame di impatto.
-Default senza Loop, con posa finale mantenuta; Loop ripete il ciclo di 500 ms.
+Default con Loop attivo; disattivandolo viene mantenuta la posa finale.
 Riproduci tutte riallinea i cicli; 0.5x dura 1 s, 2x dura 250 ms.
 Configurazione canonica: assets/hurt-timing.json. reactionDurationMs,
 durationMs e frameDurations descrivono il timing demo; sourceFps,
@@ -385,9 +374,9 @@ non certificano la resa finale del driver grafico nel browser.
 
 PUGNO LEGGERO
 Disponibile per tutti in mosse.html?move=light-punch e nelle pagine personaggio.
-Durata comune 750 ms a 1x; massima estensione a 300 ms per tutti.
-Timing variabile: primi 300 ms fino al frame selezionato, poi 450 ms fino
-alla fine, incluso il frame finale. FPS medi = frame / 0.75.
+Durata comune 500 ms a 1x; massima estensione a 300 ms per tutti.
+Timing variabile: primi 300 ms fino al frame selezionato, poi 200 ms fino
+alla fine, incluso il frame finale. FPS medi = frame / 0.5.
 Arianna: 17 frame 0-8,7-0, 7 colonne, sorgente 48 fps. Ultimo frame di
 andata (indice 8) a 300 ms, poi ritorno inverso fino all’idle a fine ciclo.
 Il picco non viene duplicato; la sequenza composta resta esplicita nel manifest.
@@ -406,3 +395,39 @@ L'importazione completa rigenera anche questo report.
 Il campo light_punch_sheet viene letto per nome esatto, senza confonderlo con
 jump_light_punch_sheet. Bue, Mileto, Peirò e Torpe usano light_punch_spritesheet.png;
 Oscare usa Oscare-light_punch.png. Sono tutti pugni leggeri a terra.
+
+LOOP DELLA DEMO
+Tutte le animazioni partono con Loop attivo nelle pagine per personaggio e
+per mossa, anche vittoria, KO e attacchi. Il checkbox permette di disattivarlo.
+I valori loop/sourceLoop nel manifest conservano il riferimento Godot;
+la preferenza iniziale del player della demo rimane indipendente.
+
+PUGNO MEDIO
+Disponibile per tutti, 750 ms a 1x; massima estensione a 450 ms, idle finale
+esattamente a 750 ms (frame terminale di durata zero, senza pausa nel loop).
+Arianna: basic-moves/medium-punch/medium-punch.png, 25+24 inversi = 49 frame.
+Bue: Bue-medium_punch.png, 24+23 inversi = 47 frame, recovery sorgente 96 fps.
+Mangler: medium_open_hand_slap usa SOLO tre PNG in basic-moves/medium-punch:
+medium-punch-preparation.png (10), medium-punch-hit.png (16),
+medium-punch-to-idle.png (16). Copiati integri e riuniti in medium-punch.png
+per il canvas: 42 celle, pixel identici, scale reworked 0.85 e centratura
+comune. sourceSheets conserva percorsi, hash e rettangoli dei tre originali;
+sourceSha256 sul record principale identifica l'atlas derivato.
+Mileto: Mileto-medium_punch.png, 24 frame con ritorno incluso, senza inverso.
+Oscare: Oscare-medium_punch.png, 22+21 inversi = 43, recovery 96 fps.
+Peiro: Peiro-medium_punch.png, 15+14 inversi = 29, recovery 48 fps.
+Torpe: Torpe-medium_punch.png, 14+13 inversi = 27, sorgente/recovery 30 fps.
+Gli altri sorgenti sono a 48 fps. Frame di estensione (indici da 0):
+Arianna 20, Bue 22, Mangler 16, Mileto 13, Oscare 20, Peiro 13, Torpe 10.
+Configurazione assets/medium-punch-timing.json, vincolata a PNG e sequenze.
+Report HTML/CSV: reports/medium-punch-timing.html, sotto il titolo della mossa.
+Rigenerazione: python demo-moves-sanmauro/scripts/build-medium-punch-report.py
+Importazione completa e altri report rigenerano anche il pugno medio.
+
+RITRATTI GODOT
+Le immagini accanto ai nomi nelle pagine personaggio sono quelle selezionate
+da CharacterSelect._get_portrait: Arianna v2, Mangler/Bue/Mileto/Peirolo/Torpe v1,
+Oscare slim-bust. PNG originali copiati in assets/portraits, senza ridimensionarli.
+Manifest: portrait e portraitSource; thumbnail resta l'anteprima idle del roster.
+Rigenerazione: python demo-moves-sanmauro/scripts/import-portraits.py
+L'importazione completa conserva questa scelta. Nessun riferimento esterno.

@@ -17,5 +17,13 @@ def apply_guard_timing(data, config):
             if 'sourceFrameDurations' not in animation:
                 animation['sourceFrameDurations'] = animation.get('frameDurations',[1000/animation['sourceFps']]*count)
                 animation['sourceDurationMs'] = sum(animation['sourceFrameDurations'])
+            if ident in config.get('reverseAnimationIds', []):
+                if 'sourceFrames' not in animation:
+                    animation['sourceFrames'] = [list(frame) for frame in animation['frames']]
+                forward = animation['sourceFrames']
+                animation['frames'] = forward + forward[-2::-1]
+                animation['sourceForwardFrameCount'] = len(forward)
+                animation['playbackComposition'] = 'forward-then-reverse-without-repeated-peak'
+                count = len(animation['frames'])
             animation.update(frameDurations=[duration/count]*count,durationMs=duration,
                 guardDurationMs=duration,playbackFps=count*1000/duration)

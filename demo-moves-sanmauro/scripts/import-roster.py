@@ -10,12 +10,17 @@ import shutil
 import statistics
 import sys
 import subprocess
+import runpy
 from PIL import Image
 from jump_timing import apply_timing
 from guard_timing import apply_guard_timing
 from hurt_timing import apply_hurt_timing
 from crouch_timing import apply_crouch_timing
 from light_punch_timing import apply_light_punch_timing
+from medium_punch_assets import load_medium_punch
+from medium_punch_timing import apply_medium_punch_timing
+from heavy_punch_assets import load_heavy_punch
+from heavy_punch_timing import apply_heavy_punch_timing
 from character_proportions import apply_proportions, write_portraits
 
 root = Path(__file__).resolve().parents[1]
@@ -101,10 +106,21 @@ for ident, name, scene in roster:
             ('block-high','Parata alta'),('block-mid','Parata media'),('block-low','Parata bassa'),
             ('hurt-high','Hurt alto'),('hurt-medium','Hurt medio'),('hurt-low','Hurt basso'),
             ('hurt-crouched','Hurt accovacciato'),
-            ('victory','Vittoria'), ('ko','Sconfitta'), ('light-punch','Pugno leggero')]:
+            ('victory','Vittoria'), ('ko','Sconfitta'), ('light-punch','Pugno leggero'), ('medium-punch','Pugno medio'), ('heavy-punch','Pugno pesante')]:
         start, explicit_frames, weights, jump_timing, skipped = 0, None, None, {}, []
+        sheet_override = None
         animation_config_path = config_path
-        if move=='light-punch':
+        if move=='heavy-punch':
+            relative,explicit_frames,original_fps,jump_timing = load_heavy_punch(
+                source,ident,scene,code,shared,number,cell_size)
+            count=len(explicit_frames)
+            fw,fh=explicit_frames[0][2:]
+        elif move=='medium-punch':
+            relative,sheet_override,explicit_frames,original_fps,jump_timing = load_medium_punch(
+                source,destination,ident,scene,code,shared,number,cell_size)
+            count=len(explicit_frames)
+            fw,fh=explicit_frames[0][2:]
+        elif move=='light-punch':
             if custom:
                 prefix=('ARIANNA_' if ident=='arianna' else '')+'LIGHT_PUNCH'
                 relative=re.search(r'const '+prefix+r'_SHEET\s*:=\s*preload\(\s*"res://([^"]+)"',code)[1]
@@ -268,7 +284,7 @@ for ident, name, scene in roster:
                 columns = int(number(code, move + '_columns', shared))
             fw, fh = cell_size(code, move + '_cell_size', shared) if move not in ('victory','ko') else (512,512)
             original_fps = number(shared, move.upper() + '_FPS')
-        sheet = source / relative
+        sheet = sheet_override or source / relative
         frames = explicit_frames if explicit_frames is not None else [[i % columns * fw, i // columns * fh, fw, fh] for i in range(start, start+count) if i not in skipped]
         count = len(frames)
         if move=='crouch':
@@ -301,7 +317,8 @@ for ident, name, scene in roster:
                     raise ValueError(f'Frame vuoto: {sheet}, ({x}, {y})')
                 bounds.append(bbox)
             union = [min(b[0] for b in bounds), min(b[1] for b in bounds), max(b[2] for b in bounds), max(b[3] for b in bounds)]
-        shutil.copy2(sheet, destination / (move + '.png'))
+        if sheet.resolve() != (destination / (move + '.png')).resolve():
+            shutil.copy2(sheet, destination / (move + '.png'))
         animations.append(dict(id=move, name=label, image=f'assets/characters/{ident}/{move}.png',
             frameWidth=fw, frameHeight=fh, frames=frames, playbackFps=original_fps if move in ('jump','crouch','light-punch') or move.startswith(('block-','hurt-')) else 24,
             sourceFps=original_fps, sheetWidth=width, sheetHeight=height,
@@ -329,6 +346,7 @@ for ident, name, scene in roster:
 data = dict(schema='sanmauro.roster', version=1, characters=characters)
 apply_proportions(data, json.loads((root/'assets/character-proportions.json').read_text(encoding='utf-8')))
 write_portraits(root, data)
+runpy.run_path(str(root/'scripts/import-portraits.py'))['import_portraits'](root,source,data)
 timing_path = root / 'assets/jump-timing.json'
 if timing_path.exists():
     apply_timing(data, json.loads(timing_path.read_text(encoding='utf-8')))
@@ -336,6 +354,8 @@ apply_guard_timing(data,json.loads((root/'assets/guard-timing.json').read_text(e
 apply_hurt_timing(data,json.loads((root/'assets/hurt-timing.json').read_text(encoding='utf-8')))
 apply_crouch_timing(data,json.loads((root/'assets/crouch-timing.json').read_text(encoding='utf-8')))
 apply_light_punch_timing(data,json.loads((root/'assets/light-punch-timing.json').read_text(encoding='utf-8')))
+apply_medium_punch_timing(data,json.loads((root/'assets/medium-punch-timing.json').read_text(encoding='utf-8')))
+apply_heavy_punch_timing(data,json.loads((root/'assets/heavy-punch-timing.json').read_text(encoding='utf-8')))
 (root / 'assets' / 'manifest.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 (root / 'catalog.js').write_text('// Generato da scripts/import-roster.py.\nwindow.SANMAURO_CATALOG = ' + json.dumps(data, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 print(f'Copiate {sum(len(c["animations"]) for c in characters)} animazioni e {len(characters)} anteprime in {root / "assets"}')

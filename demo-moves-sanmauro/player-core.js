@@ -14,7 +14,8 @@
   function advanceAnimation(state, deltaMs, animation, multiplier, loop) {
     const durations=animation.frameDurations;
     if(!durations)return advance(state,deltaMs,effectiveFps(animation,multiplier),animation.frames.length,loop);
-    if(durations.length!==animation.frames.length||durations.some(d=>!Number.isFinite(d)||d<=0)||!Number.isFinite(multiplier)||multiplier<=0)throw new Error('Timing non valido');
+    const terminalIdle=Number.isFinite(animation.returnToIdleMs)&&animation.returnToIdleMs>0&&animation.returnToIdleMs===animation.durationMs;
+    if(durations.length!==animation.frames.length||durations.some((d,i)=>!Number.isFinite(d)||(d<=0&&!(d===0&&terminalIdle&&i===durations.length-1)))||!Number.isFinite(multiplier)||multiplier<=0)throw new Error('Timing non valido');
     const total=durations.reduce((a,b)=>a+b,0);
     let elapsed=durations.slice(0,state.frame).reduce((a,b)=>a+b,0)+state.remainder+Math.max(0,deltaMs)*multiplier;
     if(!loop&&elapsed>=total-1e-8)return {frame:durations.length-1,remainder:0,ended:true};

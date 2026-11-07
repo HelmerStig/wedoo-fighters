@@ -15,9 +15,9 @@ class LightPunchTimingTests(unittest.TestCase):
     def test_repeated_build_and_duration_restore_preserve_sources(self):
         before=copy.deepcopy(self.data)
         apply_light_punch_timing(self.data,self.config)
-        self.config['durationMs']=500
+        self.config['durationMs']=650
         apply_light_punch_timing(self.data,self.config)
-        self.config['durationMs']=750
+        self.config['durationMs']=500
         apply_light_punch_timing(self.data,self.config)
         self.assertEqual(before,self.data)
 

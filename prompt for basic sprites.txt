@@ -112,3 +112,14 @@ Mileto : 170cm
 Peirò : 170cm
 
 Perfetto ora possiamo proseguire proseguire con la crouched pose, usa un timing di 0.5s
+
+Ora passiamo a hurt_crouched
+
+Arianna ha un comportamento particolare, il suo pugno non ha il ritorno in idle, quindi l'ultimo fotogramma deve essere a 0.30s e poi eseguire il ritorno al contrario
+
+Ora passiamo al pugno medio, per tutti i personaggi, attenzione a Mangler, che forse ha più spritesheet per il medium_punch, fa un controllo su godot e verifica quale spritesheet viene effettivamente utilizzato, importa solo quello in demo-moves-sanmauro, uniforma le dimensioni e centratura come fatto per gli altri movimenti.
+La massima estensione deve essere raggiunta a 0.45s, fai durare l'animazione 0.75s, quindi il ritorno in idle deve avvenire a 0.75s, per tutti i personaggi.
+
+ora di fianco al nome in personaggio.htm c'è un immagine, sostituiscila con il portarit usato in godot, importa gli assets nella cartella /demo-moves-sanmauro/assets/portraits
+
+ora passa a tutte le altre mosse presenti su godot ad eccezione delle special e delle super che vedremo on seguito. per le mosse light medium e heavy, uso lo stesso timing che abbiamo usato per il punch.
