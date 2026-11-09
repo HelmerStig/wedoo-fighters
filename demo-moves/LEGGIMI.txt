@@ -285,7 +285,7 @@ original-backgrounds/porta-susa/crt-preset.json. Rigenerazione del catalogo
 dei preset: node demo-moves/scripts/build-crt-presets.mjs.
 Per le nuvole procedurali serve WebGL; pioggia, stelle e personaggi usano
 Canvas 2D. Tutti i moduli funzionano con asset locali, anche via file://.
-Il server espone soltanto cielo.png e porta-susa.png della nuova cartella;
+Il server espone cielo.png, porta-susa.png e l'atlas lights-mask.png della nuova cartella;
 original-porta-susa.png e i file di lavorazione non vengono pubblicati.
 
 LUCI DI PORTA SUSA

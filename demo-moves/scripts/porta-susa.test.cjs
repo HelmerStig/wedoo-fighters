@@ -38,7 +38,7 @@ test('player: nuvole dietro il fondale, pioggia davanti e clock indipendente dal
   document.hidden=true;document.listeners.visibilitychange();assert.equal(audio.at(-1).hidden,true);
   player.destroy();assert.ok(destroyed);assert.equal(callbacks.size,0);
 });
-test('server: espone solo i due PNG di Porta Susa e i moduli del temporale',async t=>{
+test('server: espone i layer, le maschere luci e i moduli del temporale, proteggendo i sorgenti di lavoro',async t=>{
   const {createDemoServer}=await import('./serve.mjs'),server=createDemoServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));t.after(()=>new Promise(r=>server.close(r)));
   const base='http://127.0.0.1:'+server.address().port;
   for(const route of ['/original-backgrounds/porta-susa/cielo.png','/original-backgrounds/porta-susa/porta-susa.png','/original-backgrounds/porta-susa/lights-mask.png','/demo-moves/stage-weather.js','/demo-moves/stage-clouds-webgl.js','/demo-moves/stage-storm-audio.js','/demo-moves/stage-lights.js','/demo-moves/stage-lights-catalog.js'])assert.equal((await fetch(base+route,{method:'HEAD'})).status,200,route);
