@@ -397,3 +397,20 @@ Generazione in scripts/build-stages.py, estrazione in scripts/feet_contacts.py.
 Baglioni/Tom Waits: altri 20 px verso l'alto, totale -50 px a 1080p.
 Parametro previewOffsetY=-20 per ciascun cantante; il rialzo comune resta -30.
 Timings, scale e posizione di Bue invariati; rigenerazione conserva la scelta.
+
+SEZIONE UI - SCHERMATA INIZIALE
+Nuova voce UI nel menu Sanmauro, pagina demo-moves-sanmauro/ui.html.
+Solo fondale della TitleScreen Godot, senza logo, testi o menu del gioco.
+Dieci layer effettivamente usati da TitleScreen.gd copiati integri in
+assets/ui/title-screen: cielo/paesaggio, tre nuvole, paesaggio, acqua,
+tre riflessi e primo piano. SHA256 e provenienza nel manifest screen.json,
+incorporato anche in ui-catalog.js per uso offline.
+Immagini native 1776x592, disegno proporzionale a 3240x1080; vista 1920x1080
+centrata ed esplorabile con drag/frecce. Tre velocità di Piazza Europa:
+6/12/20 px/s verso sinistra, stessi valori sui riflessi corrispondenti.
+Stessi CRT base/avanzato e preset, foschia, polvere, offcanvas, pausa nuvole,
+Vista originale/Ripristina e fullscreen reale. Acqua statica, niente shader
+specifici Godot: si usa la pipeline filtri condivisa con Piazza Europa.
+Generazione: python demo-moves-sanmauro/scripts/build-ui.py [percorso Godot].
+Player condiviso esteso con renderWidth/renderHeight opzionali: i PNG restano
+nativi; le altre pagine mantengono il disegno precedente.

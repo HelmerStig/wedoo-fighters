@@ -126,3 +126,24 @@ ora passa a tutte le altre mosse presenti su godot ad eccezione delle special e 
 se hai dubbi chiedi
 
 Ora passerei alle special/super, quelle di peirò sono ancora da creare. Creerei una sezione dedicata per quelli, come per stages. Andremo ad inserire le animazioni e i proiettili eventualmente utilizzati, iniziamo da Arianna, hai delle domande? Le due special di arianna sono quella con la mazza da baseball e quella col cane, La super è quella con i gatti, metteri le super nello stage pèer vedere l'effetto. Quindi metti arianna nello stage
+
+perfetto, opra puoi passare agli altri personaggi, solo Mangler ha la super.
+Mangler Special:
+	- Lancio dei piatti della batteria
+	- Rotazione coi pugni
+Mangler Super: corsa con le bacchette e rullata in faccia all'avversario
+
+Oscar Special:
+	- Lancio sigaretta
+	- Fumata bianca
+Macchia special
+	- Lancio della bottiglia
+	- Saldatura
+Mileto Special
+	- Spallata
+	- Lancio chitarra
+Bue special
+	- Claudio Baglioni
+	- Tom waits
+
+Ora vorrei ricreare la schermata iniziale presente du godot (solo l'immagine), troverai delle immagini con nuvole da muovere in parallax, usa gli stessi parametri utilizzati per lo stage piazza eutopa e gli stessi filtri, crea una sezione UI

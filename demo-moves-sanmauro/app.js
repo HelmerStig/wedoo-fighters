@@ -17,6 +17,7 @@
     <label class="sidebar-search"><span aria-hidden="true">⌕</span><span class="screen-reader-only">Cerca un personaggio</span><input id="character-search" type="search" placeholder="Cerca personaggio…" autocomplete="off" spellcheck="false"></label>
     <a class="all-link" href="index.html" ${page==='roster'?'aria-current="page"':''}><span><b class="grid-symbol" aria-hidden="true">▦</b> Tutti i personaggi</span><span>${characters.length}</span></a>
     <a class="all-link" href="stages.html" ${page==='stages'?'aria-current="page"':''}><span>Stages</span><span aria-hidden="true">→</span></a>
+    <a class="all-link" href="ui.html" ${page==='ui'?'aria-current="page"':''}><span>UI</span><span aria-hidden="true">→</span></a>
     <a class="all-link" href="specials.html" ${page==='specials'?'aria-current="page"':''}><span>Special e Super</span><span aria-hidden="true">→</span></a>
     <details class="sidebar-dropdown" ${page==='moves'?'open':''}><summary class="sidebar-dropdown-toggle">Per mossa<span class="dropdown-chevron" aria-hidden="true"></span></summary>
     <nav class="moves-nav" aria-label="Per mossa">${groups.map(move=>`<a class="nav-link move-nav-link" href="mosse.html?move=${encodeURIComponent(move.id)}" ${page==='moves'&&move===currentMove?'aria-current="page"':''}><span>${escape(move.name)}</span><span class="move-count">${move.animations.length}</span></a>`).join('')}</nav></details>

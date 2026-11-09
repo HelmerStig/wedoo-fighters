@@ -130,8 +130,12 @@
       context.clearRect(0,0,viewportWidth,stage.height);
       context.imageSmoothingEnabled=false;
       for(const layer of layers){
-        const positions=layer.speed?cloudPositions(stage.width,layer.width,elapsed,layer.speed):[(stage.width-layer.width)/2];
-        for(const x of positions)context.drawImage(layer.imageObject,x-camera,0);
+        const width=layer.renderWidth??layer.width,height=layer.renderHeight??layer.height;
+        const positions=layer.speed?cloudPositions(stage.width,width,elapsed,layer.speed):[(stage.width-width)/2];
+        for(const x of positions){
+          if(layer.renderWidth!==undefined||layer.renderHeight!==undefined)context.drawImage(layer.imageObject,x-camera,(stage.height-height)/2,width,height);
+          else context.drawImage(layer.imageObject,x-camera,0);
+        }
         if(layer.haze)fog(layer.haze);
       }
       dust();

@@ -629,3 +629,37 @@ oltre ai -30 comuni, per un rialzo totale di 50 px a 1080p. Bue resta fermo;
 timing, scale e file PNG invariati. Valore conservato nella rigenerazione.
 Per rigenerare solo stage/contatti senza concatenare i report delle mosse:
 python demo-moves-sanmauro/scripts/build-stages.py --skip-reports
+
+UI - FONDALE DELLA SCHERMATA INIZIALE
+Sezione UI nel menu, pagina ui.html. Ricomposizione del solo fondale della
+TitleScreen Godot: niente logo, testi, menu di gioco, personaggi o transizioni.
+Dieci PNG originali copiati in assets/ui/title-screen, mantenendo le cartelle
+nuvole/ e riflessi/. Importati soltanto i BACKGROUND_LAYERS effettivamente
+elencati da scripts/TitleScreen.gd, nell'ordine sorgente:
+livello-01, nuvole-01/02/03, livello-03, water-level-03_5,
+riflesso-1/2/3, livello-04. I PNG restano integri, con hash nel manifest.
+
+Riferimento 1920x1080, 16:9. Ogni layer nativo 1776x592 viene disegnato a
+3240x1080 senza deformare le proporzioni, come il cover di Godot in 16:9.
+Vista centrata, drag/frecce per esplorare i lati (camera da 0 a 1320).
+Nuvole lontane/intermedie/vicine a 6/12/20 px/s verso sinistra, come Piazza
+Europa; riflessi sincronizzati alle rispettive nuvole. Loop sul panorama
+scalato intero, indipendente dal drag. Pausa nuvole ferma anche i riflessi.
+Godot usava 2.5/4.5/7 px/s: qui sono sostituiti dai valori di Piazza Europa
+su richiesta. Acqua statica: i due shader specifici della TitleScreen Godot
+non vengono applicati; la demo usa i filtri condivisi di Piazza Europa.
+
+Stesso player canvas, CRT base e avanzato, preset di Piazza Europa, foschia,
+polvere, Vista originale, Ripristina, offcanvas CRT e fullscreen reale.
+I controlli ombre/personaggi sono nascosti perché questo fondale non contiene
+personaggi. Supportati movimento ridotto, menu mobile e uso offline file://.
+Sotto la vista, elenco dei dieci layer con download dei PNG originali.
+
+Rigenerazione dalla radice:
+  python demo-moves-sanmauro/scripts/build-ui.py
+Percorso Godot alternativo come primo argomento. Il sorgente viene solo letto.
+Il generatore legge velocità e risoluzione da assets/stages/Piazza Europa/
+stage.json e il preset CRT dallo stesso stage, conservando il riferimento
+nei file assets/ui/title-screen/screen.json e crt-preset.json.
+ui-catalog.js incorpora il manifest per non richiedere fetch in locale.
+La cartella demo-moves-sanmauro resta autonoma dopo l'importazione.
