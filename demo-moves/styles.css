@@ -117,7 +117,7 @@ body.crt-drawer-open .workspace{margin-right:420px}
 .stage-effect-range input:disabled{opacity:.35}
 .stage-effects-status{margin-top:16px;font-size:10px;color:var(--muted)}
 @media(max-width:700px){.stage-effects-grid{grid-template-columns:1fr;gap:20px}.stage-effects-actions{flex-wrap:wrap}}
-.stage-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border-top:1px solid var(--border)}
+.stage-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border-top:1px solid var(--border)}
 .stage-toolbar p{font-size:11px;color:var(--muted)}
 .stage-toolbar button{flex:none}
 @media(max-width:700px){.stage-toolbar{align-items:start;flex-direction:column}.stage-card .panel-header h2{font-size:14px}}

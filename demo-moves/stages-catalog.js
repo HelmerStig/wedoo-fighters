@@ -16,5 +16,13 @@
   ],fighters:[
     {characterId:'alberto',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:253,anchorY:430,flipX:false},
     {characterId:'marsan',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:256,anchorY:433,flipX:true}
-  ]}];
+  ]},{id:'porta-susa',name:'Porta Susa',width:2550,height:1080,viewportWidth:1920,
+    shadow:{color:'#140e26',shearX:.5,flattenY:.11,opacity:.72,contactOpacity:.28},
+    layers:[
+      {id:'sky',image:'../original-backgrounds/porta-susa/cielo.png',zIndex:0,width:2550,height:1080},
+      {id:'foreground',image:'../original-backgrounds/porta-susa/porta-susa.png',zIndex:1,width:2550,height:1080}
+    ],fighters:[
+      {characterId:'pippo',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:253,anchorY:432,flipX:false},
+      {characterId:'peppo',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:251.5,anchorY:435,flipX:true}
+    ],rain:true,webglClouds:true,lightning:true,shootingStars:true,rainGroundTop:.87}];
 });

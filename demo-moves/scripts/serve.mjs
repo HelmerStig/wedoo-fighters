@@ -13,14 +13,13 @@ export function createDemoServer(){
       let pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
       if(pathname==='/'){res.writeHead(302,{Location:'/demo-moves/index.html'});res.end();return;}
       if(pathname==='/demo-moves'||pathname==='/demo-moves/')pathname='/demo-moves/index.html';
-      if(pathname==='/demo-moves-sanmauro'||pathname==='/demo-moves-sanmauro/')pathname='/demo-moves-sanmauro/index.html';
       const file=resolve(root,'.'+pathname),local=relative(root,file);
       const parts=local.split(sep);
       if(parts[0]==='original-backgrounds'){
-        const stageFiles=['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'];
-        if(parts.length!==3||parts[1]!=='villa-arduino'||!stageFiles.includes(parts[2])){res.writeHead(403);res.end('Accesso non consentito');return;}
+        const stageFiles={'villa-arduino':['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'],'porta-susa':['cielo.png','porta-susa.png','lights-mask.png']};
+        if(parts.length!==3||!stageFiles[parts[1]]?.includes(parts[2])){res.writeHead(403);res.end('Accesso non consentito');return;}
       }
-      if(local.startsWith('..')||!['demo-moves','demo-moves-sanmauro','PNG','animation','portraits','portrait-pixeled','original-backgrounds'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||(parts[0]==='portrait-pixeled'&&extname(file).toLowerCase()!=='.png')||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
+      if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits','portrait-pixeled','original-backgrounds'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||(parts[0]==='portrait-pixeled'&&extname(file).toLowerCase()!=='.png')||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
       const info=await stat(file);
       if(!info.isFile()){res.writeHead(404);res.end('File non trovato');return;}
       res.writeHead(200,{'Content-Type':mime[extname(file).toLowerCase()]??'application/octet-stream','Content-Length':info.size,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});

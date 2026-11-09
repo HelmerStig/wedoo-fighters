@@ -1,5 +1,12 @@
 WEDOO FIGHTERS — RIEPILOGO PER CAMBIO POSTAZIONE
-Aggiornato: 7 novembre 2026
+Aggiornato: 9 novembre 2026
+
+SEPARAZIONE SANMAURO
+La cartella demo-moves-sanmauro è stata rimossa da questo repository.
+Il server locale serve la demo WEDOO; i percorsi Sanmauro non sono più abilitati.
+Le sezioni Sanmauro riportate sotto restano come archivio delle decisioni:
+comandi e percorsi relativi a quella demo si riferiscono alla sua copia nel
+repository separato, non a file ancora presenti qui.
 
 SCOPO E STATO
 Totale attuale Sanmauro: 271 animazioni: 38 per Arianna/Mangler, 39 per gli altri cinque. È presente anche
@@ -414,3 +421,33 @@ specifici Godot: si usa la pipeline filtri condivisa con Piazza Europa.
 Generazione: python demo-moves-sanmauro/scripts/build-ui.py [percorso Godot].
 Player condiviso esteso con renderWidth/renderHeight opzionali: i PNG restano
 nativi; le altre pagine mantengono il disegno precedente.
+
+WEDOO - PORTA SUSA
+Secondo stage in demo-moves/stages.html. cielo.png z0 e porta-susa.png z1
+in original-backgrounds/porta-susa, entrambi 2550x1080. Viewport 1920x1080
+centrato, drag/frecce, fullscreen e stessi controlli CRT della demo WEDOO.
+Pippo a sinistra e Peppo riflesso a destra, idle 24 fps, scala 4/3; contatti
+suole per tutti i loro frame in animation/stage-foot-contacts.json e JS
+incorporato, generati da scripts/build-stage-foot-contacts.py.
+Riferimento temporale: F:/Personali/beverly-inps/demo-moves-sanmauro, solo
+letto. Riutilizzati nuvole WebGL (palette fucsia scuro), pioggia con spruzzi,
+stelle cadenti, lampi/fulmini e suoni Web Audio. Moduli locali in demo-moves:
+stage-clouds-webgl.js, stage-weather.js, stage-storm-audio.js.
+Rombi dei tuoni a volume doppio (+6 dB circa); pioggia e schiocco invariati.
+Pulsanti per pioggia e audio, che parte solo dopo il click. Meteo indipendente
+dal drag; pioggia indipendente dalla pausa nuvole. Visibilità e movimento
+ridotto rispettati. Nessuna dipendenza runtime dall'altro repository.
+Preset CRT in original-backgrounds/porta-susa/crt-preset.json, incorporato
+da demo-moves/scripts/build-crt-presets.mjs insieme a Villa Arduino.
+
+PORTA SUSA - LUCI INTERMITTENTI
+12 finestre della facciata e 2 lanterne sfarfallano con tempi indipendenti.
+Maschere limitate ai pixel caldi già accesi, lampioni esclusi dalle maschere
+delle finestre dietro. PNG originale invariato. Clock indipendente dalle
+nuvole, drag senza cambiare fase, movimento ridotto con luci fisse.
+Pulsante Disattiva/Attiva sfarfallio. Le due lanterne sono sul lato destro,
+visibili trascinando il panorama verso destra.
+Script demo-moves/scripts/build-porta-susa-lights.py; dati e atlas in
+original-backgrounds/porta-susa/lights.json e lights-mask.png, dati incorporati
+in demo-moves/stage-lights-catalog.js e rendering in stage-lights.js.
+Rigenerare le maschere quando cambia il PNG della facciata; hash verificato.

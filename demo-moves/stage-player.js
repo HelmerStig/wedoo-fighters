@@ -36,13 +36,18 @@
     const media=env.matchMedia('(prefers-reduced-motion: reduce)');
     let disposed=false,ready=false,playing=!media.matches,elapsed=0,last=null,request=null;
     let fighterElapsed=0,animateFighters=!media.matches;
+    let rainEnabled=Boolean(stage.rain),rainElapsed=0;
+    let lightsEnabled=Boolean(stage.lights);
+    const weather=(stage.webglClouds||stage.rain||stage.shootingStars)?env.StageWeather?.create(stage,env):null;
+    if(stage.webglClouds)canvas.setAttribute('data-clouds-renderer',weather?.supported?'webgl':'unavailable');
     let postProcess=null;
     const viewportWidth=stage.viewportWidth??stage.height*16/9;
     const maxCamera=Math.max(0,stage.width-viewportWidth);
     let camera=maxCamera/2,drag=null;
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
-    const assets=[...layers,...fighters];
+    const lightMask=stage.lights?{...stage.lights.mask,imageObject:null}:null;
+    const assets=[...layers,...fighters,...(lightMask?[lightMask]:[])];
     const shadowStyle={color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};
     function fog(depth){
@@ -133,7 +138,11 @@
         const positions=layer.speed?cloudPositions(stage.width,layer.width,elapsed,layer.speed):[(stage.width-layer.width)/2];
         for(const x of positions)context.drawImage(layer.imageObject,x-camera,0);
         if(layer.haze)fog(layer.haze);
+        if(layer.id==='sky')weather?.sky(context,{elapsed,camera,viewportWidth,reduced:media.matches});
       }
+      const weatherView={elapsed,rainElapsed,raining:rainEnabled,camera,viewportWidth,reduced:media.matches};
+      if(lightsEnabled&&!media.matches)env.StageLights?.render(context,lightMask.imageObject,stage.lights,fighterElapsed,camera);
+      weather?.background(context,weatherView);
       dust();
       fighters.forEach(shadow);
       for(const fighter of fighters){
@@ -147,6 +156,7 @@
         context.drawImage(tinted??fighter.imageObject,tinted?0:sx,tinted?0:sy,w,h,-fighter.anchorX,-fighter.anchorY,w,h);
         context.restore();
       }
+      weather?.foreground(context,weatherView);
       postProcess?.(canvas,fighterElapsed);
     }
     function sync(){
@@ -155,14 +165,15 @@
       button.setAttribute('aria-pressed',String(playing));
     }
     function schedule(){
-      if(!disposed&&ready&&(playing||(animateFighters&&(fighters.length||effects.dust>0)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
+      if(!disposed&&ready&&(playing||(rainEnabled&&!media.matches)||(animateFighters&&(fighters.length||effects.dust>0||lightsEnabled)))&&!env.document.hidden&&request===null)request=env.requestAnimationFrame(tick);
     }
     function tick(time){
       request=null;
       const delta=last===null?0:Math.max(0,Math.min(time-last,100));
       if(playing)elapsed+=delta;
+      if(rainEnabled&&!media.matches)rainElapsed+=delta;
       if(animateFighters)fighterElapsed+=delta;
-      last=time;draw();schedule();
+      last=time;weather?.updateAudio({rain:rainEnabled,elapsed,lightning:stage.lightning&&playing&&!media.matches,hidden:env.document.hidden});draw();schedule();
     }
     function resetClock(){
       last=null;
@@ -170,7 +181,7 @@
       schedule();
     }
     function toggle(){playing=!playing;sync();resetClock();}
-    function visibility(){resetClock();}
+    function visibility(){weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});resetClock();}
     function reduced(){animateFighters=!media.matches;if(media.matches)playing=false;sync();resetClock();}
     function moveCamera(value){camera=Math.max(0,Math.min(maxCamera,value));draw();}
     function pointerDown(event){
@@ -195,7 +206,7 @@
       event.preventDefault();moveCamera(next);
     }
     button.disabled=true;
-    if(!context){status.textContent='Anteprima non supportata da questo browser.';return {setEffects(){},setPostProcess(){},destroy(){}};}
+    if(!context){weather?.destroy();status.textContent='Anteprima non supportata da questo browser.';return {async setStormAudio(){return false;},setLights(){},setRain(){},setEffects(){},setPostProcess(){},destroy(){}};}
     button.addEventListener('click',toggle);
     canvas.addEventListener('pointerdown',pointerDown);
     canvas.addEventListener('pointermove',pointerMove);
@@ -226,12 +237,13 @@
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
+    return {loaded,setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
       disposed=true;postProcess=null;resetClock();
+      weather?.destroy();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});
       for(const [type,handler] of [['pointerdown',pointerDown],['pointermove',pointerMove],['pointerup',pointerEnd],['pointercancel',pointerEnd],['lostpointercapture',pointerEnd],['keydown',keyDown]])canvas.removeEventListener(type,handler);

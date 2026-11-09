@@ -5,7 +5,7 @@ import {createRequire} from 'node:module';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
 const {parsePreset}=createRequire(import.meta.url)('../crt-panel.js');
 const data={};
-for(const id of ['villa-arduino']){
+for(const id of ['villa-arduino','porta-susa']){
   const source=await readFile(resolve(root,'original-backgrounds',id,'crt-preset.json'),'utf8');
   data[id]=parsePreset(source);
 }

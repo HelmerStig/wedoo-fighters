@@ -253,3 +253,55 @@ Report con pose e timing: reports/light-punch-timing.html (anche CSV).
 
 Per rigenerare il report dalle selezioni correnti (richiede Python e Pillow):
   python demo-moves/scripts/build-punch-report.py
+
+STAGE PORTA SUSA
+In stages.html, dopo Villa Arduino. Due immagini originali a 2550x1080:
+original-backgrounds/porta-susa/cielo.png (z-index 0) e porta-susa.png
+(z-index 1). Vista 1920x1080 centrata, drag/frecce per i lati, fullscreen.
+Pippo a sinistra e Peppo riflesso a destra in idle a 24 fps, scala 4/3.
+Contatti delle suole per tutte le 48/25 pose, generati insieme ad Alberto e
+Marsan da scripts/build-stage-foot-contacts.py; PNG originali invariati.
+
+Temporale ricostruito dal riferimento locale
+F:/Personali/beverly-inps/demo-moves-sanmauro (letto senza modificarlo):
+- stage-clouds-webgl.js: stesso rumore frattale, nuvole in movimento verso
+  sinistra, palette adattata al fucsia scuro; lampi e fulmini sincronizzati.
+- stage-weather.js: stelle cadenti, 440 gocce stratificate con raffiche,
+  spruzzi e piccole increspature a terra. Stesse traiettorie del riferimento.
+- stage-storm-audio.js: stessi suoni sintetizzati con Web Audio, nessun file
+  remoto. Pioggia continua filtrata, schiocco e due rombi ritardati; i soli
+  rombi hanno ampiezza doppia rispetto al riferimento (circa +6 dB), come
+  richiesto. Pioggia e schiocco mantengono il volume originale.
+
+Pulsanti indipendenti Pausa nuvole, Attiva/Disattiva pioggia e Attiva audio.
+Audio inizialmente spento: parte con il gesto sul pulsante. Pagina nascosta
+silenzia i suoni, annulla i tuoni in coda e sospende il rendering. Movimento
+ridotto ferma pioggia e animazioni e disattiva lampi/fulmini. Il drag non
+cambia la fase del meteo. La pioggia continua quando si fermano le nuvole.
+Stelle e nuvole sono dietro il fondale; gocce anche davanti ai personaggi.
+
+CRT base e avanzato condivisi con Villa Arduino; preset persistente in
+original-backgrounds/porta-susa/crt-preset.json. Rigenerazione del catalogo
+dei preset: node demo-moves/scripts/build-crt-presets.mjs.
+Per le nuvole procedurali serve WebGL; pioggia, stelle e personaggi usano
+Canvas 2D. Tutti i moduli funzionano con asset locali, anche via file://.
+Il server espone soltanto cielo.png e porta-susa.png della nuova cartella;
+original-porta-susa.png e i file di lavorazione non vengono pubblicati.
+
+LUCI DI PORTA SUSA
+12 finestre calde della facciata e 2 lanterne hanno sfarfallio indipendente:
+cicli pseudocasuali, brevi cali di luminosità e ritorno alla luce originale.
+Lampioni e finestre sovrapposte sono mascherati separatamente. Nessuna parte
+del PNG originale viene modificata. Controllo Disattiva/Attiva sfarfallio;
+movimento ridotto mantiene tutte le luci fisse, e il drag non cambia la fase.
+La pausa nuvole non ferma lo sfarfallio, gestito dal clock dei personaggi.
+Le due lanterne si vedono esplorando il lato destro del panorama.
+stage-lights.js disegna un atlas di maschere sui soli pixel già luminosi,
+prima della pioggia e dei personaggi. Shader e audio del temporale restano
+indipendenti. Maschere e coordinate: original-backgrounds/porta-susa/
+lights-mask.png e lights.json, catalogo incorporato stage-lights-catalog.js.
+Il server espone anche lights-mask.png, ma non lights.json o il PNG sorgente
+di lavorazione original-porta-susa.png.
+Rigenerazione dopo modifiche alla facciata (Python e Pillow):
+  python demo-moves/scripts/build-porta-susa-lights.py
+Il generatore conserva l'hash del PNG per rilevare maschere da aggiornare.

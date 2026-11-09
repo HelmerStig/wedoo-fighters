@@ -1,6 +1,0 @@
-{
-  "schema": "sanmauro.hurt-timing",
-  "version": 1,
-  "durationMs": 500,
-  "animationIds": ["hurt-high", "hurt-medium", "hurt-low", "hurt-crouched"]
-}
