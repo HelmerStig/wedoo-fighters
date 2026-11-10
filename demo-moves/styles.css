@@ -125,3 +125,7 @@ body.crt-drawer-open .workspace{margin-right:420px}
 /* La vista dello stage conserva la proporzione del suo canvas anche in fullscreen. */
 .stage-card[style] .stage-screen:fullscreen>.stage-preview{width:min(100vw,calc(100vh * var(--stage-aspect)));width:min(100vw,calc(100dvh * var(--stage-aspect)))}
 @media(max-width:1000px){body.crt-drawer-open .stage-card[style] .stage-preview{max-width:calc((52vh - 64px) * var(--stage-aspect));max-width:calc((52dvh - 64px) * var(--stage-aspect))}}
+
+.traffic-volume{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted)}.traffic-volume input{width:100px;accent-color:var(--accent)}
+
+.stage-selection-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:22px}.stage-selection-card{display:block;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}.stage-selection-card:hover{border-color:var(--accent)}.stage-selection-card:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.stage-selection-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;image-rendering:pixelated}.stage-selection-card h2{font-size:18px;margin:18px 20px 8px}.stage-selection-card p{color:var(--muted);font-size:12px;margin:0 20px 20px}

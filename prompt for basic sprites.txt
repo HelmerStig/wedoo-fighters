@@ -44,6 +44,10 @@ Puoi generare un portrait e salvarlo come PNG nella cartella /portraits/oscar.pn
 
 Ora vorrei creare lo stage per piazza castello, puoi rendre l'immagine: original-backgrounds\piazza-castello\castello.png in pixel art 16bit come fatto per gli altri stage, mantenendo lo stile di Fatal Fury. NOn aggiungere interfacce o personaggi, solo lo stage.
 
+Ora vorrei creare lo stage per Porta Palazzo, puoi rendre l'immagine: original-backgrounds/porta-palazzo/porta-palazzo-original.png in pixel art 16bit come fatto per gli altri stage, mantenendo lo stile di Fatal Fury. NOn aggiungere interfacce o personaggi, solo lo stage.
+
+
+
 Ora vorrei fare una cosa un po0 complicata, dimmi se è possibile.
 Ogni personaggio ha un fotogramma con il pugno a massima estensione in avanti, vorrei che quel fotogramma arrivasse nello stesso timing per tutti i personaggi. E' Fattibile? Mi sono spiegato bene?
 
@@ -105,4 +109,16 @@ Come fatto nel link allegato, vorrei aggiungere pioggia e nuvole colr fucsia scu
 
 - Nello stage ci sono delle finestre con luci accese e un lampione acceso, pipo mettere randomicamnete dell'iluminazione intermittente su quei punti? Tutto chiaro?
 
-Puoi aggiungere dei suoni si traffico sullo sfondo, tipo clacson, motori, e campanelle del tram?
+
+vorrei creare un nuovo stage in demo-moves, si chiamerà: Porta Palazzo.
+Sarà composto da 5 immagini:
+- original-backgrounds\porta-palazzo\cielo.png z-index 0
+- original-backgrounds\porta-palazzo\porta-stage.png: z-index 1
+
+Lo stage deve avere la stessa proporzione di 16:9, quindi l'altezza sarà di 1080px e la larghezza sarà maggiore di 1920px, centrato orizzontalmente. Poi devi implementare il drag dello stage come fatto per gli altri stage.
+
+Aggiungi nel cielo delle stelle, delle nuvole come hai fatto in Porta susa.
+COme personaggi metti, Tommaso e Marco Balpo
+
+Purtroppo, gli stage inun unica pagina rallentano per l'ecessivo perso, possiamo creare una pagina intermedia con le miiature ed il nome dello stage, cliccando sulla miniatura si apre la pagina dello stage con il drag e le animazioni. Tutto chiaro?
+

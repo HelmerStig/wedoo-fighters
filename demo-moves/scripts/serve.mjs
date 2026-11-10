@@ -5,7 +5,7 @@ import {dirname,resolve,relative,extname,sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
-const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.mp4':'video/mp4','.txt':'text/plain; charset=utf-8'};
+const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.mp3':'audio/mpeg','.mp4':'video/mp4','.txt':'text/plain; charset=utf-8'};
 export function createDemoServer(){
   return http.createServer(async(req,res)=>{
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{Allow:'GET, HEAD'});res.end();return;}
@@ -16,10 +16,11 @@ export function createDemoServer(){
       const file=resolve(root,'.'+pathname),local=relative(root,file);
       const parts=local.split(sep);
       if(parts[0]==='original-backgrounds'){
-        const stageFiles={'villa-arduino':['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'],'porta-susa':['cielo.png','porta-susa.png','lights-mask.png']};
+        const stageFiles={'porta-palazzo':['cielo.png','porta-palazzo-stage.png'],'piazza-castello':['cielo.png','stage-castello.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png','bandiere-animate.png'],'villa-arduino':['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'],'porta-susa':['cielo.png','porta-susa.png','lights-mask.png']};
         if(parts.length!==3||!stageFiles[parts[1]]?.includes(parts[2])){res.writeHead(403);res.end('Accesso non consentito');return;}
       }
-      if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits','portrait-pixeled','original-backgrounds'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||(parts[0]==='portrait-pixeled'&&extname(file).toLowerCase()!=='.png')||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
+      if(parts[0]==='sfx'&&(parts.length!==2||parts[1]!=='traffic.mp3')){res.writeHead(403);res.end('Accesso non consentito');return;}
+      if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits','portrait-pixeled','original-backgrounds','sfx'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||(parts[0]==='portrait-pixeled'&&extname(file).toLowerCase()!=='.png')||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
       const info=await stat(file);
       if(!info.isFile()){res.writeHead(404);res.end('File non trovato');return;}
       res.writeHead(200,{'Content-Type':mime[extname(file).toLowerCase()]??'application/octet-stream','Content-Length':info.size,'Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});

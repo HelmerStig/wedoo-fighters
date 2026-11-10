@@ -335,3 +335,28 @@ con dimensioni 1x, 2x e 3x e una pausa dopo ogni gruppo. Moto verso sinistra e p
 Controlli indipendenti Ombre nuvole e Foglie; Effetti piazza sospende l'intero
 gruppo, incluse bandiere e fontane. Vista originale, Pausa nuvole e movimento
 ridotto conservano lo stesso comportamento degli altri effetti della piazza.
+
+AUDIO TRAFFICO PIAZZA CASTELLO
+Attiva traffico riproduce ../sfx/traffic.mp3 in loop, con volume regolabile.
+Ogni giro ha 3 secondi di fade-in e 3 secondi di fade-out prima della ripresa.
+Per file molto brevi, ciascun fade e limitato a un quarto della durata.
+La riproduzione parte solo al click, si sospende con la scheda nascosta,
+e si libera alla chiusura. Nessun audio sintetizzato viene utilizzato.
+Il server locale consente nella cartella sfx soltanto traffic.mp3.
+
+PORTA PALAZZO
+Due livelli reali: cielo.png z0 e porta-palazzo-stage.png z1.
+Stage 2550x1080, vista 1920x1080 centrata e drag da 0 a 630 px.
+Tommaso a sinistra e Marco Balpo a destra, in idle. Stelle con lieve
+scintillio, stelle cadenti e nuvole WebGL come Porta Susa, senza temporale.
+
+NAVIGAZIONE STAGE
+stages.html e ora un elenco leggero con miniature WebP e nomi, senza
+caricare i renderer, audio, sfondi originali o spritesheet dei personaggi.
+Ogni scheda apre stage.html?id=<stage>, che crea soltanto il player scelto.
+Drag, fullscreen, animazioni, preset ed effetti rimangono disponibili.
+Il link Torna agli stage riapre l'elenco. I vecchi link stages.html#<stage>
+vengono inoltrati al dettaglio. Il menu laterale resta disponibile.
+Dopo modifiche agli sfondi rigenerare le miniature:
+  python demo-moves/scripts/build-stage-thumbnails.py
+Il catalogo leggero roster-nav.js si rigenera con build-catalog.mjs.

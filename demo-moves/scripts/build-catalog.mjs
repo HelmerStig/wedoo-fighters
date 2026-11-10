@@ -92,3 +92,5 @@ for(const extra of extraAnimations){
 }
 await writeFile(join(demo,'catalog.js'),'/* Generato da scripts/build-catalog.mjs: dati locali, nessuna chiamata esterna. */\nwindow.MOVES_CATALOG = '+JSON.stringify({characters},null,2)+';\n');
 console.log('Catalogo aggiornato: '+characters.length+' personaggi.');
+
+await writeFile(join(demo,'roster-nav.js'),'/* Navigazione leggera, generata da build-catalog.mjs. */\nwindow.MOVES_CATALOG = '+JSON.stringify({characters:characters.map(({id,name,animations})=>({id,name,animations:animations.map(({id,name})=>({id,name}))}))})+';\n');

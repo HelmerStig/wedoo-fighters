@@ -2,11 +2,19 @@
   'use strict';
   const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const container=document.querySelector('#stages-list');
-  const stages=window.STAGES_CATALOG;
+  const id=new URLSearchParams(location.search).get('id');
+  const stages=window.STAGES_CATALOG.filter(stage=>stage.id===id);
+  if(!stages.length){
+    container.innerHTML='<p class="notice">Stage non trovato. <a href="stages.html">Torna agli stage</a>.</p>';
+    document.querySelector('#stages-count').textContent='0';return;
+  }
+  document.title=stages[0].name+' - WEDOO Fighters';
+  document.querySelector('#stage-page-name').textContent=stages[0].name;
+  document.querySelector('#stage-breadcrumb').textContent=stages[0].name;
   const lightData=stage=>window.STAGE_LIGHTS_CATALOG?.[stage.id];
   const fighterNames=stage=>(stage.fighters??[]).map((f,index)=>escape(window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId)?.name??f.characterId)+(index===0?' a sinistra':' a destra')).join(' e ');
   document.querySelector('#stages-count').textContent=stages.length;
-  container.innerHTML=stages.map(stage=>`<section class="stage-card" style="--stage-aspect:${stage.viewportWidth ?? 1920}/${stage.height}" id="${escape(stage.id)}" aria-labelledby="stage-${escape(stage.id)}"><div class="panel-header"><h2 id="stage-${escape(stage.id)}">${escape(stage.name)}</h2><div class="stage-header-actions"><span class="version-tag">PARALLAX</span>${StageCrt.launcher(stage.id)}<button type="button" class="step-button stage-fullscreen-toggle" data-stage-fullscreen aria-pressed="false" aria-controls="stage-screen-${escape(stage.id)}">Fullscreen</button></div></div><div class="stage-screen" data-stage-screen id="stage-screen-${escape(stage.id)}"><div class="stage-preview"><canvas width="${stage.viewportWidth ?? 1920}" tabindex="0" height="${stage.height}" role="img" aria-label="${escape(stage.name)}, ${fighterNames(stage)} in idle, vista ${stage.viewportWidth ?? 1920} per ${stage.height}. Trascina o usa le frecce per esplorare i lati" aria-busy="true">Anteprima di ${escape(stage.name)}.</canvas><canvas class="stage-crt-output" aria-hidden="true" hidden></canvas><div class="stage-crt" aria-hidden="true"></div><p class="stage-status" role="status"></p></div><button type="button" class="step-button stage-fullscreen-exit" data-stage-fullscreen-exit aria-label="Esci da fullscreen">Esci da fullscreen</button></div><p class="stage-fullscreen-message" data-stage-fullscreen-message role="alert" hidden></p><div class="stage-toolbar"><p>Trascina per esplorare lo stage. Puoi usare anche le frecce.</p><button type="button" class="play-button" data-stage-cloud-toggle disabled>Pausa nuvole</button>${stage.ambient?'<button type="button" class="step-button" data-stage-ambient-toggle aria-pressed="true">Disattiva effetti piazza</button><button type="button" class="step-button" data-stage-cloud-shadows aria-pressed="true">Disattiva ombre nuvole</button><button type="button" class="step-button" data-stage-leaves aria-pressed="true">Disattiva foglie</button>':''}${stage.rain?'<button type="button" class="step-button" data-stage-rain-toggle aria-pressed="true">Disattiva pioggia</button>':''}${lightData(stage)?'<button type="button" class="step-button" data-stage-lights-toggle aria-pressed="true">Disattiva sfarfallio</button>':''}${stage.lightning?'<button type="button" class="step-button" data-stage-audio-toggle aria-pressed="false">Attiva audio</button>':''}</div>${StageEffects.markup(stage.id)}${StageCrt.markup(stage.id,StageEffects.crtMarkup(stage.id))}</section>`).join('');
+  container.innerHTML=stages.map(stage=>`<section class="stage-card" style="--stage-aspect:${stage.viewportWidth ?? 1920}/${stage.height}" id="${escape(stage.id)}" aria-labelledby="stage-${escape(stage.id)}"><div class="panel-header"><h2 id="stage-${escape(stage.id)}">${escape(stage.name)}</h2><div class="stage-header-actions"><span class="version-tag">PARALLAX</span>${StageCrt.launcher(stage.id)}<button type="button" class="step-button stage-fullscreen-toggle" data-stage-fullscreen aria-pressed="false" aria-controls="stage-screen-${escape(stage.id)}">Fullscreen</button></div></div><div class="stage-screen" data-stage-screen id="stage-screen-${escape(stage.id)}"><div class="stage-preview"><canvas width="${stage.viewportWidth ?? 1920}" tabindex="0" height="${stage.height}" role="img" aria-label="${escape(stage.name)}, ${fighterNames(stage)} in idle, vista ${stage.viewportWidth ?? 1920} per ${stage.height}. Trascina o usa le frecce per esplorare i lati" aria-busy="true">Anteprima di ${escape(stage.name)}.</canvas><canvas class="stage-crt-output" aria-hidden="true" hidden></canvas><div class="stage-crt" aria-hidden="true"></div><p class="stage-status" role="status"></p></div><button type="button" class="step-button stage-fullscreen-exit" data-stage-fullscreen-exit aria-label="Esci da fullscreen">Esci da fullscreen</button></div><p class="stage-fullscreen-message" data-stage-fullscreen-message role="alert" hidden></p><div class="stage-toolbar"><p>Trascina per esplorare lo stage. Puoi usare anche le frecce.</p><button type="button" class="play-button" data-stage-cloud-toggle disabled>Pausa nuvole</button>${stage.ambient?'<button type="button" class="step-button" data-stage-ambient-toggle aria-pressed="true">Disattiva effetti piazza</button><button type="button" class="step-button" data-stage-cloud-shadows aria-pressed="true">Disattiva ombre nuvole</button><button type="button" class="step-button" data-stage-leaves aria-pressed="true">Disattiva foglie</button>':''}${stage.rain?'<button type="button" class="step-button" data-stage-rain-toggle aria-pressed="true">Disattiva pioggia</button>':''}${lightData(stage)?'<button type="button" class="step-button" data-stage-lights-toggle aria-pressed="true">Disattiva sfarfallio</button>':''}${stage.lightning||stage.trafficTrack?'<button type="button" class="step-button" data-stage-audio-toggle aria-pressed="false">'+(stage.trafficTrack?'Attiva traffico':'Attiva audio')+'</button>':''}${stage.trafficTrack?'<label class="traffic-volume">Volume traffico <input data-traffic-volume type="range" min="0" max="100" value="50" aria-label="Volume traffico"></label>':''}</div>${StageEffects.markup(stage.id)}${StageCrt.markup(stage.id,StageEffects.crtMarkup(stage.id))}</section>`).join('');
   const players=[...container.querySelectorAll('.stage-card')].map((card,i)=>{
     const stage={...stages[i],lights:lightData(stages[i])};
     const fighters=(stage.fighters??[]).map(fighter=>{
@@ -33,7 +41,11 @@
     });
     const rainButton=stage.rain?card.querySelector('[data-stage-rain-toggle]'):null;
     const lightsButton=stage.lights?card.querySelector('[data-stage-lights-toggle]'):null;
-    const audioButton=stage.lightning?card.querySelector('[data-stage-audio-toggle]'):null;
+    const traffic=stage.trafficTrack?window.StageLoopAudio.create(stage.trafficTrack):null;
+    const volumeControl=card.querySelector('[data-traffic-volume]');
+    const changeVolume=()=>traffic?.setVolume(Number(volumeControl.value)/100);
+    volumeControl?.addEventListener('input',changeVolume);
+    const audioButton=stage.lightning||stage.trafficTrack?card.querySelector('[data-stage-audio-toggle]'):null;
     let raining=Boolean(stage.rain),audioEnabled=false,disposed=false;
     let flickering=Boolean(stage.lights);
     const toggleLights=()=>{flickering=!flickering;player.setLights(flickering);lightsButton.textContent=flickering?'Disattiva sfarfallio':'Attiva sfarfallio';lightsButton.setAttribute('aria-pressed',String(flickering));};
@@ -44,13 +56,13 @@
     };
     const toggleAudio=async()=>{
       audioButton.disabled=true;const requested=!audioEnabled;
-      audioEnabled=await player.setStormAudio(requested);if(disposed)return;
-      audioButton.textContent=audioEnabled?'Disattiva audio':requested?'Audio non disponibile':'Attiva audio';
+      audioEnabled=await (traffic?traffic.setEnabled(requested):player.setStormAudio(requested));if(disposed)return;
+      audioButton.textContent=audioEnabled?(traffic?'Disattiva traffico':'Disattiva audio'):requested?'Audio non disponibile':(traffic?'Attiva traffico':'Attiva audio');
       audioButton.setAttribute('aria-pressed',String(audioEnabled));audioButton.disabled=false;
     };
     rainButton?.addEventListener('click',toggleRain);audioButton?.addEventListener('click',toggleAudio);
 
-    return {destroy(){disposed=true;ambientButton?.removeEventListener('click',toggleAmbient);ambientParts.forEach(({button,toggle})=>button?.removeEventListener('click',toggle));lightsButton?.removeEventListener('click',toggleLights);rainButton?.removeEventListener('click',toggleRain);audioButton?.removeEventListener('click',toggleAudio);effects.destroy();crt.destroy();fullscreen.destroy();player.destroy();}};
+    return {destroy(){disposed=true;traffic?.destroy();volumeControl?.removeEventListener('input',changeVolume);ambientButton?.removeEventListener('click',toggleAmbient);ambientParts.forEach(({button,toggle})=>button?.removeEventListener('click',toggle));lightsButton?.removeEventListener('click',toggleLights);rainButton?.removeEventListener('click',toggleRain);audioButton?.removeEventListener('click',toggleAudio);effects.destroy();crt.destroy();fullscreen.destroy();player.destroy();}};
   });
   window.addEventListener('pagehide',()=>players.forEach(player=>player.destroy()));
 })();

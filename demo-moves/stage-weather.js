@@ -34,6 +34,15 @@
     const clouds=stage.webglClouds?env.StageCloudsWebGL?.create(env):null,audio=stage.lightning?env.StageStormAudio?.create(env):null;
     const supported=!stage.webglClouds||Boolean(clouds?.supported);
     function sky(ctx,{elapsed,camera,viewportWidth,reduced}){
+      if(stage.stars){
+        ctx.save();ctx.filter='none';
+        for(let i=0;i<85;i++){
+          const x=(i*733+97)%stage.width-camera,y=25+(i*127)%380;
+          ctx.globalAlpha=.35+.45*(.5+.5*Math.sin((reduced?0:elapsed)/1400+i*3.1));
+          ctx.fillStyle=i%4?'#adc8ed':'#eff6ff';ctx.fillRect(Math.round(x/2)*2,y,i%7===0?3:2,2);
+        }
+        ctx.restore();
+      }
       if(stage.shootingStars){
         ctx.save();ctx.filter='none';
         for(const star of shootingStars(stage.width,elapsed)){

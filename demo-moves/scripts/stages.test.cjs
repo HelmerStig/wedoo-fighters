@@ -302,3 +302,14 @@ test('Piazza Castello usa una vista 16:9 scorrevole con nuvole native e Condello
   const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
   for(const fighter of stage.fighters)assert.ok(contacts.items.find(i=>i.characterId===fighter.characterId)?.frames.length);
 });
+
+test('Porta Palazzo: livelli nativi, vista 16:9 scorrevole, stelle, nuvole e personaggi richiesti',()=>{
+ const stage=stages.find(s=>s.id==='porta-palazzo');assert.ok(stage);
+ assert.equal(stage.width,2550);assert.equal(stage.height,1080);assert.equal(stage.viewportWidth,1920);
+ assert.deepEqual(stage.layers.map(l=>l.zIndex),[0,1]);
+ for(const layer of stage.layers){const png=fs.readFileSync(path.resolve(demo,layer.image));assert.equal(png.readUInt32BE(16),layer.width);assert.equal(png.readUInt32BE(20),layer.height);}
+ assert.deepEqual(stage.fighters.map(f=>[f.characterId,f.flipX]),[['tommaso',false],['marco-balpo',true]]);
+ assert.equal(stage.webglClouds,true);assert.equal(stage.stars,true);assert.equal(stage.shootingStars,true);assert.ok(!stage.rain&&!stage.lightning);
+ const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
+ for(const f of stage.fighters)assert.ok(contacts.items.find(i=>i.characterId===f.characterId)?.frames.length);
+});
