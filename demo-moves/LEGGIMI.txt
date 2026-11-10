@@ -385,3 +385,8 @@ ferma il tempo degli effetti. La maschera si rigenera con:
 Porta Palazzo: vapore potenziato con 12 emissioni per punto, sbuffi piu ampi,
 opacita per sbuffo fino al 24% e salita di 160 px. Increspature dei riflessi
 con due onde sovrapposte, fino a 15 px di spostamento e opacita piena.
+
+Porta Palazzo: nebbia bassa a livello caviglie in due passaggi, dietro e
+davanti ai personaggi. Strato anteriore piu trasparente, entrambi in moto
+verso sinistra e ancorati allo stage durante il drag. Il pulsante Nebbia bassa
+controlla entrambi; Vista originale e movimento ridotto li sospendono.

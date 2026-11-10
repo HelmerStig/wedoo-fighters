@@ -158,6 +158,7 @@
         context.drawImage(tinted??fighter.imageObject,tinted?0:sx,tinted?0:sy,w,h,-fighter.anchorX,-fighter.anchorY,w,h);
         context.restore();
       }
+      if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.renderForeground?.(context,elapsed,camera);
       weather?.foreground(context,weatherView);
       postProcess?.(canvas,fighterElapsed);
     }

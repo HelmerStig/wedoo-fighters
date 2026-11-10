@@ -14,7 +14,19 @@ test('riflessi e vapore seguono il drag e si disattivano separatamente',()=>{
  const renderer=create(image);renderer.render(ctx,3000,0);assert.equal(draws.length,65);assert.ok(puffs.length>0);
  const x=draws[0][5];draws.length=0;renderer.render(ctx,3000,315);assert.equal(draws[0][5],x-315);
  renderer.setEffect('reflections',false);draws.length=0;renderer.render(ctx,4000,0);assert.equal(draws.length,0);
- renderer.setEffect('steam',false);puffs.length=0;renderer.render(ctx,4000,0);assert.equal(puffs.length,0);
+ renderer.setEffect('steam',false);renderer.setEffect('groundFog',false);puffs.length=0;renderer.render(ctx,4000,0);assert.equal(puffs.length,0);
  renderer.destroy();renderer.render(ctx,3000,0);assert.equal(draws.length,0);
 });
 
+
+test('nebbia a livello caviglie su due piani, in movimento e disattivabile',()=>{
+ const {groundFog}=require('../stage-palazzo-effects.js');
+ for(const front of [false,true]){
+  const puffs=groundFog(1000,front);assert.ok(puffs.length>0);
+  for(const p of puffs){assert.ok(p.y-p.ry>=970);assert.ok(p.y+p.ry<=1080);}
+  assert.notDeepEqual(puffs,groundFog(2000,front));
+ }
+ let fills=0;const ctx={save(){},restore(){},fillRect(){fills++;}};
+ const renderer=create({});renderer.renderForeground(ctx,1000,315);assert.ok(fills>0);
+ renderer.setEffect('groundFog',false);fills=0;renderer.renderForeground(ctx,1000,315);assert.equal(fills,0);
+});
