@@ -122,3 +122,14 @@ COme personaggi metti, Tommaso e Marco Balpo
 
 Purtroppo, gli stage inun unica pagina rallentano per l'ecessivo perso, possiamo creare una pagina intermedia con le miiature ed il nome dello stage, cliccando sulla miniatura si apre la pagina dello stage con il drag e le animazioni. Tutto chiaro?
 
+voglio creare un workflow simile a questo:
+	- da due immagini di riferimento
+	- confronto con assets presenti in PNG
+	- reqalizzazione di personaggio in pixel art 16bit stile fatal fury 512px x 512px su fondo trasparente
+
+Devo creare un'applicazione per generare delle spriesheet tramite prompt.
+Ho gli sprite base 512x512 trasparenti, vorrei generare delle animazioni e scaricare gli spritesheet generati.
+Devo poter scegliere il frame iniziale e o finale dell'animazione.
+Devo catalogare tutti i personaggi che ho già creato.
+Hai domande?
+
