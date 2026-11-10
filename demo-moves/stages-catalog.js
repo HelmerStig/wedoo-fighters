@@ -35,7 +35,7 @@
     ],fighters:[
       {characterId:'condello',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:257.5,anchorY:433,flipX:false},
       {characterId:'elisa',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:254.5,anchorY:432,flipX:true}
-    ]},{id:'porta-palazzo',name:'Porta Palazzo',lightFlicker:false,width:2550,height:1080,viewportWidth:1920,
+    ]},{id:'porta-palazzo',name:'Porta Palazzo',lightFlicker:false,ambient:'palazzo',ambientTexture:{id:'reflection-mask',image:'../original-backgrounds/porta-palazzo/riflessi.png',width:2550,height:195},width:2550,height:1080,viewportWidth:1920,
     shadow:{color:'#140e26',shearX:.5,flattenY:.11,opacity:.72,contactOpacity:.28},
     layers:[
       {id:'sky',image:'../original-backgrounds/porta-palazzo/cielo.png',zIndex:0,width:2550,height:1080},

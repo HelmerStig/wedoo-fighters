@@ -235,6 +235,7 @@
     }))).then(()=>{
       if(disposed)return;
       if(stage.ambient==='castello'&&env.CastelloEffects)ambient=env.CastelloEffects.create(ambientTexture.imageObject,env,layers.find(l=>l.id==='foreground').imageObject);
+      if(stage.ambient==='palazzo'&&env.PalazzoEffects)ambient=env.PalazzoEffects.create(ambientTexture.imageObject);
       ready=true;status.textContent='';status.hidden=true;canvas.setAttribute('aria-busy','false');sync();draw();schedule();
     }).catch(error=>{
       if(disposed)return;
