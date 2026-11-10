@@ -360,3 +360,14 @@ vengono inoltrati al dettaglio. Il menu laterale resta disponibile.
 Dopo modifiche agli sfondi rigenerare le miniature:
   python demo-moves/scripts/build-stage-thumbnails.py
 Il catalogo leggero roster-nav.js si rigenera con build-catalog.mjs.
+
+NEON PORTA PALAZZO
+Otto gruppi di insegne hanno blink irregolari, indipendenti tra loro;
+ogni insegna condivide lo stesso timing con il riflesso sul pavimento bagnato.
+I riflessi hanno meta intensita. Il controllo Sfarfallio attiva/disattiva
+entrambi; il movimento ridotto li sospende. PNG originale invariato.
+Rigenerazione maschere, coordinate e catalogo luci:
+  python demo-moves/scripts/build-porta-palazzo-lights.py
+
+Porta Palazzo: blink dei neon e dei riflessi attualmente disabilitati
+(lightFlicker:false nel catalogo). Le maschere sono conservate per uso futuro.

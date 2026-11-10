@@ -1,0 +1,347 @@
+{
+  "sourceSha256": "3a5f1024d643f6b7b850839d7292c4109414120fcd740638b7df01914bec746f",
+  "mask": {
+    "id": "neon-mask",
+    "image": "../original-backgrounds/porta-palazzo/neon-mask.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "points": [
+    {
+      "id": "love-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "love",
+      "rect": [
+        660,
+        550,
+        290,
+        95
+      ],
+      "maskRect": [
+        0,
+        0,
+        290,
+        95
+      ],
+      "seed": 79,
+      "pixels": 9800,
+      "strength": 1
+    },
+    {
+      "id": "love-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "love",
+      "rect": [
+        650,
+        890,
+        290,
+        190
+      ],
+      "maskRect": [
+        290,
+        0,
+        290,
+        190
+      ],
+      "seed": 79,
+      "pixels": 34790,
+      "strength": 0.5
+    },
+    {
+      "id": "purple-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "purple",
+      "rect": [
+        775,
+        460,
+        235,
+        90
+      ],
+      "maskRect": [
+        580,
+        0,
+        235,
+        90
+      ],
+      "seed": 216,
+      "pixels": 8620,
+      "strength": 1
+    },
+    {
+      "id": "purple-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "purple",
+      "rect": [
+        730,
+        890,
+        280,
+        190
+      ],
+      "maskRect": [
+        0,
+        190,
+        280,
+        190
+      ],
+      "seed": 216,
+      "pixels": 28006,
+      "strength": 0.5
+    },
+    {
+      "id": "red-center-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "red-center",
+      "rect": [
+        1195,
+        320,
+        265,
+        75
+      ],
+      "maskRect": [
+        280,
+        190,
+        265,
+        75
+      ],
+      "seed": 353,
+      "pixels": 6535,
+      "strength": 1
+    },
+    {
+      "id": "red-center-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "red-center",
+      "rect": [
+        1200,
+        890,
+        250,
+        190
+      ],
+      "maskRect": [
+        545,
+        190,
+        250,
+        190
+      ],
+      "seed": 353,
+      "pixels": 13930,
+      "strength": 0.5
+    },
+    {
+      "id": "white-top-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "white-top",
+      "rect": [
+        1080,
+        260,
+        380,
+        58
+      ],
+      "maskRect": [
+        0,
+        380,
+        380,
+        58
+      ],
+      "seed": 490,
+      "pixels": 3485,
+      "strength": 1
+    },
+    {
+      "id": "white-top-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "white-top",
+      "rect": [
+        1010,
+        890,
+        185,
+        190
+      ],
+      "maskRect": [
+        380,
+        380,
+        185,
+        190
+      ],
+      "seed": 490,
+      "pixels": 14253,
+      "strength": 0.5
+    },
+    {
+      "id": "yellow-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "yellow",
+      "rect": [
+        1080,
+        390,
+        300,
+        90
+      ],
+      "maskRect": [
+        565,
+        380,
+        300,
+        90
+      ],
+      "seed": 627,
+      "pixels": 5524,
+      "strength": 1
+    },
+    {
+      "id": "yellow-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "yellow",
+      "rect": [
+        1020,
+        890,
+        180,
+        190
+      ],
+      "maskRect": [
+        0,
+        570,
+        180,
+        190
+      ],
+      "seed": 627,
+      "pixels": 14551,
+      "strength": 0.5
+    },
+    {
+      "id": "blue-center-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "blue-center",
+      "rect": [
+        1140,
+        535,
+        240,
+        60
+      ],
+      "maskRect": [
+        180,
+        570,
+        240,
+        60
+      ],
+      "seed": 764,
+      "pixels": 5161,
+      "strength": 1
+    },
+    {
+      "id": "blue-center-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "blue-center",
+      "rect": [
+        1110,
+        900,
+        270,
+        180
+      ],
+      "maskRect": [
+        420,
+        570,
+        270,
+        180
+      ],
+      "seed": 764,
+      "pixels": 14352,
+      "strength": 0.5
+    },
+    {
+      "id": "cyan-right-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "cyan-right",
+      "rect": [
+        1520,
+        495,
+        240,
+        55
+      ],
+      "maskRect": [
+        690,
+        570,
+        240,
+        55
+      ],
+      "seed": 901,
+      "pixels": 6233,
+      "strength": 1
+    },
+    {
+      "id": "cyan-right-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "cyan-right",
+      "rect": [
+        1500,
+        885,
+        250,
+        195
+      ],
+      "maskRect": [
+        0,
+        760,
+        250,
+        195
+      ],
+      "seed": 901,
+      "pixels": 23342,
+      "strength": 0.5
+    },
+    {
+      "id": "orange-right-neon",
+      "kind": "neon",
+      "neon": true,
+      "group": "orange-right",
+      "rect": [
+        1710,
+        545,
+        170,
+        70
+      ],
+      "maskRect": [
+        250,
+        760,
+        170,
+        70
+      ],
+      "seed": 1038,
+      "pixels": 4220,
+      "strength": 1
+    },
+    {
+      "id": "orange-right-reflection",
+      "kind": "reflection",
+      "neon": true,
+      "group": "orange-right",
+      "rect": [
+        1760,
+        900,
+        190,
+        180
+      ],
+      "maskRect": [
+        420,
+        760,
+        190,
+        180
+      ],
+      "seed": 1038,
+      "pixels": 11491,
+      "strength": 0.5
+    }
+  ]
+}

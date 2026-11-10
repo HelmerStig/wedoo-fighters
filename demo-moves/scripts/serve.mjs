@@ -16,7 +16,7 @@ export function createDemoServer(){
       const file=resolve(root,'.'+pathname),local=relative(root,file);
       const parts=local.split(sep);
       if(parts[0]==='original-backgrounds'){
-        const stageFiles={'porta-palazzo':['cielo.png','porta-palazzo-stage.png'],'piazza-castello':['cielo.png','stage-castello.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png','bandiere-animate.png'],'villa-arduino':['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'],'porta-susa':['cielo.png','porta-susa.png','lights-mask.png']};
+        const stageFiles={'porta-palazzo':['cielo.png','porta-palazzo-stage.png','neon-mask.png'],'piazza-castello':['cielo.png','stage-castello.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png','bandiere-animate.png'],'villa-arduino':['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'],'porta-susa':['cielo.png','porta-susa.png','lights-mask.png']};
         if(parts.length!==3||!stageFiles[parts[1]]?.includes(parts[2])){res.writeHead(403);res.end('Accesso non consentito');return;}
       }
       if(parts[0]==='sfx'&&(parts.length!==2||parts[1]!=='traffic.mp3')){res.writeHead(403);res.end('Accesso non consentito');return;}

@@ -32,5 +32,5 @@ with Image.open(source) as image:
 atlas.save(folder/'lights-mask.png')
 data=dict(sourceSha256=hashlib.sha256(source.read_bytes()).hexdigest(),mask=dict(id='lights-mask',image='../original-backgrounds/porta-susa/lights-mask.png',width=512,height=1024),points=points)
 (folder/'lights.json').write_text(json.dumps(data,indent=2)+'\n',encoding='utf-8')
-(root/'demo-moves/stage-lights-catalog.js').write_text('// Generato da scripts/build-porta-susa-lights.py.\n(function(root){const data='+json.dumps({'porta-susa':data},indent=2)+';if(typeof module==="object"&&module.exports)module.exports=data;else root.STAGE_LIGHTS_CATALOG=data;})(typeof globalThis!=="undefined"?globalThis:this);\n',encoding='utf-8')
+(root/'demo-moves/stage-lights-catalog.js').write_text('// Generato da scripts/build-porta-susa-lights.py.\n(function(root){const data='+json.dumps({p.parent.name:json.loads(p.read_text()) for p in (root/'original-backgrounds').glob('*/lights.json')},indent=2)+';if(typeof module==="object"&&module.exports)module.exports=data;else root.STAGE_LIGHTS_CATALOG=data;})(typeof globalThis!=="undefined"?globalThis:this);\n',encoding='utf-8')
 print('Porta Susa: maschere di 12 finestre e 2 lampioni, PNG sorgente integro.')
