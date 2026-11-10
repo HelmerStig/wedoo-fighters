@@ -35,6 +35,7 @@
         values[key]=!showOriginal&&toggle.checked?value:0;
       });
       player.setEffects(values);
+      player.setOriginalEffects?.(showOriginal);
       overlay.style.opacity=String(values.crt);
       const vars={'--crt-vignette-alpha':values.vignette*.68,'--crt-scanline-alpha':values.scanlines*.38,'--crt-scanline-highlight':values.scanlines*.045,'--crt-mask-rb':values.rgbMask*.12,'--crt-mask-g':values.rgbMask*.065,'--crt-glass-opacity':values.glass,'--crt-frame-alpha':values.glass*.5,'--crt-rim-alpha':values.glass*.85};
       Object.entries(vars).forEach(([key,value])=>overlay.style.setProperty(key,String(value)));

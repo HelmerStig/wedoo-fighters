@@ -55,7 +55,7 @@
 .stage-screen:fullscreen>.stage-preview{width:min(100vw,calc(100vh*16/9));width:min(100vw,calc(100dvh*16/9));max-width:none!important;margin:0;flex:none}
 .stage-screen:fullscreen>.stage-fullscreen-exit{display:block;position:absolute;top:16px;right:16px;z-index:5;background:#171d17e8;border:1px solid #718251;color:var(--text);font-size:12px;padding:10px 14px}
 .stage-screen::backdrop{background:#000}
-.stage-preview canvas{display:block;width:100%;height:auto;aspect-ratio:16/9;image-rendering:pixelated;cursor:grab;touch-action:pan-y}
+.stage-preview canvas{display:block;width:100%;height:auto;aspect-ratio:var(--stage-aspect,16/9);image-rendering:pixelated;cursor:grab;touch-action:pan-y}
 .stage-preview canvas.is-dragging{cursor:grabbing}
 .stage-preview canvas:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .stage-status{position:absolute;inset:0;display:grid;place-items:center;margin:0;padding:20px;background:var(--surface);color:var(--muted);font-size:12px;text-align:center}
@@ -121,3 +121,7 @@ body.crt-drawer-open .workspace{margin-right:420px}
 .stage-toolbar p{font-size:11px;color:var(--muted)}
 .stage-toolbar button{flex:none}
 @media(max-width:700px){.stage-toolbar{align-items:start;flex-direction:column}.stage-card .panel-header h2{font-size:14px}}
+
+/* La vista dello stage conserva la proporzione del suo canvas anche in fullscreen. */
+.stage-card[style] .stage-screen:fullscreen>.stage-preview{width:min(100vw,calc(100vh * var(--stage-aspect)));width:min(100vw,calc(100dvh * var(--stage-aspect)))}
+@media(max-width:1000px){body.crt-drawer-open .stage-card[style] .stage-preview{max-width:calc((52vh - 64px) * var(--stage-aspect));max-width:calc((52dvh - 64px) * var(--stage-aspect))}}

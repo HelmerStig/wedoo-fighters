@@ -305,3 +305,33 @@ di lavorazione original-porta-susa.png.
 Rigenerazione dopo modifiche alla facciata (Python e Pillow):
   python demo-moves/scripts/build-porta-susa-lights.py
 Il generatore conserva l'hash del PNG per rilevare maschere da aggiornare.
+
+PIAZZA CASTELLO
+Stage di cinque livelli: cielo z0, nuvole lontane z2, intermedie z3, vicine z4
+e stage-castello.png z4 disegnato per ultimo. Dimensioni native 2550x1080,
+vista 16:9 da 1920x1080 centrata (camera iniziale 315 px), drag orizzontale
+tra 0 e 630 px come negli altri stage; nuvole 5000x1080 centrate,
+loop verso sinistra a 6, 12 e 20 pixel/secondo. Condello a sinistra ed Elisa
+a destra, entrambi in idle, con contatti dei piedi misurati per le ombre.
+
+EFFETTI PIAZZA CASTELLO
+Le due bandiere hanno pieghe di luce animate sulle sagome e sui colori originali;
+le fontane hanno piccoli spruzzi e scintillii a 12 fps. Sono sovrapposizioni
+canvas, ancorate alle coordinate dello stage: nessun PNG viene modificato.
+Il pulsante Disattiva bandiere e fontane controlla soltanto questi effetti.
+Vista originale li sospende; Pausa nuvole ferma anche il loro tempo,
+e la preferenza di movimento ridotto li disattiva. Le altre mosse restano
+indipendenti. Le pieghe delle bandiere sono precaricate da bandiere-animate.png: 24 frame
+a 12 fps, ciclo di 2 secondi. Funzionano anche in file:// senza lettura pixel
+del canvas. Rigenera l'asset dopo modifiche allo sfondo con:
+  python demo-moves/scripts/build-castello-flags.py
+
+VENTO E OMBRE DELLE NUVOLE - PIAZZA CASTELLO
+Ombre ampie con bordo graduale in pixel: massimo 32% di oscuramento,
+spostamento a sinistra di 18 px/s. La maschera usa l'alpha di stage-castello.png:
+restano sullo scenario, dietro i personaggi e senza coprire il cielo.
+Dieci emissioni di foglie nei primi 10 secondi di ogni ciclo di 24 s,
+con dimensioni 1x, 2x e 3x e una pausa dopo ogni gruppo. Moto verso sinistra e piccoli rimbalzi vicino al suolo.
+Controlli indipendenti Ombre nuvole e Foglie; Effetti piazza sospende l'intero
+gruppo, incluse bandiere e fontane. Vista originale, Pausa nuvole e movimento
+ridotto conservano lo stesso comportamento degli altri effetti della piazza.

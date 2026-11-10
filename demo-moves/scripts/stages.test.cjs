@@ -279,3 +279,26 @@ test('il server espone soltanto le cinque immagini dello stage e la nuova pagina
   }
   for(const route of ['/original-backgrounds/stages-1.png','/original-backgrounds/villa-arduino/nuvole-parallax-5000x1080.zip','/original-backgrounds/villa-arduino/anteprima-su-cielo.png'])assert.equal((await fetch(base+route)).status,403,route);
 });
+
+test('Piazza Castello usa una vista 16:9 scorrevole con nuvole native e Condello contro Elisa',()=>{
+  const stage=stages.find(s=>s.id==='piazza-castello');
+  assert.ok(stage);assert.equal(stage.viewportWidth,1920);assert.equal(stage.height,1080);assert.equal(stage.width-stage.viewportWidth,630);
+  assert.equal(stage.layers.length,5);
+  assert.deepEqual(stage.layers.map(l=>l.zIndex),[0,2,3,4,4]);
+  assert.equal(stage.layers.at(-1).image,'../original-backgrounds/piazza-castello/stage-castello.png');
+  for(const layer of stage.layers){
+    const png=fs.readFileSync(path.resolve(demo,layer.image));
+    assert.equal(layer.width,png.readUInt32BE(16));assert.equal(layer.height,png.readUInt32BE(20));
+  }
+  assert.equal(stage.width,stage.layers.at(-1).width);assert.equal(stage.height,stage.layers.at(-1).height);
+  const clouds=stage.layers.filter(l=>l.speed);
+  assert.deepEqual(clouds.map(l=>l.speed),[6,12,20]);
+  for(const layer of clouds){
+    assert.deepEqual(cloudPositions(stage.width,layer.width,0,layer.speed),[-1225]);
+    assert.ok(cloudPositions(stage.width,layer.width,1000,layer.speed)[0]<-1225);
+    assert.deepEqual(cloudPositions(stage.width,layer.width,layer.width/layer.speed*1000,layer.speed),[-1225]);
+  }
+  assert.deepEqual(stage.fighters.map(f=>[f.characterId,f.flipX]),[['condello',false],['elisa',true]]);
+  const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
+  for(const fighter of stage.fighters)assert.ok(contacts.items.find(i=>i.characterId===fighter.characterId)?.frames.length);
+});

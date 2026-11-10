@@ -24,5 +24,16 @@
     ],fighters:[
       {characterId:'pippo',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:253,anchorY:432,flipX:false},
       {characterId:'peppo',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:251.5,anchorY:435,flipX:true}
-    ],rain:true,webglClouds:true,lightning:true,shootingStars:true,rainGroundTop:.87}];
+    ],rain:true,webglClouds:true,lightning:true,shootingStars:true,rainGroundTop:.87},{id:'piazza-castello',name:'Piazza Castello',ambient:'castello',ambientTexture:{id:'ambient-flags',image:'../original-backgrounds/piazza-castello/bandiere-animate.png',width:1920,height:112},width:2550,height:1080,viewportWidth:1920,
+    shadow:{color:'#1d1625',shearX:.5,flattenY:.11,opacity:.72,contactOpacity:.28},
+    layers:[
+      {id:'sky',image:'../original-backgrounds/piazza-castello/cielo.png',zIndex:0,width:2550,height:1080},
+      {id:'clouds-far',image:'../original-backgrounds/piazza-castello/01-nuvole-lontane.png',zIndex:2,width:5000,height:1080,speed:6,haze:1},
+      {id:'clouds-mid',image:'../original-backgrounds/piazza-castello/02-nuvole-intermedie.png',zIndex:3,width:5000,height:1080,speed:12,haze:.35},
+      {id:'clouds-near',image:'../original-backgrounds/piazza-castello/03-nuvole-vicine.png',zIndex:4,width:5000,height:1080,speed:20},
+      {id:'foreground',image:'../original-backgrounds/piazza-castello/stage-castello.png',zIndex:4,width:2550,height:1080}
+    ],fighters:[
+      {characterId:'condello',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:257.5,anchorY:433,flipX:false},
+      {characterId:'elisa',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:254.5,anchorY:432,flipX:true}
+    ]}];
 });

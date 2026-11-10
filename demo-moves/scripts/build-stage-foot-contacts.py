@@ -9,7 +9,7 @@ def read(path):
     return json.loads((ROOT/path).read_text(encoding='utf-8-sig'))
 manifest=read('animation/manifest.json')
 items=[]
-for slug,split in [('alberto',253),('marsan',256),('pippo',253),('peppo',252)]:
+for slug,split in [('alberto',253),('marsan',256),('pippo',253),('peppo',252),('condello',257),('elisa',254)]:
     item=next(i for i in manifest['items'] if i['character'].lower()==slug)
     atlas=read(item['atlas'])
     entries=sorted(atlas['frames'].items(),key=lambda p:int(p[0]))

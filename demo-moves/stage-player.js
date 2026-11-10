@@ -40,14 +40,15 @@
     let lightsEnabled=Boolean(stage.lights);
     const weather=(stage.webglClouds||stage.rain||stage.shootingStars)?env.StageWeather?.create(stage,env):null;
     if(stage.webglClouds)canvas.setAttribute('data-clouds-renderer',weather?.supported?'webgl':'unavailable');
-    let postProcess=null;
+    let postProcess=null,ambient=null,ambientEnabled=Boolean(stage.ambient),ambientSuppressed=false;
     const viewportWidth=stage.viewportWidth??stage.height*16/9;
     const maxCamera=Math.max(0,stage.width-viewportWidth);
     let camera=maxCamera/2,drag=null;
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
     const lightMask=stage.lights?{...stage.lights.mask,imageObject:null}:null;
-    const assets=[...layers,...fighters,...(lightMask?[lightMask]:[])];
+    const ambientTexture=stage.ambientTexture?{...stage.ambientTexture,imageObject:null}:null;
+    const assets=[...layers,...fighters,...(lightMask?[lightMask]:[]),...(ambientTexture?[ambientTexture]:[])];
     const shadowStyle={color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};
     function fog(depth){
@@ -140,6 +141,7 @@
         if(layer.haze)fog(layer.haze);
         if(layer.id==='sky')weather?.sky(context,{elapsed,camera,viewportWidth,reduced:media.matches});
       }
+      if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.render(context,elapsed,camera);
       const weatherView={elapsed,rainElapsed,raining:rainEnabled,camera,viewportWidth,reduced:media.matches};
       if(lightsEnabled&&!media.matches)env.StageLights?.render(context,lightMask.imageObject,stage.lights,fighterElapsed,camera);
       weather?.background(context,weatherView);
@@ -232,17 +234,18 @@
       image.src=layer.animation?.image??layer.image;
     }))).then(()=>{
       if(disposed)return;
+      if(stage.ambient==='castello'&&env.CastelloEffects)ambient=env.CastelloEffects.create(ambientTexture.imageObject,env,layers.find(l=>l.id==='foreground').imageObject);
       ready=true;status.textContent='';status.hidden=true;canvas.setAttribute('aria-busy','false');sync();draw();schedule();
     }).catch(error=>{
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
+    return {loaded,setAmbientPart(key,value){ambient?.setEffect(key,value);draw();},setOriginalEffects(value){ambientSuppressed=Boolean(value);draw();},setAmbient(value){ambientEnabled=Boolean(value)&&Boolean(stage.ambient);draw();},setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
-      disposed=true;postProcess=null;resetClock();
+      disposed=true;ambient?.destroy();postProcess=null;resetClock();
       weather?.destroy();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});
