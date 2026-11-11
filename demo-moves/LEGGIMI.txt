@@ -390,3 +390,11 @@ Porta Palazzo: nebbia bassa a livello caviglie in due passaggi, dietro e
 davanti ai personaggi. Strato anteriore piu trasparente, entrambi in moto
 verso sinistra e ancorati allo stage durante il drag. Il pulsante Nebbia bassa
 controlla entrambi; Vista originale e movimento ridotto li sospendono.
+
+ROSTER NATALIZIO
+Pagina roster-natale.html, accessibile dal pulsante Versioni Natalizie nella index
+e dal menu laterale. Mostra i PNG statici attivi, con ricerca per nome e apertura
+del PNG al clic. Tony escluso dal roster natalizio.
+Fonte: PNG/natale/roster-generation.json; archivi e prove scartate esclusi.
+Dopo modifiche a nomi, temi o file rigenerare il catalogo offline:
+  node demo-moves/scripts/build-christmas-roster.mjs

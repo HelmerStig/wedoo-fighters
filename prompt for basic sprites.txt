@@ -175,3 +175,5 @@ Mancanti:
 - Alessandro (real time tech)
 - Nick
 - Jesse
+
+Ora in demo-moves mi servirebbe una pagina roster-natale dove aggiungere tutte le versioni natalizie. Metti nella index un bottone evidente "Versioni Natalizie" sotto la scritta "il Rooster", tutto chiaro?

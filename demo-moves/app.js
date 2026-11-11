@@ -11,7 +11,9 @@
   const isDetail = document.body.dataset.page === 'character';
   const isMoves = document.body.dataset.page === 'moves';
   const isStages = document.body.dataset.page === 'stages';
-  const isRoster = !isDetail && !isMoves && !isStages;
+  const isChristmas = document.body.dataset.page === 'roster-natale';
+  const isRoster = !isDetail && !isMoves && !isStages && !isChristmas;
+  const christmasCharacters = window.CHRISTMAS_ROSTER?.characters ?? [];
   const moveGroups = MovesGroups.group(characters);
   const params = new URLSearchParams(location.search);
   const storedAnimationId = (() => {
@@ -31,6 +33,7 @@
     <label class="sidebar-search"><span aria-hidden="true">⌕</span><span class="screen-reader-only">Cerca un personaggio</span><input id="character-search" type="search" placeholder="Cerca personaggio…" autocomplete="off" spellcheck="false"></label>
     <a class="all-link" href="index.html" ${isRoster ? 'aria-current="page"' : ''}><span><b class="grid-symbol" aria-hidden="true">▦</b> Tutti i personaggi</span><span>${characters.length}</span></a>
     <a class="all-link" href="stages.html" ${isStages ? 'aria-current="page"' : ''}><span>Stages</span><span aria-hidden="true">→</span></a>
+    <a class="all-link christmas-nav" href="roster-natale.html" ${isChristmas ? 'aria-current="page"' : ''}><span>Versioni Natalizie</span><span aria-hidden="true">✦</span></a>
     <details class="sidebar-dropdown" ${isMoves ? 'open' : ''}>
     <summary class="sidebar-dropdown-toggle">Per mossa<span class="dropdown-chevron" aria-hidden="true"></span></summary>
     <nav class="moves-nav" aria-label="Per mossa">${moveGroups.map(move=>`<a class="nav-link move-nav-link" href="mosse.html?move=${encodeURIComponent(move.id)}" ${isMoves && move.id===currentMove.id ? 'aria-current="page"' : ''}><span>${escape(move.name)}</span><span class="move-count">${move.animations.length}</span></a>`).join('')}</nav>
@@ -106,6 +109,12 @@
     installImageFallbacks();
     rosterPreviews = MovesRoster.install($('#character-grid'), characters);
   }
+  if (isChristmas) {
+    $('#total-count').textContent = christmasCharacters.length;
+    $('#visible-count').textContent = christmasCharacters.length;
+    $('#character-grid').innerHTML = christmasCharacters.map((c, i) => `<a class="character-card christmas-card" data-christmas-character="${escape(c.id)}" href="${escape(c.image)}" target="_blank" rel="noopener" aria-label="Apri il PNG natalizio di ${escape(c.name)}: ${escape(c.themeName)}"><div class="card-portrait"><span class="card-number" aria-hidden="true">${number(i + 1)} / ${number(christmasCharacters.length)}</span><img data-portrait src="${escape(c.image)}" alt="${escape(c.name)}, ${escape(c.themeName)}" loading="lazy" decoding="async" width="1254" height="1254"></div><div class="card-label"><div><h3>${escape(c.name)}</h3><p>${escape(c.themeName)}</p></div><span class="card-arrow" aria-hidden="true">↗</span></div></a>`).join('');
+    installImageFallbacks();
+  }
   $('#character-search').addEventListener('input', event => {
     const query = event.target.value.trim().toLocaleLowerCase('it');
     const matches = new Set(characters.filter(c => c.name.toLocaleLowerCase('it').includes(query)).map(c => c.id));
@@ -115,6 +124,12 @@
     $('#nav-count').textContent = matches.size;
     $('.nav-empty').hidden = matches.size > 0;
     if (isRoster) { $('#visible-count').textContent = matches.size; $('#empty-state').hidden = matches.size > 0; }
+    if (isChristmas) {
+      const christmasMatches = new Set(christmasCharacters.filter(c => c.name.toLocaleLowerCase('it').includes(query)).map(c => c.id));
+      document.querySelectorAll('[data-christmas-character]').forEach(el => el.hidden = !christmasMatches.has(el.dataset.christmasCharacter));
+      $('#visible-count').textContent = christmasMatches.size;
+      $('#empty-state').hidden = christmasMatches.size > 0;
+    }
   });
   if (!isDetail) return;
   if (!selected) {

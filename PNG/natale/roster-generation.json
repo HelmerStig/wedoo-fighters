@@ -3,7 +3,8 @@
   "excluded": [
     "ZICHELLA",
     "MIKE",
-    "MARIO"
+    "MARIO",
+    "TONY-ok"
   ],
   "sharedPrompt": "Edit target: the supplied ORIGINAL WEDOO human fighter PNG. Change ONLY clothing to the Christmas costume described below. Preserve the character's identity, original face, expression, skin tone, hair, facial hair, glasses and accessories, gender, anatomy, body proportions, exact fighting guard pose, bare hands, facing direction and feet position. Match the reference's original 1990s arcade fighting-game PIXEL ART: same pixel density, crisp stair-step outlines, limited palette, clustered shading and lighting. No smooth painting, photorealism, vector art, extra facial detail or different art style. ONE complete full-body human character centered on square truly transparent canvas, all headwear and shoes inside frame with margin. No scenery, text, floor shadow, weapons or extra characters. Keep face uncovered and recognizable. This is a human wearing fabric costume, not an animal, toy or object. ",
   "costumes": {
@@ -212,23 +213,18 @@
       "theme": "pan-di-zenzero",
       "output": "TOMMASO-natale.png",
       "previousTheme": "renna"
-    },
-    {
-      "name": "TONY-ok",
-      "theme": "albero",
-      "output": "TONY-ok-natale.png"
     }
   ],
   "status": "complete",
   "validation": {
-    "count": 40,
+    "count": 39,
     "excludedAbsent": true,
     "themes": {
       "babbo-natale": 6,
       "elfo": 7,
       "maglione": 7,
       "renna": 7,
-      "albero": 7,
+      "albero": 6,
       "pan-di-zenzero": 6
     }
   },
