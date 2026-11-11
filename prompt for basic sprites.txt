@@ -124,4 +124,54 @@ Purtroppo, gli stage inun unica pagina rallentano per l'ecessivo perso, possiamo
 
 Ora, vorrei creare un altro repository che include al suo internmo questo repository, è possibile? se si, mi spieghi cosa devo fare ?
 
+Ora per i personaggi in /png, mantenendo dovrei creare delle varianti di abbigliamento a tema natalizio, puoi suggerirmi 5 temi?
 
+Per il rooster farei le 5 varianti distribuite per i personaggi, 
+non vanno considerati: Zichella, Mike, Mario
+Puoi provare a genararne 5, lo stile grafico deve rimanere invariato
+
+lascerei perdere schiaccianoci e inverno delle feste,
+puoi provare a farne qualcuno vestito da renna, albero di natale e pan di zenzero?
+usa Oscar, Angela, ed un altro a tua scelta
+
+Okay, teniamo:
+- Babbo Natale
+- Elfo
+- Maglione natalizio
+- Renna
+- Albero
+
+fallo per tutti tranne Zichella, Mike, Mario 
+
+
+
+Tamara -> Toniol
+Patrick -> Mario
+Ale Barcaro -> Leoni
+Ale Quattrocchi -> Tipo mori
+
+
+Mancanti:
+- Alessandro (presidente)
+- Luca (tech Lead)
+- Raissa
+- Tamara
+- Alessandro Barcaro
+- Franco (us Ceo)
+- Margeux
+- Brittany
+- Cristian
+- Luca (analist)
+- Steven
+- Brian
+- Daniel
+- Jasmine
+- Patrick
+- John
+- Irene
+- Jimmy
+- Jeff
+- Valeria
+- Alessandro (real time tech)
+- Nick
+- Jesse

@@ -1,0 +1,233 @@
+{
+  "tool": "built-in imagegen",
+  "excluded": [
+    "ZICHELLA",
+    "MIKE",
+    "MARIO"
+  ],
+  "sharedPrompt": "Edit target: the supplied ORIGINAL WEDOO human fighter PNG. Change ONLY clothing to the Christmas costume described below. Preserve the character's identity, original face, expression, skin tone, hair, facial hair, glasses and accessories, gender, anatomy, body proportions, exact fighting guard pose, bare hands, facing direction and feet position. Match the reference's original 1990s arcade fighting-game PIXEL ART: same pixel density, crisp stair-step outlines, limited palette, clustered shading and lighting. No smooth painting, photorealism, vector art, extra facial detail or different art style. ONE complete full-body human character centered on square truly transparent canvas, all headwear and shoes inside frame with margin. No scenery, text, floor shadow, weapons or extra characters. Keep face uncovered and recognizable. This is a human wearing fabric costume, not an animal, toy or object. ",
+  "costumes": {
+    "babbo-natale": "Short red Santa jacket with modest white fur collar/cuffs/hem, black belt with gold buckle, red trousers and black boots. Adapt cut to original physique without changing anatomy. Keep hairstyle visible; no hat that covers hair, no added white beard.",
+    "elfo": "Elf workshop costume: fitted forest-green jacket with burgundy collar and cuffs, slim burgundy trousers, brown belt with small gold buckle, dark ankle boots. Small restrained gold trim. Keep original human ears and hairstyle; no pointed ears or hair-covering hat.",
+    "maglione": "Festive knitted sweater with cream pixel snowflake and reindeer motifs; use red, forest-green and cream palette. Preserve original sleeve length or rolled sleeves and exposed forearms. Keep original trousers or shorts silhouette and original footwear, with coordinated Christmas colors.",
+    "renna": "Playful warm-brown fabric reindeer top and trousers, cream oval chest panel, brown boots. Narrow headband with small felt ears and modest antlers, leaving original hair visible. Small red pompom at collar, never on the human nose. Preserve visible human hands.",
+    "albero": "Wearable dark-green Christmas-tree tunic with three restrained tiered zigzag branch-like hems, small red/gold baubles and sparse gold garland, green trousers or leggings and brown ankle boots. Small gold star on thin headband above original hairstyle. Preserve original arms and guard pose; costume cannot hide hands or legs or change physique."
+  },
+  "reused": [
+    {
+      "name": "ALBERTO",
+      "theme": "babbo-natale"
+    },
+    {
+      "name": "Elisa",
+      "theme": "elfo"
+    },
+    {
+      "name": "PIPPO",
+      "theme": "maglione"
+    },
+    {
+      "name": "OSCARE",
+      "theme": "renna"
+    },
+    {
+      "name": "ANGELA",
+      "theme": "albero"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "ALEX",
+      "theme": "babbo-natale",
+      "output": "ALEX-natale.png"
+    },
+    {
+      "name": "ANTONINO",
+      "theme": "elfo",
+      "output": "ANTONINO-natale.png"
+    },
+    {
+      "name": "BARBARA-FIOCCA",
+      "theme": "maglione",
+      "output": "BARBARA-FIOCCA-natale.png"
+    },
+    {
+      "name": "Bonazzi",
+      "theme": "renna",
+      "output": "Bonazzi-natale.png"
+    },
+    {
+      "name": "Chiara-Molina",
+      "theme": "albero",
+      "output": "Chiara-Molina-natale.png"
+    },
+    {
+      "name": "CHIARA-TONIOL",
+      "theme": "babbo-natale",
+      "output": "CHIARA-TONIOL-natale.png"
+    },
+    {
+      "name": "CONDELLO",
+      "theme": "elfo",
+      "output": "CONDELLO-natale.png"
+    },
+    {
+      "name": "DINO",
+      "theme": "maglione",
+      "output": "DINO-natale.png"
+    },
+    {
+      "name": "EMMA",
+      "theme": "renna",
+      "output": "EMMA-natale.png"
+    },
+    {
+      "name": "EROS",
+      "theme": "albero",
+      "output": "EROS-natale.png"
+    },
+    {
+      "name": "FABIO-CLARA",
+      "theme": "babbo-natale",
+      "output": "FABIO-CLARA-natale.png"
+    },
+    {
+      "name": "FARA",
+      "theme": "elfo",
+      "output": "FARA-natale.png"
+    },
+    {
+      "name": "FRA-AMATO",
+      "theme": "maglione",
+      "output": "FRA-AMATO-natale.png"
+    },
+    {
+      "name": "FRA-TAVARONE",
+      "theme": "renna",
+      "output": "FRA-TAVARONE-natale.png"
+    },
+    {
+      "name": "FRANCESCA-RIVELLA",
+      "theme": "albero",
+      "output": "FRANCESCA-RIVELLA-natale.png"
+    },
+    {
+      "name": "FRANCESCO-LEONI",
+      "theme": "babbo-natale",
+      "output": "FRANCESCO-LEONI-natale.png"
+    },
+    {
+      "name": "GENNARO",
+      "theme": "elfo",
+      "output": "GENNARO-natale.png"
+    },
+    {
+      "name": "Giordano",
+      "theme": "maglione",
+      "output": "Giordano-natale.png"
+    },
+    {
+      "name": "GIORGIO",
+      "theme": "renna",
+      "output": "GIORGIO-natale.png"
+    },
+    {
+      "name": "JERRY",
+      "theme": "albero",
+      "output": "JERRY-natale.png"
+    },
+    {
+      "name": "LIVIO",
+      "theme": "babbo-natale",
+      "output": "LIVIO-natale.png"
+    },
+    {
+      "name": "LUANA",
+      "theme": "elfo",
+      "output": "LUANA-natale.png"
+    },
+    {
+      "name": "MANU",
+      "theme": "maglione",
+      "output": "MANU-natale.png"
+    },
+    {
+      "name": "MARCO-BALPO",
+      "theme": "renna",
+      "output": "MARCO-BALPO-natale.png"
+    },
+    {
+      "name": "Marco-Rossetti",
+      "theme": "albero",
+      "output": "Marco-Rossetti-natale.png"
+    },
+    {
+      "name": "MARSAN",
+      "theme": "babbo-natale",
+      "output": "MARSAN-natale.png"
+    },
+    {
+      "name": "MARTINI",
+      "theme": "elfo",
+      "output": "MARTINI-natale.png"
+    },
+    {
+      "name": "MATTEO",
+      "theme": "maglione",
+      "output": "MATTEO-natale.png"
+    },
+    {
+      "name": "MORI",
+      "theme": "renna",
+      "output": "MORI-natale.png"
+    },
+    {
+      "name": "PEIROLO",
+      "theme": "albero",
+      "output": "PEIROLO-natale.png"
+    },
+    {
+      "name": "PEPPO",
+      "theme": "babbo-natale",
+      "output": "PEPPO-natale.png"
+    },
+    {
+      "name": "SBOZ",
+      "theme": "elfo",
+      "output": "SBOZ-natale.png"
+    },
+    {
+      "name": "Simona",
+      "theme": "maglione",
+      "output": "Simona-natale.png"
+    },
+    {
+      "name": "TOMMASO",
+      "theme": "renna",
+      "output": "TOMMASO-natale.png"
+    },
+    {
+      "name": "TONY-ok",
+      "theme": "albero",
+      "output": "TONY-ok-natale.png"
+    }
+  ],
+  "status": "complete",
+  "validation": {
+    "count": 40,
+    "excludedAbsent": true,
+    "themes": {
+      "babbo-natale": 8,
+      "elfo": 8,
+      "maglione": 8,
+      "renna": 8,
+      "albero": 8
+    }
+  },
+  "corrections": [
+    {
+      "name": "Giordano",
+      "prompt": "Remove ONLY the entire white and grey checkerboard background and the diffuse grey drop shadow around this fighter. Replace background with genuine fully transparent alpha, not a painted checkerboard. Keep the character sprite, outfit, face, pose, colors, proportions and crisp pixel art EXACTLY unchanged. Single character cutout, no floor shadow, no halo, no text."
+    }
+  ]
+}

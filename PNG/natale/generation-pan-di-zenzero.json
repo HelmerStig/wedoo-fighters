@@ -1,0 +1,17 @@
+{
+  "tool": "built-in imagegen",
+  "percentage": 15,
+  "count": 6,
+  "rosterTotal": 40,
+  "reused": "ALEX",
+  "generated": [
+    "FARA",
+    "Simona",
+    "TOMMASO",
+    "JERRY",
+    "FRANCESCO-LEONI"
+  ],
+  "prompt": "Edit target: supplied ORIGINAL WEDOO human fighter sprite. Change ONLY clothing into a gingerbread-man themed CHRISTMAS FABRIC COSTUME. Preserve the exact original human identity, gender, face, expression, skin tone, hair, beard, glasses, jewelry, watch and gloves if present, body proportions and physique, exact fighting guard pose, hands, orientation and foot positions. Match the original 1990s arcade fighting-game PIXEL ART, same coarse pixel density, crisp stepped outlines, limited palette and clustered shading. No smoothing or polished high-resolution illustration. Costume: cinnamon-brown cloth shirt and matching trousers, cream-white icing-like wavy piping at collar, sleeve cuffs, waist and trouser hems, three small red/green candy buttons down torso, small red bow tie, brown shoes with restrained cream icing trim. Preserve original sleeve length and exposed human forearms, preserve original pants silhouette; do not slim or bulk body. Human skin stays normal, original human face is uncovered: person wearing a costume, NOT an edible cookie creature. One full-body character on square truly transparent background with ample margin, no clipping, text, scenery, props, checkerboard pattern or floor shadow.",
+  "archive": "archivio-prima-pan-di-zenzero",
+  "status": "in-progress"
+}

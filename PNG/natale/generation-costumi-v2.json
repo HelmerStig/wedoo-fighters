@@ -1,0 +1,21 @@
+{
+  "tool": "built-in imagegen",
+  "variants": [
+    {
+      "source": "../OSCARE.png",
+      "output": "OSCARE-renna-natale.png",
+      "prompt": "Edit original sprite into a brown reindeer cloth costume, cream chest panel, antler headband. Preserve human face, hair, exact fighting pose and original coarse pixel-art style. Transparent background."
+    },
+    {
+      "source": "../ANGELA.png",
+      "output": "ANGELA-albero-natale.png",
+      "prompt": "Edit original sprite into green tiered Christmas-tree tunic, red/gold baubles, gold garland, green leggings, brown boots, small star headband. Preserve human face, hair, bare forearms, exact fighting pose and coarse pixel-art style. Transparent background."
+    },
+    {
+      "source": "../ALEX.png",
+      "output": "ALEX-pan-di-zenzero-natale.png",
+      "prompt": "Edit this original WEDOO ALEX character sprite: change clothing only into a gingerbread-man Christmas COSTUME. Preserve exact human face, dark hair, glasses, skin tone, body proportions, bare arms and legs, clenched hands, watch, exact fighting guard pose and foot positions. Keep SAME original coarse low-resolution 1990s fighting-game pixel art, crisp stair-step outlines and clustered restrained shading, no smooth illustration or extra detail. Alex wears cinnamon-brown short-sleeve shirt and matching knee-length shorts, cream white icing-like wavy trim on collar, sleeve edges and short hems, three small red/green candy buttons down torso, small red bow tie and cinnamon-brown ankle boots with cream trim. Human skin stays normal, face uncovered: a man in a cloth costume, not an edible cookie creature. Same square framing as original, single full-body sprite on truly transparent background, no text, props, floor shadows or scenery."
+    }
+  ],
+  "note": "Pippo keeps previous sweater variant. New variants are costume studies; generated facial details and pixel scale may differ from originals."
+}

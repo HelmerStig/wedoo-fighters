@@ -1,0 +1,32 @@
+{
+  "tool": "built-in image_gen",
+  "note": "Costume studies. Pixel-art treatment retained, but faces and pixel scale vary from originals; not pixel-identical edits.",
+  "sharedPrompt": "Edit original PNG, change clothing only. Preserve character identity, face, hairstyle, body proportions, exact fighting stance, orientation, framing and foot positions. Match original arcade pixel art, crisp stepped outlines, restrained palette and clustered shading. Transparent background; one full-body character; no text, scenery, weapons or additional characters.",
+  "items": [
+    {
+      "source": "../ALBERTO.png",
+      "output": "ALBERTO-natale.png",
+      "costumePrompt": "Alberto wears a short red Santa jacket with modest white fur edging, black belt with gold buckle, red trousers and black boots. Keep bald head, dark glasses and beard unobstructed; no hat."
+    },
+    {
+      "source": "../Elisa.png",
+      "output": "Elisa-natale.png",
+      "costumePrompt": "Elisa wears an elf workshop costume: fitted forest-green jacket with burgundy collar/cuffs, slim dark burgundy trousers, simple brown belt with small gold buckle, dark ankle boots. Keep her brown hair exactly visible, no hat or pointed ears."
+    },
+    {
+      "source": "../PIPPO.png",
+      "output": "PIPPO-natale.png",
+      "costumePrompt": "Pippo wears a red knitted Christmas sweater with cream pixel-art snowflake and reindeer motifs, preserving the reference rolled-up sleeves and exposed forearms, blue jeans and brown shoes. Keep original head, beard and receding hairstyle."
+    },
+    {
+      "source": "../OSCARE.png",
+      "output": "OSCARE-natale.png",
+      "costumePrompt": "Oscare wears a nutcracker toy-soldier inspired short red military jacket, two rows of small gold buttons, restrained gold shoulder trim, navy trousers with slim gold side stripes and black boots. Keep original head and dark hair, NO tall hat, no toy-like anatomy or face changes."
+    },
+    {
+      "source": "../ANGELA.png",
+      "output": "ANGELA-natale.png",
+      "costumePrompt": "Angela wears a short cream quilted winter vest over a forest-green short-sleeved shirt, a small burgundy scarf tucked close to the neck, dark blue jeans and burgundy winter ankle boots. Keep arms bare as reference, fists and blonde hairstyle unchanged; no hat."
+    }
+  ]
+}
