@@ -1,0 +1,20 @@
+{
+  "tool": "built-in imagegen",
+  "reusedSanta": [
+    "ALBERTO",
+    "FABIO-CLARA"
+  ],
+  "jobs": [
+    {
+      "name": "SBOZ",
+      "file": "SBOZ-babbo-natale.png",
+      "prompt": "Edit the supplied ORIGINAL WEDOO human fighter PNG, clothing only. Preserve exact identity, face, expression, skin tone, hairstyle, beard, glasses, anatomy, physique, proportions, exact fighting guard pose, hands, facing direction and foot placement. Keep the original 1990s arcade fighting-game PIXEL ART style with coarse pixel grid, crisp stepped outlines, restrained palette and clustered shading. No smoothing, illustration style, added facial detail or photorealism. One full-body human sprite on truly transparent square canvas, ample margin above head and below feet, no text, scenery, floor shadow, painted checkerboard or extra characters. Human face fully visible and uncovered. Sboz wears a short red Santa jacket with modest white fur edging at collar, cuffs and hem, black belt with small gold buckle, red trousers and black boots. Keep his original olive military cap exactly, original hair and beard. Do not add Santa beard, do not alter head or body."
+    },
+    {
+      "name": "ANTONINO",
+      "file": "ANTONINO-pupazzo-di-neve-natale.png",
+      "prompt": "Edit the supplied ORIGINAL WEDOO human fighter PNG, clothing only. Preserve exact identity, face, expression, skin tone, hairstyle, beard, glasses, anatomy, physique, proportions, exact fighting guard pose, hands, facing direction and foot placement. Keep the original 1990s arcade fighting-game PIXEL ART style with coarse pixel grid, crisp stepped outlines, restrained palette and clustered shading. No smoothing, illustration style, added facial detail or photorealism. One full-body human sprite on truly transparent square canvas, ample margin above head and below feet, no text, scenery, floor shadow, painted checkerboard or extra characters. Human face fully visible and uncovered. Antonino wears a WHITE SNOWMAN fancy-dress fabric costume: snow-white lightly padded long-sleeve top and matching white trousers, three coal-black round buttons vertically on chest, short red scarf tied neatly around neck with ends close to body, simple black ankle boots. Subtle pale icy-blue/grey pixel shadows make the white fabric legible. Small dark charcoal top hat with red band perched ABOVE his visible original black hair; do not hide forehead or hair. Keep his original dark glasses, full dark beard, human face and bare human clenched hands exactly. Keep original human proportions, not a spherical snowman body, no carrot nose, no face paint, no twig arms, no mittens. Festive white snowman costume is instantly recognizable but character remains unmistakably the original human fighter."
+    }
+  ],
+  "notes": "Sboz Santa and Antonino snowman replace their previous active elf variants. Previous variants archived; Alberto and Fabio Clara remain Santa."
+}

@@ -9,11 +9,15 @@ test('il roster natalizio include tutti i PNG attivi e le esclusioni concordate'
   const sandbox = {window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(demo,'roster-natale-catalog.js'),'utf8'), sandbox);
   const characters = sandbox.window.CHRISTMAS_ROSTER.characters;
-  assert.equal(characters.length,39);
-  assert.equal(new Set(characters.map(c => c.id)).size,39);
+  assert.equal(characters.length,42);
+  assert.equal(new Set(characters.map(c => c.id)).size,42);
   assert.ok(!characters.some(c => c.name === 'Tony'));
   assert.ok(characters.some(c => c.name === 'Oscar'));
   assert.equal(characters.filter(c => c.theme === 'pan-di-zenzero').length,6);
+  assert.deepEqual(Array.from(characters.filter(c => c.theme === 'babbo-natale'), c => c.id).sort(), ['alberto','alessandro-mandelli','fabio-clara','sboz']);
+  for (const theme of ['elfo','maglione','renna','albero','pupazzo-di-neve','pan-di-zenzero']) {
+    assert.equal(characters.filter(c => c.theme === theme).length,['maglione','elfo'].includes(theme) ? 7 : 6,theme);
+  }
   for (const c of characters) {
     assert.ok(!['zichella','mike','mario','tony-ok'].includes(c.id));
     assert.ok(fs.existsSync(path.resolve(demo,decodeURIComponent(c.image))),c.name);
@@ -34,8 +38,8 @@ test('la pagina natalizia usa immagini statiche e esclude Tony e filtra i person
   vm.runInNewContext(fs.readFileSync(path.join(demo,'roster-natale-catalog.js'),'utf8'), sandbox);
   for (const c of sandbox.window.CHRISTMAS_ROSTER.characters) cards.push({...node(),dataset:{christmasCharacter:c.id}});
   vm.runInNewContext(fs.readFileSync(path.join(demo,'app.js'),'utf8'), sandbox);
-  assert.equal(nodes.get('#total-count').textContent,39);
-  assert.equal((nodes.get('#character-grid').innerHTML.match(/data-christmas-character=/g)||[]).length,39);
+  assert.equal(nodes.get('#total-count').textContent,42);
+  assert.equal((nodes.get('#character-grid').innerHTML.match(/data-christmas-character=/g)||[]).length,42);
   assert.match(nodes.get('#sidebar').innerHTML,/href="roster-natale.html" aria-current="page"/);
   const search = nodes.get('#character-search').listeners.input;
   search({target:{value:'  TONY  '}});
@@ -47,6 +51,6 @@ test('la pagina natalizia usa immagini statiche e esclude Tony e filtra i person
   search({target:{value:'nessuno'}});
   assert.equal(nodes.get('#empty-state').hidden,false);
   search({target:{value:''}});
-  assert.equal(cards.filter(c=>!c.hidden).length,39);
+  assert.equal(cards.filter(c=>!c.hidden).length,42);
   assert.equal(nodes.get('#empty-state').hidden,true);
 });

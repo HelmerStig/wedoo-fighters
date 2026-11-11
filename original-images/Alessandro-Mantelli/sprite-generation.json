@@ -1,0 +1,12 @@
+{
+  "tool": "built-in imagegen",
+  "subjectNameAsRequested": "Alessandro Mandelli",
+  "source": "Alessandro_Mantelli_640x640_bw.jpg",
+  "output": "../../PNG/Alessandro-Mandelli.png",
+  "styleReferences": [
+    "../../PNG/ALBERTO.png",
+    "../../PNG/CONDELLO.png",
+    "../../PNG/FRANCESCO-LEONI.png"
+  ],
+  "prompt": "Create ONE new WEDOO Fighters game character sprite from the provided references. IMAGE ROLES: Image 1 (black-and-white realistic portrait) is the ONLY IDENTITY AND CLOTHING reference. Images 2-4 (existing fighter sprites) are ONLY PIXEL-ART STYLE, SCALE, COMPOSITION AND FIGHTING-STANCE references, never face references. Reproduce the man from image 1: middle-aged man, very short salt-and-pepper grey hair, receding hairline, black thick rectangular eyeglasses, clean-shaven face (NO beard, NO moustache), light natural skin, recognizably same facial features, normal average adult build, not muscular or exaggerated. Outfit exactly the photograph's formal tailored two-piece business suit, white collared dress shirt and straight dark tie, but COLORIZE suit jacket and matching full-length trousers DEEP NAVY BLUE; subtle restrained blue plaid fabric as photograph, black leather dress shoes. Jacket has notch lapels and breast pocket. No casual clothes. Translate to the SAME COARSE 16-BIT 1990s arcade fighting-game PIXEL ART as images 2-4: visibly stepped dark pixel outlines, hand-clustered limited-palette shading, same low pixel density, no antialiasing, smooth painting, vector lines, photographic textures, modern high-resolution detailing or 3D. FULL BODY, side-on three-quarter fighting stance facing RIGHT like the sprite references: head looking right, both fists raised near face in guard, elbows bent, knees gently bent, legs staggered and feet firmly grounded; credible restrained human proportions. Match reference sprites' framing and relative character size, about two thirds of canvas height, with generous transparent margin above head and below shoes; centered horizontally, feet baseline about 84% down square canvas. Aim native 512x512 sprite-sheet-ready composition matching references. Entire head, hands and both shoes visible, no cropping. GENUINELY TRANSPARENT background, isolated sprite only, no ground plane or cast shadow, no scenery, no text, no labels, no extra characters or objects. Keep elegant blue business suit recognizable while in guard pose."
+}

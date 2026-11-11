@@ -1,0 +1,15 @@
+{
+  "tool": "built-in imagegen",
+  "names": [
+    "ANTONINO",
+    "LIVIO",
+    "MARSAN",
+    "MATTEO",
+    "MORI",
+    "PEPPO"
+  ],
+  "reusedTest": "ANTONINO",
+  "prompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard.",
+  "status": "complete",
+  "archive": "archivio-prima-carota-muffole"
+}

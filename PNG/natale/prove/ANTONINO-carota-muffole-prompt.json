@@ -1,0 +1,7 @@
+{
+  "tool": "built-in imagegen",
+  "source": "ANTONINO-carota-natale.png",
+  "output": "ANTONINO-carota-muffole-natale.png",
+  "prompt": "MINIMAL LOCAL EDIT of the supplied existing WEDOO pixel-art snowman fighter with orange carrot nose. Add WHITE WINTER MITTENS covering BOTH currently bare clenched hands. True mittens, not finger gloves: smooth rounded single pouch enclosing four fingers together, with a separate small thumb lobe, short white ribbed cuffs. Preserve the exact closed-fist fighting guard positions, hand size, arm angles and spacing. No visible skin on hands, no individual finger divisions or exposed knuckles. Render mittens with crisp pixel-art outlines and restrained pale blue-grey pixel shading matching white costume, not oversized boxing gloves. Keep EVERYTHING ELSE unchanged: orange carrot nose, human face, black glasses, black beard/hair, top hat, red scarf, white snowman costume with black buttons, proportions, pose, boots, framing, original coarse pixel density and arcade pixel art style. Do not restyle or redraw the rest of character. One complete full-body sprite, genuinely transparent background, no added objects, scenery, text, shadows or checkerboard.",
+  "status": "trial-not-active"
+}

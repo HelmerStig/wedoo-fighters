@@ -13,7 +13,8 @@
     "maglione": "Festive knitted sweater with cream pixel snowflake and reindeer motifs; use red, forest-green and cream palette. Preserve original sleeve length or rolled sleeves and exposed forearms. Keep original trousers or shorts silhouette and original footwear, with coordinated Christmas colors.",
     "renna": "Playful warm-brown fabric reindeer top and trousers, cream oval chest panel, brown boots. Narrow headband with small felt ears and modest antlers, leaving original hair visible. Small red pompom at collar, never on the human nose. Preserve visible human hands.",
     "albero": "Wearable dark-green Christmas-tree tunic with three restrained tiered zigzag branch-like hems, small red/gold baubles and sparse gold garland, green trousers or leggings and brown ankle boots. Small gold star on thin headband above original hairstyle. Preserve original arms and guard pose; costume cannot hide hands or legs or change physique.",
-    "pan-di-zenzero": "Edit target: supplied ORIGINAL WEDOO human fighter sprite. Change ONLY clothing into a gingerbread-man themed CHRISTMAS FABRIC COSTUME. Preserve the exact original human identity, gender, face, expression, skin tone, hair, beard, glasses, jewelry, watch and gloves if present, body proportions and physique, exact fighting guard pose, hands, orientation and foot positions. Match the original 1990s arcade fighting-game PIXEL ART, same coarse pixel density, crisp stepped outlines, limited palette and clustered shading. No smoothing or polished high-resolution illustration. Costume: cinnamon-brown cloth shirt and matching trousers, cream-white icing-like wavy piping at collar, sleeve cuffs, waist and trouser hems, three small red/green candy buttons down torso, small red bow tie, brown shoes with restrained cream icing trim. Preserve original sleeve length and exposed human forearms, preserve original pants silhouette; do not slim or bulk body. Human skin stays normal, original human face is uncovered: person wearing a costume, NOT an edible cookie creature. One full-body character on square truly transparent background with ample margin, no clipping, text, scenery, props, checkerboard pattern or floor shadow."
+    "pan-di-zenzero": "Edit target: supplied ORIGINAL WEDOO human fighter sprite. Change ONLY clothing into a gingerbread-man themed CHRISTMAS FABRIC COSTUME. Preserve the exact original human identity, gender, face, expression, skin tone, hair, beard, glasses, jewelry, watch and gloves if present, body proportions and physique, exact fighting guard pose, hands, orientation and foot positions. Match the original 1990s arcade fighting-game PIXEL ART, same coarse pixel density, crisp stepped outlines, limited palette and clustered shading. No smoothing or polished high-resolution illustration. Costume: cinnamon-brown cloth shirt and matching trousers, cream-white icing-like wavy piping at collar, sleeve cuffs, waist and trouser hems, three small red/green candy buttons down torso, small red bow tie, brown shoes with restrained cream icing trim. Preserve original sleeve length and exposed human forearms, preserve original pants silhouette; do not slim or bulk body. Human skin stays normal, original human face is uncovered: person wearing a costume, NOT an edible cookie creature. One full-body character on square truly transparent background with ample margin, no clipping, text, scenery, props, checkerboard pattern or floor shadow.",
+    "pupazzo-di-neve": "Edit the supplied ORIGINAL WEDOO human fighter PNG, clothing only. Preserve exact identity, face, expression, skin tone, hairstyle, beard, glasses, anatomy, physique, proportions, exact fighting guard pose, hands, facing direction and foot placement. Keep the original 1990s arcade fighting-game PIXEL ART style with coarse pixel grid, crisp stepped outlines, restrained palette and clustered shading. No smoothing, illustration style, added facial detail or photorealism. One full-body human sprite on truly transparent square canvas, ample margin above head and below feet, no text, scenery, floor shadow, painted checkerboard or extra characters. Human face fully visible and uncovered. Antonino wears a WHITE SNOWMAN fancy-dress fabric costume: snow-white lightly padded long-sleeve top and matching white trousers, three coal-black round buttons vertically on chest, short red scarf tied neatly around neck with ends close to body, simple black ankle boots. Subtle pale icy-blue/grey pixel shadows make the white fabric legible. Small dark charcoal top hat with red band perched ABOVE his visible original black hair; do not hide forehead or hair. Keep his original dark glasses, full dark beard, human face and bare human clenched hands exactly. Keep original human proportions, not a spherical snowman body, no carrot nose, no face paint, no twig arms, no mittens. Festive white snowman costume is instantly recognizable but character remains unmistakably the original human fighter."
   },
   "reused": [
     {
@@ -46,8 +47,15 @@
     },
     {
       "name": "ANTONINO",
-      "theme": "elfo",
-      "output": "ANTONINO-natale.png"
+      "theme": "pupazzo-di-neve",
+      "output": "ANTONINO-natale.png",
+      "previousTheme": "elfo",
+      "promptOverride": "Edit the supplied ORIGINAL WEDOO human fighter PNG, clothing only. Preserve exact identity, face, expression, skin tone, hairstyle, beard, glasses, anatomy, physique, proportions, exact fighting guard pose, hands, facing direction and foot placement. Keep the original 1990s arcade fighting-game PIXEL ART style with coarse pixel grid, crisp stepped outlines, restrained palette and clustered shading. No smoothing, illustration style, added facial detail or photorealism. One full-body human sprite on truly transparent square canvas, ample margin above head and below feet, no text, scenery, floor shadow, painted checkerboard or extra characters. Human face fully visible and uncovered. Antonino wears a WHITE SNOWMAN fancy-dress fabric costume: snow-white lightly padded long-sleeve top and matching white trousers, three coal-black round buttons vertically on chest, short red scarf tied neatly around neck with ends close to body, simple black ankle boots. Subtle pale icy-blue/grey pixel shadows make the white fabric legible. Small dark charcoal top hat with red band perched ABOVE his visible original black hair; do not hide forehead or hair. Keep his original dark glasses, full dark beard, human face and bare human clenched hands exactly. Keep original human proportions, not a spherical snowman body, no carrot nose, no face paint, no twig arms, no mittens. Festive white snowman costume is instantly recognizable but character remains unmistakably the original human fighter.",
+      "accessories": [
+        "carota",
+        "muffole-bianche"
+      ],
+      "accessoryEditPrompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard."
     },
     {
       "name": "BARBARA-FIOCCA",
@@ -66,8 +74,10 @@
     },
     {
       "name": "CHIARA-TONIOL",
-      "theme": "babbo-natale",
-      "output": "CHIARA-TONIOL-natale.png"
+      "theme": "elfo",
+      "output": "CHIARA-TONIOL-natale.png",
+      "previousTheme": "babbo-natale",
+      "promptOverride": "Edit supplied ORIGINAL WEDOO human fighter PNG, CLOTHING ONLY. Preserve exact identity, human face, expression, skin tone, hairstyle and beard, glasses, original accessories, physique, proportions, exact fighting guard pose, hands, orientation and foot positions. Match ORIGINAL coarse 1990s arcade fighting-game PIXEL ART, same pixel density, crisp stepped outlines, restrained palette and clustered shading. No smooth painting or extra facial detail. ONE full-body human sprite centered on square truly transparent canvas with ample margin, no clipping, scene, text, floor shadow, checkerboard or extra characters. Human face uncovered, skin unchanged; person in cloth costume, not an animal or object. ELF WORKSHOP COSTUME: fitted forest-green jacket with burgundy collar/cuffs, slim burgundy trousers, brown belt with small gold buckle, dark boots and restrained gold trim. Preserve her long blonde hair, original female anatomy and exact stance, human ears, no hat."
     },
     {
       "name": "CONDELLO",
@@ -144,8 +154,15 @@
     },
     {
       "name": "LIVIO",
-      "theme": "babbo-natale",
-      "output": "LIVIO-natale.png"
+      "theme": "pupazzo-di-neve",
+      "output": "LIVIO-natale.png",
+      "previousTheme": "babbo-natale",
+      "promptOverride": "Edit supplied ORIGINAL WEDOO human fighter PNG, CLOTHING ONLY. Preserve exact identity, human face, expression, skin tone, hairstyle and beard, glasses, original accessories, physique, proportions, exact fighting guard pose, hands, orientation and foot positions. Match ORIGINAL coarse 1990s arcade fighting-game PIXEL ART, same pixel density, crisp stepped outlines, restrained palette and clustered shading. No smooth painting or extra facial detail. ONE full-body human sprite centered on square truly transparent canvas with ample margin, no clipping, scene, text, floor shadow, checkerboard or extra characters. Human face uncovered, skin unchanged; person in cloth costume, not an animal or object. WHITE SNOWMAN FABRIC COSTUME: snow-white lightly padded long-sleeve top and matching trousers, three coal-black round chest buttons, short red scarf with ends close to neck, simple black ankle boots. Restrained pale icy-blue/grey pixel shadows define white fabric. Modest dark charcoal top hat with red band above visible original hair, without covering forehead or hairstyle. If original wears a cap or beanie, preserve that ORIGINAL headwear instead of adding a top hat. Preserve human head, hands and anatomy, no spherical body, no carrot nose, face paint, twig arms or mittens. Keep any original held object exactly.",
+      "accessories": [
+        "carota",
+        "muffole-bianche"
+      ],
+      "accessoryEditPrompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard."
     },
     {
       "name": "LUANA",
@@ -169,8 +186,15 @@
     },
     {
       "name": "MARSAN",
-      "theme": "babbo-natale",
-      "output": "MARSAN-natale.png"
+      "theme": "pupazzo-di-neve",
+      "output": "MARSAN-natale.png",
+      "previousTheme": "babbo-natale",
+      "promptOverride": "Edit supplied ORIGINAL WEDOO human fighter PNG, CLOTHING ONLY. Preserve exact identity, human face, expression, skin tone, hairstyle and beard, glasses, original accessories, physique, proportions, exact fighting guard pose, hands, orientation and foot positions. Match ORIGINAL coarse 1990s arcade fighting-game PIXEL ART, same pixel density, crisp stepped outlines, restrained palette and clustered shading. No smooth painting or extra facial detail. ONE full-body human sprite centered on square truly transparent canvas with ample margin, no clipping, scene, text, floor shadow, checkerboard or extra characters. Human face uncovered, skin unchanged; person in cloth costume, not an animal or object. WHITE SNOWMAN FABRIC COSTUME: snow-white lightly padded long-sleeve top and matching trousers, three coal-black round chest buttons, short red scarf with ends close to neck, simple black ankle boots. Restrained pale icy-blue/grey pixel shadows define white fabric. Modest dark charcoal top hat with red band above visible original hair, without covering forehead or hairstyle. If original wears a cap or beanie, preserve that ORIGINAL headwear instead of adding a top hat. Preserve human head, hands and anatomy, no spherical body, no carrot nose, face paint, twig arms or mittens. Keep any original held object exactly.",
+      "accessories": [
+        "carota",
+        "muffole-bianche"
+      ],
+      "accessoryEditPrompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard."
     },
     {
       "name": "MARTINI",
@@ -179,13 +203,27 @@
     },
     {
       "name": "MATTEO",
-      "theme": "maglione",
-      "output": "MATTEO-natale.png"
+      "theme": "pupazzo-di-neve",
+      "output": "MATTEO-natale.png",
+      "previousTheme": "maglione",
+      "promptOverride": "Edit supplied ORIGINAL WEDOO human fighter PNG, CLOTHING ONLY. Preserve exact identity, human face, expression, skin tone, hairstyle and beard, glasses, original accessories, physique, proportions, exact fighting guard pose, hands, orientation and foot positions. Match ORIGINAL coarse 1990s arcade fighting-game PIXEL ART, same pixel density, crisp stepped outlines, restrained palette and clustered shading. No smooth painting or extra facial detail. ONE full-body human sprite centered on square truly transparent canvas with ample margin, no clipping, scene, text, floor shadow, checkerboard or extra characters. Human face uncovered, skin unchanged; person in cloth costume, not an animal or object. WHITE SNOWMAN FABRIC COSTUME: snow-white lightly padded long-sleeve top and matching trousers, three coal-black round chest buttons, short red scarf with ends close to neck, simple black ankle boots. Restrained pale icy-blue/grey pixel shadows define white fabric. Modest dark charcoal top hat with red band above visible original hair, without covering forehead or hairstyle. If original wears a cap or beanie, preserve that ORIGINAL headwear instead of adding a top hat. Preserve human head, hands and anatomy, no spherical body, no carrot nose, face paint, twig arms or mittens. Keep any original held object exactly.",
+      "accessories": [
+        "carota",
+        "muffole-bianche"
+      ],
+      "accessoryEditPrompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard."
     },
     {
       "name": "MORI",
-      "theme": "renna",
-      "output": "MORI-natale.png"
+      "theme": "pupazzo-di-neve",
+      "output": "MORI-natale.png",
+      "previousTheme": "renna",
+      "promptOverride": "Edit supplied ORIGINAL WEDOO human fighter PNG, CLOTHING ONLY. Preserve exact identity, human face, expression, skin tone, hairstyle and beard, glasses, original accessories, physique, proportions, exact fighting guard pose, hands, orientation and foot positions. Match ORIGINAL coarse 1990s arcade fighting-game PIXEL ART, same pixel density, crisp stepped outlines, restrained palette and clustered shading. No smooth painting or extra facial detail. ONE full-body human sprite centered on square truly transparent canvas with ample margin, no clipping, scene, text, floor shadow, checkerboard or extra characters. Human face uncovered, skin unchanged; person in cloth costume, not an animal or object. WHITE SNOWMAN FABRIC COSTUME: snow-white lightly padded long-sleeve top and matching trousers, three coal-black round chest buttons, short red scarf with ends close to neck, simple black ankle boots. Restrained pale icy-blue/grey pixel shadows define white fabric. Modest dark charcoal top hat with red band above visible original hair, without covering forehead or hairstyle. If original wears a cap or beanie, preserve that ORIGINAL headwear instead of adding a top hat. Preserve human head, hands and anatomy, no spherical body, no carrot nose, face paint, twig arms or mittens. Keep any original held object exactly.",
+      "accessories": [
+        "carota",
+        "muffole-bianche"
+      ],
+      "accessoryEditPrompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard."
     },
     {
       "name": "PEIROLO",
@@ -194,13 +232,22 @@
     },
     {
       "name": "PEPPO",
-      "theme": "babbo-natale",
-      "output": "PEPPO-natale.png"
+      "theme": "pupazzo-di-neve",
+      "output": "PEPPO-natale.png",
+      "previousTheme": "babbo-natale",
+      "promptOverride": "Edit supplied ORIGINAL WEDOO human fighter PNG, CLOTHING ONLY. Preserve exact identity, human face, expression, skin tone, hairstyle and beard, glasses, original accessories, physique, proportions, exact fighting guard pose, hands, orientation and foot positions. Match ORIGINAL coarse 1990s arcade fighting-game PIXEL ART, same pixel density, crisp stepped outlines, restrained palette and clustered shading. No smooth painting or extra facial detail. ONE full-body human sprite centered on square truly transparent canvas with ample margin, no clipping, scene, text, floor shadow, checkerboard or extra characters. Human face uncovered, skin unchanged; person in cloth costume, not an animal or object. WHITE SNOWMAN FABRIC COSTUME: snow-white lightly padded long-sleeve top and matching trousers, three coal-black round chest buttons, short red scarf with ends close to neck, simple black ankle boots. Restrained pale icy-blue/grey pixel shadows define white fabric. Modest dark charcoal top hat with red band above visible original hair, without covering forehead or hairstyle. If original wears a cap or beanie, preserve that ORIGINAL headwear instead of adding a top hat. Preserve human head, hands and anatomy, no spherical body, no carrot nose, face paint, twig arms or mittens. Keep any original held object exactly.",
+      "accessories": [
+        "carota",
+        "muffole-bianche"
+      ],
+      "accessoryEditPrompt": "MINIMAL LOCAL EDIT of supplied EXISTING WEDOO pixel-art snowman-costumed human fighter. Make ONLY TWO changes. 1) Replace human nose with small bright orange tapered CARROT NOSE attached exactly at the nose below eyes/glasses and above moustache, pointing outward in face direction. Short cone about one eyeglass lens wide, crisp pixel-art edges, simple orange shading, tiny darker grooves. 2) Cover BOTH bare hands with WHITE WINTER MITTENS: true mittens with rounded shared pouch for four fingers and separate thumb lobe, short white ribbed cuffs, pale grey-blue pixel shading. Preserve exact hand positions, closed-fist fighting guard, arm angles, hand size and spacing; no exposed skin, finger divisions or knuckles on hands. Not oversized boxing gloves. If this fighter holds a grey object/device, KEEP that object visible and unchanged and preserve the grip, with white mitten enclosing hand behind and around it, thumb separate. Keep EVERYTHING ELSE unchanged: original human identity/face except nose, glasses if present, hair, beard, expression, top hat, red scarf, existing white costume with black buttons, body proportions, pose, feet/boots, framing and exact coarse arcade PIXEL ART style, original pixel density, clustered shading and palette. No restyling or redrawing other body parts. One complete full-body sprite on genuinely transparent background, no halo, extra props, scenery, text, drop shadow or checkerboard."
     },
     {
       "name": "SBOZ",
-      "theme": "elfo",
-      "output": "SBOZ-natale.png"
+      "theme": "babbo-natale",
+      "output": "SBOZ-natale.png",
+      "previousTheme": "elfo",
+      "promptOverride": "Edit the supplied ORIGINAL WEDOO human fighter PNG, clothing only. Preserve exact identity, face, expression, skin tone, hairstyle, beard, glasses, anatomy, physique, proportions, exact fighting guard pose, hands, facing direction and foot placement. Keep the original 1990s arcade fighting-game PIXEL ART style with coarse pixel grid, crisp stepped outlines, restrained palette and clustered shading. No smoothing, illustration style, added facial detail or photorealism. One full-body human sprite on truly transparent square canvas, ample margin above head and below feet, no text, scenery, floor shadow, painted checkerboard or extra characters. Human face fully visible and uncovered. Sboz wears a short red Santa jacket with modest white fur edging at collar, cuffs and hem, black belt with small gold buckle, red trousers and black boots. Keep his original olive military cap exactly, original hair and beard. Do not add Santa beard, do not alter head or body."
     },
     {
       "name": "Simona",
@@ -213,19 +260,38 @@
       "theme": "pan-di-zenzero",
       "output": "TOMMASO-natale.png",
       "previousTheme": "renna"
+    },
+    {
+      "name": "Alessandro-Mandelli",
+      "theme": "babbo-natale",
+      "output": "Alessandro-Mandelli-natale.png",
+      "promptOverride": "Edit the supplied EXISTING WEDOO fighter sprite, clothing ONLY. Preserve this exact person's face, hairstyle, facial hair, glasses if present, expression, skin tone, physique, anatomy, proportions, exact fighting guard pose facing RIGHT, hands and feet placement. Keep original COARSE 16-BIT arcade PIXEL ART unchanged: same low pixel density, crisp stepped outlines, limited palette and clustered shading. Do not add detail, smooth or paint. One full-body sprite centered with the same relative scale and generous framing as reference, entire head/hands/shoes visible. GENUINELY TRANSPARENT background; remove any background panels or stray horizontal artifacts from reference, keep only the character. No text, scenery, props, floor shadow or extra characters. Alessandro wears a short red Santa jacket with white fur collar/cuffs/hem, black belt and gold buckle, red trousers and black boots. Preserve his very short grey hair, black rectangular eyeglasses and original CLEAN-SHAVEN human face. NO added Santa beard or moustache, no hat covering his hair. Keep adult average build and original guard stance."
+    },
+    {
+      "name": "Luca-Arcangeli",
+      "theme": "maglione",
+      "output": "Luca-Arcangeli-natale.png",
+      "promptOverride": "Edit the supplied EXISTING WEDOO fighter sprite, clothing ONLY. Preserve this exact person's face, hairstyle, facial hair, glasses if present, expression, skin tone, physique, anatomy, proportions, exact fighting guard pose facing RIGHT, hands and feet placement. Keep original COARSE 16-BIT arcade PIXEL ART unchanged: same low pixel density, crisp stepped outlines, limited palette and clustered shading. Do not add detail, smooth or paint. One full-body sprite centered with the same relative scale and generous framing as reference, entire head/hands/shoes visible. GENUINELY TRANSPARENT background; remove any background panels or stray horizontal artifacts from reference, keep only the character. No text, scenery, props, floor shadow or extra characters. Luca wears a red knitted CHRISTMAS SWEATER with cream pixel-art reindeer and snowflake motifs and restrained forest-green bands, replacing the beige waistcoat, shirt and tie. Long sweater sleeves, subtle ribbed collar/cuffs/hem, dark charcoal tailored trousers and brown leather shoes as original. Preserve his original full dark beard and moustache, short dark swept-up hair, no glasses, exact human face and original guard stance. No hat."
+    },
+    {
+      "name": "Cristian-Canino",
+      "theme": "elfo",
+      "output": "Cristian-Canino-natale.png",
+      "promptOverride": "Edit supplied EXISTING Cristian Canino WEDOO fighter sprite. Clothing-only ELF Christmas variant. CRITICAL input was deliberately resized by user to 512x512 with small character, preserve this EXACT relative framing, character proportions and scale: do NOT zoom in or enlarge the fighter. Keep full character roughly 65% of square canvas height with feet baseline at 84%, same pose and foot coordinates proportionally. Preserve original human face, long dark beard, moustache, shaved hair sides and swept-back small tied hair, skin tone, anatomy, bare muscular arms, both fists and exact fighting guard facing RIGHT. Outfit: fitted forest-green SLEEVELESS elf tunic/vest with burgundy collar/shoulder edging and restrained gold piping, brown belt with small gold buckle, burgundy full-length trousers, dark brown ankle boots with a modest gold buckle. Retain bare arms as original; no sleeves, no gloves. No hat, preserve hair clearly visible; human ears not pointed. Same original COARSE 16-BIT arcade PIXEL ART, identical low pixel density, crisp stair-step outlines, limited palette and clustered shading. No smoothing or modern detailed illustration. GENUINELY transparent background: remove reference background panels and stray horizontal colored artifacts; sprite only, no floor shadow, labels, text, scenery, extra props or characters. Entire head, fists and both boots visible. Output square 512x512 composition consistent with supplied resized image."
     }
   ],
   "status": "complete",
   "validation": {
-    "count": 39,
+    "count": 42,
     "excludedAbsent": true,
     "themes": {
-      "babbo-natale": 6,
+      "babbo-natale": 4,
       "elfo": 7,
       "maglione": 7,
-      "renna": 7,
+      "renna": 6,
       "albero": 6,
-      "pan-di-zenzero": 6
+      "pan-di-zenzero": 6,
+      "pupazzo-di-neve": 6
     }
   },
   "corrections": [

@@ -1,0 +1,16 @@
+{
+  "tool": "built-in imagegen",
+  "jobs": [
+    {
+      "name": "Alessandro-Mandelli",
+      "theme": "babbo-natale",
+      "prompt": "Edit the supplied EXISTING WEDOO fighter sprite, clothing ONLY. Preserve this exact person's face, hairstyle, facial hair, glasses if present, expression, skin tone, physique, anatomy, proportions, exact fighting guard pose facing RIGHT, hands and feet placement. Keep original COARSE 16-BIT arcade PIXEL ART unchanged: same low pixel density, crisp stepped outlines, limited palette and clustered shading. Do not add detail, smooth or paint. One full-body sprite centered with the same relative scale and generous framing as reference, entire head/hands/shoes visible. GENUINELY TRANSPARENT background; remove any background panels or stray horizontal artifacts from reference, keep only the character. No text, scenery, props, floor shadow or extra characters. Alessandro wears a short red Santa jacket with white fur collar/cuffs/hem, black belt and gold buckle, red trousers and black boots. Preserve his very short grey hair, black rectangular eyeglasses and original CLEAN-SHAVEN human face. NO added Santa beard or moustache, no hat covering his hair. Keep adult average build and original guard stance."
+    },
+    {
+      "name": "Luca-Arcangeli",
+      "theme": "maglione",
+      "prompt": "Edit the supplied EXISTING WEDOO fighter sprite, clothing ONLY. Preserve this exact person's face, hairstyle, facial hair, glasses if present, expression, skin tone, physique, anatomy, proportions, exact fighting guard pose facing RIGHT, hands and feet placement. Keep original COARSE 16-BIT arcade PIXEL ART unchanged: same low pixel density, crisp stepped outlines, limited palette and clustered shading. Do not add detail, smooth or paint. One full-body sprite centered with the same relative scale and generous framing as reference, entire head/hands/shoes visible. GENUINELY TRANSPARENT background; remove any background panels or stray horizontal artifacts from reference, keep only the character. No text, scenery, props, floor shadow or extra characters. Luca wears a red knitted CHRISTMAS SWEATER with cream pixel-art reindeer and snowflake motifs and restrained forest-green bands, replacing the beige waistcoat, shirt and tie. Long sweater sleeves, subtle ribbed collar/cuffs/hem, dark charcoal tailored trousers and brown leather shoes as original. Preserve his original full dark beard and moustache, short dark swept-up hair, no glasses, exact human face and original guard stance. No hat."
+    }
+  ],
+  "status": "complete"
+}

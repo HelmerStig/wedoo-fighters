@@ -4,7 +4,7 @@ const demo = new URL('../', import.meta.url);
 const folder = new URL('../../PNG/natale/', import.meta.url);
 const manifest = JSON.parse(await readFile(new URL('roster-generation.json', folder), 'utf8'));
 const files = (await readdir(folder)).filter(name => /\.png$/i.test(name));
-const themes = {'babbo-natale':'Babbo Natale', elfo:'Elfo', maglione:'Maglione natalizio', renna:'Renna', albero:'Albero di Natale', 'pan-di-zenzero':'Pan di zenzero'};
+const themes = {'babbo-natale':'Babbo Natale', elfo:'Elfo', maglione:'Maglione natalizio', renna:'Renna', albero:'Albero di Natale', 'pan-di-zenzero':'Pan di zenzero', 'pupazzo-di-neve':'Pupazzo di neve bianco'};
 const excluded = new Set(manifest.excluded.map(name => name.toLowerCase()));
 const characters = [];
 for (const item of [...manifest.reused, ...manifest.jobs]) {

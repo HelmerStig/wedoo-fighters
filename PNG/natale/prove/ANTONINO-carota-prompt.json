@@ -1,0 +1,7 @@
+{
+  "tool": "built-in imagegen",
+  "source": "../ANTONINO-natale.png",
+  "output": "ANTONINO-carota-natale.png",
+  "prompt": "Make a MINIMAL LOCAL EDIT to this existing WEDOO pixel-art snowman-costumed human fighter sprite. Change ONLY his human nose into a small bright orange CARROT NOSE, like a snowman's wearable carrot nose. Attach exactly where his current nose is, just below his glasses and above moustache; short tapered cone pointing outward to the RIGHT following his face direction. Render carrot with crisp stepped pixel-art edges, simple orange shading and one or two tiny darker carrot grooves. Clearly visible and playful but modest size, approximately the width of one eyeglass lens, not a long Pinocchio nose. Preserve EVERYTHING ELSE from the supplied image: same exact face except nose, glasses, eyes, expression, black beard, black hair, top hat, red scarf, white costume, hands, fighting guard pose, body proportions, boots, framing, pixel density, palette and shading. Do not redraw or restyle the character. Single full-body sprite on genuinely transparent background, no text, added objects, shadows or scenery. Preserve background transparency.",
+  "status": "trial-not-active"
+}

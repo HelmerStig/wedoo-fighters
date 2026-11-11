@@ -9,6 +9,13 @@ window.CHRISTMAS_ROSTER = {
       "image": "../PNG/natale/ALBERTO-natale.png"
     },
     {
+      "id": "alessandro-mandelli",
+      "name": "Alessandro Mandelli",
+      "theme": "babbo-natale",
+      "themeName": "Babbo Natale",
+      "image": "../PNG/natale/Alessandro-Mandelli-natale.png"
+    },
+    {
       "id": "alex",
       "name": "ALEX",
       "theme": "pan-di-zenzero",
@@ -25,8 +32,8 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "antonino",
       "name": "ANTONINO",
-      "theme": "elfo",
-      "themeName": "Elfo",
+      "theme": "pupazzo-di-neve",
+      "themeName": "Pupazzo di neve bianco",
       "image": "../PNG/natale/ANTONINO-natale.png"
     },
     {
@@ -53,8 +60,8 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "chiara-toniol",
       "name": "CHIARA TONIOL",
-      "theme": "babbo-natale",
-      "themeName": "Babbo Natale",
+      "theme": "elfo",
+      "themeName": "Elfo",
       "image": "../PNG/natale/CHIARA-TONIOL-natale.png"
     },
     {
@@ -63,6 +70,13 @@ window.CHRISTMAS_ROSTER = {
       "theme": "elfo",
       "themeName": "Elfo",
       "image": "../PNG/natale/CONDELLO-natale.png"
+    },
+    {
+      "id": "cristian-canino",
+      "name": "Cristian Canino",
+      "theme": "elfo",
+      "themeName": "Elfo",
+      "image": "../PNG/natale/Cristian-Canino-natale.png"
     },
     {
       "id": "dino",
@@ -165,8 +179,8 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "livio",
       "name": "LIVIO",
-      "theme": "babbo-natale",
-      "themeName": "Babbo Natale",
+      "theme": "pupazzo-di-neve",
+      "themeName": "Pupazzo di neve bianco",
       "image": "../PNG/natale/LIVIO-natale.png"
     },
     {
@@ -175,6 +189,13 @@ window.CHRISTMAS_ROSTER = {
       "theme": "elfo",
       "themeName": "Elfo",
       "image": "../PNG/natale/LUANA-natale.png"
+    },
+    {
+      "id": "luca-arcangeli",
+      "name": "Luca Arcangeli",
+      "theme": "maglione",
+      "themeName": "Maglione natalizio",
+      "image": "../PNG/natale/Luca-Arcangeli-natale.png"
     },
     {
       "id": "manu",
@@ -200,8 +221,8 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "marsan",
       "name": "MARSAN",
-      "theme": "babbo-natale",
-      "themeName": "Babbo Natale",
+      "theme": "pupazzo-di-neve",
+      "themeName": "Pupazzo di neve bianco",
       "image": "../PNG/natale/MARSAN-natale.png"
     },
     {
@@ -214,15 +235,15 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "matteo",
       "name": "MATTEO",
-      "theme": "maglione",
-      "themeName": "Maglione natalizio",
+      "theme": "pupazzo-di-neve",
+      "themeName": "Pupazzo di neve bianco",
       "image": "../PNG/natale/MATTEO-natale.png"
     },
     {
       "id": "mori",
       "name": "MORI",
-      "theme": "renna",
-      "themeName": "Renna",
+      "theme": "pupazzo-di-neve",
+      "themeName": "Pupazzo di neve bianco",
       "image": "../PNG/natale/MORI-natale.png"
     },
     {
@@ -242,8 +263,8 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "peppo",
       "name": "PEPPO",
-      "theme": "babbo-natale",
-      "themeName": "Babbo Natale",
+      "theme": "pupazzo-di-neve",
+      "themeName": "Pupazzo di neve bianco",
       "image": "../PNG/natale/PEPPO-natale.png"
     },
     {
@@ -256,8 +277,8 @@ window.CHRISTMAS_ROSTER = {
     {
       "id": "sboz",
       "name": "SBOZ",
-      "theme": "elfo",
-      "themeName": "Elfo",
+      "theme": "babbo-natale",
+      "themeName": "Babbo Natale",
       "image": "../PNG/natale/SBOZ-natale.png"
     },
     {

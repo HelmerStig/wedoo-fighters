@@ -140,6 +140,8 @@ Okay, teniamo:
 - Maglione natalizio
 - Renna
 - Albero
+- Pupazzo di neve bianco
+- Pan di Zenzero
 
 fallo per tutti tranne Zichella, Mike, Mario 
 
@@ -152,16 +154,17 @@ Ale Quattrocchi -> Tipo mori
 
 
 Mancanti:
-- Alessandro (presidente)
-- Luca (tech Lead)
-- Raissa
+- Alessandro Mantelli <-OK
+- Luca Arcangeli <-ok
+
+- Raisa
 - Tamara
 - Alessandro Barcaro
-- Franco (us Ceo)
+- Franco Bevione
 - Margeux
 - Brittany
-- Cristian
-- Luca (analist)
+- Cristian Canino
+- Luca Faccenda
 - Steven
 - Brian
 - Daniel
@@ -172,8 +175,54 @@ Mancanti:
 - Jimmy
 - Jeff
 - Valeria
-- Alessandro (real time tech)
+- Alessandro Quattrocchi 
 - Nick
 - Jesse
 
 Ora in demo-moves mi servirebbe una pagina roster-natale dove aggiungere tutte le versioni natalizie. Metti nella index un bottone evidente "Versioni Natalizie" sotto la scritta "il Rooster", tutto chiaro?
+
+Ora devo creare uno sprite conforme a quelli presenti in /png partendo da una foto realistica. Sempre 16bit pixel art, vista laterale, posa di guardia rivolta a destra:
+il personaggio da riproidurre è Alessandro Mandelli: original-images\Alessandro-Mantelli
+
+puoi farlo ? VEstilo come da foto con abito blu (la foto purtroppo è in b/n)
+
+Vorrei fare la stessa cosa con F:\Personali\wedoo-fighters\original-images\Luca Arcangeli
+vestilo come da foto, si vede solo la parte superiore quella inferiore inventala
+
+Ciao a tutti,
+stiamo sviluppando una dem/videogame per natale 2026 da inviare a clienti e fornitori.
+Sarà una sorta di Memory in 3d con card animate in pixel-art retrò, basato sul meraviglio staff WEDOO.
+Qui c'è un repository con i personaggi: https://areatest.wedoo-dev.it/wedoo-fighters/demo-moves/roster-natale.html
+user: wedoo
+pass: wedooweplay
+
+Ad oggi mancano ancora molti, di cui purtroppo non riesco a reperire foto utilizzabili per la creazione degli avatar.
+
+I personaggi mancanti sono: 
+	- Raisa
+
+	- Alessandro Barcaro
+	- Margeux
+	- Brittany
+	- Cristian Canino
+	- Luca Faccenda
+	- Steven
+	- Brian
+	- Daniel
+	- Jasmine
+	- John <-no mail
+	- Irene
+	- Jimmy <-no mail
+	- Jeff
+	- Valeria
+	- Alessandro Quattrocchi 
+	- Nick
+	- Jesse
+
+Se potete e volete, potreste inviarmi due vostre foto?
+	- una del viso in 3/4
+	- una a figura intera
+
+Ora devo creare uno sprite conforme a quelli presenti in /png partendo da una foto realistica. Sempre 16bit pixel art, vista laterale, posa di guardia rivolta a destra:
+il personaggio da riproidurre è Alessandro Mandelli: original-images\Cristian-Canino
+Cpme abbigliamento, metti uno smanicato nero con cappuccio, dei jeans blu scuri e delle scarpe da ginnastica 

@@ -1,0 +1,12 @@
+{
+  "tool": "built-in imagegen",
+  "source": "../Cristian-Canino.png",
+  "output": "Cristian-Canino-natale.png",
+  "theme": "elfo",
+  "outputSize": [
+    512,
+    512
+  ],
+  "sizing": "Nearest-neighbor normalization to match user's resized 512x512 source.",
+  "prompt": "Edit supplied EXISTING Cristian Canino WEDOO fighter sprite. Clothing-only ELF Christmas variant. CRITICAL input was deliberately resized by user to 512x512 with small character, preserve this EXACT relative framing, character proportions and scale: do NOT zoom in or enlarge the fighter. Keep full character roughly 65% of square canvas height with feet baseline at 84%, same pose and foot coordinates proportionally. Preserve original human face, long dark beard, moustache, shaved hair sides and swept-back small tied hair, skin tone, anatomy, bare muscular arms, both fists and exact fighting guard facing RIGHT. Outfit: fitted forest-green SLEEVELESS elf tunic/vest with burgundy collar/shoulder edging and restrained gold piping, brown belt with small gold buckle, burgundy full-length trousers, dark brown ankle boots with a modest gold buckle. Retain bare arms as original; no sleeves, no gloves. No hat, preserve hair clearly visible; human ears not pointed. Same original COARSE 16-BIT arcade PIXEL ART, identical low pixel density, crisp stair-step outlines, limited palette and clustered shading. No smoothing or modern detailed illustration. GENUINELY transparent background: remove reference background panels and stray horizontal colored artifacts; sprite only, no floor shadow, labels, text, scenery, extra props or characters. Entire head, fists and both boots visible. Output square 512x512 composition consistent with supplied resized image."
+}
