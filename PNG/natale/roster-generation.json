@@ -11,7 +11,8 @@
     "elfo": "Elf workshop costume: fitted forest-green jacket with burgundy collar and cuffs, slim burgundy trousers, brown belt with small gold buckle, dark ankle boots. Small restrained gold trim. Keep original human ears and hairstyle; no pointed ears or hair-covering hat.",
     "maglione": "Festive knitted sweater with cream pixel snowflake and reindeer motifs; use red, forest-green and cream palette. Preserve original sleeve length or rolled sleeves and exposed forearms. Keep original trousers or shorts silhouette and original footwear, with coordinated Christmas colors.",
     "renna": "Playful warm-brown fabric reindeer top and trousers, cream oval chest panel, brown boots. Narrow headband with small felt ears and modest antlers, leaving original hair visible. Small red pompom at collar, never on the human nose. Preserve visible human hands.",
-    "albero": "Wearable dark-green Christmas-tree tunic with three restrained tiered zigzag branch-like hems, small red/gold baubles and sparse gold garland, green trousers or leggings and brown ankle boots. Small gold star on thin headband above original hairstyle. Preserve original arms and guard pose; costume cannot hide hands or legs or change physique."
+    "albero": "Wearable dark-green Christmas-tree tunic with three restrained tiered zigzag branch-like hems, small red/gold baubles and sparse gold garland, green trousers or leggings and brown ankle boots. Small gold star on thin headband above original hairstyle. Preserve original arms and guard pose; costume cannot hide hands or legs or change physique.",
+    "pan-di-zenzero": "Edit target: supplied ORIGINAL WEDOO human fighter sprite. Change ONLY clothing into a gingerbread-man themed CHRISTMAS FABRIC COSTUME. Preserve the exact original human identity, gender, face, expression, skin tone, hair, beard, glasses, jewelry, watch and gloves if present, body proportions and physique, exact fighting guard pose, hands, orientation and foot positions. Match the original 1990s arcade fighting-game PIXEL ART, same coarse pixel density, crisp stepped outlines, limited palette and clustered shading. No smoothing or polished high-resolution illustration. Costume: cinnamon-brown cloth shirt and matching trousers, cream-white icing-like wavy piping at collar, sleeve cuffs, waist and trouser hems, three small red/green candy buttons down torso, small red bow tie, brown shoes with restrained cream icing trim. Preserve original sleeve length and exposed human forearms, preserve original pants silhouette; do not slim or bulk body. Human skin stays normal, original human face is uncovered: person wearing a costume, NOT an edible cookie creature. One full-body character on square truly transparent background with ample margin, no clipping, text, scenery, props, checkerboard pattern or floor shadow."
   },
   "reused": [
     {
@@ -38,8 +39,9 @@
   "jobs": [
     {
       "name": "ALEX",
-      "theme": "babbo-natale",
-      "output": "ALEX-natale.png"
+      "theme": "pan-di-zenzero",
+      "output": "ALEX-natale.png",
+      "previousTheme": "babbo-natale"
     },
     {
       "name": "ANTONINO",
@@ -93,8 +95,9 @@
     },
     {
       "name": "FARA",
-      "theme": "elfo",
-      "output": "FARA-natale.png"
+      "theme": "pan-di-zenzero",
+      "output": "FARA-natale.png",
+      "previousTheme": "elfo"
     },
     {
       "name": "FRA-AMATO",
@@ -113,8 +116,9 @@
     },
     {
       "name": "FRANCESCO-LEONI",
-      "theme": "babbo-natale",
-      "output": "FRANCESCO-LEONI-natale.png"
+      "theme": "pan-di-zenzero",
+      "output": "FRANCESCO-LEONI-natale.png",
+      "previousTheme": "babbo-natale"
     },
     {
       "name": "GENNARO",
@@ -133,8 +137,9 @@
     },
     {
       "name": "JERRY",
-      "theme": "albero",
-      "output": "JERRY-natale.png"
+      "theme": "pan-di-zenzero",
+      "output": "JERRY-natale.png",
+      "previousTheme": "albero"
     },
     {
       "name": "LIVIO",
@@ -198,13 +203,15 @@
     },
     {
       "name": "Simona",
-      "theme": "maglione",
-      "output": "Simona-natale.png"
+      "theme": "pan-di-zenzero",
+      "output": "Simona-natale.png",
+      "previousTheme": "maglione"
     },
     {
       "name": "TOMMASO",
-      "theme": "renna",
-      "output": "TOMMASO-natale.png"
+      "theme": "pan-di-zenzero",
+      "output": "TOMMASO-natale.png",
+      "previousTheme": "renna"
     },
     {
       "name": "TONY-ok",
@@ -217,11 +224,12 @@
     "count": 40,
     "excludedAbsent": true,
     "themes": {
-      "babbo-natale": 8,
-      "elfo": 8,
-      "maglione": 8,
-      "renna": 8,
-      "albero": 8
+      "babbo-natale": 6,
+      "elfo": 7,
+      "maglione": 7,
+      "renna": 7,
+      "albero": 7,
+      "pan-di-zenzero": 6
     }
   },
   "corrections": [
