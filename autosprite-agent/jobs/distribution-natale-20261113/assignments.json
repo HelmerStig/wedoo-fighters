@@ -1,0 +1,355 @@
+{
+  "createdAt": "2026-11-13T15:09:02.130Z",
+  "supersedes": "distribution-20261113",
+  "preserved": [
+    {
+      "id": "cmwd98epq004a63m1yx900zud",
+      "name": "Luca Arcangeli"
+    },
+    {
+      "id": "cmwd97qho000f29ifd54bd1dh",
+      "name": "Cristian Canino"
+    },
+    {
+      "id": "cmwd96mx7002ajx0l8ye0uxdz",
+      "name": "Alessandro Mandelli"
+    },
+    {
+      "id": "cmvkop6gq017x142gwof7kzeu",
+      "name": "JERRY"
+    },
+    {
+      "id": "cmv9im946000t14mbeyraqs7u",
+      "name": "Oscar"
+    },
+    {
+      "id": "cmv9hx0l00001gk5qklnniyt5",
+      "name": "TOMMASO"
+    },
+    {
+      "id": "cmv9hwzio000s72jnw7pzxfw5",
+      "name": "Simona"
+    },
+    {
+      "id": "cmv9hwys4000o72jnrpng2i85",
+      "name": "SBOZ"
+    },
+    {
+      "id": "cmv9hwxxn000k72jn5131g7kq",
+      "name": "PIPPO"
+    },
+    {
+      "id": "cmv9hwwuu000b72jnin9ee6na",
+      "name": "PEPPO"
+    }
+  ],
+  "excluded": [
+    {
+      "character": "Tony",
+      "reason": "Posa natalizia assente"
+    },
+    {
+      "character": "ZICHELLA",
+      "reason": "Posa natalizia assente"
+    },
+    {
+      "character": "MIKE",
+      "reason": "Posa natalizia assente"
+    },
+    {
+      "character": "MARIO",
+      "reason": "Posa natalizia assente"
+    }
+  ],
+  "estimatedCredits": 224,
+  "assignments": [
+    {
+      "characterId": "cmv9hwvw1005683r8chjtn5mx",
+      "character": "PEIROLO",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmwd9scun000rsnx7uc15qtbe",
+      "basePoseLabel": "Natale 2026 - Albero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwvw1005683r8chjtn5mx.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwv09001us3clif88425m",
+      "character": "Marco-Rossetti",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmwd9ropg003d14k0nhr4u1d9",
+      "basePoseLabel": "Natale 2026 - Albero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwv09001us3clif88425m.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwtz0005283r87fhjt57j",
+      "character": "MORI",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmwd9s5iv0004snx78z8i1oma",
+      "basePoseLabel": "Natale 2026 - Pupazzo di neve",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwtz0005283r87fhjt57j.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hws6f000zxboxwrceyavc",
+      "character": "MATTEO",
+      "animation": "Piroetta",
+      "basePoseId": "cmwd9s6yg0006snx7nqwh4kty",
+      "basePoseLabel": "Natale 2026 - Pupazzo di neve",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hws6f000zxboxwrceyavc.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwr8s004s83r87m8hsofi",
+      "character": "MARTINI",
+      "animation": "Dance",
+      "basePoseId": "cmwd9rh5e003414k02t12zhk1",
+      "basePoseLabel": "Natale 2026 - Elfo",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwr8s004s83r87m8hsofi.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+      "character": "MARSAN",
+      "animation": "Sleep",
+      "basePoseId": "cmwd9regu002y14k072m4tgsu",
+      "basePoseLabel": "Natale 2026 - Pupazzo di neve",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwqed004o83r8kd5a2z1r.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwolw000vxboxzmfmzrin",
+      "character": "MARCO-BALPO",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmwd9rlh7003814k0aqijkjfs",
+      "basePoseLabel": "Natale 2026 - Renna",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwolw000vxboxzmfmzrin.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwnmo004e83r84kg7nwpq",
+      "character": "MANU",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmwd9r2om002r14k0y5k27qhs",
+      "basePoseLabel": "Natale 2026 - Maglione natalizio",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwnmo004e83r84kg7nwpq.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwmqt004983r88g09f29g",
+      "character": "LUANA",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmwd9qvz000dwjx0lld8tgky0",
+      "basePoseLabel": "Natale 2026 - Elfo",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwmqt004983r88g09f29g.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwltm004583r8k33xnjju",
+      "character": "LIVIO",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmwd9qs2q002m14k0l4g715mz",
+      "basePoseLabel": "Natale 2026 - Pupazzo di neve",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwltm004583r8k33xnjju.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwkyn004183r8zh8wx8he",
+      "character": "Giordano",
+      "animation": "Dancing",
+      "basePoseId": "cmwd9q7c4001v14k0m2vef9a0",
+      "basePoseLabel": "Natale 2026 - Maglione natalizio",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwkyn004183r8zh8wx8he.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwk40003x83r8xyctuziq",
+      "character": "GIORGIO",
+      "animation": "Piroetta",
+      "basePoseId": "cmwd9pz8s001i14k01n4xxl1b",
+      "basePoseLabel": "Natale 2026 - Renna",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwk40003x83r8xyctuziq.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwj7q003t83r81ul7vcq1",
+      "character": "GENNARO",
+      "animation": "Dance",
+      "basePoseId": "cmwd9q10r001k14k0ecbppums",
+      "basePoseLabel": "Natale 2026 - Elfo",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwj7q003t83r81ul7vcq1.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwict003p83r8u0jolqm6",
+      "character": "FRANCESCO-LEONI",
+      "animation": "Sleep",
+      "basePoseId": "cmwd9pc9r001114k07s8b2x1g",
+      "basePoseLabel": "Natale 2026 - Pan di zenzero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwict003p83r8u0jolqm6.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwhi5003l83r8aewstvxj",
+      "character": "FRANCESCA-RIVELLA",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmwd9px6m001g14k0zgkczxgl",
+      "basePoseLabel": "Natale 2026 - Albero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwhi5003l83r8aewstvxj.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+      "character": "FRA-TAVARONE",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmwd9ph96001714k02h6cgnar",
+      "basePoseLabel": "Natale 2026 - Renna",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwgkp003h83r8pvn0zfqp.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwfpr003d83r8ws949wq7",
+      "character": "FRA-AMATO",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmwd9p6ps000z14k0v2ram14y",
+      "basePoseLabel": "Natale 2026 - Maglione natalizio",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwfpr003d83r8ws949wq7.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwev9003983r8f91pflhh",
+      "character": "FARA",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmwd9ou91000o14k0uplzj83q",
+      "basePoseLabel": "Natale 2026 - Pan di zenzero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwev9003983r8f91pflhh.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+      "character": "FABIO-CLARA",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmwd9p1nn005eoqw6sxksc1ci",
+      "basePoseLabel": "Natale 2026 - Babbo Natale",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwdtc003583r8bjf9ed1l.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwcxx001w14j28pty3t06",
+      "character": "EROS",
+      "animation": "Dancing",
+      "basePoseId": "cmwd9omb3000h14k0i9wr1n7w",
+      "basePoseLabel": "Natale 2026 - Albero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwcxx001w14j28pty3t06.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwc2x002x83r8t1fnxc3d",
+      "character": "EMMA",
+      "animation": "Piroetta",
+      "basePoseId": "cmwd9o6pc0054oqw6t3p49c5k",
+      "basePoseLabel": "Natale 2026 - Renna",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwc2x002x83r8t1fnxc3d.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwb8s002t83r8b3272t2y",
+      "character": "DINO",
+      "animation": "Dance",
+      "basePoseId": "cmwd9o8ud0056oqw61l2qkdtd",
+      "basePoseLabel": "Natale 2026 - Maglione natalizio",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwb8s002t83r8b3272t2y.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hwac9002p83r8eace0elr",
+      "character": "Chiara-Molina",
+      "animation": "Sleep",
+      "basePoseId": "cmwd9nr18004ioqw6255uouce",
+      "basePoseLabel": "Natale 2026 - Albero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hwac9002p83r8eace0elr.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw9jd002l83r8ye9kqlp1",
+      "character": "CONDELLO",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmwd9obe6000d14k056dh1454",
+      "basePoseLabel": "Natale 2026 - Elfo",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw9jd002l83r8ye9kqlp1.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw8k4002h83r85rhm6zi4",
+      "character": "CHIARA-TONIOL",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmwd9o0je0051oqw6cy75jyfd",
+      "basePoseLabel": "Natale 2026 - Elfo",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw8k4002h83r85rhm6zi4.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw7qk002d83r8yndyvywq",
+      "character": "Bonazzi",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmwd9nj7q0041oqw6watb00h9",
+      "basePoseLabel": "Natale 2026 - Renna",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw7qk002d83r8yndyvywq.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw6yj002983r8rlqvtolc",
+      "character": "BARBARA-FIOCCA",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmwd9nj6s003yoqw6eczvqxec",
+      "basePoseLabel": "Natale 2026 - Maglione natalizio",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw6yj002983r8rlqvtolc.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw61a002583r8u5lff8oy",
+      "character": "ANTONINO",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmwd9nfpz003soqw6op1vvobt",
+      "basePoseLabel": "Natale 2026 - Pupazzo di neve",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw61a002583r8u5lff8oy.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw53n002183r8mon9gaja",
+      "character": "ANGELA",
+      "animation": "Dancing",
+      "basePoseId": "cmwd9n7e70039oqw6trew01nv",
+      "basePoseLabel": "Natale 2026 - Albero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw53n002183r8mon9gaja.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw437001x83r83e8e09hl",
+      "character": "ALEX",
+      "animation": "Piroetta",
+      "basePoseId": "cmwd9limx0011oqw6ydu4w6jp",
+      "basePoseLabel": "Natale 2026 - Pan di zenzero",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw437001x83r83e8e09hl.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+      "character": "ALBERTO",
+      "animation": "Dance",
+      "basePoseId": "cmwd9gqm100aojx0l2d5omhxi",
+      "basePoseLabel": "Natale 2026 - Babbo Natale",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9hw3c3001t83r8jht5u7vy.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmv9dyrs900045e49mr49cdz9",
+      "character": "Elisa",
+      "animation": "Sleep",
+      "basePoseId": "cmwd9lf8r000zoqw6v7xnx1c6",
+      "basePoseLabel": "Natale 2026 - Elfo",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-20261113\\cmv9dyrs900045e49mr49cdz9.json",
+      "estimatedCredits": 7
+    }
+  ]
+}

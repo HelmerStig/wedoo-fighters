@@ -5,7 +5,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const core=require('../player-core.js');
 
-function fixture({reducedMotion=false}={}){
+function fixture({reducedMotion=false,previewOptions={}}={}){
   const images=[],frames=new Map(),draws=[];let sequence=0;
   const document={hidden:false,activeElement:null,listeners:{},addEventListener(type,fn){this.listeners[type]=fn;},createElement(){return {hidden:true,setAttribute(){},getContext(){return {clearRect(){},drawImage(...args){draws.push(args);}};}};}};
   const cards=['alberto','oscar'].map(id=>({dataset:{character:id},hidden:false,hover:false,classes:new Set(),listeners:{},
@@ -19,7 +19,7 @@ function fixture({reducedMotion=false}={}){
   };
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../roster-preview.js'),'utf8'),sandbox);
   const characters=cards.map(c=>({id:c.dataset.character,animations:[{id:'idle',image:c.dataset.character+'.png',frameWidth:512,frameHeight:512,frames:[[0,0,512,512],[512,0,512,512],[1024,0,512,512]]}]}));
-  const preview=sandbox.MovesRoster.install({querySelectorAll:()=>cards},characters);
+  const preview=sandbox.MovesRoster.install({querySelectorAll:()=>cards},characters,previewOptions);
   return {cards,images,frames,draws,document,preview,enter(card){card.hover=true;return card.listeners.mouseenter();},leave(card){card.hover=false;card.listeners.mouseleave();},step(time){const callbacks=[...frames.values()];frames.clear();callbacks.forEach(fn=>fn(time));}};
 }
 
@@ -33,6 +33,18 @@ test('hover carica idle su richiesta, anima a 24 fps e ripristina la posa all’
   f.step(100);assert.equal(f.draws.at(-1)[1],1024);
   f.leave(card);assert.equal(card.canvas.hidden,true);assert.equal(f.frames.size,0);assert.ok(!card.classes.has('is-idle'));
   await f.enter(card);assert.equal(f.images.length,1);
+});
+
+test('hover natalizio riproduce una sola volta a 24 fps e riparte solo dopo una nuova entrata',async()=>{
+  const f=fixture({previewOptions:{loop:false,fps:24}}),card=f.cards[0];
+  const pending=f.enter(card);f.images[0].onload();await pending;
+  f.step(40);assert.equal(f.draws.at(-1)[1],0);
+  f.step(42);assert.equal(f.draws.at(-1)[1],512);
+  f.step(84);assert.equal(f.draws.at(-1)[1],1024);
+  assert.equal(f.frames.size,0);
+  const draws=f.draws.length;await f.enter(card);assert.equal(f.draws.length,draws);
+  f.leave(card);assert.equal(card.canvas.hidden,true);
+  await f.enter(card);assert.equal(f.draws.at(-1)[1],0);assert.equal(f.images.length,1);
 });
 
 test('una risposta lenta non attiva una scheda lasciata e il filtro ferma la riproduzione',async()=>{

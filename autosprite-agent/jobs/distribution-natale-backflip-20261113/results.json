@@ -1,0 +1,126 @@
+{
+  "updatedAt": "2026-11-13T15:36:01.910Z",
+  "creditsUsed": 35,
+  "results": [
+    {
+      "character": "GIORGIO",
+      "animation": "Backflip",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_472ab16b-cda0-4a92-a81a-fb19bc858cf7",
+          "kind": "custom",
+          "videoId": "cmwf4z9ch00o6rg31p9qmp0nj",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf51hdh00lu9p9t11ozzs0b",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "ALEX",
+      "animation": "Backflip",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_c0909300-2141-4999-81ec-50c6b2c2b8cc",
+          "kind": "custom",
+          "videoId": "cmwf4zc1x00p5rg31pgsiosx8",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf51fmq00lq9p9tznp42htx",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MATTEO",
+      "animation": "Backflip",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_3c3d99b7-4c63-446e-8ff9-dde304142eb1",
+          "kind": "custom",
+          "videoId": "cmwf4z7ym00nyrg31a1cb61c7",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf51r8300h51yowlxfrd14t",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Simona",
+      "animation": "Backflip",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_05681792-31e9-4e36-86f3-535d69478bd9",
+          "kind": "custom",
+          "videoId": "cmwf4zdkr00pxrg31f4x4xbq7",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf51w9800m19p9tlbelasnu",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "EMMA",
+      "animation": "Backflip",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_18418f24-866f-40c6-b438-0a0155b81020",
+          "kind": "custom",
+          "videoId": "cmwf4zala00odrg315lc2x677",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf5271300me9p9tamvuklef",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    }
+  ]
+}

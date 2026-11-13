@@ -1,0 +1,12 @@
+import {resolve} from 'node:path';
+import {readJson,saveJson,plan} from './lib.mjs';
+const root=resolve('wedoo-fighters/autosprite-agent/jobs/distribution-natale-backflip-peirolo-20261113');
+const {animations}=await readJson(resolve('wedoo-fighters/demo-moves/christmas-hover.json'));
+const c=animations.find(a=>a.name.toUpperCase()==='PEIROLO');
+if(!c)throw new Error('Peirolo non trovato');
+const original=await readJson(resolve('wedoo-fighters/autosprite-agent/jobs/distribution-natale-backflip-20261113/assignments.json'));
+const config=await readJson(original.assignments[0].jobFile);
+config.characterId=c.characterId;config.request.animations[0].poseId=c.basePoseId;plan(config);
+const jobFile=resolve(root,c.characterId+'.json');await saveJson(jobFile,config);
+await saveJson(resolve(root,'assignments.json'),{createdAt:new Date().toISOString(),estimatedCredits:7,assignments:[{characterId:c.characterId,character:c.name,animation:'Backflip',basePoseId:c.basePoseId,jobFile,estimatedCredits:7,replacesSpritesheetId:c.sourceSpritesheetId}]});
+console.log('Peirolo: Backflip dalla posa natalizia, stima 7 crediti.');

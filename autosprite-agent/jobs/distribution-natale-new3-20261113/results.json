@@ -1,0 +1,78 @@
+{
+  "updatedAt": "2026-11-13T15:20:09.962Z",
+  "creditsUsed": 21,
+  "results": [
+    {
+      "character": "Franco",
+      "animation": "Saluto alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_1eb7c7fd-5917-4175-bf7b-f28cfbf188c2",
+          "kind": "custom",
+          "videoId": "cmwf4fv560235abo34xyrankd",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf4hlmg00dn1yowjgta7bt0",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Tamara",
+      "animation": "Inchino ed esaltazione",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_9c7a82e7-2c62-4753-88c1-84fd5b79f898",
+          "kind": "custom",
+          "videoId": "cmwf4fwgo023cabo3hqpf96dg",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf4hlua01vp4edew9q4nf9j",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Patrick",
+      "animation": "Dancing",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_dbe6e53b-8e7a-4690-bdcf-03fd89a3a615",
+          "kind": "custom",
+          "videoId": "cmwf4fxkc023oabo3e66r5y7o",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf4hsx000tpqj8qd150bf8g",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    }
+  ]
+}

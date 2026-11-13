@@ -15,6 +15,7 @@ try {
   jobs [CHARACTER_ID]                    Ultimi 50 lavori (recupero invii incerti)
   upload NOME IMMAGINE.png OUTPUT.json   Carica personaggio (nessun credito)
   generate JOB.json NUOVA_CARTELLA       INVIA, consuma crediti, attende e scarica
+  enqueue JOB.json NUOVA_CARTELLA        INVIA una volta, salva il manifest senza attendere
   resume CARTELLA/manifest.json          Riprende senza inviare generazioni
   download SHEET_ID CARTELLA             Scarica un risultato esistente
 Chiave: variabile AUTOSPRITE_API_KEY; . ./autosprite-agent/session.ps1`);
@@ -37,6 +38,16 @@ Chiave: variabile AUTOSPRITE_API_KEY; . ./autosprite-agent/session.ps1`);
         const character = await api.upload(args[0], args[1]);
         await saveJson(args[2], { id: character.id, name: character.name });
         print({ id: character.id, name: character.name, saved: resolve(args[2]) }); break;
+      }
+      case 'enqueue': {
+        if (args.length !== 2) throw new Error('Uso: enqueue JOB.json NUOVA_CARTELLA');
+        const config = await readJson(args[0]);
+        const planned = plan(config);
+        print({ estimatedCredits: planned.estimatedCredits, warnings: planned.warnings });
+        const manifest = await submit(api, config, resolve(args[1]));
+        const state = await readJson(manifest);
+        print({ manifest, status: state.status, creditsUsed: state.creditsUsed, workflows: state.workflows });
+        break;
       }
       case 'generate': {
         if (args.length !== 2) throw new Error('Uso: generate JOB.json NUOVA_CARTELLA');

@@ -1,0 +1,15 @@
+{
+  "createdAt": "2026-11-13T15:32:28.576Z",
+  "estimatedCredits": 7,
+  "assignments": [
+    {
+      "characterId": "cmv9hwvw1005683r8chjtn5mx",
+      "character": "PEIROLO",
+      "animation": "Backflip",
+      "basePoseId": "cmwd9scun000rsnx7uc15qtbe",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-backflip-peirolo-20261113\\cmv9hwvw1005683r8chjtn5mx.json",
+      "estimatedCredits": 7,
+      "replacesSpritesheetId": "cmwf48r2401nzabo32xxbeu8e"
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "createdAt": "2026-11-13T15:03:24.078Z",
+  "preserved": [
+    {
+      "id": "cmwd98epq004a63m1yx900zud",
+      "name": "Luca Arcangeli"
+    },
+    {
+      "id": "cmwd97qho000f29ifd54bd1dh",
+      "name": "Cristian Canino"
+    },
+    {
+      "id": "cmwd96mx7002ajx0l8ye0uxdz",
+      "name": "Alessandro Mandelli"
+    },
+    {
+      "id": "cmvkop6gq017x142gwof7kzeu",
+      "name": "JERRY"
+    },
+    {
+      "id": "cmv9im946000t14mbeyraqs7u",
+      "name": "Oscar"
+    },
+    {
+      "id": "cmv9hx0l00001gk5qklnniyt5",
+      "name": "TOMMASO"
+    },
+    {
+      "id": "cmv9hwzio000s72jnw7pzxfw5",
+      "name": "Simona"
+    },
+    {
+      "id": "cmv9hwys4000o72jnrpng2i85",
+      "name": "SBOZ"
+    },
+    {
+      "id": "cmv9hwxxn000k72jn5131g7kq",
+      "name": "PIPPO"
+    },
+    {
+      "id": "cmv9hwwuu000b72jnin9ee6na",
+      "name": "PEPPO"
+    }
+  ],
+  "estimatedCredits": 180,
+  "assignments": [
+    {
+      "characterId": "cmwakhzns00fkg3te6r39w3sq",
+      "character": "Tony",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmwaklwhj00dkoo6jyly1qnmz",
+      "basePoseLabel": "Vorrei che il personaggi…",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmwakhzns00fkg3te6r39w3sq.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hx1g20007gk5q3bxarga9",
+      "character": "ZICHELLA",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmveyx5jl00enrym97x92dbsp",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hx1g20007gk5q3bxarga9.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwvw1005683r8chjtn5mx",
+      "character": "PEIROLO",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmvez1buc005two3i8ylnyck9",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwvw1005683r8chjtn5mx.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwv09001us3clif88425m",
+      "character": "Marco-Rossetti",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmvez1o0r005og57e08lavwyl",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwv09001us3clif88425m.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwtz0005283r87fhjt57j",
+      "character": "MORI",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmvez22kg005vwo3ib8lciee1",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwtz0005283r87fhjt57j.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwt2f004y83r8tlaam24j",
+      "character": "MIKE",
+      "animation": "Dancing",
+      "basePoseId": "cmvez2js700fmrym95i65lc0o",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwt2f004y83r8tlaam24j.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hws6f000zxboxwrceyavc",
+      "character": "MATTEO",
+      "animation": "Piroetta",
+      "basePoseId": "cmvez45b500ggrym98jkwo1an",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hws6f000zxboxwrceyavc.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwr8s004s83r87m8hsofi",
+      "character": "MARTINI",
+      "animation": "Dance",
+      "basePoseId": "cmvez5k830042826whypxdzlx",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwr8s004s83r87m8hsofi.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+      "character": "MARSAN",
+      "animation": "Sleep",
+      "basePoseId": "cmvez5xck00hbrym9nwdyrplr",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwqed004o83r8kd5a2z1r.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwpf2004k83r8sbbyqlxo",
+      "character": "MARIO",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmvez6bu0004k826w1rw53sc8",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwpf2004k83r8sbbyqlxo.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwolw000vxboxzmfmzrin",
+      "character": "MARCO-BALPO",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmvez6r2800hfrym90vb18mpv",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwolw000vxboxzmfmzrin.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwnmo004e83r84kg7nwpq",
+      "character": "MANU",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmvez76x900hwrym91relveab",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwnmo004e83r84kg7nwpq.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwmqt004983r88g09f29g",
+      "character": "LUANA",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmvez7npg005i826w46mxql4i",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwmqt004983r88g09f29g.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwltm004583r8k33xnjju",
+      "character": "LIVIO",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmvez844e005w826w0ef16zv7",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwltm004583r8k33xnjju.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwkyn004183r8zh8wx8he",
+      "character": "Giordano",
+      "animation": "Dancing",
+      "basePoseId": "cmvez8hmv0063826w1qkldafb",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwkyn004183r8zh8wx8he.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwk40003x83r8xyctuziq",
+      "character": "GIORGIO",
+      "animation": "Piroetta",
+      "basePoseId": "cmvez9hhw00ierym9hnrzdtps",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwk40003x83r8xyctuziq.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwj7q003t83r81ul7vcq1",
+      "character": "GENNARO",
+      "animation": "Dance",
+      "basePoseId": "cmvez9sk4006p826wwxcyf4h2",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwj7q003t83r81ul7vcq1.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwict003p83r8u0jolqm6",
+      "character": "FRANCESCO-LEONI",
+      "animation": "Sleep",
+      "basePoseId": "cmvezaxdj00bnwo3i2isnt0nc",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwict003p83r8u0jolqm6.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwhi5003l83r8aewstvxj",
+      "character": "FRANCESCA-RIVELLA",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmvezbacm00bpwo3ik26abed0",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwhi5003l83r8aewstvxj.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+      "character": "FRA-TAVARONE",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmvezbqmx0062g57evf7gbf06",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwgkp003h83r8pvn0zfqp.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwfpr003d83r8ws949wq7",
+      "character": "FRA-AMATO",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmvezc3gq0064g57ex7hptjk4",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwfpr003d83r8ws949wq7.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwev9003983r8f91pflhh",
+      "character": "FARA",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmvezcltx006ag57enidpkzn9",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwev9003983r8f91pflhh.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+      "character": "FABIO-CLARA",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmvezcwlh0005pe7141enxfwe",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwdtc003583r8bjf9ed1l.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwcxx001w14j28pty3t06",
+      "character": "EROS",
+      "animation": "Dancing",
+      "basePoseId": "cmvezdaj8006eg57ene9qyth7",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwcxx001w14j28pty3t06.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwc2x002x83r8t1fnxc3d",
+      "character": "EMMA",
+      "animation": "Piroetta",
+      "basePoseId": "cmvezdm0o0007pe71ysu6inlz",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwc2x002x83r8t1fnxc3d.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwb8s002t83r8b3272t2y",
+      "character": "DINO",
+      "animation": "Dance",
+      "basePoseId": "cmvezdy6p007n826wpbmcwave",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwb8s002t83r8b3272t2y.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hwac9002p83r8eace0elr",
+      "character": "Chiara-Molina",
+      "animation": "Sleep",
+      "basePoseId": "cmveyqv2u00d3rym9y0ozybqa",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hwac9002p83r8eace0elr.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw9jd002l83r8ye9kqlp1",
+      "character": "CONDELLO",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmvezerad0009pe71citya6lc",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw9jd002l83r8ye9kqlp1.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw8k4002h83r85rhm6zi4",
+      "character": "CHIARA-TONIOL",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmvezf659000mpe7145fb8vis",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw8k4002h83r85rhm6zi4.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw7qk002d83r8yndyvywq",
+      "character": "Bonazzi",
+      "animation": "Muscoli alla telecamera",
+      "basePoseId": "cmvezfh08006vg57entd9puml",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw7qk002d83r8yndyvywq.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw6yj002983r8rlqvtolc",
+      "character": "BARBARA-FIOCCA",
+      "animation": "Ballata di fronte alla telecamera",
+      "basePoseId": "cmvezfved0071g57exj4ztns7",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw6yj002983r8rlqvtolc.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw61a002583r8u5lff8oy",
+      "character": "ANTONINO",
+      "animation": "Pugno verso la telecamera",
+      "basePoseId": "cmvezgb9900chwo3i85sa3imk",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw61a002583r8u5lff8oy.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw53n002183r8mon9gaja",
+      "character": "ANGELA",
+      "animation": "Dancing",
+      "basePoseId": "cmvezgolm00cmwo3i4g2i0dt4",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw53n002183r8mon9gaja.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw437001x83r83e8e09hl",
+      "character": "ALEX",
+      "animation": "Piroetta",
+      "basePoseId": "cmvezh0n6008r826wr5ka40b4",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw437001x83r83e8e09hl.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+      "character": "ALBERTO",
+      "animation": "Dance",
+      "basePoseId": "cmvezhbu4007gg57e588k081v",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9hw3c3001t83r8jht5u7vy.json",
+      "estimatedCredits": 5
+    },
+    {
+      "characterId": "cmv9dyrs900045e49mr49cdz9",
+      "character": "Elisa",
+      "animation": "Sleep",
+      "basePoseId": "cmvezhoqs0010pe717fq8yn99",
+      "basePoseLabel": "Uploaded Pose",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-20261113\\cmv9dyrs900045e49mr49cdz9.json",
+      "estimatedCredits": 5
+    }
+  ]
+}

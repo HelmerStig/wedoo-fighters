@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwnmo004e83r84kg7nwpq",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Muscoli alla telecamera",
+        "prompt": "He turns toward the camera, flexes his muscles, and makes a victory gesture to the audience, then returns to his original position.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9r2om002r14k0y5k27qhs"
+      }
+    ]
+  }
+}

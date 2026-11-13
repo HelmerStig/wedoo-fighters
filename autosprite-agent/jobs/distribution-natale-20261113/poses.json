@@ -1,0 +1,338 @@
+[
+  {
+    "characterId": "cmwd98epq004a63m1yx900zud",
+    "name": "Luca Arcangeli",
+    "pose": {
+      "id": "cmwd9ttge0023snx7r5kjbiwm",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmwd97qho000f29ifd54bd1dh",
+    "name": "Cristian Canino",
+    "pose": {
+      "id": "cmwd9tpbo001xsnx79oqstfd0",
+      "label": "Natale 2026 - Elfo"
+    }
+  },
+  {
+    "characterId": "cmwd96mx7002ajx0l8ye0uxdz",
+    "name": "Alessandro Mandelli",
+    "pose": {
+      "id": "cmwd9tfa4001usnx7a6eu2paj",
+      "label": "Natale 2026 - Babbo Natale"
+    }
+  },
+  {
+    "characterId": "cmvkop6gq017x142gwof7kzeu",
+    "name": "JERRY",
+    "pose": {
+      "id": "cmwd9qmxu002i14k0fsd84ju7",
+      "label": "Natale 2026 - Pan di zenzero"
+    }
+  },
+  {
+    "characterId": "cmv9im946000t14mbeyraqs7u",
+    "name": "Oscar",
+    "pose": {
+      "id": "cmwd9mwgj002yoqw6qsmhyufx",
+      "label": "Natale 2026 - Renna"
+    }
+  },
+  {
+    "characterId": "cmv9hx0l00001gk5qklnniyt5",
+    "name": "TOMMASO",
+    "pose": {
+      "id": "cmwd9t9v7001ksnx74a3rec8r",
+      "label": "Natale 2026 - Pan di zenzero"
+    }
+  },
+  {
+    "characterId": "cmv9hwzio000s72jnw7pzxfw5",
+    "name": "Simona",
+    "pose": {
+      "id": "cmwd9sij2000vsnx76gyh9dy8",
+      "label": "Natale 2026 - Pan di zenzero"
+    }
+  },
+  {
+    "characterId": "cmv9hwys4000o72jnrpng2i85",
+    "name": "SBOZ",
+    "pose": {
+      "id": "cmwd9t25x001asnx7kgk8nih5",
+      "label": "Natale 2026 - Babbo Natale"
+    }
+  },
+  {
+    "characterId": "cmv9hwxxn000k72jn5131g7kq",
+    "name": "PIPPO",
+    "pose": {
+      "id": "cmwd9lmo60013oqw6wt96xa55",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmv9hwwuu000b72jnin9ee6na",
+    "name": "PEPPO",
+    "pose": {
+      "id": "cmwd9t2kg001csnx7albwiu2g",
+      "label": "Natale 2026 - Pupazzo di neve"
+    }
+  },
+  {
+    "characterId": "cmv9hwvw1005683r8chjtn5mx",
+    "name": "PEIROLO",
+    "pose": {
+      "id": "cmwd9scun000rsnx7uc15qtbe",
+      "label": "Natale 2026 - Albero"
+    }
+  },
+  {
+    "characterId": "cmv9hwv09001us3clif88425m",
+    "name": "Marco-Rossetti",
+    "pose": {
+      "id": "cmwd9ropg003d14k0nhr4u1d9",
+      "label": "Natale 2026 - Albero"
+    }
+  },
+  {
+    "characterId": "cmv9hwtz0005283r87fhjt57j",
+    "name": "MORI",
+    "pose": {
+      "id": "cmwd9s5iv0004snx78z8i1oma",
+      "label": "Natale 2026 - Pupazzo di neve"
+    }
+  },
+  {
+    "characterId": "cmv9hws6f000zxboxwrceyavc",
+    "name": "MATTEO",
+    "pose": {
+      "id": "cmwd9s6yg0006snx7nqwh4kty",
+      "label": "Natale 2026 - Pupazzo di neve"
+    }
+  },
+  {
+    "characterId": "cmv9hwr8s004s83r87m8hsofi",
+    "name": "MARTINI",
+    "pose": {
+      "id": "cmwd9rh5e003414k02t12zhk1",
+      "label": "Natale 2026 - Elfo"
+    }
+  },
+  {
+    "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+    "name": "MARSAN",
+    "pose": {
+      "id": "cmwd9regu002y14k072m4tgsu",
+      "label": "Natale 2026 - Pupazzo di neve"
+    }
+  },
+  {
+    "characterId": "cmv9hwolw000vxboxzmfmzrin",
+    "name": "MARCO-BALPO",
+    "pose": {
+      "id": "cmwd9rlh7003814k0aqijkjfs",
+      "label": "Natale 2026 - Renna"
+    }
+  },
+  {
+    "characterId": "cmv9hwnmo004e83r84kg7nwpq",
+    "name": "MANU",
+    "pose": {
+      "id": "cmwd9r2om002r14k0y5k27qhs",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmv9hwmqt004983r88g09f29g",
+    "name": "LUANA",
+    "pose": {
+      "id": "cmwd9qvz000dwjx0lld8tgky0",
+      "label": "Natale 2026 - Elfo"
+    }
+  },
+  {
+    "characterId": "cmv9hwltm004583r8k33xnjju",
+    "name": "LIVIO",
+    "pose": {
+      "id": "cmwd9qs2q002m14k0l4g715mz",
+      "label": "Natale 2026 - Pupazzo di neve"
+    }
+  },
+  {
+    "characterId": "cmv9hwkyn004183r8zh8wx8he",
+    "name": "Giordano",
+    "pose": {
+      "id": "cmwd9q7c4001v14k0m2vef9a0",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmv9hwk40003x83r8xyctuziq",
+    "name": "GIORGIO",
+    "pose": {
+      "id": "cmwd9pz8s001i14k01n4xxl1b",
+      "label": "Natale 2026 - Renna"
+    }
+  },
+  {
+    "characterId": "cmv9hwj7q003t83r81ul7vcq1",
+    "name": "GENNARO",
+    "pose": {
+      "id": "cmwd9q10r001k14k0ecbppums",
+      "label": "Natale 2026 - Elfo"
+    }
+  },
+  {
+    "characterId": "cmv9hwict003p83r8u0jolqm6",
+    "name": "FRANCESCO-LEONI",
+    "pose": {
+      "id": "cmwd9pc9r001114k07s8b2x1g",
+      "label": "Natale 2026 - Pan di zenzero"
+    }
+  },
+  {
+    "characterId": "cmv9hwhi5003l83r8aewstvxj",
+    "name": "FRANCESCA-RIVELLA",
+    "pose": {
+      "id": "cmwd9px6m001g14k0zgkczxgl",
+      "label": "Natale 2026 - Albero"
+    }
+  },
+  {
+    "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+    "name": "FRA-TAVARONE",
+    "pose": {
+      "id": "cmwd9ph96001714k02h6cgnar",
+      "label": "Natale 2026 - Renna"
+    }
+  },
+  {
+    "characterId": "cmv9hwfpr003d83r8ws949wq7",
+    "name": "FRA-AMATO",
+    "pose": {
+      "id": "cmwd9p6ps000z14k0v2ram14y",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmv9hwev9003983r8f91pflhh",
+    "name": "FARA",
+    "pose": {
+      "id": "cmwd9ou91000o14k0uplzj83q",
+      "label": "Natale 2026 - Pan di zenzero"
+    }
+  },
+  {
+    "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+    "name": "FABIO-CLARA",
+    "pose": {
+      "id": "cmwd9p1nn005eoqw6sxksc1ci",
+      "label": "Natale 2026 - Babbo Natale"
+    }
+  },
+  {
+    "characterId": "cmv9hwcxx001w14j28pty3t06",
+    "name": "EROS",
+    "pose": {
+      "id": "cmwd9omb3000h14k0i9wr1n7w",
+      "label": "Natale 2026 - Albero"
+    }
+  },
+  {
+    "characterId": "cmv9hwc2x002x83r8t1fnxc3d",
+    "name": "EMMA",
+    "pose": {
+      "id": "cmwd9o6pc0054oqw6t3p49c5k",
+      "label": "Natale 2026 - Renna"
+    }
+  },
+  {
+    "characterId": "cmv9hwb8s002t83r8b3272t2y",
+    "name": "DINO",
+    "pose": {
+      "id": "cmwd9o8ud0056oqw61l2qkdtd",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmv9hwac9002p83r8eace0elr",
+    "name": "Chiara-Molina",
+    "pose": {
+      "id": "cmwd9nr18004ioqw6255uouce",
+      "label": "Natale 2026 - Albero"
+    }
+  },
+  {
+    "characterId": "cmv9hw9jd002l83r8ye9kqlp1",
+    "name": "CONDELLO",
+    "pose": {
+      "id": "cmwd9obe6000d14k056dh1454",
+      "label": "Natale 2026 - Elfo"
+    }
+  },
+  {
+    "characterId": "cmv9hw8k4002h83r85rhm6zi4",
+    "name": "CHIARA-TONIOL",
+    "pose": {
+      "id": "cmwd9o0je0051oqw6cy75jyfd",
+      "label": "Natale 2026 - Elfo"
+    }
+  },
+  {
+    "characterId": "cmv9hw7qk002d83r8yndyvywq",
+    "name": "Bonazzi",
+    "pose": {
+      "id": "cmwd9nj7q0041oqw6watb00h9",
+      "label": "Natale 2026 - Renna"
+    }
+  },
+  {
+    "characterId": "cmv9hw6yj002983r8rlqvtolc",
+    "name": "BARBARA-FIOCCA",
+    "pose": {
+      "id": "cmwd9nj6s003yoqw6eczvqxec",
+      "label": "Natale 2026 - Maglione natalizio"
+    }
+  },
+  {
+    "characterId": "cmv9hw61a002583r8u5lff8oy",
+    "name": "ANTONINO",
+    "pose": {
+      "id": "cmwd9nfpz003soqw6op1vvobt",
+      "label": "Natale 2026 - Pupazzo di neve"
+    }
+  },
+  {
+    "characterId": "cmv9hw53n002183r8mon9gaja",
+    "name": "ANGELA",
+    "pose": {
+      "id": "cmwd9n7e70039oqw6trew01nv",
+      "label": "Natale 2026 - Albero"
+    }
+  },
+  {
+    "characterId": "cmv9hw437001x83r83e8e09hl",
+    "name": "ALEX",
+    "pose": {
+      "id": "cmwd9limx0011oqw6ydu4w6jp",
+      "label": "Natale 2026 - Pan di zenzero"
+    }
+  },
+  {
+    "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+    "name": "ALBERTO",
+    "pose": {
+      "id": "cmwd9gqm100aojx0l2d5omhxi",
+      "label": "Natale 2026 - Babbo Natale"
+    }
+  },
+  {
+    "characterId": "cmv9dyrs900045e49mr49cdz9",
+    "name": "Elisa",
+    "pose": {
+      "id": "cmwd9lf8r000zoqw6v7xnx1c6",
+      "label": "Natale 2026 - Elfo"
+    }
+  }
+]

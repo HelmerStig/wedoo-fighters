@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwwuu000b72jnin9ee6na",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Saluto alla telecamera",
+        "prompt": "He turns toward the camera and waves to the audience, giving a wink.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9t2kg001csnx7albwiu2g"
+      }
+    ]
+  }
+}

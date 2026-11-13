@@ -1,0 +1,30 @@
+{
+  "updatedAt": "2026-11-13T15:35:02.684Z",
+  "creditsUsed": 7,
+  "results": [
+    {
+      "character": "PEIROLO",
+      "animation": "Backflip",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_2649f28c-aa18-403c-8ecb-f508e75dcb32",
+          "kind": "custom",
+          "videoId": "cmwf4yawo00931n6qz4twn0i0",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf5164700rarg31dsjd3q63",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    }
+  ]
+}

@@ -114,6 +114,7 @@
     $('#visible-count').textContent = christmasCharacters.length;
     $('#character-grid').innerHTML = christmasCharacters.map((c, i) => `<a class="character-card christmas-card" data-christmas-character="${escape(c.id)}" href="${escape(c.image)}" target="_blank" rel="noopener" aria-label="Apri il PNG natalizio di ${escape(c.name)}: ${escape(c.themeName)}"><div class="card-portrait"><span class="card-number" aria-hidden="true">${number(i + 1)} / ${number(christmasCharacters.length)}</span><img data-portrait src="${escape(c.image)}" alt="${escape(c.name)}, ${escape(c.themeName)}" loading="lazy" decoding="async" width="1254" height="1254"></div><div class="card-label"><div><h3>${escape(c.name)}</h3><p>${escape(c.themeName)}</p></div><span class="card-arrow" aria-hidden="true">↗</span></div></a>`).join('');
     installImageFallbacks();
+    rosterPreviews = window.MovesRoster?.install($('#character-grid'), christmasCharacters, {characterAttribute:'christmasCharacter', animationProperty:'hoverAnimation', fps:24, loop:false});
   }
   $('#character-search').addEventListener('input', event => {
     const query = event.target.value.trim().toLocaleLowerCase('it');
@@ -127,6 +128,7 @@
     if (isChristmas) {
       const christmasMatches = new Set(christmasCharacters.filter(c => c.name.toLocaleLowerCase('it').includes(query)).map(c => c.id));
       document.querySelectorAll('[data-christmas-character]').forEach(el => el.hidden = !christmasMatches.has(el.dataset.christmasCharacter));
+      rosterPreviews?.refresh();
       $('#visible-count').textContent = christmasMatches.size;
       $('#empty-state').hidden = christmasMatches.size > 0;
     }

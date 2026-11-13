@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwcxx001w14j28pty3t06",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Dancing",
+        "prompt": "He dances to dance music, holding his hands to his ears as if listening to something through headphones.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9omb3000h14k0i9wr1n7w"
+      }
+    ]
+  }
+}

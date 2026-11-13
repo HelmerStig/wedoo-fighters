@@ -1,0 +1,69 @@
+{
+  "outputs": [
+    {
+      "character": "MATTEO",
+      "animation": "Backflip",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-backflip-20261113\\cmv9hws6f000zxboxwrceyavc\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_3c3d99b7-4c63-446e-8ff9-dde304142eb1",
+          "kind": "custom",
+          "videoId": "cmwf4z7ym00nyrg31a1cb61c7"
+        }
+      ]
+    },
+    {
+      "character": "GIORGIO",
+      "animation": "Backflip",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-backflip-20261113\\cmv9hwk40003x83r8xyctuziq\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_472ab16b-cda0-4a92-a81a-fb19bc858cf7",
+          "kind": "custom",
+          "videoId": "cmwf4z9ch00o6rg31p9qmp0nj"
+        }
+      ]
+    },
+    {
+      "character": "EMMA",
+      "animation": "Backflip",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-backflip-20261113\\cmv9hwc2x002x83r8t1fnxc3d\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_18418f24-866f-40c6-b438-0a0155b81020",
+          "kind": "custom",
+          "videoId": "cmwf4zala00odrg315lc2x677"
+        }
+      ]
+    },
+    {
+      "character": "ALEX",
+      "animation": "Backflip",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-backflip-20261113\\cmv9hw437001x83r83e8e09hl\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_c0909300-2141-4999-81ec-50c6b2c2b8cc",
+          "kind": "custom",
+          "videoId": "cmwf4zc1x00p5rg31pgsiosx8"
+        }
+      ]
+    },
+    {
+      "character": "Simona",
+      "animation": "Backflip",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-backflip-20261113\\cmv9hwzio000s72jnw7pzxfw5\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_05681792-31e9-4e36-86f3-535d69478bd9",
+          "kind": "custom",
+          "videoId": "cmwf4zdkr00pxrg31f4x4xbq7"
+        }
+      ]
+    }
+  ]
+}

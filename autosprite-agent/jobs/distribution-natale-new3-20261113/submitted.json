@@ -1,0 +1,43 @@
+{
+  "outputs": [
+    {
+      "character": "Franco",
+      "animation": "Saluto alla telecamera",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-new3-20261113\\cmwf2pz3i00d2h8m827acdfmw\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_1eb7c7fd-5917-4175-bf7b-f28cfbf188c2",
+          "kind": "custom",
+          "videoId": "cmwf4fv560235abo34xyrankd"
+        }
+      ]
+    },
+    {
+      "character": "Tamara",
+      "animation": "Inchino ed esaltazione",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-new3-20261113\\cmwf2p2xk003wqj8q4siysk54\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_9c7a82e7-2c62-4753-88c1-84fd5b79f898",
+          "kind": "custom",
+          "videoId": "cmwf4fwgo023cabo3hqpf96dg"
+        }
+      ]
+    },
+    {
+      "character": "Patrick",
+      "animation": "Dancing",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-new3-20261113\\cmwf2ocny00jvabo39fs4ichx\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_dbe6e53b-8e7a-4690-bdcf-03fd89a3a615",
+          "kind": "custom",
+          "videoId": "cmwf4fxkc023oabo3e66r5y7o"
+        }
+      ]
+    }
+  ]
+}

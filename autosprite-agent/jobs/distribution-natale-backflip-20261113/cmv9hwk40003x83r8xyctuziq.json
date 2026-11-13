@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwk40003x83r8xyctuziq",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Backflip",
+        "prompt": "the character crouches, jumps up and backward, rotates a full 360 degrees in the air with arms tucked, then lands softly on both feet in the starting stance. Side view, the camera stays fixed.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9pz8s001i14k01n4xxl1b"
+      }
+    ]
+  }
+}

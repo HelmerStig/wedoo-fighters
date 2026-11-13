@@ -1,0 +1,17 @@
+{
+  "outputs": [
+    {
+      "character": "PEIROLO",
+      "animation": "Backflip",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-backflip-peirolo-20261113\\cmv9hwvw1005683r8chjtn5mx\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_2649f28c-aa18-403c-8ecb-f508e75dcb32",
+          "kind": "custom",
+          "videoId": "cmwf4yawo00931n6qz4twn0i0"
+        }
+      ]
+    }
+  ]
+}

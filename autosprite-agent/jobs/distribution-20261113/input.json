@@ -1,0 +1,655 @@
+{
+  "characters": [
+    {
+      "id": "cmwakhzns00fkg3te6r39w3sq",
+      "name": "Tony",
+      "poses": [
+        {
+          "id": "cmwakttdb005quz9mv9bgkoi3",
+          "label": "No Background",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmwakhzns00fkg3te6r39w3sq/1794308300073_f2a74eb3-9a98-4c57-87d1-5bdf8a6daf0b_pose-base-1794308300073.png"
+        },
+        {
+          "id": "cmwaknpdl00gxg3teovvew7zm",
+          "label": "Mettilo in vista frontal…",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmwakhzns00fkg3te6r39w3sq/1794307993541_4b0c401d-cb8b-4022-ad0a-be48b052a4b0_custom-pose-frame-1794307993541.png"
+        },
+        {
+          "id": "cmwaklwhj00dkoo6jyly1qnmz",
+          "label": "Vorrei che il personaggi…",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmwakhzns00fkg3te6r39w3sq/1794308352719_13c7b723-93db-4822-afb8-7ace0072d1f0_pose-base-1794308352718.png"
+        },
+        {
+          "id": "cmwakhzoq00fmg3tejfdaqos0",
+          "label": "Original",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/temp-1794307737529/1794307737529_bdd3f65d-00f9-4736-ad16-7bc03f9d4267_character.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hx1g20007gk5q3bxarga9",
+      "name": "ZICHELLA",
+      "poses": [
+        {
+          "id": "cmveyx5jl00enrym97x92dbsp",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hx1g20007gk5q3bxarga9/1792397044953_e7e4efb8-abba-4ed5-b588-88b384138f69_pose-base-1792397044953.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwvw1005683r8chjtn5mx",
+      "name": "PEIROLO",
+      "poses": [
+        {
+          "id": "cmwd9scun000rsnx7uc15qtbe",
+          "label": "Natale 2026 - Albero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwvw1005683r8chjtn5mx/1794471144361_080c48a1-c104-4a32-be5f-91a0290816b7_custom-pose-1794471144361.png"
+        },
+        {
+          "id": "cmvez1buc005two3i8ylnyck9",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwvw1005683r8chjtn5mx/1792397239862_f6334fe7-0380-4733-aa6c-967ee89c45a8_pose-base-1792397239862.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwv09001us3clif88425m",
+      "name": "Marco-Rossetti",
+      "poses": [
+        {
+          "id": "cmwd9ropg003d14k0nhr4u1d9",
+          "label": "Natale 2026 - Albero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwv09001us3clif88425m/1794471113121_f9904523-79fd-4e75-831b-a4f4af90e1b1_custom-pose-1794471113121.png"
+        },
+        {
+          "id": "cmvez1o0r005og57e08lavwyl",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwv09001us3clif88425m/1792397255913_510aafd1-c76c-4556-b517-9b965ac6ac9f_pose-base-1792397255913.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwtz0005283r87fhjt57j",
+      "name": "MORI",
+      "poses": [
+        {
+          "id": "cmwd9s5iv0004snx78z8i1oma",
+          "label": "Natale 2026 - Pupazzo di neve",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwtz0005283r87fhjt57j/1794471134850_c7a8d4a0-dd69-4632-887a-5f2fa005680f_custom-pose-1794471134850.png"
+        },
+        {
+          "id": "cmvez22kg005vwo3ib8lciee1",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwtz0005283r87fhjt57j/1792397277346_016943de-a9a7-4c77-a623-e68c06470680_pose-base-1792397277346.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwt2f004y83r8tlaam24j",
+      "name": "MIKE",
+      "poses": [
+        {
+          "id": "cmvez2js700fmrym95i65lc0o",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwt2f004y83r8tlaam24j/1792397297181_8c8d18f9-a9f0-4fe5-b4a7-d4a8d6e354bc_pose-base-1792397297181.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hws6f000zxboxwrceyavc",
+      "name": "MATTEO",
+      "poses": [
+        {
+          "id": "cmwd9s6yg0006snx7nqwh4kty",
+          "label": "Natale 2026 - Pupazzo di neve",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hws6f000zxboxwrceyavc/1794471136721_1ce181d6-f105-4611-94af-47198a3dedee_custom-pose-1794471136720.png"
+        },
+        {
+          "id": "cmvez45b500ggrym98jkwo1an",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hws6f000zxboxwrceyavc/1792397373475_0ac920c7-2280-44b6-b258-34f00ba585fe_pose-base-1792397373475.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwr8s004s83r87m8hsofi",
+      "name": "MARTINI",
+      "poses": [
+        {
+          "id": "cmwd9rh5e003414k02t12zhk1",
+          "label": "Natale 2026 - Elfo",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwr8s004s83r87m8hsofi/1794471103322_4f4616aa-d704-4ee0-a905-0dc426fb6ae9_custom-pose-1794471103321.png"
+        },
+        {
+          "id": "cmvez5k830042826whypxdzlx",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwr8s004s83r87m8hsofi/1792397437722_59665aa2-66f6-4b51-8bab-fd847b467fb9_pose-base-1792397437722.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwqed004o83r8kd5a2z1r",
+      "name": "MARSAN",
+      "poses": [
+        {
+          "id": "cmwd9regu002y14k072m4tgsu",
+          "label": "Natale 2026 - Pupazzo di neve",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwqed004o83r8kd5a2z1r/1794471099786_3ba675aa-42e7-4b15-b4cb-d1d8cf57b650_custom-pose-1794471099786.png"
+        },
+        {
+          "id": "cmvez5xck00hbrym9nwdyrplr",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwqed004o83r8kd5a2z1r/1792397454973_b550cb13-07cd-4560-aeec-c4f739ca5fd8_pose-base-1792397454973.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwpf2004k83r8sbbyqlxo",
+      "name": "MARIO",
+      "poses": [
+        {
+          "id": "cmvez6bu0004k826w1rw53sc8",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwpf2004k83r8sbbyqlxo/1792397475632_0ca2fb2b-fe85-44a1-91f0-c47432c98988_pose-base-1792397475632.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwolw000vxboxzmfmzrin",
+      "name": "MARCO-BALPO",
+      "poses": [
+        {
+          "id": "cmwd9rlh7003814k0aqijkjfs",
+          "label": "Natale 2026 - Renna",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwolw000vxboxzmfmzrin/1794471108663_5ef369fe-4759-4541-a56c-ce90a247442a_custom-pose-1794471108663.png"
+        },
+        {
+          "id": "cmvez6r2800hfrym90vb18mpv",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwolw000vxboxzmfmzrin/1792397493966_b43e1200-e0e0-47ab-8114-9cb2a6f94908_pose-base-1792397493966.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwnmo004e83r84kg7nwpq",
+      "name": "MANU",
+      "poses": [
+        {
+          "id": "cmwd9r2om002r14k0y5k27qhs",
+          "label": "Natale 2026 - Maglione natalizio",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwnmo004e83r84kg7nwpq/1794471084430_d1f70c4d-886e-4d48-9e3f-3cc3a76a8970_custom-pose-1794471084430.png"
+        },
+        {
+          "id": "cmvez76x900hwrym91relveab",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwnmo004e83r84kg7nwpq/1792397512711_5a750ba7-6136-40eb-8c3b-0bffd9c828ef_pose-base-1792397512711.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwmqt004983r88g09f29g",
+      "name": "LUANA",
+      "poses": [
+        {
+          "id": "cmwd9qvz000dwjx0lld8tgky0",
+          "label": "Natale 2026 - Elfo",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwmqt004983r88g09f29g/1794471075847_dc8fce59-614e-4cf3-bcd5-8e033b9eedea_custom-pose-1794471075846.png"
+        },
+        {
+          "id": "cmvez7npg005i826w46mxql4i",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwmqt004983r88g09f29g/1792397535137_92f37d52-4fd3-4576-b884-c5e70a946f65_pose-base-1792397535137.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwltm004583r8k33xnjju",
+      "name": "LIVIO",
+      "poses": [
+        {
+          "id": "cmwd9qs2q002m14k0l4g715mz",
+          "label": "Natale 2026 - Pupazzo di neve",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwltm004583r8k33xnjju/1794471070807_19578804-ce45-4583-adfa-59769cdc19a3_custom-pose-1794471070807.png"
+        },
+        {
+          "id": "cmvez844e005w826w0ef16zv7",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwltm004583r8k33xnjju/1792397557160_aa5b39f2-62a6-4fac-b142-40ee5b40e5c5_pose-base-1792397557160.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwkyn004183r8zh8wx8he",
+      "name": "Giordano",
+      "poses": [
+        {
+          "id": "cmwd9q7c4001v14k0m2vef9a0",
+          "label": "Natale 2026 - Maglione natalizio",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwkyn004183r8zh8wx8he/1794471043702_87520948-030a-4cde-b775-a42646e12f17_custom-pose-1794471043702.png"
+        },
+        {
+          "id": "cmvez8hmv0063826w1qkldafb",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwkyn004183r8zh8wx8he/1792397574111_0b4c35ee-a0d6-4199-84f4-26020ec61b17_pose-base-1792397574111.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwk40003x83r8xyctuziq",
+      "name": "GIORGIO",
+      "poses": [
+        {
+          "id": "cmwd9pz8s001i14k01n4xxl1b",
+          "label": "Natale 2026 - Renna",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwk40003x83r8xyctuziq/1794471033444_0d6973a7-ad22-4389-a92a-d21c5392b494_custom-pose-1794471033444.png"
+        },
+        {
+          "id": "cmvez9hhw00ierym9hnrzdtps",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwk40003x83r8xyctuziq/1792397619978_b25fda9e-d350-4957-8192-8b9e9a9a7e61_pose-base-1792397619978.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwj7q003t83r81ul7vcq1",
+      "name": "GENNARO",
+      "poses": [
+        {
+          "id": "cmwd9q10r001k14k0ecbppums",
+          "label": "Natale 2026 - Elfo",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwj7q003t83r81ul7vcq1/1794471035701_6864224c-96c7-42fd-826c-29e7d98d2475_custom-pose-1794471035701.png"
+        },
+        {
+          "id": "cmvez9sk4006p826wwxcyf4h2",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwj7q003t83r81ul7vcq1/1792397639688_91e4bb7f-538a-49c4-8dc2-f4419363d73e_pose-base-1792397639688.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwict003p83r8u0jolqm6",
+      "name": "FRANCESCO-LEONI",
+      "poses": [
+        {
+          "id": "cmwd9pc9r001114k07s8b2x1g",
+          "label": "Natale 2026 - Pan di zenzero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwict003p83r8u0jolqm6/1794471003648_4b2d014e-3cee-4512-bf3a-8dab3e312705_custom-pose-1794471003648.png"
+        },
+        {
+          "id": "cmvezaxdj00bnwo3i2isnt0nc",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwict003p83r8u0jolqm6/1792397688706_da1d8db7-e270-4e70-9f46-25392dfd024f_pose-base-1792397688706.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwhi5003l83r8aewstvxj",
+      "name": "FRANCESCA-RIVELLA",
+      "poses": [
+        {
+          "id": "cmwd9px6m001g14k0zgkczxgl",
+          "label": "Natale 2026 - Albero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwhi5003l83r8aewstvxj/1794471030628_54526188-dc04-47da-8013-0bb04d5413eb_custom-pose-1794471030628.png"
+        },
+        {
+          "id": "cmvezbacm00bpwo3ik26abed0",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwhi5003l83r8aewstvxj/1792397705398_70c24c9b-cede-4a1c-a717-542f85397bc7_pose-base-1792397705398.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwgkp003h83r8pvn0zfqp",
+      "name": "FRA-TAVARONE",
+      "poses": [
+        {
+          "id": "cmwd9ph96001714k02h6cgnar",
+          "label": "Natale 2026 - Renna",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwgkp003h83r8pvn0zfqp/1794471010101_3b06c333-715f-4d14-8c72-f57216a92fba_custom-pose-1794471010101.png"
+        },
+        {
+          "id": "cmvezbqmx0062g57evf7gbf06",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwgkp003h83r8pvn0zfqp/1792397726656_2138f524-b654-4e35-8349-6e0b8744e7bc_pose-base-1792397726656.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwfpr003d83r8ws949wq7",
+      "name": "FRA-AMATO",
+      "poses": [
+        {
+          "id": "cmwd9p6ps000z14k0v2ram14y",
+          "label": "Natale 2026 - Maglione natalizio",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwfpr003d83r8ws949wq7/1794470996461_d7eaca7b-fada-4045-a02d-e15db7f0880e_custom-pose-1794470996461.png"
+        },
+        {
+          "id": "cmvezc3gq0064g57ex7hptjk4",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwfpr003d83r8ws949wq7/1792397744054_7eb95ec4-c6fb-46f4-87b6-abe24744b18a_pose-base-1792397744054.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwev9003983r8f91pflhh",
+      "name": "FARA",
+      "poses": [
+        {
+          "id": "cmwd9ou91000o14k0uplzj83q",
+          "label": "Natale 2026 - Pan di zenzero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwev9003983r8f91pflhh/1794470980246_d8bc1b00-cc25-46c7-b335-a465b20b87fe_custom-pose-1794470980246.png"
+        },
+        {
+          "id": "cmvezcltx006ag57enidpkzn9",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwev9003983r8f91pflhh/1792397765936_e3ef6416-b4c5-42a6-956b-656ac7678980_pose-base-1792397765936.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwdtc003583r8bjf9ed1l",
+      "name": "FABIO-CLARA",
+      "poses": [
+        {
+          "id": "cmwd9p1nn005eoqw6sxksc1ci",
+          "label": "Natale 2026 - Babbo Natale",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwdtc003583r8bjf9ed1l/1794470989919_31d0aaab-4ad2-4a08-acd0-29ec93dd346f_custom-pose-1794470989919.png"
+        },
+        {
+          "id": "cmvezcwlh0005pe7141enxfwe",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwdtc003583r8bjf9ed1l/1792397780093_eacc9aff-9d03-4516-b17d-be1c2cba81e5_pose-base-1792397780093.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwcxx001w14j28pty3t06",
+      "name": "EROS",
+      "poses": [
+        {
+          "id": "cmwd9omb3000h14k0i9wr1n7w",
+          "label": "Natale 2026 - Albero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwcxx001w14j28pty3t06/1794470970028_f227ea7f-aa5b-4b77-b443-13c2330fc158_custom-pose-1794470970028.png"
+        },
+        {
+          "id": "cmvezdaj8006eg57ene9qyth7",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwcxx001w14j28pty3t06/1792397797603_6fe10485-1181-4674-84a9-393627c6324d_pose-base-1792397797603.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwc2x002x83r8t1fnxc3d",
+      "name": "EMMA",
+      "poses": [
+        {
+          "id": "cmwd9o6pc0054oqw6t3p49c5k",
+          "label": "Natale 2026 - Renna",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwc2x002x83r8t1fnxc3d/1794470949790_bd0dece5-925e-4f97-8a1e-ce826c9f83ba_custom-pose-1794470949790.png"
+        },
+        {
+          "id": "cmvezdm0o0007pe71ysu6inlz",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwc2x002x83r8t1fnxc3d/1792397813288_35174553-e04c-4e74-8778-322d902dd3c8_pose-base-1792397813288.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwb8s002t83r8b3272t2y",
+      "name": "DINO",
+      "poses": [
+        {
+          "id": "cmwd9o8ud0056oqw61l2qkdtd",
+          "label": "Natale 2026 - Maglione natalizio",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwb8s002t83r8b3272t2y/1794470952510_400007ea-a1ad-4247-9982-26087f172f4b_custom-pose-1794470952510.png"
+        },
+        {
+          "id": "cmvezdy6p007n826wpbmcwave",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwb8s002t83r8b3272t2y/1792397828995_a2c84f96-bd04-4a77-8639-f0f333408f00_pose-base-1792397828995.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hwac9002p83r8eace0elr",
+      "name": "Chiara-Molina",
+      "poses": [
+        {
+          "id": "cmwd9nr18004ioqw6255uouce",
+          "label": "Natale 2026 - Albero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwac9002p83r8eace0elr/1794470929411_6a021801-3ba8-4d61-8e9c-2e0931b4b875_custom-pose-1794470929411.png"
+        },
+        {
+          "id": "cmveyqv2u00d3rym9y0ozybqa",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hwac9002p83r8eace0elr/1792396754150_e8a92fc1-1e1b-4d1d-afd2-ef09eef450a2_pose-base-1792396754150.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw9jd002l83r8ye9kqlp1",
+      "name": "CONDELLO",
+      "poses": [
+        {
+          "id": "cmwd9obe6000d14k056dh1454",
+          "label": "Natale 2026 - Elfo",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw9jd002l83r8ye9kqlp1/1794470955765_c13a2b94-8bab-4a32-989d-dc141ea93819_custom-pose-1794470955765.png"
+        },
+        {
+          "id": "cmvezerad0009pe71citya6lc",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw9jd002l83r8ye9kqlp1/1792397865756_a52e34f0-4515-48eb-89f8-e896fd5fb4c5_pose-base-1792397865756.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw8k4002h83r85rhm6zi4",
+      "name": "CHIARA-TONIOL",
+      "poses": [
+        {
+          "id": "cmwd9o0je0051oqw6cy75jyfd",
+          "label": "Natale 2026 - Elfo",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw8k4002h83r85rhm6zi4/1794470941694_ef17a4fa-cb30-487b-8347-b15bf0905efb_custom-pose-1794470941694.png"
+        },
+        {
+          "id": "cmvezf659000mpe7145fb8vis",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw8k4002h83r85rhm6zi4/1792397885021_5b0b8dbe-d1af-4bc9-8dae-e0b350d34b2c_pose-base-1792397885021.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw7qk002d83r8yndyvywq",
+      "name": "Bonazzi",
+      "poses": [
+        {
+          "id": "cmwd9nj7q0041oqw6watb00h9",
+          "label": "Natale 2026 - Renna",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw7qk002d83r8yndyvywq/1794470919331_9aea0f3a-4e42-4106-a851-9dac5488b460_custom-pose-1794470919331.png"
+        },
+        {
+          "id": "cmvezfh08006vg57entd9puml",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw7qk002d83r8yndyvywq/1792397901305_2fd023bc-8657-403e-9d8e-5fac99030c4a_pose-base-1792397901305.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw6yj002983r8rlqvtolc",
+      "name": "BARBARA-FIOCCA",
+      "poses": [
+        {
+          "id": "cmwd9nj6s003yoqw6eczvqxec",
+          "label": "Natale 2026 - Maglione natalizio",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw6yj002983r8rlqvtolc/1794470919191_4d19b131-7d0b-44fb-b437-fdf3588dbb95_custom-pose-1794470919191.png"
+        },
+        {
+          "id": "cmvezfved0071g57exj4ztns7",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw6yj002983r8rlqvtolc/1792397920695_deb4e0a8-23ca-45b5-834b-954a875e123d_pose-base-1792397920695.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw61a002583r8u5lff8oy",
+      "name": "ANTONINO",
+      "poses": [
+        {
+          "id": "cmwd9nfpz003soqw6op1vvobt",
+          "label": "Natale 2026 - Pupazzo di neve",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw61a002583r8u5lff8oy/1794470914830_306b4c3f-6ec0-41c4-8298-7540821652d1_custom-pose-1794470914830.png"
+        },
+        {
+          "id": "cmvezgb9900chwo3i85sa3imk",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw61a002583r8u5lff8oy/1792397938466_30a18031-daa2-46ee-86b6-21e932415999_pose-base-1792397938466.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw53n002183r8mon9gaja",
+      "name": "ANGELA",
+      "poses": [
+        {
+          "id": "cmwd9n7e70039oqw6trew01nv",
+          "label": "Natale 2026 - Albero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw53n002183r8mon9gaja/1794470903969_c3a46db5-c66d-41e2-8f66-b204033d0dfa_custom-pose-1794470903969.png"
+        },
+        {
+          "id": "cmvezgolm00cmwo3i4g2i0dt4",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw53n002183r8mon9gaja/1792397955532_14959b6a-f0a0-464f-82e5-5ce847f789ba_pose-base-1792397955532.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw437001x83r83e8e09hl",
+      "name": "ALEX",
+      "poses": [
+        {
+          "id": "cmwd9limx0011oqw6ydu4w6jp",
+          "label": "Natale 2026 - Pan di zenzero",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw437001x83r83e8e09hl/1794470825310_3a63ec3f-6f98-47ac-b222-3664e069f0cb_custom-pose-1794470825310.png"
+        },
+        {
+          "id": "cmvezh0n6008r826wr5ka40b4",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw437001x83r83e8e09hl/1792397971687_3c50053e-b7de-44af-9fa6-23171d497ecf_pose-base-1792397971687.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9hw3c3001t83r8jht5u7vy",
+      "name": "ALBERTO",
+      "poses": [
+        {
+          "id": "cmwd9gqm100aojx0l2d5omhxi",
+          "label": "Natale 2026 - Babbo Natale",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw3c3001t83r8jht5u7vy/1794470602230_c4ddad81-73e2-4820-bcb6-8db53e152bf6_custom-pose-1794470602230.png"
+        },
+        {
+          "id": "cmvezhbu4007gg57e588k081v",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9hw3c3001t83r8jht5u7vy/1792397986669_8ef5743c-4193-47ee-85ba-55b96f5f988a_pose-base-1792397986669.png"
+        }
+      ]
+    },
+    {
+      "id": "cmv9dyrs900045e49mr49cdz9",
+      "name": "Elisa",
+      "poses": [
+        {
+          "id": "cmwd9lf8r000zoqw6v7xnx1c6",
+          "label": "Natale 2026 - Elfo",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9dyrs900045e49mr49cdz9/1794470820874_cd9c4242-18ba-41ed-8ac6-f1d63d580f02_custom-pose-1794470820874.png"
+        },
+        {
+          "id": "cmvezhoqs0010pe717fq8yn99",
+          "label": "Uploaded Pose",
+          "imageUrl": "https://a91037593e6b852513235b7d3b6851f0.r2.cloudflarestorage.com/spritesheet/users/cmrj24rw500c510ny3phj45o4/characters/cmv9dyrs900045e49mr49cdz9/1792398004475_1044bac9-6dc8-440c-a39f-50a114a1f8cf_pose-base-1792398004475.png"
+        }
+      ]
+    }
+  ],
+  "preserved": [
+    {
+      "id": "cmwd98epq004a63m1yx900zud",
+      "name": "Luca Arcangeli"
+    },
+    {
+      "id": "cmwd97qho000f29ifd54bd1dh",
+      "name": "Cristian Canino"
+    },
+    {
+      "id": "cmwd96mx7002ajx0l8ye0uxdz",
+      "name": "Alessandro Mandelli"
+    },
+    {
+      "id": "cmvkop6gq017x142gwof7kzeu",
+      "name": "JERRY"
+    },
+    {
+      "id": "cmv9im946000t14mbeyraqs7u",
+      "name": "Oscar"
+    },
+    {
+      "id": "cmv9hx0l00001gk5qklnniyt5",
+      "name": "TOMMASO"
+    },
+    {
+      "id": "cmv9hwzio000s72jnw7pzxfw5",
+      "name": "Simona"
+    },
+    {
+      "id": "cmv9hwys4000o72jnrpng2i85",
+      "name": "SBOZ"
+    },
+    {
+      "id": "cmv9hwxxn000k72jn5131g7kq",
+      "name": "PIPPO"
+    },
+    {
+      "id": "cmv9hwwuu000b72jnin9ee6na",
+      "name": "PEPPO"
+    }
+  ],
+  "actions": [
+    [
+      "Saluto alla telecamera",
+      "He turns toward the camera and waves to the audience, giving a wink."
+    ],
+    [
+      "Inchino ed esaltazione",
+      "He turns toward the camera, bows to the audience, raises one arm while smiling, and then returns to his original position."
+    ],
+    [
+      "Muscoli alla telecamera",
+      "He turns toward the camera, flexes his muscles, and makes a victory gesture to the audience, then returns to his original position."
+    ],
+    [
+      "Ballata di fronte alla telecamera",
+      "He turns toward the camera, performs an energetic dance, then takes a theatrical bow and returns to his original position."
+    ],
+    [
+      "Pugno verso la telecamera",
+      "He turns toward the camera, throws a couple of jabs as if he were a boxer in training—bouncing on his feet—and then returns to his original pose."
+    ],
+    [
+      "Dancing",
+      "He dances to dance music, holding his hands to his ears as if listening to something through headphones."
+    ],
+    [
+      "Piroetta",
+      "Perform a pirouette toward the camera with arms outstretched, hopping as you spin, then return to the original position."
+    ],
+    [
+      "Dance",
+      "Character performs the following action in place: character performs a fun celebratory dance with rhythmic movements. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout."
+    ],
+    [
+      "Sleep",
+      "Side-scrolling animation facing right (east). Camera locked, character centered with full body visible. Character performs the following action in place: character lies down and falls asleep with peaceful breathing motion. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout."
+    ]
+  ]
+}

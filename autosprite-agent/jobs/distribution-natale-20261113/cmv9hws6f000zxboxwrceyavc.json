@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hws6f000zxboxwrceyavc",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Piroetta",
+        "prompt": "Perform a pirouette toward the camera with arms outstretched, hopping as you spin, then return to the original position.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9s6yg0006snx7nqwh4kty"
+      }
+    ]
+  }
+}

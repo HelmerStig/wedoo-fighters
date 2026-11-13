@@ -1,0 +1,15 @@
+{
+  "source": "Spritesheet macchina da scrivere creato dall'utente su AutoSprite",
+  "creditsUsed": 0,
+  "assignments": [
+    {
+      "characterId": "cmv9hwvw1005683r8chjtn5mx",
+      "character": "PEIROLO",
+      "animation": "macchina da scrivere",
+      "basePoseId": "cmwd9scun000rsnx7uc15qtbe",
+      "sourceSpritesheetId": "cmwf56iit007prndocwv7wpq0",
+      "sourceFolder": "autosprite-agent/output/peirolo-typewriter-20261113",
+      "replacesSpritesheetId": "cmwf5164700rarg31dsjd3q63"
+    }
+  ]
+}

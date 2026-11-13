@@ -1,0 +1,33 @@
+{
+  "createdAt": "2026-11-13T15:17:10.658Z",
+  "estimatedCredits": 21,
+  "assignments": [
+    {
+      "characterId": "cmwf2pz3i00d2h8m827acdfmw",
+      "character": "Franco",
+      "animation": "Saluto alla telecamera",
+      "basePoseId": "cmwf3430600lk4edesbpdxjce",
+      "basePoseLabel": "Natale",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-new3-20261113\\cmwf2pz3i00d2h8m827acdfmw.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmwf2p2xk003wqj8q4siysk54",
+      "character": "Tamara",
+      "animation": "Inchino ed esaltazione",
+      "basePoseId": "cmwf34j45001nvwblpqkxekdb",
+      "basePoseLabel": "Natale",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-new3-20261113\\cmwf2p2xk003wqj8q4siysk54.json",
+      "estimatedCredits": 7
+    },
+    {
+      "characterId": "cmwf2ocny00jvabo39fs4ichx",
+      "character": "Patrick",
+      "animation": "Dancing",
+      "basePoseId": "cmwf351qe00m34edeegnb2x86",
+      "basePoseLabel": "Natale",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-new3-20261113\\cmwf2ocny00jvabo39fs4ichx.json",
+      "estimatedCredits": 7
+    }
+  ]
+}

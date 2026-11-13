@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwj7q003t83r81ul7vcq1",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Dance",
+        "prompt": "Character performs the following action in place: character performs a fun celebratory dance with rhythmic movements. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9q10r001k14k0ecbppums"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwltm004583r8k33xnjju",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Pugno verso la telecamera",
+        "prompt": "He turns toward the camera, throws a couple of jabs as if he were a boxer in training—bouncing on his feet—and then returns to his original pose.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvez844e005w826w0ef16zv7"
+      }
+    ]
+  }
+}

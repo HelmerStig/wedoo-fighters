@@ -1,0 +1,26 @@
+[
+  {
+    "characterId": "cmwf2pz3i00d2h8m827acdfmw",
+    "name": "Franco",
+    "pose": {
+      "id": "cmwf3430600lk4edesbpdxjce",
+      "label": "Natale"
+    }
+  },
+  {
+    "characterId": "cmwf2p2xk003wqj8q4siysk54",
+    "name": "Tamara",
+    "pose": {
+      "id": "cmwf34j45001nvwblpqkxekdb",
+      "label": "Natale"
+    }
+  },
+  {
+    "characterId": "cmwf2ocny00jvabo39fs4ichx",
+    "name": "Patrick",
+    "pose": {
+      "id": "cmwf351qe00m34edeegnb2x86",
+      "label": "Natale"
+    }
+  }
+]

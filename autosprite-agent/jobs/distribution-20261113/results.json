@@ -1,0 +1,870 @@
+{
+  "updatedAt": "2026-11-13T15:10:28.997Z",
+  "creditsUsed": 252,
+  "results": [
+    {
+      "character": "ZICHELLA",
+      "animation": "Inchino ed esaltazione",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_14704a61-6529-4a0c-b638-407c52ca99aa",
+          "kind": "custom",
+          "videoId": "cmwf3xdij01414edeigu2yidq",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zitu01804edehnloocst",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Marco-Rossetti",
+      "animation": "Ballata di fronte alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_fd721744-6bf8-46fd-8492-719ea82fb6c0",
+          "kind": "custom",
+          "videoId": "cmwf3xfpn014f4ede60cn9h8n",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zg41017s4edev3e6tizb",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "PEIROLO",
+      "animation": "Muscoli alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_c8300958-edc6-4914-a848-240ed4e416cc",
+          "kind": "custom",
+          "videoId": "cmwf3xeju01484edemupjrc0x",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3z90s016a4edebq39p1n7",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MATTEO",
+      "animation": "Piroetta",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_967d6fc5-d8e4-467c-9c90-7e3352ad3213",
+          "kind": "custom",
+          "videoId": "cmwf3xlrf014pabo3fq0hgill",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zv7n00o3qj8qoeycwxej",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MORI",
+      "animation": "Pugno verso la telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_34dcb0cd-4309-482f-94ef-ef20e559951b",
+          "kind": "custom",
+          "videoId": "cmwf3xhhn014babo3gijdc5qx",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zhme017w4ede3cdebd6g",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MIKE",
+      "animation": "Dancing",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_403a7ecf-3f1f-4958-a69d-da397d10b8c8",
+          "kind": "custom",
+          "videoId": "cmwf3xjyz014iabo35qytt2ob",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zkif00nzqj8q8lajs0w5",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MARTINI",
+      "animation": "Dance",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_6453402d-930e-4b21-ac99-a26145c8450b",
+          "kind": "custom",
+          "videoId": "cmwf3xnnz00gch8m8h8mqogj4",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zokz018b4ede4t4zyzpe",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MARSAN",
+      "animation": "Sleep",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_97be35c4-2354-4ae4-9bcb-ceda9da956e1",
+          "kind": "custom",
+          "videoId": "cmwf3xp5p014wabo3r5onko7z",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zkcg00l1h8m85hi6nets",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MARIO",
+      "animation": "Saluto alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_2de2fd56-8b93-46f4-97a6-b118266d2577",
+          "kind": "custom",
+          "videoId": "cmwf3xqok0153abo3z1hvk3qr",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf406di018t4edeeulsxvzy",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MARCO-BALPO",
+      "animation": "Inchino ed esaltazione",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_d96a043d-1011-4c94-9903-0825f1eaac94",
+          "kind": "custom",
+          "videoId": "cmwf3xs2l015aabo3i34oo4ns",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf3zxfp018h4edef1c18azo",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "LUANA",
+      "animation": "Ballata di fronte alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_00c4f71e-bb27-4bcf-a31a-6fb1daea0ea3",
+          "kind": "custom",
+          "videoId": "cmwf3xwwb015oabo3g0su62k5",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf41o5m00ohqj8q74j4fa62",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "MANU",
+      "animation": "Muscoli alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_94a8d99e-5615-4ec4-8f89-79830a8e8ec9",
+          "kind": "custom",
+          "videoId": "cmwf3xvce015habo3jjovin2x",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf4057j018l4edenj5zo2a3",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "GIORGIO",
+      "animation": "Piroetta",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_57053b44-1689-4f2a-a830-22b7779d91b7",
+          "kind": "custom",
+          "videoId": "cmwf3y1wy00i3h8m8jmjny2p6",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf41ocy01faabo3x1rzsqqq",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Tony",
+      "animation": "Saluto alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_f0104d86-143c-4453-9eb3-717c518c51e9",
+          "kind": "custom",
+          "videoId": "cmwf3xbc7013o4edeq3hpccn9",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf41tnn01feabo3kelvavmp",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "FRANCESCO-LEONI",
+      "animation": "Sleep",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_7308af7d-790a-4d3b-94c0-cff9cae30d96",
+          "kind": "custom",
+          "videoId": "cmwf3y55x00ihh8m8bkz689hf",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf422a4019l4edeb3fx3yuz",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Giordano",
+      "animation": "Dancing",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_84e6d8a9-65be-4f6e-ad67-37895105724a",
+          "kind": "custom",
+          "videoId": "cmwf3y0oz00h9h8m8fxozfmzn",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf4227800olqj8qvbbwsezu",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "LIVIO",
+      "animation": "Pugno verso la telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_851dc7b5-dfb2-40be-973d-dd2b998465bc",
+          "kind": "custom",
+          "videoId": "cmwf3xyg5014q4ede7ka7rg2v",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf428o001bi4edercwjji79",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "animation": "Inchino ed esaltazione",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_fb808d78-dce8-41ca-972a-1b8cfa6f2c4c",
+          "kind": "custom",
+          "videoId": "cmwf3y7i700j4h8m84f6vqwfi",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf42dsg00opqj8q4daoq3vc",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "GENNARO",
+      "animation": "Dance",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_2ae266a0-e919-411a-a5ca-cf2cda9b35cd",
+          "kind": "custom",
+          "videoId": "cmwf3y3r100iah8m89ucd4ctv",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf41tv101fiabo3pxa5nhrt",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "FRANCESCA-RIVELLA",
+      "animation": "Saluto alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_49df52e6-4e33-4343-8b41-89670e11252b",
+          "kind": "custom",
+          "videoId": "cmwf3y6aw00ith8m86ecn8dsh",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf42eyp01ftabo3tm1mmbtt",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "FRA-AMATO",
+      "animation": "Muscoli alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_b160687c-9e27-4f49-a7d8-8a8074a6940c",
+          "kind": "custom",
+          "videoId": "cmwf3y8xq015u4edej08dlbfm",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf42geh01fxabo3kf0mlk22",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "FARA",
+      "animation": "Ballata di fronte alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_658bd9af-b12d-40b0-9a8e-1a128b0f1546",
+          "kind": "custom",
+          "videoId": "cmwf3ybji01654ede7qx76kxk",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf42mv900m1h8m81lrv2s65",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "FABIO-CLARA",
+      "animation": "Pugno verso la telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_02fc67da-fc7a-4994-879b-008aba154d86",
+          "kind": "custom",
+          "videoId": "cmwf3yfkt016cabo39w7vcltx",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf42o7y01gcabo3fcwerota",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "EROS",
+      "animation": "Dancing",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_51cf7ece-a24c-4ada-9c97-e52db311c62f",
+          "kind": "custom",
+          "videoId": "cmwf3yh0w016jabo30jg77a0f",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf43mqz01c94edern3oh6km",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "EMMA",
+      "animation": "Piroetta",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_a9c824f0-414c-4359-b56b-e1339195b3ab",
+          "kind": "custom",
+          "videoId": "cmwf3yibd016tabo3hehgg7rv",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf43j1p01hvabo3a0jkdu1i",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Chiara-Molina",
+      "animation": "Sleep",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_328c7d09-a5d5-4add-a2fe-ddf20caacc76",
+          "kind": "custom",
+          "videoId": "cmwf3yks800jfh8m8kseldyuy",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf43nlo01i1abo34jnja71r",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "CONDELLO",
+      "animation": "Saluto alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_df90afd7-46d1-4764-a9e7-12a70e13e301",
+          "kind": "custom",
+          "videoId": "cmwf3ym4c004z1yow6txpvogd",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf442oq00o5h8m87xzbhnpb",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "DINO",
+      "animation": "Dance",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_20eb66a1-92fa-43ca-b426-9888558dc3ec",
+          "kind": "custom",
+          "videoId": "cmwf3yjft0170abo3b5pf0vbo",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf4423400o1h8m83ermdzwq",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "CHIARA-TONIOL",
+      "animation": "Inchino ed esaltazione",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_c2b6185c-c30d-4dd4-a31e-610853328356",
+          "kind": "custom",
+          "videoId": "cmwf3ynl300561yowpepte3ou",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf43xs200nqh8m88e5xbv3s",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "ANTONINO",
+      "animation": "Pugno verso la telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_372df02a-df59-4095-94b6-fc857b1657df",
+          "kind": "custom",
+          "videoId": "cmwf3ys5100k3h8m8kg17f6ht",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf447xq01ncabo3513nm2d3",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Bonazzi",
+      "animation": "Muscoli alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_b7a1acd3-0270-488a-98c1-64759af77424",
+          "kind": "custom",
+          "videoId": "cmwf3yovi00jmh8m8w4c7eatt",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf44aud00oah8m82k90iqj5",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "BARBARA-FIOCCA",
+      "animation": "Ballata di fronte alla telecamera",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_56961b37-ad7d-4591-9bb9-ea5bf7b62095",
+          "kind": "custom",
+          "videoId": "cmwf3yr2v00jwh8m8yqq7pfsz",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf44ko900oeh8m8ii9v0afy",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "ANGELA",
+      "animation": "Dancing",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_f9b7fd81-6026-4986-98d5-d06a1d78b1e0",
+          "kind": "custom",
+          "videoId": "cmwf3ytf900kah8m8l93bx5i9",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf44lie00oih8m8md7utbm8",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "ALEX",
+      "animation": "Piroetta",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_5dbb3143-3ba3-44ee-83c2-b42bef65daa0",
+          "kind": "custom",
+          "videoId": "cmwf3yukw00khh8m8luk8jeqy",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf44qb600omh8m8729m6h1n",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "ALBERTO",
+      "animation": "Dance",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_c8029e42-08db-45d7-9956-907cfc1fee9d",
+          "kind": "custom",
+          "videoId": "cmwf3yvzc00koh8m8zusl0n2t",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf44we000ouh8m80s142d6s",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    },
+    {
+      "character": "Elisa",
+      "animation": "Sleep",
+      "status": "completed",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_ffd17b48-2968-4d5e-822f-9f88fcf9183d",
+          "kind": "custom",
+          "videoId": "cmwf3yx6800kwh8m8b363ol7b",
+          "status": "succeeded",
+          "sheets": [
+            {
+              "sheetId": "cmwf45d0z01dv4ede5a30ueqh",
+              "width": 3584,
+              "height": 3584,
+              "frames": 49,
+              "audio": false
+            }
+          ],
+          "downloaded": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hw8k4002h83r85rhm6zi4",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Inchino ed esaltazione",
+        "prompt": "He turns toward the camera, bows to the audience, raises one arm while smiling, and then returns to his original position.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9o0je0051oqw6cy75jyfd"
+      }
+    ]
+  }
+}

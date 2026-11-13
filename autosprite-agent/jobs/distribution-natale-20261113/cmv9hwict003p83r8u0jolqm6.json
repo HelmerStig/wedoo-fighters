@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwict003p83r8u0jolqm6",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Sleep",
+        "prompt": "Side-scrolling animation facing right (east). Camera locked, character centered with full body visible. Character performs the following action in place: character lies down and falls asleep with peaceful breathing motion. Plain grey background. No camera movement, no parallax, no extra characters or props. Keep scale, lighting, and proportions consistent throughout.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9pc9r001114k07s8b2x1g"
+      }
+    ]
+  }
+}

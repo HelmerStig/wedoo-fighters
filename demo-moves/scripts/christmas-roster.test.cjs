@@ -9,25 +9,32 @@ test('il roster natalizio include tutti i PNG attivi e le esclusioni concordate'
   const sandbox = {window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(demo,'roster-natale-catalog.js'),'utf8'), sandbox);
   const characters = sandbox.window.CHRISTMAS_ROSTER.characters;
-  assert.equal(characters.length,42);
-  assert.equal(new Set(characters.map(c => c.id)).size,42);
+  assert.equal(characters.length,45);
+  assert.equal(new Set(characters.map(c => c.id)).size,45);
   assert.ok(!characters.some(c => c.name === 'Tony'));
   assert.ok(characters.some(c => c.name === 'Oscar'));
   assert.equal(characters.filter(c => c.theme === 'pan-di-zenzero').length,6);
   assert.deepEqual(Array.from(characters.filter(c => c.theme === 'babbo-natale'), c => c.id).sort(), ['alberto','alessandro-mandelli','fabio-clara','sboz']);
   for (const theme of ['elfo','maglione','renna','albero','pupazzo-di-neve','pan-di-zenzero']) {
-    assert.equal(characters.filter(c => c.theme === theme).length,['maglione','elfo'].includes(theme) ? 7 : 6,theme);
+    assert.equal(characters.filter(c => c.theme === theme).length,{maglione:8,elfo:8,renna:7,albero:6,'pupazzo-di-neve':6,'pan-di-zenzero':6}[theme],theme);
   }
   for (const c of characters) {
     assert.ok(!['zichella','mike','mario','tony-ok'].includes(c.id));
     assert.ok(fs.existsSync(path.resolve(demo,decodeURIComponent(c.image))),c.name);
     assert.ok(!c.image.includes('archivio') && !c.image.includes('prove-scartate'));
+    assert.equal(c.hoverAnimation.frames.length,49,c.name);
+    assert.equal(c.hoverAnimation.playbackFps,24,c.name);
+    assert.equal(c.hoverAnimation.loop,false,c.name);
+    assert.ok(fs.existsSync(path.resolve(demo,c.hoverAnimation.image)),c.name);
   }
   const index = fs.readFileSync(path.join(demo,'index.html'),'utf8');
+  assert.deepEqual(Array.from(characters.filter(c=>c.hoverAnimation.name==='Backflip'),c=>c.id).sort(),['alex','emma','giorgio','matteo','simona']);
+  assert.equal(characters.find(c=>c.id==='peirolo').hoverAnimation.name,'macchina da scrivere');
+  assert.ok(!characters.some(c=>c.hoverAnimation.name==='Piroetta'));
   assert.match(index, /<h1>Il roster[\s\S]*?<a class="christmas-button" href="roster-natale.html">/);
 });
 
-test('la pagina natalizia usa immagini statiche e esclude Tony e filtra i personaggi disponibili', () => {
+test('la pagina natalizia conserva la posa statica e filtra i personaggi disponibili', () => {
   const nodes = new Map();
   function node() { return {dataset:{},hidden:false,innerHTML:'',textContent:'',listeners:{},setAttribute(){},focus(){},querySelectorAll(){return [];},addEventListener(type,fn){this.listeners[type]=fn;}}; }
   for (const selector of ['#sidebar','.menu-toggle','.sidebar-close','#character-search','#nav-count','.nav-empty','#total-count','#visible-count','#character-grid','#empty-state']) nodes.set(selector,node());
@@ -38,8 +45,8 @@ test('la pagina natalizia usa immagini statiche e esclude Tony e filtra i person
   vm.runInNewContext(fs.readFileSync(path.join(demo,'roster-natale-catalog.js'),'utf8'), sandbox);
   for (const c of sandbox.window.CHRISTMAS_ROSTER.characters) cards.push({...node(),dataset:{christmasCharacter:c.id}});
   vm.runInNewContext(fs.readFileSync(path.join(demo,'app.js'),'utf8'), sandbox);
-  assert.equal(nodes.get('#total-count').textContent,42);
-  assert.equal((nodes.get('#character-grid').innerHTML.match(/data-christmas-character=/g)||[]).length,42);
+  assert.equal(nodes.get('#total-count').textContent,45);
+  assert.equal((nodes.get('#character-grid').innerHTML.match(/data-christmas-character=/g)||[]).length,45);
   assert.match(nodes.get('#sidebar').innerHTML,/href="roster-natale.html" aria-current="page"/);
   const search = nodes.get('#character-search').listeners.input;
   search({target:{value:'  TONY  '}});
@@ -51,6 +58,6 @@ test('la pagina natalizia usa immagini statiche e esclude Tony e filtra i person
   search({target:{value:'nessuno'}});
   assert.equal(nodes.get('#empty-state').hidden,false);
   search({target:{value:''}});
-  assert.equal(cards.filter(c=>!c.hidden).length,42);
+  assert.equal(cards.filter(c=>!c.hidden).length,45);
   assert.equal(nodes.get('#empty-state').hidden,true);
 });

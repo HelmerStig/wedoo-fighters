@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwv09001us3clif88425m",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "turboMode": "first_frame",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Ballata di fronte alla telecamera",
+        "prompt": "He turns toward the camera, performs an energetic dance, then takes a theatrical bow and returns to his original position.",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwd9ropg003d14k0nhr4u1d9"
+      }
+    ]
+  }
+}

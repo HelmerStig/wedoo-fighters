@@ -1,0 +1,51 @@
+{
+  "createdAt": "2026-11-13T15:31:59.976Z",
+  "estimatedCredits": 35,
+  "assignments": [
+    {
+      "characterId": "cmv9hws6f000zxboxwrceyavc",
+      "character": "MATTEO",
+      "animation": "Backflip",
+      "basePoseId": "cmwd9s6yg0006snx7nqwh4kty",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-backflip-20261113\\cmv9hws6f000zxboxwrceyavc.json",
+      "estimatedCredits": 7,
+      "replacesSpritesheetId": "cmwf48u8p00qzh8m8loj77xfa"
+    },
+    {
+      "characterId": "cmv9hwk40003x83r8xyctuziq",
+      "character": "GIORGIO",
+      "animation": "Backflip",
+      "basePoseId": "cmwd9pz8s001i14k01n4xxl1b",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-backflip-20261113\\cmv9hwk40003x83r8xyctuziq.json",
+      "estimatedCredits": 7,
+      "replacesSpritesheetId": "cmwf4978601mv4edevcfxd26s"
+    },
+    {
+      "characterId": "cmv9hwc2x002x83r8t1fnxc3d",
+      "character": "EMMA",
+      "animation": "Backflip",
+      "basePoseId": "cmwd9o6pc0054oqw6t3p49c5k",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-backflip-20261113\\cmv9hwc2x002x83r8t1fnxc3d.json",
+      "estimatedCredits": 7,
+      "replacesSpritesheetId": "cmwf4bib701sq4edeyogt6oo4"
+    },
+    {
+      "characterId": "cmv9hw437001x83r83e8e09hl",
+      "character": "ALEX",
+      "animation": "Backflip",
+      "basePoseId": "cmwd9limx0011oqw6ydu4w6jp",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-backflip-20261113\\cmv9hw437001x83r83e8e09hl.json",
+      "estimatedCredits": 7,
+      "replacesSpritesheetId": "cmwf4ebf90114h8m8sks9vhq8"
+    },
+    {
+      "characterId": "cmv9hwzio000s72jnw7pzxfw5",
+      "character": "Simona",
+      "animation": "Backflip",
+      "basePoseId": "cmwd9sij2000vsnx76gyh9dy8",
+      "jobFile": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\jobs\\distribution-natale-backflip-20261113\\cmv9hwzio000s72jnw7pzxfw5.json",
+      "estimatedCredits": 7,
+      "replacesSpritesheetId": "cmwf4glgw011hh8m887ldx0n8"
+    }
+  ]
+}

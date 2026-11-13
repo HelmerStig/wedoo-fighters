@@ -1,0 +1,134 @@
+{
+  "outputs": [
+    {
+      "character": "Luca Arcangeli",
+      "animation": "Saluto alla telecamera",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmwd98epq004a63m1yx900zud\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_bf380520-c53d-42ba-94c9-ff627698d018",
+          "kind": "custom",
+          "videoId": "cmwf47v6401la4edei17c4l0k"
+        }
+      ]
+    },
+    {
+      "character": "Cristian Canino",
+      "animation": "Inchino ed esaltazione",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmwd97qho000f29ifd54bd1dh\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_d124b117-b8a1-430c-918b-93ae60d7af76",
+          "kind": "custom",
+          "videoId": "cmwf47wba01li4ede7jty52yz"
+        }
+      ]
+    },
+    {
+      "character": "Alessandro Mandelli",
+      "animation": "Muscoli alla telecamera",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmwd96mx7002ajx0l8ye0uxdz\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_1a01b4d9-d721-4afe-84f9-b0f2a4562ff0",
+          "kind": "custom",
+          "videoId": "cmwf47xu701lr4edeps0m8noc"
+        }
+      ]
+    },
+    {
+      "character": "JERRY",
+      "animation": "Ballata di fronte alla telecamera",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmvkop6gq017x142gwof7kzeu\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_eaa3f868-fac7-4302-b380-3a1f45d7629c",
+          "kind": "custom",
+          "videoId": "cmwf47zq001ly4eded3saqww7"
+        }
+      ]
+    },
+    {
+      "character": "Oscar",
+      "animation": "Pugno verso la telecamera",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmv9im946000t14mbeyraqs7u\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_85f54108-442b-4e1f-b3bc-ea5b6b80826c",
+          "kind": "custom",
+          "videoId": "cmwf4816x007l1yowtnovufmo"
+        }
+      ]
+    },
+    {
+      "character": "TOMMASO",
+      "animation": "Dancing",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmv9hx0l00001gk5qklnniyt5\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_dbdf024a-23de-4658-9d6e-970fb0bf39b3",
+          "kind": "custom",
+          "videoId": "cmwf482wq007q1yow8i8m3ldq"
+        }
+      ]
+    },
+    {
+      "character": "Simona",
+      "animation": "Piroetta",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmv9hwzio000s72jnw7pzxfw5\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_f1f9efa5-cd53-446c-87f6-96a811601b51",
+          "kind": "custom",
+          "videoId": "cmwf4842z007v1yowh0wpc89k"
+        }
+      ]
+    },
+    {
+      "character": "SBOZ",
+      "animation": "Dance",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmv9hwys4000o72jnrpng2i85\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_fd9040f1-460d-47a9-b56d-e3ec5b629c85",
+          "kind": "custom",
+          "videoId": "cmwf4859801nuabo3wgl0z3te"
+        }
+      ]
+    },
+    {
+      "character": "PIPPO",
+      "animation": "Sleep",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmv9hwxxn000k72jn5131g7kq\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_7eb29b02-545e-43cc-96b6-bbf6baec9f49",
+          "kind": "custom",
+          "videoId": "cmwf486lk00pph8m8n0e015dq"
+        }
+      ]
+    },
+    {
+      "character": "PEPPO",
+      "animation": "Saluto alla telecamera",
+      "manifest": "F:\\Ufficio\\dem-natale-2026\\wedoo-fighters\\autosprite-agent\\output\\distribution-natale-extra-20261113\\cmv9hwwuu000b72jnin9ee6na\\manifest.json",
+      "creditsUsed": 7,
+      "workflows": [
+        {
+          "jobId": "wf_2267b3dd-0cf3-4093-8250-e6a5713d7970",
+          "kind": "custom",
+          "videoId": "cmwf4897h00q0h8m8ditc1j2u"
+        }
+      ]
+    }
+  ]
+}
