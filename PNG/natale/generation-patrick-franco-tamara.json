@@ -1,0 +1,73 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-13",
+  "scope": "Varianti natalizie di tre sprite esistenti; originali e cataloghi invariati.",
+  "characters": [
+    {
+      "name": "Tamara",
+      "theme": "elfo",
+      "source": "PNG/Tamara.png",
+      "outfitReference": "PNG/natale/ELISA-NATALE.png",
+      "output": "PNG/natale/Tamara-natale.png",
+      "prompt": "Use case: identity-preserve / clothing-only Christmas costume edit of an existing 16-bit fighting-game sprite. IMAGE 1 is the ONLY character identity, pose, scale and layout authority. Preserve that exact recognizable human face, hair, facial hair, skin, age, body build, proportions, hands, clenched fists, anatomy, right-facing side-view guard stance and both foot positions. IMAGE 2 is an outfit-and-palette reference ONLY: do NOT copy its person's face, physique, hair or pose. Preserve the original coarse 16-bit arcade pixel-art treatment, crisp square pixel clusters, stair-step dark outlines and restrained hard-edged shading. No extra fine detail, no smooth painting, no photorealistic rendering, no blur. Full body, exactly one character on genuine transparent alpha background. No floor or cast shadow, no background/checkerboard printed into image, no text, no extra props or people. Keep the base image's generous square margins and relative character size; do not zoom in. Aim for a square 512x512 sprite with the feet still at y432, head at the same height and same body silhouette as the source. Entire head, fists and footwear must remain uncropped. Change clothing only as follows: Tamara is a CHRISTMAS ELF. Replace her long dark grey cardigan and black outfit with a long forest-green elf tunic/jacket with burgundy collar, cuffs and pointed hem, understated gold edging and gold buttons, dark brown belt with small gold buckle, burgundy full-length trousers and dark brown ankle boots with small buckles. Keep the overall long-tunic silhouette compatible with her source outfit and clearly separate both legs in the same guard stance. Preserve her long wavy brown/honey-highlighted hair, dark eyeglasses, exact adult female face, small silver pendant and bare human hands. No hat obscuring her hair, no pointed fantasy ears, no transformation into another person. Outfit style consistent with image 2, identity and pose exclusively from image 1.",
+      "outputSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "42cc10a948ef7d895327cd20826df1be511fab386d93911a8b9a0547cc52a6e7",
+      "outfitReferenceSha256": "85b4d35f2b383d7f03ef040f86110746185db04620d1f2f1bf296a40b1220080",
+      "outputSha256": "7cf9b622d9cd95ef00d5602fd93dec75af2873cb1f2d9bb76d6fe8fea0cb0781",
+      "solidContentBounds": [
+        354,
+        191,
+        879,
+        1041
+      ],
+      "transparent": true
+    },
+    {
+      "name": "Patrick",
+      "theme": "maglione",
+      "source": "PNG/Patrick.png",
+      "outfitReference": "PNG/natale/Luca-Arcangeli-natale.png",
+      "output": "PNG/natale/Patrick-natale.png",
+      "prompt": "Use case: identity-preserve / clothing-only Christmas costume edit of an existing 16-bit fighting-game sprite. IMAGE 1 is the ONLY character identity, pose, scale and layout authority. Preserve that exact recognizable human face, hair, facial hair, skin, age, body build, proportions, hands, clenched fists, anatomy, right-facing side-view guard stance and both foot positions. IMAGE 2 is an outfit-and-palette reference ONLY: do NOT copy its person's face, physique, hair or pose. Preserve the original coarse 16-bit arcade pixel-art treatment, crisp square pixel clusters, stair-step dark outlines and restrained hard-edged shading. No extra fine detail, no smooth painting, no photorealistic rendering, no blur. Full body, exactly one character on genuine transparent alpha background. No floor or cast shadow, no background/checkerboard printed into image, no text, no extra props or people. Keep the base image's generous square margins and relative character size; do not zoom in. Aim for a square 512x512 sprite with the feet still at y432, head at the same height and same body silhouette as the source. Entire head, fists and footwear must remain uncropped. Change clothing only as follows: Patrick wears a red knitted CHRISTMAS SWEATER in place of both his open plaid overshirt and grey sweater. Use cream pixel-art reindeer and snowflake motifs, narrow forest-green Fair-Isle bands, ribbed red collar/cuffs/hem, matching the festive sweater vocabulary of image 2. Keep his black trousers and charcoal-grey casual shoes unchanged. Preserve his broad stocky torso, rounded full cheeks, short brown hair, tiny chin stubble, small black earpiece and exact face/profile. Do not slim him down. Bare fists, no gloves, no hat, no new glasses, no beard added. No plaid overshirt on top of the Christmas sweater.",
+      "outputSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "f0d232c4904d967c424ae0bc751fad0d1fe0ef84be496180a808b3f3d1b70f34",
+      "outfitReferenceSha256": "93f1b5b7cfa843579f33ded1c807fb0efce88bb85fbb4d0126836f748df05664",
+      "outputSha256": "555285a3fc29bf298f0472fd70fe557355a2bbf8c7d4f501d6489489e0525270",
+      "solidContentBounds": [
+        342,
+        220,
+        901,
+        1050
+      ],
+      "transparent": true
+    },
+    {
+      "name": "Franco",
+      "theme": "renna",
+      "source": "PNG/Franco.png",
+      "outfitReference": "PNG/natale/OSCARE-NATALE.png",
+      "output": "PNG/natale/Franco-natale.png",
+      "prompt": "Use case: identity-preserve / clothing-only Christmas costume edit of an existing 16-bit fighting-game sprite. IMAGE 1 is the ONLY character identity, pose, scale and layout authority. Preserve that exact recognizable human face, hair, facial hair, skin, age, body build, proportions, hands, clenched fists, anatomy, right-facing side-view guard stance and both foot positions. IMAGE 2 is an outfit-and-palette reference ONLY: do NOT copy its person's face, physique, hair or pose. Preserve the original coarse 16-bit arcade pixel-art treatment, crisp square pixel clusters, stair-step dark outlines and restrained hard-edged shading. No extra fine detail, no smooth painting, no photorealistic rendering, no blur. Full body, exactly one character on genuine transparent alpha background. No floor or cast shadow, no background/checkerboard printed into image, no text, no extra props or people. Keep the base image's generous square margins and relative character size; do not zoom in. Aim for a square 512x512 sprite with the feet still at y432, head at the same height and same body silhouette as the source. Entire head, fists and footwear must remain uncropped. Change clothing only as follows: Franco wears a HUMAN REINDEER COSTUME like image 2: cinnamon/chestnut-brown long-sleeve cloth top and matching brown full-length trousers with a cream belly/chest patch, dark brown boots, and a simple brown headband with two small reindeer antlers and fabric ears. Keep the exact Franco human face completely exposed: his original short salt-and-pepper hair and distinctive pointed grey goatee/moustache remain visible. No animal muzzle, no full animal head, no human-to-animal transformation, no red ball obscuring his nose, no gloves covering the bare clenched fists. Headband antlers extend into the existing empty top margin; retain the SAME head/body size and original feet baseline rather than shrinking the man to accommodate the antlers. Body, guard stance, hands and feet strictly from image 1; costume vocabulary only from image 2.",
+      "outputSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "455bd65b27d1bad654c70c5eeede0ea09ea0ab72d5bc8bcf6f30dc6b9d7e286b",
+      "outfitReferenceSha256": "61afc9e49c317a06892af7417f02acd4b1654e263cfdbee3389cd1eec4e4a9d1",
+      "outputSha256": "d9e559c7d858ceec0115f0e261d18cfb56634ff554cfec88a5b27d369520fac4",
+      "solidContentBounds": [
+        364,
+        142,
+        875,
+        1020
+      ],
+      "transparent": true
+    }
+  ]
+}

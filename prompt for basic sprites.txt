@@ -158,9 +158,9 @@ Mancanti:
 - Luca Arcangeli <-ok
 
 - Raisa
-- Tamara
+- Tamara <- ok
 - Alessandro Barcaro
-- Franco Bevione
+- Franco Bevione <- ok
 - Margeux
 - Brittany
 - Cristian Canino
@@ -169,7 +169,7 @@ Mancanti:
 - Brian
 - Daniel
 - Jasmine
-- Patrick
+- Patrick <-ok
 - John
 - Irene
 - Jimmy
@@ -223,6 +223,8 @@ Se potete e volete, potreste inviarmi due vostre foto?
 	- una del viso in 3/4
 	- una a figura intera
 
-Ora devo creare uno sprite conforme a quelli presenti in /png partendo da una foto realistica. Sempre 16bit pixel art, vista laterale, posa di guardia rivolta a destra:
-il personaggio da riproidurre è Alessandro Mandelli: original-images\Cristian-Canino
-Cpme abbigliamento, metti uno smanicato nero con cappuccio, dei jeans blu scuri e delle scarpe da ginnastica 
+Ora devo creare 3 sprite conforme a quelli presenti in /png partendo da due foto realisticche ognumo. Sempre 16bit pixel art, vista laterale, posa di guardia rivolta a destra:
+I personaggi da riprodurre sono
+- Patrick: original-images\Patrick
+- Franco: original-images\franco
+- Tamara: original-images\tamara
