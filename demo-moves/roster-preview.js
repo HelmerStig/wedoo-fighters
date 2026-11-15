@@ -3,7 +3,8 @@
   else root.MovesRoster = factory(root.MovesCore);
 })(typeof globalThis !== 'undefined' ? globalThis : this, function (core) {
   'use strict';
-  function install(grid, characters) {
+  function install(grid, characters, options = {}) {
+    const loop = options.loop ?? true;
     const cache = new Map();
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
     let active = null, request = null;
@@ -36,7 +37,7 @@
       if (active.card.hidden) { stop(); return; }
       if (document.hidden) { active.lastTime = null; return; }
       const state = active;
-      if (state.lastTime !== null) state.frame = core.advance(state.frame, Math.min(time - state.lastTime, 250), core.effectiveFps(state.idle, 1), state.idle.frames.length, true);
+      if (state.lastTime !== null) state.frame = core.advance(state.frame, Math.min(time - state.lastTime, 250), options.fps ?? core.effectiveFps(state.idle, 1), state.idle.frames.length, loop);
       state.lastTime = time;
       const [x,y,w,h] = state.idle.frames[state.frame.frame];
       state.context.clearRect(0,0,state.canvas.width,state.canvas.height);
@@ -44,11 +45,11 @@
       state.context.drawImage(state.image,x,y,w,h,0,0,state.canvas.width,state.canvas.height);
       state.canvas.hidden = false;
       state.card.classList.add('is-idle');
-      if (!reducedMotion.matches) request = requestAnimationFrame(tick);
+      if (!reducedMotion.matches && !state.frame.ended) request = requestAnimationFrame(tick);
     }
     for (const card of grid.querySelectorAll('.character-card')) {
-      const character = characters.find(c => c.id === card.dataset.character);
-      const idle = character?.animations.find(a => a.id === 'idle');
+      const character = characters.find(c => c.id === card.dataset[options.characterAttribute ?? 'character']);
+      const idle = options.animationProperty ? character?.[options.animationProperty] : character?.animations.find(a => a.id === 'idle');
       if (!idle?.frames.length) continue;
       let canvas;
       async function start() {
