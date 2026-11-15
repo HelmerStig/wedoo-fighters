@@ -1,0 +1,11 @@
+{
+  "tool": "built-in image_gen",
+  "subject": "luca-arcangeli",
+  "output": "../../portraits/luca-arcangeli.png",
+  "photoReference": "luca.jpg",
+  "styleReferences": [
+    "../../portraits/alberto.png",
+    "../../portraits/giordano.png"
+  ],
+  "prompt": "Create ONE missing WEDOO character portrait matching the existing collection. Use case: identity-preserve, photo-to-pixel-art. INPUT ROLES: image 1 is the target person's identity and clothing photo; images 2 and 3 (alberto.png and giordano.png) are STYLE AND FRAMING references ONLY, NOT the target identity. Output square 1254x1254 pixels if possible, genuinely transparent background. A large head-and-shoulders bust cropped just below upper chest, face in gentle three-quarter view toward the RIGHT of the canvas, eyes looking slightly toward viewer. Natural calm confident expression. Fill frame like the existing references: top of head near top with small margin, shoulders span most of width near bottom, clean cutout silhouette. Match their detailed 1990s 16-bit arcade character-select portrait pixel art precisely: visible square pixel clusters and stepped dark outlines, warm natural skin shading, restrained colors, pixel dithering, finely clustered pixel hair, clear recognizable facial anatomy. Not a smooth painting, photo filter, vector, 3D, chibi, full-body fighter, or Christmas variant. Preserve target person's age, facial proportions, face shape, nose, mouth, hairline and facial hair. No extra characters, scenery, ground, black background, labels, text, logos, props, decorative border or phone UI. Do not borrow baldness, glasses or earrings from style portraits unless actually present in target photo.\nTarget: Luca Arcangeli. Preserve the actual man's short dark-brown hair brushed upward, closely trimmed sides, full dark beard and moustache with subtle grey strands concentrated around lower beard, thick brows, longish angular face, natural prominent nose, no glasses. Outfit as identity photo: pale blue dress shirt, cream/beige waistcoat, dark navy tie with tiny restrained pale dots. Confident neutral face, closed mouth. Do not enlarge beard or add earrings."
+}

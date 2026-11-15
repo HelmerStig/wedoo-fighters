@@ -1,0 +1,123 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-13",
+  "scope": "Tre sprite base statici; nessuna animazione o modifica al catalogo della demo.",
+  "export": {
+    "canvas": [
+      512,
+      512
+    ],
+    "subjectHeight": 340,
+    "baseline": 432,
+    "alphaThreshold": 128,
+    "resampling": "nearest-neighbor",
+    "originalsPreserved": true
+  },
+  "characters": [
+    {
+      "name": "Patrick",
+      "prompt": "Use case: stylized-concept, identity-preserving sprite from photo references. Asset type: ONE static 16-bit arcade fighting-game character sprite for the existing WEDOO roster. Images 1 and 2 are the SAME person's photographic identity and clothing references. Images 3 (ALBERTO.png) and 4 (ANGELA.png) are ONLY style, pose scale and canvas-layout references; do not copy their faces, hair or clothes. Match their hand-placed pixel-art look: crisp discrete square pixel clusters, dark thin pixel outlines, restrained 3-5-tone shade ramps, realistically proportioned body, face readable at sprite scale, no smooth painting or photorealistic texture. Match the reference's right-facing side-view idle fighting guard: full body, both clenched fists raised before chest/chin, elbows bent, knees slightly bent, stable wide staggered stance, lead foot toward screen-right, rear foot toward screen-left; head and gaze turned RIGHT. Keep face recognizable from BOTH photographs. ONE character only, no alternate views, no spritesheet, no labels, no lettering, no objects or scenery. Square 512x512 transparent RGBA canvas, real alpha transparency, no checkerboard drawn into the image, no white or colored backdrop, no frame, no ground plane or shadow. Match the existing sprite footprint: centered horizontally, crown near y90-100, soles at y430-435, approximately 335-345 pixels tall, generous empty transparent margins. Entire head, fists, both legs and both shoes visible and uncropped. This is a base sprite, not an animated sequence. Subject: Patrick, the stocky adult man in photos 1-2, with a rounded full face and prominent cheeks, short dark brown hair, minimal chin stubble, small black earpiece visible at the ear. Preserve his broad heavyset torso and natural proportions rather than turning him into a slim or muscular hero. Clothing exactly from the photo: open blue-white-black checkered long-sleeve shirt over a grey textured crew-neck sweater, black trousers, simple dark charcoal-grey casual shoes. Translate the checkered shirt into clean readable pixel checks. Calm focused fighting-guard expression. Preserve the facial profile from photo 2 and the body/clothing identity from photo 1.",
+      "references": [
+        "original-images/Patrick/shared image (4).jpg",
+        "original-images/Patrick/shared image (5).jpg",
+        "PNG/ALBERTO.png",
+        "PNG/ANGELA.png"
+      ],
+      "output": "PNG/Patrick.png",
+      "native": "Patrick-native.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "nativeContentBounds": [
+        264,
+        140,
+        949,
+        1162
+      ],
+      "outputBounds": [
+        142,
+        92,
+        370,
+        432
+      ],
+      "outputSha256": "f0d232c4904d967c424ae0bc751fad0d1fe0ef84be496180a808b3f3d1b70f34",
+      "referencesSha256": {
+        "original-images/Patrick/shared image (4).jpg": "af233811132ba1419297fe097db4a4bdab7546f54efb6a0cd0b2934184c82659",
+        "original-images/Patrick/shared image (5).jpg": "c7f3128045f2cb7af9bdb2554157fd5e5b4209fe6f34d9fa1ed81426151baa39",
+        "PNG/ALBERTO.png": "43db4f0c0ecd40620834adf8e76b0394c1657f52a818e4e8b2439f2ec1788d2f",
+        "PNG/ANGELA.png": "7a3f316eca388ea27425164e92564fa34c8540ca71ce5b921b5711ae54823c88"
+      }
+    },
+    {
+      "name": "Franco",
+      "prompt": "Use case: stylized-concept, identity-preserving sprite from photo references. Asset type: ONE static 16-bit arcade fighting-game character sprite for the existing WEDOO roster. Images 1 and 2 are the SAME person's photographic identity and clothing references. Images 3 (ALBERTO.png) and 4 (ANGELA.png) are ONLY style, pose scale and canvas-layout references; do not copy their faces, hair or clothes. Match their hand-placed pixel-art look: crisp discrete square pixel clusters, dark thin pixel outlines, restrained 3-5-tone shade ramps, realistically proportioned body, face readable at sprite scale, no smooth painting or photorealistic texture. Match the reference's right-facing side-view idle fighting guard: full body, both clenched fists raised before chest/chin, elbows bent, knees slightly bent, stable wide staggered stance, lead foot toward screen-right, rear foot toward screen-left; head and gaze turned RIGHT. Keep face recognizable from BOTH photographs. ONE character only, no alternate views, no spritesheet, no labels, no lettering, no objects or scenery. Square 512x512 transparent RGBA canvas, real alpha transparency, no checkerboard drawn into the image, no white or colored backdrop, no frame, no ground plane or shadow. Match the existing sprite footprint: centered horizontally, crown near y90-100, soles at y430-435, approximately 335-345 pixels tall, generous empty transparent margins. Entire head, fists, both legs and both shoes visible and uncropped. This is a base sprite, not an animated sequence. Subject: Franco, the middle-aged man in photos 1-2. Preserve his short brushed-back salt-and-pepper hair, distinct nose and brow profile, fine smile lines, short salt-and-pepper mustache and pointed goatee (NOT a full beard), and average natural build. Clothing exactly from the photos: dark navy crew-neck sweater with a pale blue small-check shirt collar peeking out, light ivory-beige straight trousers, black lace-up ankle/desert boots. Both hands now raised as bare clenched fists in fighting guard instead of behind his back. Calm focused expression, recognizable adult facial identity.",
+      "references": [
+        "original-images/franco/shared image (2).jpg",
+        "original-images/franco/shared image (3).jpg",
+        "PNG/ALBERTO.png",
+        "PNG/ANGELA.png"
+      ],
+      "output": "PNG/Franco.png",
+      "native": "Franco-native.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "nativeContentBounds": [
+        308,
+        207,
+        895,
+        1139
+      ],
+      "outputBounds": [
+        149,
+        92,
+        363,
+        432
+      ],
+      "outputSha256": "455bd65b27d1bad654c70c5eeede0ea09ea0ab72d5bc8bcf6f30dc6b9d7e286b",
+      "referencesSha256": {
+        "original-images/franco/shared image (2).jpg": "a7a78f18e1bc5f7fe3b9e2132d0b92a5b127a571f9f390f53e1c90495fa9b9f4",
+        "original-images/franco/shared image (3).jpg": "548c1dc8e91463dff78241a23609c1a4ac2cf3a93e75c0175a31d9b0dfcd1b2a",
+        "PNG/ALBERTO.png": "43db4f0c0ecd40620834adf8e76b0394c1657f52a818e4e8b2439f2ec1788d2f",
+        "PNG/ANGELA.png": "7a3f316eca388ea27425164e92564fa34c8540ca71ce5b921b5711ae54823c88"
+      }
+    },
+    {
+      "name": "Tamara",
+      "prompt": "Use case: stylized-concept, identity-preserving sprite from photo references. Asset type: ONE static 16-bit arcade fighting-game character sprite for the existing WEDOO roster. Images 1 and 2 are the SAME person's photographic identity and clothing references. Images 3 (ALBERTO.png) and 4 (ANGELA.png) are ONLY style, pose scale and canvas-layout references; do not copy their faces, hair or clothes. Match their hand-placed pixel-art look: crisp discrete square pixel clusters, dark thin pixel outlines, restrained 3-5-tone shade ramps, realistically proportioned body, face readable at sprite scale, no smooth painting or photorealistic texture. Match the reference's right-facing side-view idle fighting guard: full body, both clenched fists raised before chest/chin, elbows bent, knees slightly bent, stable wide staggered stance, lead foot toward screen-right, rear foot toward screen-left; head and gaze turned RIGHT. Keep face recognizable from BOTH photographs. ONE character only, no alternate views, no spritesheet, no labels, no lettering, no objects or scenery. Square 512x512 transparent RGBA canvas, real alpha transparency, no checkerboard drawn into the image, no white or colored backdrop, no frame, no ground plane or shadow. Match the existing sprite footprint: centered horizontally, crown near y90-100, soles at y430-435, approximately 335-345 pixels tall, generous empty transparent margins. Entire head, fists, both legs and both shoes visible and uncropped. This is a base sprite, not an animated sequence. Subject: Tamara, the adult woman in photos 1-2. Preserve the face from frontal photo 1 and right-facing nose/chin profile from photo 2, her long voluminous wavy brown hair with honey-brown lighter ends, and dark navy/black rounded rectangular glasses from photo 1. Natural adult proportions, not a glamour or teenage redesign. Clothing from the photos: black long-sleeve zip-neck top, long open charcoal-grey ribbed sleeveless cardigan/waistcoat, long black scarf with discreet fringed ends, black fitted trousers and black ankle boots. Preserve the small round silver pendant and, where legible at this scale, the light watch and beaded bracelets. Both hands raised as bare clenched fists in guard, face and hair facing RIGHT, feet separated in the same grounded stance as the roster references. Keep her long outer layer but let the legs and boots remain clearly readable.",
+      "references": [
+        "original-images/tamara/shared image.jpg",
+        "original-images/tamara/shared image (1).jpg",
+        "PNG/ALBERTO.png",
+        "PNG/ANGELA.png"
+      ],
+      "output": "PNG/Tamara.png",
+      "native": "Tamara-native.png",
+      "nativeResolution": [
+        1254,
+        1254
+      ],
+      "nativeContentBounds": [
+        320,
+        191,
+        902,
+        1124
+      ],
+      "outputBounds": [
+        150,
+        92,
+        362,
+        432
+      ],
+      "outputSha256": "42cc10a948ef7d895327cd20826df1be511fab386d93911a8b9a0547cc52a6e7",
+      "referencesSha256": {
+        "original-images/tamara/shared image.jpg": "98d88850d5eea5fc139829f6c6746a4c92a8caddaf50d31d2d78cefe5a07e650",
+        "original-images/tamara/shared image (1).jpg": "425706b0e90024b0270e14482d69f3ff76dd83de61d0b11e3cfe08fe2d82b605",
+        "PNG/ALBERTO.png": "43db4f0c0ecd40620834adf8e76b0394c1657f52a818e4e8b2439f2ec1788d2f",
+        "PNG/ANGELA.png": "7a3f316eca388ea27425164e92564fa34c8540ca71ce5b921b5711ae54823c88"
+      }
+    }
+  ]
+}
