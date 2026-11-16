@@ -68,7 +68,7 @@
     const status=card.querySelector('[data-crt-status]'),runtime=card.querySelector('[data-crt-runtime]');
     const initial=basePreset?parsePreset(JSON.stringify(basePreset)):preset(defaults);
     const storageKey=presetKey(stageId,basePreset);
-    let settings={...initial.settings},strength=initial.strength,enabled=initial.enabled,original=false,time=0,disposed=false,available=false;
+    let settings={...initial.settings},strength=initial.strength,enabled=initial.enabled,original=false,time=0,disposed=false,available=false,frameOverrides=null;
     const cleanups=[];
     function listen(node,event,handler){node.addEventListener(event,handler);cleanups.push(()=>node.removeEventListener(event,handler));}
     const drawer=card.querySelector('[data-crt-drawer]'),openButton=card.querySelector('[data-crt-open]'),closeButton=card.querySelector('[data-crt-close]');
@@ -100,7 +100,12 @@
       if(disposed)return;
       appearance();
       const value=effectiveStrength();
-      if(available&&value>0&&!renderer.render(settings,value,time)){available=false;appearance();}
+      const renderedSettings=frameOverrides?normalize({...settings,...frameOverrides}):settings;
+      if(frameOverrides&&frameOverrides.weight!==undefined){
+        const weight=Math.max(0,Math.min(1,Number(frameOverrides.weight)||0));
+        for(const key of ['bloomIntensity','bloomThreshold'])renderedSettings[key]=settings[key]+(renderedSettings[key]-settings[key])*weight;
+      }
+      if(available&&value>0&&!renderer.render(renderedSettings,value,time)){available=false;appearance();}
     }
     const controls=fields.map(field=>({field,input:card.querySelector(`[data-crt-param="${field[0]}"]`),number:Array.isArray(field[2])?null:card.querySelector(`[data-crt-number="${field[0]}"]`)}));
     function sync(){
@@ -147,7 +152,7 @@
       fileInput.value='';
     });
     sync();appearance();
-    player.setPostProcess((canvas,elapsed)=>{time=elapsed;render();});
+    player.setPostProcess((canvas,elapsed,overrides=null)=>{time=elapsed;frameOverrides=overrides;render();});
     return {setStrength(value){strength=Math.max(0,Math.min(1,Number(value)||0));sync();render();},setOriginal(value){original=Boolean(value);render();},reset,
       destroy(){disposed=true;closePanel(false);player.setPostProcess(null);cleanups.forEach(cleanup=>cleanup());renderer.destroy();output.hidden=true;}};
   }

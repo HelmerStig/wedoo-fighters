@@ -130,7 +130,7 @@ Mi crei un prompt per autosprite e lo generi per "Franco" chiamandolo Custom-Idl
 Tutto chiaro?
 
 
-Ho creato l'idle spritesheet per "Victory custom 2"
+Ho creato l'idle spritesheet per "Block"
 - Franco
 - Tamara
 - Patrick
@@ -138,5 +138,23 @@ Ho creato l'idle spritesheet per "Victory custom 2"
 - Cristian Canino
 - Alessandro Mandelli
 
-me li integri su demo moves come fatto per gli altri sotto la voce walk?
-prendi da autosprite le versioni trimmed se disponibili
+me li integri su demo moves come fatto per gli altri sotto la voce Parata Alta?
+prendi da autosprite le versioni trimmed se disponibili, usa gli stessi parametri di timing e aggiorna il report relativo: demo-moves/reports/block-timing.html
+
+
+vorrei creare un nuovo stage in demo-moves, si chiamerà: Via Somis, Cortile.
+Sarà composto da 2 immagini:
+- original-backgrounds\via-somis\cielo.png z-index 0
+- original-backgrounds\via-somis\somis.png: z-index 1
+
+usa i filtri crt usati negli altri
+come personaggi metti Oscar e Fra Tavarone
+
+Vorrei ora aggiungere degli effetti,
+- C'è un temporale in arrivo, vorrei dei flash randomici che illuminano lo stage con suono di tuono
+- Dev'essere ventoso, aggiungi foglie trascinate dal vento
+
+Ora sullo sfondo, vorrei inserire il perosnaggio Tony, deve compiere le seguenti azioni
+- Camminare, usa custom walk su autosprite
+- Randomicamente usare lo spritesheet Saluto, poi rieseguire daluto al contrario ed eseguire la camminata riflessa, tony deve stare nello stage, non farlo sbattere contro i muri o attraversare zone impossibili da raggiungere
+

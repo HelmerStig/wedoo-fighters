@@ -1,9 +1,13 @@
 ﻿"""Miniature locali dei soli sfondi: niente spritesheet o runtime di animazione."""
-import json,subprocess
+import json,subprocess,sys
 from pathlib import Path
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[2]
 stages=json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./demo-moves/stages-catalog.js')))"],cwd=ROOT,text=True))
+if sys.argv[1:]:
+    requested=set(sys.argv[1:])
+    assert requested<={stage['id'] for stage in stages},'Stage sconosciuto'
+    stages=[stage for stage in stages if stage['id'] in requested]
 folder=ROOT/'demo-moves/assets/stages';folder.mkdir(parents=True,exist_ok=True)
 for stage in stages:
     image=Image.new('RGBA',(stage['width'],stage['height']))

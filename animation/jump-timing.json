@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-16",
   "apexMs": 500,
   "durationMs": 1000,
   "frameIndexBase": 0,
@@ -340,6 +340,54 @@
       "sourceEnd": 44,
       "apexFrame": 21,
       "note": "Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza."
+    },
+    {
+      "character": "Franco",
+      "sourceSheetId": "cmwj3z3rs007qtt4w6pcrpmys",
+      "sourceStart": 0,
+      "sourceEnd": 42,
+      "apexFrame": 19,
+      "note": "Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette. Primo frame del plateau alla massima quota visibile."
+    },
+    {
+      "character": "Tamara",
+      "sourceSheetId": "cmwj3z5i4006wylmrcvoojcei",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 20,
+      "note": "Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette."
+    },
+    {
+      "character": "Patrick",
+      "sourceSheetId": "cmwj3yw1g007ftt4wifoirp22",
+      "sourceStart": 0,
+      "sourceEnd": 36,
+      "apexFrame": 18,
+      "note": "Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette. Primo frame del plateau alla massima quota visibile."
+    },
+    {
+      "character": "Luca-Arcangeli",
+      "sourceSheetId": "cmwj3qgcj002cq2hw1q1qejt4",
+      "sourceStart": 0,
+      "sourceEnd": 46,
+      "apexFrame": 18,
+      "note": "Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette. Primo frame del plateau alla massima quota visibile."
+    },
+    {
+      "character": "Cristian-Canino",
+      "sourceSheetId": "cmwj3rotj002yq2hwrrqigzfl",
+      "sourceStart": 0,
+      "sourceEnd": 47,
+      "apexFrame": 19,
+      "note": "Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette. Primo frame del plateau alla massima quota visibile."
+    },
+    {
+      "character": "Alessandro-Mandelli",
+      "sourceSheetId": "cmwj3rjiw003qtt4w5s5bjmcc",
+      "sourceStart": 0,
+      "sourceEnd": 41,
+      "apexFrame": 23,
+      "note": "Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette."
     }
   ]
 }

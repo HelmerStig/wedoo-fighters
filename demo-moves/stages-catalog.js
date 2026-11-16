@@ -43,5 +43,13 @@
     ],fighters:[
       {characterId:'tommaso',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:249,anchorY:438,flipX:false},
       {characterId:'marco-balpo',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:260,anchorY:437,flipX:true}
-    ],webglClouds:true,stars:true,shootingStars:true}];
+    ],webglClouds:true,stars:true,shootingStars:true},{id:'via-somis',name:'Via Somis, Cortile',width:2550,height:1080,viewportWidth:1920,lightning:true,wind:true,storm:'approaching',windTrack:'../sfx/wind.mp3',thunderTrack:'../sfx/tuono.mp3',
+    shadow:{color:'#1d1625',shearX:.5,flattenY:.11,opacity:.72,contactOpacity:.28},
+    layers:[
+      {id:'sky',image:'../original-backgrounds/via-somis/cielo.png',zIndex:0,width:2550,height:1080},
+      {id:'foreground',image:'../original-backgrounds/via-somis/somis.png',zIndex:1,width:2550,height:1080}
+    ],fighters:[
+      {characterId:'oscar',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:253.5,anchorY:433,flipX:false},
+      {characterId:'fra-tavarone',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:245,anchorY:427,flipX:true}
+    ]}];
 });

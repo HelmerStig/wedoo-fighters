@@ -17,9 +17,10 @@ export function createDemoServer(){
       const parts=local.split(sep);
       if(parts[0]==='original-backgrounds'){
         const stageFiles={'porta-palazzo':['cielo.png','porta-palazzo-stage.png','neon-mask.png','riflessi.png'],'piazza-castello':['cielo.png','stage-castello.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png','bandiere-animate.png'],'villa-arduino':['cielo.png','villa-arduino.png','01-nuvole-lontane.png','02-nuvole-intermedie.png','03-nuvole-vicine.png'],'porta-susa':['cielo.png','porta-susa.png','lights-mask.png']};
+        stageFiles['via-somis']=['cielo.png','somis.png'];
         if(parts.length!==3||!stageFiles[parts[1]]?.includes(parts[2])){res.writeHead(403);res.end('Accesso non consentito');return;}
       }
-      if(parts[0]==='sfx'&&(parts.length!==2||parts[1]!=='traffic.mp3')){res.writeHead(403);res.end('Accesso non consentito');return;}
+      if(parts[0]==='sfx'&&(parts.length!==2||!['traffic.mp3','wind.mp3','tuono.mp3'].includes(parts[1]))){res.writeHead(403);res.end('Accesso non consentito');return;}
       if(local.startsWith('..')||!['demo-moves','PNG','animation','portraits','portrait-pixeled','original-backgrounds','sfx'].includes(parts[0])||(parts[0]==='portraits'&&extname(file).toLowerCase()!=='.png'&&!(parts.length===2&&parts[1]==='fire.mp4'))||(parts[0]==='portrait-pixeled'&&extname(file).toLowerCase()!=='.png')||parts.some(p=>p.startsWith('.'))){res.writeHead(403);res.end('Accesso non consentito');return;}
       const info=await stat(file);
       if(!info.isFile()){res.writeHead(404);res.end('File non trovato');return;}

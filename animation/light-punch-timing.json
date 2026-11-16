@@ -339,7 +339,55 @@
       "note": "",
       "sourceStart": 0,
       "sourceEnd": 10
+    },
+    {
+      "character": "Franco",
+      "sourceSheetId": "cmwj4bof400zihymj7fmxqexi",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "impactFrame": 6,
+      "note": "Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo."
+    },
+    {
+      "character": "Tamara",
+      "sourceSheetId": "cmwj4dcyy000q4ly1f847n5hv",
+      "sourceStart": 0,
+      "sourceEnd": 17,
+      "impactFrame": 6,
+      "note": "La sequenza sorgente contiene due pugni: allineata a 250 ms la massima estensione del secondo colpo; il primo colpo avviene prima del marcatore. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo."
+    },
+    {
+      "character": "Patrick",
+      "sourceSheetId": "cmwj4eezd0005xngy3i159hl6",
+      "sourceStart": 0,
+      "sourceEnd": 17,
+      "impactFrame": 8,
+      "note": "Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo."
+    },
+    {
+      "character": "Luca-Arcangeli",
+      "sourceSheetId": "cmwj4k8an009ya1ajqnoctp7n",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "impactFrame": 9,
+      "note": "Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo."
+    },
+    {
+      "character": "Cristian-Canino",
+      "sourceSheetId": "cmwj4gqur0016a1ajy821gbbg",
+      "sourceStart": 0,
+      "sourceEnd": 10,
+      "impactFrame": 4,
+      "note": "Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo."
+    },
+    {
+      "character": "Alessandro-Mandelli",
+      "sourceSheetId": "cmwj4l5z1009jq2hwn04iyn0v",
+      "sourceStart": 0,
+      "sourceEnd": 17,
+      "impactFrame": 9,
+      "note": "Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo."
     }
   ],
-  "updatedAt": "2026-11-05"
+  "updatedAt": "2026-11-16"
 }

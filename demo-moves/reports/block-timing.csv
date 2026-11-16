@@ -1,5 +1,6 @@
 ﻿Personaggio,Frame totali,Frame parata (da 1),Frame sorgente (da 0),Parata pronta ms,FPS a 1x,Ciclo ms,Note,Source sheet ID
 ALBERTO,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r53jh011rxihot7yuxdvx
+Alessandro-Mandelli,24,8,7,100,70.0,342.857,"Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti. Parata a mani aperte come nel sorgente.",cmwj4umw4014sjrxuvf6r5i5y
 ALEX,15,5,4,100,40.0,375.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r4txv0115xihou5qlrumd
 ANGELA,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r3iqs00jybh7kgglbqmlo
 ANTONINO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r4h1w00ksbh7ku094qf54
@@ -8,6 +9,7 @@ Bonazzi,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta vis
 Chiara-Molina,15,5,4,100,40.0,375.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r2ikg00gcbh7k0m713j6k
 CHIARA-TONIOL,15,4,3,100,30.0,500.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r4l1h00lxbh7ksaj47bi1
 CONDELLO,14,6,5,100,50.0,280.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r329400nn2jiygu2xqhkp
+Cristian-Canino,15,7,6,100,60.0,250.0,"Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti.",cmwj4uspa0150jrxusszxncrl
 DINO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r3fwy00izbh7k3qgrbnz7
 Elisa,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r6j03000lp9b5yc2tlk1x
 EMMA,13,5,4,100,40.0,325.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r20pn00g0bh7knl4gtrlm
@@ -18,12 +20,14 @@ FRA-AMATO,15,4,3,100,30.0,500.0,"Prima posa di parata alta stabilita, scelta vis
 FRA-TAVARONE,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r1mly00eobh7k2fwhx23p
 FRANCESCA-RIVELLA,14,3,2,100,20.0,700.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r20r000g4bh7k4dxgpg13
 FRANCESCO-LEONI,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r0rz900brbh7krdfuytaa
+Franco,24,6,5,100,50.0,480.0,"Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti.",cmwj4upi2001wfbf5h15bcghb
 GENNARO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r0nct00cz9dugpvmnnons
 Giordano,11,5,4,100,40.0,275.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r05s600iv2jiy1eg6pa8w
 GIORGIO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3r04sp00ik2jiyt6xx8j8k
 JERRY,15,4,3,100,30.0,500.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qs0rp007u2jiywyntf8dq
 LIVIO,10,3,2,100,20.0,500.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qzxda00i12jiy9k457xuo
 LUANA,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qzyaz00ig2jiyt3ixn1ek
+Luca-Arcangeli,22,8,7,100,70.0,314.286,"Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti.",cmwj4uvbn0157jrxue7yutvoz
 MANU,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qzxdn00i32jiyunwco1m3
 MARCO-BALPO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qzwf2013lii5bzy0g7w1z
 Marco-Rossetti,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qys7900fs2jiyxdsmka81
@@ -34,10 +38,12 @@ MATTEO,12,5,4,100,40.0,300.0,"Prima posa di parata alta stabilita, scelta visiva
 MIKE,14,6,5,100,50.0,280.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qys7v011nii5b36zxoiyn
 MORI,15,4,3,100,30.0,500.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qyb1000a39dugkab0ypzm
 Oscar,16,6,5,100,50.0,320.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qmle4005b9dug81gnwveu
+Patrick,23,7,6,100,60.0,383.333,"Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti.",cmwj4ux0s000n11h7fvhlyny2
 PEIROLO,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qycfx010lii5bwdp62m4d
 PEPPO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qy9c800f32jiygcx1kyz3
 PIPPO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qtnbp00a22jiy2nla5rnz
 SBOZ,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qtnrp00aj2jiy5b2pehq2
 Simona,14,5,4,100,40.0,350.0,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qtnfu00a62jiyb7cbna0v
+Tamara,23,7,6,100,60.0,383.333,"Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti.",cmwj4umx5014ujrxue78j4byv
 TOMMASO,14,4,3,100,30.0,466.667,"Prima posa di parata alta stabilita, scelta visivamente.",cmw3qtnl700ab2jiy641doaaq
 ZICHELLA,10,2,1,100,10.0,1000.0,Parata con padella sollevata; posa difensiva diversa dalla guardia con avambracci degli altri personaggi.,cmw3r86uy003c19x2b5fjogin

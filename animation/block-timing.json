@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-16",
   "blockMs": 100,
   "frameIndexBase": 0,
   "selectionMethod": "Revisione visiva dei frame esportati; primo assetto di parata alta stabilito. FPS costante per personaggio = blockFrame * 1000 / blockMs.",
@@ -339,6 +339,54 @@
       "sourceEnd": 9,
       "blockFrame": 1,
       "note": "Parata con padella sollevata; posa difensiva diversa dalla guardia con avambracci degli altri personaggi."
+    },
+    {
+      "character": "Franco",
+      "sourceSheetId": "cmwj4upi2001wfbf5h15bcghb",
+      "sourceStart": 0,
+      "sourceEnd": 23,
+      "blockFrame": 5,
+      "note": "Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti."
+    },
+    {
+      "character": "Tamara",
+      "sourceSheetId": "cmwj4umx5014ujrxue78j4byv",
+      "sourceStart": 0,
+      "sourceEnd": 22,
+      "blockFrame": 6,
+      "note": "Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti."
+    },
+    {
+      "character": "Patrick",
+      "sourceSheetId": "cmwj4ux0s000n11h7fvhlyny2",
+      "sourceStart": 0,
+      "sourceEnd": 22,
+      "blockFrame": 6,
+      "note": "Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti."
+    },
+    {
+      "character": "Luca-Arcangeli",
+      "sourceSheetId": "cmwj4uvbn0157jrxue7yutvoz",
+      "sourceStart": 0,
+      "sourceEnd": 21,
+      "blockFrame": 7,
+      "note": "Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti."
+    },
+    {
+      "character": "Cristian-Canino",
+      "sourceSheetId": "cmwj4uspa0150jrxusszxncrl",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "blockFrame": 6,
+      "note": "Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti."
+    },
+    {
+      "character": "Alessandro-Mandelli",
+      "sourceSheetId": "cmwj4umw4014sjrxuvf6r5i5y",
+      "sourceStart": 0,
+      "sourceEnd": 23,
+      "blockFrame": 7,
+      "note": "Prima posa di parata alta stabilita, verificata visivamente sui frame adiacenti. Parata a mani aperte come nel sorgente."
     }
   ]
 }

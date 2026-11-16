@@ -38,7 +38,7 @@
     let fighterElapsed=0,animateFighters=!media.matches;
     let rainEnabled=Boolean(stage.rain),rainElapsed=0;
     let lightsEnabled=Boolean(stage.lights);
-    const weather=(stage.webglClouds||stage.rain||stage.shootingStars)?env.StageWeather?.create(stage,env):null;
+    const weather=(stage.webglClouds||stage.rain||stage.shootingStars||stage.lightning||stage.wind)?env.StageWeather?.create(stage,env):null;
     if(stage.webglClouds)canvas.setAttribute('data-clouds-renderer',weather?.supported?'webgl':'unavailable');
     let postProcess=null,ambient=null,ambientEnabled=Boolean(stage.ambient),ambientSuppressed=false;
     const viewportWidth=stage.viewportWidth??stage.height*16/9;
@@ -142,7 +142,7 @@
         if(layer.id==='sky')weather?.sky(context,{elapsed,camera,viewportWidth,reduced:media.matches});
       }
       if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.render(context,elapsed,camera);
-      const weatherView={elapsed,rainElapsed,raining:rainEnabled,camera,viewportWidth,reduced:media.matches};
+      const weatherView={elapsed,rainElapsed,raining:rainEnabled,camera,viewportWidth,reduced:media.matches,paused:!playing,suppressed:ambientSuppressed};
       if(lightsEnabled&&!media.matches)env.StageLights?.render(context,lightMask.imageObject,stage.lights,fighterElapsed,camera);
       weather?.background(context,weatherView);
       dust();
@@ -160,11 +160,11 @@
       }
       if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.renderForeground?.(context,elapsed,camera);
       weather?.foreground(context,weatherView);
-      postProcess?.(canvas,fighterElapsed);
+      postProcess?.(canvas,fighterElapsed,weather?.crtSettings?.(weatherView)??null);
     }
     function sync(){
       button.disabled=!ready;
-      button.textContent=playing?'Pausa nuvole':'Avvia nuvole';
+      button.textContent=stage.wind?(playing?'Pausa vento e lampi':'Avvia vento e lampi'):(playing?'Pausa nuvole':'Avvia nuvole');
       button.setAttribute('aria-pressed',String(playing));
     }
     function schedule(){
@@ -176,7 +176,7 @@
       if(playing)elapsed+=delta;
       if(rainEnabled&&!media.matches)rainElapsed+=delta;
       if(animateFighters)fighterElapsed+=delta;
-      last=time;weather?.updateAudio({rain:rainEnabled,elapsed,lightning:stage.lightning&&playing&&!media.matches,hidden:env.document.hidden});draw();schedule();
+      last=time;weather?.updateAudio({rain:rainEnabled,elapsed,lightning:stage.lightning&&playing&&!media.matches,hidden:env.document.hidden,suppressed:ambientSuppressed});draw();schedule();
     }
     function resetClock(){
       last=null;
@@ -242,7 +242,7 @@
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setAmbientPart(key,value){ambient?.setEffect(key,value);draw();},setOriginalEffects(value){ambientSuppressed=Boolean(value);draw();},setAmbient(value){ambientEnabled=Boolean(value)&&Boolean(stage.ambient);draw();},setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
+    return {loaded,setAmbientPart(key,value){ambient?.setEffect(key,value);weather?.setEffect?.(key,value);draw();},setOriginalEffects(value){ambientSuppressed=Boolean(value);draw();},setAmbient(value){ambientEnabled=Boolean(value)&&Boolean(stage.ambient);draw();},setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();

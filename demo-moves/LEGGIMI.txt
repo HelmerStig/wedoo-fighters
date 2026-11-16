@@ -427,3 +427,82 @@ Tutte senza taglio salvato su AutoSprite: 49 frame completi (0-48), celle
 ID e provenienza in animation/victory-manifest.json; download, metadati e
 controllo pixel in autosprite-agent/output/victory-download-20261116/.
 Le Walk e gli Idle restano invariati. Nessuna generazione o spesa di crediti.
+
+JUMP CUSTOM 2 - 16 NOVEMBRE 2026
+Integrati sotto Salto gli ultimi spritesheet dei sei nuovi personaggi,
+con i tagli inclusivi salvati su AutoSprite:
+  Franco 0-42 (43 frame), Tamara 0-47 (48), Patrick 0-36 (37),
+  Luca Arcangeli 0-46 (47), Cristian Canino 0-47 (48),
+  Alessandro Mandelli 0-41 (42).
+Apice a 500 ms e ciclo di 1000 ms a 1x per tutti i 48 personaggi.
+Indici apice da zero: Franco 19, Tamara 20, Patrick 18, Luca 18,
+Cristian 19, Alessandro 23; scelti dopo confronto visivo dei frame vicini.
+Salita e seconda fase usano durate per frame adattate, senza riordinare
+o ridimensionare i pixel. Aggiornati jump-manifest.json, jump-timing.json,
+catalogo, report HTML/CSV e sei nuove pose di apice in reports/jump-poses/.
+Sorgenti, confronto visivo e audit pixel:
+autosprite-agent/output/jump-download-20261116/. Nessun credito consumato.
+
+LIGHT PUNCH - 16 NOVEMBRE 2026
+Integrate le ultime versioni salvate dei sei nuovi personaggi sotto Pugno leggero.
+Franco 14 frame, Tamara 18, Patrick 18, Luca Arcangeli 15, Cristian Canino 11:
+questi fogli sono gia accorciati rispetto alle versioni dello stesso video.
+Alessandro Mandelli usa il foglio da 22 frame con intervallo 0-17 (18 frame).
+Gli indici sorgente del manifest si riferiscono al foglio scaricato, senza
+inventare la corrispondenza col vecchio foglio da 25 frame o tagliare due volte.
+Massima estensione a 250 ms e ciclo di 500 ms; indici impatto da zero:
+Franco 6, Tamara 6, Patrick 8, Luca 9, Cristian 4, Alessandro 9.
+Tamara esegue due pugni nel sorgente: il marcatore allinea il secondo,
+di massima estensione; particolarita indicata nel report.
+Aggiornati manifest, timing, catalogo, report HTML/CSV e sei pose di impatto.
+PNG e celle preservati; pixel verificati. Download e audit:
+autosprite-agent/output/light-punch-download-20261116/. Nessun credito consumato.
+
+BLOCK - 16 NOVEMBRE 2026
+Integrati sotto Parata alta gli ultimi Block dei sei nuovi personaggi,
+con intervalli inclusivi salvati su AutoSprite:
+Franco 0-23 (24 frame), Tamara 0-22 (23), Patrick 0-22 (23),
+Luca Arcangeli 0-21 (22), Cristian Canino 0-14 (15),
+Alessandro Mandelli 0-23 (24).
+Prima posa di parata stabilita a 100 ms a velocita 1x, come gli altri Block.
+Indici della posa da zero: Franco 5, Tamara 6, Patrick 6, Luca 7,
+Cristian 6, Alessandro 7. FPS costanti per personaggio = indice * 10;
+la durata totale varia in base ai frame esportati. Ordine e pixel preservati.
+Aggiornati block-manifest.json, block-timing.json, catalogo, report HTML/CSV
+e sei pose selezionate. Alessandro mantiene la parata a mani aperte del sorgente.
+Download, confronto visivo e audit pixel:
+autosprite-agent/output/block-download-20261116/. Nessun credito consumato.
+
+STAGE VIA SOMIS, CORTILE - 16 NOVEMBRE 2026
+Nuovo stage accessibile da Stages: stage.html?id=via-somis.
+Due layer nativi 2550x1080: original-backgrounds/via-somis/cielo.png a z=0
+e somis.png a z=1. Finestra 1920x1080 centrata, drag laterale e fullscreen
+come gli altri scenari. Oscar a sinistra e Fra Tavarone a destra, riflesso,
+entrambi in idle. Contatti dei piedi generati per le ombre animate.
+CRT base ed effetti condivisi; preset avanzato derivato dalla base Villa Arduino,
+salvato in original-backgrounds/via-somis/crt-preset.json e incorporato
+nel catalogo offline con node demo-moves/scripts/build-crt-presets.mjs.
+Miniatura: python demo-moves/scripts/build-stage-thumbnails.py via-somis.
+Il server permette solo cielo.png e somis.png nella cartella dello stage.
+
+Via Somis: temporale in arrivo e vento.
+Lampi casuali a intervalli irregolari di circa 6-18 secondi, applicati
+all'intera scena prima del CRT. FX locale sfx/tuono.mp3 sullo stesso evento
+del lampo, gain 1,5 e master 0,38 come nel mixer di Porta Susa.
+Attivare il suono con Attiva audio. Nessuna pioggia aggiunta.
+Foglie autunnali in pixel art, dietro e davanti ai personaggi, in moto
+verso sinistra con raffiche e vortici; coordinate nel mondo, coerenti col drag.
+Sottofondo locale sfx/wind.mp3 in loop, gain 0,85. Analisi RMS del solo vento
+con attacco/rilascio smussati: da 12 a 120 foglie e velocita variabile con la
+potenza del file audio. I tuoni non influenzano le foglie. Ad audio spento
+resta il vento procedurale con 72 foglie; la fase del moto resta continua.
+Comandi Pausa vento e lampi e Disattiva foglie; movimento ridotto e Vista
+originale sospendono gli effetti. Audio sospeso con pausa o scheda nascosta.
+Timeline condivisa tra lampi e tuoni in demo-moves/stage-wind-storm.js.
+Flash potenziato al 90% della curva luminosa, colore quasi bianco.
+Solo durante il lampo, il rendering CRT usa bloomIntensity 5 e bloomThreshold 0.
+Transizione smussata: fade-in 180 ms, picco per 100 ms, fade-out 1120 ms.
+Intensita e soglia vengono interpolate rispetto ai parametri normali correnti.
+Al termine ripristina automaticamente i parametri normali. Il preset di base
+resta a bloomIntensity 0,86 e bloomThreshold 0,56; controlli, salvataggio ed
+esportazione non incorporano il potenziamento temporaneo del lampo.

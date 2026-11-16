@@ -75,8 +75,26 @@ function fixture({supported=true,stored=null,storageDenied=false,basePreset=null
   const player={setPostProcess(fn){hook=fn;}};
   const card={querySelector:s=>nodes.get(s),scrollIntoView(){this.scrolled=true;}};
   const controller=crt.install(card,player,'villa-arduino',env,basePreset);
-  return {nodes,draws,writes,downloads,controller,document,classes,card,fail:()=>failure(),render(time=0){hook?.(source,time);},hook:()=>hook};
+  return {nodes,draws,writes,downloads,controller,document,classes,card,fail:()=>failure(),render(time=0,overrides=null){hook?.(source,time,overrides);},hook:()=>hook};
 }
+
+test('il bloom del lampo e temporaneo: controlli e preset fissati conservano i valori normali',()=>{
+  const f=fixture({basePreset});
+  f.render(70,{bloomIntensity:5,bloomThreshold:0});
+  assert.equal(f.draws.at(-1)[0].bloomIntensity,5);assert.equal(f.draws.at(-1)[0].bloomThreshold,0);
+  assert.equal(f.nodes.get('[data-crt-param="bloomIntensity"]').value,basePreset.settings.bloomIntensity);
+  f.nodes.get('[data-crt-save]').listeners.click();
+  const saved=crt.parsePreset(f.writes.at(-1)[1]);
+  assert.equal(saved.settings.bloomIntensity,basePreset.settings.bloomIntensity);
+  assert.equal(saved.settings.bloomThreshold,basePreset.settings.bloomThreshold);
+  f.render(800,{bloomIntensity:5,bloomThreshold:0,weight:.5});
+  assert.ok(Math.abs(f.draws.at(-1)[0].bloomIntensity-(basePreset.settings.bloomIntensity+5)/2)<1e-10);
+  assert.equal(f.draws.at(-1)[0].bloomThreshold,basePreset.settings.bloomThreshold/2);
+  f.render(1000);
+  assert.equal(f.draws.at(-1)[0].bloomIntensity,basePreset.settings.bloomIntensity);
+  assert.equal(f.draws.at(-1)[0].bloomThreshold,basePreset.settings.bloomThreshold);
+  f.controller.destroy();
+});
 
 test('offcanvas: apertura, chiusura, Escape e focus senza perdere i parametri',()=>{
   const f=fixture();

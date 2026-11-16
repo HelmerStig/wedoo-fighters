@@ -1,5 +1,6 @@
 ﻿Personaggio,Frame totali,Frame impatto (da 1),Frame sorgente (da 0),Impatto precedente uniforme ms,Impatto nuovo ms,Preparazione ms,Impatto e recupero ms,Totale ms,Durata frame prima ms,Durata frame dopo ms,Note,Source sheet ID
 ALBERTO,16,9,8,250.0,250,250,250,500,31.25,31.25,,cmw3g3cl6012iolstdkbcdbgr
+Alessandro-Mandelli,18,10,9,250.0,250,250,250,500,27.778,27.778,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4l5z1009jq2hwn04iyn0v
 ALEX,14,10,9,321.429,250,250,250,500,27.778,50.0,,cmw3fu2uy005f6plaey1pm5bx
 ANGELA,18,11,10,277.778,250,250,250,500,25.0,31.25,,cmw3fvpbl00bv1186noi50juu
 ANTONINO,20,12,11,275.0,250,250,250,500,22.727,27.778,,cmw3fwvxf00cc1186y7b6oipy
@@ -8,6 +9,7 @@ Bonazzi,14,7,6,214.286,250,250,250,500,41.667,31.25,Singolo pugno con ritorno in
 Chiara-Molina,22,16,15,340.909,250,250,250,500,16.667,35.714,,cmw3ewfbu019rrimiypy3r3t1
 CHIARA-TONIOL,17,12,11,323.529,250,250,250,500,22.727,41.667,,cmw3fh5go00il8uosq74dbm98
 CONDELLO,10,6,5,250.0,250,250,250,500,50.0,50.0,,cmw3fif7a00kf8uosif4tf5fm
+Cristian-Canino,11,5,4,181.818,250,250,250,500,62.5,35.714,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4gqur0016a1ajy821gbbg
 DINO,18,13,12,333.333,250,250,250,500,20.833,41.667,,cmw3ev2s400l9olstw37jqai4
 Elisa,18,12,11,305.556,250,250,250,500,22.727,35.714,,cmw3fm7ne00rxw4mk1lo7iwl7
 EMMA,19,12,11,289.474,250,250,250,500,22.727,31.25,,cmw3etsjp01dtcehg7z1bj6zg
@@ -18,12 +20,14 @@ FRA-AMATO,12,4,4,125.0,250,250,250,500,83.333,27.778,,cmw3e0vzx00warimiickf7asy
 FRA-TAVARONE,13,7,6,230.769,250,250,250,500,41.667,35.714,,cmw3dzakd00vtrimi0e49qnqm
 FRANCESCA-RIVELLA,14,9,8,285.714,250,250,250,500,31.25,41.667,,cmw3dh78i00mcrimikr6jkwoa
 FRANCESCO-LEONI,24,17,16,333.333,250,250,250,500,15.625,31.25,,cmw0lgl530011o0w81gmo6ezk
+Franco,14,7,6,214.286,250,250,250,500,41.667,31.25,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4bof400zihymj7fmxqexi
 GENNARO,12,4,3,125.0,250,250,250,500,83.333,27.778,,cmw0l8ruj00mbpx1wgu3yslhs
 Giordano,16,11,10,312.5,250,250,250,500,25.0,41.667,,cmw0ktgk300wc83c7hdz3ew0y
 GIORGIO,14,6,5,178.571,250,250,250,500,50.0,27.778,,cmw0lc75x01hlf6ex0ubo0vuk
 JERRY,25,16,15,300.0,250,250,250,500,16.667,25.0,,cmvs0ep3a002a78a63x8mi4xz
 LIVIO,10,8,7,350.0,250,250,250,500,35.714,83.333,Il taglio termina durante il recupero.,cmw0kr6ct018xf6exiwzjwjc9
 LUANA,24,18,17,354.167,250,250,250,500,14.706,35.714,,cmw0jokcj002e17gq04fn2acu
+Luca-Arcangeli,15,10,9,300.0,250,250,250,500,27.778,41.667,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4k8an009ya1ajqnoctp7n
 MANU,14,4,3,107.143,250,250,250,500,83.333,22.727,,cmw0j906i000ny6isyh61xgae
 MARCO-BALPO,18,10,9,250.0,250,250,250,500,27.778,27.778,,cmw0jsli90059398pfdsyyx4t
 Marco-Rossetti,13,12,11,423.077,250,250,250,500,22.727,125.0,Il taglio termina con il braccio ancora esteso: manca il ritorno in guardia.,cmw0kf4p600vgf6exduql3d6f
@@ -34,10 +38,12 @@ MATTEO,18,12,11,305.556,250,250,250,500,22.727,35.714,,cmw0ggojq005ks0lgo8zorhce
 MIKE,23,18,17,369.565,250,250,250,500,14.706,41.667,,cmw0fkaqf00kcch4qle92lmam
 MORI,17,11,17,294.118,250,250,250,500,25.0,35.714,,cmw0ez8ap00big1mhnsnwsnla
 Oscar,23,13,12,260.87,250,250,250,500,20.833,22.727,,cmvrz7c6t00iayccmnrq8chjt
+Patrick,18,9,8,222.222,250,250,250,500,31.25,25.0,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4eezd0005xngy3i159hl6
 PEIROLO,13,8,7,269.231,250,250,250,500,35.714,41.667,,cmw0e3gbo008kipslsgw7cgtw
 PEPPO,15,11,10,333.333,250,250,250,500,25.0,50.0,"Due estensioni visibili; allineata la seconda, piu avanzata.",cmw0e1tk90061yc0h9tbyq17u
 PIPPO,16,11,10,312.5,250,250,250,500,25.0,41.667,,cmw3fyntv00dj1186z7jrxxhc
 SBOZ,12,9,8,333.333,250,250,250,500,31.25,62.5,Il taglio termina prima del ritorno completo in guardia.,cmw0dzvr0001zyc0hi0m8ftcl
 Simona,14,7,6,214.286,250,250,250,500,41.667,31.25,,cmw0dow8m00smgtv1a3cb8dp1
+Tamara,18,7,6,166.667,250,250,250,500,41.667,20.833,"La sequenza sorgente contiene due pugni: allineata a 250 ms la massima estensione del secondo colpo; il primo colpo avviene prima del marcatore. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4dcyy000q4ly1f847n5hv
 TOMMASO,23,15,14,304.348,250,250,250,500,17.857,27.778,,cmvs14y9501h5yccmlsc992te
 ZICHELLA,24,18,17,354.167,250,250,250,500,14.706,35.714,,cmvs0njgl007678a6jhmc11p2
