@@ -390,3 +390,31 @@ Porta Palazzo: nebbia bassa a livello caviglie in due passaggi, dietro e
 davanti ai personaggi. Strato anteriore piu trasparente, entrambi in moto
 verso sinistra e ancorati allo stage durante il drag. Il pulsante Nebbia bassa
 controlla entrambi; Vista originale e movimento ridotto li sospendono.
+
+IDLE DEI NUOVI PERSONAGGI - 16 NOVEMBRE 2026
+Integrati gli ultimi Idle standard di AutoSprite (nessuna nuova generazione).
+Il roster contiene 48 personaggi. I sei nuovi hanno per ora solo Idle:
+  Franco: frame sorgente 1-48, 48 frame esportati.
+  Tamara: 2-26, 25 frame.
+  Patrick: 2-43, 42 frame.
+  Luca Arcangeli: 2-47, 46 frame.
+  Cristian Canino: 1-47, 47 frame.
+  Alessandro Mandelli: 0-39, 40 frame.
+Intervalli inclusivi salvati su AutoSprite; celle 512x512 e pixel invariati.
+Riproduzione a 24 fps come gli altri idle; speedMultiplier 2 conservato
+solo come informazione. ID, video sorgente e hash RGBA in animation/manifest.json.
+Download grezzi e controllo pixel: autosprite-agent/output/idle-download-20261116/.
+Luca, Cristian e Alessandro sono piu piccoli dei PNG base; scala non corretta
+arbitrariamente. Patrick ruota verso la telecamera durante il ciclo sorgente.
+I portrait esistenti sono usati dove disponibili; Franco, Tamara e Patrick
+mostrano il PNG base anche nella testata, in attesa dei portrait dedicati.
+
+WALK GUARD - 16 NOVEMBRE 2026
+Importati sotto Walk i custom Walk Guard di Tamara (frame 2-47), Patrick
+(2-47), Luca Arcangeli (0-47), Cristian Canino (0-46), Alessandro Mandelli
+(0-47). Tagli inclusivi salvati su AutoSprite, celle 512x512 e pixel invariati.
+Riproduzione a 24 fps come le altre Walk; velocita sorgente conservata nei
+metadati. Download e verifica pixel: autosprite-agent/output/walk-download-20261116/.
+Integrata anche Franco: Walk Guard cmwj2sk7m00p4acpyoca7l3ov, frame 0-47
+inclusivi (48 frame), celle 512x512, a 24 fps. Tutti e sei ora hanno Walk.
+Nessuna animazione generata e nessun credito consumato.
