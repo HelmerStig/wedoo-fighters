@@ -46,9 +46,19 @@
     let camera=maxCamera/2,drag=null;
     const layers=stage.layers.map((layer,index)=>({...layer,index,imageObject:null})).sort((a,b)=>a.zIndex-b.zIndex||a.index-b.index);
     const fighters=(stage.fighters??[]).map(fighter=>({...fighter,imageObject:null}));
+    const backgroundActors=(stage.backgroundActors??[]).map(actor=>{
+      const source=env.STAGE_ACTORS_CATALOG?.[actor.characterId];
+      if(!source)throw new Error('Personaggio di sfondo non disponibile: '+actor.characterId);
+      return {...actor,animations:Object.fromEntries(['walk','saluto'].map(id=>{
+        const animation=source.animations[id];
+        if(!animation)throw new Error('Animazione di sfondo mancante: '+id);
+        return [id,{characterId:actor.characterId,animation,imageObject:null}];
+      }))};
+    });
+    let backgroundRenderer=null;
     const lightMask=stage.lights?{...stage.lights.mask,imageObject:null}:null;
     const ambientTexture=stage.ambientTexture?{...stage.ambientTexture,imageObject:null}:null;
-    const assets=[...layers,...fighters,...(lightMask?[lightMask]:[]),...(ambientTexture?[ambientTexture]:[])];
+    const assets=[...layers,...fighters,...backgroundActors.flatMap(actor=>Object.values(actor.animations)),...(lightMask?[lightMask]:[]),...(ambientTexture?[ambientTexture]:[])];
     const shadowStyle={color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};
     function fog(depth){
@@ -141,6 +151,7 @@
         if(layer.haze)fog(layer.haze);
         if(layer.id==='sky')weather?.sky(context,{elapsed,camera,viewportWidth,reduced:media.matches});
       }
+      backgroundRenderer?.render(context,fighterElapsed,camera,media.matches,effects.shadows);
       if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.render(context,elapsed,camera);
       const weatherView={elapsed,rainElapsed,raining:rainEnabled,camera,viewportWidth,reduced:media.matches,paused:!playing,suppressed:ambientSuppressed};
       if(lightsEnabled&&!media.matches)env.StageLights?.render(context,lightMask.imageObject,stage.lights,fighterElapsed,camera);
@@ -235,6 +246,10 @@
       image.src=layer.animation?.image??layer.image;
     }))).then(()=>{
       if(disposed)return;
+      if(backgroundActors.length){
+        if(!env.StageBackgroundActors)throw new Error('Player personaggi di sfondo non disponibile.');
+        backgroundRenderer=env.StageBackgroundActors.create(backgroundActors,env);
+      }
       if(stage.ambient==='castello'&&env.CastelloEffects)ambient=env.CastelloEffects.create(ambientTexture.imageObject,env,layers.find(l=>l.id==='foreground').imageObject);
       if(stage.ambient==='palazzo'&&env.PalazzoEffects)ambient=env.PalazzoEffects.create(ambientTexture.imageObject);
       ready=true;status.textContent='';status.hidden=true;canvas.setAttribute('aria-busy','false');sync();draw();schedule();
@@ -247,7 +262,7 @@
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
-      disposed=true;ambient?.destroy();postProcess=null;resetClock();
+      disposed=true;ambient?.destroy();backgroundRenderer?.destroy();postProcess=null;resetClock();
       weather?.destroy();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});

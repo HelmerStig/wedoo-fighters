@@ -1,0 +1,68 @@
+{
+  "creditsUsed": 0,
+  "characters": [
+    {
+      "id": "tony",
+      "name": "Tony",
+      "characterId": "cmwakhzns00fkg3te6r39w3sq",
+      "animations": {
+        "walk": {
+          "image": "animation/tony/tony-background-walk.png",
+          "atlas": "animation/tony/tony-background-walk.json",
+          "sourceSheetId": "cmwj65ljp00h5w92h0repb0kt",
+          "sourceVideoId": "cmwau9xcw01dz50vxityb3duf",
+          "sourceAnimationName": "custom walk",
+          "sourceStart": 2,
+          "sourceEnd": 44,
+          "sourceFrames": 45,
+          "trimmed": true,
+          "frames": 43,
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "playbackFps": 24,
+          "savedSpeed": 2,
+          "pixelVerification": "decoded RGBA SHA256",
+          "decodedFramesSha256": "a4bf21edd2110b08496b402403f49f38041ccffdafe60106b13be4b3ee2ccb9a",
+          "contentBounds": [
+            148,
+            42,
+            371,
+            482
+          ],
+          "groundRange": [
+            478,
+            482
+          ]
+        },
+        "saluto": {
+          "image": "animation/tony/tony-background-saluto.png",
+          "atlas": "animation/tony/tony-background-saluto.json",
+          "sourceSheetId": "cmwj6270c005u62p6snkq0wea",
+          "sourceVideoId": "cmwj5z6va004tqlo3i919dvbq",
+          "sourceAnimationName": "saluto",
+          "sourceStart": 0,
+          "sourceEnd": 48,
+          "sourceFrames": 49,
+          "trimmed": false,
+          "frames": 49,
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "playbackFps": 24,
+          "savedSpeed": 1,
+          "pixelVerification": "decoded RGBA SHA256",
+          "decodedFramesSha256": "4ea18aa12856e8890efc0bb7fe4491297f5c529fbc9ab3075fb022a24265a8d0",
+          "contentBounds": [
+            116,
+            24,
+            369,
+            486
+          ],
+          "groundRange": [
+            473,
+            486
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -506,3 +506,20 @@ Intensita e soglia vengono interpolate rispetto ai parametri normali correnti.
 Al termine ripristina automaticamente i parametri normali. Il preset di base
 resta a bloomIntensity 0,86 e bloomThreshold 0,56; controlli, salvataggio ed
 esportazione non incorporano il potenziamento temporaneo del lampo.
+
+TONY SULLO SFONDO DI VIA SOMIS - 16 NOVEMBRE 2026
+Asset AutoSprite: custom walk cmwj65ljp00h5w92h0repb0kt (taglio 2-44,
+43 frame) e saluto cmwj6270c005u62p6snkq0wea (49 frame completi).
+Sorgenti in autosprite-agent/output/tony-stage-20261116/; celle 512x512
+preservate e confronto RGBA verificato. Nessuna generazione o spesa di crediti.
+Asset separati dal roster giocabile: animation/tony/tony-background-*.png/json.
+Provenienza in animation/stage-actors.json; catalogo offline rigenerabile con
+node demo-moves/scripts/build-stage-actors.mjs.
+Tony scala 0,48, percorre x=900..1450 a y=875, davanti alla fioriera centrale
+e dietro ai combattenti. Rettangolo pavimentato: x=800..1540, y=825..920.
+Il percorso include margine per corpo e braccia in entrambi gli orientamenti;
+non raggiunge i bidoni a destra, gli edifici o l'interno della fioriera.
+Ogni 6-14 secondi di cammino (o al limite del percorso) si ferma: saluto
+avanti, ritorno nei frame al contrario, inversione e ripartenza riflessa.
+Entrambe le animazioni a 24 fps; il riflesso avviene solo dopo il ritorno.
+Il drag non avanza la sequenza; movimento ridotto conserva una posa statica.
