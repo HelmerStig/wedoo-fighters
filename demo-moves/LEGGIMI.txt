@@ -418,3 +418,12 @@ metadati. Download e verifica pixel: autosprite-agent/output/walk-download-20261
 Integrata anche Franco: Walk Guard cmwj2sk7m00p4acpyoca7l3ov, frame 0-47
 inclusivi (48 frame), celle 512x512, a 24 fps. Tutti e sei ora hanno Walk.
 Nessuna animazione generata e nessun credito consumato.
+
+VICTORY CUSTOM 2 - 16 NOVEMBRE 2026
+Importate sotto Victory le nuove versioni di Franco, Tamara, Patrick,
+Luca Arcangeli, Cristian Canino e Alessandro Mandelli.
+Tutte senza taglio salvato su AutoSprite: 49 frame completi (0-48), celle
+512x512, a 24 fps. PNG sorgente preservati; pixel e rettangoli verificati.
+ID e provenienza in animation/victory-manifest.json; download, metadati e
+controllo pixel in autosprite-agent/output/victory-download-20261116/.
+Le Walk e gli Idle restano invariati. Nessuna generazione o spesa di crediti.

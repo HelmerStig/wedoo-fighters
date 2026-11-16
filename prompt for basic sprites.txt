@@ -130,7 +130,7 @@ Mi crei un prompt per autosprite e lo generi per "Franco" chiamandolo Custom-Idl
 Tutto chiaro?
 
 
-Ho creato l'idle spritesheet per
+Ho creato l'idle spritesheet per "Victory custom 2"
 - Franco
 - Tamara
 - Patrick
@@ -138,5 +138,5 @@ Ho creato l'idle spritesheet per
 - Cristian Canino
 - Alessandro Mandelli
 
-me li integri su demo moves come fatto per gli altri?
+me li integri su demo moves come fatto per gli altri sotto la voce walk?
 prendi da autosprite le versioni trimmed se disponibili
