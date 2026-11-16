@@ -10,7 +10,7 @@ for(const character of manifest.characters){
     const frames=Object.entries(atlas.frames).sort(([a],[b])=>Number(a)-Number(b)).map(([,f])=>[f.x,f.y,f.w,f.h]);
     const png=await readFile(resolve(root,item.image));
     if(frames.length!==item.frames||frames.some(([x,y,w,h])=>x<0||y<0||x+w>png.readUInt32BE(16)||y+h>png.readUInt32BE(20)))throw Error('Atlas non valido: '+character.id+'/'+id);
-    animations[id]={image:relative(demo,resolve(root,item.image)).replaceAll('\\','/'),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,playbackFps:item.playbackFps,contentBounds:item.contentBounds,groundRange:item.groundRange};
+    animations[id]={image:relative(demo,resolve(root,item.image)).replaceAll('\\','/'),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,playbackFps:item.playbackFps,contentBounds:item.contentBounds,groundRange:item.groundRange,groundAnchors:item.groundAnchors,groundContacts:item.groundContacts,footContacts:item.footContacts};
   }
   catalog[character.id]={name:character.name,animations};
 }

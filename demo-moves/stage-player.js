@@ -248,7 +248,7 @@
       if(disposed)return;
       if(backgroundActors.length){
         if(!env.StageBackgroundActors)throw new Error('Player personaggi di sfondo non disponibile.');
-        backgroundRenderer=env.StageBackgroundActors.create(backgroundActors,env);
+        backgroundRenderer=env.StageBackgroundActors.create(backgroundActors,env,shadowStyle);
       }
       if(stage.ambient==='castello'&&env.CastelloEffects)ambient=env.CastelloEffects.create(ambientTexture.imageObject,env,layers.find(l=>l.id==='foreground').imageObject);
       if(stage.ambient==='palazzo'&&env.PalazzoEffects)ambient=env.PalazzoEffects.create(ambientTexture.imageObject);

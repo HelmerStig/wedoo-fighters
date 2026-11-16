@@ -515,11 +515,26 @@ preservate e confronto RGBA verificato. Nessuna generazione o spesa di crediti.
 Asset separati dal roster giocabile: animation/tony/tony-background-*.png/json.
 Provenienza in animation/stage-actors.json; catalogo offline rigenerabile con
 node demo-moves/scripts/build-stage-actors.mjs.
-Tony scala 0,48, percorre x=900..1450 a y=875, davanti alla fioriera centrale
-e dietro ai combattenti. Rettangolo pavimentato: x=800..1540, y=825..920.
+Tony scala 0,672 (+40%), percorre x=120..2350 a y=825 e parte da x=1000,
+dietro ai combattenti. Velocita 63 px/s, proporzionata alla scala maggiore.
+Rettangolo pavimentato tra i marciapiedi: x=0..2450, y=800..870.
 Il percorso include margine per corpo e braccia in entrambi gli orientamenti;
-non raggiunge i bidoni a destra, gli edifici o l'interno della fioriera.
-Ogni 6-14 secondi di cammino (o al limite del percorso) si ferma: saluto
+non attraversa i bidoni, gli edifici o l'interno della fioriera.
+Puo uscire dalla finestra centrata 1920x1080 da entrambi i lati e rientrare.
+Primo saluto dopo 6-10 secondi; poi ogni 14-50 secondi di cammino
+(o al limite del percorso) si ferma: saluto
 avanti, ritorno nei frame al contrario, inversione e ripartenza riflessa.
 Entrambe le animazioni a 24 fps; il riflesso avviene solo dopo il ritorno.
 Il drag non avanza la sequenza; movimento ridotto conserva una posa statica.
+Ombra ricavata dall'alpha del frame corrente, anche durante il saluto al
+contrario, con direzione della luce comune ai combattenti. Contatti delle
+suole misurati per frame; la posa viene ancorata al pavimento durante il passo.
+Ombra ancorata alla linea delle due suole; durante il passo si esclude il
+piede nettamente sollevato. Tony e tutto il percorso sono rialzati di 50 px.
+Tony usa pixelSize 3: ogni frame viene ridotto a 171x171 e riportato alla
+dimensione prevista con nearest-neighbor, anche per la sagoma dell'ombra.
+Sprite originali, dimensioni nello stage, posizione e timing restano invariati.
+Durante la camminata, piedi sovrapposti o con una differenza di quota non
+compatibile con il pavimento non inclinano la proiezione: si usa il solo
+piede d'appoggio. Il determinante della matrice resta coerente in tutti i
+frame e nei due orientamenti, evitando ribaltamenti verticali dell'ombra.
