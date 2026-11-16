@@ -1,0 +1,110 @@
+[
+  {
+    "character": "Franco",
+    "characterId": "cmwf2pz3i00d2h8m827acdfmw",
+    "sheet": {
+      "id": "cmwj0yolj000iazs6mw5cybk4",
+      "name": "Idle",
+      "kind": "idle",
+      "createdAt": "2026-11-16T08:52:00.391Z",
+      "sourceVideoId": "cmwj0x7yg0002f8uh2erqqgtg",
+      "frameCount": 49,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "loopStart": 1,
+      "loopEnd": 48,
+      "speedMultiplier": 2
+    },
+    "slug": "franco"
+  },
+  {
+    "character": "Tamara",
+    "characterId": "cmwf2p2xk003wqj8q4siysk54",
+    "sheet": {
+      "id": "cmwj12nil00e6x2ewbrw558x5",
+      "name": "Idle",
+      "kind": "idle",
+      "createdAt": "2026-11-16T08:55:05.614Z",
+      "sourceVideoId": "cmwj102gb0012f8uh0crcpyjr",
+      "frameCount": 49,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "loopStart": 2,
+      "loopEnd": 26,
+      "speedMultiplier": 2
+    },
+    "slug": "tamara"
+  },
+  {
+    "character": "Patrick",
+    "characterId": "cmwf2ocny00jvabo39fs4ichx",
+    "sheet": {
+      "id": "cmwj12hib0021f8uhazu8h2lf",
+      "name": "Idle",
+      "kind": "idle",
+      "createdAt": "2026-11-16T08:54:57.828Z",
+      "sourceVideoId": "cmwj104uw001bf8uhddim4won",
+      "frameCount": 49,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "loopStart": 2,
+      "loopEnd": 43,
+      "speedMultiplier": 2
+    },
+    "slug": "patrick"
+  },
+  {
+    "character": "Luca Arcangeli",
+    "characterId": "cmwd98epq004a63m1yx900zud",
+    "sheet": {
+      "id": "cmwj12bf600dux2ewmnv04llc",
+      "name": "Idle",
+      "kind": "idle",
+      "createdAt": "2026-11-16T08:54:49.939Z",
+      "sourceVideoId": "cmwj106gk001if8uhflho86ut",
+      "frameCount": 49,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "loopStart": 2,
+      "loopEnd": 47,
+      "speedMultiplier": 2
+    },
+    "slug": "luca-arcangeli"
+  },
+  {
+    "character": "Cristian Canino",
+    "characterId": "cmwd97qho000f29ifd54bd1dh",
+    "sheet": {
+      "id": "cmwj12fmv001wf8uhn4nwyiu9",
+      "name": "Idle",
+      "kind": "idle",
+      "createdAt": "2026-11-16T08:54:55.399Z",
+      "sourceVideoId": "cmwj107te000razs6unw2b0fk",
+      "frameCount": 49,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "loopStart": 1,
+      "loopEnd": 47,
+      "speedMultiplier": 2
+    },
+    "slug": "cristian-canino"
+  },
+  {
+    "character": "Alessandro Mandelli",
+    "characterId": "cmwd96mx7002ajx0l8ye0uxdz",
+    "sheet": {
+      "id": "cmwj1ehip005pacpy5aj7egcj",
+      "name": "Idle",
+      "kind": "idle",
+      "createdAt": "2026-11-16T09:04:17.714Z",
+      "sourceVideoId": "cmwj1adw5001gacpy0wima696",
+      "frameCount": 41,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "loopStart": 0,
+      "loopEnd": 39,
+      "speedMultiplier": 2
+    },
+    "slug": "alessandro-mandelli"
+  }
+]

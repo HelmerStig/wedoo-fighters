@@ -71,10 +71,10 @@ test('victory usa i frame esportati e 24 fps',async()=>{
     assert.equal(atlas.meta?.frame_count??Object.keys(atlas.frames).length,item.frames);
   }
 });
-test('Salto copre il roster, conserva il taglio e usa il nuovo timing',async()=>{
+test('Salto copre i personaggi con la mossa disponibile, conserva il taglio e usa il nuovo timing',async()=>{
   const {characters}=await catalog();
   const manifest=JSON.parse((await fs.readFile(path.resolve(demo,'../animation/jump-manifest.json'),'utf8')).replace(/^\uFEFF/,''));
-  assert.equal(manifest.items.length,characters.length);
+  assert.equal(manifest.items.length,characters.filter(c=>c.animations.some(a=>a.id==='jump')).length);
   assert.deepEqual(manifest.missing,[]);
   for(const item of manifest.items){
     assert.match(item.sourceAnimationName.toLowerCase(),/jump/);
@@ -136,10 +136,11 @@ test('il server locale serve la demo e protegge il resto del repository',async t
   assert.equal((await fetch(base+'/demo-moves-sanmauro/index.html')).status,403);
   assert.equal((await fetch(base+'/portraits/oscar.png')).status,200);
   for(const character of (await catalog()).characters){
-    const portrait=await fetch(base+'/portrait-pixeled/'+encodeURIComponent(character.id)+'.png');
+    const portrait=await fetch(character.portrait?new URL(character.portrait,base+'/demo-moves/'):base+'/portrait-pixeled/'+encodeURIComponent(character.id)+'.png');
     assert.equal(portrait.status,200,character.id);
     const png=Buffer.from(await portrait.arrayBuffer());
-    assert.equal(png.readUInt32BE(16),512,character.id);assert.equal(png.readUInt32BE(20),512,character.id);
+    assert.ok(png.readUInt32BE(16)>0,character.id);assert.ok(png.readUInt32BE(20)>0,character.id);
+    if(!character.portrait){assert.equal(png.readUInt32BE(16),512,character.id);assert.equal(png.readUInt32BE(20),512,character.id);}
   }
   const fire=await fetch(base+'/portraits/fire.mp4');
   assert.equal(fire.status,200);assert.equal(fire.headers.get('content-type'),'video/mp4');

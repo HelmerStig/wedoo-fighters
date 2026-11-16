@@ -1,0 +1,480 @@
+[
+  {
+    "character": "Franco",
+    "characterId": "cmwf2pz3i00d2h8m827acdfmw",
+    "sheets": [
+      {
+        "id": "cmwj0yolj000iazs6mw5cybk4",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:52:00.391Z",
+        "sourceVideoId": "cmwj0x7yg0002f8uh2erqqgtg",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 1,
+        "loopEnd": 48,
+        "speedMultiplier": 2
+      },
+      {
+        "id": "cmwj0vr5f013p3glyjhyg0q9p",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:49:43.731Z",
+        "sourceVideoId": "cmwj0upik012x3glybdaypy1q",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 44,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj0occx00vkr6i56l0rej9w",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:43:57.970Z",
+        "sourceVideoId": "cmwj0ngx200acexv445n864f7",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 29,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj0jr5y007sexv4rlg4mnbh",
+        "name": "Custom-Idle",
+        "kind": "custom",
+        "createdAt": "2026-11-16T08:40:23.879Z",
+        "sourceVideoId": "cmwj0i8r400btx2ew38pn5g97",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf4hlmg00dn1yowjgta7bt0",
+        "name": "Saluto alla telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-13T15:19:37.144Z",
+        "sourceVideoId": "cmwf4fv560235abo34xyrankd",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf3clus00221yowg40lghym",
+        "name": "Victory",
+        "kind": "custom",
+        "createdAt": "2026-11-13T14:47:44.548Z",
+        "sourceVideoId": "cmwf3bnjv0058vwbl8susizky",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      }
+    ]
+  },
+  {
+    "character": "Tamara",
+    "characterId": "cmwf2p2xk003wqj8q4siysk54",
+    "sheets": [
+      {
+        "id": "cmwj12nil00e6x2ewbrw558x5",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:55:05.614Z",
+        "sourceVideoId": "cmwj102gb0012f8uh0crcpyjr",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 2,
+        "loopEnd": 26,
+        "speedMultiplier": 2
+      },
+      {
+        "id": "cmwj0oiqa010v3glyxtogccsp",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:44:06.226Z",
+        "sourceVideoId": "cmwj0nkp900v1r6i572v5us4j",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 45,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf4hlua01vp4edew9q4nf9j",
+        "name": "Inchino ed esaltazione",
+        "kind": "custom",
+        "createdAt": "2026-11-13T15:19:37.426Z",
+        "sourceVideoId": "cmwf4fwgo023cabo3hqpf96dg",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf3cwxz00qn4edemcstpwla",
+        "name": "Victory",
+        "kind": "custom",
+        "createdAt": "2026-11-13T14:47:58.919Z",
+        "sourceVideoId": "cmwf3boaw001w1yow6mdreqpp",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 46,
+        "speedMultiplier": 1
+      }
+    ]
+  },
+  {
+    "character": "Patrick",
+    "characterId": "cmwf2ocny00jvabo39fs4ichx",
+    "sheets": [
+      {
+        "id": "cmwj12hib0021f8uhazu8h2lf",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:54:57.828Z",
+        "sourceVideoId": "cmwj104uw001bf8uhddim4won",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 2,
+        "loopEnd": 43,
+        "speedMultiplier": 2
+      },
+      {
+        "id": "cmwj0ool0010z3gly12s3fdzc",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:44:13.812Z",
+        "sourceVideoId": "cmwj0nolm00v6r6i5csehiw8n",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf4hsx000tpqj8qd150bf8g",
+        "name": "Dancing",
+        "kind": "custom",
+        "createdAt": "2026-11-13T15:19:46.597Z",
+        "sourceVideoId": "cmwf4fxkc023oabo3e66r5y7o",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf3d4f600ri4edeu6u22gch",
+        "name": "Victory",
+        "kind": "custom",
+        "createdAt": "2026-11-13T14:48:08.610Z",
+        "sourceVideoId": "cmwf3bnm300nl4edeb10vkxya",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      }
+    ]
+  },
+  {
+    "character": "Luca Arcangeli",
+    "characterId": "cmwd98epq004a63m1yx900zud",
+    "sheets": [
+      {
+        "id": "cmwj12bf600dux2ewmnv04llc",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:54:49.939Z",
+        "sourceVideoId": "cmwj106gk001if8uhflho86ut",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 2,
+        "loopEnd": 47,
+        "speedMultiplier": 2
+      },
+      {
+        "id": "cmwj0oqde01133gly1yah5ntr",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:44:16.130Z",
+        "sourceVideoId": "cmwj0nsrm00vbr6i5j17z40z3",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf4enrb020iabo3i7egf4n2",
+        "name": "Saluto alla telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-13T15:17:19.932Z",
+        "sourceVideoId": "cmwf47v6401la4edei17c4l0k",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdtcrkn0078142na2jmsdn7",
+        "name": "Victory",
+        "kind": "custom",
+        "createdAt": "2026-11-12T17:20:09.624Z",
+        "sourceVideoId": "cmwdtb8yp0063rdi9qobav5w0",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 46,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdnwz3d00s5k9w10r5u3thz",
+        "name": "Saluto verso la telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-12T14:47:54.793Z",
+        "sourceVideoId": "cmwdnv8tn00ibe4uoptv5b8qs",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 2
+      }
+    ]
+  },
+  {
+    "character": "Cristian Canino",
+    "characterId": "cmwd97qho000f29ifd54bd1dh",
+    "sheets": [
+      {
+        "id": "cmwj12fmv001wf8uhn4nwyiu9",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:54:55.399Z",
+        "sourceVideoId": "cmwj107te000razs6unw2b0fk",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 1,
+        "loopEnd": 47,
+        "speedMultiplier": 2
+      },
+      {
+        "id": "cmwf4eeet01zsabo3ucg95lov",
+        "name": "Inchino ed esaltazione",
+        "kind": "custom",
+        "createdAt": "2026-11-13T15:17:07.830Z",
+        "sourceVideoId": "cmwf47wba01li4ede7jty52yz",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdtcvwc007k142n8z5a5i76",
+        "name": "Victory",
+        "kind": "custom",
+        "createdAt": "2026-11-12T17:20:15.228Z",
+        "sourceVideoId": "cmwdtb9c2000cbkrr83wfss82",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdom7mj000p4506lt7q8h4c",
+        "name": "Inchino verso la telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-12T15:07:32.252Z",
+        "sourceVideoId": "cmwdoha1o00p9o2kzhdb56xzu",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdo3pxv00gzo2kz1u2lynxk",
+        "name": "Inchino verso la telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-12T14:53:09.523Z",
+        "sourceVideoId": "cmwdo2o1n001obeyjrzookf49",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      }
+    ]
+  },
+  {
+    "character": "Alessandro Mandelli",
+    "characterId": "cmwd96mx7002ajx0l8ye0uxdz",
+    "sheets": [
+      {
+        "id": "cmwj1ehip005pacpy5aj7egcj",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T09:04:17.714Z",
+        "sourceVideoId": "cmwj1adw5001gacpy0wima696",
+        "frameCount": 41,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 39,
+        "speedMultiplier": 2
+      },
+      {
+        "id": "cmwj1dn760024jrxuz4sy01o3",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T09:03:38.418Z",
+        "sourceVideoId": "cmwj1adw5001gacpy0wima696",
+        "frameCount": 45,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj1bu4n0042f8uh02y9jk0u",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T09:02:14.087Z",
+        "sourceVideoId": "cmwj1adw5001gacpy0wima696",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj19ckm00x9r6i50v8me7dz",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T09:00:18.023Z",
+        "sourceVideoId": "cmwj18b9u00wtr6i52rq3xm35",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj14xfd015l3glyj0z47nfi",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:56:51.769Z",
+        "sourceVideoId": "cmwj134h4014y3gly0bs7i3nn",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj12n0k00e2x2ewbuojpxhk",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:55:04.964Z",
+        "sourceVideoId": "cmwj10cvp0010azs6xreg5ftx",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 43,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwj0p566011i3glyrjzom417",
+        "name": "Idle",
+        "kind": "idle",
+        "createdAt": "2026-11-16T08:44:35.310Z",
+        "sourceVideoId": "cmwj0o0ft00vgr6i5yupm1t9i",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 47,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwf4efo70207abo3b6emslm1",
+        "name": "Muscoli alla telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-13T15:17:09.463Z",
+        "sourceVideoId": "cmwf47xu701lr4edeps0m8noc",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdtcwd3007r142nlxtgu9ku",
+        "name": "Victory",
+        "kind": "custom",
+        "createdAt": "2026-11-12T17:20:15.831Z",
+        "sourceVideoId": "cmwdtb90h0065rdi9mtx01mjr",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": 0,
+        "loopEnd": 36,
+        "speedMultiplier": 1
+      },
+      {
+        "id": "cmwdowlmi00414506pon9c6zk",
+        "name": "Muscoli alla telecamera",
+        "kind": "custom",
+        "createdAt": "2026-11-12T15:15:36.954Z",
+        "sourceVideoId": "cmwdou91m00j3ar05xwx6kaqi",
+        "frameCount": 49,
+        "frameWidth": 512,
+        "frameHeight": 512,
+        "loopStart": null,
+        "loopEnd": null,
+        "speedMultiplier": 1
+      }
+    ]
+  }
+]

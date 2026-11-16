@@ -1,0 +1,23 @@
+{
+  "characterId": "cmwf2pz3i00d2h8m827acdfmw",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Custom-Idle",
+        "poseId": "cmwf2pz4a00d4h8m83rra9y3r",
+        "lastFramePoseId": "cmwf2pz4a00d4h8m83rra9y3r",
+        "rawPrompt": true,
+        "loop": true,
+        "prompt": "Classic 1990s 16-bit arcade fighting-game idle guard for Franco. Fixed full-body side view facing RIGHT, matching the supplied pose, identity, navy sweater, pale blue shirt collar, beige trousers, black shoes, proportions and scale. Two restrained rhythmic guard-bounce cycles over two seconds: knees softly flex and extend, hips and torso rise and settle a few pixels, shoulders breathe gently, bent elbows and raised closed fists follow with small relaxed counter-movements. Weight stays balanced between staggered legs; both shoes remain anchored to their original ground contact points. Head and gaze stay focused RIGHT. Preserve his fighting stance and screen position. Crisp pixel clusters, stable face, clothing and palette throughout. Static camera and framing; entire head and both shoes visible with original transparent margins. Isolated character on transparent background. End in the exact starting pose with matching motion phase for a continuous seamless loop."
+      }
+    ]
+  }
+}

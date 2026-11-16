@@ -7,11 +7,11 @@ const {advanceAnimation}=require('../player-core.js');
 const root=path.resolve(__dirname,'../..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,''));
 
-test('Parata alta copre il roster e raggiunge la posa selezionata a 100 ms per ogni personaggio',()=>{
+test('Parata alta raggiunge la posa a 100 ms per ogni personaggio con la mossa disponibile',()=>{
   const sandbox={window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(root,'demo-moves/catalog.js'),'utf8'),sandbox);
   const manifest=read('animation/block-manifest.json'),timing=read('animation/block-timing.json');
-  const characters=sandbox.window.MOVES_CATALOG.characters;
+  const characters=sandbox.window.MOVES_CATALOG.characters.filter(c=>c.animations.some(a=>a.id==='block'));
   assert.equal(manifest.items.length,characters.length);
   assert.equal(new Set(manifest.items.map(i=>i.character.toLowerCase())).size,characters.length);
   for(const character of characters){

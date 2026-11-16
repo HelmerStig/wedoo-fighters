@@ -124,4 +124,19 @@ Purtroppo, gli stage inun unica pagina rallentano per l'ecessivo perso, possiamo
 
 Ora, vorrei creare un altro repository che include al suo internmo questo repository, è possibile? se si, mi spieghi cosa devo fare ?
 
+Vorrei creare per i prsonaggi che ancora non hanno un idle, un animazione tipo questa:
+https://streetfighter.fandom.com/wiki/Ryu/Sprites?file=Tumblr_40bc8be9b86f5d2cf2c942e2c4d45d4c_eeab3888_500.gif
+Mi crei un prompt per autosprite e lo generi per "Franco" chiamandolo Custom-Idle?
+Tutto chiaro?
 
+
+Ho creato l'idle spritesheet per
+- Franco
+- Tamara
+- Patrick
+- Luca Arcangeli
+- Cristian Canino
+- Alessandro Mandelli
+
+me li integri su demo moves come fatto per gli altri?
+prendi da autosprite le versioni trimmed se disponibili
