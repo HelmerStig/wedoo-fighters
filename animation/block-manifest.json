@@ -985,7 +985,7 @@
       "durationMs": 250.0
     },
     {
-      "character": "Alessandro-Mandelli",
+      "character": "Alessandro-Mantelli",
       "animation": "Block",
       "sourceSheetId": "cmwj4umw4014sjrxuvf6r5i5y",
       "sourceVideoId": "cmwj4ttmr001sfbf5ssfwj5t5",
@@ -999,8 +999,8 @@
       "frameWidth": 512,
       "frameHeight": 512,
       "speedMultiplier": 1,
-      "png": "animation/alessandro-mandelli/alessandro-mandelli-block.png",
-      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-block.json",
+      "png": "animation/alessandro-mantelli/alessandro-mantelli-block.png",
+      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-block.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "1b85d080b4ec36dac86173532da20cf478e2d187f48adef158c44b9196d9bc77",
       "characterId": "cmwd96mx7002ajx0l8ye0uxdz",

@@ -1,6 +1,6 @@
 ﻿Personaggio,Frame totali,Frame impatto (da 1),Frame sorgente (da 0),Impatto precedente uniforme ms,Impatto nuovo ms,Preparazione ms,Impatto e recupero ms,Totale ms,Durata frame prima ms,Durata frame dopo ms,Note,Source sheet ID
 ALBERTO,16,9,8,250.0,250,250,250,500,31.25,31.25,,cmw3g3cl6012iolstdkbcdbgr
-Alessandro-Mandelli,18,10,9,250.0,250,250,250,500,27.778,27.778,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4l5z1009jq2hwn04iyn0v
+Alessandro-Mantelli,18,10,9,250.0,250,250,250,500,27.778,27.778,"Massima estensione verificata visivamente confrontando tutti i frame; recupero in guardia presente. Versione sorgente gia accorciata, senza applicare nuovamente il vecchio intervallo del foglio completo.",cmwj4l5z1009jq2hwn04iyn0v
 ALEX,14,10,9,321.429,250,250,250,500,27.778,50.0,,cmw3fu2uy005f6plaey1pm5bx
 ANGELA,18,11,10,277.778,250,250,250,500,25.0,31.25,,cmw3fvpbl00bv1186noi50juu
 ANTONINO,20,12,11,275.0,250,250,250,500,22.727,27.778,,cmw3fwvxf00cc1186y7b6oipy

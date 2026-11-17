@@ -828,7 +828,7 @@
       "portrait": "portraits/cristian-canino.png"
     },
     {
-      "character": "Alessandro-Mandelli",
+      "character": "Alessandro-Mantelli",
       "animation": "idle",
       "sourceSheetId": "cmwj1ehip005pacpy5aj7egcj",
       "sourceVideoId": "cmwj1adw5001gacpy0wima696",
@@ -842,11 +842,11 @@
       "frameWidth": 512,
       "frameHeight": 512,
       "speedMultiplier": 2,
-      "png": "animation/alessandro-mandelli/alessandro-mandelli-idle.png",
-      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-idle.json",
+      "png": "animation/alessandro-mantelli/alessandro-mantelli-idle.png",
+      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-idle.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "6bcad74685ab0813e18507000b2101707e840b69e98ed1d79711b5518d2b73d7",
-      "portrait": "portraits/alessandro-mandelli.png"
+      "portrait": "portraits/alessandro-mantelli.png"
     }
   ],
   "scaleCorrections": {

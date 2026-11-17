@@ -399,7 +399,7 @@ Il roster contiene 48 personaggi. I sei nuovi hanno per ora solo Idle:
   Patrick: 2-43, 42 frame.
   Luca Arcangeli: 2-47, 46 frame.
   Cristian Canino: 1-47, 47 frame.
-  Alessandro Mandelli: 0-39, 40 frame.
+  Alessandro Mantelli: 0-39, 40 frame.
 Intervalli inclusivi salvati su AutoSprite; celle 512x512 e pixel invariati.
 Riproduzione a 24 fps come gli altri idle; speedMultiplier 2 conservato
 solo come informazione. ID, video sorgente e hash RGBA in animation/manifest.json.
@@ -411,7 +411,7 @@ mostrano il PNG base anche nella testata, in attesa dei portrait dedicati.
 
 WALK GUARD - 16 NOVEMBRE 2026
 Importati sotto Walk i custom Walk Guard di Tamara (frame 2-47), Patrick
-(2-47), Luca Arcangeli (0-47), Cristian Canino (0-46), Alessandro Mandelli
+(2-47), Luca Arcangeli (0-47), Cristian Canino (0-46), Alessandro Mantelli
 (0-47). Tagli inclusivi salvati su AutoSprite, celle 512x512 e pixel invariati.
 Riproduzione a 24 fps come le altre Walk; velocita sorgente conservata nei
 metadati. Download e verifica pixel: autosprite-agent/output/walk-download-20261116/.
@@ -421,7 +421,7 @@ Nessuna animazione generata e nessun credito consumato.
 
 VICTORY CUSTOM 2 - 16 NOVEMBRE 2026
 Importate sotto Victory le nuove versioni di Franco, Tamara, Patrick,
-Luca Arcangeli, Cristian Canino e Alessandro Mandelli.
+Luca Arcangeli, Cristian Canino e Alessandro Mantelli.
 Tutte senza taglio salvato su AutoSprite: 49 frame completi (0-48), celle
 512x512, a 24 fps. PNG sorgente preservati; pixel e rettangoli verificati.
 ID e provenienza in animation/victory-manifest.json; download, metadati e
@@ -433,7 +433,7 @@ Integrati sotto Salto gli ultimi spritesheet dei sei nuovi personaggi,
 con i tagli inclusivi salvati su AutoSprite:
   Franco 0-42 (43 frame), Tamara 0-47 (48), Patrick 0-36 (37),
   Luca Arcangeli 0-46 (47), Cristian Canino 0-47 (48),
-  Alessandro Mandelli 0-41 (42).
+  Alessandro Mantelli 0-41 (42).
 Apice a 500 ms e ciclo di 1000 ms a 1x per tutti i 48 personaggi.
 Indici apice da zero: Franco 19, Tamara 20, Patrick 18, Luca 18,
 Cristian 19, Alessandro 23; scelti dopo confronto visivo dei frame vicini.
@@ -447,7 +447,7 @@ LIGHT PUNCH - 16 NOVEMBRE 2026
 Integrate le ultime versioni salvate dei sei nuovi personaggi sotto Pugno leggero.
 Franco 14 frame, Tamara 18, Patrick 18, Luca Arcangeli 15, Cristian Canino 11:
 questi fogli sono gia accorciati rispetto alle versioni dello stesso video.
-Alessandro Mandelli usa il foglio da 22 frame con intervallo 0-17 (18 frame).
+Alessandro Mantelli usa il foglio da 22 frame con intervallo 0-17 (18 frame).
 Gli indici sorgente del manifest si riferiscono al foglio scaricato, senza
 inventare la corrispondenza col vecchio foglio da 25 frame o tagliare due volte.
 Massima estensione a 250 ms e ciclo di 500 ms; indici impatto da zero:
@@ -463,7 +463,7 @@ Integrati sotto Parata alta gli ultimi Block dei sei nuovi personaggi,
 con intervalli inclusivi salvati su AutoSprite:
 Franco 0-23 (24 frame), Tamara 0-22 (23), Patrick 0-22 (23),
 Luca Arcangeli 0-21 (22), Cristian Canino 0-14 (15),
-Alessandro Mandelli 0-23 (24).
+Alessandro Mantelli 0-23 (24).
 Prima posa di parata stabilita a 100 ms a velocita 1x, come gli altri Block.
 Indici della posa da zero: Franco 5, Tamara 6, Patrick 6, Luca 7,
 Cristian 6, Alessandro 7. FPS costanti per personaggio = indice * 10;

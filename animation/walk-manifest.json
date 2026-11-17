@@ -858,7 +858,7 @@
       "playbackFps": 24
     },
     {
-      "character": "Alessandro-Mandelli",
+      "character": "Alessandro-Mantelli",
       "animation": "Walk Guard",
       "sourceSheetId": "cmwj1rmfj00chjrxuwfaptk7d",
       "sourceVideoId": "cmwj1qda40087f8uhrqgh74b4",
@@ -872,8 +872,8 @@
       "frameWidth": 512,
       "frameHeight": 512,
       "speedMultiplier": 1,
-      "png": "animation/alessandro-mandelli/alessandro-mandelli-walk.png",
-      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-walk.json",
+      "png": "animation/alessandro-mantelli/alessandro-mantelli-walk.png",
+      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-walk.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "06922c7023ae4267173964846e3a1e455199f3a69108b21d623a63ecd43439a3",
       "characterId": "cmwd96mx7002ajx0l8ye0uxdz",

@@ -1384,17 +1384,17 @@ window.MOVES_CATALOG = {
       ]
     },
     {
-      "id": "alessandro-mandelli",
-      "name": "Alessandro-Mandelli",
-      "thumbnail": "../PNG/Alessandro-Mandelli.png",
-      "portrait": "../portraits/alessandro-mandelli.png",
+      "id": "alessandro-mantelli",
+      "name": "Alessandro-Mantelli",
+      "thumbnail": "../PNG/Alessandro-Mantelli.png",
+      "portrait": "../portraits/alessandro-mantelli.png",
       "animations": [
         {
           "id": "idle",
           "name": "Idle",
           "description": "Guardia e movimento a riposo",
-          "image": "../animation/alessandro-mandelli/alessandro-mandelli-idle.png",
-          "atlas": "../animation/alessandro-mandelli/alessandro-mandelli-idle.json",
+          "image": "../animation/alessandro-mantelli/alessandro-mantelli-idle.png",
+          "atlas": "../animation/alessandro-mantelli/alessandro-mantelli-idle.json",
           "frames": [
             [
               0,
@@ -1648,8 +1648,8 @@ window.MOVES_CATALOG = {
           "id": "walk",
           "name": "Walk",
           "description": "Camminata in guardia",
-          "image": "../animation/alessandro-mandelli/alessandro-mandelli-walk.png",
-          "atlas": "../animation/alessandro-mandelli/alessandro-mandelli-walk.json",
+          "image": "../animation/alessandro-mantelli/alessandro-mantelli-walk.png",
+          "atlas": "../animation/alessandro-mantelli/alessandro-mantelli-walk.json",
           "frames": [
             [
               0,
@@ -1950,8 +1950,8 @@ window.MOVES_CATALOG = {
           "id": "victory",
           "name": "Victory",
           "description": "Mossa di vittoria",
-          "image": "../animation/alessandro-mandelli/alessandro-mandelli-victory.png",
-          "atlas": "../animation/alessandro-mandelli/alessandro-mandelli-victory.json",
+          "image": "../animation/alessandro-mantelli/alessandro-mantelli-victory.png",
+          "atlas": "../animation/alessandro-mantelli/alessandro-mantelli-victory.json",
           "frames": [
             [
               0,
@@ -2306,8 +2306,8 @@ window.MOVES_CATALOG = {
           "id": "jump",
           "name": "Salto",
           "description": "Salto con apice sincronizzato",
-          "image": "../animation/alessandro-mandelli/alessandro-mandelli-jump.png",
-          "atlas": "../animation/alessandro-mandelli/alessandro-mandelli-jump.json",
+          "image": "../animation/alessandro-mantelli/alessandro-mantelli-jump.png",
+          "atlas": "../animation/alessandro-mantelli/alessandro-mantelli-jump.json",
           "frames": [
             [
               0,
@@ -2595,8 +2595,8 @@ window.MOVES_CATALOG = {
           "id": "light-punch",
           "name": "Pugno leggero",
           "description": "Pugno leggero e ritorno in guardia",
-          "image": "../animation/alessandro-mandelli/alessandro-mandelli-light-punch.png",
-          "atlas": "../animation/alessandro-mandelli/alessandro-mandelli-light-punch.json",
+          "image": "../animation/alessandro-mantelli/alessandro-mantelli-light-punch.png",
+          "atlas": "../animation/alessandro-mantelli/alessandro-mantelli-light-punch.json",
           "frames": [
             [
               0,
@@ -2747,8 +2747,8 @@ window.MOVES_CATALOG = {
           "id": "block",
           "name": "Parata alta",
           "description": "Parata alta pronta in 0,1 secondi",
-          "image": "../animation/alessandro-mandelli/alessandro-mandelli-block.png",
-          "atlas": "../animation/alessandro-mandelli/alessandro-mandelli-block.json",
+          "image": "../animation/alessandro-mantelli/alessandro-mantelli-block.png",
+          "atlas": "../animation/alessandro-mantelli/alessandro-mantelli-block.json",
           "frames": [
             [
               0,

@@ -1111,7 +1111,7 @@
       "durationMs": 1000
     },
     {
-      "character": "Alessandro-Mandelli",
+      "character": "Alessandro-Mantelli",
       "animation": "Jump Custom 2",
       "sourceSheetId": "cmwj3rjiw003qtt4w5s5bjmcc",
       "sourceVideoId": "cmwj3pgsl001xq2hw759ixu32",
@@ -1125,8 +1125,8 @@
       "frameWidth": 512,
       "frameHeight": 512,
       "speedMultiplier": 1,
-      "png": "animation/alessandro-mandelli/alessandro-mandelli-jump.png",
-      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-jump.json",
+      "png": "animation/alessandro-mantelli/alessandro-mantelli-jump.png",
+      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-jump.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "62b84ed3881bd2f062b5b9466f4d161f577ec9bdb0b4000b9e65a0559b26bb8d",
       "characterId": "cmwd96mx7002ajx0l8ye0uxdz",

@@ -1,6 +1,6 @@
 ﻿Personaggio,Frame totali,Frame apice (da 1),Frame sorgente (da 0),Apice ms,FPS fino all apice,FPS da apice a fine ciclo,Ciclo ms,Note,Source sheet ID
 ALBERTO,49,24,23,500,46.0,52.0,1000,"Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza.",cmvrwvtwf004491x07gww8t3p
-Alessandro-Mandelli,42,24,23,500,46.0,38.0,1000,"Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette.",cmwj3rjiw003qtt4w5s5bjmcc
+Alessandro-Mantelli,42,24,23,500,46.0,38.0,1000,"Apice verificato visivamente sui frame adiacenti, assistito dal bordo superiore della silhouette.",cmwj3rjiw003qtt4w5s5bjmcc
 ALEX,48,20,19,500,38.0,58.0,1000,"Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza.",cmvrw8kz700n3ykc1di17h3f5
 ANGELA,48,22,21,500,42.0,54.0,1000,"Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza.",cmvrw8eye00mwykc19g40mmdk
 ANTONINO,45,22,21,500,42.0,48.0,1000,"Apice scelto visivamente; in caso di plateau, primo frame rappresentativo alla massima altezza.",cmvrw884h00mjykc1fpz6igfo

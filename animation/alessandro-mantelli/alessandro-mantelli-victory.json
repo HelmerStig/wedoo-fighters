@@ -335,6 +335,13 @@
       "w": 512,
       "h": 512,
       "source_frame": 47
+    },
+    "48": {
+      "x": 3072,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "source_frame": 48
     }
   },
   "meta": {
@@ -353,20 +360,18 @@
       "x": 0.498,
       "y": 0.8184
     },
-    "loopStart": 0,
-    "loopEnd": 47,
-    "speedMultiplier": 1,
-    "sizeMultiplier": 1,
-    "image": "alessandro-mandelli-walk.png",
-    "frame_count": 48,
+    "image": "alessandro-mantelli-victory.png",
+    "frame_count": 49,
     "columns": 7,
     "rows": 7,
-    "trimmed": true,
-    "source_sheet_id": "cmwj1rmfj00chjrxuwfaptk7d",
-    "source_video_id": "cmwj1qda40087f8uhrqgh74b4",
+    "trimmed": false,
+    "source_sheet_id": "cmwj38kaw00rhjrxutu0qo55b",
+    "source_video_id": "cmwj37h1z000pq2hwscoxjlkd",
     "source_frame_count": 49,
     "source_frame_start": 0,
-    "source_frame_end": 47,
-    "speed_multiplier": 1
+    "source_frame_end": 48,
+    "speed_multiplier": 1,
+    "loopStart": 0,
+    "loopEnd": 48
   }
 }
