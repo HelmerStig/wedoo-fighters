@@ -26982,7 +26982,7 @@ window.MOVES_CATALOG = {
       "id": "franco",
       "name": "Franco",
       "thumbnail": "../PNG/Franco.png",
-      "portrait": "../PNG/Franco.png",
+      "portrait": "../portraits/franco.png",
       "animations": [
         {
           "id": "idle",
@@ -52858,7 +52858,7 @@ window.MOVES_CATALOG = {
       "id": "patrick",
       "name": "Patrick",
       "thumbnail": "../PNG/Patrick.png",
-      "portrait": "../PNG/Patrick.png",
+      "portrait": "../portraits/patrick.png",
       "animations": [
         {
           "id": "idle",
@@ -60827,7 +60827,7 @@ window.MOVES_CATALOG = {
       "id": "tamara",
       "name": "Tamara",
       "thumbnail": "../PNG/Tamara.png",
-      "portrait": "../PNG/Tamara.png",
+      "portrait": "../portraits/tamara.png",
       "animations": [
         {
           "id": "idle",

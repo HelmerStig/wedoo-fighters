@@ -184,3 +184,10 @@ VOrrei li integrassi nello stage "VIlla arduino". COn corse randomiche in un sen
 
 Ingrandisci solo il gatto che passa in strada, quelli sui balconi vanno bene.
 Vorrei aggiungere qualche effeto di luce, nel cielo e nell'ambiente, hai qualche suggerimento per questo stage?
+
+Mi servirebbero ora dei portraits di persone che mancano
+portraits/
+Trvi i riferimenti per il volto in: F:\Personali\wedoo-fighters\original-images\portraits sono: Tamara, Patrick, Franco
+I relativi spritesheet dei corpi li trovi in: PNG\TAMARA.png, PNG\PATRICK.png, PNG\FRANCO.png
+
+mi crei i portraits come fatto per gli altri?
