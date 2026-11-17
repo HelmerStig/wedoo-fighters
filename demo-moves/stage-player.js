@@ -55,10 +55,17 @@
         return [id,{characterId:actor.characterId,animation,imageObject:null}];
       }))};
     });
+    const cats=(stage.cats??[]).map(definition=>{
+      const source=env.STAGE_CATS_CATALOG?.[definition.id];if(!source)throw new Error('Gatto non disponibile: '+definition.id);
+      return {...definition,animations:Object.fromEntries(Object.entries(source.animations).map(([id,animation])=>[id,{characterId:definition.id,animation,imageObject:null}]))};
+    });
+    let catRenderer=null,catsEnabled=true;
     let backgroundRenderer=null;
     const lightMask=stage.lights?{...stage.lights.mask,imageObject:null}:null;
+    const birdGroundTexture=stage.birdGroundTexture?{...stage.birdGroundTexture,imageObject:null}:null;
+    const birdTexture=stage.birdTexture?{...stage.birdTexture,imageObject:null}:null;
     const ambientTexture=stage.ambientTexture?{...stage.ambientTexture,imageObject:null}:null;
-    const assets=[...layers,...fighters,...backgroundActors.flatMap(actor=>Object.values(actor.animations)),...(lightMask?[lightMask]:[]),...(ambientTexture?[ambientTexture]:[])];
+    const assets=[...layers,...fighters,...backgroundActors.flatMap(actor=>Object.values(actor.animations)),...cats.flatMap(cat=>Object.values(cat.animations)),...(lightMask?[lightMask]:[]),...(ambientTexture?[ambientTexture]:[]),...(birdTexture?[birdTexture]:[]),...(birdGroundTexture?[birdGroundTexture]:[])];
     const shadowStyle={color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28,...stage.shadow};
     let effects={shadows:0,color:0,fog:0,dust:0};
     function fog(depth){
@@ -149,8 +156,12 @@
         const positions=layer.speed?cloudPositions(stage.width,layer.width,elapsed,layer.speed):[(stage.width-layer.width)/2];
         for(const x of positions)context.drawImage(layer.imageObject,x-camera,0);
         if(layer.haze)fog(layer.haze);
-        if(layer.id==='sky')weather?.sky(context,{elapsed,camera,viewportWidth,reduced:media.matches});
+        if(layer.id==='sky'){
+          weather?.sky(context,{elapsed,camera,viewportWidth,reduced:media.matches});
+          if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.renderSky?.(context,elapsed,camera);
+        }
       }
+      if(catsEnabled&&!ambientSuppressed&&!media.matches)catRenderer?.render(context,elapsed,camera);
       backgroundRenderer?.render(context,fighterElapsed,camera,media.matches,effects.shadows);
       if(ambientEnabled&&!ambientSuppressed&&!media.matches)ambient?.render(context,elapsed,camera);
       const weatherView={elapsed,rainElapsed,raining:rainEnabled,camera,viewportWidth,reduced:media.matches,paused:!playing,suppressed:ambientSuppressed};
@@ -250,19 +261,21 @@
         if(!env.StageBackgroundActors)throw new Error('Player personaggi di sfondo non disponibile.');
         backgroundRenderer=env.StageBackgroundActors.create(backgroundActors,env,shadowStyle);
       }
+      if(cats.length)catRenderer=env.StageCats.create(cats);
       if(stage.ambient==='castello'&&env.CastelloEffects)ambient=env.CastelloEffects.create(ambientTexture.imageObject,env,layers.find(l=>l.id==='foreground').imageObject);
       if(stage.ambient==='palazzo'&&env.PalazzoEffects)ambient=env.PalazzoEffects.create(ambientTexture.imageObject);
+      if(stage.ambient==='statuto'&&env.StatutoWater)ambient=env.StatutoWater.create(ambientTexture.imageObject,env,birdTexture?.imageObject,birdGroundTexture?.imageObject);
       ready=true;status.textContent='';status.hidden=true;canvas.setAttribute('aria-busy','false');sync();draw();schedule();
     }).catch(error=>{
       if(disposed)return;
       status.textContent=error.message;canvas.setAttribute('aria-busy','false');
     });
-    return {loaded,setAmbientPart(key,value){ambient?.setEffect(key,value);weather?.setEffect?.(key,value);draw();},setOriginalEffects(value){ambientSuppressed=Boolean(value);draw();},setAmbient(value){ambientEnabled=Boolean(value)&&Boolean(stage.ambient);draw();},setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
+    return {loaded,setCats(value){catsEnabled=Boolean(value);draw();},setAmbientPart(key,value){ambient?.setEffect(key,value);weather?.setEffect?.(key,value);draw();},setOriginalEffects(value){ambientSuppressed=Boolean(value);draw();},setAmbient(value){ambientEnabled=Boolean(value)&&Boolean(stage.ambient);draw();},setLights(value){lightsEnabled=Boolean(value)&&Boolean(stage.lights);draw();resetClock();},async setStormAudio(value){const result=await weather?.setAudio(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});return Boolean(result);},setRain(value){rainEnabled=Boolean(value);weather?.updateAudio({rain:rainEnabled,elapsed,lightning:false,hidden:env.document.hidden});draw();resetClock();},setPostProcess(callback){postProcess=callback;if(callback)draw();},setEffects(values){
       const clamp=value=>Number.isFinite(Number(value))?Math.max(0,Math.min(1,Number(value))):0;
       effects={shadows:clamp(values.shadows),color:clamp(values.color),fog:clamp(values.fog),dust:clamp(values.dust)};
       draw();schedule();
     },destroy(){
-      disposed=true;ambient?.destroy();backgroundRenderer?.destroy();postProcess=null;resetClock();
+      disposed=true;catRenderer?.destroy();ambient?.destroy();backgroundRenderer?.destroy();postProcess=null;resetClock();
       weather?.destroy();
       button.removeEventListener('click',toggle);
       if(drag)pointerEnd({pointerId:drag.id});

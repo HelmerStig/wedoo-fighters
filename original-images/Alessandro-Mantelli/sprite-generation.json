@@ -1,8 +1,8 @@
 {
   "tool": "built-in imagegen",
-  "subjectNameAsRequested": "Alessandro Mandelli",
+  "subjectNameAsRequested": "Alessandro Mantelli",
   "source": "Alessandro_Mantelli_640x640_bw.jpg",
-  "output": "../../PNG/Alessandro-Mandelli.png",
+  "output": "../../PNG/Alessandro-Mantelli.png",
   "styleReferences": [
     "../../PNG/ALBERTO.png",
     "../../PNG/CONDELLO.png",

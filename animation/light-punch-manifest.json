@@ -1037,7 +1037,7 @@
                       "durationMs": 500
                   },
                   {
-                      "character": "Alessandro-Mandelli",
+                      "character": "Alessandro-Mantelli",
                       "animation": "Light Punch",
                       "sourceSheetId": "cmwj4l5z1009jq2hwn04iyn0v",
                       "sourceVideoId": "cmwj4hdwd000txngyf1a57fjt",
@@ -1051,8 +1051,8 @@
                       "frameWidth": 512,
                       "frameHeight": 512,
                       "speedMultiplier": 2,
-                      "png": "animation/alessandro-mandelli/alessandro-mandelli-light-punch.png",
-                      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-light-punch.json",
+                      "png": "animation/alessandro-mantelli/alessandro-mantelli-light-punch.png",
+                      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-light-punch.json",
                       "pixelVerification": "decoded RGBA SHA256",
                       "decodedFramesSha256": "99959218810509e66d9e05de0335e5eac87694571ce5e217a3bc8c45473f329d",
                       "characterId": "cmwd96mx7002ajx0l8ye0uxdz",

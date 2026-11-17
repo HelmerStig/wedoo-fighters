@@ -60,7 +60,10 @@
       }
       gl_FragColor=vec4(color,density);
     }`;
-  function create(env=globalThis){
+  function create(env=globalThis,options={}){
+    const fragmentSource=options.palette==='sunset'?fragment
+      .replace('vec3(.12,.018,.10),vec3(.32,.055,.25)','vec3(.48,.36,.43),vec3(.98,.72,.48)')
+      .replace('gl_FragColor=vec4(color,density);','gl_FragColor=vec4(color,density*.6);'):fragment;
     const canvas=env.document.createElement('canvas');
     let gl,program,buffer,dead=false,lost=false;const shaders=[];
     function destroy(){
@@ -73,7 +76,7 @@
     try{
       gl=canvas.getContext('webgl',{alpha:true,antialias:false,premultipliedAlpha:false,preserveDrawingBuffer:false});
       if(!gl)return {supported:false,render(){return false;},destroy};
-      for(const [type,source]of [[gl.VERTEX_SHADER,vertex],[gl.FRAGMENT_SHADER,fragment]]){
+      for(const [type,source]of [[gl.VERTEX_SHADER,vertex],[gl.FRAGMENT_SHADER,fragmentSource]]){
         const shader=gl.createShader(type);shaders.push(shader);gl.shaderSource(shader,source);gl.compileShader(shader);
         if(!gl.getShaderParameter(shader,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(shader));
       }

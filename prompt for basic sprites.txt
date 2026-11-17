@@ -136,7 +136,7 @@ Ho creato l'idle spritesheet per "Block"
 - Patrick
 - Luca Arcangeli
 - Cristian Canino
-- Alessandro Mandelli
+- Alessandro Mantelli
 
 me li integri su demo moves come fatto per gli altri sotto la voce Parata Alta?
 prendi da autosprite le versioni trimmed se disponibili, usa gli stessi parametri di timing e aggiorna il report relativo: demo-moves/reports/block-timing.html
@@ -157,4 +157,37 @@ Vorrei ora aggiungere degli effetti,
 Ora sullo sfondo, vorrei inserire il perosnaggio Tony, deve compiere le seguenti azioni
 - Camminare, usa custom walk su autosprite
 - Randomicamente usare lo spritesheet Saluto, poi rieseguire daluto al contrario ed eseguire la camminata riflessa, tony deve stare nello stage, non farlo sbattere contro i muri o attraversare zone impossibili da raggiungere
+ù
 
+vorrei creare un nuovo stage in demo-moves, si chiamerà: Piazza Statuto.
+Sarà composto da 2 immagini:
+- original-backgrounds\piazza-statuto\cielo.png z-index 0
+- original-backgrounds\piazza-statuto\statuto.png: z-index 1
+
+cpme personaggi mettiamo: Angela e Giordano. Stesi fitri crt dei precedenti. Aggiungi nuvole in movimento coerenti con il cielo al tramonto
+
+Riusciamo a dare movimento all'acqua del monumento?
+
+Ho creato l'animazione di un merlo in volo: "C:\wedoo-fighters\original-backgrounds\piazza-statuto\merlo\merlo-volo-spritesheet.png"
+
+Mi metti randomicamente una decina di merli in volo nello stage, con velocità e direzione randomica, ma coerente con la scena. un po' davanti un po' fra cielo e monumento, con dimensioni diverse a seconda della distanza. Possono entrare e uscire dallo stage, alcuni riflettili e falli andare in direzione oppost, fai tu. Hai domande?
+
+I merli devono essere più veloci, aumenta anche l'fps degli sprites merlo77
+ora, di tanto in tanto, qualche merlo deve atterrare in questa zona (nella zona prato), quando atterra va sostituito con questo sprite: original-backgrounds\piazza-statuto\merlo\merlo-spritesheet.png
+LAciato in loop per 3 volte e poi riparte in volo. 
+
+i merli che atterrano devono essere un po' più in alto e più grandi
+
+Ora, qui trovi 6 spritesheet
+	- sono corsa e salto di tre gatti diversi
+VOrrei li integrassi nello stage "VIlla arduino". COn corse randomiche in un senso e nell'altro, se possibile, vorrei che di tanto in tanto, qualcuno saltasse da un balcone all'altro, i balconi sono qui da screenshot:
+
+Ingrandisci solo il gatto che passa in strada, quelli sui balconi vanno bene.
+Vorrei aggiungere qualche effeto di luce, nel cielo e nell'ambiente, hai qualche suggerimento per questo stage?
+
+Mi servirebbero ora dei portraits di persone che mancano
+portraits/
+Trvi i riferimenti per il volto in: F:\Personali\wedoo-fighters\original-images\portraits sono: Tamara, Patrick, Franco
+I relativi spritesheet dei corpi li trovi in: PNG\TAMARA.png, PNG\PATRICK.png, PNG\FRANCO.png
+
+mi crei i portraits come fatto per gli altri?

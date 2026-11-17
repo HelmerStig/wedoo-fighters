@@ -32,7 +32,7 @@
   }
   function create(stage,env=globalThis){
     const storm=stage.storm==='approaching'?env.StageWindStorm:null;
-    const clouds=stage.webglClouds?env.StageCloudsWebGL?.create(env):null,audio=stage.lightning?env.StageStormAudio?.create(env,storm?{timeline:stage.thunderTrack?storm.lightningState:storm.thunderState,windTrack:stage.windTrack,thunderTrack:stage.thunderTrack}:{}):null;
+    const clouds=stage.webglClouds?env.StageCloudsWebGL?.create(env,{palette:stage.cloudPalette}):null,audio=stage.lightning?env.StageStormAudio?.create(env,storm?{timeline:stage.thunderTrack?storm.lightningState:storm.thunderState,windTrack:stage.windTrack,thunderTrack:stage.thunderTrack}:{}):null;
     let leavesEnabled=Boolean(stage.wind);
     let windElapsed=0,windLastTime=null;
     const supported=!stage.webglClouds||Boolean(clouds?.supported);
@@ -55,7 +55,20 @@
         }
         ctx.restore();
       }
-      clouds?.render(ctx,viewportWidth,stage.height,elapsed,camera,stage.width,stage.lightning&&!reduced);
+      const cloudDrawn=clouds?.render(ctx,viewportWidth,stage.height,elapsed,camera,stage.width,stage.lightning&&!reduced);
+      if(stage.cloudPalette==='sunset'&&!cloudDrawn){
+        ctx.save();
+        for(let i=0;i<12;i++){
+          const x=((i*271-elapsed*.012)%3300+3300)%3300-400-camera,y=70+(i%3)*105;
+          ctx.fillStyle=i%2?'#e5b08a':'#ad8d9b';
+          for(let row=-6;row<=6;row++){
+            ctx.globalAlpha=.13*(1-Math.abs(row)/7);
+            const width=Math.round(Math.sqrt(Math.max(0,1-(row/7)**2))*125/6)*6;
+            ctx.fillRect(Math.round((x-width)/6)*6,y+row*6,width*2,6);
+          }
+        }
+        ctx.restore();
+      }
     }
     function background(ctx,{elapsed,rainElapsed,raining,camera,viewportWidth,reduced,suppressed}){
       const flash=stage.lightning&&!storm&&!reduced?env.StageCloudsWebGL?.lightningState?.(elapsed)?.flash??0:0;

@@ -90,7 +90,7 @@
     "slug": "cristian-canino"
   },
   {
-    "character": "Alessandro Mandelli",
+    "character": "Alessandro Mantelli",
     "characterId": "cmwd96mx7002ajx0l8ye0uxdz",
     "sheet": {
       "id": "cmwj1ehip005pacpy5aj7egcj",
@@ -105,6 +105,6 @@
       "loopEnd": 39,
       "speedMultiplier": 2
     },
-    "slug": "alessandro-mandelli"
+    "slug": "alessandro-mantelli"
   }
 ]

@@ -93,7 +93,7 @@ function fixture(reduced=false,withFighters=false){
   const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(demo,'catalog.js'),'utf8'),sandbox);
   const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
   const fighters=withFighters?stages[0].fighters.map(f=>({...f,footContacts:contacts.items.find(i=>i.characterId===f.characterId).frames,animation:sandbox.window.MOVES_CATALOG.characters.find(c=>c.id===f.characterId).animations.find(a=>a.id===f.animationId)})):[];
-  const player=install(canvas,button,status,{...stages[0],fighters},env);
+  const player=install(canvas,button,status,{...stages[0],fighters,cats:[]},env);
   function load(){images.forEach((image,i)=>{
     if(i<5)Object.assign(image,{naturalWidth:stages[0].layers[i].width,naturalHeight:1080});
     else{
@@ -312,4 +312,31 @@ test('Porta Palazzo: livelli nativi, vista 16:9 scorrevole, stelle, nuvole e per
  assert.equal(stage.webglClouds,true);assert.equal(stage.stars,true);assert.equal(stage.shootingStars,true);assert.ok(!stage.rain&&!stage.lightning);
  const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
  for(const f of stage.fighters)assert.ok(contacts.items.find(i=>i.characterId===f.characterId)?.frames.length);
+});
+
+test('Piazza Statuto: immagini richieste, drag 16:9, tramonto e Angela contro Giordano',()=>{
+ const stage=stages.find(s=>s.id==='piazza-statuto');assert.ok(stage);
+ assert.equal(stage.width,2550);assert.equal(stage.height,1080);assert.equal(stage.viewportWidth,1920);
+ assert.equal((stage.width-stage.viewportWidth)/2,315);
+ assert.deepEqual(stage.layers.map(l=>l.zIndex),[0,1]);
+ assert.ok(stage.layers[1].image.endsWith('/statuto.png'));
+ for(const layer of stage.layers){const png=fs.readFileSync(path.resolve(demo,layer.image));assert.equal(png.readUInt32BE(16),layer.width);assert.equal(png.readUInt32BE(20),layer.height);}
+ assert.deepEqual(stage.fighters.map(f=>[f.characterId,f.flipX]),[['angela',false],['giordano',true]]);
+ assert.equal(stage.cloudPalette,'sunset');assert.equal(stage.webglClouds,true);
+ assert.ok(!stage.stars&&!stage.rain&&!stage.lightning);
+ const contacts=JSON.parse(fs.readFileSync(path.resolve(demo,'../animation/stage-foot-contacts.json'),'utf8'));
+ for(const f of stage.fighters)assert.ok(contacts.items.find(i=>i.characterId===f.characterId)?.frames.length);
+ const preset=JSON.parse(fs.readFileSync(path.resolve(demo,'../original-backgrounds/piazza-statuto/crt-preset.json'),'utf8'));
+ const previous=JSON.parse(fs.readFileSync(path.resolve(demo,'../original-backgrounds/villa-arduino/crt-preset.json'),'utf8'));
+ assert.deepEqual(preset.settings,previous.settings);
+});
+test('nuvole al tramonto visibili anche senza WebGL e ancorate allo stage',()=>{
+ const weather=require('../stage-weather.js');const draws=[];
+ const env={document:{},StageCloudsWebGL:{create(){return {supported:false,render(){return false;},destroy(){}};}}};
+ const instance=weather.create({width:2550,height:1080,webglClouds:true,cloudPalette:'sunset'},env);
+ const ctx={save(){},restore(){},fillRect(...args){draws.push(args);}};
+ instance.sky(ctx,{elapsed:0,camera:0,viewportWidth:1920,reduced:false});const first=draws[0][0];
+ draws.length=0;instance.sky(ctx,{elapsed:0,camera:315,viewportWidth:1920,reduced:false});assert.ok(Math.abs(draws[0][0]-(first-315))<=6);
+ const second=draws[0][0];draws.length=0;instance.sky(ctx,{elapsed:1000,camera:315,viewportWidth:1920,reduced:false});assert.notEqual(draws[0][0],second);
+ instance.destroy();
 });

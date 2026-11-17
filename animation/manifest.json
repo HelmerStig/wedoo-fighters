@@ -741,7 +741,7 @@
       "atlas": "animation/franco/franco-idle.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "f0b01de64003833c45fc0f5b8ed823f5bb94aecd3a8c1703404c9530e73b06c5",
-      "portrait": "PNG/Franco.png"
+      "portrait": "portraits/franco.png"
     },
     {
       "character": "Tamara",
@@ -762,7 +762,7 @@
       "atlas": "animation/tamara/tamara-idle.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "765150cc6397d047bf8cbfc362fb9d2d0c260c8fec4782d536616334fcffa91e",
-      "portrait": "PNG/Tamara.png"
+      "portrait": "portraits/tamara.png"
     },
     {
       "character": "Patrick",
@@ -783,7 +783,7 @@
       "atlas": "animation/patrick/patrick-idle.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "794286ea7b9bc9f2d85a6e2d153c7f38d1fd56e4cc2d350b9f537e01aa2d05f1",
-      "portrait": "PNG/Patrick.png"
+      "portrait": "portraits/patrick.png"
     },
     {
       "character": "Luca-Arcangeli",
@@ -828,7 +828,7 @@
       "portrait": "portraits/cristian-canino.png"
     },
     {
-      "character": "Alessandro-Mandelli",
+      "character": "Alessandro-Mantelli",
       "animation": "idle",
       "sourceSheetId": "cmwj1ehip005pacpy5aj7egcj",
       "sourceVideoId": "cmwj1adw5001gacpy0wima696",
@@ -842,11 +842,11 @@
       "frameWidth": 512,
       "frameHeight": 512,
       "speedMultiplier": 2,
-      "png": "animation/alessandro-mandelli/alessandro-mandelli-idle.png",
-      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-idle.json",
+      "png": "animation/alessandro-mantelli/alessandro-mantelli-idle.png",
+      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-idle.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "6bcad74685ab0813e18507000b2101707e840b69e98ed1d79711b5518d2b73d7",
-      "portrait": "portraits/alessandro-mandelli.png"
+      "portrait": "portraits/alessandro-mantelli.png"
     }
   ],
   "scaleCorrections": {

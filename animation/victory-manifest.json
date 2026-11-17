@@ -928,7 +928,7 @@
       "sourceAnimationName": "Victory custom 2"
     },
     {
-      "character": "Alessandro-Mandelli",
+      "character": "Alessandro-Mantelli",
       "animation": "Victory custom 2",
       "sourceSheetId": "cmwj38kaw00rhjrxutu0qo55b",
       "sourceVideoId": "cmwj37h1z000pq2hwscoxjlkd",
@@ -942,8 +942,8 @@
       "frameWidth": 512,
       "frameHeight": 512,
       "speedMultiplier": 1,
-      "png": "animation/alessandro-mandelli/alessandro-mandelli-victory.png",
-      "atlas": "animation/alessandro-mandelli/alessandro-mandelli-victory.json",
+      "png": "animation/alessandro-mantelli/alessandro-mantelli-victory.png",
+      "atlas": "animation/alessandro-mantelli/alessandro-mantelli-victory.json",
       "pixelVerification": "decoded RGBA SHA256",
       "decodedFramesSha256": "8ed29c3c93aca1f7843a3dc73e218f175e7761b7c49b961effc997a892a3f309",
       "characterId": "cmwd96mx7002ajx0l8ye0uxdz",
