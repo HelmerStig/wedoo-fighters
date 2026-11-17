@@ -191,3 +191,18 @@ Trvi i riferimenti per il volto in: F:\Personali\wedoo-fighters\original-images\
 I relativi spritesheet dei corpi li trovi in: PNG\TAMARA.png, PNG\PATRICK.png, PNG\FRANCO.png
 
 mi crei i portraits come fatto per gli altri?
+
+Ora un altra prova, vorrei che creassi per:
+- Alberto
+- Fabio Clara
+- Sboz
+- Pippo
+- Peppo
+- Oscar
+- Elisa
+- Fra Tavarone
+- Marsan
+
+Il frame finale di un pugno, scegli tu il braccio, non farli tutti col destro o col sinistro, ogni personaggio con uno stile di pugno leggermente diverso, dovrebbe essere un pugno di media potenza, rivolto o al volto o al petto, non alla pancia. Usa la posa base present in PNG come riferimento mantieni dimensioni all'interno del canvas e lo stile, salvali poi in PNG/Medium-punch-last-frame
+
+hai domande?

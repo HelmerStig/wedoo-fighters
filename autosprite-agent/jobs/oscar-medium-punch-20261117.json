@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "medium punch",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwkxk48s009vlnb3elj2jmsr",
+        "lastFramePoseId": "cmwkxk7zn00a1lnb301fv7fwt",
+        "prompt": "Fixed full-body fighting-game side view, facing RIGHT. Use the supplied first and last poses exactly, preserving identity, black outfit, pixel-art, scale and baseline. One medium straight punch from guard to full extension. Oscar-specific anticipation: subtly settle weight onto the rear leg, bend both knees, draw the punching fist a few pixels back beside the cheek, and coil hip and shoulder while the other fist guards the jaw. Then push through the rear foot with a small pivot and rotate the torso toward the camera, driving the SAME punching arm shown extended in the supplied final pose straight toward an opponent's face. The guarding arm remains bent. Preparation occupies roughly the first third; the punch accelerates smoothly through the remaining motion and reaches maximum extension at the final frame. Small foot pivot, stable head height, coordinated shoulder-elbow-wrist motion. End on the supplied impact pose. Locked camera; full body and fist remain inside frame."
+      }
+    ]
+  }
+}

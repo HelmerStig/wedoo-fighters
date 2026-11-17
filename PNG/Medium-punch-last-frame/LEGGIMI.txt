@@ -1,0 +1,30 @@
+MEDIUM PUNCH - POSE DI MASSIMA ESTENSIONE
+
+48 pose singole rivolte a destra, una per ogni personaggio del roster.
+Le prime nove (Alberto, Fabio Clara, Sboz, Pippo, Peppo, Oscar,
+Elisa, Fra Tavarone e Marsan) sono state mantenute.
+Tony e una comparsa dello stage, fuori dal roster: non e incluso.
+
+Riferimenti: PNG base dei personaggi e pose Light Punch presenti in
+demo-moves/reports/light-punch-poses/.
+
+Il braccio che colpisce deve essere opposto a quello del Light Punch.
+Pugno di media potenza diretto al volto o alla parte alta del petto;
+piccolo pivot dei piedi e rotazione coordinata di bacino e busto.
+La rotazione verso la camera o di spalle dipende dal braccio usato
+nel Light Punch: Cristian Canino ed Eros mostrano maggiormente la schiena
+nel Medium Punch, mentre gli altri mostrano maggiormente il petto.
+Zichella usa il braccio umano; la protesi meccanica resta ritratta.
+Mori mantiene la sigaretta elettronica visibile nella mano che colpisce,
+come richiesto: non e stata sostituita con una mano vuota.
+Identita, abiti, scala e stile pixel art sono ripresi dai PNG base.
+
+PNG trasparenti su canvas 512 x 512. I nomi corrispondono ai PNG base;
+OSCARE.png e il personaggio chiamato Oscar nella demo.
+
+Generazione: strumento image_gen integrato, non AutoSprite.
+prompts.json conserva i prompt effettivi e i riferimenti dei file scelti.
+Sono pose di impatto, non animazioni complete o pose di ritorno in idle.
+
+Aprire confronto.html per affiancare posa base, Light Punch e Medium Punch.
+La casella di ricerca permette di filtrare i personaggi per nome.
