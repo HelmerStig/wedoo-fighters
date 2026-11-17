@@ -1,0 +1,99 @@
+{
+  "updatedAt": "2026-11-17",
+  "durationMs": 750,
+  "impactMs": 500,
+  "frameIndexBase": 0,
+  "selectionMethod": "Controllo visivo di tutti i fotogrammi; marcatore sulla massima estensione del colpo principale. Le estensioni preliminari e le pose mantenute sono documentate nelle note.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwkzp2xo006o1a3mwgj5i9bt",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "impactFrame": 24,
+      "impactSourceFrame": 24,
+      "playback": "forward-reverse",
+      "note": "Posa estesa mantenuta per piu fotogrammi; impatto scelto all'inizio della massima estensione."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwkzyhnq0093l2kmmmlm8w7w",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "impactFrame": 34,
+      "impactSourceFrame": 34,
+      "playback": "forward-reverse",
+      "note": "Massima estensione all'ultimo frame dell'andata."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwkzgkmk006pk85949euylx2",
+      "sourceStart": 0,
+      "sourceEnd": 51,
+      "impactFrame": 28,
+      "impactSourceFrame": 28,
+      "playback": "forward",
+      "note": "Solo avanti: il recupero e gia nella sorgente. Breve pugno preliminare con l'altro braccio; il marcatore riguarda il colpo principale."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwl0byng00seiskzd27hq1x6",
+      "sourceStart": 0,
+      "sourceEnd": 37,
+      "impactFrame": 25,
+      "impactSourceFrame": 25,
+      "playback": "forward-reverse",
+      "note": "Posa estesa mantenuta dopo l'impatto; recupero ottenuto invertendo i frame."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwl06ywk00h81a3mzqfjhdk0",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "impactFrame": 31,
+      "impactSourceFrame": 31,
+      "playback": "forward-reverse",
+      "note": "Scie grafiche presenti nella sorgente conservate, anche al ritorno; scelta una posa estesa senza la scia sovrapposta al pugno."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwkyan6600piuetsmn4tefpx",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "impactFrame": 32,
+      "impactSourceFrame": 32,
+      "playback": "forward-reverse",
+      "note": "Breve estensione preliminare e successivo colpo principale: impatto sincronizzato sulla massima estensione di quest'ultimo."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwl0z25900gdnl3z5dn1lryx",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "impactFrame": 27,
+      "impactSourceFrame": 27,
+      "playback": "forward-reverse",
+      "note": "La sorgente include estensioni preliminari con entrambi i bracci; il marcatore riguarda l'estensione principale finale."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwl0hqh500ji1a3mftilfo7q",
+      "sourceStart": 0,
+      "sourceEnd": 43,
+      "impactFrame": 35,
+      "impactSourceFrame": 35,
+      "playback": "forward-reverse",
+      "note": "Movimento preliminare del braccio prima dell'estensione principale; tutti i frame del taglio salvato sono conservati."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwl0mr0u00djnl3zpqq3nh71",
+      "sourceStart": 0,
+      "sourceEnd": 24,
+      "impactFrame": 22,
+      "impactSourceFrame": 22,
+      "playback": "forward-reverse",
+      "note": "Escluso soltanto il frame finale isolato in guardia (indice 25 del foglio scaricato), per evitare lo scatto prima del recupero inverso. Breve estensione preliminare conservata."
+    }
+  ]
+}

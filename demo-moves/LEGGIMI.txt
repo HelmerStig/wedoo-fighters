@@ -4,6 +4,32 @@ SCOPO DELLA DEMO
 Catalogo e banco di prova degli asset: lo sviluppo del gioco avverra in Godot.
 Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
 
+PUGNO MEDIO (17 NOVEMBRE 2026)
+Importate le ultime versioni AutoSprite chiamate "medium punch" per Alberto,
+Fabio Clara, Sboz, Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan.
+Pagina: mosse.html?move=medium-punch. Report sotto al titolo della mossa:
+reports/medium-punch-timing.html, con CSV e pose di impatto.
+A 1x: frame di impatto principale a 500 ms, ciclo completo di 750 ms.
+Durate variabili prima e dopo il marcatore: 500 ms e 250 ms.
+Otto personaggi usano avanti e indietro; Sboz usa solo avanti e il recupero
+gia presente nella sorgente. L'atlas ripete i riferimenti alle celle nel
+ritorno, senza duplicare pixel nel PNG o cambiare il player delle altre mosse.
+Il frame di inversione compare una sola volta; il recupero termina sul frame
+iniziale. In loop la guardia finale precede la guardia iniziale del nuovo ciclo.
+Marsan esclude il solo frame finale isolato in guardia (indice 25 del foglio
+scaricato): l'andata termina al 24, evitando uno scatto prima del ritorno inverso.
+Le estensioni preliminari e le scie gia negli asset approvati sono conservate
+e documentate nel report; il marcatore riguarda il colpo principale scelto.
+PNG originali conservati byte per byte; nessuna modifica a scala o centratura.
+Provenienza, sequenze e durate sono in animation/medium-punch-manifest.json,
+animation/medium-punch-timing.json e negli atlas omonimi degli spritesheet.
+Gli indici sorgente si riferiscono al foglio gia accorciato scaricato;
+non viene ipotizzato il taglio relativo al video/foglio completo precedente.
+Rigenerare catalogo e report con:
+  node demo-moves/scripts/build-catalog.mjs
+  python demo-moves/scripts/build-medium-punch-report.py
+La sezione contiene solo questi nove personaggi; gli altri non sono importati.
+
 CRT AVANZATO E PRESET
 Premi "Parametri CRT" accanto al titolo dello stage: si apre un pannello laterale
 con scorrimento interno. La pagina riserva spazio al pannello per tenere visibile

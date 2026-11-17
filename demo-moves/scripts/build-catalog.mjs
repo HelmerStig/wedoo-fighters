@@ -51,9 +51,11 @@ const extraAnimations=[
   {manifest:'victory-manifest.json',id:'victory',name:'Victory',description:'Mossa di vittoria'},
   {manifest:'jump-manifest.json',id:'jump',name:'Salto',description:'Salto con apice sincronizzato',durationMs:1000},
   {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500},
+  {manifest:'medium-punch-manifest.json',id:'medium-punch',name:'Pugno medio',description:'Pugno medio e ritorno in guardia',durationMs:750},
   {manifest:'block-manifest.json',id:'block',name:'Parata alta',description:'Parata alta pronta in 0,1 secondi'}
 ];
 const punchTiming=await readJson(join(root,'animation/light-punch-timing.json'));
+const mediumPunchTiming=await readJson(join(root,'animation/medium-punch-timing.json'));
 const blockTiming=await readJson(join(root,'animation/block-timing.json'));
 const jumpTiming=await readJson(join(root,'animation/jump-timing.json'));
 for(const extra of extraAnimations){
@@ -86,6 +88,17 @@ for(const extra of extraAnimations){
       const peak=entry.impactFrame;
       if(!Number.isInteger(peak)||peak<1||peak>=frames.length)throw Error('Frame impatto non valido: '+item.character);
       timing={impactFrame:peak,impactMs:punchTiming.impactMs,frameDurations:frames.map((_,i)=>i<peak?punchTiming.impactMs/peak:(punchTiming.durationMs-punchTiming.impactMs)/(frames.length-peak))};
+    }
+    if(extra.id==='medium-punch'){
+      const entry=mediumPunchTiming.items.find(t=>t.character.toLowerCase()===character.id);
+      if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd||entry.playback!==item.playback)throw Error('Rivedere il frame di impatto medio per '+item.character);
+      const peak=entry.impactFrame,ms=mediumPunchTiming.impactMs,total=mediumPunchTiming.durationMs;
+      if(!Number.isInteger(peak)||peak<1||peak>=item.sourceFrames||!Number.isFinite(ms)||ms<=0||!Number.isFinite(total)||total<=ms||total!==extra.durationMs)throw Error('Timing pugno medio non valido: '+item.character);
+      const expected=Array.from({length:item.sourceEnd-item.sourceStart+1},(_,i)=>item.sourceStart+i);
+      if(item.playback==='forward-reverse')expected.push(...expected.slice(0,-1).reverse());
+      else if(item.playback!=='forward')throw Error('Riproduzione pugno medio non valida');
+      if(JSON.stringify(item.frameSequence)!==JSON.stringify(expected)||expected.length!==frames.length||expected[peak]!==entry.impactSourceFrame||Object.values(atlas.frames).some((f,i)=>f.source_frame!==expected[i]))throw Error('Sequenza pugno medio incoerente: '+item.character);
+      timing={impactFrame:peak,impactMs:ms,playbackMode:item.playback,sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
     }
     character.animations.push({...timing,id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.id==='block'?timing.blockFrame*1000/timing.blockMs:extra.durationMs?frames.length*1000/extra.durationMs:(extra.playbackFps??24),...(extra.durationMs?{durationMs:extra.durationMs}:{}),savedSpeed:item.speedMultiplier});
   }

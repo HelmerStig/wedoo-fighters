@@ -193,16 +193,26 @@ I relativi spritesheet dei corpi li trovi in: PNG\TAMARA.png, PNG\PATRICK.png, P
 mi crei i portraits come fatto per gli altri?
 
 Ora un altra prova, vorrei che creassi per:
-- Alberto
-- Fabio Clara
-- Sboz
-- Pippo
-- Peppo
-- Oscar
-- Elisa
-- Fra Tavarone
-- Marsan
+- Alberto Pugno Medio Ok (da eseguire avanti e indietro)
+- Fabio Clara Pugno Medio Ok (da eseguire avanti e indietro)
+- Sboz Pugno Medio Ok (da eseguire solo avanti)
+- Pippo Pugno Medio Ok (da eseguire avanti e indietro)
+- Peppo Pugno Medio Ok (da eseguire avanti e indietro e ripulire spritesheet)
+- Oscar. Pugno Medio Ok (da eseguire avanti e indietro)
+- Elisa 
+- Fra Tavarone  Pugno Medio Ok (da eseguire avanti e indietro)
+- Marsan Pugno Medio Ok (da eseguire avanti e indietro)
 
 Il frame finale di un pugno, scegli tu il braccio, non farli tutti col destro o col sinistro, ogni personaggio con uno stile di pugno leggermente diverso, dovrebbe essere un pugno di media potenza, rivolto o al volto o al petto, non alla pancia. Usa la posa base present in PNG come riferimento mantieni dimensioni all'interno del canvas e lo stile, salvali poi in PNG/Medium-punch-last-frame
 
 hai domande?
+
+Ora vorrei fare una prima prova con oscar su autosprite, usa come posa iniziale la posa base, come frame finale quello genrato, chiama lo spritesheet medium punch.
+- 49 fotogrammi
+- la mossa deve avere una preparazione, ed il colpo, il recuperò sarà penso la mossa eseguta al contrario che dici?
+- Cerca di differenziare almeno la preparazione per ogni personaggio
+
+Hai domande?
+
+
+
