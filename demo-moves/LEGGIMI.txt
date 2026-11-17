@@ -30,6 +30,35 @@ Rigenerare catalogo e report con:
   python demo-moves/scripts/build-medium-punch-report.py
 La sezione contiene solo questi nove personaggi; gli altri non sono importati.
 
+SCIA E PARTICELLE DEI PUGNI
+Tutti i 9 Pugni medi e i 48 Pugni leggeri importati hanno una scia di massimo
+2-3 sagome della parte distale del braccio e del pugno (secondo i frame disponibili),
+color grigio azzurro, con opacita decrescente. Si attiva nell'estensione
+principale e sfuma entro 30 ms dall'impatto; non compare nella preparazione,
+nel recupero inverso o negli altri personaggi/movimenti.
+Particelle azzurrine a lineetta (3-7 px per 1 px) nascono attorno al braccio e
+si disperdono verso sinistra, sfumando entro 220 ms dalla nascita. Sono legate
+al tempo dell'animazione, quindi pausa, velocita, ricerca frame e loop restano
+coerenti; non vengono emesse nuove particelle durante il recupero inverso.
+La scheda contiene Scia e particelle e Intensita (75% iniziale). Con preferenza
+di movimento ridotto la scia non e disegnata. Non e inclusa nel PNG scaricato.
+Maschere poligonali per fotogramma e parametri sono conservati in
+animation/medium-punch-trails.json e animation/light-punch-trails.json,
+legati a sourceSheetId, taglio e frame di impatto di ogni personaggio.
+Dopo cambi di spritesheet il generatore richiede la revisione delle maschere.
+arm-trail.js disegna le sagome mascherate dietro al frame corrente, senza
+leggere pixel dal canvas: l'anteprima funziona anche offline da file://.
+I PNG e il timing restano identici. Per Godot il riferimento e la stessa
+sequenza di regioni e maschere del braccio, con copie sfumate dei frame passati.
+Rigenerare le maschere dai PNG e atlas correnti con:
+  python demo-moves/scripts/build-punch-trails.py
+  node demo-moves/scripts/build-catalog.mjs
+Lo script conserva la maschera manuale di Oscar medium se foglio e taglio
+coincidono. Per gli altri profili segue il tratto di silhouette distale del
+braccio, escludendo testa, busto e gambe. Le maschere generano anche anteprime
+di controllo in autosprite-agent/output/punch-trail-masks-20261117.
+Quando una scheda esce dalla zona visibile, i buffer delle scie sono liberati.
+
 CRT AVANZATO E PRESET
 Premi "Parametri CRT" accanto al titolo dello stage: si apre un pannello laterale
 con scorrimento interno. La pagina riserva spazio al pannello per tenere visibile

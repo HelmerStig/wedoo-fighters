@@ -20,6 +20,7 @@
           <div class="timeline"><input data-role="timeline" type="range" min="0" max="${animation.frames.length-1}" value="0" step="1" aria-label="Frame di ${escape(animation.name)}" disabled><span class="frame-counter">01 / ${animation.frames.length}</span></div>
           <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" disabled>▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di ${escape(animation.name)}" disabled>▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di ${escape(animation.name)}"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1× · ${timingLabel(animation)}</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
           <div class="gallery-card-meta"><span>${animation.frames.length} frame · ${animation.frameWidth} × ${animation.frameHeight}</span><span data-role="fps">${timingLabel(animation)}</span></div>
+          ${animation.armTrail ? `<div class="arm-trail-controls"><label class="loop-control"><input data-role="arm-trail" type="checkbox" ${animation.armTrail.enabled?'checked':''}> Scia e particelle</label><label class="arm-trail-strength">Intensità <input data-role="arm-trail-strength" type="range" min="0" max="100" step="5" value="${Math.round(animation.armTrail.strength*100)}" aria-label="Intensità effetto del braccio"><output data-role="arm-trail-value">${Math.round(animation.armTrail.strength*100)}%</output></label></div>` : ''}
           <div class="gallery-card-bottom"><div class="swatches" role="group" aria-label="Sfondo di ${escape(animation.name)}"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" aria-pressed="false"></button></div><a class="download-button" href="${escape(animation.image)}" download="${escape(animation.characterId ?? character.id)}-${escape(animation.id)}.png">Scarica PNG ↓</a></div>
         </div>
       </section>`).join('')}</div>`;
@@ -32,6 +33,13 @@
       const stage = $('.stage'), slider = $('[data-role="timeline"]');
       const play = $('[data-action="play"]'), step = $('[data-action="step"]');
       const speed = $('[data-role="speed"]'), loop = $('[data-role="loop"]');
+      const trail=animation.armTrail&&root.MovesArmTrail ? root.MovesArmTrail.create(animation,document) : null;
+      const trailEnabled=trail ? $('[data-role="arm-trail"]') : null;
+      const trailStrength=trail ? $('[data-role="arm-trail-strength"]') : null;
+      if(trail){
+        cleanups.push(()=>trail.destroy());
+        trailStrength.disabled=!trailEnabled.checked;
+      }
       const state = {loaded:false, requested:!reduced.matches, playing:false, visible:!root.IntersectionObserver, frame:0, remainder:0, lastTime:null, following:Boolean(animation.frameDurations)};
       let image = null, started = false;
       const fps = () => core.effectiveFps(animation, Number(speed.value));
@@ -46,6 +54,7 @@
         const [x,y,w,h] = animation.frames[state.frame];
         context.clearRect(0,0,canvas.width,canvas.height);
         context.imageSmoothingEnabled = false;
+        if(trail&&trailEnabled.checked&&!reduced.matches)trail.draw(context,image,state,Number(trailStrength.value)/100);
         context.drawImage(image,x,y,w,h,0,0,canvas.width,canvas.height);
         slider.value = state.frame;
         slider.setAttribute('aria-valuetext', `Frame ${state.frame+1} di ${animation.frames.length}`);
@@ -84,6 +93,10 @@
       listen(step,'click',()=>showFrame((state.frame+1)%animation.frames.length));
       listen(slider,'input',()=>showFrame(Number(slider.value)));
       listen(speed,'change',()=>{state.following=false;state.lastTime=null;$('[data-role="fps"]').textContent=timingLabel(animation,Number(speed.value));});
+      if(trail){
+        listen(trailEnabled,'change',()=>{trailStrength.disabled=!trailEnabled.checked;draw();});
+        listen(trailStrength,'input',()=>{$('[data-role="arm-trail-value"]').textContent=trailStrength.value+'%';draw();});
+      }
       listen(canvas,'keydown',event=>{
         if(!state.loaded)return;
         if(event.code==='Space'){event.preventDefault();setPlaying(!state.requested);}
@@ -93,7 +106,7 @@
         stage.dataset.background=button.dataset.background;
         card.querySelectorAll('.swatch').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       }));
-      return {card,animation,state,load,setPlaying,draw,tick(time){
+      return {card,animation,state,load,setPlaying,draw,releaseEffects(){trail?.destroy();},tick(time){
         if(!state.playing||!state.visible||document.hidden){state.lastTime=null;return;}
         if(state.lastTime!==null||state.following){
           const next=state.following ? core.advanceAnimation({frame:0,remainder:0},groupElapsed,animation,Number(speed.value),loop.checked) : core.advanceAnimation(state,Math.min(time-state.lastTime,250),animation,Number(speed.value),loop.checked);
@@ -121,7 +134,7 @@
     listen(container.querySelector('[data-action="play-all"]'),'click',playAll);
     listen(container.querySelector('[data-action="pause-all"]'),'click',pauseAll);
     listen(document,'visibilitychange',resetClock);
-    if(reduced.addEventListener)listen(reduced,'change',()=>{if(reduced.matches)pauseAll();});
+    if(reduced.addEventListener)listen(reduced,'change',()=>{if(reduced.matches)pauseAll();players.forEach(p=>p.draw());});
     let observer;
     if(root.IntersectionObserver){
       observer=new root.IntersectionObserver(entries=>{
@@ -129,6 +142,7 @@
           const player=players.find(p=>p.card===entry.target);
           if(!player)return;
           player.state.visible=entry.isIntersecting;player.state.lastTime=null;
+          if(!entry.isIntersecting)player.releaseEffects();
           if(entry.isIntersecting)player.load();
         });
         resetClock();

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8"><link rel="stylesheet" href="styles.css"><style>body{padding:25px;max-width:850px;margin:auto}.animation-gallery{grid-template-columns:1fr}.stage canvas{width:512px!important;max-width:100%}#result{font:13px system-ui;color:white;margin:10px}</style><script src="catalog.js"></script><script src="player-core.js"></script><script src="arm-trail.js"></script><script src="animation-gallery.js"></script></head><body data-qa="pass"><h1>Oscar · prova particelle</h1><p id="result">{"changedPixels":1181,"bbox":[318,114,440,174],"outsideArmZone":0,"zeroIntensityDiff":0}</p><div id="gallery"><div class="gallery-toolbar"><div><h2>Tutte le animazioni <span class="count-pill">1</span></h2><p>Confronta le mosse e controlla ogni anteprima.</p></div><div class="gallery-actions"><button type="button" class="play-button" data-action="play-all">Riproduci tutte</button><button type="button" class="step-button" data-action="pause-all">Pausa tutte</button></div></div><div class="animation-gallery">
+      <section class="player-panel animation-card" data-animation-card="0" aria-label="Pugno medio di Oscar" id="animation-0">
+        <div class="panel-header"><h3><span class="playing-dot is-paused" aria-hidden="true"></span>Pugno medio</h3><span class="version-tag">TRIMMED</span></div>
+        <div class="stage" data-background="dark" aria-busy="false"><canvas width="512" height="512" tabindex="0" role="img" aria-label="Pugno medio di Oscar">Anteprima di Pugno medio.</canvas><div class="stage-loading" role="status" hidden="">Caricamento Pugno medio…</div><div class="stage-error" role="alert" hidden=""></div></div>
+        <div class="player-controls">
+          <div class="timeline"><input data-role="timeline" type="range" min="0" max="78" value="0" step="1" aria-label="Frame di Pugno medio" aria-valuetext="Frame 33 di 79"><span class="frame-counter">33 / 79</span></div>
+          <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" aria-label="Riproduci Pugno medio">▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di Pugno medio">▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked=""> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di Pugno medio"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected="">1× · 0,75 s / impatto 0,5 s</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
+          <div class="gallery-card-meta"><span>79 frame · 512 × 512</span><span data-role="fps">0,75 s / impatto 0,5 s</span></div>
+          <div class="arm-trail-controls"><label class="loop-control"><input data-role="arm-trail" type="checkbox" checked=""> Scia e particelle</label><label class="arm-trail-strength">Intensità <input data-role="arm-trail-strength" type="range" min="0" max="100" step="5" value="75" aria-label="Intensità effetto del braccio"><output data-role="arm-trail-value">75%</output></label></div>
+          <div class="gallery-card-bottom"><div class="swatches" role="group" aria-label="Sfondo di Pugno medio"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" aria-pressed="false"></button></div><a class="download-button" href="../animation/oscar/oscar-medium-punch.png" download="oscar-medium-punch.png">Scarica PNG ↓</a></div>
+        </div>
+      </section></div></div><script>
+const source=MOVES_CATALOG.characters.find(c=>c.id==='oscar');const a=source.animations.find(a=>a.id==='medium-punch');const g=MovesGallery.install(document.getElementById('gallery'),{...source,animations:[a]});g.pauseAll();
+const poll=setInterval(()=>{
+const timeline=document.querySelector('[data-role=timeline]');if(timeline.disabled)return;clearInterval(poll);
+timeline.value=32;timeline.dispatchEvent(new Event('input'));
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),toggle=document.querySelector('[data-role=arm-trail]'),range=document.querySelector('[data-role=arm-trail-strength]');
+const on=ctx.getImageData(0,0,512,512).data;
+toggle.checked=false;toggle.dispatchEvent(new Event('change'));const off=ctx.getImageData(0,0,512,512).data;
+let diff=0,outside=0,x0=512,y0=512,x1=0,y1=0;
+for(let i=0;i<on.length;i+=4){if(on[i]===off[i]&&on[i+1]===off[i+1]&&on[i+2]===off[i+2]&&on[i+3]===off[i+3])continue;diff++;const x=i/4%512,y=Math.floor(i/4/512);x0=Math.min(x0,x);y0=Math.min(y0,y);x1=Math.max(x1,x);y1=Math.max(y1,y);if(x<230||x>455||y<95||y>205)outside++;}
+toggle.checked=true;toggle.dispatchEvent(new Event('change'));range.value=0;range.dispatchEvent(new Event('input'));const zero=ctx.getImageData(0,0,512,512).data;let zeroDiff=0;for(let i=0;i<zero.length;i++)if(zero[i]!==off[i])zeroDiff++;
+range.value=75;range.dispatchEvent(new Event('input'));document.body.dataset.qa=diff>100&&outside===0&&zeroDiff===0?'pass':'fail';document.getElementById('result').textContent=JSON.stringify({changedPixels:diff,bbox:[x0,y0,x1,y1],outsideArmZone:outside,zeroIntensityDiff:zeroDiff});
+},30);
+</script>
+</body></html>

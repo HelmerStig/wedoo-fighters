@@ -56,6 +56,8 @@ const extraAnimations=[
 ];
 const punchTiming=await readJson(join(root,'animation/light-punch-timing.json'));
 const mediumPunchTiming=await readJson(join(root,'animation/medium-punch-timing.json'));
+const mediumPunchTrails=await readJson(join(root,'animation/medium-punch-trails.json'));
+const lightPunchTrails=await readJson(join(root,'animation/light-punch-trails.json'));
 const blockTiming=await readJson(join(root,'animation/block-timing.json'));
 const jumpTiming=await readJson(join(root,'animation/jump-timing.json'));
 for(const extra of extraAnimations){
@@ -99,6 +101,13 @@ for(const extra of extraAnimations){
       else if(item.playback!=='forward')throw Error('Riproduzione pugno medio non valida');
       if(JSON.stringify(item.frameSequence)!==JSON.stringify(expected)||expected.length!==frames.length||expected[peak]!==entry.impactSourceFrame||Object.values(atlas.frames).some((f,i)=>f.source_frame!==expected[i]))throw Error('Sequenza pugno medio incoerente: '+item.character);
       timing={impactFrame:peak,impactMs:ms,playbackMode:item.playback,sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
+    }
+    if(extra.id==='light-punch'||extra.id==='medium-punch'){
+      const profiles=extra.id==='light-punch'?lightPunchTrails:mediumPunchTrails;
+      const trail=profiles.items.find(t=>t.character.toLowerCase()===character.id);
+      if(!trail||trail.sourceSheetId!==item.sourceSheetId||trail.sourceStart!==item.sourceStart||trail.sourceEnd!==item.sourceEnd||trail.impactFrame!==timing.impactFrame||trail.frameIndexSpace!=='exported-playback'||trail.startFrame<0||trail.endFrame>=frames.length||trail.startFrame>trail.endFrame)throw Error('Rivedere la maschera del braccio per '+item.character+' / '+extra.id);
+      const {character:_,...profile}=trail;
+      timing.armTrail=profile;
     }
     character.animations.push({...timing,id:extra.id,name:extra.name,description:extra.description,image:url(resolve(root,item.png)),atlas:url(resolve(root,item.atlas)),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:item.trimmed,playbackFps:extra.id==='block'?timing.blockFrame*1000/timing.blockMs:extra.durationMs?frames.length*1000/extra.durationMs:(extra.playbackFps??24),...(extra.durationMs?{durationMs:extra.durationMs}:{}),savedSpeed:item.speedMultiplier});
   }
