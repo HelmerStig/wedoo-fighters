@@ -32,6 +32,8 @@ test('server serve solo il file audio autorizzato, con MIME MP3',async()=>{
  try{const base='http://127.0.0.1:'+server.address().port;
  const ok=await fetch(base+'/sfx/traffic.mp3',{method:'HEAD'});assert.equal(ok.status,200);assert.equal(ok.headers.get('content-type'),'audio/mpeg');
  for(const file of ['wind.mp3','tuono.mp3']){const response=await fetch(base+'/sfx/'+file,{method:'HEAD'});assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'audio/mpeg');}
+ const birds=await fetch(base+'/sfx/uccelli.mp3',{method:'HEAD'});assert.equal(birds.status,200);assert.equal(birds.headers.get('content-type'),'audio/mpeg');
+ const water=await fetch(base+'/sfx/acqua.mp3',{method:'HEAD'});assert.equal(water.status,200);assert.equal(water.headers.get('content-type'),'audio/mpeg');
  assert.equal((await fetch(base+'/sfx/altro.mp3')).status,403);
  assert.equal((await fetch(base+'/original-backgrounds/piazza-castello/stage-castello.png',{method:'HEAD'})).status,200);
  }finally{await new Promise(r=>server.close(r));}

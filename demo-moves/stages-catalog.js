@@ -3,7 +3,7 @@
   else root.STAGES_CATALOG=factory();
 })(typeof globalThis!=='undefined'?globalThis:this,function(){
   const base='../original-backgrounds/villa-arduino/';
-  return [{id:'villa-arduino',name:'Villa Arduino',width:2550,height:1080,viewportWidth:1920,
+  return [{id:'villa-arduino',name:'Villa Arduino',cats:[{id:'telma',level:'balconies',zone:0,scale:.2},{id:'tilda',level:'balconies',zone:1,scale:.18},{id:'tullio',level:'ground',groundY:972,scale:.35}],width:2550,height:1080,viewportWidth:1920,
     // Luce alta da sinistra: proiezione verso destra e verso il basso sul pavimento.
     shadow:{color:'#1d1625',shearX:0.5,flattenY:0.11,opacity:0.72,contactOpacity:0.28},
     layers:[
@@ -54,5 +54,13 @@
     ],fighters:[
       {characterId:'oscar',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:253.5,anchorY:433,flipX:false},
       {characterId:'fra-tavarone',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:245,anchorY:427,flipX:true}
+    ]},{id:'piazza-statuto',name:'Piazza Statuto',ambientVolume:.2,birdVolume:.5,birdTrack:'../sfx/uccelli.mp3',birdGroundTexture:{id:'blackbird-ground',image:'../original-backgrounds/piazza-statuto/merlo/merlo-spritesheet.png',width:896,height:896},birdTexture:{id:'blackbird-sheet',image:'../original-backgrounds/piazza-statuto/merlo/merlo-volo-spritesheet.png',width:896,height:896},ambientTrack:'../sfx/acqua.mp3',ambientAudioLabel:'acqua',ambient:'statuto',ambientTexture:{id:'water-mask',image:'../original-backgrounds/piazza-statuto/acqua-mask.png',width:210,height:550},width:2550,height:1080,viewportWidth:1920,webglClouds:true,cloudPalette:'sunset',
+    shadow:{color:'#302239',shearX:.5,flattenY:.11,opacity:.72,contactOpacity:.28},
+    layers:[
+      {id:'sky',image:'../original-backgrounds/piazza-statuto/cielo.png',zIndex:0,width:2550,height:1080},
+      {id:'foreground',image:'../original-backgrounds/piazza-statuto/statuto.png',zIndex:1,width:2550,height:1080}
+    ],fighters:[
+      {characterId:'angela',animationId:'idle',x:675,groundY:1025,scale:4/3,anchorX:264.5,anchorY:437,flipX:false},
+      {characterId:'giordano',animationId:'idle',x:1890,groundY:1025,scale:4/3,anchorX:258,anchorY:431,flipX:true}
     ]}];
 });

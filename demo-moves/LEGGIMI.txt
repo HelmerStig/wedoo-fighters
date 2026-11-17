@@ -538,3 +538,83 @@ Durante la camminata, piedi sovrapposti o con una differenza di quota non
 compatibile con il pavimento non inclinano la proiezione: si usa il solo
 piede d'appoggio. Il determinante della matrice resta coerente in tutti i
 frame e nei due orientamenti, evitando ribaltamenti verticali dell'ombra.
+
+PIAZZA STATUTO
+Vista 16:9 da 1920x1080 su stage 2550x1080, centrata e trascinabile.
+Cielo z0, statuto.png z1. Angela a sinistra e Giordano a destra, in idle.
+Nuvole WebGL con palette pesca/malva e trasparenza ridotta per il tramonto;
+rendering Canvas2D di riserva senza WebGL. Niente stelle o temporale.
+Preset CRT iniziale uguale a Villa Arduino, con controlli completi.
+La miniatura apre soltanto questo stage, come per gli altri scenari.
+
+ACQUA MONUMENTO - PIAZZA STATUTO
+Le cascate hanno variazioni di luce in discesa a 16 fps, sovrapposte soltanto
+ai pixel azzurri selezionati in acqua-mask.png. Pietre e statue restano ferme.
+Il controllo Acqua monumento attiva/disattiva l'effetto; Vista originale,
+Pausa nuvole e movimento ridotto mantengono il comportamento degli altri
+effetti ambientali. Rigenerazione maschera (senza modificare il fondale):
+  python demo-moves/scripts/build-statuto-water.py
+
+AUDIO ACQUA - PIAZZA STATUTO
+Attiva acqua riproduce ../sfx/acqua.mp3 in loop, con volume regolabile
+(inizialmente 50%). Fade-in e fade-out di 3 secondi a ogni giro, come per
+il traffico. Nessun autoplay: parte al click, si sospende con la scheda nascosta
+e si arresta lasciando lo stage. Il movimento dell'acqua resta indipendente.
+
+MERLI - PIAZZA STATUTO
+Dieci merli in pixel art procedurale: sette piccoli fra cielo e fondale
+e tre piu grandi davanti al monumento, sempre dietro ai personaggi. Ali animate in quattro pose, velocita
+e direzione variabili; entrano ed escono dai bordi senza inversioni improvvise.
+La distribuzione cambia a ogni apertura, con traiettorie continue durante
+il passaggio. Le distanze regolano dimensione e parallasse durante il drag.
+Il controllo Merli e indipendente da Acqua monumento. Pausa nuvole congela
+anche i voli; Vista originale e movimento ridotto sospendono gli uccelli.
+
+Merli aggiornati allo spritesheet utente merlo/merlo-volo-spritesheet.png:
+896x896, 7x7 celle da 128x128, 49 frame con trasparenza conservata.
+Il PNG originale guarda a sinistra; i merli verso destra sono riflessi.
+Sette passano fra cielo e monumento, tre davanti al monumento; tutti
+vengono disegnati prima dei personaggi e non li coprono mai.
+
+Merli: velocita di volo aumentata dell'80%, animazione ali a 36-44 fps
+con piccole differenze fra gli individui.
+
+MERLI - ATTERRAGGI
+Volo accelerato a 2.7 volte la velocita originale, ali a 77 fps.
+I tre merli vicini atterrano occasionalmente sul prato ai lati del monumento
+(x 220-850 oppure 1750-2340, y 970-1000), sempre dietro ai personaggi.
+Discesa e decollo durano 2.2 secondi ciascuno; a terra si usa lo spritesheet
+merlo-spritesheet.png, 49 frame a 24 fps per esattamente tre cicli (6125 ms),
+poi riprende il volo. Pausa nuvole congela anche atterraggi e animazioni.
+
+Merli posati: dimensione aumentata del 40%, con interpolazione graduale
+durante discesa e decollo; punti di posa alzati a y 970-1000.
+
+AUDIO UCCELLI - PIAZZA STATUTO
+Il pulsante Attiva suoni uccelli riproduce sfx/uccelli.mp3 in loop con
+fade-in e fade-out di 3 secondi. Volume indipendente dall'acqua (50% iniziale).
+Si sospende con la scheda nascosta e si arresta uscendo dallo stage.
+
+Merli a terra: scala finale 2.1 volte quella di volo (circa 70-100 px
+di larghezza della cella sullo stage), vicina alla misura di un piede
+dei personaggi. Transizione graduale durante discesa e decollo.
+
+Piazza Statuto: cursori volume acqua e uccelli rimossi. Entrambi i livelli
+sono fissati al 50% nel catalogo (ambientVolume e birdVolume), da tarare
+insieme all'ascolto. Restano i pulsanti di attivazione indipendenti.
+
+Taratura Piazza Statuto: volume acqua 20%, uccelli 50%.
+
+GATTI - VILLA ARDUINO
+Telma e Tilda corrono sui due balconi centrali (quote 665 e 710 px),
+con cambi di direzione e pause casuali. Di tanto in tanto saltano sul balcone
+vicino seguendo un arco di 1.1 secondi, poi riprendono la corsa. Tullio corre
+sul pavimento a quota 972 px, con inversioni e piccoli salti occasionali.
+Tutti vengono disegnati dopo lo sfondo ma prima dei personaggi.
+Il pulsante Gatti li sospende; Vista originale e movimento ridotto li
+nascondono. Pausa nuvole congela corse e salti. Le immagini originali
+non sono modificate; i PNG si caricano soltanto aprendo Villa Arduino.
+Run: Telma 48, Tilda 39, Tullio 41 frame non vuoti da 512x512, a 30 fps.
+Jump: 15 frame da 512x512 per gatto, distribuiti sulla traiettoria.
+Rigenerazione atlas e appoggi dopo aggiornamenti degli spritesheet:
+  python demo-moves/scripts/build-stage-cats.py
