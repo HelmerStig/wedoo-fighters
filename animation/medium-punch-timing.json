@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-11-18",
   "durationMs": 750,
-  "impactMs": 500,
+  "impactMs": 400,
   "frameIndexBase": 0,
   "selectionMethod": "Controllo visivo di tutti i fotogrammi; marcatore sulla massima estensione del colpo principale. Le estensioni preliminari e le pose mantenute sono documentate nelle note.",
   "items": [
@@ -43,7 +43,7 @@
       "impactFrame": 14,
       "impactSourceFrame": 14,
       "playback": "forward-reverse",
-      "note": "Nuova versione del 18 novembre 2026: 18 frame sorgente gia accorciati, andata e ritorno inverso. Massima estensione al frame sorgente 14 (da 0), sincronizzata a 500 ms; posa estesa mantenuta nei frame successivi."
+      "note": "Nuova versione del 18 novembre 2026: 18 frame sorgente gia accorciati, andata e ritorno inverso. Massima estensione al frame sorgente 14 (da 0), sincronizzata a 400 ms; posa estesa mantenuta nei frame successivi."
     },
     {
       "character": "PEPPO",

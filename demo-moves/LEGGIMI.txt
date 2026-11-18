@@ -1,5 +1,47 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+PUGNO FORTE - MARSAN (18 NOVEMBRE 2026)
+Importata l'ultima revisione Strong Punch cmwm2r5eg000vq3wbkgafjj6w:
+63 frame salvati, celle 512x512, PNG e padding invariati, solo avanti.
+Impatto al frame esteso pulito dopo l'arco bianco sorgente (indice 33)
+a 0,50 secondi; ciclo di 1 secondo con preparazione e recupero inclusi.
+Scia e particelle azzurre al 75%, maschere del braccio riviste sui frame 30-33.
+Visibile nella pagina Marsan e in mosse.html?move=strong-punch.
+Asset: animation/marsan/marsan-strong-punch.*; dati nei manifest strong-punch.
+
+PUGNO FORTE - ALBERTO (18 NOVEMBRE 2026)
+Importato Strong punch cmwm1wpy600ri50ya8y41drko: versione completa disponibile
+da 64 frame, celle 512x512, PNG sorgente invariato e padding conservato.
+Pugno in salto: impatto al primo frame completamente esteso (indice 16)
+a 0,50 secondi; ciclo completo di 1 secondo, solo avanti, con atterraggio e
+recupero originali inclusi. Loop attivo come per gli altri pugni.
+Scia e particelle azzurre al 75%, maschere riviste sul braccio nei frame 15-16.
+Visibile nella pagina Alberto e in mosse.html?move=strong-punch.
+Asset: animation/alberto/alberto-strong-punch.*; dati nei manifest strong-punch.
+
+PUGNO FORTE - OSCAR (18 NOVEMBRE 2026)
+Importato Strong Punch cmwlyx95n00b6rt6m37u8h9ol, ultima revisione salvata
+da 52 frame dello stesso video della versione da 64 frame.
+Solo avanti, con recupero gia incluso: 1 secondo, primo frame esteso pulito
+dopo la scia sorgente (indice 25) a 0,50 secondi. Celle 512x512 e PNG invariati.
+Scia e particelle azzurre al 75%, maschere riviste sui frame 23-25.
+Visibile nella pagina Oscar e in mosse.html?move=strong-punch.
+Asset: animation/oscar/oscar-strong-punch.*; dati nei manifest strong-punch.
+
+PUGNO FORTE - PIPPO (18 NOVEMBRE 2026)
+Importata la versione AutoSprite Strong Punch cmwly4b61000b9vuz7nktixhl:
+40 frame salvati, celle 512x512, PNG conservato byte per byte, padding invariato.
+Pagina: mosse.html?move=strong-punch, titolo "Pugno forte"; presente anche su Pippo.
+Riproduzione solo avanti con recupero incluso, ciclo 1 secondo, impatto al
+frame 20 (indice da 0) a 0,50 secondi, loop predefinito. 40 fps a velocita 1x.
+Scia e particelle azzurre con gli stessi controlli degli altri pugni, al 75%.
+Maschere del braccio riviste nei frame 18-20: non includono testa o busto.
+La scia bianca e la stella gia disegnate nel PNG sorgente sono conservate;
+il controllo degli effetti disattiva soltanto la scia e le particelle aggiunte.
+Manifest, timing e maschere: animation/strong-punch-{manifest,timing,trails}.json.
+Le maschere sono manuali: build-punch-trails.py continua a gestire light/medium.
+PNG e atlas: animation/pippo/pippo-strong-punch.*.
+
 SCOPO DELLA DEMO
 Catalogo e banco di prova degli asset: lo sviluppo del gioco avverra in Godot.
 Gli effetti di anteprima non modificano PNG, atlas o animazioni sorgenti.
@@ -9,8 +51,8 @@ Importate le ultime versioni AutoSprite chiamate "medium punch" per Alberto,
 Fabio Clara, Sboz, Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan.
 Pagina: mosse.html?move=medium-punch. Report sotto al titolo della mossa:
 reports/medium-punch-timing.html, con CSV e pose di impatto.
-A 1x: frame di impatto principale a 500 ms, ciclo completo di 750 ms.
-Durate variabili prima e dopo il marcatore: 500 ms e 250 ms.
+A 1x: frame di impatto principale a 400 ms, ciclo completo di 750 ms.
+Durate variabili prima e dopo il marcatore: 400 ms e 350 ms.
 Otto personaggi usano avanti e indietro; Sboz usa solo avanti e il recupero
 gia presente nella sorgente. L'atlas ripete i riferimenti alle celle nel
 ritorno, senza duplicare pixel nel PNG o cambiare il player delle altre mosse.
@@ -33,7 +75,7 @@ La sezione contiene solo questi nove personaggi; gli altri non sono importati.
 Pippo aggiornato il 18 novembre 2026: sourceSheetId cmwlwgge3000yjzef08f7pvlp,
 18 celle sorgente gia accorciate su un foglio precedente da 38 frame.
 Sequenza 0..17..0: 35 passi complessivi; frame di impatto sorgente 14 (da 0)
-a 500 ms, fine ciclo a 750 ms. Nessun ridimensionamento o secondo taglio.
+a 400 ms, fine ciclo a 750 ms. Nessun ridimensionamento o secondo taglio.
 Per aggiornare soltanto le maschere e la posa del report di un personaggio:
   python demo-moves/scripts/build-punch-trails.py --move medium-punch --character pippo
   node demo-moves/scripts/build-catalog.mjs
@@ -355,13 +397,13 @@ original-porta-susa.png e i file di lavorazione non vengono pubblicati.
 
 LUCI DI PORTA SUSA
 12 finestre calde della facciata e 2 lanterne hanno sfarfallio indipendente:
-cicli pseudocasuali, brevi cali di luminosità e ritorno alla luce originale.
+cicli pseudocasuali, brevi cali di luminositÃ  e ritorno alla luce originale.
 Lampioni e finestre sovrapposte sono mascherati separatamente. Nessuna parte
 del PNG originale viene modificata. Controllo Disattiva/Attiva sfarfallio;
 movimento ridotto mantiene tutte le luci fisse, e il drag non cambia la fase.
 La pausa nuvole non ferma lo sfarfallio, gestito dal clock dei personaggi.
 Le due lanterne si vedono esplorando il lato destro del panorama.
-stage-lights.js disegna un atlas di maschere sui soli pixel già luminosi,
+stage-lights.js disegna un atlas di maschere sui soli pixel giÃ  luminosi,
 prima della pioggia e dei personaggi. Shader e audio del temporale restano
 indipendenti. Maschere e coordinate: original-backgrounds/porta-susa/
 lights-mask.png e lights.json, catalogo incorporato stage-lights-catalog.js.

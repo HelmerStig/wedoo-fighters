@@ -18,11 +18,11 @@ test('Pugno medio disponibile esattamente per i nove personaggi richiesti',()=>{
  assert.equal(manifest.creditsUsed,0);
  for(const item of manifest.items){
   const a=roster.find(c=>c.id===item.character.toLowerCase()).animations.find(a=>a.id==='medium-punch');
-  assert.equal(a.name,'Pugno medio');assert.equal(a.durationMs,750);assert.equal(a.impactMs,500);
+  assert.equal(a.name,'Pugno medio');assert.equal(a.durationMs,750);assert.equal(a.impactMs,400);
   assert.equal(a.frames.length,item.frames);assert.equal(a.playbackMode,item.playback);
  }
 });
-test('impatto a 500 ms e ciclo a 750 ms, con loop, singola riproduzione e velocita diverse',()=>{
+test('impatto a 400 ms e ciclo a 750 ms, con loop, singola riproduzione e velocita diverse',()=>{
  for(const c of roster){
   const a=c.animations.find(a=>a.id==='medium-punch');if(!a)continue;
   assert.equal(a.frameDurations.length,a.frames.length,c.id);
@@ -30,8 +30,8 @@ test('impatto a 500 ms e ciclo a 750 ms, con loop, singola riproduzione e veloci
   assert.ok(Math.abs(a.frameDurations.reduce((x,y)=>x+y,0)-750)<1e-8,c.id);
   for(const speed of [.5,1,2]){
    const initial={frame:0,remainder:0};
-   const before=advanceAnimation(initial,499.999/speed,a,speed,true);
-   const hit=advanceAnimation(initial,500/speed,a,speed,true);
+   const before=advanceAnimation(initial,399.999/speed,a,speed,true);
+   const hit=advanceAnimation(initial,400/speed,a,speed,true);
    assert.equal(before.frame,a.impactFrame-1,c.id);
    assert.equal(hit.frame,a.impactFrame,c.id);assert.ok(hit.remainder<1e-8,c.id);
    assert.equal(advanceAnimation(initial,750/speed,a,speed,true).frame,0,c.id);
@@ -40,9 +40,9 @@ test('impatto a 500 ms e ciclo a 750 ms, con loop, singola riproduzione e veloci
    assert.equal(advanceAnimation(initial,749/speed,a,speed,false).ended,false,c.id);
   }
   let accumulated={frame:0,remainder:0};
-  for(let i=0;i<500;i++)accumulated=advanceAnimation(accumulated,1,a,1,true);
+  for(let i=0;i<400;i++)accumulated=advanceAnimation(accumulated,1,a,1,true);
   assert.equal(accumulated.frame,a.impactFrame,c.id);
-  for(let i=500;i<750;i++)accumulated=advanceAnimation(accumulated,1,a,1,true);
+  for(let i=400;i<750;i++)accumulated=advanceAnimation(accumulated,1,a,1,true);
   assert.equal(accumulated.frame,0,c.id);
  }
 });
@@ -79,7 +79,7 @@ test('otto recuperi inversi, Sboz solo avanti e PNG sorgenti conservati byte per
 test('report HTML, CSV e pose corrispondono ai nove impatti selezionati',()=>{
  const html=fs.readFileSync(path.join(root,'demo-moves/reports/medium-punch-timing.html'),'utf8');
  const csv=fs.readFileSync(path.join(root,'demo-moves/reports/medium-punch-timing.csv'),'utf8');
- assert.match(html,/0,50 s/);assert.match(html,/0,75 s/);assert.match(html,/Solo avanti/);
+ assert.match(html,/0,40 s/);assert.match(html,/0,75 s/);assert.match(html,/Solo avanti/);
  assert.match(html,/Avanti e indietro/);assert.match(html,/frame isolato finale/);
  for(const item of manifest.items){
   const slug=item.character.toLowerCase();

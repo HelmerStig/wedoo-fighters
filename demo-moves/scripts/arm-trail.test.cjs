@@ -8,7 +8,7 @@ const at=time=>advanceAnimation({frame:0,remainder:0},time,animation,1,false);
 test('effetto disponibile su tutti e soli i pugni importati, legato a fogli e tagli correnti',()=>{
  const enabled=characters.flatMap(c=>c.animations.filter(a=>a.armTrail).map(a=>c.id+'/'+a.id));
  const expected=[];
- for(const move of ['light-punch','medium-punch']){
+ for(const move of ['light-punch','medium-punch','strong-punch']){
   const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../../animation/'+move+'-manifest.json'),'utf8').replace(/^\uFEFF/,''));
   for(const item of manifest.items){
    const id=item.character.toLowerCase(),a=characters.find(c=>c.id===id).animations.find(a=>a.id===move),profile=a.armTrail;
@@ -18,7 +18,7 @@ test('effetto disponibile su tutti e soli i pugni importati, legato a fogli e ta
   }
  }
  assert.deepEqual(Array.from(enabled).sort(),expected.sort());
- assert.equal(animation.impactMs,500);assert.equal(animation.durationMs,750);
+ assert.equal(animation.impactMs,400);assert.equal(animation.durationMs,750);
 });
 test('ogni profilo emette dall avambraccio e dal pugno, senza cambiare durata, pause o recupero',()=>{
  for(const c of characters)for(const a of c.animations){
@@ -42,31 +42,31 @@ test('ogni profilo emette dall avambraccio e dal pugno, senza cambiare durata, p
  }
 });
 test('sagome limitate all estensione, maschere del braccio e sfumatura dopo impatto',()=>{
- assert.deepEqual(samples(animation,at(400),1),[]);
- const ghosts=samples(animation,at(500),1);
+ assert.deepEqual(samples(animation,at(320),1),[]);
+ const ghosts=samples(animation,at(400),1);
  assert.equal(ghosts.length,3);assert.deepEqual(ghosts.map(x=>x.frame),[28,29,30]);
  assert.ok(ghosts[0].alpha<ghosts[2].alpha);
- assert.ok(samples(animation,at(515),1)[0].alpha<ghosts[0].alpha);
- assert.deepEqual(samples(animation,at(531),1),[]);
+ assert.ok(samples(animation,at(415),1)[0].alpha<ghosts[0].alpha);
+ assert.deepEqual(samples(animation,at(431),1),[]);
  assert.deepEqual(samples(animation,at(600),1),[]);
- assert.deepEqual(samples(animation,at(500),0),[]);
+ assert.deepEqual(samples(animation,at(400),0),[]);
  for(const polygon of Object.values(animation.armTrail.polygons)){
   assert.ok(polygon.length>=3);
   assert.ok(polygon.every(([x,y])=>x>=270&&x<=445&&y>=120&&y<=180));
  }
 });
 test('particelle luminose nascono dal braccio, viaggiano a sinistra e svaniscono senza accumulo nei loop',()=>{
- const born=particles(animation,at(437.5),.75),later=particles(animation,at(457.5),.75);
+ const born=particles(animation,at(350),.75),later=particles(animation,at(370),.75);
  assert.equal(born.length,11);assert.ok(later[0].x<born[0].x);
  assert.ok(later[0].alpha<born[0].alpha);
- const peak=particles(animation,at(500),.75);
+ const peak=particles(animation,at(400),.75);
  assert.equal(peak.length,55);assert.ok(peak.every(p=>p.width>=3&&p.width<=7&&p.height===1&&p.alpha>0&&p.alpha<=.75));
  assert.ok(peak.every(p=>['#c8efff','#9cd8f0','#79bddb'].includes(p.color)));
  assert.ok(peak.every(p=>p.x>=250&&p.x<=450&&p.y>=100&&p.y<=190));
- assert.deepEqual(particles(animation,at(420),1),[]);
+ assert.deepEqual(particles(animation,at(330),1),[]);
  assert.deepEqual(particles(animation,at(725),1),[]);
- assert.deepEqual(particles(animation,at(500),0),[]);
- assert.deepEqual(particles(animation,at(500),.75),peak,'seeking gives the same particles');
+ assert.deepEqual(particles(animation,at(400),0),[]);
+ assert.deepEqual(particles(animation,at(400),.75),peak,'seeking gives the same particles');
  const loop=advanceAnimation({frame:0,remainder:0},750,animation,1,true);
  assert.deepEqual(particles(animation,loop,1),[]);
 });
@@ -78,12 +78,12 @@ function context(){
 test('maschere alpha ritagliate senza lettura pixel; cache e stato canvas isolati',()=>{
  const canvases=[];const doc={createElement(){const c=context();const canvas={getContext(){return c;},context:c};canvases.push(canvas);return canvas;}};
  const renderer=create(animation,doc),target=context(),image={};
- renderer.draw(target,image,at(500),.75);
+ renderer.draw(target,image,at(400),.75);
  assert.equal(canvases.length,3);assert.equal(target.globalAlpha,1);
  assert.equal(target.calls.filter(c=>c[0]==='rect').length,55);
  assert.ok(canvases.every(c=>c.context.calls.some(x=>x[0]==='clip')));
  assert.ok(canvases.every(c=>c.context.calls.some(x=>x[0]==='image')));
- renderer.draw(target,image,at(500),.25);assert.equal(canvases.length,3);
- renderer.destroy();renderer.draw(target,image,at(500),1);assert.equal(canvases.length,6);
+ renderer.draw(target,image,at(400),.25);assert.equal(canvases.length,3);
+ renderer.destroy();renderer.draw(target,image,at(400),1);assert.equal(canvases.length,6);
 });
 

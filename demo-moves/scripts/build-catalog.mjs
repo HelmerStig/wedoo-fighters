@@ -52,11 +52,14 @@ const extraAnimations=[
   {manifest:'jump-manifest.json',id:'jump',name:'Salto',description:'Salto con apice sincronizzato',durationMs:1000},
   {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500},
   {manifest:'medium-punch-manifest.json',id:'medium-punch',name:'Pugno medio',description:'Pugno medio e ritorno in guardia',durationMs:750},
+  {manifest:'strong-punch-manifest.json',id:'strong-punch',name:'Pugno forte',description:'Pugno forte e ritorno in guardia',durationMs:1000},
   {manifest:'block-manifest.json',id:'block',name:'Parata alta',description:'Parata alta pronta in 0,1 secondi'}
 ];
 const punchTiming=await readJson(join(root,'animation/light-punch-timing.json'));
 const mediumPunchTiming=await readJson(join(root,'animation/medium-punch-timing.json'));
 const mediumPunchTrails=await readJson(join(root,'animation/medium-punch-trails.json'));
+const strongPunchTiming=await readJson(join(root,'animation/strong-punch-timing.json'));
+const strongPunchTrails=await readJson(join(root,'animation/strong-punch-trails.json'));
 const lightPunchTrails=await readJson(join(root,'animation/light-punch-trails.json'));
 const blockTiming=await readJson(join(root,'animation/block-timing.json'));
 const jumpTiming=await readJson(join(root,'animation/jump-timing.json'));
@@ -102,8 +105,15 @@ for(const extra of extraAnimations){
       if(JSON.stringify(item.frameSequence)!==JSON.stringify(expected)||expected.length!==frames.length||expected[peak]!==entry.impactSourceFrame||Object.values(atlas.frames).some((f,i)=>f.source_frame!==expected[i]))throw Error('Sequenza pugno medio incoerente: '+item.character);
       timing={impactFrame:peak,impactMs:ms,playbackMode:item.playback,sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
     }
-    if(extra.id==='light-punch'||extra.id==='medium-punch'){
-      const profiles=extra.id==='light-punch'?lightPunchTrails:mediumPunchTrails;
+    if(extra.id==='strong-punch'){
+      const entry=strongPunchTiming.items.find(t=>t.character.toLowerCase()===character.id);
+      if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di impatto forte per '+item.character);
+      const peak=entry.impactFrame,ms=strongPunchTiming.impactMs,total=strongPunchTiming.durationMs;
+      if(item.playback!=='forward'||!Number.isInteger(peak)||peak<1||peak>=frames.length||ms<=0||total<=ms||total!==extra.durationMs)throw Error('Timing pugno forte non valido: '+item.character);
+      timing={impactFrame:peak,impactMs:ms,playbackMode:'forward',sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
+    }
+    if(extra.id==='light-punch'||extra.id==='medium-punch'||extra.id==='strong-punch'){
+      const profiles=extra.id==='light-punch'?lightPunchTrails:extra.id==='medium-punch'?mediumPunchTrails:strongPunchTrails;
       const trail=profiles.items.find(t=>t.character.toLowerCase()===character.id);
       if(!trail||trail.sourceSheetId!==item.sourceSheetId||trail.sourceStart!==item.sourceStart||trail.sourceEnd!==item.sourceEnd||trail.impactFrame!==timing.impactFrame||trail.frameIndexSpace!=='exported-playback'||trail.startFrame<0||trail.endFrame>=frames.length||trail.startFrame>trail.endFrame)throw Error('Rivedere la maschera del braccio per '+item.character+' / '+extra.id);
       const {character:_,...profile}=trail;

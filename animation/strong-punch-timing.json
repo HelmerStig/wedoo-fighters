@@ -1,0 +1,38 @@
+{
+  "durationMs": 1000,
+  "impactMs": 500,
+  "items": [
+    {
+      "character": "Pippo",
+      "sourceSheetId": "cmwly4b61000b9vuz7nktixhl",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "impactFrame": 20,
+      "note": "Overhand punch, forward playback includes recovery. Source has its own white streak and impact flash, preserved unchanged."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwlyx95n00b6rt6m37u8h9ol",
+      "sourceStart": 0,
+      "sourceEnd": 51,
+      "impactFrame": 25,
+      "note": "First clean extended punch after the source motion smear; forward playback includes held extension and natural recovery."
+    },
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwm1wpy600ri50ya8y41drko",
+      "sourceStart": 0,
+      "sourceEnd": 63,
+      "impactFrame": 16,
+      "note": "First fully extended airborne punch; forward playback preserves takeoff, landing, recovery and the complete saved sheet."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwm2r5eg000vq3wbkgafjj6w",
+      "sourceStart": 0,
+      "sourceEnd": 62,
+      "impactFrame": 33,
+      "note": "First clean fully extended descending punch after the source white arc. Wind-up, held extension and recovery preserved, forward only."
+    }
+  ]
+}

@@ -3,4 +3,5 @@ Pugno medio alto:
 	Fixed side view, facing right, camera locked. The full body and the fist stay inside the frame. One single medium straight punch with the front arm. The first third is the wind-up: weight shifts slightly onto the back leg, both knees bend a little, and the punching fist pulls back a few pixels toward the cheek. The rest is the punch: the front foot pushes off, the hips and shoulder rotate slightly, and the fist accelerates smoothly straight forward. The punch is still moving until the last frame, where it reaches full extension. The guard hand stays up protecting the jaw the whole time. Feet stay planted, no steps, no jumps, no extra attacks. Keep the character's look, pixel art style and scale unchanged.
 	Exactly one punch in the whole clip, no second punch, no repeated strikes.
 
-Pugno Forte Alto: nel frattempo, provi a crearmi tu uno spritesheet per Pippo che esegua quella mossa?
+Pugno Forte Alto Pippo
+	

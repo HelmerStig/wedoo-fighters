@@ -8,7 +8,7 @@
         "h": 512
       },
       "source_frame": 0,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "8ac6b662502feb8d4232b3ad10e1efc9c9a757c11eb1411f15d85ff2e7d26183"
     },
     "1": {
@@ -19,7 +19,7 @@
         "h": 512
       },
       "source_frame": 1,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "89e7196c3a168bd23a65175fccab9f55a9dcec83a179293feaa06b1ecf8fb7fe"
     },
     "2": {
@@ -30,7 +30,7 @@
         "h": 512
       },
       "source_frame": 2,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "d137df1f9d14de426da08e167091e99624f55d9a624b9f241e14d771744e4f4e"
     },
     "3": {
@@ -41,7 +41,7 @@
         "h": 512
       },
       "source_frame": 3,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "286c34a6a76690dc458f172290f8973cc79480266d7d2f10b8f4a6660e2fbba1"
     },
     "4": {
@@ -52,7 +52,7 @@
         "h": 512
       },
       "source_frame": 4,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "b441082fcff6b5d27fac6e03c137aff8295a74f15073d7826a9fc496dc318f70"
     },
     "5": {
@@ -63,7 +63,7 @@
         "h": 512
       },
       "source_frame": 5,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "13b6c3432f90d7c9f3d1674d724bad204336791d8869e1ae8ba266c383f467b5"
     },
     "6": {
@@ -74,7 +74,7 @@
         "h": 512
       },
       "source_frame": 6,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "2092cff0b7b13f1212668044e402bde1f4e250144027efff34a2c442dff82deb"
     },
     "7": {
@@ -85,7 +85,7 @@
         "h": 512
       },
       "source_frame": 7,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "7ae52955e40702282b74c4e009e40d35c65866238bb94d02315d879a815be716"
     },
     "8": {
@@ -96,7 +96,7 @@
         "h": 512
       },
       "source_frame": 8,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "8907ecb0f56be34cdafc73387ad831161242844a232437f9751d993de8f258fc"
     },
     "9": {
@@ -107,7 +107,7 @@
         "h": 512
       },
       "source_frame": 9,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "24d58c67c86f122121ab7060ebfcefbbdc71ed046d50fc631083dbf71947d0d7"
     },
     "10": {
@@ -118,7 +118,7 @@
         "h": 512
       },
       "source_frame": 10,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "3093ca4e243cb66d80501e3694a676a429d2986359b8c8c49a58e5a593f2c1ad"
     },
     "11": {
@@ -129,7 +129,7 @@
         "h": 512
       },
       "source_frame": 11,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "e5eecff47e203106aac5c015a0b3c65db5ea17503ceb47bdcc8a14cf5c6792c1"
     },
     "12": {
@@ -140,7 +140,7 @@
         "h": 512
       },
       "source_frame": 12,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "c51f6bad8bb8ae02a55d36a4af16a819dd21d13c5c735ed493935b7125db1c06"
     },
     "13": {
@@ -151,7 +151,7 @@
         "h": 512
       },
       "source_frame": 13,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "15cafe64c2d5d1ea005140a3b1953a61d605b45dbf25d2cf4b92a517ea84f5ab"
     },
     "14": {
@@ -162,7 +162,7 @@
         "h": 512
       },
       "source_frame": 14,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "7e9210d70ed2b7cf1561b8e679fa8cbb3bdb0ae5fbf3cf366cd841585b134436"
     },
     "15": {
@@ -173,7 +173,7 @@
         "h": 512
       },
       "source_frame": 15,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "84a5dbf5caa29784fd3bea65d270cb0748fe4374fbb5c5ed624a411d50e51246"
     },
     "16": {
@@ -184,7 +184,7 @@
         "h": 512
       },
       "source_frame": 16,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "1322aa355775e362e0acd903a1694705cb55c93424c210f7d027b97989945ca0"
     },
     "17": {
@@ -195,7 +195,7 @@
         "h": 512
       },
       "source_frame": 17,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "8758dd80bf30665d06d17ef223a6b869ca831bacba486c42d25208808aefd754"
     },
     "18": {
@@ -206,7 +206,7 @@
         "h": 512
       },
       "source_frame": 18,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "d648f5b817c57622ea0f17df72df1dd84733063ce83e6d394d686ac68ec8ab40"
     },
     "19": {
@@ -217,7 +217,7 @@
         "h": 512
       },
       "source_frame": 19,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "b93191ab9647e31ecc09d21e38b86bd37b268a2ee1d45ec4042abe87972e6030"
     },
     "20": {
@@ -228,7 +228,7 @@
         "h": 512
       },
       "source_frame": 20,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "cc06232994d7e9e3024bd93d041f2c2d138ae7eaeae5129d33471a56da851d32"
     },
     "21": {
@@ -239,7 +239,7 @@
         "h": 512
       },
       "source_frame": 21,
-      "duration": 22.727272727272727,
+      "duration": 18.181818181818183,
       "rgba_sha256": "3b9aad97c000083e126a3493421182d5dade6eee535e8309ca06a4a6f2fa158e"
     },
     "22": {
@@ -250,7 +250,7 @@
         "h": 512
       },
       "source_frame": 22,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "a43860875fe2e7fbd9e25196c24957b4cf8a748b0565ff75a0fe43753bc53c65"
     },
     "23": {
@@ -261,7 +261,7 @@
         "h": 512
       },
       "source_frame": 23,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "5039429ea2c3fd8a2eb6419c81b7fa1ee1ef892c25021f8a6e086e5d30e9a06f"
     },
     "24": {
@@ -272,7 +272,7 @@
         "h": 512
       },
       "source_frame": 24,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "d7b6118c05461c990f56cf050b1cdc7b0ded095086b7c91055357ca2b7849b34"
     },
     "25": {
@@ -283,7 +283,7 @@
         "h": 512
       },
       "source_frame": 23,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "5039429ea2c3fd8a2eb6419c81b7fa1ee1ef892c25021f8a6e086e5d30e9a06f"
     },
     "26": {
@@ -294,7 +294,7 @@
         "h": 512
       },
       "source_frame": 22,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "a43860875fe2e7fbd9e25196c24957b4cf8a748b0565ff75a0fe43753bc53c65"
     },
     "27": {
@@ -305,7 +305,7 @@
         "h": 512
       },
       "source_frame": 21,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "3b9aad97c000083e126a3493421182d5dade6eee535e8309ca06a4a6f2fa158e"
     },
     "28": {
@@ -316,7 +316,7 @@
         "h": 512
       },
       "source_frame": 20,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "cc06232994d7e9e3024bd93d041f2c2d138ae7eaeae5129d33471a56da851d32"
     },
     "29": {
@@ -327,7 +327,7 @@
         "h": 512
       },
       "source_frame": 19,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "b93191ab9647e31ecc09d21e38b86bd37b268a2ee1d45ec4042abe87972e6030"
     },
     "30": {
@@ -338,7 +338,7 @@
         "h": 512
       },
       "source_frame": 18,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "d648f5b817c57622ea0f17df72df1dd84733063ce83e6d394d686ac68ec8ab40"
     },
     "31": {
@@ -349,7 +349,7 @@
         "h": 512
       },
       "source_frame": 17,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "8758dd80bf30665d06d17ef223a6b869ca831bacba486c42d25208808aefd754"
     },
     "32": {
@@ -360,7 +360,7 @@
         "h": 512
       },
       "source_frame": 16,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "1322aa355775e362e0acd903a1694705cb55c93424c210f7d027b97989945ca0"
     },
     "33": {
@@ -371,7 +371,7 @@
         "h": 512
       },
       "source_frame": 15,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "84a5dbf5caa29784fd3bea65d270cb0748fe4374fbb5c5ed624a411d50e51246"
     },
     "34": {
@@ -382,7 +382,7 @@
         "h": 512
       },
       "source_frame": 14,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "7e9210d70ed2b7cf1561b8e679fa8cbb3bdb0ae5fbf3cf366cd841585b134436"
     },
     "35": {
@@ -393,7 +393,7 @@
         "h": 512
       },
       "source_frame": 13,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "15cafe64c2d5d1ea005140a3b1953a61d605b45dbf25d2cf4b92a517ea84f5ab"
     },
     "36": {
@@ -404,7 +404,7 @@
         "h": 512
       },
       "source_frame": 12,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "c51f6bad8bb8ae02a55d36a4af16a819dd21d13c5c735ed493935b7125db1c06"
     },
     "37": {
@@ -415,7 +415,7 @@
         "h": 512
       },
       "source_frame": 11,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "e5eecff47e203106aac5c015a0b3c65db5ea17503ceb47bdcc8a14cf5c6792c1"
     },
     "38": {
@@ -426,7 +426,7 @@
         "h": 512
       },
       "source_frame": 10,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "3093ca4e243cb66d80501e3694a676a429d2986359b8c8c49a58e5a593f2c1ad"
     },
     "39": {
@@ -437,7 +437,7 @@
         "h": 512
       },
       "source_frame": 9,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "24d58c67c86f122121ab7060ebfcefbbdc71ed046d50fc631083dbf71947d0d7"
     },
     "40": {
@@ -448,7 +448,7 @@
         "h": 512
       },
       "source_frame": 8,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "8907ecb0f56be34cdafc73387ad831161242844a232437f9751d993de8f258fc"
     },
     "41": {
@@ -459,7 +459,7 @@
         "h": 512
       },
       "source_frame": 7,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "7ae52955e40702282b74c4e009e40d35c65866238bb94d02315d879a815be716"
     },
     "42": {
@@ -470,7 +470,7 @@
         "h": 512
       },
       "source_frame": 6,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "2092cff0b7b13f1212668044e402bde1f4e250144027efff34a2c442dff82deb"
     },
     "43": {
@@ -481,7 +481,7 @@
         "h": 512
       },
       "source_frame": 5,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "13b6c3432f90d7c9f3d1674d724bad204336791d8869e1ae8ba266c383f467b5"
     },
     "44": {
@@ -492,7 +492,7 @@
         "h": 512
       },
       "source_frame": 4,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "b441082fcff6b5d27fac6e03c137aff8295a74f15073d7826a9fc496dc318f70"
     },
     "45": {
@@ -503,7 +503,7 @@
         "h": 512
       },
       "source_frame": 3,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "286c34a6a76690dc458f172290f8973cc79480266d7d2f10b8f4a6660e2fbba1"
     },
     "46": {
@@ -514,7 +514,7 @@
         "h": 512
       },
       "source_frame": 2,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "d137df1f9d14de426da08e167091e99624f55d9a624b9f241e14d771744e4f4e"
     },
     "47": {
@@ -525,7 +525,7 @@
         "h": 512
       },
       "source_frame": 1,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "89e7196c3a168bd23a65175fccab9f55a9dcec83a179293feaa06b1ecf8fb7fe"
     },
     "48": {
@@ -536,7 +536,7 @@
         "h": 512
       },
       "source_frame": 0,
-      "duration": 9.25925925925926,
+      "duration": 12.962962962962964,
       "rgba_sha256": "8ac6b662502feb8d4232b3ad10e1efc9c9a757c11eb1411f15d85ff2e7d26183"
     }
   },
