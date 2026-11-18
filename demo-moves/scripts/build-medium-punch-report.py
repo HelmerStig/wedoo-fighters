@@ -1,5 +1,6 @@
 """Build the medium punch timing report from committed manifests and atlas data."""
 import csv
+import argparse
 import html
 import json
 from pathlib import Path
@@ -11,6 +12,12 @@ POSES.mkdir(parents=True, exist_ok=True)
 def read(path):
     return json.loads((ROOT / path).read_text(encoding='utf-8-sig'))
 manifest = read('animation/medium-punch-manifest.json')
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--character',action='append',default=[],help='Aggiorna solo le pose indicate; HTML e CSV includono sempre tutti i personaggi.')
+args=parser.parse_args()
+selected={name.lower() for name in args.character}
+unknown=selected-{item['character'].lower() for item in manifest['items']}
+if unknown: raise ValueError('Personaggi assenti: '+', '.join(sorted(unknown)))
 timing = read('animation/medium-punch-timing.json')
 roster = read('animation/manifest.json')
 entries = {i['character']: i for i in timing['items']}
@@ -33,8 +40,9 @@ for item in sorted(manifest['items'], key=lambda i:i['character'].lower()):
     assert abs(sum(f['duration'] for f in atlas['frames'].values())-total)<1e-8
     frame=cell['frame']
     slug=item['character'].lower()
-    with Image.open(ROOT/item['png']) as image:
-        image.crop((frame['x'],frame['y'],frame['x']+frame['w'],frame['y']+frame['h'])).save(POSES/(slug+'.png'))
+    if not selected or slug in selected:
+        with Image.open(ROOT/item['png']) as image:
+            image.crop((frame['x'],frame['y'],frame['x']+frame['w'],frame['y']+frame['h'])).save(POSES/(slug+'.png'))
     mode='Solo avanti' if item['playback']=='forward' else 'Avanti e indietro'
     before, after = impact/peak, (total-impact)/(count-peak)
     note=entry.get('note','')

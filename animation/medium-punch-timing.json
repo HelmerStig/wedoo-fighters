@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17",
+  "updatedAt": "2026-11-18",
   "durationMs": 750,
   "impactMs": 500,
   "frameIndexBase": 0,
@@ -37,13 +37,13 @@
     },
     {
       "character": "PIPPO",
-      "sourceSheetId": "cmwl0byng00seiskzd27hq1x6",
+      "sourceSheetId": "cmwlwgge3000yjzef08f7pvlp",
       "sourceStart": 0,
-      "sourceEnd": 37,
-      "impactFrame": 25,
-      "impactSourceFrame": 25,
+      "sourceEnd": 17,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
       "playback": "forward-reverse",
-      "note": "Posa estesa mantenuta dopo l'impatto; recupero ottenuto invertendo i frame."
+      "note": "Nuova versione del 18 novembre 2026: 18 frame sorgente gia accorciati, andata e ritorno inverso. Massima estensione al frame sorgente 14 (da 0), sincronizzata a 500 ms; posa estesa mantenuta nei frame successivi."
     },
     {
       "character": "PEPPO",

@@ -30,6 +30,16 @@ Rigenerare catalogo e report con:
   python demo-moves/scripts/build-medium-punch-report.py
 La sezione contiene solo questi nove personaggi; gli altri non sono importati.
 
+Pippo aggiornato il 18 novembre 2026: sourceSheetId cmwlwgge3000yjzef08f7pvlp,
+18 celle sorgente gia accorciate su un foglio precedente da 38 frame.
+Sequenza 0..17..0: 35 passi complessivi; frame di impatto sorgente 14 (da 0)
+a 500 ms, fine ciclo a 750 ms. Nessun ridimensionamento o secondo taglio.
+Per aggiornare soltanto le maschere e la posa del report di un personaggio:
+  python demo-moves/scripts/build-punch-trails.py --move medium-punch --character pippo
+  node demo-moves/scripts/build-catalog.mjs
+  python demo-moves/scripts/build-medium-punch-report.py --character pippo
+Il report HTML e CSV continuano a includere tutti i nove personaggi.
+
 SCIA E PARTICELLE DEI PUGNI
 Tutti i 9 Pugni medi e i 48 Pugni leggeri importati hanno una scia di massimo
 2-3 sagome della parte distale del braccio e del pugno (secondo i frame disponibili),

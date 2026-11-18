@@ -2,13 +2,20 @@
 No sprite pixels or timing values are changed. Oscar's reviewed medium mask is kept.
 """
 import copy
+import argparse
 import json
 import math
 from pathlib import Path
 from statistics import median
 from PIL import Image, ImageDraw
 ROOT=Path(__file__).resolve().parents[2]
-QA=ROOT/'autosprite-agent/output/punch-trail-masks-20261117'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--move',choices=['light-punch','medium-punch'])
+parser.add_argument('--character',action='append',default=[])
+parser.add_argument('--review-dir',default='autosprite-agent/output/punch-trail-masks-20261117')
+args=parser.parse_args()
+selected={name.lower() for name in args.character}
+QA=ROOT/args.review_dir
 QA.mkdir(parents=True,exist_ok=True)
 def read(p): return json.loads((ROOT/p).read_text(encoding='utf-8-sig'))
 def save(p,data): (ROOT/p).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -40,12 +47,19 @@ def arm(cell):
     origins=[[a[0],a[1]-2],[b[0],b[1]-2],[c[0]-3,c[2]+2],[a[0],a[2]+2]]
     return polygon,origins
 all_profiles={}
-for move in ['medium-punch','light-punch']:
+for move in ([args.move] if args.move else ['medium-punch','light-punch']):
     manifest=read('animation/'+move+'-manifest.json');timing=read('animation/'+move+'-timing.json')
+    previous=read('animation/'+move+'-trails.json')
+    existing={p['character'].lower():p for p in previous['items']}
+    unknown=selected-{i['character'].lower() for i in manifest['items']}
+    if unknown: raise ValueError('Personaggi assenti: '+', '.join(sorted(unknown)))
     entries={i['character'].lower():i for i in timing['items']}
     profiles=[];tiles=[]
     for item in manifest['items']:
         slug=item['character'].lower();entry=entries[slug];peak=entry['impactFrame']
+        if selected and slug not in selected:
+            profiles.append(existing[slug])
+            continue
         atlas=read(item['atlas'])
         with Image.open(ROOT/item['png']) as raw:
             image=raw.convert('RGBA')
@@ -73,10 +87,11 @@ for move in ['medium-punch','light-punch']:
             pose=Image.alpha_composite(pose,tint);pose.thumbnail((176,176),Image.Resampling.NEAREST)
             tile.paste(pose,(0,0),pose);ImageDraw.Draw(tile).text((4,180),slug,fill='white');tiles.append(tile)
         print(move,slug,'mask frames',len(profile['polygons']),'impact',peak)
-    doc={'version':1,'description':'Maschere distali del braccio e lineette azzurrine; indici nella sequenza esportata. Oscar medium conserva la maschera verificata manualmente.','items':profiles}
+    doc={**previous,'items':profiles}
     save('animation/'+move+'-trails.json',doc);all_profiles[move]=profiles
     contact=Image.new('RGB',(8*176,math.ceil(len(tiles)/8)*200),(65,72,86))
     for i,tile in enumerate(tiles):contact.paste(tile,((i%8)*176,(i//8)*200))
-    contact.save(QA/('review-'+move+'.jpg'))
+    suffix='-'+'-'.join(sorted(selected)) if selected else ''
+    contact.save(QA/('review-'+move+suffix+'.jpg'))
 print('Profiles:',{k:len(v) for k,v in all_profiles.items()})
 

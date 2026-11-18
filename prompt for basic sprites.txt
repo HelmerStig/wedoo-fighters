@@ -197,9 +197,9 @@ Ora un altra prova, vorrei che creassi per:
 - Fabio Clara Pugno Medio Ok (da eseguire avanti e indietro)
 - Sboz Pugno Medio Ok (da eseguire solo avanti)
 - Pippo Pugno Medio Ok (da eseguire avanti e indietro)
-- Peppo Pugno Medio Ok (da eseguire avanti e indietro e ripulire spritesheet)
+- Peppo Pugno Medio Ok (da eseguire avanti e indietro)
 - Oscar. Pugno Medio Ok (da eseguire avanti e indietro)
-- Elisa 
+- Elisa Pugno Medio Ok (da eseguire avanti e indietro)
 - Fra Tavarone  Pugno Medio Ok (da eseguire avanti e indietro)
 - Marsan Pugno Medio Ok (da eseguire avanti e indietro)
 
