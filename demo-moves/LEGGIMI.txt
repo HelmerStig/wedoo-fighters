@@ -1,5 +1,15 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+PUGNO FORTE - FABIO CLARA (18 NOVEMBRE 2026)
+Importato strong punch cmwm7f5y800lm2lad4ut5lo39: 64 frame completi,
+celle 512x512, PNG e padding conservati byte per byte.
+Solo avanti, recupero incluso; impatto al frame 20 a 0,50 secondi, ciclo 1 s.
+Scia e particelle azzurre al 75%, maschera rivista sul braccio al frame 20.
+Arco bianco e polvere gia disegnati nella sorgente restano nel PNG anche
+disattivando gli effetti aggiunti. CRT e controlli condivisi con gli altri player.
+Visibile nella pagina Fabio Clara e in mosse.html?move=strong-punch.
+Asset: animation/fabio-clara/fabio-clara-strong-punch.*.
+
 CRT NELLE ANTEPRIME MOSSE (18 NOVEMBRE 2026)
 Le pagine personaggio.html e mosse.html applicano per default il CRT degli stage:
 stesso shader crt-webgl.js, preset Villa Arduino da crt-presets.js e controlli
@@ -14,16 +24,14 @@ Se WebGL o l'accesso alla texture non sono disponibili, resta attivo il CRT base
 e il pulsante indica "CRT stage: base". Per il CRT avanzato usare il server locale.
 Le risorse GPU sono liberate alla chiusura o al cambio della galleria.
 
-PUGNO FORTE - MARSAN (18 NOVEMBRE 2026, NUOVA VERSIONE)
-Importata l'ultima revisione Strong Punch cmwm68rqi00vxf7k49qmi31rx:
-42 celle salvate gia accorciate, stessa sorgente video della revisione da 56.
-PNG 4096x3072, celle 512x512 e padding conservati byte per byte.
-La nuova sorgente termina sul pugno esteso, senza recupero: sequenza virtuale
-0..41..0, 83 passi, senza duplicare pixel nel PNG. Impatto al frame 18 a 0,50 s,
-ciclo di 1 secondo. Ritorno in guardia al contrario e loop predefinito.
-Scia e particelle azzurre al 75%, maschere del braccio riviste nei frame 17-18;
-nessuna scia sull'altro braccio durante la preparazione o nel ritorno inverso.
-Visibile nella pagina Marsan e in mosse.html?move=strong-punch.
+PUGNO FORTE - MARSAN (18 NOVEMBRE 2026, STRONG PUNCH 2)
+Importata l'ultima Strong punch 2 cmwm7xx0q004sxy4f0i49habb: 64 frame completi,
+PNG 4096x4096, celle 512x512 e padding conservati byte per byte.
+Questa versione include la rotazione e il recupero: riproduzione solo avanti,
+impatto al primo frame esteso pulito dopo la scia sorgente (indice 33) a 0,50 secondi,
+ciclo di 1 secondo e loop predefinito. Non viene piu usato il ritorno inverso.
+Scia e particelle azzurre al 75%, maschere del braccio riviste nei frame 31-33.
+Visibile nella pagina Marsan e in mosse.html?move=strong-punch, con CRT condiviso.
 Asset: animation/marsan/marsan-strong-punch.*; dati nei manifest strong-punch.
 
 PUGNO FORTE - ALBERTO (18 NOVEMBRE 2026)
@@ -414,13 +422,13 @@ original-porta-susa.png e i file di lavorazione non vengono pubblicati.
 
 LUCI DI PORTA SUSA
 12 finestre calde della facciata e 2 lanterne hanno sfarfallio indipendente:
-cicli pseudocasuali, brevi cali di luminositÃƒÂ  e ritorno alla luce originale.
+cicli pseudocasuali, brevi cali di luminositÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  e ritorno alla luce originale.
 Lampioni e finestre sovrapposte sono mascherati separatamente. Nessuna parte
 del PNG originale viene modificata. Controllo Disattiva/Attiva sfarfallio;
 movimento ridotto mantiene tutte le luci fisse, e il drag non cambia la fase.
 La pausa nuvole non ferma lo sfarfallio, gestito dal clock dei personaggi.
 Le due lanterne si vedono esplorando il lato destro del panorama.
-stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÂ  luminosi,
+stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  luminosi,
 prima della pioggia e dei personaggi. Shader e audio del temporale restano
 indipendenti. Maschere e coordinate: original-backgrounds/porta-susa/
 lights-mask.png e lights.json, catalogo incorporato stage-lights-catalog.js.

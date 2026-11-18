@@ -28,11 +28,19 @@
     },
     {
       "character": "MARSAN",
-      "sourceSheetId": "cmwm68rqi00vxf7k49qmi31rx",
+      "sourceSheetId": "cmwm7xx0q004sxy4f0i49habb",
       "sourceStart": 0,
-      "sourceEnd": 41,
-      "impactFrame": 18,
-      "note": "Latest saved 42-frame version ends with the arm extended. Playback is 0..41..0 for recovery; first fully extended punch at source frame 18."
+      "sourceEnd": 63,
+      "impactFrame": 33,
+      "note": "Latest Strong punch 2: first clean fully extended punch after the built-in white streak (frame 33). Forward playback includes natural recovery."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwm7f5y800lm2lad4ut5lo39",
+      "sourceStart": 0,
+      "sourceEnd": 63,
+      "impactFrame": 20,
+      "note": "First fully extended punch at source frame 20; original white arc and dust preserved. Forward sequence includes natural recovery."
     }
   ]
 }
