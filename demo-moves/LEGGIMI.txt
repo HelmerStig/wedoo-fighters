@@ -461,8 +461,10 @@ solo come informazione. ID, video sorgente e hash RGBA in animation/manifest.jso
 Download grezzi e controllo pixel: autosprite-agent/output/idle-download-20261116/.
 Luca, Cristian e Alessandro sono piu piccoli dei PNG base; scala non corretta
 arbitrariamente. Patrick ruota verso la telecamera durante il ciclo sorgente.
-I portrait esistenti sono usati dove disponibili; Franco, Tamara e Patrick
-mostrano il PNG base anche nella testata, in attesa dei portrait dedicati.
+Le testate dei 48 personaggi usano i portrait originali in portraits/.
+Il catalogo incorpora il percorso esplicito per ogni personaggio; anche
+Franco, Tamara e Patrick hanno il portrait dedicato. Le anteprime del roster
+continuano a usare i PNG base dei personaggi.
 
 WALK GUARD - 16 NOVEMBRE 2026
 Importati sotto Walk i custom Walk Guard di Tamara (frame 2-47), Patrick

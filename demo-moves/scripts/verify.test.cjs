@@ -136,11 +136,11 @@ test('il server locale serve la demo e protegge il resto del repository',async t
   assert.equal((await fetch(base+'/demo-moves-sanmauro/index.html')).status,403);
   assert.equal((await fetch(base+'/portraits/oscar.png')).status,200);
   for(const character of (await catalog()).characters){
-    const portrait=await fetch(character.portrait?new URL(character.portrait,base+'/demo-moves/'):base+'/portrait-pixeled/'+encodeURIComponent(character.id)+'.png');
+    assert.ok(character.portrait.startsWith('../portraits/'),character.id);
+    const portrait=await fetch(new URL(character.portrait,base+'/demo-moves/'));
     assert.equal(portrait.status,200,character.id);
     const png=Buffer.from(await portrait.arrayBuffer());
     assert.ok(png.readUInt32BE(16)>0,character.id);assert.ok(png.readUInt32BE(20)>0,character.id);
-    if(!character.portrait){assert.equal(png.readUInt32BE(16),512,character.id);assert.equal(png.readUInt32BE(20),512,character.id);}
   }
   const fire=await fetch(base+'/portraits/fire.mp4');
   assert.equal(fire.status,200);assert.equal(fire.headers.get('content-type'),'video/mp4');

@@ -5,6 +5,7 @@ window.MOVES_CATALOG = {
       "id": "alberto",
       "name": "ALBERTO",
       "thumbnail": "../PNG/ALBERTO.png",
+      "portrait": "../portraits/alberto.png",
       "animations": [
         {
           "id": "idle",
@@ -4840,6 +4841,7 @@ window.MOVES_CATALOG = {
       "id": "alex",
       "name": "ALEX",
       "thumbnail": "../PNG/ALEX.png",
+      "portrait": "../portraits/alex.png",
       "animations": [
         {
           "id": "idle",
@@ -6599,6 +6601,7 @@ window.MOVES_CATALOG = {
       "id": "angela",
       "name": "ANGELA",
       "thumbnail": "../PNG/ANGELA.png",
+      "portrait": "../portraits/angela.png",
       "animations": [
         {
           "id": "idle",
@@ -8557,6 +8560,7 @@ window.MOVES_CATALOG = {
       "id": "antonino",
       "name": "ANTONINO",
       "thumbnail": "../PNG/ANTONINO.png",
+      "portrait": "../portraits/antonino.png",
       "animations": [
         {
           "id": "idle",
@@ -10300,6 +10304,7 @@ window.MOVES_CATALOG = {
       "id": "barbara-fiocca",
       "name": "BARBARA-FIOCCA",
       "thumbnail": "../PNG/BARBARA-FIOCCA.png",
+      "portrait": "../portraits/barbara-fiocca.png",
       "animations": [
         {
           "id": "idle",
@@ -12020,6 +12025,7 @@ window.MOVES_CATALOG = {
       "id": "bonazzi",
       "name": "Bonazzi",
       "thumbnail": "../PNG/Bonazzi.png",
+      "portrait": "../portraits/bonazzi.png",
       "animations": [
         {
           "id": "idle",
@@ -13648,6 +13654,7 @@ window.MOVES_CATALOG = {
       "id": "chiara-molina",
       "name": "Chiara-Molina",
       "thumbnail": "../PNG/Chiara-Molina.png",
+      "portrait": "../portraits/chiara-molina.png",
       "animations": [
         {
           "id": "idle",
@@ -15329,6 +15336,7 @@ window.MOVES_CATALOG = {
       "id": "chiara-toniol",
       "name": "CHIARA-TONIOL",
       "thumbnail": "../PNG/CHIARA-TONIOL.png",
+      "portrait": "../portraits/chiara-toniol.png",
       "animations": [
         {
           "id": "idle",
@@ -17076,6 +17084,7 @@ window.MOVES_CATALOG = {
       "id": "condello",
       "name": "CONDELLO",
       "thumbnail": "../PNG/CONDELLO.png",
+      "portrait": "../portraits/condello.png",
       "animations": [
         {
           "id": "idle",
@@ -20658,6 +20667,7 @@ window.MOVES_CATALOG = {
       "id": "dino",
       "name": "DINO",
       "thumbnail": "../PNG/DINO.png",
+      "portrait": "../portraits/dino.png",
       "animations": [
         {
           "id": "idle",
@@ -22410,6 +22420,7 @@ window.MOVES_CATALOG = {
       "id": "elisa",
       "name": "Elisa",
       "thumbnail": "../PNG/Elisa.png",
+      "portrait": "../portraits/elisa.png",
       "animations": [
         {
           "id": "idle",
@@ -25468,6 +25479,7 @@ window.MOVES_CATALOG = {
       "id": "emma",
       "name": "EMMA",
       "thumbnail": "../PNG/EMMA.png",
+      "portrait": "../portraits/emma.png",
       "animations": [
         {
           "id": "idle",
@@ -27362,6 +27374,7 @@ window.MOVES_CATALOG = {
       "id": "eros",
       "name": "EROS",
       "thumbnail": "../PNG/EROS.png",
+      "portrait": "../portraits/eros.png",
       "animations": [
         {
           "id": "idle",
@@ -29256,6 +29269,7 @@ window.MOVES_CATALOG = {
       "id": "fabio-clara",
       "name": "FABIO-CLARA",
       "thumbnail": "../PNG/FABIO-CLARA.png",
+      "portrait": "../portraits/fabio-clara.png",
       "animations": [
         {
           "id": "idle",
@@ -32430,6 +32444,7 @@ window.MOVES_CATALOG = {
       "id": "fara",
       "name": "FARA",
       "thumbnail": "../PNG/FARA.png",
+      "portrait": "../portraits/fara.png",
       "animations": [
         {
           "id": "idle",
@@ -34146,6 +34161,7 @@ window.MOVES_CATALOG = {
       "id": "fra-amato",
       "name": "FRA-AMATO",
       "thumbnail": "../PNG/FRA-AMATO.png",
+      "portrait": "../portraits/fra-amato.png",
       "animations": [
         {
           "id": "idle",
@@ -35797,6 +35813,7 @@ window.MOVES_CATALOG = {
       "id": "francesca-rivella",
       "name": "FRANCESCA-RIVELLA",
       "thumbnail": "../PNG/FRANCESCA-RIVELLA.png",
+      "portrait": "../portraits/francesca-rivella.png",
       "animations": [
         {
           "id": "idle",
@@ -37644,6 +37661,7 @@ window.MOVES_CATALOG = {
       "id": "francesco-leoni",
       "name": "FRANCESCO-LEONI",
       "thumbnail": "../PNG/FRANCESCO-LEONI.png",
+      "portrait": "../portraits/francesco-leoni.png",
       "animations": [
         {
           "id": "idle",
@@ -41565,6 +41583,7 @@ window.MOVES_CATALOG = {
       "id": "fra-tavarone",
       "name": "FRA-TAVARONE",
       "thumbnail": "../PNG/FRA-TAVARONE.png",
+      "portrait": "../portraits/fra-tavarone.png",
       "animations": [
         {
           "id": "idle",
@@ -44780,6 +44799,7 @@ window.MOVES_CATALOG = {
       "id": "gennaro",
       "name": "GENNARO",
       "thumbnail": "../PNG/GENNARO.png",
+      "portrait": "../portraits/gennaro.png",
       "animations": [
         {
           "id": "idle",
@@ -46382,6 +46402,7 @@ window.MOVES_CATALOG = {
       "id": "giordano",
       "name": "Giordano",
       "thumbnail": "../PNG/Giordano.png",
+      "portrait": "../portraits/giordano.png",
       "animations": [
         {
           "id": "idle",
@@ -48352,6 +48373,7 @@ window.MOVES_CATALOG = {
       "id": "giorgio",
       "name": "GIORGIO",
       "thumbnail": "../PNG/GIORGIO.png",
+      "portrait": "../portraits/giorgio.png",
       "animations": [
         {
           "id": "idle",
@@ -50027,6 +50049,7 @@ window.MOVES_CATALOG = {
       "id": "jerry",
       "name": "JERRY",
       "thumbnail": "../PNG/JERRY.png",
+      "portrait": "../portraits/jerry.png",
       "animations": [
         {
           "id": "idle",
@@ -52403,6 +52426,7 @@ window.MOVES_CATALOG = {
       "id": "livio",
       "name": "LIVIO",
       "thumbnail": "../PNG/LIVIO.png",
+      "portrait": "../portraits/livio.png",
       "animations": [
         {
           "id": "idle",
@@ -54035,6 +54059,7 @@ window.MOVES_CATALOG = {
       "id": "luana",
       "name": "LUANA",
       "thumbnail": "../PNG/LUANA.png",
+      "portrait": "../portraits/luana.png",
       "animations": [
         {
           "id": "idle",
@@ -58052,6 +58077,7 @@ window.MOVES_CATALOG = {
       "id": "manu",
       "name": "MANU",
       "thumbnail": "../PNG/MANU.png",
+      "portrait": "../portraits/manu.png",
       "animations": [
         {
           "id": "idle",
@@ -59629,6 +59655,7 @@ window.MOVES_CATALOG = {
       "id": "marco-balpo",
       "name": "MARCO-BALPO",
       "thumbnail": "../PNG/MARCO-BALPO.png",
+      "portrait": "../portraits/marco-balpo.png",
       "animations": [
         {
           "id": "idle",
@@ -61258,6 +61285,7 @@ window.MOVES_CATALOG = {
       "id": "marco-rossetti",
       "name": "Marco-Rossetti",
       "thumbnail": "../PNG/Marco-Rossetti.png",
+      "portrait": "../portraits/marco-rossetti.png",
       "animations": [
         {
           "id": "idle",
@@ -63128,6 +63156,7 @@ window.MOVES_CATALOG = {
       "id": "mario",
       "name": "MARIO",
       "thumbnail": "../PNG/MARIO.png",
+      "portrait": "../portraits/mario.png",
       "animations": [
         {
           "id": "idle",
@@ -64746,6 +64775,7 @@ window.MOVES_CATALOG = {
       "id": "marsan",
       "name": "MARSAN",
       "thumbnail": "../PNG/MARSAN.png",
+      "portrait": "../portraits/marsan.png",
       "animations": [
         {
           "id": "idle",
@@ -67645,6 +67675,7 @@ window.MOVES_CATALOG = {
       "id": "martini",
       "name": "MARTINI",
       "thumbnail": "../PNG/MARTINI.png",
+      "portrait": "../portraits/martini.png",
       "animations": [
         {
           "id": "idle",
@@ -69871,6 +69902,7 @@ window.MOVES_CATALOG = {
       "id": "matteo",
       "name": "MATTEO",
       "thumbnail": "../PNG/MATTEO.png",
+      "portrait": "../portraits/matteo.png",
       "animations": [
         {
           "id": "idle",
@@ -71705,6 +71737,7 @@ window.MOVES_CATALOG = {
       "id": "mike",
       "name": "MIKE",
       "thumbnail": "../PNG/MIKE.png",
+      "portrait": "../portraits/mike.png",
       "animations": [
         {
           "id": "idle",
@@ -73740,6 +73773,7 @@ window.MOVES_CATALOG = {
       "id": "mori",
       "name": "MORI",
       "thumbnail": "../PNG/MORI.png",
+      "portrait": "../portraits/mori.png",
       "animations": [
         {
           "id": "idle",
@@ -75602,6 +75636,7 @@ window.MOVES_CATALOG = {
       "id": "oscar",
       "name": "Oscar",
       "thumbnail": "../PNG/OSCARE.png",
+      "portrait": "../portraits/oscar.png",
       "animations": [
         {
           "id": "idle",
@@ -80670,6 +80705,7 @@ window.MOVES_CATALOG = {
       "id": "peirolo",
       "name": "PEIROLO",
       "thumbnail": "../PNG/PEIROLO.png",
+      "portrait": "../portraits/peirolo.png",
       "animations": [
         {
           "id": "idle",
@@ -82455,6 +82491,7 @@ window.MOVES_CATALOG = {
       "id": "peppo",
       "name": "PEPPO",
       "thumbnail": "../PNG/PEPPO.png",
+      "portrait": "../portraits/peppo.png",
       "animations": [
         {
           "id": "idle",
@@ -85508,6 +85545,7 @@ window.MOVES_CATALOG = {
       "id": "pippo",
       "name": "PIPPO",
       "thumbnail": "../PNG/PIPPO.png",
+      "portrait": "../portraits/pippo.png",
       "animations": [
         {
           "id": "idle",
@@ -88542,6 +88580,7 @@ window.MOVES_CATALOG = {
       "id": "sboz",
       "name": "SBOZ",
       "thumbnail": "../PNG/SBOZ.png",
+      "portrait": "../portraits/sboz.png",
       "animations": [
         {
           "id": "idle",
@@ -91388,6 +91427,7 @@ window.MOVES_CATALOG = {
       "id": "simona",
       "name": "Simona",
       "thumbnail": "../PNG/Simona.png",
+      "portrait": "../portraits/simona.png",
       "animations": [
         {
           "id": "idle",
@@ -94910,6 +94950,7 @@ window.MOVES_CATALOG = {
       "id": "tommaso",
       "name": "TOMMASO",
       "thumbnail": "../PNG/TOMMASO.png",
+      "portrait": "../portraits/tommaso.png",
       "animations": [
         {
           "id": "idle",
@@ -96950,6 +96991,7 @@ window.MOVES_CATALOG = {
       "id": "zichella",
       "name": "ZICHELLA",
       "thumbnail": "../PNG/ZICHELLA.png",
+      "portrait": "../portraits/zichella.png",
       "animations": [
         {
           "id": "idle",

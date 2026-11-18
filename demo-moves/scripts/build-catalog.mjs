@@ -43,7 +43,7 @@ for(const item of manifest.items){
     if(Number(source.meta?.duration_s)>0)baseFps=Number(((atlas.meta.source_frame_count??item.frames)/source.meta.duration_s).toFixed(3));
   }catch{}
   const savedSpeed=Number(item.speedMultiplier)||1;
-  characters.push({id,name:item.character,thumbnail,...(item.portrait?{portrait:url(resolve(root,item.portrait))}:{}),animations:[{id:'idle',name:'Idle',description:'Guardia e movimento a riposo',image:url(pngPath),atlas:url(atlasPath),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:Boolean(item.trimmed),baseFps,playbackFps:24,savedSpeed}]});
+  characters.push({id,name:item.character,thumbnail,portrait:url(resolve(root,item.portrait??'portraits/'+id+'.png')),animations:[{id:'idle',name:'Idle',description:'Guardia e movimento a riposo',image:url(pngPath),atlas:url(atlasPath),frames,frameWidth:item.frameWidth,frameHeight:item.frameHeight,trimmed:Boolean(item.trimmed),baseFps,playbackFps:24,savedSpeed}]});
 }
 characters.sort((a,b)=>new Intl.Collator('it',{sensitivity:'base',ignorePunctuation:true}).compare(a.name,b.name));
 const extraAnimations=[
