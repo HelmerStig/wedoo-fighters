@@ -1,5 +1,19 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+CRT NELLE ANTEPRIME MOSSE (18 NOVEMBRE 2026)
+Le pagine personaggio.html e mosse.html applicano per default il CRT degli stage:
+stesso shader crt-webgl.js, preset Villa Arduino da crt-presets.js e controlli
+base scanline/RGB/vetro con i valori di StageEffects.defaults.
+Il pulsante "CRT stage" sopra la galleria attiva/disattiva il filtro per tutte
+le anteprime presenti, anche in pausa. Il cambio pagina riparte con CRT attivo.
+sprite-crt.js condivide un solo processore WebGL per galleria e ripristina
+l'alpha dopo il filtro: sfondi scuro/chiaro/scacchi e padding restano utilizzabili.
+Il filtro viene applicato dopo sprite, scie e particelle. PNG scaricati e timing
+non vengono modificati. Nessuna preferenza CRT salvata negli stage viene scritta.
+Se WebGL o l'accesso alla texture non sono disponibili, resta attivo il CRT base
+e il pulsante indica "CRT stage: base". Per il CRT avanzato usare il server locale.
+Le risorse GPU sono liberate alla chiusura o al cambio della galleria.
+
 PUGNO FORTE - MARSAN (18 NOVEMBRE 2026)
 Importata l'ultima revisione Strong Punch cmwm2r5eg000vq3wbkgafjj6w:
 63 frame salvati, celle 512x512, PNG e padding invariati, solo avanti.

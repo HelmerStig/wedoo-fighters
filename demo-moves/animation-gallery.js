@@ -12,10 +12,10 @@
       node.addEventListener(type, callback);
       cleanups.push(() => node.removeEventListener(type, callback));
     };
-    container.innerHTML = `<div class="gallery-toolbar"><div><h2>${escape(options.title ?? 'Tutte le animazioni')} <span class="count-pill">${character.animations.length}</span></h2><p>${escape(options.description ?? 'Confronta le mosse e controlla ogni anteprima.')}</p></div><div class="gallery-actions"><button type="button" class="play-button" data-action="play-all">Riproduci tutte</button><button type="button" class="step-button" data-action="pause-all">Pausa tutte</button></div></div><div class="animation-gallery">${character.animations.map((animation, index) => `
+    container.innerHTML = `<div class="gallery-toolbar"><div><h2>${escape(options.title ?? 'Tutte le animazioni')} <span class="count-pill">${character.animations.length}</span></h2><p>${escape(options.description ?? 'Confronta le mosse e controlla ogni anteprima.')}</p></div><div class="gallery-actions"><button type="button" class="step-button" data-action="crt-toggle" aria-pressed="true">CRT stage: attivo</button><button type="button" class="play-button" data-action="play-all">Riproduci tutte</button><button type="button" class="step-button" data-action="pause-all">Pausa tutte</button></div></div><div class="animation-gallery">${character.animations.map((animation, index) => `
       <section class="player-panel animation-card" data-animation-card="${index}" aria-label="${escape(animation.name)} di ${escape(animation.characterName ?? character.name)}" id="animation-${index}">
         <div class="panel-header"><h3><span class="playing-dot is-paused" aria-hidden="true"></span>${animation.characterId ? `<a href="personaggio.html?id=${encodeURIComponent(animation.characterId)}&amp;anim=${encodeURIComponent(animation.id)}">${escape(animation.characterName)}</a>` : escape(animation.name)}</h3><span class="version-tag">${animation.trimmed ? 'TRIMMED' : 'COMPLETA'}</span></div>
-        <div class="stage" data-background="dark" aria-busy="true"><canvas width="${animation.frameWidth}" height="${animation.frameHeight}" tabindex="0" role="img" aria-label="${escape(animation.name)} di ${escape(animation.characterName ?? character.name)}">Anteprima di ${escape(animation.name)}.</canvas><div class="stage-loading" role="status">Caricamento ${escape(animation.name)}…</div><div class="stage-error" role="alert" hidden></div></div>
+        <div class="stage" data-background="dark" aria-busy="true"><canvas width="${animation.frameWidth}" height="${animation.frameHeight}" tabindex="0" role="img" aria-label="${escape(animation.name)} di ${escape(animation.characterName ?? character.name)}">Anteprima di ${escape(animation.name)}.</canvas><div class="stage-crt" aria-hidden="true"></div><div class="stage-loading" role="status">Caricamento ${escape(animation.name)}…</div><div class="stage-error" role="alert" hidden></div></div>
         <div class="player-controls">
           <div class="timeline"><input data-role="timeline" type="range" min="0" max="${animation.frames.length-1}" value="0" step="1" aria-label="Frame di ${escape(animation.name)}" disabled><span class="frame-counter">01 / ${animation.frames.length}</span></div>
           <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" disabled>▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di ${escape(animation.name)}" disabled>▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di ${escape(animation.name)}"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1× · ${timingLabel(animation)}</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
@@ -26,11 +26,17 @@
       </section>`).join('')}</div>`;
 
     const cards = [...container.querySelectorAll('[data-animation-card]')];
+    let crtEnabled=true,crtFallback=false;
+    const crtToggle=container.querySelector('[data-action="crt-toggle"]');
+    const crtLabel=()=>{crtToggle.textContent=crtEnabled?(crtFallback?'CRT stage: base':'CRT stage: attivo'):'CRT stage: disattivato';crtToggle.setAttribute('aria-pressed',String(crtEnabled));};
+    const crt=root.MovesSpriteCrt?.create(document,()=>{crtFallback=true;crtLabel();});
+    if(crt)cleanups.push(()=>crt.destroy());
     const players = cards.map((card, index) => {
       const animation = character.animations[index];
       const $ = selector => card.querySelector(selector);
       const canvas = $('canvas'), context = canvas.getContext('2d');
       const stage = $('.stage'), slider = $('[data-role="timeline"]');
+      if(crt)crt.decorate(stage,canvas,crtEnabled);
       const play = $('[data-action="play"]'), step = $('[data-action="step"]');
       const speed = $('[data-role="speed"]'), loop = $('[data-role="loop"]');
       const trail=animation.armTrail&&root.MovesArmTrail ? root.MovesArmTrail.create(animation,document) : null;
@@ -56,6 +62,10 @@
         context.imageSmoothingEnabled = false;
         if(trail&&trailEnabled.checked&&!reduced.matches)trail.draw(context,image,state,Number(trailStrength.value)/100);
         context.drawImage(image,x,y,w,h,0,0,canvas.width,canvas.height);
+        if(crt&&crtEnabled){
+          const elapsed=animation.frameDurations?animation.frameDurations.slice(0,state.frame).reduce((a,b)=>a+b,0):state.frame*1000/fps();
+          crt.render(canvas,elapsed+state.remainder);
+        }
         slider.value = state.frame;
         slider.setAttribute('aria-valuetext', `Frame ${state.frame+1} di ${animation.frames.length}`);
         $('.frame-counter').textContent = `${String(state.frame+1).padStart(2,'0')} / ${animation.frames.length}`;
@@ -116,6 +126,10 @@
         }
         state.lastTime=time;
       }};
+    });
+    if(crt)listen(crtToggle,'click',()=>{
+      crtEnabled=!crtEnabled;crtLabel();
+      players.forEach(p=>{crt.decorate(p.card.querySelector('.stage'),p.card.querySelector('canvas'),crtEnabled);p.draw();});
     });
     function active(){return !disposed&&!document.hidden&&players.some(p=>p.state.playing&&p.state.visible);}
     function tick(time){frameRequest=null;if(groupLast!==null)groupElapsed+=Math.min(Math.max(0,time-groupLast),250);groupLast=time;players.forEach(p=>p.tick(time));schedule();}

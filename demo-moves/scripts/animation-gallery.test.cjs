@@ -5,7 +5,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const core=require('../player-core.js');
 
-function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false}={}){
+function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,crt=false}={}){
   const images=[],callbacks=new Map();let sequence=0,observer;
   function element(){return {listeners:{},attributes:{},dataset:{},hidden:false,disabled:false,value:'',checked:true,textContent:'',
     classList:{values:new Set(),toggle(name,on){on?this.values.add(name):this.values.delete(name);},add(name){this.values.add(name);}},
@@ -22,14 +22,15 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false}={}){
     const swatches=['dark','light','checker'].map(background=>{const e=element();e.dataset.background=background;return e;});
     result.querySelector=selector=>nodes[selector];result.querySelectorAll=()=>swatches;result.nodes=nodes;result.swatches=swatches;return result;
   }
-  const cards=[card(),card()],playAll=element(),pauseAll=element(),container=element();
-  container.querySelectorAll=()=>cards;container.querySelector=s=>s.includes('play-all')?playAll:pauseAll;
+  const cards=[card(),card()],playAll=element(),pauseAll=element(),container=element(),crtToggle=element(),crtCalls=[];
+  container.querySelectorAll=()=>cards;container.querySelector=s=>s.includes('crt-toggle')?crtToggle:s.includes('play-all')?playAll:pauseAll;
   const document=element();document.hidden=false;
   const media=element();media.matches=reducedMotion;
   const sandbox={MovesCore:core,document,matchMedia:()=>media,
     Image:class {constructor(){this.naturalWidth=512*60;this.naturalHeight=512;images.push(this);}},
     requestAnimationFrame(fn){const id=++sequence;callbacks.set(id,fn);return id;},cancelAnimationFrame(id){callbacks.delete(id);}
   };
+  if(crt)sandbox.MovesSpriteCrt={create(){return {decorate(stage,canvas,enabled){crtCalls.push(['decorate',enabled]);},render(canvas,time){crtCalls.push(['render',time]);},destroy(){crtCalls.push(['destroy']);}};}};
   if(lazy)sandbox.IntersectionObserver=class {constructor(fn){this.callback=fn;observer=this;}observe(){}disconnect(){this.disconnected=true;}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
@@ -37,7 +38,7 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false}={}){
   else if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
   if(byMove) character.animations.forEach((a,i)=>{a.characterId=i?'luana':'marco-balpo';a.characterName=i?'Luana':'Marco Balpo';});
   const gallery=sandbox.MovesGallery.install(container,character,byMove?{title:'Pugno leggero - Personaggi',description:'Confronta i personaggi.'}:{});
-  return {cards,images,document,media,gallery,container,playAll,pauseAll,callbacks,
+  return {cards,images,document,media,gallery,container,playAll,pauseAll,callbacks,crtToggle,crtCalls,
     load(){images.forEach(image=>image.onload());},
     step(time){const pending=[...callbacks.values()];callbacks.clear();pending.forEach(fn=>fn(time));},
     observe(index,isIntersecting){observer.callback([{target:cards[index],isIntersecting}]);},
@@ -45,7 +46,7 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false}={}){
   };
 }
 
-test('tutte le mosse si animano insieme alle rispettive velocità e i controlli sono indipendenti',()=>{
+test('tutte le mosse si animano insieme alle rispettive velocitÃ  e i controlli sono indipendenti',()=>{
   const f=fixture();assert.equal(f.images.length,2);f.load();
   assert.equal(f.callbacks.size,1,'un solo ciclo di rendering per la galleria');
   f.step(0);f.step(250);f.step(500);
@@ -131,4 +132,21 @@ test('gli apici dei salti restano allineati con caricamento progressivo e nei lo
   f.cards[1].nodes['[data-role="speed"]'].fire('change');
   assert.match(f.cards[1].nodes['[data-role="fps"]'].textContent,/apice 1 s/);
   f.gallery.destroy();
+});
+
+
+test('CRT condiviso attivo per default, toggle ridisegna anche in pausa e pulizia alla chiusura',()=>{
+  const f=fixture({crt:true});f.load();f.pauseAll.fire('click');
+  assert.equal(f.crtCalls.filter(c=>c[0]==='decorate'&&c[1]).length,2);
+  const rendered=f.crtCalls.filter(c=>c[0]==='render').length;
+  assert.ok(rendered>=2);
+  f.crtToggle.fire('click');
+  assert.equal(f.crtToggle.attributes['aria-pressed'],'false');
+  assert.equal(f.crtCalls.filter(c=>c[0]==='render').length,rendered);
+  assert.equal(f.callbacks.size,0);
+  f.crtToggle.fire('click');
+  assert.equal(f.crtToggle.attributes['aria-pressed'],'true');
+  assert.equal(f.crtCalls.filter(c=>c[0]==='render').length,rendered+2);
+  assert.equal(f.callbacks.size,0);
+  f.gallery.destroy();assert.equal(f.crtCalls.filter(c=>c[0]==='destroy').length,1);
 });
