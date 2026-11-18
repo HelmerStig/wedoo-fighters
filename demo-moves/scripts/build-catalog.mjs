@@ -109,8 +109,11 @@ for(const extra of extraAnimations){
       const entry=strongPunchTiming.items.find(t=>t.character.toLowerCase()===character.id);
       if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di impatto forte per '+item.character);
       const peak=entry.impactFrame,ms=strongPunchTiming.impactMs,total=strongPunchTiming.durationMs;
-      if(item.playback!=='forward'||!Number.isInteger(peak)||peak<1||peak>=frames.length||ms<=0||total<=ms||total!==extra.durationMs)throw Error('Timing pugno forte non valido: '+item.character);
-      timing={impactFrame:peak,impactMs:ms,playbackMode:'forward',sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
+      if(!['forward','forward-reverse'].includes(item.playback)||!Number.isInteger(peak)||peak<1||peak>=item.sourceFrames||ms<=0||total<=ms||total!==extra.durationMs)throw Error('Timing pugno forte non valido: '+item.character);
+      const sequence=Array.from({length:item.sourceFrames},(_,i)=>item.sourceStart+i);
+      if(item.playback==='forward-reverse')sequence.push(...sequence.slice(0,-1).reverse());
+      if(sequence.length!==frames.length||Object.values(atlas.frames).some((f,i)=>f.source_frame!==sequence[i]))throw Error('Sequenza pugno forte incoerente: '+item.character);
+      timing={impactFrame:peak,impactMs:ms,playbackMode:item.playback,sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
     }
     if(extra.id==='light-punch'||extra.id==='medium-punch'||extra.id==='strong-punch'){
       const profiles=extra.id==='light-punch'?lightPunchTrails:extra.id==='medium-punch'?mediumPunchTrails:strongPunchTrails;

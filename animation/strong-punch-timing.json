@@ -28,11 +28,11 @@
     },
     {
       "character": "MARSAN",
-      "sourceSheetId": "cmwm2r5eg000vq3wbkgafjj6w",
+      "sourceSheetId": "cmwm68rqi00vxf7k49qmi31rx",
       "sourceStart": 0,
-      "sourceEnd": 62,
-      "impactFrame": 33,
-      "note": "First clean fully extended descending punch after the source white arc. Wind-up, held extension and recovery preserved, forward only."
+      "sourceEnd": 41,
+      "impactFrame": 18,
+      "note": "Latest saved 42-frame version ends with the arm extended. Playback is 0..41..0 for recovery; first fully extended punch at source frame 18."
     }
   ]
 }

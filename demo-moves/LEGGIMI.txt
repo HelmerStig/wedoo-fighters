@@ -14,12 +14,15 @@ Se WebGL o l'accesso alla texture non sono disponibili, resta attivo il CRT base
 e il pulsante indica "CRT stage: base". Per il CRT avanzato usare il server locale.
 Le risorse GPU sono liberate alla chiusura o al cambio della galleria.
 
-PUGNO FORTE - MARSAN (18 NOVEMBRE 2026)
-Importata l'ultima revisione Strong Punch cmwm2r5eg000vq3wbkgafjj6w:
-63 frame salvati, celle 512x512, PNG e padding invariati, solo avanti.
-Impatto al frame esteso pulito dopo l'arco bianco sorgente (indice 33)
-a 0,50 secondi; ciclo di 1 secondo con preparazione e recupero inclusi.
-Scia e particelle azzurre al 75%, maschere del braccio riviste sui frame 30-33.
+PUGNO FORTE - MARSAN (18 NOVEMBRE 2026, NUOVA VERSIONE)
+Importata l'ultima revisione Strong Punch cmwm68rqi00vxf7k49qmi31rx:
+42 celle salvate gia accorciate, stessa sorgente video della revisione da 56.
+PNG 4096x3072, celle 512x512 e padding conservati byte per byte.
+La nuova sorgente termina sul pugno esteso, senza recupero: sequenza virtuale
+0..41..0, 83 passi, senza duplicare pixel nel PNG. Impatto al frame 18 a 0,50 s,
+ciclo di 1 secondo. Ritorno in guardia al contrario e loop predefinito.
+Scia e particelle azzurre al 75%, maschere del braccio riviste nei frame 17-18;
+nessuna scia sull'altro braccio durante la preparazione o nel ritorno inverso.
 Visibile nella pagina Marsan e in mosse.html?move=strong-punch.
 Asset: animation/marsan/marsan-strong-punch.*; dati nei manifest strong-punch.
 
@@ -411,13 +414,13 @@ original-porta-susa.png e i file di lavorazione non vengono pubblicati.
 
 LUCI DI PORTA SUSA
 12 finestre calde della facciata e 2 lanterne hanno sfarfallio indipendente:
-cicli pseudocasuali, brevi cali di luminositÃ  e ritorno alla luce originale.
+cicli pseudocasuali, brevi cali di luminositÃƒÂ  e ritorno alla luce originale.
 Lampioni e finestre sovrapposte sono mascherati separatamente. Nessuna parte
 del PNG originale viene modificata. Controllo Disattiva/Attiva sfarfallio;
 movimento ridotto mantiene tutte le luci fisse, e il drag non cambia la fase.
 La pausa nuvole non ferma lo sfarfallio, gestito dal clock dei personaggi.
 Le due lanterne si vedono esplorando il lato destro del panorama.
-stage-lights.js disegna un atlas di maschere sui soli pixel giÃ  luminosi,
+stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÂ  luminosi,
 prima della pioggia e dei personaggi. Shader e audio del temporale restano
 indipendenti. Maschere e coordinate: original-backgrounds/porta-susa/
 lights-mask.png e lights.json, catalogo incorporato stage-lights-catalog.js.

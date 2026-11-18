@@ -65,19 +65,21 @@ test('Pugno forte di Alberto conserva il PNG e la sequenza avanti, con impatto a
   assert.equal(a.armTrail.enabled,true);assert.equal(a.armTrail.strength,.75);
 });
 
-test('Pugno forte di Marsan conserva il PNG e la sequenza avanti, con impatto a 500 ms e ciclo a 1000 ms',()=>{
+test('Pugno forte di Marsan conserva il PNG e la sequenza avanti e indietro, con impatto a 500 ms e ciclo a 1000 ms',()=>{
   const manifest=JSON.parse(fs.readFileSync(path.join(root,'animation/strong-punch-manifest.json'),'utf8'));
   const item=manifest.items.find(i=>i.character.toLowerCase()==='marsan');
   const context={window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(root,'demo-moves/catalog.js'),'utf8'),context);
   const a=context.window.MOVES_CATALOG.characters.find(c=>c.id==='marsan').animations.find(a=>a.id==='strong-punch');
   assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,item.png))).digest('hex'),item.pngSha256);
-  assert.equal(a.name,'Pugno forte');assert.equal(a.playbackMode,'forward');
-  assert.equal(a.frames.length,63);assert.equal(a.frameWidth,512);assert.equal(a.frameHeight,512);
-  assert.equal(new Set(a.frames.map(f=>f.join(','))).size,63);
+  assert.equal(a.name,'Pugno forte');assert.equal(a.playbackMode,'forward-reverse');
+  assert.equal(a.frames.length,83);assert.equal(a.frameWidth,512);assert.equal(a.frameHeight,512);
+  assert.equal(new Set(a.frames.map(f=>f.join(','))).size,42);
+  assert.deepEqual(Array.from(a.frames.at(-1)),Array.from(a.frames[0]));
+  assert.equal(item.frameSequence.filter(i=>i===41).length,1);
   for(const speed of [.5,1,2]){
-    assert.equal(advanceAnimation({frame:0,remainder:0},500/speed,a,speed,false).frame,33);
-    assert.equal(advanceAnimation({frame:0,remainder:0},999/speed,a,speed,false).frame,62);
+    assert.equal(advanceAnimation({frame:0,remainder:0},500/speed,a,speed,false).frame,18);
+    assert.equal(advanceAnimation({frame:0,remainder:0},999/speed,a,speed,false).frame,82);
     assert.equal(advanceAnimation({frame:0,remainder:0},1000/speed,a,speed,true).frame,0);
   }
   assert.equal(a.armTrail.sourceSheetId,item.sourceSheetId);
