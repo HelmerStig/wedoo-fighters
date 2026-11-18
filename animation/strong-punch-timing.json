@@ -41,6 +41,22 @@
       "sourceEnd": 63,
       "impactFrame": 20,
       "note": "First fully extended punch at source frame 20; original white arc and dust preserved. Forward sequence includes natural recovery."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwm8bmns003o8i6dnfx7ghzz",
+      "sourceStart": 0,
+      "sourceEnd": 63,
+      "impactFrame": 30,
+      "note": "Stable fully extended punch at frame 30; forward playback preserves wind-up, extended pose and natural recovery."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwm8h1fq004l8i6dkuprcwwl",
+      "sourceStart": 0,
+      "sourceEnd": 63,
+      "impactFrame": 31,
+      "note": "First clean fully extended punch at source frame 31. Original white arc preserved; forward sequence includes natural recovery."
     }
   ]
 }

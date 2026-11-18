@@ -1,5 +1,31 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+PUGNO MEDIO - ELISA, ULTIMA VERSIONE (18 NOVEMBRE 2026)
+Sostituito con la piu recente salvata cmwm9ar3500qcxy4fi2qcei8i: 39 frame,
+versione accorciata della sorgente da 40 frame cmwm8ttt0000it1wcwc4w1otm.
+PNG e celle 512x512 invariati; impatto al frame 18 a 400 ms, ciclo 750 ms.
+La sorgente include il recupero: ora solo avanti. Effetti del braccio, report
+HTML/CSV e posa di impatto aggiornati solo per Elisa.
+
+PUGNO FORTE - ELISA (18 NOVEMBRE 2026)
+Importato strong punch cmwm8h1fq004l8i6dkuprcwwl: 64 frame completi,
+celle 512x512, PNG e padding conservati byte per byte.
+Solo avanti, recupero incluso; impatto al frame 31 a 0,50 s, ciclo di 1 secondo.
+Scia e particelle azzurre al 75%, maschere riviste sul braccio nei frame 29-31,
+escludendo l'arco bianco sorgente sotto l'avambraccio. CRT e loop condivisi.
+La scia bianca originale rimane nel PNG anche disattivando gli effetti aggiunti.
+Visibile nella pagina Elisa e in mosse.html?move=strong-punch.
+Asset: animation/elisa/elisa-strong-punch.*; dati nei manifest strong-punch.
+
+PUGNO FORTE - PEPPO (18 NOVEMBRE 2026)
+Importato strong punch cmwm8bmns003o8i6dnfx7ghzz: 64 frame completi,
+celle 512x512, PNG e padding conservati byte per byte.
+Riproduzione solo avanti, recupero incluso; impatto al frame 30 a 0,50 s,
+ciclo di 1 secondo e loop predefinito. CRT condiviso con gli altri player.
+Scia e particelle azzurre al 75%, maschere riviste sul braccio nei frame 28-30.
+Visibile nella pagina Peppo e in mosse.html?move=strong-punch.
+Asset: animation/peppo/peppo-strong-punch.*; dati nei manifest strong-punch.
+
 PUGNO FORTE - FABIO CLARA (18 NOVEMBRE 2026)
 Importato strong punch cmwm7f5y800lm2lad4ut5lo39: 64 frame completi,
 celle 512x512, PNG e padding conservati byte per byte.
@@ -78,7 +104,7 @@ Pagina: mosse.html?move=medium-punch. Report sotto al titolo della mossa:
 reports/medium-punch-timing.html, con CSV e pose di impatto.
 A 1x: frame di impatto principale a 400 ms, ciclo completo di 750 ms.
 Durate variabili prima e dopo il marcatore: 400 ms e 350 ms.
-Otto personaggi usano avanti e indietro; Sboz usa solo avanti e il recupero
+Sette personaggi usano avanti e indietro; Sboz ed Elisa usano solo avanti e il recupero
 gia presente nella sorgente. L'atlas ripete i riferimenti alle celle nel
 ritorno, senza duplicare pixel nel PNG o cambiare il player delle altre mosse.
 Il frame di inversione compare una sola volta; il recupero termina sul frame
@@ -422,13 +448,13 @@ original-porta-susa.png e i file di lavorazione non vengono pubblicati.
 
 LUCI DI PORTA SUSA
 12 finestre calde della facciata e 2 lanterne hanno sfarfallio indipendente:
-cicli pseudocasuali, brevi cali di luminositÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  e ritorno alla luce originale.
+cicli pseudocasuali, brevi cali di luminositÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  e ritorno alla luce originale.
 Lampioni e finestre sovrapposte sono mascherati separatamente. Nessuna parte
 del PNG originale viene modificata. Controllo Disattiva/Attiva sfarfallio;
 movimento ridotto mantiene tutte le luci fisse, e il drag non cambia la fase.
 La pausa nuvole non ferma lo sfarfallio, gestito dal clock dei personaggi.
 Le due lanterne si vedono esplorando il lato destro del panorama.
-stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â  luminosi,
+stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  luminosi,
 prima della pioggia e dei personaggi. Shader e audio del temporale restano
 indipendenti. Maschere e coordinate: original-backgrounds/porta-susa/
 lights-mask.png e lights.json, catalogo incorporato stage-lights-catalog.js.

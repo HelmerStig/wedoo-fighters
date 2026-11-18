@@ -46,20 +46,20 @@ test('impatto a 400 ms e ciclo a 750 ms, con loop, singola riproduzione e veloci
   assert.equal(accumulated.frame,0,c.id);
  }
 });
-test('otto recuperi inversi, Sboz solo avanti e PNG sorgenti conservati byte per byte',()=>{
+test('sette recuperi inversi, Sboz ed Elisa solo avanti e PNG sorgenti conservati byte per byte',()=>{
  for(const item of manifest.items){
   const slug=item.character.toLowerCase();const atlas=read(item.atlas);
   const a=roster.find(c=>c.id===slug).animations.find(a=>a.id==='medium-punch');
   const forward=Array.from({length:item.sourceFrames},(_,i)=>item.sourceStart+i);
-  const expected=slug==='sboz'?forward:[...forward,...forward.slice(0,-1).reverse()];
-  assert.equal(item.playback,slug==='sboz'?'forward':'forward-reverse');
+  const expected=['sboz','elisa'].includes(slug)?forward:[...forward,...forward.slice(0,-1).reverse()];
+  assert.equal(item.playback,['sboz','elisa'].includes(slug)?'forward':'forward-reverse');
   assert.deepEqual(item.frameSequence,expected,slug);
   assert.equal(atlas.meta.source_frame_count,item.sourceSheetFrames);
   assert.equal(atlas.meta.source_sheet_id,item.sourceSheetId);
   assert.equal(item.sourceFrames,item.sourceEnd-item.sourceStart+1);
   assert.equal(item.sourceStart,0);
   assert.equal(item.sourceEnd,slug==='marsan'?24:item.sourceSheetFrames-1);
-  if(slug!=='sboz'){
+  if(!['sboz','elisa'].includes(slug)){
    assert.equal(expected.at(-1),item.sourceStart);
    assert.equal(expected.filter(i=>i===item.sourceEnd).length,1);
    assert.deepEqual(Array.from(a.frames.at(-1)),Array.from(a.frames[0]),slug);

@@ -67,13 +67,13 @@
     },
     {
       "character": "Elisa",
-      "sourceSheetId": "cmwl0z25900gdnl3z5dn1lryx",
+      "sourceSheetId": "cmwm9ar3500qcxy4fi2qcei8i",
       "sourceStart": 0,
-      "sourceEnd": 39,
-      "impactFrame": 27,
-      "impactSourceFrame": 27,
-      "playback": "forward-reverse",
-      "note": "La sorgente include estensioni preliminari con entrambi i bracci; il marcatore riguarda l'estensione principale finale."
+      "sourceEnd": 38,
+      "impactFrame": 18,
+      "impactSourceFrame": 18,
+      "playback": "forward",
+      "note": "Ultima versione salvata del 18 novembre 2026: 39 frame, impatto a 400 ms. Solo avanti: ritorno in guardia gia incluso nella nuova sorgente, senza recupero inverso."
     },
     {
       "character": "FRA-TAVARONE",
