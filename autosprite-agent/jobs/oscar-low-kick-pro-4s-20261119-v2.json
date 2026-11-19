@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Low Forward Kick Pro v2",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Do NOT step forward: keep the rear RIGHT supporting leg firmly planted in place on the ground baseline for the entire move. Shift weight back onto that rear right leg, lean the torso backward ~25 degrees, and kick directly with the front/far LEFT leg straight forward and diagonally DOWNWARD at ~40 degrees below horizontal (shin/knee height, NOT a high horizontal kick), ankle extended with toes pointed down-forward, staying well inside the right edge of the frame. At peak extension, keep the near RIGHT arm bent tightly in front of the face and chin in guard, and extend the far LEFT arm diagonally down-forward along the kicking thigh for balance, looking down-right. Smoothly retract the front left leg back to the exact standing guard pose. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no effects."
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+POSE CALCIO LEGGERO — 19 NOVEMBRE 2026
+
+Nove pose singole generate con ImageGen integrato, pixel art 16 bit,
+rivolte verso destra, PNG RGBA trasparenti 512x512.
+Ogni file si chiama <personaggio>-light-kick-pose.png.
+
+Abbinamenti alle immagini in REFERENCE/CALCIO LEGGERO:
+- Alberto: 8.png
+- Fabio Clara: 6.png
+- Sboz: 7.png
+- Pippo: 1.png
+- Peppo: 2.png
+- Oscar: 5.png
+- Elisa: 4.png
+- Fra Tavarone: 3.png
+- Marsan: 9.png
+
+Per Elisa e stata mantenuta la PRIMA versione con i capelli lunghi,
+come richiesto esplicitamente dall'utente dopo la generazione.
+
+preview/overview.png contiene la tavola di confronto dei nove personaggi.
+poses.json registra riferimenti, baseline, selezioni e normalizzazione.
+prompts.json contiene il prompt integrale usato per ciascun personaggio.
+
+Il generatore ha restituito immagini 1254x1254. L'esportazione applica
+una riduzione uniforme dell'intero canvas a 512x512 con nearest-neighbor,
+preservando la trasparenza, seguita soltanto da uno spostamento verticale
+per allineare il piede d'appoggio alla baseline della rispettiva posa base.
+Nessun ritaglio delle parti del corpo, stiramento o ridisegno manuale.
+
+I file sono keyframe di posa, non spritesheet animati. Gli originali
+generati e i dati di lavoro rimangono nella cartella ignorata da Git:
+autosprite-agent/output/light-kick-poses-20261119/.

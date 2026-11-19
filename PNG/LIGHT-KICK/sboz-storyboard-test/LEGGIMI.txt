@@ -1,0 +1,9 @@
+PROVA SBOZ - LIGHT KICK STORYBOARD, 19/11/2026
+
+Solo Sboz generato, Storyboard Turbo, costo 10 crediti. Gli altri otto sono in attesa.
+Idle 0s -> light-kick 1s -> idle 2s. Celle originali 512x512, nessun ridimensionamento.
+AutoSprite esporta 48 frame nativi a 24 fps. Il file locale da 49 contiene un duplicato
+del frame finale; atlas a 24.5 fps per mantenere 2s. Originale da 48 conservato.
+preview.gif e una preview a circa 2s; il GIF arrotonda i tempi e puo unire frame identici.
+DIFETTO: dopo la posa vincolata, nella seconda meta compare un secondo calcio
+prima del ritorno in guardia. Prova da valutare, non integrata nella demo.

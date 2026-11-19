@@ -1,5 +1,35 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+CALCIO LEGGERO - NOVE PERSONAGGI (19 NOVEMBRE 2026)
+Importata Light Kick Pro per Elisa;
+light kick per Alberto, Oscar, Fabio Clara, Fra Tavarone, Marsan, Pippo, Peppo e Sboz.
+Ultime versioni salvate.
+Oscar usa 16 frame accorciati (0-15) avanti e indietro, senza duplicare
+il vertice: 31 frame complessivi, ritorno alla guardia incluso.
+Alberto usa 17 frame accorciati (0-16) avanti e indietro: 33 complessivi.
+Fabio Clara usa il taglio salvato 0-22 avanti e indietro: 45 complessivi.
+Fra Tavarone usa il taglio salvato 0-14 avanti e indietro: 29 complessivi.
+Marsan usa il taglio salvato 0-12 avanti e indietro: 25 complessivi.
+Pippo usa il taglio salvato 0-15 avanti e indietro: 31 complessivi.
+Peppo usa il taglio salvato 0-19 avanti e indietro: 39 complessivi.
+Sboz usa il taglio salvato 0-12 avanti e indietro: 25 complessivi.
+Celle 512x512 e scala originali, pixel RGBA verificati contro la sorgente.
+Piede d'appoggio stabilizzato per Fabio Clara, Oscar, Marsan e Peppo:
+traslazione intera dell'intero frame in X/Y, con lo stesso offset al ritorno.
+Nessun ridimensionamento o ritaglio della sagoma; posizione nel canvas
+adattata per contenere la completa estensione del calcio.
+Profilo portabile e provenienza: animation/light-kick-foot-lock.json.
+Verifica pixel e appoggi: python demo-moves/scripts/stabilize-light-kick.py --verify.
+Timing Calcio leggero: impatto a 300 ms e ciclo totale 600 ms.
+Durate variabili prima/dopo il frame di estensione; loop e CRT.
+Oscar, Alberto, Fabio Clara, Fra Tavarone, Marsan, Pippo, Peppo e Sboz tornano
+al contrario. Elisa mantiene Light Kick Pro con il recupero sorgente.
+Manifest e timing: animation/light-kick-manifest.json, light-kick-timing.json.
+Report: reports/light-kick-timing.html e CSV, con pose di impatto e link sotto
+il titolo Calcio leggero in mosse.html?move=light-kick.
+La prova Storyboard di Sboz resta separata. Nessuna generazione o credito usato.
+Aggiornato primi-personaggi-da-cpmpletare.txt per i nove personaggi.
+
 CROUCH - NOVE PERSONAGGI (19 NOVEMBRE 2026)
 Integrato Crouch per Alberto, Fabio Clara, Sboz, Pippo, Peppo, Oscar, Elisa,
 Fra Tavarone e Marsan, dalle ultime versioni salvate su AutoSprite.

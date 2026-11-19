@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezcwlh0005pe7141enxfwe",
+        "lastFramePoseId": "cmvezcwlh0005pe7141enxfwe",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one sturdy karate-style low-to-mid forward light kick: keep the rear supporting leg firmly planted on the ground baseline with a slight knee bend, open the hips slightly toward the viewer, and drive the front leg straight forward and diagonally downward at ~35 degrees with foot flexed, staying cleanly inside the right edge of the frame. At peak extension, keep the rear arm bent up with fist raised near the shoulder and extend the front fist downward-forward over the kicking thigh. Smoothly retract the leg back to the exact standing guard pose. Preserve Fabio Clara's exact bald head, beard, face, orange plaid shirt, olive cargo pants, sneakers, scale and pixel art. Locked camera, no zoom, no effects or props."
+      }
+    ]
+  }
+}

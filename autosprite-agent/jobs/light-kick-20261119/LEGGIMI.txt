@@ -1,0 +1,10 @@
+LIGHT KICK - STATO 19 NOVEMBRE 2026
+
+L utente ha ristretto la prova a SOLO SBOZ. Gli altri otto NON vanno avviati.
+Sboz: Storyboard Turbo completato, 10 crediti. Export aggiuntivo gratuito.
+Risultati: PNG/LIGHT-KICK/sboz-storyboard-test/
+48 frame nativi; locale da 49 con un solo duplicato finale, celle 512x512.
+Difetto: secondo calcio non richiesto durante il recupero. Non integrato nella demo.
+Tutte le nove pose light-kick sono caricate; gli altri prompt restano preparatori.
+I file *-turbo.json sono alternative API senza keyframe intermedio: NON avviarli.
+Prima di nuovi invii verificare i risultati per evitare doppioni.

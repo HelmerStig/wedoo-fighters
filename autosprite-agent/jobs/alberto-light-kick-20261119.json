@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezhbu4007gg57e588k081v",
+        "lastFramePoseId": "cmvezhbu4007gg57e588k081v",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one quick agile light kick: keep the supporting foot planted firmly on the ground baseline, lean the torso slightly back, and snap the kicking leg straight out forward and slightly upward into a sharp mid-high front kick with ankle extended, keeping the entire foot cleanly inside the right edge of the frame. At peak extension, extend the rear arm back for balance while keeping the front arm bent in guard near the chest. Smoothly retract the leg back to the exact standing guard pose. Preserve Alberto's exact face, bald head, glasses, beard, green sweater, grey pants, sneakers, scale and pixel art. Locked camera, no zoom, no motion trails, no effects or props."
+      }
+    ]
+  }
+}

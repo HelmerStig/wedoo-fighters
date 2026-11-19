@@ -1,0 +1,452 @@
+{
+  "frames": {
+    "0": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 0,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "a09dabaffc7befc6be18897cc59ca74c902a82c2ac2aa4c48b7655c7a1beff9b"
+    },
+    "1": {
+      "x": 512,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 1,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "3410177506b6b7f12b736bc614d0a60d23a35ef072df595b5ccbe7ff32a981dc"
+    },
+    "2": {
+      "x": 1024,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 2,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "3b8dc9239780e92d20ec776fca0880ae2c47cd2fc899e33909135892a2ebb16e"
+    },
+    "3": {
+      "x": 1536,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 3,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "c98adafddbd24eafe043d0b5133a7ddd3e91e7d57a6f555deaabbccd10b7ab16"
+    },
+    "4": {
+      "x": 2048,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 4,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "78aae757469786775fcb552e7e860a2df9bf00ef300cf3edfd565b9f9893d124"
+    },
+    "5": {
+      "x": 2560,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 5,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "7094ee2b1f8b0d9601afa2da19cb5d730842bdd88ee078d052eaed61d2f7e412"
+    },
+    "6": {
+      "x": 3072,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 6,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "52e1a3aa5e32618bea5581ff39a187d4f07bfb41904fbae1845c22462a355eed"
+    },
+    "7": {
+      "x": 0,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 7,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "6ca40f4d0467be6f67f1ebead1174a09e6b03530d3f69aa96f1db5f03b484a8a"
+    },
+    "8": {
+      "x": 512,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 8,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "66b779187c5f0a1f049865ce274ea81838a53b56b7f56e73de717a207857dbdc"
+    },
+    "9": {
+      "x": 1024,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 9,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "913eea162959497ac091d65b2c4956558b3bc6676583231ccd3e35bb5a924166"
+    },
+    "10": {
+      "x": 1536,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 10,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "a77dc7f8f4e183fd5d4d0ce1d3ac2b34ef7b5dba33a0bdeb99e72960856e9a46"
+    },
+    "11": {
+      "x": 2048,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 11,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "cff2e89a74faeb762f245f148d021c2ed5eec5d17feb42fe589208330a4029bd"
+    },
+    "12": {
+      "x": 2560,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 12,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "c32f9de339d16e6fb11e89ec23416586e8fc7ae9a9e2278f51cef55b02c86943"
+    },
+    "13": {
+      "x": 3072,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 13,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "cabd42af9746833cf5732865b5b0119966b0acff511a33691869d5bf6b498f51"
+    },
+    "14": {
+      "x": 0,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 14,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "2f0b1bedf032ba621399bea45a1ef03930376e789a9acc4856e948d25e9d467e"
+    },
+    "15": {
+      "x": 512,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 15,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "78394fbdb860c6fc90a7c7a1c9b991732b288a9aeb0fe4d288b9d215dab3d300"
+    },
+    "16": {
+      "x": 1024,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 16,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "3ac6629c468632c025a2c9e5b9db4b3bc785ee1a92d88c27b5ab71fdfec3359e"
+    },
+    "17": {
+      "x": 1536,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 17,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "dfc7fb23aff820dd4362be277b701fa3a0becfe6dd618cc18ebddc1f06bac93a"
+    },
+    "18": {
+      "x": 2048,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 18,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "0f8e542ced567a7ba0ee7602e5006231f6febd699b26357a4ee6d5935024dd19"
+    },
+    "19": {
+      "x": 2560,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 19,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "43b6a3dd6c8339fc7cacc8d7dbc2275b7526b01a2aa0491ce0e4640a1c3501c6"
+    },
+    "20": {
+      "x": 3072,
+      "y": 1024,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 20,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "5cd1153c5acf96d02701b4167eef50a684f0f64b6db544c169bdb1169f864fe2"
+    },
+    "21": {
+      "x": 0,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 21,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "709954e7fcb64d886e4222e56c2ed8057faf40bc9dcff2de8a18cb633e2158cf"
+    },
+    "22": {
+      "x": 512,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 22,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "f0aeeec603fb2f1532c3706412d92714e9beeeabb700ff39a5c436aa700b45c8"
+    },
+    "23": {
+      "x": 1024,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 23,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "de56007f8da41112a1a8abd8cc596f88589598f5abe058382b2a7fb831691a55"
+    },
+    "24": {
+      "x": 1536,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 24,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "d98a37f523f8881f75b23047b41e4e3d05636abe71714a7035123b1bf7888ba1"
+    },
+    "25": {
+      "x": 2048,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 25,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "068943e9cb0cc43c8601f092995e3818f943e4000b2d5aa55ff7c6fc0028d0bc"
+    },
+    "26": {
+      "x": 2560,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 26,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "6539f9733b479f4ae97906c2785ab33d1d2f22e696df1a975131d9c4fe0cfaed"
+    },
+    "27": {
+      "x": 3072,
+      "y": 1536,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 27,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "90062e7324b53dcb4ecf1c4fb0ef1ca6d71daa8bfac16f7d0fda82ead482fc68"
+    },
+    "28": {
+      "x": 0,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 28,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "27056d0f62a98c79ab96eace111bf5e6100a471331efa88d00889e2bc22a96cf"
+    },
+    "29": {
+      "x": 512,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 29,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "452425d626545952296605387e7905383558da5c311f7daf839de8db9bdc1ec4"
+    },
+    "30": {
+      "x": 1024,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 30,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "ce5136dafd198b957d5db50e6576016b261dc7b65a3008e305bbd53c1f08aee2"
+    },
+    "31": {
+      "x": 1536,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 31,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "d29b29f61aadf51bb5428fc5fd674a6c997804b516c8d0da08ff56d8e8cb5cc0"
+    },
+    "32": {
+      "x": 2048,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 32,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "b6702c6e971da0510679e6f87263ae098a7a2182ef0f011c20b1dc2b2a80b6fb"
+    },
+    "33": {
+      "x": 2560,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 33,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "f5e80c3584426bff5bc02be904aebede74ae744f1d84a3d4d574a26458046445"
+    },
+    "34": {
+      "x": 3072,
+      "y": 2048,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 34,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "d1e3c87a278cea56e09253ab0160961d2943888499de39baa8253e0cad4b7bd6"
+    },
+    "35": {
+      "x": 0,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 35,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "6a0531c2518037f43f3e7e07ef6a5edbb084f5e5be817912a7b8492d1da3937f"
+    },
+    "36": {
+      "x": 512,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 36,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "e4e15c192f6934b75492b81e5617cb963572b5ef36d6f6a24ca3a43330c0c937"
+    },
+    "37": {
+      "x": 1024,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 37,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "d9d3d35d32167fd1782f61781f0b980f49be575a112210b3baa880f6b8b7bdb2"
+    },
+    "38": {
+      "x": 1536,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 38,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "2dfd6be9ee418fdf8384bae482f60e4d63d3903a6386a8d0fb43605bf1fed64c"
+    },
+    "39": {
+      "x": 2048,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 39,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "876f49dae61a63dc88d674453c9e09e9be339876587f742754d2ebfd76e81e08"
+    },
+    "40": {
+      "x": 2560,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 40,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "5eb9b48bcf6c5cb7dc63348d6bbef04f1a80a641107652b8d12b709029d7dbbf"
+    },
+    "41": {
+      "x": 3072,
+      "y": 2560,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 41,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "d2774024c0a318b7dc6b545f4bee0accbb9b76b8a4493e39eb6b982f4164dafc"
+    },
+    "42": {
+      "x": 0,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 42,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "4efb373ed4add5dd549fbd06b2ef363bc888b48a460674d8f0ab23e71c4e7e2e"
+    },
+    "43": {
+      "x": 512,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 43,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "a421715816467e21549b897e72dd6f076566e31e0579398191ca63f235fc6bc2"
+    },
+    "44": {
+      "x": 1024,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 44,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "2b68d4fd610f91768f248486105656670c3304b05f674e5b190fa6847a8ae152"
+    },
+    "45": {
+      "x": 1536,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 45,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "0319dea3d5cb3bb3559fe22e9670f5b34e99a9c3deb1086b72808c0fdde09a57"
+    },
+    "46": {
+      "x": 2048,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 46,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "1888e2998f1c7785dcaafc42cfb61042f248c83d4bd05bea8817cfb51d3b3df6"
+    },
+    "47": {
+      "x": 2560,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 47,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "081b901cb949c6c3c8a3161642dc1e8d8988230b582dde6b73f7af509d70fb38"
+    },
+    "48": {
+      "x": 3072,
+      "y": 3072,
+      "w": 512,
+      "h": 512,
+      "sourceFrame": 47,
+      "durationMs": 40.816326530612244,
+      "rgbaSha256": "081b901cb949c6c3c8a3161642dc1e8d8988230b582dde6b73f7af509d70fb38"
+    }
+  },
+  "meta": {
+    "image": "sboz-light-kick-49.png",
+    "frameCount": 49,
+    "fps": 24.5,
+    "durationMs": 2000,
+    "note": "48 native frames plus a duplicate final idle hold. Source cells unchanged."
+  }
+}

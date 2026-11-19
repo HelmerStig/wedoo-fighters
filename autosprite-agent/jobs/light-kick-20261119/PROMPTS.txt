@@ -1,0 +1,60 @@
+LIGHT KICK - PROMPT PREPARATORI
+
+Solo Sboz generato: 10 crediti; altri otto in attesa per ordine utente.
+Risultati e difetto del secondo calcio: PNG/LIGHT-KICK/sboz-storyboard-test/LEGGIMI.txt
+I testi seguenti sono preparatori; nello Storyboard usare una riga per transizione.
+
+Alberto
+Character ID: cmv9hw3c3001t83r8jht5u7vy
+Idle: cmvezhbu4007gg57e588k081v
+light-kick: cmwnnm07v0003k45rqzo2m0g1
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the grounded outward side kick: front leg extended right at waist height, knee nearly straight, sole angled toward viewer, other leg planted, torso angled slightly toward viewer and leaning left, one fist raised beside the head and other arm balancing. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Fabio Clara
+Character ID: cmv9hwdtc003583r8bjf9ed1l
+Idle: cmvezcwlh0005pe7141enxfwe
+light-kick: cmwnnm13o0005k45r10qiz5l9
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the waist-height horizontal side kick: kicking leg stretched to the right, weight over a planted supporting leg, torso leaning left and turned partly away from camera, near hand beside the mouth and other arm reaching down behind for balance. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Sboz
+Character ID: cmv9hwys4000o72jnrpng2i85
+Idle: cmveyznuz005kwo3iymky7hyg
+light-kick: cmwnnm2070009b2ytwl21e1he
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the relaxed low checking kick: front leg extended diagonally down-right, heel forward and toe slightly raised, other foot planted, torso leaning gently back, one fist raised close to face and other hand lower for balance. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Pippo
+Character ID: cmv9hwxxn000k72jn5131g7kq
+Idle: cmvez042j0044g57e57q431q2
+light-kick: cmwnnm3j0000fb2ytvz3v9zd2
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the low kick: one supporting leg planted, opposite leg extends diagonally down-right with the shin almost straight, upper body gently tilted back, one forearm guarding face and other forearm lower across waist. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Peppo
+Character ID: cmv9hwwuu000b72jnin9ee6na
+Idle: cmvez0v6s004fg57exj7jz9sy
+light-kick: cmwnnm4at000hb2yt9r4z9c71
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the snapping front kick: torso inclines forward, front thigh lifted and lower leg extended forward-right with toes raised, rear leg planted, one arm swept backward and other hand up for balance; keep the entire shoe inside the canvas. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Oscar
+Character ID: cmv9im946000t14mbeyraqs7u
+Idle: cmveysix0000g5g1g5vakv945
+light-kick: cmwnnm55c000jb2ytzmxtihlu
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the low diagonal kick: front leg extends diagonally down-right, supporting leg planted, hips and torso partially turned away from camera while face looks right, near fist held up and opposite arm extended back for balance. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Elisa
+Character ID: cmv9dyrs900045e49mr49cdz9
+Idle: cmvezhoqs0010pe717fq8yn99
+light-kick: cmwnnm5x8000lb2ytehr66xw0
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the high extended side kick: one boot stretches almost horizontally up-right to chest height, supporting boot grounded, torso leaning left, both arms extended in opposite directions for counterbalance; match the dynamic body line but omit every red slash, scarf and energy effect. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Fra Tavarone
+Character ID: cmv9hwgkp003h83r8pvn0zfqp
+Idle: cmvezbqmx0062g57evf7gbf06
+light-kick: cmwnnm6q1000nb2ytk3q0rx1t
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the straight waist-height front kick: kicking leg extended horizontally right with toe raised slightly, other leg planted nearly straight, upper body leaning back slightly, both hands held in a loose raised guard. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+
+Marsan
+Character ID: cmv9hwqed004o83r8kd5a2z1r
+Idle: cmvez5xck00hbrym9nwdyrplr
+light-kick: cmwnnm7km000pb2yt6d60ltud
+time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the turned-back kick: back and shoulder blades visibly toward camera, face looking to the right over shoulder, one leg planted and other leg extended diagonally right toward the opponent with sole partly visible, arms spread for balance. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.
+

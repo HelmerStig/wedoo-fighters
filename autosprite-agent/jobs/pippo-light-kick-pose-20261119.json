@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9hwxxn000k72jn5131g7kq",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "light kick",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvez042j0044g57e57q431q2",
+        "lastFramePoseId": "cmwnnm3j0000fb2ytvz3v9zd2",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Use the supplied first and last poses exactly, preserving identity, outfit, footwear, pixel art, scale and ground baseline. One crisp light kick from standing guard to full extension. Shift weight onto the planted rear supporting foot, lean the torso slightly back, and snap the front leg straight forward and diagonally downward into the exact low-to-mid kick shown in the final pose, raising the near forearm in front of the face and extending the far arm along the thigh. Preparation occupies roughly the first third; the kick accelerates smoothly and reaches maximum extension cleanly at the final frame. Keep the supporting foot anchored on the ground baseline; end exactly on the supplied impact pose. Locked camera, no zoom, no pan, no extra props, no motion trails or effects."
+      }
+    ]
+  }
+}

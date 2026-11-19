@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezbqmx0062g57evf7gbf06",
+        "lastFramePoseId": "cmvezbqmx0062g57evf7gbf06",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one sharp mid-high front-side light kick: keep the supporting leg planted firmly on the ground baseline, lean the upper body back for counterbalance, and snap the kicking leg straight out forward at waist-to-chest height, keeping the extended foot cleanly inside the right edge of the frame. At peak extension, keep both arms bent compactly in front of the chest in a tight fighting guard with gaze focused forward on the target. Smoothly retract the leg back to the exact standing guard pose. Preserve Fra Tavarone's exact face, curly dark hair, knotted black-and-white plaid shirt, blue jeans, shoes, scale and pixel art. Locked camera, no zoom, no effects or props."
+      }
+    ]
+  }
+}

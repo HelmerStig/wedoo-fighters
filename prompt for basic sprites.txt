@@ -214,5 +214,7 @@ Ora vorrei fare una prima prova con oscar su autosprite, usa come posa iniziale 
 
 Hai domande?
 
+Ora vorrei che salvassi su autosprite le pose genearte associandole al nome del personaggio come light-kick, poi creassi un prompt adeguato per ognuna, inizio in idle > calcio > ritorno in idle 49fotogrammi a Turbo, puoi farlo?
+
 
 

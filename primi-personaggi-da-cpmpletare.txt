@@ -12,6 +12,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Fabio Clara
     Basic moves:
@@ -27,6 +28,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Sboz
     Basic moves:
@@ -42,6 +44,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Pippo
     Basic moves:
@@ -57,6 +60,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Peppo
     Basic moves:
@@ -72,6 +76,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Oscar
     Basic moves:
@@ -87,6 +92,8 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
+    - Calcio Leggero -> Low Forward Kick Pro
 
 - Elisa
     Basic moves:
@@ -102,6 +109,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Fra Tavarone
     Basic moves:
@@ -117,6 +125,7 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero
 
 - Marsan
     Basic moves:
@@ -132,3 +141,4 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
+    - Calcio leggero

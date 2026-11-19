@@ -1,0 +1,78 @@
+{
+  "status": "not_submitted",
+  "limitation": "No intermediate pose input is available in this API; the saved light-kick pose is NOT passed to these requests. User choice is required before substituting this route.",
+  "items": [
+    {
+      "character": "Alberto",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/alberto-turbo.json"
+    },
+    {
+      "character": "Fabio Clara",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/fabio-clara-turbo.json"
+    },
+    {
+      "character": "Sboz",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/sboz-turbo.json"
+    },
+    {
+      "character": "Pippo",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/pippo-turbo.json"
+    },
+    {
+      "character": "Peppo",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/peppo-turbo.json"
+    },
+    {
+      "character": "Oscar",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/oscar-turbo.json"
+    },
+    {
+      "character": "Elisa",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/elisa-turbo.json"
+    },
+    {
+      "character": "Fra Tavarone",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/fra-tavarone-turbo.json"
+    },
+    {
+      "character": "Marsan",
+      "estimatedCredits": {
+        "min": 5,
+        "max": 5
+      },
+      "jobFile": "autosprite-agent/jobs/light-kick-20261119/marsan-turbo.json"
+    }
+  ]
+}

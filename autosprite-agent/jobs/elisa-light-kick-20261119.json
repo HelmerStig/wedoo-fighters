@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9dyrs900045e49mr49cdz9",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezhoqs0010pe717fq8yn99",
+        "lastFramePoseId": "cmvezhoqs0010pe717fq8yn99",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one crisp, elegant low-to-mid diagonal light kick: keep the supporting foot planted firmly on the ground baseline, lean the torso slightly back, and extend the kicking leg straight forward and diagonally downward at ~35 degrees with foot pointed, keeping the entire foot cleanly inside the frame. At peak extension, extend the rear arm straight back for balance and raise the front hand bent near the face in guard, gaze directed down-right. Smoothly retract the leg back to the exact standing guard pose. Preserve Elisa's exact face, brown hairstyle, blue jacket, dark trousers, shoes, scale and pixel art. Locked camera, no zoom, no effects or props."
+      }
+    ]
+  }
+}

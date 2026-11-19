@@ -1,0 +1,98 @@
+{
+  "durationMs": 600,
+  "impactMs": 300,
+  "frameIndexBase": 0,
+  "updatedAt": "2026-11-19",
+  "selectionMethod": "Controllo visivo delle pose di massima estensione; un fotogramma rappresentativo del plateau di impatto.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwnpegkc00kw3ufq9v8hnh7a",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 16,
+      "impactSourceFrame": 16,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwnplsga00egwo3r76jtw3xc",
+      "sourceStart": 0,
+      "sourceEnd": 22,
+      "impactFrame": 22,
+      "impactSourceFrame": 22,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwnq03ex0005lo7hkkrmaon1",
+      "sourceStart": 0,
+      "sourceEnd": 12,
+      "impactFrame": 12,
+      "impactSourceFrame": 12,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwnpvyxt00gpwdkaigl2vao0",
+      "sourceStart": 0,
+      "sourceEnd": 15,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwnpxknt004f1191wfv0oaey",
+      "sourceStart": 0,
+      "sourceEnd": 19,
+      "impactFrame": 19,
+      "impactSourceFrame": 19,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwnp5x1f00ie3ufqqtw7yore",
+      "sourceStart": 0,
+      "sourceEnd": 15,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwnmzvpv00et2n4i4a9bq3ex",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 22,
+      "impactSourceFrame": 22,
+      "note": ""
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwnpoyrt00gwwo3rnue4dgr1",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwnpsyx3000w84jnndqpwyn8",
+      "sourceStart": 0,
+      "sourceEnd": 12,
+      "impactFrame": 12,
+      "impactSourceFrame": 12,
+      "note": "Ultimo frame della posa estesa a 300 ms; recupero ottenuto invertendo la sequenza fino alla guardia. Le pose estese adiacenti iniziano prima del marcatore.",
+      "playback": "forward-reverse"
+    }
+  ]
+}

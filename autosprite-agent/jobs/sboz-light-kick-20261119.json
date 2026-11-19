@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwys4000o72jnrpng2i85",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveyznuz005kwo3iymky7hyg",
+        "lastFramePoseId": "cmveyznuz005kwo3iymky7hyg",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one compact low-to-mid diagonal forward light kick: keep the rear supporting leg planted firmly on the ground baseline with a slight knee bend, lean the torso slightly back, and snap the front leg straight forward and diagonally downward at ~35 degrees, keeping the extended sneaker cleanly inside the frame. At peak extension, hold the rear fist raised tightly near the chin and chest in guard while the front arm extends slightly forward at waist height over the kicking thigh. Smoothly retract the leg back to the exact standing guard pose. Preserve Sboz's exact face, beige cap, beard, dark navy sweater, blue jeans, sneakers, scale and pixel art. Locked camera, no zoom, no effects or props."
+      }
+    ]
+  }
+}

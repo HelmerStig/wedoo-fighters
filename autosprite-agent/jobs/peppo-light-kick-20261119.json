@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwwuu000b72jnin9ee6na",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvez0v6s004fg57exj7jz9sy",
+        "lastFramePoseId": "cmvez0v6s004fg57exj7jz9sy",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one agile diagonal low-to-mid light kick: keep the supporting foot planted firmly on the ground baseline, tilt the torso noticeably back for balance, and snap the kicking leg straight forward and diagonally downward at ~35 degrees, keeping the extended foot cleanly inside the frame. At peak extension, spread the rear arm out behind the body and hold the front arm slightly forward near the chest for agile balance, head looking down-right toward the target. Smoothly retract the leg back to the exact standing guard pose. Preserve Peppo's exact face, black beanie, black long-sleeve top, black trousers, black shoes, scale and pixel art. Locked camera, no zoom, no effects or props."
+      }
+    ]
+  }
+}

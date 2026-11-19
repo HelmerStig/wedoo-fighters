@@ -1,0 +1,128 @@
+﻿[
+    {
+        "character":  "Alberto",
+        "file":  "alberto-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/8.png",
+        "characterReference":  "PNG/ALBERTO.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  431,
+        "verticalOffsetAfterResize":  7,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Fabio Clara",
+        "file":  "fabio-clara-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/6.png",
+        "characterReference":  "PNG/FABIO-CLARA.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  432,
+        "verticalOffsetAfterResize":  5,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Sboz",
+        "file":  "sboz-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/7.png",
+        "characterReference":  "PNG/SBOZ.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  434,
+        "verticalOffsetAfterResize":  2,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Pippo",
+        "file":  "pippo-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/1.png",
+        "characterReference":  "PNG/PIPPO.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  432,
+        "verticalOffsetAfterResize":  0,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Peppo",
+        "file":  "peppo-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/2.png",
+        "characterReference":  "PNG/PEPPO.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  436,
+        "verticalOffsetAfterResize":  2,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Oscar",
+        "file":  "oscar-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/5.png",
+        "characterReference":  "PNG/OSCARE.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  434,
+        "verticalOffsetAfterResize":  -1,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Elisa",
+        "file":  "elisa-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/4.png",
+        "characterReference":  "PNG/Elisa.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  430,
+        "verticalOffsetAfterResize":  3,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  "Prima versione con capelli lunghi, scelta esplicitamente dall\u0027utente."
+    },
+    {
+        "character":  "Fra Tavarone",
+        "file":  "fra-tavarone-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/3.png",
+        "characterReference":  "PNG/FRA-TAVARONE.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  427,
+        "verticalOffsetAfterResize":  -6,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    },
+    {
+        "character":  "Marsan",
+        "file":  "marsan-light-kick-pose.png",
+        "poseReference":  "REFERENCE/CALCIO LEGGERO/9.png",
+        "characterReference":  "PNG/MARSAN.png",
+        "canvas":  [
+                       512,
+                       512
+                   ],
+        "baseline":  434,
+        "verticalOffsetAfterResize":  -3,
+        "normalization":  "Full canvas nearest-neighbor resize to 512x512, then vertical translation to source supporting-foot baseline; no pose repainting",
+        "selectionNote":  null
+    }
+]

@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9hwxxn000k72jn5131g7kq",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick",
+        "prompt": "time 0-0.4s: Start in the supplied idle guard facing RIGHT. Shift weight onto the supporting leg and lift only the kicking knee, with a short controlled preparation. time 0.4-1s: Execute exactly ONE light kick: the low kick: one supporting leg planted, opposite leg extends diagonally down-right with the shin almost straight, upper body gently tilted back, one forearm guarding face and other forearm lower across waist. Reach the supplied kick keyframe at 1s. time 1-2s: Retract that same leg, bend the knee, replace the foot in its original position and smoothly restore the exact starting idle guard. Keep the planted foot stable, preserve face, outfit, proportions, 16-bit pixel art, 512x512 framing and padding. Fixed camera. One kick and one recovery; no extra strikes, jumps, spins or added effects.",
+        "rawPrompt": true,
+        "poseId": "cmvez042j0044g57e57q431q2",
+        "lastFramePoseId": "cmvez042j0044g57e57q431q2",
+        "loop": true
+      }
+    ]
+  }
+}

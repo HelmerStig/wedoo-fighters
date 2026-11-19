@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Pro",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvez5xck00hbrym9nwdyrplr",
+        "lastFramePoseId": "cmvez5xck00hbrym9nwdyrplr",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Execute one athletic low-to-mid forward light kick: keep the supporting leg planted firmly on the ground baseline, lean the torso slightly back and twist the shoulders, and swing the kicking leg straight forward and diagonally downward at ~30 degrees, keeping the extended shoe cleanly inside the frame. At peak extension, swing the rear arm back behind the torso for counterbalance and keep the front arm bent up near chest level, gaze directed toward the kicking foot. Smoothly retract the leg back to the exact standing guard pose. Preserve Marsan's exact face, short brown hair, stubble, red/cream/navy tracksuit jacket, blue jeans, brown shoes, scale and pixel art. Locked camera, no zoom, no effects or props."
+      }
+    ]
+  }
+}
