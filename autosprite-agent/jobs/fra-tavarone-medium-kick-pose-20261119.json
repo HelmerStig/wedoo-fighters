@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "medium kick",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezbqmx0062g57evf7gbf06",
+        "lastFramePoseId": "cmwnrrrgz00147kfvm0fks0u3",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Use the supplied first and last poses exactly, preserving identity, outfit, footwear, pixel art, scale and ground baseline. One crisp medium kick from standing guard to full extension. Pivot cleanly on the planted supporting foot, rotate the torso with both arms open wide for agile balance, chamber the knee, and snap a crisp horizontal mid-level kick straight to the right into the exact final pose. Preparation occupies roughly the first third; the kick accelerates smoothly and reaches maximum extension cleanly at the final frame. Keep the supporting foot anchored on the ground baseline; end exactly on the supplied impact pose. Locked camera, no zoom, no pan, no extra props, no motion trails or effects."
+      }
+    ]
+  }
+}

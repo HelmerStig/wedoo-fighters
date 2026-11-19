@@ -3,3 +3,8 @@ Storyboard Turbo: 2s, idle at 0s, saved light-kick pose at 1s, original idle at 
 time 0-1s: Start in the supplied idle guard facing RIGHT. Briefly shift weight onto the supporting leg and lift the kicking knee, then execute exactly ONE light checking kick. Extend the front leg diagonally down-right, heel forward and toe slightly raised, with the other foot planted. Lean the torso gently back, keep one fist close to the face and the other hand lower for balance. Reach the exact supplied light-kick pose at 1s.
 time 1-2s: Retract the same kicking leg, bend the knee and place the foot back in its original position. Smoothly restore the exact starting idle guard by 2s. Keep the supporting foot stable. Preserve face, cap, navy sweater, blue jeans, sneakers, proportions, pixel art, 512x512 scale and transparent padding. Fixed camera; one kick and one recovery without extra strikes, jumps, spins or effects.
 sound: silent.
+
+
+fabio clara, oscar, marsan e peppo, nello sprite scivolano all'indietro. puoi correggere gli spriteshet in modo che il piede d'appoggio resti fermo nello stesso punto?
+
+Alberto -> 2.png

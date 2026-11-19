@@ -1,0 +1,290 @@
+[
+  {
+    "character": "Alberto",
+    "file": "alberto-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/2.png",
+    "characterReference": "PNG/ALBERTO.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      167,
+      430
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      13,
+      -20
+    ],
+    "visibleBounds": [
+      94,
+      64,
+      436,
+      430
+    ],
+    "pngSha256": "4daf62df751a4fe8e895daa79551843d1aa45aff747107705d2d396c3d2cf737",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Fabio Clara",
+    "file": "fabio-clara-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/8.png",
+    "characterReference": "PNG/FABIO-CLARA.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      171,
+      431
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      15,
+      -16
+    ],
+    "visibleBounds": [
+      81,
+      60,
+      462,
+      431
+    ],
+    "pngSha256": "ef1290cfeace72ca9eee76e57e6b9922c11e638fc3b8056d6d35299d883d06f5",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Sboz",
+    "file": "sboz-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/3.png",
+    "characterReference": "PNG/SBOZ.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      173,
+      433
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      20,
+      0
+    ],
+    "visibleBounds": [
+      91,
+      78,
+      492,
+      433
+    ],
+    "pngSha256": "7e38399ee8ef41e43342c3a94ed05463a048186f6bda989b360a03310636891c",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Pippo",
+    "file": "pippo-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/1.png",
+    "characterReference": "PNG/PIPPO.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      156,
+      432
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      -1,
+      -24
+    ],
+    "visibleBounds": [
+      62,
+      19,
+      471,
+      432
+    ],
+    "pngSha256": "50e391eb282de1007171f3682cf929a192a32ff3405cc8e2f491a95ce7a93a06",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Peppo",
+    "file": "peppo-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/7.png",
+    "characterReference": "PNG/PEPPO.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      148,
+      435
+    ],
+    "uniformScaleAfter512": 0.9609375,
+    "translation": [
+      -3,
+      -18
+    ],
+    "visibleBounds": [
+      37,
+      16,
+      445,
+      435
+    ],
+    "pngSha256": "cd1e4554532a86e7f3ee62fc4d9fee5de955893a60b39c3caeb21e107795fc58",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Oscar",
+    "file": "oscar-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/4.png",
+    "characterReference": "PNG/OSCARE.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      163,
+      433
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      18,
+      -13
+    ],
+    "visibleBounds": [
+      90,
+      45,
+      463,
+      434
+    ],
+    "pngSha256": "bf93ce5b6c9739f2792ebf5de5fda28f2fdca1eebf2a951c2ccfd814f923ed61",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Elisa",
+    "file": "elisa-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/5.png",
+    "characterReference": "PNG/Elisa.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      177,
+      429
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      48,
+      -11
+    ],
+    "visibleBounds": [
+      131,
+      45,
+      474,
+      429
+    ],
+    "pngSha256": "f7da5833f0042a1504fa014f0f2673059342c18d227af69efdfbbc74c6322ca7",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": "Capelli lunghi mantenuti."
+  },
+  {
+    "character": "Fra Tavarone",
+    "file": "fra-tavarone-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/9.png",
+    "characterReference": "PNG/FRA-TAVARONE.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      165,
+      427
+    ],
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      -17,
+      -16
+    ],
+    "visibleBounds": [
+      25,
+      31,
+      446,
+      428
+    ],
+    "pngSha256": "c9df6ed0efb03966b21886fb3702226b5c396e4032da56aa1ae298f4cf8526ec",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Marsan",
+    "file": "marsan-medium-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO MEDIO/6.png",
+    "characterReference": "PNG/MARSAN.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "supportingSole": [
+      168,
+      433
+    ],
+    "uniformScaleAfter512": 0.95703125,
+    "translation": [
+      24,
+      -27
+    ],
+    "visibleBounds": [
+      89,
+      17,
+      475,
+      433
+    ],
+    "pngSha256": "559cf89b668b94504cb9f1f7d2115d83800df430ac477b1e37f57be950ec519e",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to original rear-foot sole; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  }
+]
