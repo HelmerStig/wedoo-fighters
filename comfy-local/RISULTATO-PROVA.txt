@@ -1,0 +1,53 @@
+PROVA COMFYUI LOCALE — 19 NOVEMBRE 2026
+
+Risultato salvato in prove/marsan-preparazione/:
+- marsan-preparation.mp4: 17 frame 512x512, 16 fps, senza audio.
+- marsan-preparation.gif: anteprima rallentata a 80 ms/frame, ripetuta.
+- contact-sheet.png: confronto dei 17 frame numerati.
+- marsan-preparation-raw-sheet.png + atlas.json: griglia 5x4, celle 512x512.
+- keyframe-idle.png e keyframe-preparation.png: copie degli input originali.
+- workflow-api.json, references.json, verified-models.json, run-summary.json.
+La cartella prove/ e' nel repository; runtime e modelli sono invece ignorati
+da Git. Conservare prove/ e questi documenti quando si cambia postazione.
+
+Hardware: NVIDIA RTX 2060 6 GB, driver 610.88, RAM 32 GB.
+ComfyUI 0.46.0, sorgente ufficiale al commit indicato nel README.
+Python 3.12.14, PyTorch 2.8.0+cu126, solo nodi nativi.
+Modello: Wan 2.1 Fun InP 1.3B BF16, caricato FP16.
+Text encoder UMT5 XXL FP8 su CPU, VAE FP32 su CPU, CLIP Vision H.
+Pesi verificati tramite SHA-256 ufficiali. pip check senza errori.
+Seed 20261119, 12 step, CFG 5, UniPC/simple, shift 5, 512x512, 17 frame.
+Tutti i frame sono output del modello: nessun keyframe sostituito a posteriori,
+nessuna interpolazione classica, pixelatura o correzione manuale delle pose.
+
+Tempi osservati, esclusi installazione e download iniziali:
+- Primo lavoro completo: 412,4 s (circa 6 min 52 s).
+- Campionamento sulla GPU: circa 28 s per 12 step.
+- Seconda sola decodifica: 209,6 s, riutilizzando il latent gia' generato.
+La cronologia conferma KSampler (nodo 12) nella cache per il secondo lavoro.
+L'offload e il VAE su CPU incidono molto sui tempi complessivi.
+Questa build CUDA 12.6 non abilita tutti i percorsi ottimizzati di ComfyUI:
+il risultato non misura le massime prestazioni ottenibili dalla macchina.
+
+Correzione verificata:
+La prima decodifica usava temporal_size=16 e introduceva un evidente cambio
+di luce/dettaglio negli ultimi frame. Decodificando l'intera sequenza nel
+tempo (temporal_size=32), mantenendo tile spaziali 256 e overlap 64, il salto
+visivo e' scomparso. Questa e' la versione conservata in prove/.
+Il primo confronto resta nel runtime in results/; quello corretto in
+results-whole-timeline/. Nessuna seconda generazione del movimento.
+
+Valutazione visiva:
+La rotazione dalla guardia alla preparazione segue i due keyframe. Scala,
+orientamento e inquadratura rimangono abbastanza stabili. Non sono stati
+aggiunti attacchi o effetti. Rimangono piccole variazioni nei dettagli e
+una certa morbidezza nei frame intermedi: serve revisione per un asset finale.
+Lo sfondo grigio e' opaco. La trasparenza non e' stata ricostruita e questi
+file non sono stati integrati in animation/ o demo-moves.
+
+La prova dimostra che questa pipeline locale funziona sulla macchina.
+Al termine il server e' stato fermato per liberare RAM e VRAM; riavvio
+e riproduzione sono descritti in README.txt.
+Non dimostra ancora la qualita' su un pugno completo, su tutti i personaggi
+o su sequenze piu' lunghe. Prima di migrare il lavoro da AutoSprite conviene
+valutare questa breve clip e poi una singola fase di colpo con nuovi keyframe.

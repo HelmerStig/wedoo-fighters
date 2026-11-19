@@ -1,5 +1,51 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+CROUCH - NOVE PERSONAGGI (19 NOVEMBRE 2026)
+Integrato Crouch per Alberto, Fabio Clara, Sboz, Pippo, Peppo, Oscar, Elisa,
+Fra Tavarone e Marsan, dalle ultime versioni salvate su AutoSprite.
+Applicati gli intervalli salvati sulle versioni accorciate: 9-11 frame per
+personaggio. Celle 512x512, scala, padding e pixel originali conservati.
+Durata 250 ms a 1x, FPS = frame esportati * 4; sequenza solo avanti dalla
+guardia alla posizione accovacciata. Senza loop si ferma sulla posa finale;
+il loop rimane attivo per default nella demo. CRT condiviso con gli altri player.
+Manifest: animation/crouch-manifest.json. Report HTML/CSV e pose in
+reports/crouch-timing.html, collegato sotto il titolo in mosse.html?move=crouch.
+Aggiornato primi-personaggi-da-cpmpletare.txt per tutti e nove i personaggi.
+
+HURT - NOVE PERSONAGGI (19 NOVEMBRE 2026)
+Importate le ultime versioni Hurt salvate su AutoSprite per Alberto, Fabio
+Clara, Sboz, Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan.
+Versioni gia accorciate quando disponibili; per Alberto taglio salvato 0-20
+incluso, 21 frame esportati. Celle 512x512, padding e pixel conservati.
+Riproduzione solo avanti con recupero incluso, durata uniforme di 500 ms
+a 1x, FPS = frame esportati * 2. Loop e CRT condivisi con le altre mosse.
+Il flash bianco nei frame 6-7 di Elisa appartiene alla sorgente ed e invariato.
+Manifest: animation/hurt-manifest.json; atlas con durate per fotogramma.
+Visibile in ogni pagina personaggio e in mosse.html?move=hurt, tra le mosse
+di base. Report HTML/CSV: reports/hurt-timing.html, collegato sotto il titolo.
+Aggiornato primi-personaggi-da-cpmpletare.txt per tutti e nove i personaggi.
+La durata visiva non impone il futuro tempo di hitstun in Godot.
+
+PUGNO FORTE - FRA TAVARONE (19 NOVEMBRE 2026)
+Importata l'ultima versione salvata Strong Punch cmwnep71x00l629xvtrflrgeh:
+55 frame dalla sorgente da 64 cmwnel5xw007fxjugzks3g8rx, celle 512x512.
+PNG e padding invariati. Solo avanti con preparazione e recupero inclusi;
+impatto al frame 21 a 0,50 s, ciclo di 1 s e loop predefinito.
+Scia e particelle azzurre al 75%, maschere del braccio riviste nei frame 19-21.
+CRT condiviso con gli altri player. Asset fra-tavarone-strong-punch.*.
+Aggiornato primi-personaggi-da-cpmpletare.txt: Pugno forte disponibile per
+tutti i nove personaggi elencati.
+
+PUGNO FORTE - SBOZ (19 NOVEMBRE 2026)
+Importato Strong Punch cmwndk8i1000l13taeyf08o7n: 64 frame completi,
+celle 512x512, PNG e padding conservati byte per byte.
+Solo avanti con recupero incluso; impatto principale al frame 22 a 0,50 s,
+ciclo di 1 secondo. La breve estensione preliminare della sorgente e conservata.
+Scia e particelle azzurre al 75% limitate al braccio del colpo principale,
+maschere riviste nei frame 21-22. CRT e loop condivisi con gli altri player.
+Asset: animation/sboz/sboz-strong-punch.*; dati nei manifest strong-punch.
+Aggiornato anche primi-personaggi-da-cpmpletare.txt.
+
 PUGNO MEDIO - ELISA, ULTIMA VERSIONE (18 NOVEMBRE 2026)
 Sostituito con la piu recente salvata cmwm9ar3500qcxy4fi2qcei8i: 39 frame,
 versione accorciata della sorgente da 40 frame cmwm8ttt0000it1wcwc4w1otm.
@@ -50,14 +96,12 @@ Se WebGL o l'accesso alla texture non sono disponibili, resta attivo il CRT base
 e il pulsante indica "CRT stage: base". Per il CRT avanzato usare il server locale.
 Le risorse GPU sono liberate alla chiusura o al cambio della galleria.
 
-PUGNO FORTE - MARSAN (18 NOVEMBRE 2026, STRONG PUNCH 2)
-Importata l'ultima Strong punch 2 cmwm7xx0q004sxy4f0i49habb: 64 frame completi,
-PNG 4096x4096, celle 512x512 e padding conservati byte per byte.
-Questa versione include la rotazione e il recupero: riproduzione solo avanti,
-impatto al primo frame esteso pulito dopo la scia sorgente (indice 33) a 0,50 secondi,
-ciclo di 1 secondo e loop predefinito. Non viene piu usato il ritorno inverso.
-Scia e particelle azzurre al 75%, maschere del braccio riviste nei frame 31-33.
-Visibile nella pagina Marsan e in mosse.html?move=strong-punch, con CRT condiviso.
+PUGNO FORTE - MARSAN (RIPRISTINATO IL 19 NOVEMBRE 2026)
+Ripristinata Strong punch 2 cmwm7xx0q004sxy4f0i49habb precedente allo storybook.
+64 frame completi, celle 512x512, PNG e padding originali conservati.
+Solo avanti con recupero incluso, impatto al frame 33 a 0,50 s, ciclo di 1 s.
+Ripristinate anche le maschere della scia e delle particelle azzurre nei frame
+31-33, intensita 75%; CRT e loop invariati. Storybook non selezionato nella demo.
 Asset: animation/marsan/marsan-strong-punch.*; dati nei manifest strong-punch.
 
 PUGNO FORTE - ALBERTO (18 NOVEMBRE 2026)
@@ -448,13 +492,13 @@ original-porta-susa.png e i file di lavorazione non vengono pubblicati.
 
 LUCI DI PORTA SUSA
 12 finestre calde della facciata e 2 lanterne hanno sfarfallio indipendente:
-cicli pseudocasuali, brevi cali di luminositÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  e ritorno alla luce originale.
+cicli pseudocasuali, brevi cali di luminositÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  e ritorno alla luce originale.
 Lampioni e finestre sovrapposte sono mascherati separatamente. Nessuna parte
 del PNG originale viene modificata. Controllo Disattiva/Attiva sfarfallio;
 movimento ridotto mantiene tutte le luci fisse, e il drag non cambia la fase.
 La pausa nuvole non ferma lo sfarfallio, gestito dal clock dei personaggi.
 Le due lanterne si vedono esplorando il lato destro del panorama.
-stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  luminosi,
+stage-lights.js disegna un atlas di maschere sui soli pixel giÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â  luminosi,
 prima della pioggia e dei personaggi. Shader e audio del temporale restano
 indipendenti. Maschere e coordinate: original-backgrounds/porta-susa/
 lights-mask.png e lights.json, catalogo incorporato stage-lights-catalog.js.

@@ -32,7 +32,7 @@
       "sourceStart": 0,
       "sourceEnd": 63,
       "impactFrame": 33,
-      "note": "Latest Strong punch 2: first clean fully extended punch after the built-in white streak (frame 33). Forward playback includes natural recovery."
+      "note": "Restored Strong punch 2: first clean fully extended punch after the built-in white streak (frame 33). Forward playback includes natural recovery."
     },
     {
       "character": "FABIO-CLARA",
@@ -57,6 +57,22 @@
       "sourceEnd": 63,
       "impactFrame": 31,
       "note": "First clean fully extended punch at source frame 31. Original white arc preserved; forward sequence includes natural recovery."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwndk8i1000l13taeyf08o7n",
+      "sourceStart": 0,
+      "sourceEnd": 63,
+      "impactFrame": 22,
+      "note": "Main punch extension at frame 22; source includes an earlier short punch, preserved unchanged. Forward playback includes natural recovery."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwnep71x00l629xvtrflrgeh",
+      "sourceStart": 0,
+      "sourceEnd": 54,
+      "impactFrame": 21,
+      "note": "Fully extended main punch at source frame 21. Saved 55-frame revision; forward playback includes preparation and natural recovery."
     }
   ]
 }

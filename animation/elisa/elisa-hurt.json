@@ -1,0 +1,204 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 31.25,
+      "rgbaSha256": "86c0d92373c684aa8e5494d28643237e0ca71a857e368c2703f9c38664f353c6"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 31.25,
+      "rgbaSha256": "7a92dd2204dbc9cb2c7b6a41b5456221ced8e22ae1ac51d9988e635cfef04cc5"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 31.25,
+      "rgbaSha256": "0367df137cae67c6faaf69957b4acb76466f600833257d832f92b680f620f259"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 31.25,
+      "rgbaSha256": "2d76694fe64a1c556f0757b94ec05e12d5f8d8e4b67c6db8b29dc3e943159854"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 31.25,
+      "rgbaSha256": "9b5b13f2e55600efc724ee6ab18c586180a976545c60c40075c3294296dd7e55"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 31.25,
+      "rgbaSha256": "1322057db4092e5c6fefc9444231a9dd222df3d51ab07e97a0fb56a82cd8b6b9"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 31.25,
+      "rgbaSha256": "b4fd8d588ea33669cf4997f7d0af3c19d485b3522f98ca3b3c4efd5b1b2af04f"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 31.25,
+      "rgbaSha256": "960ed9268c939a90c5f79f83a84d5199416643e2ab0d117485a83fcbfcec82cd"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 31.25,
+      "rgbaSha256": "c64dde0d73c853ad9896939a77b8ae18ca41d7ab04621b3c2c1f57b5271121dc"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 31.25,
+      "rgbaSha256": "a85cf2dc6b1a99a7f971d65b05f13eaa092366afce6176efaf6ecedb8b411cc3"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 31.25,
+      "rgbaSha256": "bab59f7f34ea773c1eb77f8258710d99906755d54d7612bec84c422a6af730d6"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 31.25,
+      "rgbaSha256": "6ec30aab7c11d4c7b4d9c4ded1510a7351ceb55fa90e1c31cf08b2fc89536dfd"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 31.25,
+      "rgbaSha256": "2e2d559b19466c84b6ecfcf358dcaadd2d72a5d0754bc4bd5fa0754d7374d2f7"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "duration": 31.25,
+      "rgbaSha256": "c789e41294e2534accf8df8a1f41a0c6c3e2362aba9649b1d7594972872d87dd"
+    },
+    "14": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "duration": 31.25,
+      "rgbaSha256": "efc9451b9c9d40ba51d0c399cb43473b4e0536ec0e9930affc738babaa387fe9"
+    },
+    "15": {
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "duration": 31.25,
+      "rgbaSha256": "78a640de9b20d516e2285c38f7178424d5a708b6028739bc042fdeca87948280"
+    }
+  },
+  "meta": {
+    "app": "AutoSprite 3D",
+    "version": "1.0",
+    "image": "elisa-hurt.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2560,
+      "h": 2048
+    },
+    "scale": "1",
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 16,
+    "source_frame_count": 16,
+    "source_sheet_id": "cmwng03hw00wskqy8yoxss29c",
+    "source_frame_start": 0,
+    "source_frame_end": 15,
+    "fps": 32,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

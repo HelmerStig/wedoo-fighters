@@ -1,0 +1,131 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "0b8738e067be3283b18873590b8454b38d23196c76dc426bcfa74649791e66a7"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "52d41d4ddb76df5237b1ef7cda121b67109c40cce7d668e2eced6f98e854439b"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "a2a82a2111d14d22642828854b9d1acae852baafb1ad0dca9e17286600ea78bd"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "957870d6f2cbce9c5f88a9ec917610ab3ea9bc4a6a10e561ef6d117846ca5cfa"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "0f2b6ae0402c82ced4406300b713978412b64b35374eb9268300d4f9e813a38b"
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "ea85af8c753702ab9a8da2003becff6e2a3f2d66883ce9655fddf0d603c004e8"
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "2330c09b8fae13ea52f16497035bea00f40a4e79619d2d387bd32ccd06be30f7"
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "f085698dd91b54f1badc7a8194f7b0ccf299eb9cc58639222db0f38f3087b94f"
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "1542718953b06d2425d9155b53e6b605da951e717b0624648919a0e32f4d332f"
+    }
+  },
+  "meta": {
+    "app": "AutoSprite 3D",
+    "version": "1.0",
+    "image": "fra-tavarone-crouch.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3584,
+      "h": 1024
+    },
+    "scale": "1",
+    "loopStart": 0,
+    "loopEnd": 8,
+    "speedMultiplier": 2,
+    "sizeMultiplier": 1,
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 9,
+    "source_frame_count": 32,
+    "source_sheet_id": "cmwnj768l0096rqaosaci0hqj",
+    "source_frame_start": 0,
+    "source_frame_end": 8,
+    "fps": 36,
+    "duration_ms": 250,
+    "duration_s": 0.25,
+    "playback": "forward"
+  }
+}

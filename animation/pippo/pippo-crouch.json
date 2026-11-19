@@ -1,0 +1,142 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 25.0,
+      "rgbaSha256": "21b28b61d7f1e659714ef69340f540f75d46637f76f657134e46cc693c7d45b1"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 25.0,
+      "rgbaSha256": "a3454d21c2005c7d2e628192fff4aed88582fb2b39aeb7f264e4f1aa26d6ed9f"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 25.0,
+      "rgbaSha256": "c9bbdc2766d86cc2069e118fd801c2a42e05ce40a2dedea320a9c5ae7e173b91"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 25.0,
+      "rgbaSha256": "15ff950048a861b99e8b04d71b62f4a12e2e72c999a30c87ff899924085db712"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 25.0,
+      "rgbaSha256": "406ffedfac50f3f98c9db16d03eac992abb7c5bcb43a81938a839b294c725f2d"
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 25.0,
+      "rgbaSha256": "b2c95e4cb136fc0efee11a7105c4f9e83d11217db3537ae6932de46be394a709"
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 25.0,
+      "rgbaSha256": "aa7d0771d9e41137be5391439b91ec8e3821d81d77310e35ca1820d07a54cae3"
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 25.0,
+      "rgbaSha256": "606423275df22960c9a1bcc342bd46d99f3fc82c1a9818fe2b949872c5b3591e"
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 25.0,
+      "rgbaSha256": "4d163f41cb533dd0797e217abc4c791e30ba55c0fa29b6974a2fb5ae40a8a497"
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 25.0,
+      "rgbaSha256": "ba1f412289d997d8a86e605e1a5ee89e306d219e15bb494ff5ce0f0f85cce709"
+    }
+  },
+  "meta": {
+    "app": "AutoSprite 3D",
+    "version": "1.0",
+    "image": "pippo-crouch.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3584,
+      "h": 1024
+    },
+    "scale": "1",
+    "loopStart": 0,
+    "loopEnd": 9,
+    "speedMultiplier": 2,
+    "sizeMultiplier": 1,
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 10,
+    "source_frame_count": 40,
+    "source_sheet_id": "cmwnjbr1z00bdakhzsdmfcix7",
+    "source_frame_start": 0,
+    "source_frame_end": 9,
+    "fps": 40,
+    "duration_ms": 250,
+    "duration_s": 0.25,
+    "playback": "forward"
+  }
+}

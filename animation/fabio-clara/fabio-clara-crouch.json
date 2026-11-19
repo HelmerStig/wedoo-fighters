@@ -1,0 +1,131 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "94d6dbe584fdeaa48df3b912873725e40a951cda967a8e8b7a4d4fa8ec6359b6"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "b50434f567676141aace82150e8c5a2de8342e091b7570e2b53e6bc86ab257fb"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "4850cfda58384abbf5113060ffe96bc8cf7be20a78e0fd30c515fd36597dbd0a"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "9908a9f471bde326adb30884a1f4879496e38c22d3406d6429d950081edfc624"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "38d6250a1275745a9869e571788aaadd77233a0331b17af7a78c06e12151b60a"
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "20698599d4f3f956728f4829906caf0bfa2f12ccac67a8840b5b378357f26b12"
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "b014a70917fc6778d58b1038dd1a487b6b36c48d6abb27144b6c1eda8c399128"
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "8b223fe1928f26d42a112bc0ef2d7491f967edb2de1e741635f73f74ccd0060e"
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 27.77777777777778,
+      "rgbaSha256": "4ed3c60e0407f2027e889610cd14f5b21e8242e53d63a8d6971427ae6bc93b5a"
+    }
+  },
+  "meta": {
+    "app": "AutoSprite 3D",
+    "version": "1.0",
+    "image": "fabio-clara-crouch.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3584,
+      "h": 1024
+    },
+    "scale": "1",
+    "loopStart": 0,
+    "loopEnd": 8,
+    "speedMultiplier": 2,
+    "sizeMultiplier": 1,
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 9,
+    "source_frame_count": 44,
+    "source_sheet_id": "cmwnj5n7d006pakhziz67284r",
+    "source_frame_start": 0,
+    "source_frame_end": 8,
+    "fps": 36,
+    "duration_ms": 250,
+    "duration_s": 0.25,
+    "playback": "forward"
+  }
+}

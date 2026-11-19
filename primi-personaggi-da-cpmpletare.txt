@@ -1,9 +1,134 @@
 - Alberto
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Fabio Clara
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Sboz
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Pippo
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Peppo
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Oscar
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Elisa
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Fra Tavarone
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte
+
 - Marsan
+    Basic moves:
+    - Idle
+    - Camminata
+    - Salto
+    - Crouch
+    - Parata alta
+    - Hurt
+    - Vittoria
+
+    Attack:
+    - Pugno leggero
+    - Pugno medio
+    - Pugno forte

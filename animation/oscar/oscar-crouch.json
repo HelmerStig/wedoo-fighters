@@ -1,0 +1,142 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 25.0,
+      "rgbaSha256": "e374abe188d7cc15ace0a4a2f9759feeb0838e0eddbd5d19444bc2d98808f43f"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 25.0,
+      "rgbaSha256": "5f850a37b5ac62ab577edda3d89d4cecd695219bd458d894f56be3fa617e04e9"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 25.0,
+      "rgbaSha256": "66e9b5bb2bc8947d0730ffc94ba9a9508502c81f30212ce81a6cbf0595f31073"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 25.0,
+      "rgbaSha256": "bd1868a4f96d4653c97a58018821cebc9264f80e886ac5dec0cfd8f2e35edc05"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 25.0,
+      "rgbaSha256": "6a414729c4e18c23f3adfdeff15cf25fc778516620adc12907ffd192fce70914"
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 25.0,
+      "rgbaSha256": "1fae9b5a44b10f386e8e7bff6cbec558b7cff1d43a1c5ed7dd6ef3b3e98e280c"
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 25.0,
+      "rgbaSha256": "cb70dcad9f0879e03dc000cb1e0a1610cf9815b7df5087e2febb2c88c940ec1b"
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 25.0,
+      "rgbaSha256": "4ee7de046613590804f8927e8b8d4709001d540c2d0de390e58a7ddd6f05c4ba"
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 25.0,
+      "rgbaSha256": "fde96db5b7c74b82b0f9bc293797503a769d0e973e3cbef1128ed5a2e60849d2"
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 25.0,
+      "rgbaSha256": "0b4c2c19df02d05357bb3528e65df9ce73f92c2c56f039df23baee07fca923dd"
+    }
+  },
+  "meta": {
+    "app": "AutoSprite 3D",
+    "version": "1.0",
+    "image": "oscar-crouch.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 3584,
+      "h": 1024
+    },
+    "scale": "1",
+    "loopStart": 0,
+    "loopEnd": 9,
+    "speedMultiplier": 2.9166666666666665,
+    "sizeMultiplier": 1,
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 10,
+    "source_frame_count": 10,
+    "source_sheet_id": "cmwni0ezd0013ygz03068uc37",
+    "source_frame_start": 0,
+    "source_frame_end": 9,
+    "fps": 40,
+    "duration_ms": 250,
+    "duration_s": 0.25,
+    "playback": "forward"
+  }
+}

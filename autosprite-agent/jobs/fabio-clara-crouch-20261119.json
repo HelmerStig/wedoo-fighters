@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Crouch",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezcwlh0005pe7141enxfwe",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied standing guard pose. In one smooth, controlled motion, the fighter bends both knees and lowers their body down into a low kneeling fighting crouch on one knee, keeping their front foot planted flat on the ground and their back knee resting down for balance while holding both fists raised tightly in front of their face and chest in a defensive guard. Stay compact and ready to defend at the end of the animation without standing back up. Preserve the exact face, hairstyle, reference outfit, footwear, proportions, scale, right-facing view and ground baseline. Locked camera, no zoom, no pan, no attacks, no extra props or effects."
+      }
+    ]
+  }
+}

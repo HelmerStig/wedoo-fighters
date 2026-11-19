@@ -1,0 +1,12 @@
+{
+  "prompt_id": "12a94d91-3393-4c6d-a514-a7574f663ec1",
+  "execution_seconds": 209.598,
+  "frame_count": 17,
+  "frame_size": [
+    512,
+    512
+  ],
+  "video_fps": 16,
+  "gif_frame_ms": 80,
+  "workflow_sha256": "8c110ee7880ab9d578d35eaab0c72b08d44bc5b4bac3a763780467e7b4c0d01b"
+}

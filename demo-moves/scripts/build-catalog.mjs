@@ -53,6 +53,8 @@ const extraAnimations=[
   {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500},
   {manifest:'medium-punch-manifest.json',id:'medium-punch',name:'Pugno medio',description:'Pugno medio e ritorno in guardia',durationMs:750},
   {manifest:'strong-punch-manifest.json',id:'strong-punch',name:'Pugno forte',description:'Pugno forte e ritorno in guardia',durationMs:1000},
+  {manifest:'hurt-manifest.json',id:'hurt',name:'Hurt',description:'Reazione al colpo e ritorno in guardia',durationMs:500},
+  {manifest:'crouch-manifest.json',id:'crouch',name:'Crouch',description:'Discesa in guardia accovacciata',durationMs:250},
   {manifest:'block-manifest.json',id:'block',name:'Parata alta',description:'Parata alta pronta in 0,1 secondi'}
 ];
 const punchTiming=await readJson(join(root,'animation/light-punch-timing.json'));
@@ -72,6 +74,10 @@ for(const extra of extraAnimations){
     const frames=frameRects(atlas);
     if(frames.length!==item.frames)throw Error(`Frame ${extra.id} non corrispondenti: ${item.character}`);
     let timing={};
+    if(extra.id==='hurt'||extra.id==='crouch'){
+      if(data.durationMs!==extra.durationMs||item.playback!=='forward'||item.sourceEnd-item.sourceStart+1!==frames.length||atlas.meta.source_sheet_id!==item.sourceSheetId||Object.values(atlas.frames).some((f,i)=>f.source_frame!==item.sourceStart+i||Math.abs(f.duration-extra.durationMs/frames.length)>1e-8))throw Error('Timing '+extra.name+' non valido: '+item.character);
+      timing={playbackMode:'forward',frameDurations:frames.map(()=>extra.durationMs/frames.length)};
+    }
     if(extra.id==='jump'){
       const entry=jumpTiming.items.find(t=>t.character.toLowerCase()===character.id);
       if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di apice per '+item.character);

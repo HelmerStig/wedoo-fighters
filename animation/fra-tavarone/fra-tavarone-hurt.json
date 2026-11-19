@@ -1,0 +1,171 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "995187209e13294ed9347161dcdcb3bd40f003e27b28ee1386232d514ce586fb"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "d882ccbe016397c0c793fab3160cfba4c2798e359739a2f89ba67049ad87e302"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "ffc34ec143b1345791f969bb4c7aa8f419ebc2953dddf7e519bbe3017d80330d"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "a5434fd51422b776f83df08b3cfb62db705d6cd1435fada18f7de503e2ce74dd"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "9993b8c3ab59155ad44f03cab64f8c8c01cef7a85db01c0116dfaa1aa714a247"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "389b30da2eeda17fa4e6eb69daca83bef0bb21980ba9e04c868c1f2d81773991"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "8d9bde9615a6cbd628e446b7f2c0373ee359b5dd4ba5b30840ddeaccb06ca048"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "3d67fbb6948402190b3fab9325f8d497c266c45e3d2f144f0aa39a76fa9f47d5"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "baf8c11c84b83d03e27ea49dadc966c5000c946dae831ba087f48e5955345568"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "fcbebd22ab09a6d5903835099ae48beb59392764a643daa587699db2dd974d82"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "979b9844c4461bc799b44263af7f280184e40ef5d4cc6f3dcb21fac0e817a5a4"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "d6a8fa1e44994d52baa99349a01ec8e6f996cea9ee3c247338f1dbd5159e8a88"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 38.46153846153846,
+      "rgbaSha256": "658b846e4084b507b8987882967cdc5ee0d35063c723133d7b018c6de8af5e1e"
+    }
+  },
+  "meta": {
+    "app": "AutoSprite 3D",
+    "version": "1.0",
+    "image": "fra-tavarone-hurt.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2560,
+      "h": 1536
+    },
+    "scale": "1",
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 13,
+    "source_frame_count": 13,
+    "source_sheet_id": "cmwnfty4d00ux13tarpm7tn35",
+    "source_frame_start": 0,
+    "source_frame_end": 12,
+    "fps": 26,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-19",
   "creditsUsed": 0,
   "sourceIndexSpace": "Indices refer to each downloaded saved sheet, without inferring offsets in the full parent sheet.",
   "items": [
@@ -157,6 +157,54 @@
       "speedMultiplier": 1,
       "playback": "forward",
       "pngSha256": "03197f01854513c0a2136b835cfd195f0ef798dee3caa7152b6a6b4bd904e65e"
+    },
+    {
+      "character": "SBOZ",
+      "characterId": "cmv9hwys4000o72jnrpng2i85",
+      "sourceSheetId": "cmwndk8i1000l13taeyf08o7n",
+      "sourceVideoId": "cmwndj0cg003ykqy8e6ytbo9u",
+      "sourceAnimationName": "Strong Punch",
+      "sourceCreatedAt": "2026-11-19T09:55:46.058Z",
+      "sourceStart": 0,
+      "sourceEnd": 63,
+      "sourceFrames": 64,
+      "sourceSheetFrames": 64,
+      "frames": 64,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "trimmed": false,
+      "png": "animation/sboz/sboz-strong-punch.png",
+      "atlas": "animation/sboz/sboz-strong-punch.json",
+      "speedMultiplier": 1,
+      "playback": "forward",
+      "pngSha256": "846cba9c7bc14ceaaff7bf9b3c616c88b872c113d7e7637668eb986d41688f6f"
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+      "sourceSheetId": "cmwnep71x00l629xvtrflrgeh",
+      "sourceVideoId": "cmwnek4vc0052b8ltqvqzi1s0",
+      "sourceAnimationName": "Strong Punch",
+      "sourceCreatedAt": "2026-11-19T10:27:37.077Z",
+      "sourceStart": 0,
+      "sourceEnd": 54,
+      "sourceFrames": 55,
+      "sourceSheetFrames": 55,
+      "frames": 55,
+      "frameWidth": 512,
+      "frameHeight": 512,
+      "columns": 8,
+      "trimmed": true,
+      "savedTrimmed": true,
+      "additionalTrim": false,
+      "trimmedParentSheetId": "cmwnel5xw007fxjugzks3g8rx",
+      "parentSourceFrames": 64,
+      "png": "animation/fra-tavarone/fra-tavarone-strong-punch.png",
+      "atlas": "animation/fra-tavarone/fra-tavarone-strong-punch.json",
+      "speedMultiplier": 1,
+      "playback": "forward",
+      "pngSha256": "84d0a8996592b0e6894eb4e065c66ada94774f78b08073dbce286e72163fb7e5"
     }
   ]
 }

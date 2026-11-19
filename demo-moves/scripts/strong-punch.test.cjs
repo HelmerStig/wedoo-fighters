@@ -12,7 +12,7 @@ test('Pugno forte di Pippo conserva il PNG sorgente e raggiunge impatto e recupe
   const context={window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(root,'demo-moves/catalog.js'),'utf8'),context);
   const owners=context.window.MOVES_CATALOG.characters.filter(c=>c.animations.some(a=>a.id==='strong-punch'));
-  assert.deepEqual(Array.from(owners,c=>c.id),['alberto','elisa','fabio-clara','marsan','oscar','peppo','pippo']);
+  assert.deepEqual(Array.from(owners,c=>c.id),['alberto','elisa','fabio-clara','fra-tavarone','marsan','oscar','peppo','pippo','sboz']);
   const a=owners.find(c=>c.id==='pippo').animations.find(a=>a.id==='strong-punch'),item=manifest.items.find(i=>i.character.toLowerCase()==='pippo');
   const bytes=fs.readFileSync(path.join(root,item.png));
   assert.equal(createHash('sha256').update(bytes).digest('hex'),item.pngSha256);
@@ -142,5 +142,62 @@ test('Pugno forte di Elisa conserva il PNG e la sequenza avanti, con impatto a 5
   }
   assert.equal(a.armTrail.sourceSheetId,item.sourceSheetId);
   assert.equal(a.armTrail.enabled,true);assert.equal(a.armTrail.strength,.75);
+});
+
+
+test('Pugno forte di Sboz conserva il PNG e la sequenza avanti, con impatto a 500 ms e ciclo a 1000 ms',()=>{
+  const manifest=JSON.parse(fs.readFileSync(path.join(root,'animation/strong-punch-manifest.json'),'utf8'));
+  const item=manifest.items.find(i=>i.character.toLowerCase()==='sboz');
+  const context={window:{}};
+  vm.runInNewContext(fs.readFileSync(path.join(root,'demo-moves/catalog.js'),'utf8'),context);
+  const a=context.window.MOVES_CATALOG.characters.find(c=>c.id==='sboz').animations.find(a=>a.id==='strong-punch');
+  assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,item.png))).digest('hex'),item.pngSha256);
+  assert.equal(a.name,'Pugno forte');assert.equal(a.playbackMode,'forward');
+  assert.equal(a.frames.length,64);assert.equal(a.frameWidth,512);assert.equal(a.frameHeight,512);
+  assert.equal(new Set(a.frames.map(f=>f.join(','))).size,64);
+  for(const speed of [.5,1,2]){
+    assert.equal(advanceAnimation({frame:0,remainder:0},500/speed,a,speed,false).frame,22);
+    assert.equal(advanceAnimation({frame:0,remainder:0},999/speed,a,speed,false).frame,63);
+    assert.equal(advanceAnimation({frame:0,remainder:0},1000/speed,a,speed,true).frame,0);
+  }
+  assert.equal(a.armTrail.sourceSheetId,item.sourceSheetId);
+  assert.equal(a.armTrail.enabled,true);assert.equal(a.armTrail.strength,.75);
+});
+
+
+test('Pugno forte di Fra Tavarone conserva il PNG e la sequenza avanti, con impatto a 500 ms e ciclo a 1000 ms',()=>{
+  const manifest=JSON.parse(fs.readFileSync(path.join(root,'animation/strong-punch-manifest.json'),'utf8'));
+  const item=manifest.items.find(i=>i.character.toLowerCase()==='fra-tavarone');
+  const context={window:{}};
+  vm.runInNewContext(fs.readFileSync(path.join(root,'demo-moves/catalog.js'),'utf8'),context);
+  const a=context.window.MOVES_CATALOG.characters.find(c=>c.id==='fra-tavarone').animations.find(a=>a.id==='strong-punch');
+  assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root,item.png))).digest('hex'),item.pngSha256);
+  assert.equal(a.name,'Pugno forte');assert.equal(a.playbackMode,'forward');
+  assert.equal(a.frames.length,55);assert.equal(a.frameWidth,512);assert.equal(a.frameHeight,512);
+  assert.equal(new Set(a.frames.map(f=>f.join(','))).size,55);
+  for(const speed of [.5,1,2]){
+    assert.equal(advanceAnimation({frame:0,remainder:0},500/speed,a,speed,false).frame,21);
+    assert.equal(advanceAnimation({frame:0,remainder:0},999/speed,a,speed,false).frame,54);
+    assert.equal(advanceAnimation({frame:0,remainder:0},1000/speed,a,speed,true).frame,0);
+  }
+  assert.equal(a.armTrail.sourceSheetId,item.sourceSheetId);
+  assert.equal(a.armTrail.enabled,true);assert.equal(a.armTrail.strength,.75);
+});
+
+test('report HTML, CSV e pose del Pugno forte corrispondono ai nove impatti selezionati',()=>{
+  const manifest=JSON.parse(fs.readFileSync(path.join(root,'animation/strong-punch-manifest.json'),'utf8'));
+  const html=fs.readFileSync(path.join(root,'demo-moves/reports/strong-punch-timing.html'),'utf8');
+  const csv=fs.readFileSync(path.join(root,'demo-moves/reports/strong-punch-timing.csv'),'utf8');
+  assert.match(html,/0,50 s/);assert.match(html,/1,00 s/);assert.match(html,/Solo avanti/);
+  assert.match(html,/Integrati 9 personaggi su 48/);assert.match(html,/senza Pugno forte importato \(39\)/);
+  for(const item of manifest.items){
+    const slug=item.character.toLowerCase();
+    const png=fs.readFileSync(path.join(root,'demo-moves/reports/strong-punch-poses/'+slug+'.png'));
+    assert.equal(png.readUInt32BE(16),512);assert.equal(png.readUInt32BE(20),512);
+    assert.ok(csv.includes(item.sourceSheetId),slug);
+    assert.ok(html.includes(item.sourceSheetId),slug);
+    assert.ok(html.includes('../personaggio.html?id='+slug),slug);
+  }
+  assert.equal((html.match(/<tr>/g)||[]).length,manifest.items.length+1);
 });
 
