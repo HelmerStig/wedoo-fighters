@@ -14,6 +14,7 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 - Fabio Clara
     Basic moves:
@@ -31,6 +32,7 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 - Sboz
     Basic moves:
@@ -48,6 +50,7 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick)
+    - Calcio potente (strong kick)
 
 - Pippo
     Basic moves:
@@ -65,6 +68,7 @@
     - Pugno forte
     - Calcio leggeroù
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 - Peppo
     Basic moves:
@@ -82,6 +86,7 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 - Oscar
     Basic moves:
@@ -100,6 +105,7 @@
     - Calcio leggero
     - Calcio Leggero
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 - Elisa
     Basic moves:
@@ -117,6 +123,7 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (light kick)
+    - Calcio potente (strong kick)
 
 - Fra Tavarone
     Basic moves:
@@ -134,6 +141,7 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 - Marsan
     Basic moves:
@@ -151,9 +159,15 @@
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
+    - Calcio potente (strong kick)
 
 CALCIO MEDIO - INTEGRATO IL 20 NOVEMBRE 2026
 Tutti i nove personaggi: avanti e ritorno al contrario, senza duplicare il vertice.
 Impatto 0,50 s; ciclo totale 0,80 s. Celle e tagli salvati conservati.
 Report: demo-moves/reports/medium-kick-timing.html
 Manifest: animation/medium-kick-manifest.json
+
+CALCIO POTENTE - INTEGRATO IL 20 NOVEMBRE 2026
+Tutti i nove personaggi: strong kick, avanti e ritorno al contrario.
+Impatto 0,50 s; durata totale 0,90 s.
+Report: demo-moves/reports/strong-kick-timing.html

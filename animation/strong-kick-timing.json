@@ -1,0 +1,99 @@
+{
+  "durationMs": 900,
+  "impactMs": 500,
+  "frameIndexBase": 0,
+  "updatedAt": "2026-11-20",
+  "selectionMethod": "Visually reviewed last frame of each saved interval, followed by the reversed interval without duplicating the apex.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwove8tr002k7frnqksgp5bj",
+      "sourceStart": 0,
+      "sourceEnd": 20,
+      "impactFrame": 20,
+      "impactSourceFrame": 20,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwovgsiq00u9au3gzw5qzxuo",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwovm9f7006j12mgeww7llfy",
+      "sourceStart": 0,
+      "sourceEnd": 24,
+      "impactFrame": 24,
+      "impactSourceFrame": 24,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwovk6fs002p12a3w1gjpi70",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 16,
+      "impactSourceFrame": 16,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwovs3wx00au7frn2b95uejh",
+      "sourceStart": 0,
+      "sourceEnd": 17,
+      "impactFrame": 17,
+      "impactSourceFrame": 17,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwouvmse00u0au3g4vozdx81",
+      "sourceStart": 0,
+      "sourceEnd": 21,
+      "impactFrame": 21,
+      "impactSourceFrame": 21,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwovv89r002rlqp4dujpwup7",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "impactFrame": 34,
+      "impactSourceFrame": 34,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwovv7ia00y5au3gj5nzekby",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 16,
+      "impactSourceFrame": 16,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwow13l8008j12mgm8tje4kt",
+      "sourceStart": 0,
+      "sourceEnd": 26,
+      "impactFrame": 26,
+      "impactSourceFrame": 26,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    }
+  ]
+}

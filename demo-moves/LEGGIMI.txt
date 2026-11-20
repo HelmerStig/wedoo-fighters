@@ -1,5 +1,19 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+CALCIO POTENTE - NOVE PERSONAGGI (20 NOVEMBRE 2026)
+Importate le ultime strong kick salvate su AutoSprite per Alberto, Fabio
+Clara, Sboz, Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan.
+Intervalli inclusivi e versioni accorciate conservati. Andata e ritorno
+al contrario, senza duplicare il vertice; 383 celle 512x512 verificate
+contro i pixel RGBA sorgente, senza ridimensionare o ricentrare.
+Impatto all'ultimo frame dell'andata a 500 ms, ciclo totale 900 ms:
+500 ms di preparazione e 400 ms per impatto/recupero. Loop e CRT attivi.
+Manifest e timing: animation/strong-kick-manifest.json, strong-kick-timing.json.
+Report HTML/CSV e pose: reports/strong-kick-timing.html, collegato sotto
+il titolo Calcio potente in mosse.html?move=strong-kick.
+Rigenera con scripts/build-strong-kick-report.py (Pillow).
+Aggiornato primi-personaggi-da-cpmpletare.txt. Nessuna nuova generazione.
+
 CALCIO MEDIO - NOVE PERSONAGGI (20 NOVEMBRE 2026)
 Abbinamenti da primi-personaggi-da-cpmpletare.txt: medium kick v2 per
 Alberto, Fabio Clara, Pippo, Peppo, Oscar, Fra Tavarone e Marsan;
@@ -873,3 +887,4 @@ Run: Telma 48, Tilda 39, Tullio 41 frame non vuoti da 512x512, a 30 fps.
 Jump: 15 frame da 512x512 per gatto, distribuiti sulla traiettoria.
 Rigenerazione atlas e appoggi dopo aggiornamenti degli spritesheet:
   python demo-moves/scripts/build-stage-cats.py
+

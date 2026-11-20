@@ -1,0 +1,55 @@
+POSE CALCIO POTENTE - 20 NOVEMBRE 2026
+
+Nove keyframe singoli generati con ImageGen integrato, pixel art 16 bit,
+PNG RGBA trasparenti 512x512, calcio rivolto verso destra.
+File selezionati elencati in poses.json; suffisso -v2 ove il nome era gia presente.
+Le versioni precedenti sono conservate e non sovrascritte.
+
+Abbinamenti a REFERENCE/CALCIO POTENTE:
+- Alberto: 1.png
+- Fabio Clara: 5.png
+- Sboz: 3.png
+- Pippo: 7.png
+- Peppo: 8.png
+- Oscar: 6.png
+- Elisa: 9.png
+- Fra Tavarone: 2.png
+- Marsan: 4.png
+
+Alberto usa 1.png. Fra Tavarone usa 2.png. Elisa mantiene i capelli lunghi.
+preview/overview.png mostra le nove pose selezionate.
+preview/comparison.png confronta base, riferimento e posa; base e posa
+sono mostrate alla stessa scala.
+poses.json documenta appoggio, dimensioni, offset e hash.
+prompts.json contiene tutti i prompt ImageGen usati.
+
+Esportazione tecnica dall output 1254x1254 al canvas 512x512 con
+nearest-neighbor. Ove necessario, piccola riduzione uniforme per contenere
+braccia sollevate e calcio, senza stirare o ridisegnare parti del corpo.
+Allineamento del contatto a terra alla baseline della posa base;
+per Alberto e Fra Tavarone il contatto e il palmo. Posizione orizzontale
+adattata per contenere la posa; offset e scale in poses.json.
+Trasparenza generata conservata; nessuno sfondo aggiunto.
+
+Questi file sono pose, non animazioni. Nessun upload o job AutoSprite
+avviato e nessuna modifica al catalogo demo. Originali generati e dati
+di lavoro in autosprite-agent/output/strong-kick-poses-20261120/.
+
+FILE SELEZIONATI
+- Alberto: alberto-strong-kick-pose.png
+- Fabio Clara: fabio-clara-strong-kick-pose.png
+- Sboz: sboz-strong-kick-pose-v2.png
+- Pippo: pippo-strong-kick-pose-v2.png
+- Peppo: peppo-strong-kick-pose.png
+- Oscar: oscar-strong-kick-pose-v2.png
+- Elisa: elisa-strong-kick-pose-v2.png
+- Fra Tavarone: fra-tavarone-strong-kick-pose.png
+- Marsan: marsan-strong-kick-pose.png
+
+CORREZIONI ANATOMICHE - 20 NOVEMBRE 2026
+Testa e collo di Alberto e Sboz riallineati al busto. Bacino e gambe di Pippo
+corretti. Scarpa della gamba sollevata di Sboz vista dal retro.
+File selezionati aggiornati negli stessi percorsi; copie precedenti nella
+cartella di lavoro before-anatomy-corrections. Gli altri sei PNG invariati.
+Prompt di correzione in prompts.json e corrections.json; prompt Alberto
+in PROMPT-ALBERTO-CORREZIONE.txt. Confronto: preview/corrections.png.

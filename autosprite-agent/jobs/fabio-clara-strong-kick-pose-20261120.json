@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "strong kick",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvezcwlh0005pe7141enxfwe",
+        "lastFramePoseId": "cmwouvnd700u2au3gzicmdx59",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Use the supplied first and last poses exactly, preserving identity, outfit, footwear, pixel art, scale and ground baseline. One powerful strong kick from standing guard to full extension. Shift weight onto the planted supporting foot, keep both fists raised tightly in front of the chest in guard, chamber the knee high, and drive a heavy powerful mid-high kick upward-right into the exact final pose with the torso leaned back for power. Preparation occupies roughly the first third; the kick accelerates smoothly and reaches maximum extension cleanly at the final frame. Keep the ground contact anchored on the ground baseline; end exactly on the supplied impact pose. Locked camera, no zoom, no pan, no extra props, no motion trails or effects."
+      }
+    ]
+  }
+}

@@ -7,7 +7,7 @@ const {group,filter}=require('../move-groups.js');
 function characters(){const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../catalog.js'),'utf8'),context);return context.window.MOVES_CATALOG.characters;}
 test('ogni mossa contiene tutti e solo i personaggi disponibili, senza alterare frame o velocita',()=>{
   const roster=characters(),groups=group(roster);
-  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','hurt','victory','light-punch','medium-punch','strong-punch','light-kick','medium-kick']);
+  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','hurt','victory','light-punch','medium-punch','strong-punch','light-kick','medium-kick','strong-kick']);
   for(const move of groups){
     const expected=roster.filter(c=>c.animations.some(a=>a.id===move.id));
     assert.deepEqual(move.animations.map(a=>a.characterId),Array.from(expected,c=>c.id));

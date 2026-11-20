@@ -1,0 +1,338 @@
+[
+  {
+    "character": "Alberto",
+    "file": "alberto-strong-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/1.png",
+    "characterReference": "PNG/ALBERTO.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      167,
+      430
+    ],
+    "requestedGroundContact": [
+      167,
+      430
+    ],
+    "contactKind": "palm and supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      0,
+      0
+    ],
+    "visibleBounds": [
+      137,
+      23,
+      454,
+      431
+    ],
+    "pngSha256": "2f6ee4e167ba64013ba870f1836919daf62ac3f8b4a414347d227fa5436d033b",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": "Testa e collo allineati al busto inclinato, sguardo verso terra.",
+    "previousPngSha256": "22224b82d90cbc64970d196b29610beb6abd2f2d52f1697ed65ee1f4630e3a19"
+  },
+  {
+    "character": "Fabio Clara",
+    "file": "fabio-clara-strong-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/5.png",
+    "characterReference": "PNG/FABIO-CLARA.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      171,
+      431
+    ],
+    "requestedGroundContact": [
+      171,
+      431
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      12,
+      -3
+    ],
+    "visibleBounds": [
+      117,
+      93,
+      422,
+      431
+    ],
+    "pngSha256": "a7fcc0849311c4036e455970384c289bdd1ae088641f496c2eb2bebe2a697ec5",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Sboz",
+    "file": "sboz-strong-kick-pose-v2.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/3.png",
+    "characterReference": "PNG/SBOZ.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      173,
+      433
+    ],
+    "requestedGroundContact": [
+      173,
+      433
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      0,
+      -1
+    ],
+    "visibleBounds": [
+      46,
+      70,
+      425,
+      433
+    ],
+    "pngSha256": "1dd12c81ec3ec47ee81e46623605145e2c990b5ef75b62d64e4f35a8ed6ac2f9",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": "Testa inclinata naturalmente; scarpa del calcio vista dal retro con tallone visibile.",
+    "previousPngSha256": "cf104589ffb40ec8c502e5661f70b68245ff3f74710049e099d11b198baab779"
+  },
+  {
+    "character": "Pippo",
+    "file": "pippo-strong-kick-pose-v2.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/7.png",
+    "characterReference": "PNG/PIPPO.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      156,
+      432
+    ],
+    "requestedGroundContact": [
+      156,
+      432
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      7,
+      -2
+    ],
+    "visibleBounds": [
+      118,
+      50,
+      436,
+      432
+    ],
+    "pngSha256": "0fc9080687129e94969ce952499b8bb86ec6da051f3114ca8e5c5cd4e40b9111",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": "Bacino, attacco delle cosce e ginocchio della gamba d appoggio corretti.",
+    "previousPngSha256": "609a31ac4003736b4c079f875c06ecf0ce5c3a84709c5b6f5fca9cbcf04df5b6"
+  },
+  {
+    "character": "Peppo",
+    "file": "peppo-strong-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/8.png",
+    "characterReference": "PNG/PEPPO.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      153,
+      435
+    ],
+    "requestedGroundContact": [
+      148,
+      435
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      -31,
+      -8
+    ],
+    "visibleBounds": [
+      12,
+      61,
+      439,
+      435
+    ],
+    "pngSha256": "50b1f20662f74ff6a5e1ebb1755bb8eddbf8174995a84f59b04a18b3839ae105",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Oscar",
+    "file": "oscar-strong-kick-pose-v2.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/6.png",
+    "characterReference": "PNG/OSCARE.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      246,
+      433
+    ],
+    "requestedGroundContact": [
+      163,
+      433
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      -32,
+      -1
+    ],
+    "visibleBounds": [
+      12,
+      62,
+      431,
+      433
+    ],
+    "pngSha256": "0e82a2b89a1e7a696d2e0b6c67dfa83a692b02db01423344628a482636e704a1",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Elisa",
+    "file": "elisa-strong-kick-pose-v2.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/9.png",
+    "characterReference": "PNG/Elisa.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      177,
+      429
+    ],
+    "requestedGroundContact": [
+      177,
+      429
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      -14,
+      22
+    ],
+    "visibleBounds": [
+      57,
+      122,
+      429,
+      429
+    ],
+    "pngSha256": "233e9cccf4e94b0cd2f7ab9d0a39f35d4cfb823657b59db9558fce2419d1746c",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": "Capelli lunghi mantenuti."
+  },
+  {
+    "character": "Fra Tavarone",
+    "file": "fra-tavarone-strong-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/2.png",
+    "characterReference": "PNG/FRA-TAVARONE.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      165,
+      427
+    ],
+    "requestedGroundContact": [
+      165,
+      427
+    ],
+    "contactKind": "supporting palm",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      34,
+      13
+    ],
+    "visibleBounds": [
+      107,
+      129,
+      469,
+      427
+    ],
+    "pngSha256": "108ea0f84090031eeeb7ba41ad1355a03c3e544678ea8cc067471506b53d3559",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  },
+  {
+    "character": "Marsan",
+    "file": "marsan-strong-kick-pose.png",
+    "poseReference": "REFERENCE/CALCIO POTENTE/4.png",
+    "characterReference": "PNG/MARSAN.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "groundContact": [
+      168,
+      433
+    ],
+    "requestedGroundContact": [
+      168,
+      433
+    ],
+    "contactKind": "supporting shoe",
+    "uniformScaleAfter512": 1.0,
+    "translation": [
+      -20,
+      4
+    ],
+    "visibleBounds": [
+      32,
+      111,
+      425,
+      433
+    ],
+    "pngSha256": "19dbaf3426c433e1df99ceb8e2ac06d4851e62d7b93e056249c49b179e106b3f",
+    "normalization": "Whole-canvas nearest-neighbor export to 512, optional small uniform fit and integer translation to ground contact, horizontally constrained to keep the full pose inside the canvas; generated alpha retained, no character repainting.",
+    "selectionNote": null
+  }
+]

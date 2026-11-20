@@ -1,0 +1,115 @@
+{
+  "name": "strong-kick",
+  "uploadedAt": "2026-11-20T10:48:25.008Z",
+  "creditsUsed": 0,
+  "items": [
+    {
+      "character": "Oscar",
+      "slug": "oscar",
+      "characterId": "cmv9im946000t14mbeyraqs7u",
+      "idlePoseId": "cmveysix0000g5g1g5vakv945",
+      "file": "PNG/STRONG-KICK/oscar-strong-kick-pose-v2.png",
+      "sha256": "0e82a2b89a1e7a696d2e0b6c67dfa83a692b02db01423344628a482636e704a1",
+      "status": "saved",
+      "poseId": "cmwouo11z00466rscqt8akawk",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:42:22.818Z"
+    },
+    {
+      "character": "Alberto",
+      "slug": "alberto",
+      "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+      "idlePoseId": "cmvezhbu4007gg57e588k081v",
+      "file": "PNG/STRONG-KICK/alberto-strong-kick-pose.png",
+      "sha256": "a5be6b00979b7bbb3a6ecc610d1a9dcc6f3b796e789e512c0e9d02332a4d76e4",
+      "status": "saved",
+      "poseId": "cmwouvmfk00tyau3gorg6l6l9",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:17.121Z"
+    },
+    {
+      "character": "Fabio Clara",
+      "slug": "fabio-clara",
+      "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+      "idlePoseId": "cmvezcwlh0005pe7141enxfwe",
+      "file": "PNG/STRONG-KICK/fabio-clara-strong-kick-pose.png",
+      "sha256": "a7fcc0849311c4036e455970384c289bdd1ae088641f496c2eb2bebe2a697ec5",
+      "status": "saved",
+      "poseId": "cmwouvnd700u2au3gzicmdx59",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:18.325Z"
+    },
+    {
+      "character": "Sboz",
+      "slug": "sboz",
+      "characterId": "cmv9hwys4000o72jnrpng2i85",
+      "idlePoseId": "cmveyznuz005kwo3iymky7hyg",
+      "file": "PNG/STRONG-KICK/sboz-strong-kick-pose.png",
+      "sha256": "28ce09ff3782524fe905141c405f8dc6c5e012c9fce0b2a3a2b7c62946cefc97",
+      "status": "saved",
+      "poseId": "cmwouvo7s00jx13avhv426vuy",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:19.424Z"
+    },
+    {
+      "character": "Pippo",
+      "slug": "pippo",
+      "characterId": "cmv9hwxxn000k72jn5131g7kq",
+      "idlePoseId": "cmvez042j0044g57e57q431q2",
+      "file": "PNG/STRONG-KICK/pippo-strong-kick-pose.png",
+      "sha256": "5b40bf79969739573221a081deda579d7e22c3f3e2f91883e068d9d6cd8e0a3b",
+      "status": "saved",
+      "poseId": "cmwouvp6200jz13ava2tfddsi",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:20.706Z"
+    },
+    {
+      "character": "Peppo",
+      "slug": "peppo",
+      "characterId": "cmv9hwwuu000b72jnin9ee6na",
+      "idlePoseId": "cmvez0v6s004fg57exj7jz9sy",
+      "file": "PNG/STRONG-KICK/peppo-strong-kick-pose.png",
+      "sha256": "6f966298bf224c9b900d87ed5a0766cf57b718a8dc52a2282ea0d198a7ce89cf",
+      "status": "saved",
+      "poseId": "cmwouvpxy00k113avj82ex1h3",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:21.668Z"
+    },
+    {
+      "character": "Elisa",
+      "slug": "elisa",
+      "characterId": "cmv9dyrs900045e49mr49cdz9",
+      "idlePoseId": "cmvezhoqs0010pe717fq8yn99",
+      "file": "PNG/STRONG-KICK/elisa-strong-kick-pose.png",
+      "sha256": "50e47b421194371a4619a8f4c84e4ab7a36126afcdb418722ec6e27837f42617",
+      "status": "saved",
+      "poseId": "cmwouvqp600k313avgb41zs7z",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:22.682Z"
+    },
+    {
+      "character": "Fra Tavarone",
+      "slug": "fra-tavarone",
+      "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+      "idlePoseId": "cmvezbqmx0062g57evf7gbf06",
+      "file": "PNG/STRONG-KICK/fra-tavarone-strong-kick-pose.png",
+      "sha256": "724fa9acdc4b7da4e52e657d19253460aa60ad305f065d28389e57c3ff1efcf2",
+      "status": "saved",
+      "poseId": "cmwouvrlw00k513avsufey77z",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:23.865Z"
+    },
+    {
+      "character": "Marsan",
+      "slug": "marsan",
+      "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+      "idlePoseId": "cmvez5xck00hbrym9nwdyrplr",
+      "file": "PNG/STRONG-KICK/marsan-strong-kick-pose.png",
+      "sha256": "c32e76ab3e9ce0ac313a6d1ddaefd167feb166d738802393103b8814321ea7c2",
+      "status": "saved",
+      "poseId": "cmwouvsj200k713av2x9k5lqh",
+      "label": "strong-kick",
+      "savedAt": "2026-11-20T10:48:25.008Z"
+    }
+  ]
+}

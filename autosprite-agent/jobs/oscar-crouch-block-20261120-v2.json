@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Crouch Block v2",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "lastFramePoseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied kneeling crouch guard pose, staying kneeling low on the ground for the entire animation (do NOT stand up). Animate a smooth, continuous, fluid low-block sequence spread evenly across the full clip with clear intermediate frames: first a subtle preparation dip of the torso and shoulders, then gradually raising and crossing both forearms tightly in front of the face, chin, and upper chest while tucking the head behind the guard, then bracing backward with a slight elastic recoil of the torso and shoulders as if absorbing a heavy hit, and finally smoothly lowering both arms back into the exact supplied kneeling crouch guard pose. Keep the front foot and rear knee anchored firmly on the ground baseline. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, no extra props or effects."
+      }
+    ]
+  }
+}

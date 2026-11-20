@@ -21,7 +21,7 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
       const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
       for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
       assert.ok(effectiveFps(a,1)>0);
-      assert.equal(effectiveFps(a,1),a.id==='jump'||a.id==='strong-punch'?a.frames.length:a.id==='block'?a.blockFrame*10:a.id==='light-punch'||a.id==='hurt'?a.frames.length*2:a.id==='crouch'?a.frames.length*4:a.id==='medium-punch'?a.frames.length*1000/750:a.id==='light-kick'?a.frames.length*1000/600:a.id==='medium-kick'?a.frames.length*1000/800:24,c.name);
+      assert.equal(effectiveFps(a,1),a.id==='jump'||a.id==='strong-punch'?a.frames.length:a.id==='block'?a.blockFrame*10:a.id==='light-punch'||a.id==='hurt'?a.frames.length*2:a.id==='crouch'?a.frames.length*4:a.id==='medium-punch'?a.frames.length*1000/750:a.id==='light-kick'?a.frames.length*1000/600:a.id==='medium-kick'?a.frames.length*1000/800:a.id==='strong-kick'?a.frames.length*1000/900:24,c.name);
     }
   }
   assert.match(characters.find(c=>c.id==='oscar').thumbnail,/OSCARE\.png$/);

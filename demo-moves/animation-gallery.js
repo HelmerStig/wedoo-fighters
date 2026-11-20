@@ -2,6 +2,11 @@
   'use strict';
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const format = value => new Intl.NumberFormat('it', {maximumFractionDigits:2}).format(value);
+  function effectControls(animation){
+    const p=animation.armTrail;if(!p)return '';
+    const value=Math.round(p.strength*100);
+    return `<div class="arm-trail-controls"><label class="loop-control"><input data-role="arm-trail" type="checkbox" ${p.enabled?'checked':''}> Scia e particelle</label><label class="arm-trail-strength">Intensità <input data-role="arm-trail-strength" type="range" min="0" max="100" step="5" value="${value}" aria-label="Intensità effetto del braccio"><output data-role="arm-trail-value">${value}%</output></label></div>`;
+  }
   function install(container, character, options = {}) {
     const core = root.MovesCore;
     const reduced = root.matchMedia('(prefers-reduced-motion: reduce)');
@@ -20,7 +25,7 @@
           <div class="timeline"><input data-role="timeline" type="range" min="0" max="${animation.frames.length-1}" value="0" step="1" aria-label="Frame di ${escape(animation.name)}" disabled><span class="frame-counter">01 / ${animation.frames.length}</span></div>
           <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" disabled>▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di ${escape(animation.name)}" disabled>▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di ${escape(animation.name)}"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1× · ${timingLabel(animation)}</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
           <div class="gallery-card-meta"><span>${animation.frames.length} frame · ${animation.frameWidth} × ${animation.frameHeight}</span><span data-role="fps">${timingLabel(animation)}</span></div>
-          ${animation.armTrail ? `<div class="arm-trail-controls"><label class="loop-control"><input data-role="arm-trail" type="checkbox" ${animation.armTrail.enabled?'checked':''}> Scia e particelle</label><label class="arm-trail-strength">Intensità <input data-role="arm-trail-strength" type="range" min="0" max="100" step="5" value="${Math.round(animation.armTrail.strength*100)}" aria-label="Intensità effetto del braccio"><output data-role="arm-trail-value">${Math.round(animation.armTrail.strength*100)}%</output></label></div>` : ''}
+          ${effectControls(animation)}
           <div class="gallery-card-bottom"><div class="swatches" role="group" aria-label="Sfondo di ${escape(animation.name)}"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" aria-pressed="false"></button></div><a class="download-button" href="${escape(animation.image)}" download="${escape(animation.characterId ?? character.id)}-${escape(animation.id)}.png">Scarica PNG ↓</a></div>
         </div>
       </section>`).join('')}</div>`;
