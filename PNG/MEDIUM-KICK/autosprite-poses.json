@@ -1,6 +1,6 @@
 {
   "name": "medium-kick",
-  "uploadedAt": "2026-11-19T16:33:19.828Z",
+  "uploadedAt": "2026-11-20T09:07:47.645Z",
   "creditsUsed": 0,
   "items": [
     {
@@ -9,12 +9,13 @@
       "characterId": "cmv9hw3c3001t83r8jht5u7vy",
       "idlePoseId": "cmvezhbu4007gg57e588k081v",
       "file": "PNG/MEDIUM-KICK/alberto-medium-kick-pose.png",
-      "sha256": "4daf62df751a4fe8e895daa79551843d1aa45aff747107705d2d396c3d2cf737",
+      "sha256": "a3460be48ae5e99515d5488695fd2c657fd4c05d1f2c3ab3134b56c8b5afc740",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:20.400Z",
-      "poseId": "cmwnrrjaa0063y7m8arak75ww",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:21.553Z"
+      "poseId": "cmwora8qc0073nyqrt1mcynib",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:40.715Z",
+      "previousPoseId": "cmwnrrjaa0063y7m8arak75ww"
     },
     {
       "character": "Fabio Clara",
@@ -22,12 +23,13 @@
       "characterId": "cmv9hwdtc003583r8bjf9ed1l",
       "idlePoseId": "cmvezcwlh0005pe7141enxfwe",
       "file": "PNG/MEDIUM-KICK/fabio-clara-medium-kick-pose.png",
-      "sha256": "ef1290cfeace72ca9eee76e57e6b9922c11e638fc3b8056d6d35299d883d06f5",
+      "sha256": "60864a1d204f0a30e93aab553d26c0281779e2035c3efe898926e4bbf634b34a",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:22.021Z",
-      "poseId": "cmwnrrkj20007y2w0d67wrsm5",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:23.150Z"
+      "poseId": "cmwora9l40075nyqrv516ttlh",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:41.794Z",
+      "previousPoseId": "cmwnrrkj20007y2w0d67wrsm5"
     },
     {
       "character": "Sboz",
@@ -48,12 +50,13 @@
       "characterId": "cmv9hwxxn000k72jn5131g7kq",
       "idlePoseId": "cmvez042j0044g57e57q431q2",
       "file": "PNG/MEDIUM-KICK/pippo-medium-kick-pose.png",
-      "sha256": "50e391eb282de1007171f3682cf929a192a32ff3405cc8e2f491a95ce7a93a06",
+      "sha256": "5907c4ab0b62cf4ae409405ec88e391c6af9d7ff53adf67f6806981cf55988b7",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:25.035Z",
-      "poseId": "cmwnrrmt8000by2w0bwr1ffs1",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:26.113Z"
+      "poseId": "cmworaabd0077nyqrb0h7t0tw",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:42.738Z",
+      "previousPoseId": "cmwnrrmt8000by2w0bwr1ffs1"
     },
     {
       "character": "Peppo",
@@ -61,12 +64,13 @@
       "characterId": "cmv9hwwuu000b72jnin9ee6na",
       "idlePoseId": "cmvez0v6s004fg57exj7jz9sy",
       "file": "PNG/MEDIUM-KICK/peppo-medium-kick-pose.png",
-      "sha256": "cd1e4554532a86e7f3ee62fc4d9fee5de955893a60b39c3caeb21e107795fc58",
+      "sha256": "2058572f68320243453fcfaeecec34c45967a888a58f37e7869bcefdcbf28f46",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:26.539Z",
-      "poseId": "cmwnrro1i000dy2w0taa6oo1s",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:27.703Z"
+      "poseId": "cmworab1i0079nyqrgzdd64yg",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:43.680Z",
+      "previousPoseId": "cmwnrro1i000dy2w0taa6oo1s"
     },
     {
       "character": "Oscar",
@@ -74,12 +78,13 @@
       "characterId": "cmv9im946000t14mbeyraqs7u",
       "idlePoseId": "cmveysix0000g5g1g5vakv945",
       "file": "PNG/MEDIUM-KICK/oscar-medium-kick-pose.png",
-      "sha256": "bf93ce5b6c9739f2792ebf5de5fda28f2fdca1eebf2a951c2ccfd814f923ed61",
+      "sha256": "3157da8f0d2a86da570bd1f58ec219b6bc0ca7386bf4df3740e109668d8d7efe",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:28.078Z",
-      "poseId": "cmwnrrp3l000fy2w0bjomdyix",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:29.059Z"
+      "poseId": "cmworabsn007cnyqr2yenfmms",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:44.663Z",
+      "previousPoseId": "cmwnrrp3l000fy2w0bjomdyix"
     },
     {
       "character": "Elisa",
@@ -87,12 +92,13 @@
       "characterId": "cmv9dyrs900045e49mr49cdz9",
       "idlePoseId": "cmvezhoqs0010pe717fq8yn99",
       "file": "PNG/MEDIUM-KICK/elisa-medium-kick-pose.png",
-      "sha256": "f7da5833f0042a1504fa014f0f2673059342c18d227af69efdfbbc74c6322ca7",
+      "sha256": "7462ac9e23b955a79b3bbcc6e182adafd31f4cd2a20c3f491c061e19abb0a7d6",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:29.438Z",
-      "poseId": "cmwnrrq68000hy2w0debyyox2",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:30.461Z"
+      "poseId": "cmworacmq007enyqrz7b125lk",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:45.736Z",
+      "previousPoseId": "cmwnrrq68000hy2w0debyyox2"
     },
     {
       "character": "Fra Tavarone",
@@ -100,12 +106,13 @@
       "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
       "idlePoseId": "cmvezbqmx0062g57evf7gbf06",
       "file": "PNG/MEDIUM-KICK/fra-tavarone-medium-kick-pose.png",
-      "sha256": "c9df6ed0efb03966b21886fb3702226b5c396e4032da56aa1ae298f4cf8526ec",
+      "sha256": "f38a08c61f5a4ee74243dc0a09088f7bb8ca200f8d126e874cd76738358fc2f3",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:30.877Z",
-      "poseId": "cmwnrrrgz00147kfvm0fks0u3",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:32.147Z"
+      "poseId": "cmworadcj007jnyqrldey2ru3",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:46.666Z",
+      "previousPoseId": "cmwnrrrgz00147kfvm0fks0u3"
     },
     {
       "character": "Marsan",
@@ -113,12 +120,13 @@
       "characterId": "cmv9hwqed004o83r8kd5a2z1r",
       "idlePoseId": "cmvez5xck00hbrym9nwdyrplr",
       "file": "PNG/MEDIUM-KICK/marsan-medium-kick-pose.png",
-      "sha256": "559cf89b668b94504cb9f1f7d2115d83800df430ac477b1e37f57be950ec519e",
+      "sha256": "06adc3bacab54be85327a3a57733d7adf3b273112c420af17bff380df73c8086",
       "status": "saved",
       "attemptedAt": "2026-11-19T16:33:32.554Z",
-      "poseId": "cmwnrrssf00167kfvdrul9r92",
-      "label": "medium-kick",
-      "savedAt": "2026-11-19T16:33:33.842Z"
+      "poseId": "cmworae3l007lnyqrlfusyske",
+      "label": "medium-kick-v2",
+      "savedAt": "2026-11-20T09:07:47.645Z",
+      "previousPoseId": "cmwnrrssf00167kfvdrul9r92"
     }
   ]
 }

@@ -1,5 +1,26 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+CALCIO MEDIO - NOVE PERSONAGGI (20 NOVEMBRE 2026)
+Abbinamenti da primi-personaggi-da-cpmpletare.txt: medium kick v2 per
+Alberto, Fabio Clara, Pippo, Peppo, Oscar, Fra Tavarone e Marsan;
+medium kick per Sboz; light kick per Elisa, mostrato come Calcio medio.
+Ultime versioni salvate con intervalli inclusivi rispettati. Celle 512x512,
+scala e padding originali: 277 celle RGBA verificate contro la sorgente.
+Andata fino all'ultimo frame del taglio e ritorno al contrario, senza
+duplicare il vertice. Posa di impatto a 500 ms, ciclo completo 800 ms:
+500 ms prima dell'impatto e 300 ms per impatto/recupero. Loop e CRT attivi.
+Manifest e timing: animation/medium-kick-manifest.json, medium-kick-timing.json.
+Report HTML/CSV e pose: reports/medium-kick-timing.html, collegato sotto
+il titolo Calcio medio in mosse.html?move=medium-kick.
+Rigenera il report con scripts/build-medium-kick-report.py (Pillow).
+Alberto, Oscar e Peppo: piede d'appoggio stabilizzato direttamente nei PNG
+con traslazioni intere X/Y, senza ridimensionare o tagliare la sagoma.
+La posizione nel canvas e adattata per contenere il calcio completo;
+offset identici nella fase di ritorno, timing 500/800 ms invariato.
+Profilo: animation/medium-kick-foot-lock.json. Verifica con
+python demo-moves/scripts/stabilize-medium-kick.py --verify.
+Scaricati solo asset esistenti: nessuna generazione, nessun credito speso.
+
 CALCIO LEGGERO - NOVE PERSONAGGI (19 NOVEMBRE 2026)
 Importata Light Kick Pro per Elisa;
 light kick per Alberto, Oscar, Fabio Clara, Fra Tavarone, Marsan, Pippo, Peppo e Sboz.

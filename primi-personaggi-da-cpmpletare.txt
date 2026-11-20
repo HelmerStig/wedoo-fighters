@@ -13,6 +13,7 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (medium kick v2)
 
 - Fabio Clara
     Basic moves:
@@ -23,12 +24,13 @@
     - Parata alta
     - Hurt
     - Vittoria
-
+    
     Attack:
     - Pugno leggero
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (medium kick v2)
 
 - Sboz
     Basic moves:
@@ -45,6 +47,7 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (medium kick)
 
 - Pippo
     Basic moves:
@@ -60,7 +63,8 @@
     - Pugno leggero
     - Pugno medio
     - Pugno forte
-    - Calcio leggero
+    - Calcio leggeroù
+    - Calcio medio (medium kick v2)
 
 - Peppo
     Basic moves:
@@ -77,6 +81,7 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (medium kick v2)
 
 - Oscar
     Basic moves:
@@ -93,7 +98,8 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
-    - Calcio Leggero -> Low Forward Kick Pro
+    - Calcio Leggero
+    - Calcio medio (medium kick v2)
 
 - Elisa
     Basic moves:
@@ -110,6 +116,7 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (light kick)
 
 - Fra Tavarone
     Basic moves:
@@ -126,6 +133,7 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (medium kick v2)
 
 - Marsan
     Basic moves:
@@ -142,3 +150,10 @@
     - Pugno medio
     - Pugno forte
     - Calcio leggero
+    - Calcio medio (medium kick v2)
+
+CALCIO MEDIO - INTEGRATO IL 20 NOVEMBRE 2026
+Tutti i nove personaggi: avanti e ritorno al contrario, senza duplicare il vertice.
+Impatto 0,50 s; ciclo totale 0,80 s. Celle e tagli salvati conservati.
+Report: demo-moves/reports/medium-kick-timing.html
+Manifest: animation/medium-kick-manifest.json

@@ -1,0 +1,99 @@
+{
+  "durationMs": 800,
+  "impactMs": 500,
+  "frameIndexBase": 0,
+  "updatedAt": "2026-11-20",
+  "selectionMethod": "Visually reviewed last frame of each saved interval, followed by the reversed interval without duplicating the apex.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmworvu1c000e487qpw9glvth",
+      "sourceStart": 0,
+      "sourceEnd": 23,
+      "impactFrame": 23,
+      "impactSourceFrame": 23,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwos3qji00b5an8bgrwqsbvu",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmworamrx007vnyqrzh4v0tta",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwoso34d001strxw8mtzdu2z",
+      "sourceStart": 0,
+      "sourceEnd": 14,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwosld65007961zhelq3slyt",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 16,
+      "impactSourceFrame": 16,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwosj816004261zhh9vefkyn",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwnphzdy00fywdka7jgy101o",
+      "sourceStart": 0,
+      "sourceEnd": 15,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice. Sorgente light kick associata al Calcio medio come indicato nel file personaggi."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwos6djk0072au3g3cdlisgy",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwosfth5001761zh1nplcjya",
+      "sourceStart": 0,
+      "sourceEnd": 12,
+      "impactFrame": 12,
+      "impactSourceFrame": 12,
+      "playback": "forward-reverse",
+      "note": "Ultimo frame del taglio salvato come posa di impatto; ritorno al contrario senza duplicare il vertice."
+    }
+  ]
+}
