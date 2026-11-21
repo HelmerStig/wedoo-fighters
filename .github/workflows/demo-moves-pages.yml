@@ -1,0 +1,56 @@
+name: Publish demo-moves to GitHub Pages
+
+on:
+  push:
+    branches: [develop]
+    paths:
+      - '.github/workflows/demo-moves-pages.yml'
+      - 'demo-moves/**'
+      - 'animation/**'
+      - 'PNG/**'
+      - 'portraits/**'
+      - 'portrait-pixeled/**'
+      - 'original-backgrounds/**'
+      - 'sfx/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Check demo and package exporter
+        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/build-pages.test.mjs
+      - name: Export demo and referenced assets
+        run: node demo-moves/scripts/build-pages.mjs
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: .pages-dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

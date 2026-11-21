@@ -1,4 +1,5 @@
 .runtime/
+.pages-dist*/
 sprite-agent/.venv/
 sprite-agent/__pycache__/
 sprite-agent/output/

@@ -1,0 +1,43 @@
+GITHUB PAGES - DEMO MOSSE
+
+Indirizzo dopo la prima pubblicazione:
+https://helmerstig.github.io/wedoo-fighters/demo-moves/
+
+La configurazione e in .github/workflows/demo-moves-pages.yml.
+Pubblica a ogni push su develop che modifica demo o asset; non pubblica
+direttamente le feature branch. E disponibile anche Run workflow da develop.
+Il workflow deve prima essere incluso nel branch develop insieme a questi
+script e agli asset/cataloghi aggiornati.
+
+Attivazione iniziale sul repository GitHub:
+1. Settings > Pages > Build and deployment > Source: GitHub Actions.
+2. In Settings > Environments > github-pages, se la protezione dei branch
+   consente soltanto il default branch, assicurarsi che develop sia ammesso.
+3. Eseguire il workflow da develop oppure fare push di una modifica pertinente.
+4. Attendere il completamento di build e deploy nella scheda Actions.
+
+Il sito include tutti i personaggi, le mosse, i report e gli stage presenti
+nei cataloghi committati. Conserva demo-moves/ e le cartelle degli asset allo
+stesso livello, per mantenere i link relativi anche sotto /wedoo-fighters/.
+La radice del sito rimanda a demo-moves/.
+
+Esportazione locale (Node.js, senza npm install):
+  node demo-moves/scripts/build-pages.mjs --check
+  node --test demo-moves/scripts/build-pages.test.mjs
+  node demo-moves/scripts/build-pages.mjs
+
+Output ignorato da Git: .pages-dist/. Per una nuova esportazione usare una
+cartella vuota; il comando non elimina output esistenti. Si puo specificare
+un altro nome dedicato, per esempio .pages-dist-preview.
+
+Il pacchetto copia le pagine e i file runtime della demo, gli asset referenziati
+dai cataloghi e dai link HTML/CSS, il video portraits/fire.mp4. Non copia
+scripts, file nascosti, sorgenti PSD, credenziali o asset estranei ai cataloghi.
+Non modifica o ricomprime sprite, non rigenera cataloghi e non usa AutoSprite.
+Per nuovi tipi di asset/cataloghi aggiornare l'esportatore se necessario.
+Asset mancanti, link assoluti, symlink, puntatori Git LFS non scaricati e
+pacchetti oltre 1 GB bloccano la pubblicazione.
+
+Dimensione verificata il 21 novembre 2026: circa 900 MiB.
+Limiti GitHub: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
+Configurazione: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
