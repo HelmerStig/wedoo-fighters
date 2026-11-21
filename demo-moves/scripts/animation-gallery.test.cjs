@@ -5,7 +5,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const core=require('../player-core.js');
 
-function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,crt=false}={}){
+function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,crt=false,multiple=false}={}){
   const images=[],callbacks=new Map();let sequence=0,observer;
   function element(){return {listeners:{},attributes:{},dataset:{},hidden:false,disabled:false,value:'',checked:true,textContent:'',
     classList:{values:new Set(),toggle(name,on){on?this.values.add(name):this.values.delete(name);},add(name){this.values.add(name);}},
@@ -34,6 +34,7 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,crt=fa
   if(lazy)sandbox.IntersectionObserver=class {constructor(fn){this.callback=fn;observer=this;}observe(){}disconnect(){this.disconnected=true;}};
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
+  if(multiple){const a=character.animations[1];a.images=['jump.png','recovery.png'];a.imageLabels=['salto','rialzata'];a.frameImageIndices=a.frames.map((_,i)=>i<30?0:1);a.frames=a.frames.map((_,i)=>[(i%30)*512,0,512,512]);}
   if(timed==='jump')character.animations.forEach((a,i)=>{a.apexFrame=i?40:10;a.apexMs=500;a.durationMs=1000;a.frameDurations=a.frames.map((_,f)=>f<a.apexFrame?500/a.apexFrame:500/(a.frames.length-a.apexFrame));});
   else if(timed==='hurt')character.animations.forEach(a=>{a.durationMs=500;a.frameDurations=a.frames.map(()=>500/a.frames.length);});
   else if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
@@ -65,6 +66,27 @@ test('le reazioni con durata uniforme mostrano il tempo senza impatto NaN',()=>{
   const f=fixture({timed:'hurt'});f.load();
   assert.match(f.container.innerHTML,/0,5 s/);
   assert.doesNotMatch(f.container.innerHTML,/NaN|impatto/);
+  f.gallery.destroy();
+});
+
+test('sequenza su due fogli: attende entrambi, cambia immagine nel raccordo, consente seek e loop',()=>{
+  const f=fixture({multiple:true,crt:true});assert.equal(f.images.length,3);
+  f.images[1].naturalWidth=f.images[2].naturalWidth=512*30;
+  f.images[0].onload();f.images[1].onload();
+  const canvas=f.cards[1].nodes.canvas;assert.equal(canvas.draws.length,0);
+  f.images[2].onload();assert.equal(canvas.draws.at(-1)[0],f.images[1]);
+  const slider=f.cards[1].nodes['[data-role="timeline"]'];slider.value='30';slider.fire('input');
+  assert.equal(canvas.draws.at(-1)[0],f.images[2]);
+  slider.value='59';slider.fire('input');f.cards[1].nodes['[data-action="play"]'].fire('click');f.step(0);f.step(100);
+  assert.equal(canvas.draws.at(-1)[0],f.images[1]);
+  assert.match(f.container.innerHTML,/PNG salto/);assert.match(f.container.innerHTML,/PNG rialzata/);
+  const late=f.images[2].onload;f.gallery.destroy();const count=canvas.draws.length;late();assert.equal(canvas.draws.length,count);
+});
+
+test('errore nel secondo foglio ferma soltanto quel player e non avvia una sequenza parziale',()=>{
+  const f=fixture({multiple:true});f.images[0].onload();f.images[2].onerror();f.images[1].onload();
+  assert.equal(f.cards[1].nodes['.stage-error'].hidden,false);
+  assert.equal(f.cards[1].nodes.canvas.draws.length,0);assert.ok(f.cards[0].nodes.canvas.draws.length>0);
   f.gallery.destroy();
 });
 

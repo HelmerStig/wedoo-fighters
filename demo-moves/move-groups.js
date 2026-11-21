@@ -11,7 +11,7 @@
         groups.get(animation.id).animations.push({...animation, characterId:character.id, characterName:character.name});
       }
     }
-    const baseOrder=['idle','walk','jump','crouch','block','crouch-block','hurt','hurt-medium','hurt-low','hurt-crouched','knockdown','victory','defeat'];
+    const baseOrder=['idle','walk','jump','crouch','block','crouch-block','hurt','hurt-medium','hurt-low','hurt-crouched','knockdown','hurt-in-jump','victory','defeat'];
     const rank=id=>{const index=baseOrder.indexOf(id);return index<0?baseOrder.length:index;};
     return [...groups.values()].sort((a,b)=>rank(a.id)-rank(b.id));
   }

@@ -7,6 +7,10 @@
     const value=Math.round(p.strength*100);
     return `<div class="arm-trail-controls"><label class="loop-control"><input data-role="arm-trail" type="checkbox" ${p.enabled?'checked':''}> Scia e particelle</label><label class="arm-trail-strength">Intensità <input data-role="arm-trail-strength" type="range" min="0" max="100" step="5" value="${value}" aria-label="Intensità effetto del braccio"><output data-role="arm-trail-value">${value}%</output></label></div>`;
   }
+  function downloads(animation,characterId){
+    const images=animation.images??[animation.image];
+    return `<span class="download-links">${images.map((image,i)=>`<a class="download-button" href="${escape(image)}" download="${images.length>1?escape(decodeURIComponent(image.split('/').at(-1))):escape(characterId)+'-'+escape(animation.id)+'.png'}"${i>0?' title="Foglio della rialzata condiviso con Caduta e rialzata; intervallo indicato nell’atlas"':''}>${images.length>1?'PNG '+escape(animation.imageLabels?.[i]??i+1):'Scarica PNG'} ↓</a>`).join('')}</span>`;
+  }
   function install(container, character, options = {}) {
     const core = root.MovesCore;
     const reduced = root.matchMedia('(prefers-reduced-motion: reduce)');
@@ -26,7 +30,7 @@
           <div class="controls-row"><div class="transport"><button class="play-button" data-action="play" type="button" disabled>▶ Riproduci</button><button class="step-button" data-action="step" type="button" aria-label="Frame successivo di ${escape(animation.name)}" disabled>▹|</button></div><label class="loop-control"><input data-role="loop" type="checkbox" checked> Loop</label><label class="speed-control">Velocità <select data-role="speed" aria-label="Velocità di ${escape(animation.name)}"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1× · ${timingLabel(animation)}</option><option value="1.5">1,5×</option><option value="2">2×</option></select></label></div>
           <div class="gallery-card-meta"><span>${animation.frames.length} frame · ${animation.frameWidth} × ${animation.frameHeight}</span><span data-role="fps">${timingLabel(animation)}</span></div>
           ${effectControls(animation)}
-          <div class="gallery-card-bottom"><div class="swatches" role="group" aria-label="Sfondo di ${escape(animation.name)}"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" aria-pressed="false"></button></div><a class="download-button" href="${escape(animation.image)}" download="${escape(animation.characterId ?? character.id)}-${escape(animation.id)}.png">Scarica PNG ↓</a></div>
+          <div class="gallery-card-bottom"><div class="swatches" role="group" aria-label="Sfondo di ${escape(animation.name)}"><button class="swatch" type="button" data-background="dark" aria-label="Sfondo scuro" aria-pressed="true"></button><button class="swatch" type="button" data-background="light" aria-label="Sfondo chiaro" aria-pressed="false"></button><button class="swatch" type="button" data-background="checker" aria-label="Sfondo a scacchi" aria-pressed="false"></button></div>${downloads(animation,animation.characterId ?? character.id)}</div>
         </div>
       </section>`).join('')}</div>`;
 
@@ -52,7 +56,7 @@
         trailStrength.disabled=!trailEnabled.checked;
       }
       const state = {loaded:false, requested:!reduced.matches, playing:false, visible:!root.IntersectionObserver, frame:0, remainder:0, lastTime:null, following:Boolean(animation.frameDurations)};
-      let image = null, started = false;
+      let images = [], started = false;
       const fps = () => core.effectiveFps(animation, Number(speed.value));
       function sync() {
         state.playing = state.loaded && state.requested;
@@ -65,6 +69,7 @@
         const [x,y,w,h] = animation.frames[state.frame];
         context.clearRect(0,0,canvas.width,canvas.height);
         context.imageSmoothingEnabled = false;
+        const image=images[animation.frameImageIndices?.[state.frame]??0];
         if(trail&&trailEnabled.checked&&!reduced.matches)trail.draw(context,image,state,Number(trailStrength.value)/100);
         context.drawImage(image,x,y,w,h,0,0,canvas.width,canvas.height);
         if(crt&&crtEnabled){
@@ -92,17 +97,23 @@
         if(started || disposed) return;
         started=true;
         if(!context){fail('Questo browser non supporta l’anteprima canvas.');return;}
-        image=new root.Image();
-        image.onload=()=>{
-          if(disposed)return;
-          if(!animation.frames.length || animation.frames.some(([x,y,w,h])=>x<0||y<0||w<=0||h<=0||x+w>image.naturalWidth||y+h>image.naturalHeight)) {
-            fail('Lo spritesheet non corrisponde ai frame del catalogo.');return;
-          }
-          state.loaded=true;slider.disabled=false;play.disabled=false;step.disabled=false;
-          $('.stage-loading').hidden=true;stage.setAttribute('aria-busy','false');sync();draw();schedule();
-        };
-        image.onerror=()=>{if(!disposed)fail('Impossibile caricare lo spritesheet di '+animation.name+'.');};
-        image.src=animation.image;
+        const urls=animation.images??[animation.image];let pending=urls.length,failed=false;
+        if(!pending){fail('Nessuno spritesheet disponibile.');return;}
+        images=urls.map(()=>new root.Image());
+        images.forEach((image,index)=>{
+          image.onload=()=>{
+            if(disposed||failed||--pending>0)return;
+            if(!animation.frames.length||(animation.frameImageIndices&&animation.frameImageIndices.length!==animation.frames.length)||animation.frames.some(([x,y,w,h],i)=>{
+              const source=images[animation.frameImageIndices?.[i]??0];
+              return !source||x<0||y<0||w<=0||h<=0||x+w>source.naturalWidth||y+h>source.naturalHeight;
+            })){fail('Lo spritesheet non corrisponde ai frame del catalogo.');return;}
+            state.loaded=true;slider.disabled=false;play.disabled=false;step.disabled=false;
+            $('.stage-loading').hidden=true;stage.setAttribute('aria-busy','false');sync();draw();schedule();
+          };
+          image.onerror=()=>{failed=true;if(!disposed)fail('Impossibile caricare lo spritesheet di '+animation.name+'.');};
+          image.src=urls[index];
+        });
+        cleanups.push(()=>{images.forEach(image=>{image.onload=null;image.onerror=null;});images=[];});
       }
       listen(play,'click',()=>setPlaying(!state.requested));
       listen(step,'click',()=>showFrame((state.frame+1)%animation.frames.length));

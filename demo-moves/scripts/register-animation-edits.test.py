@@ -35,4 +35,19 @@ class RegistrationTests(unittest.TestCase):
             self.assertNotEqual(result.returncode,0);self.assertIn('dimensions changed',result.stderr)
             self.assertEqual((mp.read_bytes(),ap.read_bytes()),before)
 
+    def test_detects_edits_only_in_a_shared_second_sheet(self):
+        with tempfile.TemporaryDirectory(prefix='wedoo-edit-test-') as temp:
+            root=Path(temp);png,ap,mp,_,_,run=self.fixture(root)
+            second=png.with_name('shared.png');image=Image.new('RGBA',(3,3),(30,40,50,255));image.save(second)
+            atlas=json.loads(ap.read_text());atlas['meta']['sheets']=[{'size':{'w':2,'h':2}},{'size':{'w':3,'h':3}}]
+            atlas['frames']['1']={'frame':{'x':1,'y':1,'w':2,'h':2},'sheet':1,'duration':800,'source_frame':12,'rgbaSha256':sha(image.crop((1,1,3,3)).tobytes())}
+            manifest=json.loads(mp.read_text());item=manifest['items'][0];item['frames']=2
+            item['sheets']=[{'png':item['png'],'pngSha256':item['pngSha256']},{'png':'animation/peppo/shared.png','pngSha256':sha(second.read_bytes())}]
+            ap.write_text(json.dumps(atlas));mp.write_text(json.dumps(manifest))
+            image.putpixel((2,2),(99,1,2,128));image.save(second);original_primary=png.read_bytes()
+            result=run();self.assertEqual(result.returncode,0,result.stderr)
+            self.assertEqual(png.read_bytes(),original_primary)
+            self.assertEqual(json.loads(mp.read_text())['items'][0]['sheets'][1]['pngSha256'],sha(second.read_bytes()))
+            frame=json.loads(ap.read_text())['frames']['1'];self.assertTrue(frame['locallyEdited']);self.assertEqual(frame['duration'],800)
+
 if __name__=='__main__':unittest.main()

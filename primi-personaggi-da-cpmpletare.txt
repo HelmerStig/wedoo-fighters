@@ -11,6 +11,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -35,6 +36,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
     
@@ -59,6 +61,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -83,6 +86,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -107,6 +111,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -131,6 +136,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -156,6 +162,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -180,6 +187,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 
@@ -204,6 +212,7 @@
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
+    - Hurt in salto e rialzata (hurt in jump > knockdown-recovery)
     - Vittoria
     - Sconfitta (Defeat)
 

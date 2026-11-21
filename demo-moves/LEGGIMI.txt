@@ -1,5 +1,26 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+HURT IN SALTO E RIALZATA - 21 NOVEMBRE 2026
+Integrata la sequenza Hurt in Jump > Knockdown Recovery per i nove.
+Ultime Hurt in Jump salvate su AutoSprite, trimmed quando disponibili.
+La rialzata riusa le celle della sequenza knockdown gia integrata,
+compresi i ritocchi locali registrati di Peppo ed Elisa.
+Durata iniziale 1600 ms: caduta dal salto 600, fermo 200, rialzata 800.
+La rialzata inizia a 800 ms; solo avanti con loop e CRT nella demo.
+876 celle RGBA verificate dopo l'esportazione, incluse 441 celle della
+rialzata locale. Due PNG collegati in un unico player: il nuovo foglio
+Hurt in Jump e il foglio knockdown esistente. La rialzata non e duplicata.
+Scala, padding e celle 512x512 conservati. Campo sheet nei frame dell'atlas
+e meta.sheets per associare i rettangoli alla corretta immagine in Godot.
+Il player attende entrambi i fogli prima di partire; pausa, seek, loop,
+velocita e CRT operano sull'intera sequenza. Due download PNG separati.
+Manifest animation/hurt-in-jump-manifest.json, atlas con due sorgenti,
+durate per frame e provenienza della rialzata locale. Report HTML/CSV
+reports/hurt-in-jump-timing.html, collegato nella vista per mossa.
+Rigenera: python demo-moves/scripts/build-hurt-jump-report.py
+Aggiornato primi-personaggi-da-cpmpletare.txt. Nessuna generazione,
+nessuna spesa di crediti. Tutte le animazioni precedenti conservate.
+
 RITOCCHI LOCALI DEGLI SPRITESHEET
 Quando si modifica un PNG in un editor, l'impronta salvata nel manifest e
 i relativi hash RGBA possono non corrispondere piu. Dopo aver revisionato

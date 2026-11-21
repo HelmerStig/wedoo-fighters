@@ -7,7 +7,7 @@ const {group,filter}=require('../move-groups.js');
 function characters(){const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../catalog.js'),'utf8'),context);return context.window.MOVES_CATALOG.characters;}
 test('ogni mossa contiene tutti e solo i personaggi disponibili, senza alterare frame o velocita',()=>{
   const roster=characters(),groups=group(roster);
-  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','crouch-block','hurt','hurt-medium','hurt-low','hurt-crouched','knockdown','victory','defeat','light-punch','medium-punch','strong-punch','light-kick','medium-kick','strong-kick']);
+  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','crouch-block','hurt','hurt-medium','hurt-low','hurt-crouched','knockdown','hurt-in-jump','victory','defeat','light-punch','medium-punch','strong-punch','light-kick','medium-kick','strong-kick']);
   for(const move of groups){
     const expected=roster.filter(c=>c.animations.some(a=>a.id===move.id));
     assert.deepEqual(move.animations.map(a=>a.characterId),Array.from(expected,c=>c.id));
@@ -99,6 +99,11 @@ test('la pagina per mossa inizializza la galleria, filtra e distrugge i player p
   assert.equal(nodes.get('#move-name').textContent,'Defeat');
   assert.equal(installs.at(-1).selected.animations.length,9);
   assert.equal(reportLink.href,'reports/defeat-timing.html');
+  sandbox.location.search='?move=hurt-in-jump';
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);
+  assert.equal(nodes.get('#move-name').textContent,'Hurt in salto e rialzata');
+  assert.equal(installs.at(-1).selected.animations.length,9);
+  assert.equal(reportLink.href,'reports/hurt-in-jump-timing.html');
   sandbox.location.search='?move=walk';
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);
   assert.equal(nodes.get('#move-report').hidden,true);

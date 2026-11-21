@@ -61,6 +61,7 @@ const extraAnimations=[
   {manifest:'hurt-low-manifest.json',id:'hurt-low',name:'Hurt basso',description:'Reazione al colpo basso e recupero',durationMs:500},
   {manifest:'hurt-crouched-manifest.json',id:'hurt-crouched',name:'Hurt da accovacciati',description:'Reazione al colpo da accovacciati e recupero',durationMs:500},
   {manifest:'knockdown-manifest.json',id:'knockdown',name:'Caduta e rialzata',description:'Caduta da spazzata, pausa a terra e rialzata',durationMs:1500},
+  {manifest:'hurt-in-jump-manifest.json',id:'hurt-in-jump',name:'Hurt in salto e rialzata',description:'Colpo subito in salto, atterraggio e rialzata',durationMs:1600},
   {manifest:'defeat-manifest.json',id:'defeat',name:'Defeat',description:'Sconfitta con caduta a terra',durationMs:1000},
   {manifest:'crouch-manifest.json',id:'crouch',name:'Crouch',description:'Discesa in guardia accovacciata',durationMs:250},
   {manifest:'crouch-block-manifest.json',id:'crouch-block',name:'Parata accovacciata',description:'Parata da accovacciati e ritorno in guardia bassa',durationMs:500},
@@ -86,9 +87,10 @@ for(const extra of extraAnimations){
     const frames=frameRects(atlas);
     if(frames.length!==item.frames)throw Error(`Frame ${extra.id} non corrispondenti: ${item.character}`);
     let timing={};
-    if(extra.id==='knockdown'){
+    if(extra.id==='knockdown'||extra.id==='hurt-in-jump'){
       const phases=item.sources,entries=Object.values(atlas.frames);
-      if(data.durationMs!==extra.durationMs||data.fallMs!==500||data.groundHoldMs!==200||data.recoveryMs!==800||item.playback!=='sequence'||phases?.length!==2||phases[0].id!=='sweep-knockdown'||phases[1].id!=='knockdown-recovery'||phases[0].startFrame!==0||phases[1].startFrame!==phases[0].endFrame+1||phases[1].endFrame!==frames.length-1)throw Error('Sequenza caduta/rialzata non valida: '+item.character);
+      const airborne=extra.id==='hurt-in-jump';
+      if(data.durationMs!==extra.durationMs||data.fallMs!==(airborne?600:500)||data.groundHoldMs!==200||data.recoveryMs!==800||item.playback!=='sequence'||phases?.length!==2||phases[0].id!==(airborne?'hurt-in-jump':'sweep-knockdown')||phases[1].id!=='knockdown-recovery'||phases[0].startFrame!==0||phases[1].startFrame!==phases[0].endFrame+1||phases[1].endFrame!==frames.length-1)throw Error('Sequenza caduta/rialzata non valida: '+item.character);
       const durations=entries.map((f,i)=>{
         const phase=phases.find(p=>i>=p.startFrame&&i<=p.endFrame);
         const duration=phase.motionMs/phase.frames+(i===phase.endFrame?phase.holdMs:0);
@@ -97,6 +99,12 @@ for(const extra of extraAnimations){
       });
       if(Math.abs(durations.reduce((a,b)=>a+b,0)-data.durationMs)>1e-6)throw Error('Durata caduta/rialzata incoerente');
       timing={playbackMode:'sequence',phases:phases.map(({id,startFrame,endFrame,startMs,durationMs,motionMs,holdMs})=>({id,startFrame,endFrame,startMs,durationMs,motionMs,holdMs})),frameDurations:durations};
+      if(airborne){
+        if(item.sheets?.length!==2||entries.some((f,i)=>f.sheet!==(i<=phases[0].endFrame?0:1)))throw Error('Fogli della sequenza in salto non validi: '+item.character);
+        timing.images=item.sheets.map(s=>url(resolve(root,s.png)));
+        timing.imageLabels=item.sheets.map(s=>s.label);
+        timing.frameImageIndices=entries.map(f=>f.sheet);
+      }
     }
     if(extra.id==='crouch-block'){
       const peak=item.blockFrame,sequence=Array.from({length:item.sourceEnd-item.sourceStart+1},(_,i)=>item.sourceStart+i);

@@ -14,14 +14,16 @@ test('tutti i personaggi e i frame corrispondono ai file esportati',async()=>{
   for(const c of characters){
     await fs.access(path.resolve(demo,decodeURIComponent(c.thumbnail)));
     for(const a of c.animations){
-      const png=await fs.readFile(path.resolve(demo,decodeURIComponent(a.image)));
+      const pngs=await Promise.all((a.images??[a.image]).map(image=>fs.readFile(path.resolve(demo,decodeURIComponent(image)))));
       const atlas=JSON.parse((await fs.readFile(path.resolve(demo,decodeURIComponent(a.atlas)),'utf8')).replace(/^\uFEFF/,''));
       assert.equal(a.frames.length,Object.keys(atlas.frames).length,c.name);
       assert.equal(a.frames.length,atlas.meta?.frame_count??Object.keys(atlas.frames).length,c.name);
-      const width=png.readUInt32BE(16),height=png.readUInt32BE(20);
-      for(const [x,y,w,h]of a.frames)assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=width&&y+h<=height,c.name);
+      for(const [index,[x,y,w,h]]of a.frames.entries()){
+        const png=pngs[a.frameImageIndices?.[index]??0];assert.ok(png,c.name);
+        assert.ok(x>=0&&y>=0&&w>0&&h>0&&x+w<=png.readUInt32BE(16)&&y+h<=png.readUInt32BE(20),c.name);
+      }
       assert.ok(effectiveFps(a,1)>0);
-      assert.equal(effectiveFps(a,1),a.id==='jump'||a.id==='strong-punch'||a.id==='defeat'?a.frames.length:a.id==='block'?a.blockFrame*10:a.id==='light-punch'||['hurt','hurt-medium','hurt-low','hurt-crouched','crouch-block'].includes(a.id)?a.frames.length*2:a.id==='crouch'?a.frames.length*4:a.id==='knockdown'?a.frames.length*1000/1500:a.id==='medium-punch'?a.frames.length*1000/750:a.id==='light-kick'?a.frames.length*1000/600:a.id==='medium-kick'?a.frames.length*1000/800:a.id==='strong-kick'?a.frames.length*1000/900:24,c.name);
+      assert.equal(effectiveFps(a,1),a.id==='jump'||a.id==='strong-punch'||a.id==='defeat'?a.frames.length:a.id==='block'?a.blockFrame*10:a.id==='light-punch'||['hurt','hurt-medium','hurt-low','hurt-crouched','crouch-block'].includes(a.id)?a.frames.length*2:a.id==='crouch'?a.frames.length*4:a.id==='hurt-in-jump'?a.frames.length*1000/1600:a.id==='knockdown'?a.frames.length*1000/1500:a.id==='medium-punch'?a.frames.length*1000/750:a.id==='light-kick'?a.frames.length*1000/600:a.id==='medium-kick'?a.frames.length*1000/800:a.id==='strong-kick'?a.frames.length*1000/900:24,c.name);
     }
   }
   assert.match(characters.find(c=>c.id==='oscar').thumbnail,/OSCARE\.png$/);

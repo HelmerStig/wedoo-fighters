@@ -135,3 +135,5 @@ body.crt-drawer-open .workspace{margin-right:420px}
 .animation-card .stage.sprite-crt-enabled>.stage-crt{opacity:1;z-index:2}
 .animation-card .stage>.stage-crt::after{border-radius:0}
 .gallery-actions [data-action="crt-toggle"][aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+
+.download-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;min-width:0}
