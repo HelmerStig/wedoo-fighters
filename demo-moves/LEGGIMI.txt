@@ -1,5 +1,16 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+RITOCCHI LOCALI DEGLI SPRITESHEET
+Quando si modifica un PNG in un editor, l'impronta salvata nel manifest e
+i relativi hash RGBA possono non corrispondere piu. Dopo aver revisionato
+i ritocchi, registrarli esplicitamente senza modificare i PNG o il timing:
+  python demo-moves/scripts/register-animation-edits.py animation/knockdown-manifest.json --characters peppo elisa --note "Ritocchi locali revisionati"
+Il comando verifica canvas e limiti delle celle e conserva le impronte
+importate insieme a quelle correnti. Non viene eseguito automaticamente
+dalla pipeline. Rigenerare poi il report della mossa per le nuove anteprime.
+Registrati i ritocchi dei PNG knockdown di Peppo ed Elisa che bloccavano
+il controllo del workflow; mantenuti ordine dei frame e timing 500/200/800 ms.
+
 DEFEAT - 21 NOVEMBRE 2026
 Integrata Defeat per i nove personaggi: Alberto, Fabio Clara, Sboz,
 Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan. Ultime versioni
