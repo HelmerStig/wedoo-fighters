@@ -10,6 +10,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -32,6 +33,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
     
     Attack:
@@ -54,6 +56,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -76,6 +79,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -98,6 +102,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -120,6 +125,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -143,6 +149,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -165,6 +172,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:
@@ -187,6 +195,7 @@
     - Hurt medio (hurt medium)
     - Hurt basso (hurt low)
     - Hurt da accovacciati (hurt crouched)
+    - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
 
     Attack:

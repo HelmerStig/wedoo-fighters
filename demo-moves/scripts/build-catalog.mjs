@@ -60,6 +60,7 @@ const extraAnimations=[
   {manifest:'hurt-medium-manifest.json',id:'hurt-medium',name:'Hurt medio',description:'Reazione al colpo medio e recupero',durationMs:500},
   {manifest:'hurt-low-manifest.json',id:'hurt-low',name:'Hurt basso',description:'Reazione al colpo basso e recupero',durationMs:500},
   {manifest:'hurt-crouched-manifest.json',id:'hurt-crouched',name:'Hurt da accovacciati',description:'Reazione al colpo da accovacciati e recupero',durationMs:500},
+  {manifest:'knockdown-manifest.json',id:'knockdown',name:'Caduta e rialzata',description:'Caduta da spazzata, pausa a terra e rialzata',durationMs:1500},
   {manifest:'crouch-manifest.json',id:'crouch',name:'Crouch',description:'Discesa in guardia accovacciata',durationMs:250},
   {manifest:'crouch-block-manifest.json',id:'crouch-block',name:'Parata accovacciata',description:'Parata da accovacciati e ritorno in guardia bassa',durationMs:500},
   {manifest:'block-manifest.json',id:'block',name:'Parata alta',description:'Parata alta pronta in 0,1 secondi'}
@@ -84,6 +85,18 @@ for(const extra of extraAnimations){
     const frames=frameRects(atlas);
     if(frames.length!==item.frames)throw Error(`Frame ${extra.id} non corrispondenti: ${item.character}`);
     let timing={};
+    if(extra.id==='knockdown'){
+      const phases=item.sources,entries=Object.values(atlas.frames);
+      if(data.durationMs!==extra.durationMs||data.fallMs!==500||data.groundHoldMs!==200||data.recoveryMs!==800||item.playback!=='sequence'||phases?.length!==2||phases[0].id!=='sweep-knockdown'||phases[1].id!=='knockdown-recovery'||phases[0].startFrame!==0||phases[1].startFrame!==phases[0].endFrame+1||phases[1].endFrame!==frames.length-1)throw Error('Sequenza caduta/rialzata non valida: '+item.character);
+      const durations=entries.map((f,i)=>{
+        const phase=phases.find(p=>i>=p.startFrame&&i<=p.endFrame);
+        const duration=phase.motionMs/phase.frames+(i===phase.endFrame?phase.holdMs:0);
+        if(f.source_sheet_id!==phase.sourceSheetId||f.source_frame!==phase.sourceStart+i-phase.startFrame||Math.abs(f.duration-duration)>1e-8)throw Error('Frame caduta/rialzata incoerente: '+item.character);
+        return duration;
+      });
+      if(Math.abs(durations.reduce((a,b)=>a+b,0)-data.durationMs)>1e-6)throw Error('Durata caduta/rialzata incoerente');
+      timing={playbackMode:'sequence',phases:phases.map(({id,startFrame,endFrame,startMs,durationMs,motionMs,holdMs})=>({id,startFrame,endFrame,startMs,durationMs,motionMs,holdMs})),frameDurations:durations};
+    }
     if(extra.id==='crouch-block'){
       const peak=item.blockFrame,sequence=Array.from({length:item.sourceEnd-item.sourceStart+1},(_,i)=>item.sourceStart+i);
       sequence.push(...sequence.slice(0,-1).reverse());

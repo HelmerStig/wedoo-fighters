@@ -16,3 +16,5 @@ ora dobbiamo intergrare il calcio potente, strong kick su autosprite
 da eseguire avanti e indietro, hit a 0.5 durata 0.9
 
 Ho creato lo spritesheet "crouch block" su autosprite che ora devo integrare, per oscar sci chiama "crouch block v2"
+
+Ora dobbiamo integrare sweep-knockdown e knockdown-recovery in sequenza, il timing decidilo tu poi al massimo lo rivediamo una volta integrato

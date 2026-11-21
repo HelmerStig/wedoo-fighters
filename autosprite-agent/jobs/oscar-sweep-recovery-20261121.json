@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Sweep Knockdown Recovery",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwq7auqe00bncq58gtufqn55",
+        "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied supine knockdown pose lying flat on the ground and end in the exact supplied standing fighting guard pose. Animate a smooth, continuous, athletic get-up recovery spread evenly across the clip, pure body motion only in completely empty air around the fighter: first the fighter pushes his upper body off the ground with one hand and forearm while tucking his legs underneath himself; next he plants both feet on the ground baseline passing smoothly through a compact low crouch; finally he rises upright with controlled momentum and snaps both fists back into the exact supplied standing fighting guard pose. Keep the entire body cleanly centered inside the 512x512 frame along the ground baseline. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

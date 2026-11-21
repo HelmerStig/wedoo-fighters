@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwwuu000b72jnin9ee6na",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Sweep Knockdown",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmvez0v6s004fg57exj7jz9sy",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied standing guard pose. Animate a smooth, dramatic sweep knockdown spread cleanly across the clip, pure body motion only in completely empty air around the fighter: both feet are suddenly swept out from under the fighter forward-upward, flipping the body backward in mid-air with legs flying up and arms flailing outward in shock and pain; the fighter then slams flat onto their back along the ground baseline with a small realistic bounce of torso, knees, and arms before settling knocked down flat on their back (head toward the left, feet toward the right, knees slightly bent so the entire body stays cleanly centered inside the 512x512 frame with margin on both left and right edges). Stay lying down on the ground at the end without getting back up. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

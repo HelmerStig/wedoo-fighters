@@ -4,6 +4,7 @@ import {mkdtemp,mkdir,writeFile,readFile,rm,access} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {resolve} from 'node:path';
 import {planPages,buildPages} from './build-pages.mjs';
+import {createHash} from 'node:crypto';
 
 async function fixture(t){
   const source=await mkdtemp(resolve(tmpdir(),'wedoo-pages-'));
@@ -55,4 +56,22 @@ test('la demo corrente ha tutti gli asset e resta entro il limite di Pages',asyn
   assert.ok(plan.files.includes('sfx/tuono.mp3'));
   assert.ok(plan.files.some(p=>p.startsWith('animation/')&&p.endsWith('.png')));
   assert.ok(plan.bytes<1_000_000_000);
+});
+
+test('la copia online usa solo cache verificate e ignora quelle riferite a sorgenti superate',async t=>{
+  const {source,put}=await fixture(t),hash=b=>createHash('sha256').update(b).digest('hex');
+  const original=Buffer.alloc(80),encoded=Buffer.alloc(40);
+  Buffer.from([137,80,78,71,13,10,26,10]).copy(original);original.copy(encoded,0,0,24);
+  await put('animation/test.png',original);
+  await put('.pages-png-cache/animation/test.png',encoded);
+  const manifest={'animation/test.png':{sourceSha256:hash(original),pngSha256:hash(encoded),rgbaVerified:true}};
+  await put('.pages-png-cache/manifest.json',JSON.stringify(manifest));
+  const plan=await buildPages(resolve(source,'.pages-dist'),source);
+  assert.equal(plan.sourceBytes-plan.bytes,40);
+  assert.deepEqual(await readFile(resolve(source,'.pages-dist/animation/test.png')),encoded);
+  await put('animation/test.png',Buffer.concat([original,Buffer.from('changed')]));
+  assert.equal(Object.keys((await planPages(source)).optimized).length,0);
+  await put('animation/test.png',original);
+  await put('.pages-png-cache/animation/test.png',Buffer.alloc(40));
+  await assert.rejects(planPages(source),/Cache PNG non valida/);
 });

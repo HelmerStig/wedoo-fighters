@@ -32,8 +32,16 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Prepare lossless PNG copies for Pages
+        run: |
+          python -m pip install Pillow==13.0.0 numpy==2.5.5
+          python demo-moves/scripts/prepare-pages-png.test.py
+          python demo-moves/scripts/prepare-pages-png.py
       - name: Check demo and package exporter
-        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/build-pages.test.mjs
+        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/build-pages.test.mjs demo-moves/scripts/knockdown.test.cjs
       - name: Export demo and referenced assets
         run: node demo-moves/scripts/build-pages.mjs
       - uses: actions/upload-pages-artifact@v4

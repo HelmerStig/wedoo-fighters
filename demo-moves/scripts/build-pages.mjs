@@ -2,6 +2,7 @@ import {readdir,readFile,stat,lstat,mkdir,copyFile,writeFile} from 'node:fs/prom
 import {resolve,dirname,relative,extname,sep} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
+import {createHash} from 'node:crypto';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../..');
 const extensions=new Set(['.html','.js','.css','.json','.png','.webp','.mp3','.mp4','.csv']);
@@ -10,7 +11,7 @@ const catalogs=['catalog.js','stages-catalog.js','stage-actors-catalog.js','stag
 const slash=value=>value.split(sep).join('/');
 
 // Export only the demo and the assets its catalogs/pages actually reference.
-export async function planPages(source=root){
+export async function planPages(source=root,{enforceSize=true}={}){
   source=resolve(source);
   const files=new Map();
   const directoryNames=new Map();
@@ -60,9 +61,24 @@ export async function planPages(source=root){
       const path=decodeURIComponent(ref.split(/[?#]/)[0]);if(path)await add(resolve(dirname(resolve(source,local)),path));
     }
   }
+  const sourceBytes=[...files.values()].reduce((a,b)=>a+b,0),optimized={};
+  let cache={};
+  try{cache=JSON.parse(await readFile(resolve(source,'.pages-png-cache/manifest.json'),'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
+  for(const [local,entry] of Object.entries(cache)){
+    if(!files.has(local)||extname(local)!=='.png')continue;
+    if(entry.rgbaVerified!==true)throw Error('Cache PNG priva di verifica RGBA: '+local);
+    const original=await readFile(resolve(source,local));
+    if(createHash('sha256').update(original).digest('hex')!==entry.sourceSha256)continue;
+    const cached=resolve(source,'.pages-png-cache',local);
+    let current=resolve(source,'.pages-png-cache');
+    for(const part of ['.',...local.split('/')]){current=resolve(current,part);if((await lstat(current)).isSymbolicLink())throw Error('Link simbolico nella cache PNG');}
+    const encoded=await readFile(cached);
+    if(createHash('sha256').update(encoded).digest('hex')!==entry.pngSha256||!encoded.subarray(0,8).equals(original.subarray(0,8))||!encoded.subarray(16,24).equals(original.subarray(16,24)))throw Error('Cache PNG non valida: '+local);
+    if(encoded.length<original.length){files.set(local,encoded.length);optimized[local]=cached;}
+  }
   const bytes=[...files.values()].reduce((a,b)=>a+b,0);
-  if(bytes>1_000_000_000)throw Error('Il sito supera il limite di 1 GB di GitHub Pages: '+bytes+' byte');
-  return {files:[...files.keys()].sort(),bytes};
+  if(enforceSize&&bytes>1_000_000_000)throw Error('Il sito supera 1 GB: eseguire prima python demo-moves/scripts/prepare-pages-png.py ('+bytes+' byte)');
+  return {files:[...files.keys()].sort(),bytes,sourceBytes,optimized};
 }
 
 export async function buildPages(destination=resolve(root,'.pages-dist'),source=root){
@@ -72,12 +88,15 @@ export async function buildPages(destination=resolve(root,'.pages-dist'),source=
   try{if((await readdir(destination)).length)throw Error('Cartella di pubblicazione non vuota: '+destination);}catch(error){if(error.code!=='ENOENT')throw error;}
   const plan=await planPages(source);
   await mkdir(destination,{recursive:true});
-  for(const local of plan.files){const target=resolve(destination,local);await mkdir(dirname(target),{recursive:true});await copyFile(resolve(source,local),target);}
+  for(const local of plan.files){const target=resolve(destination,local);await mkdir(dirname(target),{recursive:true});await copyFile(plan.optimized[local]??resolve(source,local),target);}
   await writeFile(resolve(destination,'.nojekyll'),'');
   await writeFile(resolve(destination,'index.html'),'<!doctype html><html lang="it"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=demo-moves/"><title>WEDOO Fighters</title><a href="demo-moves/">Apri demo-moves</a></html>\n');
   return plan;
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  const plan=process.argv.includes('--check')?await planPages():await buildPages(process.argv[2]);
-  console.log(`GitHub Pages: ${plan.files.length} file, ${(plan.bytes/1024/1024).toFixed(1)} MiB; percorsi e asset verificati.`);
+  if(process.argv.includes('--inventory'))console.log(JSON.stringify(await planPages(root,{enforceSize:false})));
+  else{
+    const plan=process.argv.includes('--check')?await planPages():await buildPages(process.argv[2]);
+    console.log(`GitHub Pages: ${plan.files.length} file, ${(plan.bytes/1024/1024).toFixed(1)} MiB; percorsi e asset verificati.`);
+  }
 }

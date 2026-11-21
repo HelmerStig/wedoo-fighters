@@ -1,0 +1,1334 @@
+{
+  "frames": {
+    "0": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 0,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "346d0ee0b5d3355b5ff7cf07527fd9601bcac381e37f2b853c5ec4823c0421be",
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "1": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 1,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "43162cb89aabfb445187111447f6c79b3c419ef4d9fbc55b9d4431ec9b7997d8",
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "2": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 2,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "950da380907b30987d15fce42afdf289973f186ba9d8fe11b135da34ff5c8843",
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "3": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 3,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "15f097f4d384a39c58ecd47e73c0772c58c38c016e439117cf2bccc5a40451df",
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "4": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 4,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "10a0e3eb0769ffae739d3a2f70d78117f53803f7ec04f380985bab30bfa8811b",
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "5": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 5,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "d7b3856d73d40b10b9caf1cf9d43b8288fb01511e7729aab504080b24787d8ef",
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "6": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 6,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "c9d73a626d7402f77cfd16f187b566d58b04677bff9aa1666f18f6bcf2391f3e",
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "7": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 7,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "668b63586befb38bdef1706d84a6903c9902c67af2f2d4186a77c681316f3e46",
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "8": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 8,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "73cba7cd45a633cff66528880c1d1fad27a82c876b434849e52fc5ad9ec35358",
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "9": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 9,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "fdb90555b07880865680ee1e485b9ea4fc769d68976a8b32966ac40e82059930",
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "10": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 10,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "a494c9a0e0c35d760210c898425dc4216c2c9e63c9546eeaa7a7a92f44fe4655",
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "11": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 11,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "44a30293ac802da3459c217cb0893507cbf784878b7a2e5e947578137b57a349",
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "12": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 12,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "ef6374fe581aab182a84f66bb6a7095f9d5e22cc70ebe56ae98d9cc93f764db2",
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "13": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 13,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "7fc3ee231f29e60e400615b4682eec272aaf2256674733342e0f696fa4955b13",
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "14": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 14,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "3e454131062e759ab17213251ed85aee50f9d3f291137719640f62f97ae82a74",
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "15": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 15,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "1005fab06418eb488a7f1bd7dfc8f4bd39bd2df9f5dee77a0b032545fc70a91d",
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "16": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 16,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "05b4d557c4d6acf16b8e07ad2f56264ca1962feed76bc13a1ded575d1ead5203",
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "17": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 17,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "4a487f4b315bca79a9537535e2b93ba6eee39a9b5d571e5d3a370d0f2be8af92",
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "18": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 18,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "426e7038f3918dcabcb06adae102bd4042f238a17e302d89c2e3bd8a3110da3c",
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "19": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 19,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "0f1d22df18a78c3bb288d0073d2d281baefe300677a018a02147eed075ea1912",
+      "frame": {
+        "x": 2560,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "20": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 20,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "97d85519089b76ea0b9ca871f24470e0df7ea4cd0a3a6c3f71a3ad782ee2ac56",
+      "frame": {
+        "x": 3072,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "21": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 21,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "23d54311d65f3e11a9e16cb638884026031f641933da3f6b9ce28ff768ef4610",
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "22": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 22,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "7d63371dbe4e8538b14d64eb26bb69dd36cd474d89e7f34726e2730f9644e966",
+      "frame": {
+        "x": 512,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "23": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 23,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "548f14ba19d0b702bf75fcbaf56ac7ce71dbe5cf3c93b631ca275d31778df658",
+      "frame": {
+        "x": 1024,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "24": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 24,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "332e3f30cb814e743d8ca946227d6658fdcff1e8004e572d867da4a53be9d6a3",
+      "frame": {
+        "x": 1536,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "25": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 25,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "b2e22049d0ffc0a17ca3f11d39f10820b57f5a59640a309efb14de92b971e9ea",
+      "frame": {
+        "x": 2048,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "26": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 26,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "bd1c27bc2f786a68eeb70bf9aa44337d599c4a8f26e067cca978c1961030ee12",
+      "frame": {
+        "x": 2560,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "27": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 27,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "4fb7ab4d1fc1865a9a709dad3acae85f91ef38b97c0457109c6a251ecf32e863",
+      "frame": {
+        "x": 3072,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "28": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 28,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "f044c8fc2d2bf39c18591dfd44218031966ff244b44d276c6872c7669af936a8",
+      "frame": {
+        "x": 0,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "29": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 29,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "05ca3045df3c1e882ac3ac59a4ee127dcb8e31201ec2cba0297148320de94e11",
+      "frame": {
+        "x": 512,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "30": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 30,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "1316894ea9bba8ab3a0dd18fbd2e0ed1716b9f4719b7d7517e474dd8a66f6622",
+      "frame": {
+        "x": 1024,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "31": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 31,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "7ea21084dcdd117986f725d3a172f87483d2523870e6144e3ba45097dfd70c20",
+      "frame": {
+        "x": 1536,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "32": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 32,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "525ba2572b67cd7def7eb48024d650817edf4ecc37d39bd5a6fdeb0bb4fc642a",
+      "frame": {
+        "x": 2048,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "33": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 33,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "df293be03b2a5abef392f04da5fc76f42f3fba6ca5ebd71fbb7ca422aaee8d31",
+      "frame": {
+        "x": 2560,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "34": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 34,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "f2178533e2ca60f3be0e71685c8777ba5c92972c99190db4991e6bc7a9b3ca90",
+      "frame": {
+        "x": 3072,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "35": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 35,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "7d30c6c8867ce524ef6b175d299dfacac539075dc161edd2df38ab612e118d99",
+      "frame": {
+        "x": 0,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "36": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 36,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "ef1f7518ad6be98d46bf984b13c1aec248c73b33c181d13219338d73520945c1",
+      "frame": {
+        "x": 512,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "37": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 37,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "b0e0bbe6d399e9280ab9af1d239905943969af3110dc7bef1d84f598e3c01c65",
+      "frame": {
+        "x": 1024,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "38": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 38,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "1178337cedb3f3fcbc3babb06fbb3b0b69e37e1e422a0b1053bdf83d8cd7931d",
+      "frame": {
+        "x": 1536,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "39": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 39,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "dcd28bd1811f070e7ed31d51885e1bdef3365bccd2f9d217fe6a4945fe90fd0a",
+      "frame": {
+        "x": 2048,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "40": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 40,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "500ab8527e688c37b74070116570a214321dffcb3217eeb2a67528d762b9a265",
+      "frame": {
+        "x": 2560,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "41": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 41,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "90384b61f699c035569ea80976455fcfb31d50e824b626f12996db27ec069d4e",
+      "frame": {
+        "x": 3072,
+        "y": 2560,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "42": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 42,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "2035e609ca199fa45286a2d9ad255355dc1dc32f5838f6215a1f5d0cf54c89f5",
+      "frame": {
+        "x": 0,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "43": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 43,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "e25968f6d06042330fdd3d74fb82e8d5c40d76dd0e6977066f43172e9770ea2f",
+      "frame": {
+        "x": 512,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "44": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 44,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "2e5fcbf1fecfc92ea64d2acf44ca81a803c3c4693189b67bb4a4b9b2ffbe242f",
+      "frame": {
+        "x": 1024,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "45": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 45,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "efb430916ccca39b3318a9735bcc84872c87e1ac92a05ecd03ccc08bdfc82d05",
+      "frame": {
+        "x": 1536,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "46": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 46,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "e3da14e3124e6dcdebedd9a083e2ca6efa1530e9773623729f36bba58d24f171",
+      "frame": {
+        "x": 2048,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "47": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 47,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "648d67e9a42ce68b0a461e542e22ce9e1158b7e121bf8e03d04aeac189478db9",
+      "frame": {
+        "x": 2560,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 10.204081632653061
+    },
+    "48": {
+      "source_sheet_id": "cmwq7mpmx002723fs2fipx4ay",
+      "source_frame": 48,
+      "phase": "sweep-knockdown",
+      "rgbaSha256": "8949203395e57e0c3ae3921e3b5e5302d56df167973b51593cf43ea4c3c909e8",
+      "frame": {
+        "x": 3072,
+        "y": 3072,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 210.20408163265307
+    },
+    "49": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 0,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "c681feb2d4298d8ff48090485b428bb304433851add056699b27f3d2b1362d8a",
+      "frame": {
+        "x": 0,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "50": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 1,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "b376ecbd748b76b83f59553f57a814f038fc506b4223341b6d663d059d6356ab",
+      "frame": {
+        "x": 512,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "51": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 2,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "a530f12531bd974f007d0cf8f2c0f7699f881d7a54d06dc07888c4618a81f44f",
+      "frame": {
+        "x": 1024,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "52": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 3,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "9a2a43bec783c0f1579b8a7b9818bd0fc96203f13f6012ba5885dc1afd4de585",
+      "frame": {
+        "x": 1536,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "53": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 4,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "37ea71b041978724bb656ca31d1aea72ee5cc22cc37e4e1066a0c4d58e9de84a",
+      "frame": {
+        "x": 2048,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "54": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 5,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "b0b1bdea0a9386fe55e76ad4960a8f40265b40300bf96cf075df59db2721dc18",
+      "frame": {
+        "x": 2560,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "55": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 6,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "76de73047fad068e761c5d993a21081e6d64ab0c15b86d2075c6aa600175a247",
+      "frame": {
+        "x": 3072,
+        "y": 3584,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "56": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 7,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "1c38f522998ac38f6caae80ecbd508392c127fbf1426bec64621db26fba49dc3",
+      "frame": {
+        "x": 0,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "57": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 8,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "82b7c28f3449e8d76295e395d2001f3ef8695d87b85d51072d4e0ac50ef3f271",
+      "frame": {
+        "x": 512,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "58": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 9,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "9922c86c9befb70f5f2e2bafebf6bea385b11099985eb513e04488aa84e12a15",
+      "frame": {
+        "x": 1024,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "59": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 10,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "c070d02cb10a67bd0b29e089008a2fce03f30b8650dd01f3311ce95602ff32ad",
+      "frame": {
+        "x": 1536,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "60": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 11,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "e7f0ba737aef838e28f40baee5c8666b11f6ce786b15f2c4f96c18b216717169",
+      "frame": {
+        "x": 2048,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "61": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 12,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "5fef244b7ce724fb7550903b46d96b5e5ddf43ebbf62eb5c0e83c9c8711e96f9",
+      "frame": {
+        "x": 2560,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "62": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 13,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "39b7fa0ab8add452dbd3108fea7dd389a4a038e0f0c8358633f6935bbe41e07c",
+      "frame": {
+        "x": 3072,
+        "y": 4096,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "63": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 14,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "9166c1fa6b92e53647623435a0f1d04fafb06efacc1566048da5e5d205f59511",
+      "frame": {
+        "x": 0,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "64": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 15,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "eb5114fc3c9a5412160324328040029cf7cebd62ef2f5800349acabba9a5517b",
+      "frame": {
+        "x": 512,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "65": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 16,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "b63d18679b19f2e481caa58904cc71389d6fe3cb4c6381cd3a87e9f393fa3a07",
+      "frame": {
+        "x": 1024,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "66": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 17,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "f2dc3241df50f87e582783b4c21c84580938dc02f9150279e6994e5bc8804671",
+      "frame": {
+        "x": 1536,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "67": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 18,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "2a6a71ee00480fd30f4000a865f6a970d05f0d83dfe3d1855520932c5a0777e2",
+      "frame": {
+        "x": 2048,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "68": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 19,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "7aedc09841e9d2b23f94b2358e0827085365bc8e6b7bbcd9effea2033f2dc326",
+      "frame": {
+        "x": 2560,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "69": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 20,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "0f0e288c4335f59ecfaaeb6f96aadc97c3217df22a049b0ecd3e060b89b15111",
+      "frame": {
+        "x": 3072,
+        "y": 4608,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "70": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 21,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "7fc3ff9f5e898e7fb9bfc121f99014f85d120d8080e3b0b26a6114daff2c5ad0",
+      "frame": {
+        "x": 0,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "71": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 22,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "ceae4b500d531768d614fcf6836ab3c5dd1c35b5eb6ec5d40c599484b2498856",
+      "frame": {
+        "x": 512,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "72": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 23,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "d0019312da56fb133f4f70ab7e16b3c265d3d98cd5b0e7771090e787b29913c2",
+      "frame": {
+        "x": 1024,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "73": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 24,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "3d0ed811cc945e00025608bfcba882f3fc7eb6a4737164821788e3b66b2c9340",
+      "frame": {
+        "x": 1536,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "74": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 25,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "94550955e9a4ad18ccc59bc2e4b45362ef449b1b70db33672e24459eb9e44372",
+      "frame": {
+        "x": 2048,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "75": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 26,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "7e977ec1f25d4548665cbfa54c0b8ebfffc7b2cc4f73a09f8d62930e89ded49c",
+      "frame": {
+        "x": 2560,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "76": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 27,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "20ee26fbd4df76b05bfaecc0a459e78cd0595ced134ca3051f318f1569cac9f3",
+      "frame": {
+        "x": 3072,
+        "y": 5120,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "77": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 28,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "51730048d0e87462712017fd052db3002d7ca8afb21259c3d346985b048792df",
+      "frame": {
+        "x": 0,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "78": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 29,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "0ee1a9fd9ecbd7704a67c46981b33cb43d8038747d6e1bc60f8b7532a632ea05",
+      "frame": {
+        "x": 512,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "79": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 30,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "bf010dd95c5a9f5bde19b35e17f3fd10d79433eac884bac746d57e65c4754613",
+      "frame": {
+        "x": 1024,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "80": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 31,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "486c90074229bb82f5f6143c80a99b24068cfebcbac1fc565a2e521fef56d11d",
+      "frame": {
+        "x": 1536,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "81": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 32,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "519a6a79f3ded7ccf8a6233df0c7af4f9c4e49d0160bdc251cd27438b35a4a3e",
+      "frame": {
+        "x": 2048,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "82": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 33,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "5270534c4d9ca759a809014f83e9e11f204e3685054328d6311fd8e58674b175",
+      "frame": {
+        "x": 2560,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "83": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 34,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "04337360bc779a8ab5b5339a451eeb6a91c2923439bd2757542b65f469520b60",
+      "frame": {
+        "x": 3072,
+        "y": 5632,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "84": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 35,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "94c619947ec436fbe093abbc656d2b72ef5a3fc4eb72076c3102085da0052bb7",
+      "frame": {
+        "x": 0,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "85": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 36,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "26e5622cf77ca74d934fcd70070c2510e89bc551dbe77c8c3e55ad6e1a4a8420",
+      "frame": {
+        "x": 512,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "86": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 37,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "100ad1f060dcdea2d1d3de15c3b8b096ee584d84714803380af4cbb60a1f8678",
+      "frame": {
+        "x": 1024,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "87": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 38,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "992c09edc6b1ddf18128ae0856bbe61d7a7c97a874be7ba975e80a6d8d66ea52",
+      "frame": {
+        "x": 1536,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "88": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 39,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "3cf692db6695b595b9820adc1221d1455f5a9d7da7deaa05c4b2a79778fab598",
+      "frame": {
+        "x": 2048,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "89": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 40,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "03bd749e599f862d06227e081120e1d3d0ee9cfaf483291ff344cb7d1e1be497",
+      "frame": {
+        "x": 2560,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "90": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 41,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "ac8f479ca493f5110b53767698dd2401ce957a1feae94ec2f8e83b147d4df10b",
+      "frame": {
+        "x": 3072,
+        "y": 6144,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "91": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 42,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "174e120cee53e047576cd2f12d3e9e1df6a0549d8f007df7ae90bf0500fc130d",
+      "frame": {
+        "x": 0,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "92": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 43,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "93ea9e9919f3f92224648c752f7da10f8a3635281f03e12948b04b398344a369",
+      "frame": {
+        "x": 512,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "93": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 44,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "18537e819117fef46433cee7290021d5f20852030bf8b5ff793b05b10c52e1b8",
+      "frame": {
+        "x": 1024,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "94": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 45,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "0c7093d03a319cd0f7c266eff4e91955872e8ef60064fc27a50a6467e3f89901",
+      "frame": {
+        "x": 1536,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "95": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 46,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "5c627837e5054917827b28a00142e4e6bdc88e49963aac8ab516222be6c152f4",
+      "frame": {
+        "x": 2048,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "96": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 47,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "e61bf14a1522e6646f85b653a429aa4bd8ff5911e27155c6d627d4be01435900",
+      "frame": {
+        "x": 2560,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    },
+    "97": {
+      "source_sheet_id": "cmwq9uy9p007ahjfyr84azzv3",
+      "source_frame": 48,
+      "phase": "knockdown-recovery",
+      "rgbaSha256": "0e042dcf82a538a330c367a3b159441aaf32fbadc603b97221d4372ae9490558",
+      "frame": {
+        "x": 3072,
+        "y": 6656,
+        "w": 512,
+        "h": 512
+      },
+      "duration": 16.3265306122449
+    }
+  },
+  "meta": {
+    "image": "sboz-knockdown.png",
+    "size": {
+      "w": 3584,
+      "h": 7168
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 98,
+    "fps": 65.33333333333333,
+    "duration_ms": 1500,
+    "duration_s": 1.5,
+    "playback": "sequence",
+    "sources": [
+      {
+        "sourceSheetId": "cmwq7mpmx002723fs2fipx4ay",
+        "sourceVideoId": "cmwq7ldlc00facq580m0j5nv2",
+        "sourceAnimationName": "Sweep Knockdown",
+        "sourceCreatedAt": "2026-11-21T09:33:02.409Z",
+        "sourceFrames": 49,
+        "sourceStart": 0,
+        "sourceEnd": 48,
+        "speedMultiplier": 1,
+        "id": "sweep-knockdown",
+        "startFrame": 0,
+        "endFrame": 48,
+        "frames": 49,
+        "startMs": 0,
+        "durationMs": 700,
+        "motionMs": 500,
+        "holdMs": 200,
+        "sourcePngSha256": "770525efc9f8f2b6046ea4ef4810da4067190e95dc4eacc0fab5c84a81eb6206"
+      },
+      {
+        "sourceSheetId": "cmwq9uy9p007ahjfyr84azzv3",
+        "sourceVideoId": "cmwq9tlcn00bm2dbaguy0q4d7",
+        "sourceAnimationName": "Sweep Knockdown Recovery",
+        "sourceCreatedAt": "2026-11-21T10:35:26.078Z",
+        "sourceFrames": 49,
+        "sourceStart": 0,
+        "sourceEnd": 48,
+        "speedMultiplier": 1,
+        "id": "knockdown-recovery",
+        "startFrame": 49,
+        "endFrame": 97,
+        "frames": 49,
+        "startMs": 700,
+        "durationMs": 800,
+        "motionMs": 800,
+        "holdMs": 0,
+        "sourcePngSha256": "81eadeeaab51b6d99042a54955542b33778370c9d83538cc52e74f7c72ae5395"
+      }
+    ]
+  }
+}

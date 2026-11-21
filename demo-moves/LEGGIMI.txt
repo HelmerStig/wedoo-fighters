@@ -1,5 +1,22 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+CADUTA DA SPAZZATA E RIALZATA - 21 NOVEMBRE 2026
+Unica sequenza per i nove personaggi: Sweep Knockdown seguito da Sweep
+Knockdown Recovery, ultime versioni salvate su AutoSprite. Due segmenti
+da 49 frame, 98 celle per personaggio; 882 celle RGBA verificate contro
+entrambe le sorgenti senza ridimensionare, traslare o ricentrare.
+Prima taratura: caduta 500 ms + fermo 200 ms + rialzata 800 ms = 1500 ms.
+Il fermo estende l'ultimo frame della caduta; la rialzata inizia a 700 ms.
+Solo avanti, loop e CRT attivi. Atlas con origine e durata di ciascun frame,
+manifest animation/knockdown-manifest.json con le due sorgenti e le fasi.
+Report reports/knockdown-timing.html e CSV; generatore:
+  python demo-moves/scripts/build-knockdown-report.py
+Aggiornato primi-personaggi-da-cpmpletare.txt. Zero crediti consumati.
+Per restare entro il budget Pages, la pubblicazione prepara copie PNG a
+palette soltanto se i colori RGBA originali sono al massimo 256 e il
+confronto dei pixel dopo il salvataggio e identico. Originali invariati.
+Dettagli e comandi in GITHUB-PAGES.txt; cache locale ignorata da Git.
+
 HURT MEDIUM, LOW E CROUCHED - 21 NOVEMBRE 2026
 Integrate 27 animazioni per Alberto, Fabio Clara, Sboz, Pippo, Peppo,
 Oscar, Elisa, Fra Tavarone e Marsan. Ultime versioni trimmed salvate

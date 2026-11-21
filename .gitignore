@@ -1,5 +1,7 @@
 .runtime/
 .pages-dist*/
+.pages-png-cache/
+demo-moves/scripts/__pycache__/
 sprite-agent/.venv/
 sprite-agent/__pycache__/
 sprite-agent/output/

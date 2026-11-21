@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Defeat",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied standing guard pose. Animate a theatrical classic arcade KO defeat collapse spread cleanly across the clip, pure body motion only in completely empty air around the fighter: his head and chest snap dramatically backward as his arms fling wide open, lifting him into a small backward arc off the ground; he tilts horizontally in mid-air and slams onto his back along the ground baseline, rebounding with a distinct small arcade bounce of his torso, legs, and arms before collapsing completely limp and motionless KO on the floor (head left, feet right, knees slightly bent, arms sprawled so the entire body stays cleanly centered inside the 512x512 frame with margin on both edges). Stay completely still on the final frames. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

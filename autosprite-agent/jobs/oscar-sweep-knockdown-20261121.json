@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Sweep Knockdown",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied standing guard pose. Animate a smooth, dramatic sweep knockdown spread cleanly across the clip, pure body motion only in completely empty air around the fighter: both feet are suddenly swept out from under him forward-upward, flipping his body backward in mid-air with legs flying up and arms flailing outward in shock and pain; he then slams flat onto his back along the ground baseline with a small realistic bounce of his torso, knees, and arms before settling knocked down flat on his back (head toward the left, feet toward the right, knees slightly bent so the entire body stays cleanly centered inside the 512x512 frame with margin on both left and right edges). Stay lying down on the ground at the end without getting back up. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

@@ -22,6 +22,7 @@ stesso livello, per mantenere i link relativi anche sotto /wedoo-fighters/.
 La radice del sito rimanda a demo-moves/.
 
 Esportazione locale (Node.js, senza npm install):
+  python demo-moves/scripts/prepare-pages-png.py
   node demo-moves/scripts/build-pages.mjs --check
   node --test demo-moves/scripts/build-pages.test.mjs
   node demo-moves/scripts/build-pages.mjs
@@ -38,6 +39,17 @@ Per nuovi tipi di asset/cataloghi aggiornare l'esportatore se necessario.
 Asset mancanti, link assoluti, symlink, puntatori Git LFS non scaricati e
 pacchetti oltre 1 GB bloccano la pubblicazione.
 
-Dimensione verificata il 21 novembre 2026: circa 900 MiB.
+Prima dell'esportazione, prepare-pages-png.py prepara copie PNG a palette
+soltanto quando l'immagine contiene gia al massimo 256 colori RGBA distinti.
+Non quantizza colori aggiuntivi: ricarica ogni PNG prodotto e confronta tutti
+i pixel RGBA, inclusi i valori RGB dei pixel trasparenti. I file originali e
+gli spritesheet di animation/ restano intatti. La cache .pages-png-cache/ e
+ignorata da Git; le copie sono legate ai rispettivi SHA256 sorgente e finale.
+Il workflow installa Pillow 13.0.0 e numpy 2.5.5 per questa preparazione;
+non ci sono nuove dipendenze frontend. In locale servono gli stessi pacchetti.
+Esegue la preparazione prima dei test e mantiene il controllo finale di 1 GB.
+Dimensione senza cache oltre 1 GB dopo l'aggiunta delle sequenze di caduta:
+non saltare la preparazione. Le copie a palette sono anche i PNG scaricabili
+online e conservano esattamente dimensioni e pixel delle sorgenti.
 Limiti GitHub: https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits
 Configurazione: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
