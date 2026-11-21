@@ -4,7 +4,7 @@ window.STAGE_ACTORS_CATALOG = {
     "name": "Tony",
     "animations": {
       "walk": {
-        "image": "../animation/tony/tony-background-walk.png",
+        "image": "../animation/Tony/tony-background-walk.png",
         "frames": [
           [
             0,
@@ -1103,7 +1103,7 @@ window.STAGE_ACTORS_CATALOG = {
         ]
       },
       "saluto": {
-        "image": "../animation/tony/tony-background-saluto.png",
+        "image": "../animation/Tony/tony-background-saluto.png",
         "frames": [
           [
             0,

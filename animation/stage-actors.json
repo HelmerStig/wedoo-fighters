@@ -7,8 +7,8 @@
       "characterId": "cmwakhzns00fkg3te6r39w3sq",
       "animations": {
         "walk": {
-          "image": "animation/tony/tony-background-walk.png",
-          "atlas": "animation/tony/tony-background-walk.json",
+          "image": "animation/Tony/tony-background-walk.png",
+          "atlas": "animation/Tony/tony-background-walk.json",
           "sourceSheetId": "cmwj65ljp00h5w92h0repb0kt",
           "sourceVideoId": "cmwau9xcw01dz50vxityb3duf",
           "sourceAnimationName": "custom walk",
@@ -858,8 +858,8 @@
           ]
         },
         "saluto": {
-          "image": "animation/tony/tony-background-saluto.png",
-          "atlas": "animation/tony/tony-background-saluto.json",
+          "image": "animation/Tony/tony-background-saluto.png",
+          "atlas": "animation/Tony/tony-background-saluto.json",
           "sourceSheetId": "cmwj6270c005u62p6snkq0wea",
           "sourceVideoId": "cmwj5z6va004tqlo3i919dvbq",
           "sourceAnimationName": "saluto",
