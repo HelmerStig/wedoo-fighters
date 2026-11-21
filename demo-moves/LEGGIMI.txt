@@ -1,5 +1,21 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+DEFEAT - 21 NOVEMBRE 2026
+Integrata Defeat per i nove personaggi: Alberto, Fabio Clara, Sboz,
+Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan. Ultime versioni
+salvate, complete da 49 frame (nessuna versione trimmed disponibile).
+Prima durata 1000 ms, 49 fps, solo avanti dalla guardia alla sconfitta
+a terra. Con loop disattivato il player mantiene la posa finale;
+loop e CRT restano attivi per default nella demo.
+441 celle RGBA verificate contro le sorgenti. PNG completi copiati
+byte per byte, con palette, trasparenza, scala e padding conservati.
+Manifest animation/defeat-manifest.json, atlas con durate per frame,
+report reports/defeat-timing.html e CSV, collegato nella vista per mossa.
+Rigenerazione report: python demo-moves/scripts/build-defeat-report.py
+Aggiornato primi-personaggi-da-cpmpletare.txt. Nessuna generazione,
+nessuna spesa di crediti. In Godot: esecuzione singola e posa finale
+mantenuta nello stato defeat.
+
 CADUTA DA SPAZZATA E RIALZATA - 21 NOVEMBRE 2026
 Unica sequenza per i nove personaggi: Sweep Knockdown seguito da Sweep
 Knockdown Recovery, ultime versioni salvate su AutoSprite. Due segmenti

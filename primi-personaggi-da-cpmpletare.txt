@@ -12,6 +12,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -35,6 +36,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
     
     Attack:
     - Pugno leggero
@@ -58,6 +60,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -81,6 +84,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -104,6 +108,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -127,6 +132,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -151,6 +157,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -174,6 +181,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
@@ -197,6 +205,7 @@
     - Hurt da accovacciati (hurt crouched)
     - Caduta e rialzata (sweep-knockdown > knockdown-recovery)
     - Vittoria
+    - Sconfitta (Defeat)
 
     Attack:
     - Pugno leggero
