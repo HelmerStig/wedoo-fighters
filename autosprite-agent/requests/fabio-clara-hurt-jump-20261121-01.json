@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Hurt in Jump",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwqbasmj002ds9p57tq8opa8",
+        "lastFramePoseId": "cmwq9on6f000gxt7ptkevd30y",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied mid-air jump pose and end in the exact supplied supine knockdown pose lying flat on the ground baseline. Animate a sharp mid-air backward recoil and crash landing spread cleanly across the clip, pure body motion only in completely empty air around the fighter: head and chest snap sharply backward in mid-air as both arms fling wide open and legs uncurl loosely in shock; the body rotates horizontally backward while plummeting down toward the ground baseline, slamming onto the back with a small realistic arcade bounce of torso, arms, and knees before settling into the exact supplied supine knockdown pose cleanly centered inside the 512x512 frame with margin on all edges. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}
