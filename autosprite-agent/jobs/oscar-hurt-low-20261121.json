@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Hurt Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveysix0000g5g1g5vakv945",
+        "lastFramePoseId": "cmveysix0000g5g1g5vakv945",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Animate a smooth, continuous low leg-hit reaction spread evenly across the full clip with clear intermediate frames: first the fighter is struck sharply on the front shin/knee, making the front leg buckle and lift slightly off the ground in pain while the weight shifts back onto the rear foot, the torso dips forward-down with a pained grimace and both arms open briefly downward to catch balance without falling; then he absorbs the stumble in a brief controlled recoil; finally he plants the front foot firmly back on the ground baseline, straightens up, and raises both fists into the exact standing guard pose. Keep the rear foot grounded on the baseline without sliding out of frame. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no hit sparks, no props or effects."
+      }
+    ]
+  }
+}

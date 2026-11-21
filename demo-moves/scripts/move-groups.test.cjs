@@ -7,7 +7,7 @@ const {group,filter}=require('../move-groups.js');
 function characters(){const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../catalog.js'),'utf8'),context);return context.window.MOVES_CATALOG.characters;}
 test('ogni mossa contiene tutti e solo i personaggi disponibili, senza alterare frame o velocita',()=>{
   const roster=characters(),groups=group(roster);
-  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','hurt','victory','light-punch','medium-punch','strong-punch','light-kick','medium-kick','strong-kick']);
+  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','crouch-block','hurt','victory','light-punch','medium-punch','strong-punch','light-kick','medium-kick','strong-kick']);
   for(const move of groups){
     const expected=roster.filter(c=>c.animations.some(a=>a.id===move.id));
     assert.deepEqual(move.animations.map(a=>a.characterId),Array.from(expected,c=>c.id));
@@ -77,6 +77,11 @@ test('la pagina per mossa inizializza la galleria, filtra e distrugge i player p
   assert.equal(nodes.get('#move-name').textContent,'Pugno forte');
   assert.equal(nodes.get('#move-report').hidden,false);
   assert.equal(reportLink.href,'reports/strong-punch-timing.html');
+  sandbox.location.search='?move=crouch-block';
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);
+  assert.equal(nodes.get('#move-name').textContent,'Parata accovacciata');
+  assert.equal(installs.at(-1).selected.animations.length,9);
+  assert.equal(reportLink.href,'reports/crouch-block-timing.html');
   sandbox.location.search='?move=walk';
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../app.js'),'utf8'),sandbox);
   assert.equal(nodes.get('#move-report').hidden,true);

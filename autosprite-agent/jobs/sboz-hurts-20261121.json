@@ -1,0 +1,41 @@
+{
+  "characterId": "cmv9hwys4000o72jnrpng2i85",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Hurt Medium",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveyznuz005kwo3iymky7hyg",
+        "lastFramePoseId": "cmveyznuz005kwo3iymky7hyg",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Animate a smooth, continuous medium stomach-pain recoil spread evenly across the full clip with clear intermediate frames, pure body motion only in completely empty air around the fighter: first the abdomen caves sharply backward while the upper torso hunches forward, shoulders curl inward, head drops with a pained grimace, knees bend, and both arms drop briefly toward the midsection as the guard breaks; then the fighter holds a brief controlled staggered hunch without falling; finally the fighter smoothly straightens the torso, lifts the head, and raises both fists back into the exact standing guard pose. Keep both feet grounded on the baseline without sliding out of frame. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, clean sprite only."
+      },
+      {
+        "kind": "custom",
+        "name": "Hurt Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmveyznuz005kwo3iymky7hyg",
+        "lastFramePoseId": "cmveyznuz005kwo3iymky7hyg",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied standing guard pose. Animate a smooth, continuous low leg-recoil reaction spread evenly across the full clip with clear intermediate frames, pure body motion only in completely empty air around the fighter: first the front leg buckles and lifts slightly off the ground in sharp pain while weight shifts back onto the rear foot, the torso dips forward-down with a pained grimace, and both arms open briefly downward to catch balance without falling; then the fighter holds a brief controlled stumble recoil; finally the fighter plants the front foot firmly back on the ground baseline, straightens up, and raises both fists into the exact standing guard pose. Keep the rear foot grounded on the baseline without sliding out of frame. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, clean sprite only."
+      },
+      {
+        "kind": "custom",
+        "name": "Hurt Crouched",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjfx9l000knw1581iykcop",
+        "lastFramePoseId": "cmwnjfx9l000knw1581iykcop",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied kneeling crouch guard pose, staying kneeling low on the ground for the entire animation (do NOT stand up and do NOT fall over). Animate a smooth, continuous crouched recoil reaction spread evenly across the full clip with clear intermediate frames, pure body motion only in completely empty air around the fighter: first the kneeling fighter's head and upper torso snap backward with a pained grimace while both arms flinch outward and open briefly as the guard breaks; then the fighter absorbs a brief controlled crouched recoil while keeping the front foot and rear knee anchored firmly on the ground baseline; finally the fighter smoothly brings the torso, head, and both fists back into the exact supplied kneeling crouch guard pose. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, clean sprite only."
+      }
+    ]
+  }
+}

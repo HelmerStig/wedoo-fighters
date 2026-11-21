@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Hurt Crouched",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "lastFramePoseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start and end in the exact supplied kneeling crouch guard pose, staying kneeling low on the ground for the entire animation (do NOT stand up and do NOT fall over). Animate a smooth, continuous crouched hit reaction spread evenly across the full clip with clear intermediate frames: first the kneeling fighter is struck hard, snapping the head and upper torso backward with a pained grimace while both arms flinch outward and open briefly as the guard breaks; then he reels backward slightly in a controlled crouched recoil while keeping the front foot and rear knee anchored firmly on the ground baseline; finally he smoothly brings his torso, head, and both fists back into the exact supplied kneeling crouch guard pose. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no hit sparks, no props or effects."
+      }
+    ]
+  }
+}

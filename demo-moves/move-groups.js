@@ -11,7 +11,7 @@
         groups.get(animation.id).animations.push({...animation, characterId:character.id, characterName:character.name});
       }
     }
-    const baseOrder=['idle','walk','jump','crouch','block','hurt','victory'];
+    const baseOrder=['idle','walk','jump','crouch','block','crouch-block','hurt','victory'];
     const rank=id=>{const index=baseOrder.indexOf(id);return index<0?baseOrder.length:index;};
     return [...groups.values()].sort((a,b)=>rank(a.id)-rank(b.id));
   }

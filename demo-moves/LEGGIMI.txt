@@ -1,5 +1,19 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+PARATA ACCOVACCIATA - 21 NOVEMBRE 2026
+Integrate le ultime Crouch Block per Alberto, Fabio Clara, Sboz, Pippo,
+Peppo, Elisa, Fra Tavarone e Marsan; Crouch Block v2 per Oscar.
+Versioni trimmed e tagli salvati su AutoSprite rispettati. Riproduzione
+avanti e poi al contrario senza duplicare il vertice: posa di parata
+a 250 ms, ritorno alla guardia accovacciata e ciclo completo a 500 ms.
+177 celle 512x512 confrontate pixel RGBA per pixel RGBA con le sorgenti,
+senza modificare scala, posizione o padding. Loop e CRT attivi.
+Manifest: animation/crouch-block-manifest.json. Report HTML/CSV e pose:
+reports/crouch-block-timing.html, collegato sotto il titolo nella vista
+per mossa. Rigenera con scripts/build-crouch-block-report.py (Pillow).
+Aggiornato primi-personaggi-da-cpmpletare.txt. Nessuna generazione o
+spesa di crediti. Il catalogo precedente conserva tutte le altre mosse.
+
 CALCIO POTENTE - NOVE PERSONAGGI (20 NOVEMBRE 2026)
 Importate le ultime strong kick salvate su AutoSprite per Alberto, Fabio
 Clara, Sboz, Pippo, Peppo, Oscar, Elisa, Fra Tavarone e Marsan.

@@ -1,0 +1,191 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "b3269d324c9874d66603a2a4a381862476abb5f91cb6d86d5bb3e04cdb39d395"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "7aba626e604d1f1844f026dc433076940bf9352895362cf9ae07668e5dbb591e"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "25eff3b819e92d36bf48b204df64c6a592a492ee3262a35505852a16019c3653"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "0499d786829452c2a06e6d05cc6d88f262d50bcdc0d06ef018f2d01a2db4da1a"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "d68cf2c73a8eefb74bd6c77f39e6e69f9f9928d1d07bd32834b6b025fdc5f30a"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "59f5df8a5d362d4775dc44c5b64723199f4b7acb58db5f4c6a1eb6fa7e5030fb"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "f7fcb804bb966f217c935377d997623de67527c8ccc4237cae3016e5490e8405"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 31.25,
+      "rgbaSha256": "059a9c1a4562efacdb8ecfd2885aed00a8b386d8a8575d10d38ce8903b2e04a8"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 31.25,
+      "rgbaSha256": "f7fcb804bb966f217c935377d997623de67527c8ccc4237cae3016e5490e8405"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 31.25,
+      "rgbaSha256": "59f5df8a5d362d4775dc44c5b64723199f4b7acb58db5f4c6a1eb6fa7e5030fb"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 31.25,
+      "rgbaSha256": "d68cf2c73a8eefb74bd6c77f39e6e69f9f9928d1d07bd32834b6b025fdc5f30a"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 31.25,
+      "rgbaSha256": "0499d786829452c2a06e6d05cc6d88f262d50bcdc0d06ef018f2d01a2db4da1a"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 31.25,
+      "rgbaSha256": "25eff3b819e92d36bf48b204df64c6a592a492ee3262a35505852a16019c3653"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 31.25,
+      "rgbaSha256": "7aba626e604d1f1844f026dc433076940bf9352895362cf9ae07668e5dbb591e"
+    },
+    "14": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 31.25,
+      "rgbaSha256": "b3269d324c9874d66603a2a4a381862476abb5f91cb6d86d5bb3e04cdb39d395"
+    }
+  },
+  "meta": {
+    "image": "sboz-crouch-block.png",
+    "size": {
+      "w": 2560,
+      "h": 1536
+    },
+    "frame_count": 15,
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "source_frame_count": 8,
+    "source_sheet_id": "cmwq4ez9s000b22vs3pk0hj21",
+    "source_frame_start": 0,
+    "source_frame_end": 7,
+    "fps": 30,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "block_frame": 7,
+    "block_ms": 250,
+    "playback": "forward-reverse"
+  }
+}
