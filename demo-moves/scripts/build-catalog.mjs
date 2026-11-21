@@ -57,6 +57,9 @@ const extraAnimations=[
   {manifest:'medium-kick-manifest.json',id:'medium-kick',name:'Calcio medio',description:'Calcio medio e ritorno in guardia',durationMs:800},
   {manifest:'strong-kick-manifest.json',id:'strong-kick',name:'Calcio potente',description:'Calcio potente e ritorno in guardia',durationMs:900},
   {manifest:'hurt-manifest.json',id:'hurt',name:'Hurt',description:'Reazione al colpo e ritorno in guardia',durationMs:500},
+  {manifest:'hurt-medium-manifest.json',id:'hurt-medium',name:'Hurt medio',description:'Reazione al colpo medio e recupero',durationMs:500},
+  {manifest:'hurt-low-manifest.json',id:'hurt-low',name:'Hurt basso',description:'Reazione al colpo basso e recupero',durationMs:500},
+  {manifest:'hurt-crouched-manifest.json',id:'hurt-crouched',name:'Hurt da accovacciati',description:'Reazione al colpo da accovacciati e recupero',durationMs:500},
   {manifest:'crouch-manifest.json',id:'crouch',name:'Crouch',description:'Discesa in guardia accovacciata',durationMs:250},
   {manifest:'crouch-block-manifest.json',id:'crouch-block',name:'Parata accovacciata',description:'Parata da accovacciati e ritorno in guardia bassa',durationMs:500},
   {manifest:'block-manifest.json',id:'block',name:'Parata alta',description:'Parata alta pronta in 0,1 secondi'}
@@ -87,7 +90,7 @@ for(const extra of extraAnimations){
       if(data.durationMs!==500||data.blockMs!==250||peak!==item.sourceEnd-item.sourceStart||peak<1||item.playback!=='forward-reverse'||sequence.length!==frames.length||JSON.stringify(sequence)!==JSON.stringify(item.frameSequence)||atlas.meta.source_sheet_id!==item.sourceSheetId||Object.values(atlas.frames).some((f,i)=>f.source_frame!==sequence[i]))throw Error('Sequenza parata accovacciata incoerente: '+item.character);
       timing={blockFrame:peak,blockMs:data.blockMs,playbackMode:item.playback,frameDurations:frames.map((_,i)=>i<peak?data.blockMs/peak:(data.durationMs-data.blockMs)/(frames.length-peak))};
     }
-    if(extra.id==='hurt'||extra.id==='crouch'){
+    if(['hurt','hurt-medium','hurt-low','hurt-crouched','crouch'].includes(extra.id)){
       if(data.durationMs!==extra.durationMs||item.playback!=='forward'||item.sourceEnd-item.sourceStart+1!==frames.length||atlas.meta.source_sheet_id!==item.sourceSheetId||Object.values(atlas.frames).some((f,i)=>f.source_frame!==item.sourceStart+i||Math.abs(f.duration-extra.durationMs/frames.length)>1e-8))throw Error('Timing '+extra.name+' non valido: '+item.character);
       timing={playbackMode:'forward',frameDurations:frames.map(()=>extra.durationMs/frames.length)};
     }

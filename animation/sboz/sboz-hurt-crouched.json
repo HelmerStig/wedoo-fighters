@@ -1,0 +1,123 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "507d7cbb4a18523bb9e4dfbb22b146ebef93a0f1faf52992cbe101482f52b99c"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "409b09a1cdfcb796a5881d0d0a3378dea9480dc6648f6068defee06a86c9a773"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "98578994ec1aecb9dbd0ed1b34c183368cb65b22edd81d975d41be63ad0143c8"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "fe55913fdddeac1dac840ffeedc34243b8cf5940de719274c3ba935361aa2871"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "f1a3e3232c33fac6effbb075631d32326c95a6e6bde68f4a7550a814bcdf11c3"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "30183e454b6dd8c11a58189280740bf32bc43af7644e4be36c1d0f6009b5c618"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "98176c5b760a0014477f16d7922d26bf6da2937b5f0582063aa3b62989c721bd"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "f420fda48a32522650f3d3fb38cfc1f212fbcf675ce68b4e0033a09678298309"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 55.55555555555556,
+      "rgbaSha256": "8376e6154292131af5607b0a5f8758cad660bf69f6622a5d39721e1e9c96706a"
+    }
+  },
+  "meta": {
+    "image": "sboz-hurt-crouched.png",
+    "size": {
+      "w": 2560,
+      "h": 1024
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 9,
+    "source_frame_count": 9,
+    "source_sheet_id": "cmwq6b288001z13sfbbwcoquh",
+    "source_frame_start": 0,
+    "source_frame_end": 8,
+    "fps": 18,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

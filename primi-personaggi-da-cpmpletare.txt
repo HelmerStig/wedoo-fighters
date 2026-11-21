@@ -7,6 +7,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -26,6 +29,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
     
     Attack:
@@ -45,6 +51,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -64,6 +73,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -83,6 +95,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -102,6 +117,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -122,6 +140,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -141,6 +162,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:
@@ -160,6 +184,9 @@
     - Parata alta
     - Parata accovacciata (crouch block)
     - Hurt
+    - Hurt medio (hurt medium)
+    - Hurt basso (hurt low)
+    - Hurt da accovacciati (hurt crouched)
     - Vittoria
 
     Attack:

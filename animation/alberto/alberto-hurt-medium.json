@@ -1,0 +1,156 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "906e2d4da920bdc35a6b24a97f414af71b558628353fd4187a09cfc4acc6710c"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "7cfed71defa34438988ce1bffe0db2449fe928e929a14e2cdefd1acf4ef813f5"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "647dabfea91bd41bbc2c7d593b74423c2e008a043c0ea9ab5e35ad3f02139394"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "d4ab5abb6367e2ec549484b74c575a2495b6e64e28f925c29ff9d6dfc8d46743"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "427ef6406a7f0cc488a017eef163dcdf38d79c08eed7ffe9f3b4e26bfa01fc81"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "fbcb584bc76172c42c4aa7e97cd2b98225b0d5376db041792a5a446b4b77e4c2"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "180341b4d7b1c6e6076033007d5cd5df75fe2a31ad45f69662360e70e225c412"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "25c45b1fe6496f3e860d2284266754900353e2d2e1a862ffb7d19dd77d2d21e9"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "5368770144eabbf04c4d18b7d8fae6ee9d7d21ff2d6a5f0d48a0760f50190aed"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "c3677489dabafafa4368130ad3528c67bf303e7e011d533f2eeae96aab8b9895"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "e5da216a96bdaa8f8c11450b5b2747d716c57ab2afcca85ffb8e2ad48f8513c4"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 41.666666666666664,
+      "rgbaSha256": "25c82f658c49fadd378c7fc2174c1e80b57a39ec9153221984afb369458a3f37"
+    }
+  },
+  "meta": {
+    "image": "alberto-hurt-medium.png",
+    "size": {
+      "w": 2560,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 12,
+    "source_frame_count": 12,
+    "source_sheet_id": "cmwq5r181005ag68gzfw3r9u7",
+    "source_frame_start": 0,
+    "source_frame_end": 11,
+    "fps": 24,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

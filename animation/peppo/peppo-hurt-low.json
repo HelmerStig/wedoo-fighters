@@ -1,0 +1,211 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "4117d21c21adb01fdb0108f3f0b5c8870074f99ef07289629f2f4dc47c4e2cd3"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "4deb8ed7ed9a79f583fa024821e04e017ad4a997aa2b0b920f1fc20365d04ecf"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "e43ffaebc79b89521d484652d380a78c21638f81bf3cba63a2e5c5f1c1ba0c51"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "e812b1bf2011e94e2446897df3c099e911470c735ff349e76bb630bd5dc5c7eb"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "ecd5f049fa47516e7331fb13efa18e92fdb96512d9652ce154fe3b6f072ee53b"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "82079a169bc9f6876a3857af6c55b11924588d445f3a70669a3a952f638c1e33"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "5c08ffc50fbf9970195d06f4c9f3cb79c723cc41d7fd7fe9e06203a701f03729"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "ec1ce57cb6966cb480d84f1bccb45c4e97f2c2361c6998c9a02cc3956fff78cd"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "e0b27fd1a232873f350b08346e0602c3dddd0c4b9356fd847ed63a0cfe9d5c57"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "ce63031769e80d7060baeafa79b388a09581d31c18a4459e8a22f5425e7c46bc"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "800e4136967507173bd051f32560b952436ea49b6e5b443c6f45733e46c16f33"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "a9f499a7b6f20fcf49bc45aa8ec0eedb79c779f272f355a772593604efcb1bda"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "c21b57ef367b65f3074d47513a0cea8f835e82ce59eebe11a3137b66f33b18f0"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "061b98e53f2745d5e80699102d099d3db960c438f12b112dcc2719aabede8e1d"
+    },
+    "14": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "7223c4ebe38b9931844c529e0f53f0692ca8a13c30d8069adca4708440fdaf24"
+    },
+    "15": {
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "c75a6452b8b4da422a65b0da36c38554de96863217ab31ab1c98daa2aad9d4cc"
+    },
+    "16": {
+      "frame": {
+        "x": 512,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 16,
+      "duration": 29.41176470588235,
+      "rgbaSha256": "9a503f9243b7b148badf7678c2dc8c85843c3b380e49b85a50233afd004c1830"
+    }
+  },
+  "meta": {
+    "image": "peppo-hurt-low.png",
+    "size": {
+      "w": 2560,
+      "h": 2048
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 17,
+    "source_frame_count": 17,
+    "source_sheet_id": "cmwq669zn001013sf99f8twsl",
+    "source_frame_start": 0,
+    "source_frame_end": 16,
+    "fps": 34,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

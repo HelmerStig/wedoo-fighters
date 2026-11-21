@@ -1,0 +1,200 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 31.25,
+      "rgbaSha256": "c06555ec52f09361f540f7279ccfafd8e0e24831e3fda7fe2d7d9edec57bc3b8"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 31.25,
+      "rgbaSha256": "2000a219575345c34b9029721354b7ce3b37ef60eeaacb38ace080d443811c1d"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 31.25,
+      "rgbaSha256": "94941adc66037810ab80c69e393d9f48bc252b464c8e4cf536ba3a13f44e45b2"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 31.25,
+      "rgbaSha256": "394e3f7a2f62eb4fc28a93c285821bf6e47eae7a915576506c730edb126bfdd3"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 31.25,
+      "rgbaSha256": "fed4b646b33d073a3dc20d6b559af10dc477f522647331461e7e7609ae688400"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 31.25,
+      "rgbaSha256": "bd2549055ddb3dce050c7122ac777ea0929a10cefeb24304417e50f87aa49551"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 31.25,
+      "rgbaSha256": "1063ce8188e4e4c4d07811e53326a371f324a75796ad61ed7eb54077f6535258"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 31.25,
+      "rgbaSha256": "82debf05d8edc74f6300c7843620eed4cc536c4524411d9ec359ef247b244307"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 31.25,
+      "rgbaSha256": "2375a723df90370a1e92fc6f56e5a55c8f1dfa9434e486e9dc0dca2912f51d40"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 31.25,
+      "rgbaSha256": "f46ec5dcb9e76a42ca735a1cec7529dc2030cd82fdff3b6c0be4e2c7d3cdfe31"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 31.25,
+      "rgbaSha256": "cd0e00204141eefa18eb6e4d420697c5f31bfb88114586195d12aa74a8c49746"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 31.25,
+      "rgbaSha256": "a85bebf2b4c6139ea45268adc173af90a76c1c268cb7f546b227136dea517f98"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 31.25,
+      "rgbaSha256": "bfa9baa6da8702f969836b5c02b05dafe18006ba2f0f13900f2c70d7fe889b35"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "duration": 31.25,
+      "rgbaSha256": "224533222703cb1dcec743750f59715db300247f4ce7ed6c611ee0dec8fc9ada"
+    },
+    "14": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "duration": 31.25,
+      "rgbaSha256": "9331bd3fde5d1d71be0fce26b2a7c25cd64dfe94cf753ee6991b4d8ebd798dfc"
+    },
+    "15": {
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "duration": 31.25,
+      "rgbaSha256": "c9fb626b0aacf6854b6b2b8dcfbc9d9a66e2595cfcf96aa4da902d9ce78abd51"
+    }
+  },
+  "meta": {
+    "image": "fra-tavarone-hurt-medium.png",
+    "size": {
+      "w": 2560,
+      "h": 2048
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 16,
+    "source_frame_count": 16,
+    "source_sheet_id": "cmwq60ycc00b2ayq4raxo74xi",
+    "source_frame_start": 0,
+    "source_frame_end": 15,
+    "fps": 32,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

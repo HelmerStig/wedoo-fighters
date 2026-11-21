@@ -35,6 +35,7 @@ function fixture({reducedMotion=false,lazy=false,byMove=false,timed=false,crt=fa
   vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../animation-gallery.js'),'utf8'),sandbox);
   const character={id:'oscar',name:'Oscar',animations:['idle','jump'].map((id,i)=>({id,name:id==='idle'?'Idle':'Jump',image:id+'.png',frameWidth:512,frameHeight:512,playbackFps:i?24:18,frames:Array.from({length:60},(_,f)=>[f*512,0,512,512])}))};
   if(timed==='jump')character.animations.forEach((a,i)=>{a.apexFrame=i?40:10;a.apexMs=500;a.durationMs=1000;a.frameDurations=a.frames.map((_,f)=>f<a.apexFrame?500/a.apexFrame:500/(a.frames.length-a.apexFrame));});
+  else if(timed==='hurt')character.animations.forEach(a=>{a.durationMs=500;a.frameDurations=a.frames.map(()=>500/a.frames.length);});
   else if(timed) character.animations.forEach((a,i)=>{a.impactFrame=i?40:10;a.impactMs=250;a.durationMs=500;a.frameDurations=a.frames.map((_,f)=>f<a.impactFrame?250/a.impactFrame:250/(a.frames.length-a.impactFrame));});
   if(byMove) character.animations.forEach((a,i)=>{a.characterId=i?'luana':'marco-balpo';a.characterName=i?'Luana':'Marco Balpo';});
   const gallery=sandbox.MovesGallery.install(container,character,byMove?{title:'Pugno leggero - Personaggi',description:'Confronta i personaggi.'}:{});
@@ -58,6 +59,13 @@ test('tutte le mosse si animano insieme alle rispettive velocitÃ  e i controll
   assert.equal(f.cards[1].nodes['[data-role="fps"]'].textContent,'12 fps');
   f.step(1000);f.step(1250);assert.equal(f.frame(1),21);
   f.cards[0].swatches[1].fire('click');assert.equal(f.cards[0].nodes['.stage'].dataset.background,'light');assert.equal(f.cards[1].nodes['.stage'].dataset.background,undefined);
+});
+
+test('le reazioni con durata uniforme mostrano il tempo senza impatto NaN',()=>{
+  const f=fixture({timed:'hurt'});f.load();
+  assert.match(f.container.innerHTML,/0,5 s/);
+  assert.doesNotMatch(f.container.innerHTML,/NaN|impatto/);
+  f.gallery.destroy();
 });
 
 test('pausa globale durante il caricamento e preferenza movimento ridotto non vengono sovrascritte',()=>{

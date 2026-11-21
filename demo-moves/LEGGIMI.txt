@@ -1,5 +1,22 @@
 WEDOO FIGHTERS - DEMO MOSSE
 
+HURT MEDIUM, LOW E CROUCHED - 21 NOVEMBRE 2026
+Integrate 27 animazioni per Alberto, Fabio Clara, Sboz, Pippo, Peppo,
+Oscar, Elisa, Fra Tavarone e Marsan. Ultime versioni trimmed salvate
+su AutoSprite, con tagli inclusivi rispettati. Riproduzione solo avanti:
+reazione e recupero sono gia presenti nelle sorgenti. Durata 500 ms per
+ciascuna mossa, FPS = numero di frame esportati * 2. Loop e CRT attivi.
+433 celle 512x512 verificate dopo il salvataggio contro i pixel RGBA
+originali, senza ridimensionare, ricentrare o cambiare il padding.
+Manifest: animation/hurt-medium-manifest.json, hurt-low-manifest.json,
+hurt-crouched-manifest.json. Report HTML/CSV e pose: reports/hurt-medium-
+timing.html, hurt-low-timing.html e hurt-crouched-timing.html. Link sotto
+il titolo nelle viste per mossa. Rigenerazione dei tre report:
+  python demo-moves/scripts/build-hurt-levels-report.py
+Aggiornato primi-personaggi-da-cpmpletare.txt. Nessuna generazione,
+nessuna spesa di crediti. Etichette durata corrette per le mosse senza
+un tempo di impatto, evitando la scritta "impatto NaN".
+
 PARATA ACCOVACCIATA - 21 NOVEMBRE 2026
 Integrate le ultime Crouch Block per Alberto, Fabio Clara, Sboz, Pippo,
 Peppo, Elisa, Fra Tavarone e Marsan; Crouch Block v2 per Oscar.

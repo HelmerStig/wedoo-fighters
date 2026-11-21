@@ -1,0 +1,255 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "a43db964100be301a4035f1c73a273984e5f30d61f14fd94e4229065bb918867"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "3b1891daef319ec078d26404e6a3874c41c2ac6dc64abac4e37e7c5543269cce"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "8228a12f5426ebe21e772fff9777baab3f3331a4f0fca4217efcc732baf41107"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "fa7a3895edda3489fbb58c9c4c5b816498414d75dc7470c167bf4671c2150417"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "097c40904b1f0669e6cb4c76d401948cba21b2d04f17785457e9eb5a4683208a"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "0c8ba1a11621c16a74936579dd1eab6f5dc36eefed84c77e13985a5db3a8a934"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "52a86ae4d9443a188d382b588e2eeea65ed530b426a62b9f70ab5307c9eb339c"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "1a1faa24eaac2532be6316029302003c618359829d8de153525b38e0882594a4"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "477a9be07ef5fe561de43d7fd2a17372bf4fa995655039ea5cfea06f9bae14a1"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "292549802c9250fe8b5b0e1431145c6219a1be7120cc7cc41f754c0a6b5dbf9e"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "8e622dbcdfa6eed41873522e66abebc45a73e780ece50d42339ed18254d32d06"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "f180bce5e06c15fdf063e46ff38f9a65f5d1aa46a90be1d75d5f68b6deb02e39"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "839db3fa85a5af3cdeca1d5d4a4060295f9b79c0984737823878b555e78e914e"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "633c3b97be896f04a69b7abd1a72e9326c73fe0d2a47d752c43462172985c0e0"
+    },
+    "14": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "7065f4ec4b72693d417c22ed1527230d9f52b13ab6b8f44a0dc0c4787c68e9f1"
+    },
+    "15": {
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "67dc4ed9eb67d2d9c9d61a03fe672ba901eca6cc457724e8adbecb62c80d70b4"
+    },
+    "16": {
+      "frame": {
+        "x": 512,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 16,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "e9db36eab46d4b297b841833a957dce77d5d52ee7d90a83fe894fbeb56b9d18c"
+    },
+    "17": {
+      "frame": {
+        "x": 1024,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 17,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "e128b3f62d2e8d3841f0ff6275b8fee8d2c3f4262ede5c437fbf17723cc5242b"
+    },
+    "18": {
+      "frame": {
+        "x": 1536,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 18,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "ed76a8959fec6ab7d911328cdf5fe58a2282bc6ed53180780755fa46f5924de3"
+    },
+    "19": {
+      "frame": {
+        "x": 2048,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 19,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "4d981ff203a34fbcf99c6b063a3b5018b1dca37234892d35dd8e936cbfddc4d0"
+    },
+    "20": {
+      "frame": {
+        "x": 0,
+        "y": 2048,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 20,
+      "duration": 23.80952380952381,
+      "rgbaSha256": "497d21e1b2ab5037be875e99d0e5ed6c5f4c7552ce38073428056523bc2ab83e"
+    }
+  },
+  "meta": {
+    "image": "pippo-hurt-crouched.png",
+    "size": {
+      "w": 2560,
+      "h": 2560
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 21,
+    "source_frame_count": 21,
+    "source_sheet_id": "cmwq67cau001mgbgp9kt9b92d",
+    "source_frame_start": 0,
+    "source_frame_end": 20,
+    "fps": 42,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

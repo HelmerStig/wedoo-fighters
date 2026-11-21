@@ -1,0 +1,178 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "7a6cd6b5a3d8657f021b04ef490554f247b0d90d21b2262fa127f61db3e93bb2"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "a00d590b31cb6ba1e9c2a79149bb6ecc0b1050926b6a8cf43b6ac1ee00fae7fb"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "c86e8c284d90a816364f8ce26805ffbe40fb2f1ff9ad3ad10618e1c6dd435828"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "e49db8212266bbacacd72457f4131c405532c9fa0f923040e5107cf7aae32614"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "eccfe9c207012b10cd6bf9d6c9e62bcf738e0be91276dfbd156d5f1101839a67"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "75adffef139fc8b1bf9739a083291eef5086f44d01f3034664447fc8fe2da6b6"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "27a6285fc9f65d5a86bab70522458ccf8f38b9d00f18570ea51f39de410112d0"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "38ff82840f2f44e9aa0a3537a026d037c756a18f62af0af080a3aa36812b9811"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "00213c95e145d90f1eeeecff8e9f82613e725853cd6393412b0f2790c859df9c"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "4593d5d947789ac4f36050a59b447b29cd6fddc08e66cbb06143b0eb1751f346"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "4606380c86bdd964eeec7e2cb526e32e96a0bcbcc597e279494e49b181aa234e"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "cc5990b4f2e4c89ae3647ab1e63a1c2683a96790cb51912353bbdd94a1692556"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "95dd6a0b9c40579511ba8a2aa43dd1c53e97ba51ec504d281229477e1ec5cf14"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "duration": 35.714285714285715,
+      "rgbaSha256": "430de4b8583e4efe986bb90620e5a0daaca46e425cf7f1543e4b25302147d5ca"
+    }
+  },
+  "meta": {
+    "image": "fra-tavarone-hurt-crouched.png",
+    "size": {
+      "w": 2560,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 14,
+    "source_frame_count": 14,
+    "source_sheet_id": "cmwq6081e009rhsldufe3hc07",
+    "source_frame_start": 0,
+    "source_frame_end": 13,
+    "fps": 28,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}

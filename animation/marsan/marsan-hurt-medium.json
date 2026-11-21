@@ -1,0 +1,189 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "a6ff8892cfed10a25ce17dab270a9a0b723cd5179d10828b41c3f27e893c2dee"
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "e2ddc4c4792d26a7f8255fea347a56bba58e9f9a5b9b877ab4dfd154ccd0c6a9"
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "8245105e7bd26bc359cbbe48d9461318d4195460d77a02e43aa26d3bb21c3b36"
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "1ca0f244fcccc196d95f06672f7132c74fc4d92ccc467fdae6b7aa49f4f4aa8d"
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "7420e8d0315cdc68ed451454406b491527fefbe3c69d3d68bca8b7b2b3fba466"
+    },
+    "5": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "b231fbb48448c66bf19422af86b565b917c2873c5c384b5eb7dd7571f856956e"
+    },
+    "6": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "72ddca73f6afec55e2b449297c3a441287df34bb3255fc3e0bd05457d5c8d2e2"
+    },
+    "7": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "944936ab5496674d3e4e437e49424f7e7dce39771e3c9123d3f34b982158a047"
+    },
+    "8": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "3ceabddfba13874c0c5f4fd64682a85171a20577c0005a214c885cf5345b9b72"
+    },
+    "9": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "3c846ba1d378bded860ff49bb87ad2ecd22385278841398576c38e364bb032e7"
+    },
+    "10": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "c2bb8ec5f546ddd8b717c4536521e05694d6009072b14b8e4853d2cff36e79cf"
+    },
+    "11": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "ab0c59282961e02c9833ec0c0e3fd187b2b077374d2dd6b3bf745901135520a5"
+    },
+    "12": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "810fc1d5c149363acf1bafbc848f96f71bedbf46ef50a78784c871994ff79aa4"
+    },
+    "13": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "e372551d73239279ba32533c6aec7077370dda3639264addf09612aaafb45af1"
+    },
+    "14": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "duration": 33.333333333333336,
+      "rgbaSha256": "17fc58cb83dd4f884a9d035ebb218b0a9fc85b00a2548c02ebcd3c3eddce0505"
+    }
+  },
+  "meta": {
+    "image": "marsan-hurt-medium.png",
+    "size": {
+      "w": 2560,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 15,
+    "source_frame_count": 15,
+    "source_sheet_id": "cmwq6302i00c7ayq4h2si1p5n",
+    "source_frame_start": 0,
+    "source_frame_end": 14,
+    "fps": 30,
+    "duration_ms": 500,
+    "duration_s": 0.5,
+    "playback": "forward"
+  }
+}
