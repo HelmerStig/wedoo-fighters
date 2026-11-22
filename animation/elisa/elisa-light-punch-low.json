@@ -1,0 +1,132 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "39a67418d9ef976eb0033ef646e72b573a8fcd1c00611b4b2bb41a12a41f2b8a",
+      "duration": 125.0
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "397bd23631bcc6899bc2d39cdaa6545ba77b5ab3f175b8de8abb2d6ec66c1f66",
+      "duration": 125.0
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "6cbb18812e685b5749f699d97f09e678f462855be23d81ef702d46ad5c91c4df",
+      "duration": 35.714285714285715
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "3880b2cc65104c0851417f2ef4d538fea45f73ac032c0126328b0b515da0c186",
+      "duration": 35.714285714285715
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "a819176970f4ab147063b002e886f38d58c0cd9f7ae7a047f2a4d0cc606ca399",
+      "duration": 35.714285714285715
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "4a2010d0d77ad920f3f415e5061ecd466b600ed943aaa6fe4681ddf05ff2d269",
+      "duration": 35.714285714285715
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "d793a4a6390eeb0d5bcd29cbdb6460edb0ccc71b2aec17e9659506f62a3b5b42",
+      "duration": 35.714285714285715
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "07f55da61d1769518096f55c46c58dac7f5394013b4c49cacac9ed5680350389",
+      "duration": 35.714285714285715
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+      "rgbaSha256": "831b256de825f95db3c5263cf25e10e802c19ebb30a32cd9383ef550556010af",
+      "duration": 35.714285714285715
+    }
+  },
+  "meta": {
+    "image": "elisa-light-punch-low.png",
+    "size": {
+      "w": 3584,
+      "h": 1024
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 9,
+    "source_sheet_id": "cmwro4whc00yyzpge3ntbm3d8",
+    "source_frame_count": 9,
+    "source_start": 0,
+    "source_end": 8,
+    "playback": "forward",
+    "duration_ms": 500,
+    "impact_ms": 250,
+    "impact_frame": 2
+  }
+}

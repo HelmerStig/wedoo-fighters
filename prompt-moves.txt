@@ -18,3 +18,16 @@ da eseguire avanti e indietro, hit a 0.5 durata 0.9
 Ho creato lo spritesheet "crouch block" su autosprite che ora devo integrare, per oscar sci chiama "crouch block v2"
 
 Ora dobbiamo integrare hurt in jump > knockdown-recovery in sequenza, il timing decidilo tu poi al massimo lo rivediamo una volta integrato
+
+ora per elisa, fabio clara, fra tavarone, marsan, oscar, pippo, ho creato su autosprite i frame finali di Medium Punch Low.
+Per questi proviamo ad utilizzare i keyframe crouched > Medium Punch Low
+
+Per Alberto, peppo e sboz inventa tu un prompt, scegli che mossa preferisaci associare fra queste: REFERENCE\PUGNO MEDIO BASSO
+
+DOmande?
+
+pippo light punch: da rifare
+
+medium da rifare:
+- Albero, tira due pugni
+- Tavarone, pochi frames e tira due pugni

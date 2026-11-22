@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 25,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "lastFramePoseId": "cmwrn9ovu00kq1sj910ymafwj",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low crouching guard pose and end in the exact supplied low crouching jab pose. Animate a continuous crouching light jab with clear fighting-game anticipation spread evenly across the clip, pure body motion only in completely empty air around the fighter: staying firmly anchored in the same low kneeling crouch on the ground baseline without rising, he first coils slightly back by shifting his weight and drawing his lead shoulder and fist tightly in; then he rotates his torso forward and drives his lead arm straight horizontally to the right into full jab extension while his rear fist stays tucked tightly in guard near his chin, reaching the exact supplied final pose on the last frame. Preserve Oscar's face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

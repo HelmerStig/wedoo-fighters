@@ -984,3 +984,17 @@ Jump: 15 frame da 512x512 per gatto, distribuiti sulla traiettoria.
 Rigenerazione atlas e appoggi dopo aggiornamenti degli spritesheet:
   python demo-moves/scripts/build-stage-cats.py
 
+
+PUGNO LEGGERO BASSO - 22 novembre 2026
+Light Punch Low integrato per Alberto, Fabio Clara, Sboz, Pippo, Peppo,
+Oscar, Elisa, Fra Tavarone e Marsan. Versioni trimmed salvate su AutoSprite,
+solo avanti con ritorno in guardia accovacciata gia incluso.
+Impatto a 250 ms e durata 500 ms a 1x, come il Pugno leggero.
+Loop e CRT seguono le impostazioni predefinite della galleria.
+Asset in animation/<slug>/<slug>-light-punch-low.png e atlas omonimo.
+Manifest: animation/light-punch-low-manifest.json.
+Timing: animation/light-punch-low-timing.json; il frame di impatto e da 0.
+Report: demo-moves/reports/light-punch-low-timing.html e CSV.
+Rigenera report con python demo-moves/scripts/build-light-punch-low-report.py.
+104 celle RGBA verificate dopo esportazione, nessun ridimensionamento.
+Nessuna generazione AutoSprite eseguita durante importazione: 0 crediti.

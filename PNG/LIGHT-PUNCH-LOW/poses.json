@@ -1,0 +1,227 @@
+[
+  {
+    "character": "Alberto",
+    "file": "alberto-light-punch-low-pose.png",
+    "characterReference": "PNG/ALBERTO.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 430,
+    "uniformScaleAfter512": 0.82,
+    "visibleBounds": [
+      61,
+      50,
+      452,
+      431
+    ],
+    "pngSha256": "10a5842b986661ffa84145f20bd898d1538847de2449e83747c22f853234a34b",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Fabio Clara",
+    "file": "fabio-clara-light-punch-low-pose.png",
+    "characterReference": "PNG/FABIO-CLARA.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 431,
+    "uniformScaleAfter512": 0.8,
+    "visibleBounds": [
+      60,
+      35,
+      453,
+      432
+    ],
+    "pngSha256": "eed5b74681177da625c538d5f0bdb27732831f57c5979e5fc53dd69f9533131c",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Sboz",
+    "file": "sboz-light-punch-low-pose.png",
+    "characterReference": "PNG/SBOZ.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 433,
+    "uniformScaleAfter512": 0.84,
+    "visibleBounds": [
+      50,
+      30,
+      463,
+      434
+    ],
+    "pngSha256": "38ccd3afb94021d50bcfa84dca966531548ffe1e3e50f43cd9657b89e4ef98ac",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Pippo",
+    "file": "pippo-light-punch-low-pose.png",
+    "characterReference": "PNG/PIPPO.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 431,
+    "uniformScaleAfter512": 0.8,
+    "visibleBounds": [
+      58,
+      77,
+      454,
+      432
+    ],
+    "pngSha256": "5974a95bd1549ebddcbcea6dbec69aed798bae4069894225e71436351935dadd",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Peppo",
+    "file": "peppo-light-punch-low-pose.png",
+    "characterReference": "PNG/PEPPO.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 435,
+    "uniformScaleAfter512": 0.85,
+    "visibleBounds": [
+      59,
+      65,
+      453,
+      436
+    ],
+    "pngSha256": "0ef289a9664d09a42f025ceacc9a30ee8f6ef9033a4b5546dde0353a5c801f86",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Oscar",
+    "file": "oscar-light-punch-low-pose.png",
+    "characterReference": "PNG/OSCARE.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 433,
+    "uniformScaleAfter512": 0.85,
+    "visibleBounds": [
+      56,
+      47,
+      457,
+      434
+    ],
+    "pngSha256": "c7289ad0f0ab2dde5343f793ba7e185032f82cc5f51f6ad6fbcf6995346273ad",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Elisa",
+    "file": "elisa-light-punch-low-pose.png",
+    "characterReference": "PNG/Elisa.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 429,
+    "uniformScaleAfter512": 0.75,
+    "visibleBounds": [
+      85,
+      89,
+      427,
+      430
+    ],
+    "pngSha256": "aac676cd0656b544d6818af95e29e0a0050b9d2268c30187d2e12529d2dda3d5",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Fra Tavarone",
+    "file": "fra-tavarone-light-punch-low-pose.png",
+    "characterReference": "PNG/FRA-TAVARONE.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 426,
+    "uniformScaleAfter512": 0.8,
+    "visibleBounds": [
+      54,
+      29,
+      458,
+      427
+    ],
+    "pngSha256": "3ca1574a3f59d05e017b76504969a6e749ec86a2f3099b48f84b57eb99484cf3",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Marsan",
+    "file": "marsan-light-punch-low-pose.png",
+    "characterReference": "PNG/MARSAN.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 433,
+    "uniformScaleAfter512": 0.85,
+    "visibleBounds": [
+      53,
+      26,
+      460,
+      434
+    ],
+    "pngSha256": "267130b8df078e7eadebb8a74e95ee8c440288bb964d16a5f2e96c8b55b44f18",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  }
+]

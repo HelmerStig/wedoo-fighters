@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjgi53001nnw1530lpueer",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Animate a powerful crouching medium straight punch spread smoothly across the clip, pure body motion only in completely empty air around the fighter: staying firmly anchored in the low kneeling crouch on the baseline without standing up, Alberto first coils his torso back in clear anticipation; then he leans his torso forward and twists his shoulders toward the viewer while driving a heavy straight right cross punch horizontally to the right (right arm fully extended, fist closed, left arm tucked tightly behind his hip and waist, head low watching his fist); after a brief clear hold at full reach, he smoothly retracts back into the exact starting crouching guard pose. Preserve exact face, glasses, beard, green sweater, grey jeans, white sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

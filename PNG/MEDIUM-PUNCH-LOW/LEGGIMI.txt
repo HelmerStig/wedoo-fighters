@@ -1,0 +1,81 @@
+KEYFRAME PUGNO MEDIO BASSO - 22 novembre 2026
+
+Nove pose di impatto singole, pixel art 16 bit, rivolte a destra.
+PNG RGBA trasparenti 512x512. Generazione con ImageGen integrato.
+
+- Alberto: REFERENCE/PUGNO MEDIO BASSO/5.png -> alberto-medium-punch-low-pose.png
+- Fabio Clara: REFERENCE/PUGNO MEDIO BASSO/8.png -> fabio-clara-medium-punch-low-pose.png
+- Sboz: REFERENCE/PUGNO MEDIO BASSO/1.png -> sboz-medium-punch-low-pose.png
+- Pippo: REFERENCE/PUGNO MEDIO BASSO/6.png -> pippo-medium-punch-low-pose.png
+- Peppo: REFERENCE/PUGNO MEDIO BASSO/9.png -> peppo-medium-punch-low-pose.png
+- Oscar: REFERENCE/PUGNO MEDIO BASSO/3.png -> oscar-medium-punch-low-pose.png
+- Elisa: REFERENCE/PUGNO MEDIO BASSO/7.png -> elisa-medium-punch-low-pose.png
+- Fra Tavarone: REFERENCE/PUGNO MEDIO BASSO/2.png -> fra-tavarone-medium-punch-low-pose.png
+- Marsan: REFERENCE/PUGNO MEDIO BASSO/4.png -> marsan-medium-punch-low-pose.png
+
+I riferimenti definiscono la postura, le immagini in PNG definiscono identita e abiti.
+Nei riferimenti a mano aperta il colpo e adattato a pugno chiuso.
+Le pose diagonali restano colpi sferrati da accovacciati.
+
+Export nearest-neighbor, riduzione uniforme per confrontare testa e arti con la
+posa base, centratura orizzontale e baseline della posa base. Nessuno stiramento.
+Trasparenza generata conservata. Parametri e hash in poses.json.
+Prompt completi e riferimenti in prompts.json.
+Anteprime: preview/overview.png e preview/comparison.png.
+Originali generati conservati in autosprite-agent/output/low-punch-poses-20261122.
+
+Solo keyframe: nessun job AutoSprite e nessuna modifica alle animazioni della demo.
+
+CORREZIONI 22 NOVEMBRE 2026
+Rigenerati solo i pugni medi bassi di Alberto, Pippo e Peppo per anatomia
+e proporzioni. PNG selezionati sostituiti negli stessi percorsi; precedenti
+conservati in autosprite-agent/output/low-punch-corrections-20261122/before.
+Confronto in preview/corrections.png. Le altre 15 pose sono invariate.
+
+CORREZIONI 22 NOVEMBRE 2026
+Rigenerati solo i pugni medi bassi di Alberto, Pippo e Peppo per anatomia
+e proporzioni. PNG selezionati sostituiti negli stessi percorsi; precedenti
+conservati in autosprite-agent/output/low-punch-corrections-20261122/before.
+Confronto in preview/corrections.png. Le altre 15 pose sono invariate.
+
+PIPPO - GOMITATA VERSO ALTO
+Il medio basso di Pippo e una gomitata ascendente, con ginocchia meno piegate
+e due scarpe a terra. Il riferimento 6.png resta la fonte iniziale del gesto,
+poi corretto su indicazione dell utente. Confronto: preview/pippo-elbow-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.
+
+PIPPO - POSTURA RIFERIMENTO 2
+Postura sostituita su richiesta con REFERENCE/PUGNO MEDIO BASSO/2.png.
+Affondo laterale basso con braccia e mani come nel riferimento.
+Questa selezione sostituisce la precedente gomitata. Confronto: preview/pippo-posture2-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.
+
+ALBERTO - POSTURA RIFERIMENTO 4
+Postura sostituita su richiesta con REFERENCE/PUGNO MEDIO BASSO/4.png.
+Affondo basso in avanti con braccia aperte arretrate come nel riferimento.
+Questa selezione sostituisce il precedente diretto basso. Confronto: preview/alberto-posture4-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.
+
+PIPPO - CORREZIONE MANO DESTRA
+Postura sostituita su richiesta con REFERENCE/PUGNO MEDIO BASSO/2.png.
+Corretto il pollice della mano destra aperta sul lato sinistro dell immagine: rivolto verso interno.
+Postura di riferimento 2.png confermata. Confronto: preview/pippo-handfix-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.
+
+PIPPO - CORREZIONE MANO DESTRA
+Postura sostituita su richiesta con REFERENCE/PUGNO MEDIO BASSO/2.png.
+Corretto il pollice della mano destra aperta sul lato sinistro dell immagine: rivolto verso interno.
+Postura di riferimento 2.png confermata. Confronto: preview/pippo-handfix-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.
+
+PEPPO - POSTURA RIFERIMENTO 6
+Postura sostituita su richiesta con REFERENCE/PUGNO MEDIO BASSO/6.png.
+Colpo ascendente con braccio piegato sopra la testa come nel riferimento.
+Questa selezione sostituisce il precedente colpo diagonale. Confronto: preview/peppo-posture6-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.
+
+PEPPO - POSTURA RIFERIMENTO 1
+Postura sostituita su richiesta con REFERENCE/PUGNO MEDIO BASSO/1.png.
+Affondo basso con braccio esteso a destra e palmo aperto verticale come nel riferimento.
+Questa selezione sostituisce la precedente postura 6.png. Confronto: preview/peppo-posture1-correction.png.
+Prompt aggiornato in prompts.json. Precedente conservato nella cartella di lavoro.

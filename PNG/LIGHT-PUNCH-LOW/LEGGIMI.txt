@@ -1,0 +1,27 @@
+KEYFRAME PUGNO LEGGERO BASSO - 22 novembre 2026
+
+Nove pose di impatto singole, pixel art 16 bit, rivolte a destra.
+PNG RGBA trasparenti 512x512. Generazione con ImageGen integrato.
+
+- Alberto: REFERENCE/PUGNO LEGGERO BASSO/2.png -> alberto-light-punch-low-pose.png
+- Fabio Clara: REFERENCE/PUGNO LEGGERO BASSO/2.png -> fabio-clara-light-punch-low-pose.png
+- Sboz: REFERENCE/PUGNO LEGGERO BASSO/2.png -> sboz-light-punch-low-pose.png
+- Pippo: REFERENCE/PUGNO LEGGERO BASSO/2.png -> pippo-light-punch-low-pose.png
+- Peppo: REFERENCE/PUGNO LEGGERO BASSO/2.png -> peppo-light-punch-low-pose.png
+- Oscar: REFERENCE/PUGNO LEGGERO BASSO/2.png -> oscar-light-punch-low-pose.png
+- Elisa: REFERENCE/PUGNO LEGGERO BASSO/2.png -> elisa-light-punch-low-pose.png
+- Fra Tavarone: REFERENCE/PUGNO LEGGERO BASSO/2.png -> fra-tavarone-light-punch-low-pose.png
+- Marsan: REFERENCE/PUGNO LEGGERO BASSO/2.png -> marsan-light-punch-low-pose.png
+
+I riferimenti definiscono la postura, le immagini in PNG definiscono identita e abiti.
+Nei riferimenti a mano aperta il colpo e adattato a pugno chiuso.
+Le pose diagonali restano colpi sferrati da accovacciati.
+
+Export nearest-neighbor, riduzione uniforme per confrontare testa e arti con la
+posa base, centratura orizzontale e baseline della posa base. Nessuno stiramento.
+Trasparenza generata conservata. Parametri e hash in poses.json.
+Prompt completi e riferimenti in prompts.json.
+Anteprime: preview/overview.png e preview/comparison.png.
+Originali generati conservati in autosprite-agent/output/low-punch-poses-20261122.
+
+Solo keyframe: nessun job AutoSprite e nessuna modifica alle animazioni della demo.

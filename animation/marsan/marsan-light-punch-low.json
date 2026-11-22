@@ -1,0 +1,192 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "a2d34164142e1727d93049b6335ce77ee346429fcf69ea4d3a3c1a8fd9a22e3d",
+      "duration": 31.25
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "2b998d64425cb253a13c78f35facd9a58dfb5f498778659b4e2f2d986e93800d",
+      "duration": 31.25
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "30751462fa545d7e1ebf273e42b4a4a77ecd5c603cdb3a5fca71cd4f24627333",
+      "duration": 31.25
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "0c9a34352d333db542ba5cdd6fff11f0a37cb485718191f52cb274ed0a0ff9dd",
+      "duration": 31.25
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "8a626bf9b1c2155221964fc1b6eeafad28945c983de5166bc8ccd1f46d97017e",
+      "duration": 31.25
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "cc097266b035e7afddb4038393267dcde327215369f876c2470c854124b0f6f7",
+      "duration": 31.25
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "5b95878646f8ab434ee0f28ca4c0d11f466c54f6ae4f8a27d9db5175031322ec",
+      "duration": 31.25
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "3849bf192b1ff69420febdb087f9068c75e1189b517e5a096786db4f0ea6c598",
+      "duration": 31.25
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "b8cbbc5a385a1805cdcc58b78dd1025a027d6cad7f4d4fdfc297289d3fe6f4ea",
+      "duration": 41.666666666666664
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "277857d019d13b4591740cf05e951ea71bbcebcd8bf0f9db593aed8b59237998",
+      "duration": 41.666666666666664
+    },
+    "10": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "f864f475254d44a8ed9231db802de1aae0d371361d31158820ac198985929a1b",
+      "duration": 41.666666666666664
+    },
+    "11": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "0aa28c8cfe91355088378000216a687d10b6867f00de037622675a2f9b2ef608",
+      "duration": 41.666666666666664
+    },
+    "12": {
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "776c5808cb9e38e5fd0d8c469fda8894f0781b49007013e602438cdece645f74",
+      "duration": 41.666666666666664
+    },
+    "13": {
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+      "rgbaSha256": "6cd693d4f1f486ab9a0d4d1fcbaeaa229161b439cd6e8b70f693a24952d1b254",
+      "duration": 41.666666666666664
+    }
+  },
+  "meta": {
+    "image": "marsan-light-punch-low.png",
+    "size": {
+      "w": 3584,
+      "h": 1024
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 14,
+    "source_sheet_id": "cmwro9xmf00uj1sj9evbs1ajl",
+    "source_frame_count": 14,
+    "source_start": 0,
+    "source_end": 13,
+    "playback": "forward",
+    "duration_ms": 500,
+    "impact_ms": 250,
+    "impact_frame": 8
+  }
+}

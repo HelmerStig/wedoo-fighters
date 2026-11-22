@@ -1,0 +1,23 @@
+{
+  "characterId": "cmv9hwxxn000k72jn5131g7kq",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjomfb00izrqao2xg5glu4",
+        "lastFramePoseId": "cmwrnx1gj00ro1sj9eogfnksd",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose and end in the exact supplied crouching medium punch pose. Animate a smooth, progressive crouching medium punch spread evenly across the entire clip, pure body motion only in completely empty air around the fighter: staying firmly anchored low on the ground baseline without standing up, the fighter first coils smoothly back in readable fighting-game anticipation; then rotates the shoulders and torso progressively forward while extending the punching arm steadily inch by inch through every intermediate angle into full powerful extension, arriving cleanly and seamlessly on the exact supplied final crouching medium punch pose on the last frame. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

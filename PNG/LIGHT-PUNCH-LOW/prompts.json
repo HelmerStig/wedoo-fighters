@@ -1,0 +1,92 @@
+[
+  {
+    "character": "Alberto",
+    "file": "alberto-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/ALBERTO.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Create ONE final impact keyframe for Alberto's CROUCHING LIGHT PUNCH. Image 1 is the character identity, clothes, palette, pixel style and scale reference; image 2 is ONLY the exact pose reference. Repose Alberto to match image 2: facing RIGHT, rear knee close to the floor, front knee bent with planted shoe, torso upright and slightly leaning forward, ONE arm fully extended horizontally to the right in a closed-fist low jab, other fist guarding the cheek. Keep bald head, glasses, beard, green sweater, gray trousers and white sneakers from image 1. No borrowed costume or hair. Authentic crisp 16-bit fighting-game pixel art, same pixel density, body proportions and limb lengths as image 1. Transparent background, no ground shadow or effects, no text. Square canvas mapped to 512x512: same character size as source, floor baseline y=430/512, the crouch makes him shorter without shrinking his anatomy; centered horizontally with room for punching arm, entire body and fist inside canvas with padding. Exactly one character, one pose, two anatomical arms and legs, coherent head and neck looking right. Save generated PNG artifact."
+  },
+  {
+    "character": "Fabio Clara",
+    "file": "fabio-clara-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/FABIO-CLARA.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Fabio Clara's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve bald crown, brown beard, orange and gray plaid short sleeve shirt, watch, olive cargo trousers and blue-red sneakers. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Sboz",
+    "file": "sboz-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/SBOZ.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Sboz's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve olive military cap, brown beard, dark navy sweater, blue jeans and canvas sneakers. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Pippo",
+    "file": "pippo-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/PIPPO.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Pippo's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve short dark hair and full beard, dark ribbed cardigan over dark shirt, rolled blue jeans and brown boots. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Peppo",
+    "file": "peppo-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/PEPPO.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Peppo's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve black beanie, dark long sleeve top, black trousers and black shoes. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Oscar",
+    "file": "oscar-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/OSCARE.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Oscar's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve short dark hair, clean-shaven angular face, black long sleeve shirt, black jeans and black boots. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Elisa",
+    "file": "elisa-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/Elisa.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Elisa's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve brown hair and feminine face, blue cardigan, dark gray jeans and black ankle boots. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 300px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Fra Tavarone",
+    "file": "fra-tavarone-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/FRA-TAVARONE.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Fra Tavarone's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve long curly brown hair, black-white plaid shirt, blue flared jeans and brown shoes. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  },
+  {
+    "character": "Marsan",
+    "file": "marsan-light-punch-low-pose.png",
+    "tool": "built-in image_gen",
+    "references": [
+      "PNG/MARSAN.png",
+      "REFERENCE/PUGNO LEGGERO BASSO/2.png"
+    ],
+    "prompt": "Use case: identity-preserve. Asset: ONE final impact keyframe of Marsan's CROUCHING LIGHT PUNCH, facing RIGHT. Image 1 defines ONLY character identity, anatomy, clothing, pixel style and physical scale. Image 2 defines ONLY the pose. Match the second image pose faithfully: rear knee near the ground, front foot planted and knee bent, torso upright with small forward lean, one arm fully extended horizontally RIGHT in a low jab and the other fist guarding the cheek. Preserve short brown hair, red navy and cream track jacket, blue jeans, brown shoes. Keep the source costume even on back views, do not invent logos or costume pieces. Authentic crisp 16-bit fighting-game pixel art matching image 1, limited palette, hard pixel clusters, no smoothing or painterly rendering. Square transparent canvas, intended 512x512. Same anatomical size, head size and limb lengths as image 1, original standing head-to-floor height is approximately 340px at 512; crouching reduces height by bending knees, NOT shrinking the body. Floor at y=430/512. Entire body, shoes and punch inside canvas with ample transparent padding; keep hip centered horizontally, allow arm to extend right. One person, exactly two arms and two legs, closed fist, plausible joints and connected natural neck, head turned toward target RIGHT. No effects, trails, impact lines, ground shadows, text, background, weapons, extra poses or other characters."
+  }
+]

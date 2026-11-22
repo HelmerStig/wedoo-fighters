@@ -17,6 +17,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -42,6 +43,7 @@
     
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -67,6 +69,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -92,6 +95,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggeroù
@@ -117,6 +121,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -142,6 +147,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -168,6 +174,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -193,6 +200,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero
@@ -218,6 +226,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno forte
     - Calcio leggero

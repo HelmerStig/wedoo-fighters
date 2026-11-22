@@ -1663,6 +1663,96 @@ window.MOVES_CATALOG = {
           "savedSpeed": 2
         },
         {
+          "impactFrame": 3,
+          "impactMs": 250,
+          "frameDurations": [
+            83.33333333333333,
+            83.33333333333333,
+            83.33333333333333,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/alberto/alberto-light-punch-low.png",
+          "atlas": "../animation/alberto/alberto-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 1
+        },
+        {
           "impactFrame": 24,
           "impactMs": 400,
           "playbackMode": "forward-reverse",
@@ -28465,6 +28555,89 @@ window.MOVES_CATALOG = {
           "savedSpeed": 2.083333333333333
         },
         {
+          "impactFrame": 2,
+          "impactMs": 250,
+          "frameDurations": [
+            125,
+            125,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/elisa/elisa-light-punch-low.png",
+          "atlas": "../animation/elisa/elisa-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 18,
+          "durationMs": 500,
+          "savedSpeed": 1
+        },
+        {
           "impactFrame": 18,
           "impactMs": 400,
           "playbackMode": "forward",
@@ -39549,6 +39722,96 @@ window.MOVES_CATALOG = {
           "playbackFps": 40,
           "durationMs": 500,
           "savedSpeed": 2
+        },
+        {
+          "impactFrame": 3,
+          "impactMs": 250,
+          "frameDurations": [
+            83.33333333333333,
+            83.33333333333333,
+            83.33333333333333,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/fabio-clara/fabio-clara-light-punch-low.png",
+          "atlas": "../animation/fabio-clara/fabio-clara-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 1
         },
         {
           "impactFrame": 34,
@@ -55624,6 +55887,103 @@ window.MOVES_CATALOG = {
           "playbackFps": 26,
           "durationMs": 500,
           "savedSpeed": 2
+        },
+        {
+          "impactFrame": 5,
+          "impactMs": 250,
+          "frameDurations": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/fra-tavarone/fra-tavarone-light-punch-low.png",
+          "atlas": "../animation/fra-tavarone/fra-tavarone-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 22,
+          "durationMs": 500,
+          "savedSpeed": 1
         },
         {
           "impactFrame": 35,
@@ -83278,6 +83638,124 @@ window.MOVES_CATALOG = {
           "savedSpeed": 2
         },
         {
+          "impactFrame": 8,
+          "impactMs": 250,
+          "frameDurations": [
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/marsan/marsan-light-punch-low.png",
+          "atlas": "../animation/marsan/marsan-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              2560,
+              512,
+              512,
+              512
+            ],
+            [
+              3072,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 28,
+          "durationMs": 500,
+          "savedSpeed": 1
+        },
+        {
           "impactFrame": 22,
           "impactMs": 400,
           "playbackMode": "forward-reverse",
@@ -98440,6 +98918,152 @@ window.MOVES_CATALOG = {
           "savedSpeed": 2
         },
         {
+          "impactFrame": 9,
+          "impactMs": 250,
+          "frameDurations": [
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778,
+            27.77777777777778
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/oscar/oscar-light-punch-low.png",
+          "atlas": "../animation/oscar/oscar-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ],
+            [
+              2560,
+              512,
+              512,
+              512
+            ],
+            [
+              3072,
+              512,
+              512,
+              512
+            ],
+            [
+              0,
+              1024,
+              512,
+              512
+            ],
+            [
+              512,
+              1024,
+              512,
+              512
+            ],
+            [
+              1024,
+              1024,
+              512,
+              512
+            ],
+            [
+              1536,
+              1024,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 36,
+          "durationMs": 500,
+          "savedSpeed": 2
+        },
+        {
           "impactFrame": 32,
           "impactMs": 400,
           "playbackMode": "forward-reverse",
@@ -109263,6 +109887,110 @@ window.MOVES_CATALOG = {
           "savedSpeed": 2
         },
         {
+          "impactFrame": 4,
+          "impactMs": 250,
+          "frameDurations": [
+            62.5,
+            62.5,
+            62.5,
+            62.5,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25,
+            31.25
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/peppo/peppo-light-punch-low.png",
+          "atlas": "../animation/peppo/peppo-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ],
+            [
+              1536,
+              512,
+              512,
+              512
+            ],
+            [
+              2048,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 24,
+          "durationMs": 500,
+          "savedSpeed": 1
+        },
+        {
           "impactFrame": 31,
           "impactMs": 400,
           "playbackMode": "forward-reverse",
@@ -116671,6 +117399,96 @@ window.MOVES_CATALOG = {
           "savedSpeed": 2.083333333333333
         },
         {
+          "impactFrame": 4,
+          "impactMs": 250,
+          "frameDurations": [
+            62.5,
+            62.5,
+            62.5,
+            62.5,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664,
+            41.666666666666664
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/pippo/pippo-light-punch-low.png",
+          "atlas": "../animation/pippo/pippo-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 1
+        },
+        {
           "impactFrame": 14,
           "impactMs": 400,
           "playbackMode": "forward-reverse",
@@ -123201,6 +124019,96 @@ window.MOVES_CATALOG = {
           "playbackFps": 24,
           "durationMs": 500,
           "savedSpeed": 2
+        },
+        {
+          "impactFrame": 3,
+          "impactMs": 250,
+          "frameDurations": [
+            83.33333333333333,
+            83.33333333333333,
+            83.33333333333333,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715,
+            35.714285714285715
+          ],
+          "playbackMode": "forward",
+          "id": "light-punch-low",
+          "name": "Pugno leggero basso",
+          "description": "Pugno leggero da accovacciati e ritorno in guardia bassa",
+          "image": "../animation/sboz/sboz-light-punch-low.png",
+          "atlas": "../animation/sboz/sboz-light-punch-low.json",
+          "frames": [
+            [
+              0,
+              0,
+              512,
+              512
+            ],
+            [
+              512,
+              0,
+              512,
+              512
+            ],
+            [
+              1024,
+              0,
+              512,
+              512
+            ],
+            [
+              1536,
+              0,
+              512,
+              512
+            ],
+            [
+              2048,
+              0,
+              512,
+              512
+            ],
+            [
+              2560,
+              0,
+              512,
+              512
+            ],
+            [
+              3072,
+              0,
+              512,
+              512
+            ],
+            [
+              0,
+              512,
+              512,
+              512
+            ],
+            [
+              512,
+              512,
+              512,
+              512
+            ],
+            [
+              1024,
+              512,
+              512,
+              512
+            ]
+          ],
+          "frameWidth": 512,
+          "frameHeight": 512,
+          "trimmed": true,
+          "playbackFps": 20,
+          "durationMs": 500,
+          "savedSpeed": 1
         },
         {
           "impactFrame": 28,

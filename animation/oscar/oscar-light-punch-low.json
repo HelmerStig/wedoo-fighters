@@ -1,0 +1,240 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "7e20caa4fbc049dd9d28592979882cc5b4212bb1911e7c556c4b506f2619f2f5",
+      "duration": 27.77777777777778
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "e98574aa80e5072055045b82a23cbcc4c9bfcde8d8884019eb1a48f2f9c6f0ab",
+      "duration": 27.77777777777778
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "bb44b937bdccc214259096b9356282fe4ddbb59d197e5e75be8bd5694ce14b61",
+      "duration": 27.77777777777778
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "72ba10636077b851bb3e8819ebe200c5f2634296e2a9e5e557ea961015cdfc1b",
+      "duration": 27.77777777777778
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "7c4ae5e7cc69d45d579b2df74782c4ddaf31ee6234427e4d735f71563c241785",
+      "duration": 27.77777777777778
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "ccd981ead0fffcc0d91006fb89e74511779281a1a8464a650890b9963e500484",
+      "duration": 27.77777777777778
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "3f9d9761e7836429ec4a9565dcf8d66a90e1d64a34ac3668ccf87e491cce8d02",
+      "duration": 27.77777777777778
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "03991f00b421fc5d2ca67fe5f7f41b4f55daf3b6612c49731353e38685473a0b",
+      "duration": 27.77777777777778
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "026f04f9847fb42d28be7b7b47bbdf22640a19879c273977c5da7983619cc5a4",
+      "duration": 27.77777777777778
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "596f7ec29f0d8a9d21e6490a06d0136087b4caa93c3f97dd52a26aab313b0c67",
+      "duration": 27.77777777777778
+    },
+    "10": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "b067ea5b672f6bab1380d678b37ef48e3fb89455cf1eab1d49bce2df09bfdf69",
+      "duration": 27.77777777777778
+    },
+    "11": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "b780e5194a185488e20e30dc9ee52059ce670c9499a6cb1b9aa979e2b9d44445",
+      "duration": 27.77777777777778
+    },
+    "12": {
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "d7429c1890e4bee0479f59235f24c1d276a0c1fd2f16affd47fb95df88692a40",
+      "duration": 27.77777777777778
+    },
+    "13": {
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "b726f9cd5ed71e0604f56e85686164fbe2117c4069bc5a991af2921ecbe96cc4",
+      "duration": 27.77777777777778
+    },
+    "14": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "e7785f3cfe8c0f25d4306821901458bd89267637666b05356a46cda9ad77a010",
+      "duration": 27.77777777777778
+    },
+    "15": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "94c015dbde3300421603370f35746173dde8d0440a0d5707978650a7dd11b09f",
+      "duration": 27.77777777777778
+    },
+    "16": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 16,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "0e342d3621d908f7b353fd9cf9b42d9d28d875bed4030f32e7c32a06e1c2e088",
+      "duration": 27.77777777777778
+    },
+    "17": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 17,
+      "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+      "rgbaSha256": "e5d8687dcc730d1d33a6c2cf8536a416084e694bbd43ae1878f956f9b26130f8",
+      "duration": 27.77777777777778
+    }
+  },
+  "meta": {
+    "image": "oscar-light-punch-low.png",
+    "size": {
+      "w": 3584,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 18,
+    "source_sheet_id": "cmwrnp0s500dx11fma5zxyx5c",
+    "source_frame_count": 30,
+    "source_start": 0,
+    "source_end": 17,
+    "playback": "forward",
+    "duration_ms": 500,
+    "impact_ms": 250,
+    "impact_frame": 9
+  }
+}

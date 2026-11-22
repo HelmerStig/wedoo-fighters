@@ -1,0 +1,233 @@
+[
+  {
+    "character": "Alberto",
+    "file": "alberto-medium-punch-low-pose.png",
+    "characterReference": "PNG/ALBERTO.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/4.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 430,
+    "uniformScaleAfter512": 1.0,
+    "visibleBounds": [
+      58,
+      150,
+      454,
+      431
+    ],
+    "pngSha256": "55a3593de3f02783dd8cff997e29440dbb7b28d729e8753acf8011c359d01f3e",
+    "normalization": "Whole-canvas nearest-neighbor export to 512; bounds at alpha >=128 exclude nearly invisible distant generation residue, integer translation centers silhouette and aligns visible ground with base. Alpha within crop preserved. No nonuniform scaling or anatomy deformation.",
+    "previousPngSha256": "fc3ea5e55556916aaaf4b41ec53d73928750c03f2f65d12566fb515c7cb3cded",
+    "selectionNote": "Postura scelta dall utente: riferimento 4.png, affondo molto basso verso destra, busto inclinato in avanti e due braccia aperte arretrate come riferimento."
+  },
+  {
+    "character": "Fabio Clara",
+    "file": "fabio-clara-medium-punch-low-pose.png",
+    "characterReference": "PNG/FABIO-CLARA.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/8.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 431,
+    "uniformScaleAfter512": 0.8,
+    "visibleBounds": [
+      59,
+      55,
+      454,
+      432
+    ],
+    "pngSha256": "2d7ceb6c2571ab62f15de6e89332846ee246f44718f9ed9e2f1776deb274f4cb",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Sboz",
+    "file": "sboz-medium-punch-low-pose.png",
+    "characterReference": "PNG/SBOZ.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/1.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 433,
+    "uniformScaleAfter512": 0.84,
+    "visibleBounds": [
+      45,
+      22,
+      467,
+      434
+    ],
+    "pngSha256": "0cc62502a58b720b49746a9fd0ece6c843d80b3de49cca5fde239e6db2f0659a",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Pippo",
+    "file": "pippo-medium-punch-low-pose.png",
+    "characterReference": "PNG/PIPPO.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 431,
+    "uniformScaleAfter512": 1.0,
+    "visibleBounds": [
+      52,
+      125,
+      460,
+      432
+    ],
+    "pngSha256": "6255245c592e8f3806af13e5c8d65809b80617b15efaf7b1c2caa0bd2e553693",
+    "normalization": "Whole-canvas nearest-neighbor export to 512; bounds at alpha >=128 exclude nearly invisible distant generation residue, integer translation centers silhouette and aligns visible ground with base. Alpha within crop preserved. No nonuniform scaling or anatomy deformation.",
+    "previousPngSha256": "fa950be922a30cac304af8abfca18244276d223466f13e1089ae5712d7f0834f",
+    "selectionNote": "Postura scelta dall utente: riferimento 2.png, affondo laterale basso, busto verso camera, gamba distesa a sinistra e ginocchio destro flesso, braccia e mani aperte come riferimento; pollice della mano destra corretto verso interno."
+  },
+  {
+    "character": "Peppo",
+    "file": "peppo-medium-punch-low-pose.png",
+    "characterReference": "PNG/PEPPO.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/1.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 435,
+    "uniformScaleAfter512": 1.0,
+    "visibleBounds": [
+      38,
+      111,
+      475,
+      436
+    ],
+    "pngSha256": "7e917bc72f5a6f276ba7def7be9b8ef29722911d46ee7a95d46e3e33392332de",
+    "normalization": "Whole-canvas nearest-neighbor export to 512; bounds at alpha >=128 exclude nearly invisible distant generation residue, integer translation centers silhouette and aligns visible ground with base. Alpha within crop preserved. No nonuniform scaling or anatomy deformation.",
+    "previousPngSha256": "25b33627bb46c8bf7db3089dd69baf31b030683dd6a4734e968cfbe97215dea3",
+    "selectionNote": "Postura scelta dall utente: riferimento 1.png, affondo inginocchiato basso, schiena verso camera, braccio esteso a destra con palmo verticale e altro braccio richiamato dietro spalla."
+  },
+  {
+    "character": "Oscar",
+    "file": "oscar-medium-punch-low-pose.png",
+    "characterReference": "PNG/OSCARE.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/3.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 433,
+    "uniformScaleAfter512": 0.85,
+    "visibleBounds": [
+      54,
+      66,
+      459,
+      434
+    ],
+    "pngSha256": "27341b8ce22857feb222cea18ee89e4d0aa5e1690d0c9c77d28f36a8ea4e8996",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Elisa",
+    "file": "elisa-medium-punch-low-pose.png",
+    "characterReference": "PNG/Elisa.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/7.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 429,
+    "uniformScaleAfter512": 0.75,
+    "visibleBounds": [
+      73,
+      74,
+      440,
+      430
+    ],
+    "pngSha256": "6d58ca6f251ec6d358d5168095108f603a55d2f71ca195afad2cc2fff8125488",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Fra Tavarone",
+    "file": "fra-tavarone-medium-punch-low-pose.png",
+    "characterReference": "PNG/FRA-TAVARONE.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/2.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 426,
+    "uniformScaleAfter512": 0.8,
+    "visibleBounds": [
+      51,
+      17,
+      461,
+      427
+    ],
+    "pngSha256": "1ee6a4a9cd849a7798a5d5caf5c8ccbd0f0fb169dfc1e6a32a02db1335d6ea70",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  },
+  {
+    "character": "Marsan",
+    "file": "marsan-medium-punch-low-pose.png",
+    "characterReference": "PNG/MARSAN.png",
+    "poseReference": "REFERENCE/PUGNO MEDIO BASSO/4.png",
+    "canvas": [
+      512,
+      512
+    ],
+    "generatedSize": [
+      1254,
+      1254
+    ],
+    "facing": "right",
+    "baselineY": 433,
+    "uniformScaleAfter512": 0.85,
+    "visibleBounds": [
+      49,
+      21,
+      464,
+      434
+    ],
+    "pngSha256": "e883e57b5c6c92fbb257fadc5b40bff978f4c26f5e1adcefccbad7d5a2af057b",
+    "normalization": "Whole canvas exported to 512 nearest-neighbor, then uniformly scaled with nearest-neighbor and centered with ground aligned to base alpha bounds. Generated alpha preserved. No repainting or anatomy deformation."
+  }
+]

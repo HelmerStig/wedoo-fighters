@@ -1,0 +1,89 @@
+{
+  "animation": "light-punch-low",
+  "updatedAt": "2026-11-22",
+  "durationMs": 500,
+  "impactMs": 250,
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwro2qye000chwx4kg4qxl50",
+      "sourceStart": 0,
+      "sourceEnd": 9,
+      "impactFrame": 3,
+      "impactSourceFrame": 3,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwro6cfc000h10bdwid2m2il",
+      "sourceStart": 0,
+      "sourceEnd": 9,
+      "impactFrame": 3,
+      "impactSourceFrame": 3,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwrof61b003lyr4pjw2nd45s",
+      "sourceStart": 0,
+      "sourceEnd": 9,
+      "impactFrame": 3,
+      "impactSourceFrame": 3,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwroox0q008q2qs5mhe8a3ba",
+      "sourceStart": 0,
+      "sourceEnd": 9,
+      "impactFrame": 4,
+      "impactSourceFrame": 4,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwroboje0015lp526xsyfrm5",
+      "sourceStart": 0,
+      "sourceEnd": 11,
+      "impactFrame": 4,
+      "impactSourceFrame": 4,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwrnp0s500dx11fma5zxyx5c",
+      "sourceStart": 0,
+      "sourceEnd": 17,
+      "impactFrame": 9,
+      "impactSourceFrame": 9,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwro4whc00yyzpge3ntbm3d8",
+      "sourceStart": 0,
+      "sourceEnd": 8,
+      "impactFrame": 2,
+      "impactSourceFrame": 2,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwro84k4002712crlil0oamt",
+      "sourceStart": 0,
+      "sourceEnd": 10,
+      "impactFrame": 5,
+      "impactSourceFrame": 5,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwro9xmf00uj1sj9evbs1ajl",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "impactFrame": 8,
+      "impactSourceFrame": 8,
+      "note": "Prima posa di massima estensione scelta visivamente e confrontata con il bordo destro della sagoma. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    }
+  ]
+}

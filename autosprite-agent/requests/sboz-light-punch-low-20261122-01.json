@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwys4000o72jnrpng2i85",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjfx9l000knw1581iykcop",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Animate a clean, crisp crouching light jab spread smoothly across the clip, pure body motion only in completely empty air around the fighter: staying firmly anchored in the exact same low kneeling crouch on the baseline without standing up, the fighter coils slightly back in brief anticipation; then shoots the FAR left lead arm (further from camera) straight horizontally right into a full crouching jab (fist closed, parallel to the ground) while keeping the NEAR right arm (closer to camera) bent in guard by the chin so the face stays clearly visible; after a brief extension, smoothly retracts back into the starting crouching guard pose. Preserve exact face, hairstyle, reference outfit, footwear, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}
