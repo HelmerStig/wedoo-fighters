@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjlj4f00gfrqaofz5yj53q",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE slow, deliberate heavy crouching cross punch across the clip (strictly one punch only, never a jab first or second punch), pure body motion only in empty air: staying anchored low on the baseline without standing up, he winds up by leaning his torso back and pulling his right shoulder and fist far back by his hip; then he smoothly rotates forward and drives ONE heavy straight horizontal right punch to full reach (right arm straight, fist closed, left arm tucked by his waist); brief hold at full reach, then smooth retraction back into the starting crouch guard pose. Preserve exact face, beard, plaid shirt, cargo pants, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

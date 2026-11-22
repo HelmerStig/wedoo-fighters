@@ -30,4 +30,10 @@ pippo light punch: da rifare
 
 medium da rifare:
 - Albero, tira due pugni
-- Tavarone, pochi frames e tira due pugni
+- fra Tavarone, pochi frames e tira più di un pugno
+- Oscar tira due pugni
+fai una prova a pro 4secondi
+
+
+a seguire vorrei chew guardassi dei riferimenti da street fighter 6 per i pugni potenti e creassi 9 prompt per genereare dei pugni potenti diversi per ogni personaggio del nostro rooster, inizia col propormi delle animazioni,
+associa mosse di personaggi femminili alle donne e maschili agli uomini. tutto chiaro? E' possibile?

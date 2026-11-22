@@ -53,6 +53,7 @@ const extraAnimations=[
   {manifest:'light-punch-manifest.json',id:'light-punch',name:'Pugno leggero',description:'Pugno leggero e ritorno in guardia',durationMs:500},
   {manifest:'light-punch-low-manifest.json',id:'light-punch-low',name:'Pugno leggero basso',description:'Pugno leggero da accovacciati e ritorno in guardia bassa',durationMs:500},
   {manifest:'medium-punch-manifest.json',id:'medium-punch',name:'Pugno medio',description:'Pugno medio e ritorno in guardia',durationMs:750},
+  {manifest:'medium-punch-low-manifest.json',id:'medium-punch-low',name:'Pugno medio basso',description:'Pugno medio da accovacciati e recupero',durationMs:750},
   {manifest:'strong-punch-manifest.json',id:'strong-punch',name:'Pugno forte',description:'Pugno forte e ritorno in guardia',durationMs:1000},
   {manifest:'light-kick-manifest.json',id:'light-kick',name:'Calcio leggero',description:'Calcio leggero e ritorno in guardia',durationMs:600},
   {manifest:'medium-kick-manifest.json',id:'medium-kick',name:'Calcio medio',description:'Calcio medio e ritorno in guardia',durationMs:800},
@@ -74,6 +75,7 @@ const lightKickTiming=await readJson(join(root,'animation/light-kick-timing.json
 const mediumKickTiming=await readJson(join(root,'animation/medium-kick-timing.json'));
 const strongKickTiming=await readJson(join(root,'animation/strong-kick-timing.json'));
 const mediumPunchTiming=await readJson(join(root,'animation/medium-punch-timing.json'));
+const mediumLowPunchTiming=await readJson(join(root,'animation/medium-punch-low-timing.json'));
 const mediumPunchTrails=await readJson(join(root,'animation/medium-punch-trails.json'));
 const strongPunchTiming=await readJson(join(root,'animation/strong-punch-timing.json'));
 const strongPunchTrails=await readJson(join(root,'animation/strong-punch-trails.json'));
@@ -155,10 +157,11 @@ for(const extra of extraAnimations){
         if(item.playback==='forward-reverse')timing.playbackMode=item.playback;
       }
     }
-    if(extra.id==='medium-punch'){
-      const entry=mediumPunchTiming.items.find(t=>t.character.toLowerCase()===character.id);
+    if(extra.id==='medium-punch'||extra.id==='medium-punch-low'){
+      const moveTiming=extra.id==='medium-punch-low'?mediumLowPunchTiming:mediumPunchTiming;
+      const entry=moveTiming.items.find(t=>t.character.toLowerCase()===character.id);
       if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd||entry.playback!==item.playback)throw Error('Rivedere il frame di impatto medio per '+item.character);
-      const peak=entry.impactFrame,ms=mediumPunchTiming.impactMs,total=mediumPunchTiming.durationMs;
+      const peak=entry.impactFrame,ms=moveTiming.impactMs,total=moveTiming.durationMs;
       if(!Number.isInteger(peak)||peak<1||peak>=item.sourceFrames||!Number.isFinite(ms)||ms<=0||!Number.isFinite(total)||total<=ms||total!==extra.durationMs)throw Error('Timing pugno medio non valido: '+item.character);
       const expected=Array.from({length:item.sourceEnd-item.sourceStart+1},(_,i)=>item.sourceStart+i);
       if(item.playback==='forward-reverse')expected.push(...expected.slice(0,-1).reverse());

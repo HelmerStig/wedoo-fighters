@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjnnwr00hnakhz3h8q0a5y",
+        "lastFramePoseId": "cmwrnvrj600fd11fmnbhn2uhe",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose and end in the exact supplied deep lunging low medium punch pose. Perform ONE SINGLE slow, deliberate, continuous crouching lunging punch spread evenly across the entire clip (strictly one punch only, never a preliminary jab or second punch), pure body motion only in completely empty air around the fighter: staying low on the baseline without standing up, he first takes his time winding up by coiling his torso back and loading his legs; then he smoothly lunges low forward along the baseline while extending his punching arm progressively inch by inch through every intermediate angle, arriving seamlessly on the exact supplied final crouching punch pose on the last frame. Preserve exact face, hairstyle, varsity jacket, jeans, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

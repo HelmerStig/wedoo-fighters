@@ -41,7 +41,7 @@ jobs:
           python demo-moves/scripts/prepare-pages-png.test.py
           python demo-moves/scripts/prepare-pages-png.py
       - name: Check demo and package exporter
-        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/build-pages.test.mjs demo-moves/scripts/knockdown.test.cjs demo-moves/scripts/hurt-jump.test.cjs demo-moves/scripts/animation-gallery.test.cjs demo-moves/scripts/light-punch-low.test.cjs
+        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/build-pages.test.mjs demo-moves/scripts/knockdown.test.cjs demo-moves/scripts/hurt-jump.test.cjs demo-moves/scripts/animation-gallery.test.cjs demo-moves/scripts/light-punch-low.test.cjs demo-moves/scripts/medium-punch-low.test.cjs
       - name: Export demo and referenced assets
         run: node demo-moves/scripts/build-pages.mjs
       - uses: actions/upload-pages-artifact@v4

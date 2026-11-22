@@ -1,0 +1,99 @@
+{
+  "animation": "medium-punch-low",
+  "updatedAt": "2026-11-22",
+  "durationMs": 750,
+  "impactMs": 400,
+  "frameIndexBase": 0,
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwrq7j1v002josuqjf0sth87",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 25,
+      "impactSourceFrame": 25,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwrq7k6g001g10ooa4jit7pu",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 23,
+      "impactSourceFrame": 23,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Marcatore sulla prima posa piena dopo la scia incorporata nel sorgente."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwrq7i7z002fosuqjzchmpo6",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 22,
+      "impactSourceFrame": 22,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwrrkukd00gwvk1j59gkwb8q",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 36,
+      "impactSourceFrame": 36,
+      "playback": "forward-reverse",
+      "note": "Recupero assente nel foglio: ritorno al contrario senza duplicare il fotogramma finale. Marcatore sul gesto finale a mano aperta; rotazione e scia intermedie sono presenti nel sorgente AutoSprite."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwrr4mya00c1vk1j2ktppy1z",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "impactFrame": 18,
+      "impactSourceFrame": 18,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwrpresm004k13vvrt53svq0",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 21,
+      "impactSourceFrame": 21,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwrq9for00afqvcva1hyseuj",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 22,
+      "impactSourceFrame": 22,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwrq07a500bx13vv0el2aa4x",
+      "sourceStart": 0,
+      "sourceEnd": 44,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwrrzgou0076rualkfghv7yl",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 12,
+      "impactSourceFrame": 12,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Riparazione locale della manica nei fotogrammi 8-11 (indici 7-10): opacita ripristinata, nessuna modifica al timing."
+    }
+  ]
+}

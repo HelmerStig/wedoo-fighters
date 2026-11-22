@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjgi53001nnw1530lpueer",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Animate ONE SINGLE heavy crouching punch spread continuously across the clip (never a second punch or combo), pure body motion only in empty air: staying anchored in the low kneeling crouch on the baseline without standing up, Alberto performs one deliberate wind-up coil leaning his torso and right shoulder visibly back; then he smoothly twists forward and drives ONE heavy straight horizontal right cross punch to the right (right arm extending progressively to full reach, fist closed, left arm tucked behind his hip); after a brief steady apex, he smoothly retracts once back into the starting crouch guard pose. Preserve exact face, glasses, beard, green sweater, grey jeans, white sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

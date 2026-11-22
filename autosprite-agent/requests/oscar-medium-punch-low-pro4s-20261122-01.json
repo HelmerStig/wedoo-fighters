@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE slow, deliberate, heavy crouching medium punch across the entire clip (strictly one punch only \u2014 do not throw a jab first, do not punch twice), pure body motion only in completely empty air around the fighter: staying firmly anchored in the low kneeling crouch on the baseline without standing up, Oscar first takes his time winding up by leaning his torso back and pulling his right shoulder and fist far back by his hip; then he smoothly rotates his torso forward and drives ONE single heavy straight horizontal right punch out to full reach (right arm straight, fist closed, left arm tucked back by his waist); he holds full extension briefly, then smoothly retracts back into the exact starting crouch guard pose. Preserve Oscar's exact face, black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

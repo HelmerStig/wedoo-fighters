@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9dyrs900045e49mr49cdz9",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjh039000fe52m9x2u64fj",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE slow, deliberate crouching lunging punch across the clip (strictly one punch only, never a jab first or second punch), pure body motion only in empty air: staying low on the baseline without standing up, she winds up by coiling her torso back and pulling her right shoulder and fist back near her hip; then she smoothly twists forward and drives ONE crisp straight horizontal right punch to full reach (arm straight, fist closed, left arm tucked by her waist); brief hold at full reach, then smooth retraction back into the starting crouch guard pose. Preserve exact face, hairstyle, denim jacket, dark pants, footwear, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwgkp003h83r8pvn0zfqp",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Strong Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjn1nv005p7uvrlth9oryk",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE fluid Chun-Li-style crouching diagonal upward Wushu thrust across the clip (strictly one strike only, never twice), pure body motion only in empty air: staying low in a deep crouch without standing tall, she coils down near her front knee, then opens her chest and sweeps a powerful straight diagonal upward palm-and-fist thrust to the upper-right (~55 degrees) as her curly hair lifts with the surge and her rear arm balances low behind her; brief apex, then smooth return to the starting crouch guard pose. Preserve exact face, curly hair, plaid shirt, jeans, footwear, scale and pixel art. Keep the entire body and raised fist cleanly inside the 512x512 frame with margin on all edges. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

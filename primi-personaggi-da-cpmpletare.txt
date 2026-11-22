@@ -19,6 +19,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
@@ -45,6 +46,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
@@ -71,6 +73,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick)
@@ -97,6 +100,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggeroù
     - Calcio medio (medium kick v2)
@@ -123,6 +127,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
@@ -149,6 +154,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio Leggero
@@ -176,6 +182,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (light kick)
@@ -202,6 +209,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)
@@ -228,6 +236,7 @@
     - Pugno leggero
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio basso (Medium Punch Low)
     - Pugno forte
     - Calcio leggero
     - Calcio medio (medium kick v2)

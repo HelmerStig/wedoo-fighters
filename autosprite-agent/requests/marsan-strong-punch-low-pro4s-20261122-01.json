@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Strong Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjnnwr00hnakhz3h8q0a5y",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE fierce Ken-style forward-lunging diagonal crouching uppercut across the clip (strictly one uppercut only, never twice), pure body motion only in empty air: staying low on the baseline without standing tall, he coils low on his back knee, then explodes forward-upward driving ONE fierce diagonal right uppercut (~55 degrees) to full reach as his head leans slightly back and his left arm throws backward for power; brief apex, then smooth return to the starting crouch guard pose. Preserve exact face, hairstyle, varsity jacket, jeans, sneakers, scale and pixel art. Keep the entire body and raised fist cleanly inside the 512x512 frame with margin on all edges. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

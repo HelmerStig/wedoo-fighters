@@ -998,3 +998,30 @@ Report: demo-moves/reports/light-punch-low-timing.html e CSV.
 Rigenera report con python demo-moves/scripts/build-light-punch-low-report.py.
 104 celle RGBA verificate dopo esportazione, nessun ridimensionamento.
 Nessuna generazione AutoSprite eseguita durante importazione: 0 crediti.
+
+PUGNO MEDIO BASSO - 22 novembre 2026
+Medium Punch Low integrato per i nove personaggi del primo gruppo.
+Stesso timing del Pugno medio: impatto 400 ms, ciclo 750 ms a 1x.
+Pippo e Marsan: avanti e indietro per recupero assente nel sorgente;
+altre sette animazioni solo avanti, recupero gia incluso.
+PNG originali copiati byte per byte, 459 celle della sequenza verificate RGBA.
+Gli atlas referenziano gli stessi rettangoli durante il ritorno.
+Le scie gia presenti nei sorgenti AutoSprite sono conservate.
+Manifest e timing: animation/medium-punch-low-manifest.json e
+animation/medium-punch-low-timing.json. Report HTML e CSV in
+demo-moves/reports/medium-punch-low-timing.html.
+Rigenera con python demo-moves/scripts/build-medium-punch-low-report.py.
+Nessuna generazione AutoSprite: 0 crediti durante l importazione.
+
+UPDATE MARSAN MEDIUM PUNCH LOW - 22 novembre 2026
+Ultimo foglio cmwrrzgou0076rualkfghv7yl (49 frame). Recupero gia incluso: solo
+avanti, impatto frame 12 (indice da 0) a 400 ms, durata totale 750 ms.
+Sostituisce il precedente foglio da 14 frame riprodotto avanti-indietro.
+Ora solo Pippo usa il recupero inverso per il Pugno medio basso.
+
+RIPARAZIONE MANICA MARSAN MEDIUM PUNCH LOW - 22 novembre 2026
+Riparati i soli buchi della manica nei frame 7-10 (numerazione da 0),
+con riferimenti ImageGen e reintegrazione nella palette del PNG originale.
+45 altri frame e pixel esterni alle maschere invariati. Timing invariato.
+Originali e confronto in autosprite-agent/output/marsan-medium-low-sleeve-repair-20261122.
+LocalEdits, hash attuali e hash importati registrati nel manifest e atlas.

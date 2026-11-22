@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjnnwr00hnakhz3h8q0a5y",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE crisp, powerful Terry-Bogard / Luke-style SF6 crouching medium straight punch across the clip (strictly one punch only, never twice), pure body motion only in empty air: staying firmly anchored in his low kneeling crouch on the baseline without standing up, Marsan coils his right shoulder and torso slightly back in a tight street-brawler wind-up; then he rotates forward and drives ONE solid horizontal right cross punch straight right (right arm extended parallel to the ground, fist clenched, left fist tucked tightly in guard by his chin); brief clean hold at full reach, then smooth retraction back into the starting crouch guard pose. Preserve exact face, hairstyle, red-white varsity jacket, jeans, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

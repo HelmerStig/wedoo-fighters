@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwxxn000k72jn5131g7kq",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjomfb00izrqao2xg5glu4",
+        "lastFramePoseId": "cmwrnx1gj00ro1sj9eogfnksd",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose and end in the exact supplied low wide-stance strike pose. Perform ONE SINGLE slow, deliberate, continuous low martial-arts strike spread evenly across the entire clip (strictly one strike only, never a preliminary jab or second strike), pure body motion only in completely empty air around the fighter: staying low on the baseline without standing up, he first takes his time winding up by coiling his torso and shifting his weight smoothly to open his stance; then he transitions steadily frame by frame into the wide low stance while extending his arms cleanly through every intermediate angle, arriving seamlessly on the exact supplied final pose on the last frame. Preserve exact face, beard, flannel, jeans, boots, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}
