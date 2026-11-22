@@ -55,6 +55,7 @@ const extraAnimations=[
   {manifest:'medium-punch-manifest.json',id:'medium-punch',name:'Pugno medio',description:'Pugno medio e ritorno in guardia',durationMs:750},
   {manifest:'medium-punch-low-manifest.json',id:'medium-punch-low',name:'Pugno medio basso',description:'Pugno medio da accovacciati e recupero',durationMs:750},
   {manifest:'strong-punch-manifest.json',id:'strong-punch',name:'Pugno forte',description:'Pugno forte e ritorno in guardia',durationMs:1000},
+  {manifest:'strong-punch-low-manifest.json',id:'strong-punch-low',name:'Pugno forte basso',description:'Pugno forte da accovacciati e recupero',durationMs:1000},
   {manifest:'light-kick-manifest.json',id:'light-kick',name:'Calcio leggero',description:'Calcio leggero e ritorno in guardia',durationMs:600},
   {manifest:'medium-kick-manifest.json',id:'medium-kick',name:'Calcio medio',description:'Calcio medio e ritorno in guardia',durationMs:800},
   {manifest:'strong-kick-manifest.json',id:'strong-kick',name:'Calcio potente',description:'Calcio potente e ritorno in guardia',durationMs:900},
@@ -78,6 +79,7 @@ const mediumPunchTiming=await readJson(join(root,'animation/medium-punch-timing.
 const mediumLowPunchTiming=await readJson(join(root,'animation/medium-punch-low-timing.json'));
 const mediumPunchTrails=await readJson(join(root,'animation/medium-punch-trails.json'));
 const strongPunchTiming=await readJson(join(root,'animation/strong-punch-timing.json'));
+const strongLowPunchTiming=await readJson(join(root,'animation/strong-punch-low-timing.json'));
 const strongPunchTrails=await readJson(join(root,'animation/strong-punch-trails.json'));
 const lightPunchTrails=await readJson(join(root,'animation/light-punch-trails.json'));
 const blockTiming=await readJson(join(root,'animation/block-timing.json'));
@@ -169,10 +171,11 @@ for(const extra of extraAnimations){
       if(JSON.stringify(item.frameSequence)!==JSON.stringify(expected)||expected.length!==frames.length||expected[peak]!==entry.impactSourceFrame||Object.values(atlas.frames).some((f,i)=>f.source_frame!==expected[i]))throw Error('Sequenza pugno medio incoerente: '+item.character);
       timing={impactFrame:peak,impactMs:ms,playbackMode:item.playback,sourceFrameCount:item.sourceFrames,frameDurations:frames.map((_,i)=>i<peak?ms/peak:(total-ms)/(frames.length-peak))};
     }
-    if(extra.id==='strong-punch'){
-      const entry=strongPunchTiming.items.find(t=>t.character.toLowerCase()===character.id);
+    if(extra.id==='strong-punch'||extra.id==='strong-punch-low'){
+      const moveTiming=extra.id==='strong-punch-low'?strongLowPunchTiming:strongPunchTiming;
+      const entry=moveTiming.items.find(t=>t.character.toLowerCase()===character.id);
       if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di impatto forte per '+item.character);
-      const peak=entry.impactFrame,ms=strongPunchTiming.impactMs,total=strongPunchTiming.durationMs;
+      const peak=entry.impactFrame,ms=moveTiming.impactMs,total=moveTiming.durationMs;
       if(!['forward','forward-reverse'].includes(item.playback)||!Number.isInteger(peak)||peak<1||peak>=item.sourceFrames||ms<=0||total<=ms||total!==extra.durationMs)throw Error('Timing pugno forte non valido: '+item.character);
       const sequence=Array.from({length:item.sourceFrames},(_,i)=>item.sourceStart+i);
       if(item.playback==='forward-reverse')sequence.push(...sequence.slice(0,-1).reverse());

@@ -1,4 +1,4 @@
-"""Lossless indexed PNG copies for Pages; originals and decoded RGBA stay intact."""
+"""Lossless PNG copies for Pages; originals and decoded RGBA stay intact."""
 from pathlib import Path
 from PIL import Image
 import numpy as np
@@ -39,6 +39,14 @@ def indexed_copy(image):
     if result.convert('RGBA').tobytes()!=rgba.tobytes():raise ValueError('Indexed palette changed pixels')
     return result
 
+def lossless_copy(image):
+    # Already-indexed AutoSprite files can also benefit from recompression.
+    # Preserve their palette and alpha instead of skipping or quantizing them.
+    if image.mode=='P':return image.copy()
+    indexed=indexed_copy(image)
+    # Recompress full-color PNGs too, without reducing their color count.
+    return indexed if indexed is not None else image.copy()
+
 def main():
     manifest_path=CACHE/'manifest.json'
     manifest=json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
@@ -65,11 +73,10 @@ def main():
         local=source.relative_to(ROOT).as_posix()
         if source.stat().st_size<128*1024:continue
         with Image.open(source) as image:
-            if image.mode=='P':continue
-            result=indexed_copy(image)
+            result=lossless_copy(image)
             if result is None:continue
             dest=CACHE/local;dest.parent.mkdir(parents=True,exist_ok=True)
-            result.save(dest,compress_level=9)
+            result.save(dest,optimize=True,compress_level=9)
             with Image.open(dest) as saved:
                 assert saved.convert('RGBA').tobytes()==image.convert('RGBA').tobytes(),local
         before=source.read_bytes();after=copy_color_metadata(before,dest.read_bytes());dest.write_bytes(after)

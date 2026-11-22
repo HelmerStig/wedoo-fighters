@@ -1,0 +1,208 @@
+{
+  "updatedAt": "2026-11-22",
+  "method": "Automatic alpha inspection of all 441 frames; visual review of motion samples and highest-ranked cases on white, black and alpha backgrounds. Hole counts include natural gaps between limbs and require visual interpretation.",
+  "evidence": [
+    "demo-moves/reports/strong-punch-low-alpha.png",
+    "demo-moves/reports/strong-punch-low-marsan-alpha.png"
+  ],
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwrt17mb001tkz9p8xnf7gec",
+      "pngSha256": "e2cdf2c6700b42bc304ab3dde514c0e7dfcd14988a6911e0f70d12cd2b11a087",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 15,
+          "holes": 218,
+          "semi": 1116,
+          "score": 1334
+        },
+        {
+          "frame": 44,
+          "holes": 1049,
+          "semi": 42,
+          "score": 1091
+        }
+      ]
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwru694t00acfqpcwamm8ds2",
+      "pngSha256": "0cf7e1f497700fdf9337a09082c8603aabaccd1f62be079e6cc93ea0251cb63e",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 5,
+          "holes": 517,
+          "semi": 27,
+          "score": 544
+        },
+        {
+          "frame": 6,
+          "holes": 523,
+          "semi": 6,
+          "score": 529
+        }
+      ]
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwrs9rfd000phckmy46gzv39",
+      "pngSha256": "5694b06f0936527da05304455877ebe04b5741b11efde84ef926adf01be80b91",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 11,
+          "holes": 2531,
+          "semi": 29,
+          "score": 2560
+        },
+        {
+          "frame": 14,
+          "holes": 41,
+          "semi": 226,
+          "score": 267
+        }
+      ]
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwrt1bdr0020kz9pymrnv5al",
+      "pngSha256": "027db66de8f83d2d1f0d957070f82d85f28bfdb83d156050211b2b59f0b8b4c5",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 15,
+          "holes": 1074,
+          "semi": 42,
+          "score": 1116
+        },
+        {
+          "frame": 14,
+          "holes": 109,
+          "semi": 630,
+          "score": 739
+        }
+      ]
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwrsa31w0016117q8eaijs6i",
+      "pngSha256": "76ebe247e6d6875aa56ae0a81b29a4ab36421e60da149ae076cf1634726ac277",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 9,
+          "holes": 520,
+          "semi": 8,
+          "score": 528
+        },
+        {
+          "frame": 10,
+          "holes": 334,
+          "semi": 65,
+          "score": 399
+        }
+      ]
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwrt100x002v2d51m7soygtj",
+      "pngSha256": "c5b0c50c7585bcf86abb40c8fefbe8c3b2f8e5e1a098b11a1df9de71a4f5a470",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 7,
+          "holes": 1611,
+          "semi": 0,
+          "score": 1611
+        },
+        {
+          "frame": 8,
+          "holes": 1263,
+          "semi": 0,
+          "score": 1263
+        }
+      ]
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwrs7kge000p10k67l3j5ow5",
+      "pngSha256": "862f009adc14aef4b3daa7cd03b4dadeef172133399ff72b77d716b6e66134c1",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 8,
+          "holes": 452,
+          "semi": 12,
+          "score": 464
+        },
+        {
+          "frame": 2,
+          "holes": 437,
+          "semi": 3,
+          "score": 440
+        }
+      ]
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwrt1jr600302d51bqqs452r",
+      "pngSha256": "9332c5de80ae04a4a7aaa48f2b3310231eeea51d44e72c7a0196820bf2bbf72e",
+      "framesChecked": 49,
+      "status": "reviewed",
+      "note": "Campioni di movimento e casi alpha piu sospetti verificati visivamente. Scie incorporate e spazi naturali fra arti conservati.",
+      "suspiciousSamples": [
+        {
+          "frame": 30,
+          "holes": 1019,
+          "semi": 20,
+          "score": 1039
+        },
+        {
+          "frame": 9,
+          "holes": 665,
+          "semi": 7,
+          "score": 672
+        }
+      ]
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwrt2l7s003s2d513pndla0v",
+      "pngSha256": "8484becf42a69a55253c2016edeffeb530b6a450f9d0b27302d2d8aeb52d4b86",
+      "framesChecked": 49,
+      "status": "source-defect",
+      "note": "Buchi sorgente sulla manica (esempio indice 12) e discontinuita della gamba presso ginocchio (esempio indice 21).",
+      "suspiciousSamples": [
+        {
+          "frame": 12,
+          "holes": 1473,
+          "semi": 306,
+          "score": 1779
+        },
+        {
+          "frame": 13,
+          "holes": 1577,
+          "semi": 95,
+          "score": 1672
+        }
+      ]
+    }
+  ]
+}

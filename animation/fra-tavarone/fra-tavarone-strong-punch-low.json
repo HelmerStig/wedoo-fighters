@@ -1,0 +1,955 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 192,
+          "w": 197,
+          "h": 247
+        }
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "b80d5b20ba5915ff7903caf910726b328f7d424fc089cbd4529ce8feaa2561f7",
+      "duration": 45.45454545454545
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 192,
+          "w": 197,
+          "h": 247
+        }
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "ee4589df39d0773311ee4433da7d5f585fe96285a553e9fe1935036ae020b369",
+      "duration": 45.45454545454545
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 199,
+          "w": 199,
+          "h": 240
+        }
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "04a1c7348226c716bbeb2d5c406f56a66eda55208c1817bc99e61f235ea7b304",
+      "duration": 45.45454545454545
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 207,
+          "w": 200,
+          "h": 233
+        }
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "5193fbff37489082954e21ff1f45aa1595c5561907aafc6d18164001081c66e8",
+      "duration": 45.45454545454545
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 213,
+          "w": 202,
+          "h": 227
+        }
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "7da544d1c695e117360ddb68577a3f3e315af1ac91e0304b67400848fcb1002d",
+      "duration": 45.45454545454545
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 216,
+          "w": 203,
+          "h": 224
+        }
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "36b026103c5fc4b50809da6c795f77a75a884be87c4da4cb1138a550bf418a63",
+      "duration": 45.45454545454545
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 139,
+          "y": 210,
+          "w": 220,
+          "h": 227
+        }
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "0ff773e40d908dc27d3f1fdf3fb0bba1001bdaf082cde3d3d0ee3f02722d02e2",
+      "duration": 45.45454545454545
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 121,
+          "y": 203,
+          "w": 236,
+          "h": 231
+        }
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "b216fcedfb1cff937ffd0bffb65ec56dda1bd25042a7134ed92258e88ca60b77",
+      "duration": 45.45454545454545
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 103,
+          "y": 196,
+          "w": 257,
+          "h": 238
+        }
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "382c575fcac213f209756fdaa6d2c923c70f27f1c0ed7ea4c24a9e9304a65a81",
+      "duration": 45.45454545454545
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 74,
+          "y": 186,
+          "w": 305,
+          "h": 250
+        }
+      },
+      "source_frame": 9,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "547e2cd3978fd1f41c9e38303772365e59dadfb7ab2899aadddb071a223a5373",
+      "duration": 45.45454545454545
+    },
+    "10": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 152,
+          "w": 368,
+          "h": 284
+        }
+      },
+      "source_frame": 10,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "4cac58885bd019cb654a493bea8a86bfe7e24bcf57725eaa859c0f7a67c27419",
+      "duration": 45.45454545454545
+    },
+    "11": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 154,
+          "w": 368,
+          "h": 282
+        }
+      },
+      "source_frame": 11,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "f6bfdede284a8fcf88befc414ef8d08c06e8866a84e2bbe9e029318dcc8b1ce5",
+      "duration": 13.157894736842104
+    },
+    "12": {
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 154,
+          "w": 368,
+          "h": 282
+        }
+      },
+      "source_frame": 12,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "ee00fb994ea2ffc4a524f3df9880425aefeaded4015ac67faab045fac578580f",
+      "duration": 13.157894736842104
+    },
+    "13": {
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 13,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "dfeab863ff23f480d25cb8c5ad6cc1077980e7952bd78f61fb4860a9ee81c27a",
+      "duration": 13.157894736842104
+    },
+    "14": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 367,
+          "h": 281
+        }
+      },
+      "source_frame": 14,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "236cc23dfb512c3aac9b0231b42371265c58a26e0f0d71bb1a571f51be24edb2",
+      "duration": 13.157894736842104
+    },
+    "15": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 367,
+          "h": 281
+        }
+      },
+      "source_frame": 15,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "97dde3ecdb275db2506f822991d01286442982ef05e45682f33a360f733b506f",
+      "duration": 13.157894736842104
+    },
+    "16": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 367,
+          "h": 281
+        }
+      },
+      "source_frame": 16,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "a4768da325254db0523fa1678c3dcc4a5ae56bafc8466d2f5806cd51ad8393fb",
+      "duration": 13.157894736842104
+    },
+    "17": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 17,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "5286af6ec6d7539abd50fffed68ef2c6148eee3c112138fbfbf8c9c686ed6c7e",
+      "duration": 13.157894736842104
+    },
+    "18": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 18,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "8a13735ceb14084c09e8082ecb110f905354b94f5429b3f23d2ddccfa308fbd3",
+      "duration": 13.157894736842104
+    },
+    "19": {
+      "frame": {
+        "x": 2560,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 19,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "d5ab099e49c94fe4b83a5a010c87133dcc225892b296ecfcffd633dd9f3a8caa",
+      "duration": 13.157894736842104
+    },
+    "20": {
+      "frame": {
+        "x": 3072,
+        "y": 1024,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 20,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "cf1d238ca928993726067641359a60e12ca3c6eb9387d7a9d9fda84869e11a58",
+      "duration": 13.157894736842104
+    },
+    "21": {
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 21,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "cfa9edb8dd140299d04c91fd52717278c17e06b031c81b1fd5e138d9469a0b63",
+      "duration": 13.157894736842104
+    },
+    "22": {
+      "frame": {
+        "x": 512,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 22,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "0f64e9dacbd0adcc8d893d43b888cc1cbab4b1d6104332b9a8a2ce2472e4b7f8",
+      "duration": 13.157894736842104
+    },
+    "23": {
+      "frame": {
+        "x": 1024,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 368,
+          "h": 281
+        }
+      },
+      "source_frame": 23,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "a6660489688ff1fa1a4d212d323b40dd63881a23de33e674e9962df6adf79312",
+      "duration": 13.157894736842104
+    },
+    "24": {
+      "frame": {
+        "x": 1536,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 367,
+          "h": 281
+        }
+      },
+      "source_frame": 24,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "a31480b971b086cea730d7c577d36e78eaa79986e45cef9051f589e56e879a17",
+      "duration": 13.157894736842104
+    },
+    "25": {
+      "frame": {
+        "x": 2048,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 155,
+          "w": 367,
+          "h": 281
+        }
+      },
+      "source_frame": 25,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "f9d4df419474096b18b2ffd8cde17a0825ef1e8717830f67215ce65fbb70a2a3",
+      "duration": 13.157894736842104
+    },
+    "26": {
+      "frame": {
+        "x": 2560,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 164,
+          "w": 375,
+          "h": 272
+        }
+      },
+      "source_frame": 26,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "714c32f938c4f85167750656ecd16ac45f41620b0accefc802ce60da179602f3",
+      "duration": 13.157894736842104
+    },
+    "27": {
+      "frame": {
+        "x": 3072,
+        "y": 1536,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 164,
+          "w": 374,
+          "h": 272
+        }
+      },
+      "source_frame": 27,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "84d889e0190a415fb6232c75a602d9e996e4ba103cd296c2b507c9aeee275d84",
+      "duration": 13.157894736842104
+    },
+    "28": {
+      "frame": {
+        "x": 0,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 184,
+          "w": 386,
+          "h": 252
+        }
+      },
+      "source_frame": 28,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "07dc6ae525a8528491e106874af45160e1d1d2326af5e05f3479b61fff1c2d92",
+      "duration": 13.157894736842104
+    },
+    "29": {
+      "frame": {
+        "x": 512,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 183,
+          "w": 389,
+          "h": 253
+        }
+      },
+      "source_frame": 29,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "80cfdc3c9006e85271ca9d21b1f9ce1a2edd89432c3f91c158fd6134118be6ba",
+      "duration": 13.157894736842104
+    },
+    "30": {
+      "frame": {
+        "x": 1024,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 179,
+          "w": 364,
+          "h": 257
+        }
+      },
+      "source_frame": 30,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "17d61f0c311e38ae3a82eb4f7fbc5e18c7811899d4e800f563cc3a45faeac31d",
+      "duration": 13.157894736842104
+    },
+    "31": {
+      "frame": {
+        "x": 1536,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 72,
+          "y": 174,
+          "w": 345,
+          "h": 262
+        }
+      },
+      "source_frame": 31,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "88bb07b4be7b49e11ee90534b58825a20f14895470126e10cafffdac66741421",
+      "duration": 13.157894736842104
+    },
+    "32": {
+      "frame": {
+        "x": 2048,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 90,
+          "y": 171,
+          "w": 316,
+          "h": 265
+        }
+      },
+      "source_frame": 32,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "df63d265e3e686364c0fa1ebdc602358315cbc3137bd221c4c0cfa97c16ddaf1",
+      "duration": 13.157894736842104
+    },
+    "33": {
+      "frame": {
+        "x": 2560,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 110,
+          "y": 167,
+          "w": 283,
+          "h": 268
+        }
+      },
+      "source_frame": 33,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "14d7247bf4677823516580bb3edc96f1774888e29b161b32fca4c31185eeb137",
+      "duration": 13.157894736842104
+    },
+    "34": {
+      "frame": {
+        "x": 3072,
+        "y": 2048,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 141,
+          "y": 166,
+          "w": 243,
+          "h": 269
+        }
+      },
+      "source_frame": 34,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "d95b01253fca028a9b1bb630afc87f43f7f7fbe51a87115a2f7353dd677c9d45",
+      "duration": 13.157894736842104
+    },
+    "35": {
+      "frame": {
+        "x": 0,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 149,
+          "y": 172,
+          "w": 231,
+          "h": 261
+        }
+      },
+      "source_frame": 35,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "c0cf307e5ca1c1bc2d5d40eea3ff8bbf66f6a98dd6117a9c948f2f562a2e437f",
+      "duration": 13.157894736842104
+    },
+    "36": {
+      "frame": {
+        "x": 512,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 150,
+          "y": 176,
+          "w": 226,
+          "h": 257
+        }
+      },
+      "source_frame": 36,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "3df596cbf3b52937875dbc39a259d26c11f67e21eaa3e3ed1e620991527d1a83",
+      "duration": 13.157894736842104
+    },
+    "37": {
+      "frame": {
+        "x": 1024,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 183,
+          "w": 214,
+          "h": 250
+        }
+      },
+      "source_frame": 37,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "8ad3f3002199b7d88de1456301c7d1ec9010e21355ea9ff208435a039dddc227",
+      "duration": 13.157894736842104
+    },
+    "38": {
+      "frame": {
+        "x": 1536,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 192,
+          "w": 197,
+          "h": 247
+        }
+      },
+      "source_frame": 38,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "e378451e849b0dfc62b9f248221ab7f0c43653d9913be8c04ab291a01b67b842",
+      "duration": 13.157894736842104
+    },
+    "39": {
+      "frame": {
+        "x": 2048,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 192,
+          "w": 197,
+          "h": 247
+        }
+      },
+      "source_frame": 39,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "0e28abe02528efa36fe7d1895c2e079a8bbce2ece738fa162ea125e007176918",
+      "duration": 13.157894736842104
+    },
+    "40": {
+      "frame": {
+        "x": 2560,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 192,
+          "w": 197,
+          "h": 247
+        }
+      },
+      "source_frame": 40,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "bf6928bf7f18d2e9f9f64e804b63568e94f3e1fb6a23d7131a5a04ab05e29802",
+      "duration": 13.157894736842104
+    },
+    "41": {
+      "frame": {
+        "x": 3072,
+        "y": 2560,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 193,
+          "w": 197,
+          "h": 246
+        }
+      },
+      "source_frame": 41,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "7d611c3756ca99d9efaf3d7a0bfe1cc928e924cf869f0a3068f10d3d97342f8d",
+      "duration": 13.157894736842104
+    },
+    "42": {
+      "frame": {
+        "x": 0,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 194,
+          "w": 196,
+          "h": 245
+        }
+      },
+      "source_frame": 42,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "58de94d9b1fcf6cdc651a45a50d2f732d85752b838b6242bbc976f06e4e81310",
+      "duration": 13.157894736842104
+    },
+    "43": {
+      "frame": {
+        "x": 512,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 195,
+          "w": 196,
+          "h": 244
+        }
+      },
+      "source_frame": 43,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "4ff57124fbb499211a970362ef2811337da5fd849b829a6ae6f0684235dc7414",
+      "duration": 13.157894736842104
+    },
+    "44": {
+      "frame": {
+        "x": 1024,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 197,
+          "w": 196,
+          "h": 242
+        }
+      },
+      "source_frame": 44,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "cb29b3dbcaec6bae8dab3db34f3245a8c13bf856d1c20238a94f4bedcf4fb35b",
+      "duration": 13.157894736842104
+    },
+    "45": {
+      "frame": {
+        "x": 1536,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 197,
+          "w": 196,
+          "h": 242
+        }
+      },
+      "source_frame": 45,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "044421a00637370d9eb83a8df8bdd9946c92e0609eadf464ac6e84065ea20242",
+      "duration": 13.157894736842104
+    },
+    "46": {
+      "frame": {
+        "x": 2048,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 197,
+          "w": 196,
+          "h": 242
+        }
+      },
+      "source_frame": 46,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "b747dbf0093b801eaaeb1588e4fb4d42adacabff3bf45dcbd2d6242ac32ac894",
+      "duration": 13.157894736842104
+    },
+    "47": {
+      "frame": {
+        "x": 2560,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 194,
+          "w": 196,
+          "h": 245
+        }
+      },
+      "source_frame": 47,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "6b9dabe1651bcf5fcaff30c710aa3c6cec56f899e43a340975ea57b442a7697c",
+      "duration": 13.157894736842104
+    },
+    "48": {
+      "frame": {
+        "x": 3072,
+        "y": 3072,
+        "w": 512,
+        "h": 512,
+        "duration": 1,
+        "trim": {
+          "x": 152,
+          "y": 191,
+          "w": 197,
+          "h": 248
+        }
+      },
+      "source_frame": 48,
+      "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+      "rgbaSha256": "8f949325adfbc77d8912ee30830b0ffec4f485ab81b809a381df7faa4938271a",
+      "duration": 13.157894736842104
+    }
+  },
+  "meta": {
+    "image": "fra-tavarone-strong-punch-low.png",
+    "size": {
+      "w": 3584,
+      "h": 3584
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 49,
+    "source_frame_count": 49,
+    "source_sheet_id": "cmwrt1jr600302d51bqqs452r",
+    "source_start": 0,
+    "source_end": 48,
+    "playback": "forward",
+    "duration_ms": 1000,
+    "impact_ms": 500,
+    "impact_frame": 11
+  }
+}

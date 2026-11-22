@@ -21,6 +21,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
@@ -48,6 +49,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
@@ -75,6 +77,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (medium kick)
     - Calcio potente (strong kick)
@@ -102,6 +105,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggeroù
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
@@ -129,6 +133,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
@@ -156,6 +161,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio Leggero
     - Calcio medio (medium kick v2)
@@ -184,6 +190,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (light kick)
     - Calcio potente (strong kick)
@@ -211,6 +218,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
@@ -238,6 +246,7 @@
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)

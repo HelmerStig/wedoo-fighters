@@ -1025,3 +1025,18 @@ con riferimenti ImageGen e reintegrazione nella palette del PNG originale.
 45 altri frame e pixel esterni alle maschere invariati. Timing invariato.
 Originali e confronto in autosprite-agent/output/marsan-medium-low-sleeve-repair-20261122.
 LocalEdits, hash attuali e hash importati registrati nel manifest e atlas.
+
+PUGNO FORTE BASSO - 22 novembre 2026
+Strong Punch Low per i nove personaggi. Stesso timing del Pugno forte:
+impatto 500 ms e durata 1000 ms a 1x. Tutti solo avanti, recupero incluso.
+441 celle RGBA verificate e PNG originali conservati byte per byte.
+Manifest e timing in animation/strong-punch-low-manifest.json e
+animation/strong-punch-low-timing.json. Report HTML/CSV in
+demo-moves/reports/strong-punch-low-timing.html.
+Rigenera con python demo-moves/scripts/build-strong-punch-low-report.py.
+Controllo alpha su tutti i frame e confronto visivo dei casi sospetti.
+Marsan: trasparenze sorgente su manica e discontinuita sul pantalone durante
+il colpo; anomalie documentate nel report, senza ridisegnare i PNG importati.
+Scie ed effetti gia presenti nei sorgenti conservati. 0 crediti AutoSprite.
+Il preparatore Pages ricomprime senza perdita anche i PNG gia indicizzati,
+verificando i valori RGBA decodificati e mantenendo i metadati colore.

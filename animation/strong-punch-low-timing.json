@@ -1,0 +1,99 @@
+{
+  "animation": "strong-punch-low",
+  "updatedAt": "2026-11-22",
+  "durationMs": 1000,
+  "impactMs": 500,
+  "frameIndexBase": 0,
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwrt17mb001tkz9p8xnf7gec",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 19,
+      "impactSourceFrame": 19,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Eventuali scie o flash sono gia incorporati nel PNG sorgente."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwru694t00acfqpcwamm8ds2",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 18,
+      "impactSourceFrame": 18,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Eventuali scie o flash sono gia incorporati nel PNG sorgente."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwrs9rfd000phckmy46gzv39",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 16,
+      "impactSourceFrame": 16,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Eventuali scie o flash sono gia incorporati nel PNG sorgente."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwrt1bdr0020kz9pymrnv5al",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Eventuali scie o flash sono gia incorporati nel PNG sorgente."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwrsa31w0016117q8eaijs6i",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Eventuali scie o flash sono gia incorporati nel PNG sorgente."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwrt100x002v2d51m7soygtj",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 19,
+      "impactSourceFrame": 19,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwrs7kge000p10k67l3j5ow5",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 19,
+      "impactSourceFrame": 19,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwrt1jr600302d51bqqs452r",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 11,
+      "impactSourceFrame": 11,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwrt2l7s003s2d513pndla0v",
+      "sourceStart": 0,
+      "sourceEnd": 48,
+      "impactFrame": 21,
+      "impactSourceFrame": 21,
+      "playback": "forward",
+      "note": "Posa di impatto scelta visivamente; recupero in guardia accovacciata gia incluso, solo avanti. Controllo alpha: trasparenze sorgente rilevate sulla manica e discontinuita sul pantalone durante il colpo; vedere il report alpha."
+    }
+  ]
+}

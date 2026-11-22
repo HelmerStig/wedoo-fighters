@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Strong Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjgi53001nnw1530lpueer",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE devastating powerhouse forward-lunging two-handed crouching heave across the clip (one strike only, never twice), pure body motion in empty air: staying low on the baseline without standing upright, Alberto coils deeply down dropping both heavy fists low by his knees; then he explodes forward in a deep low lunge driving his full torso forward-right while thrusting BOTH heavy hands together forward-and-upward at 45 degrees with huge forward reach right (back leg driving hard behind); heavy apex hold, then smooth drop back to crouch guard. Preserve exact face, glasses, beard, green sweater, grey jeans, white sneakers, scale and pixel art. Keep entire body inside 512x512 with margin. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

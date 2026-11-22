@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwwuu000b72jnin9ee6na",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Strong Punch Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjo8pf00fdz3ri713ys2n1",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE devastating Ed-style forward-lunging long-reach crouching boxing uppercut across the clip (one strike only, never twice), pure body motion in empty air: staying low on the baseline without standing upright, he coils deeply back dropping his lead shoulder very low near his front knee; then he explodes forward in a deep low lunge driving his torso forward-right while whipping ONE long, crushing diagonal rising boxing uppercut at 40 degrees with huge forward reach right (back leg driving hard, rear hand high in guard); heavy apex hold, then smooth return to crouch guard. Preserve exact face, beanie, solid black outfit, footwear, scale and pixel art. Keep entire body inside 512x512 with margin. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}
