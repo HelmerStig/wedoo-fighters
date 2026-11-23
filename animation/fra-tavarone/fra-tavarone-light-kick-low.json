@@ -1,0 +1,216 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "3a79a063377f42aea514b6be343b95f00399377d218c53c694d688882ceb46ae",
+      "duration": 50.0
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "ab55f3d609390993990b79e9235e83ad46f67e0a4c7a4d1037f76c06c42b8b4b",
+      "duration": 50.0
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "fc2ecd4cb7e2576c514958eaa7e497cb6670d1dddf8fdde0289b09ca98c77c68",
+      "duration": 50.0
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "ebff64fa8b962b02b469b1d3cc794dd0d65f077e592e7a1530dcf838af788e15",
+      "duration": 50.0
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "7dcf3dd64af43e08e8ee4e15789849e591f0ac5bc151c617110299fb14bf031c",
+      "duration": 50.0
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "7338126c50251caef86c83e0043f50f706ba23589d7397448ae7f92587128f2e",
+      "duration": 50.0
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "5fc419712de8ae40bcc88c0994686e4f4cb2d101c8cd1680a59091e9f8f4cd7c",
+      "duration": 30.0
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "ad57a4d04ae63e82a9e224ff9351e87106cccc83a670a9e64710be62071db1f3",
+      "duration": 30.0
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "0193dc9abdbd368ad97aa5e2f4f6cbec8cde4f8cabd8f96412896d555ed95a6d",
+      "duration": 30.0
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "d53f1bb721981fef7ecd28e2aab1af48462e50d2bdc6bf9e22d81e7470f73172",
+      "duration": 30.0
+    },
+    "10": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "78a9b52a09b21cc6dd30f8e54e18a1db4386457a9f7907a5809745edcd5a9c98",
+      "duration": 30.0
+    },
+    "11": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "751589b65a9ad8cddd1f7030ebf199bcf435f0a1e01d64a088125d37a9af46a7",
+      "duration": 30.0
+    },
+    "12": {
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "54f5b8411aaffcd5910ddfc456f1ad9062379c9b4d88e756d408d4ba47ac6dfc",
+      "duration": 30.0
+    },
+    "13": {
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "4202ea15b356b89ecbc465ecc7549f3ae4cd356c5cb4a8c3ce46342af441f302",
+      "duration": 30.0
+    },
+    "14": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "88e513e6c0de5c95b578f770db435b26f3a0dc9e2c5a1020e9bf1ce88e59c1f4",
+      "duration": 30.0
+    },
+    "15": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+      "rgbaSha256": "63d3fa03a90a250c52316aff7429ce2154027494fb96929037d83cd558751233",
+      "duration": 30.0
+    }
+  },
+  "meta": {
+    "image": "fra-tavarone-light-kick-low.png",
+    "size": {
+      "w": 3584,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 16,
+    "source_sheet_id": "cmwsye14500u1b2lqny11i7sp",
+    "source_frame_count": 42,
+    "source_start": 0,
+    "source_end": 15,
+    "playback": "forward",
+    "duration_ms": 600,
+    "impact_ms": 300,
+    "impact_frame": 6
+  }
+}

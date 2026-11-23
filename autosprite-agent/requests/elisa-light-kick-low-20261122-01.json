@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9dyrs900045e49mr49cdz9",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjh039000fe52m9x2u64fj",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE crisp, compact Cammy-style SF6 crouching light kick across the clip (strictly one kick only, never twice), pure body motion in empty air: staying low and compact on the baseline without standing up, Elisa shifts slightly onto her support foot and snaps ONE short, agile low ankle tap straight forward along the ground with her front foot (short reach, fists tight in guard); brief clean apex, then smooth retraction back into the exact starting kneeling crouch guard pose. Preserve exact face, hairstyle, denim jacket, dark pants, footwear, scale and pixel art. Keep entire body inside 512x512 with margin. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

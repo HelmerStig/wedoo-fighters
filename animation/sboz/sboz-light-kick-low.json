@@ -1,0 +1,252 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "5026120dedcedad7ca81294fc2668b76ecb59880b92fa8ea2419f00e007112de",
+      "duration": 42.857142857142854
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "b190fead3e82e1edd98bf8c72114f044990081d2a7183acda3140368eddcaf2e",
+      "duration": 42.857142857142854
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "07f5189a420da6b4aa8cd8fd1db457fd09f25d732b096b18e714d45b2537fae4",
+      "duration": 42.857142857142854
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "d0f17204f95823e45f031fac15468147ff6c717a90e35938d8d02f15e5e51434",
+      "duration": 42.857142857142854
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "41e782bcba88b8e754a7065a63ac5b740b26097d780e331708a5c182add13f5c",
+      "duration": 42.857142857142854
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "61b5bc3dc64b268f9672f1aded7c656f62af7cc00d9982d71f34ba5d4c54866c",
+      "duration": 42.857142857142854
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "0cb813f9901bec12c42fbd6a32f44d914e345f8f67ede3b4453c0dae0e9b7945",
+      "duration": 42.857142857142854
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "bef355d57a5c2de08474f8ad1a33170d14016b687983dd172b09539c621cd36f",
+      "duration": 25.0
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "80a3ccbfc449e59e68734bbec04181d37b7e45e1c8f0609525abeba087d68006",
+      "duration": 25.0
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "ffd099251cf5c3587d10ee0cadcfd17396e34f8b26a1253a174bbd74d4d760a1",
+      "duration": 25.0
+    },
+    "10": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "c7762de3015a07877d21757dd03651848e5470847201f9dbfb4ae32ee69a4a9b",
+      "duration": 25.0
+    },
+    "11": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "caf6579299db0bb61e53737ec3a6a4efcec3d4fe4b16f83711b408989ab9d1e9",
+      "duration": 25.0
+    },
+    "12": {
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "98b149605f2f1dc74ce49b8da9bfdcacc8a4238d8ac02eb87106e6d09545f18c",
+      "duration": 25.0
+    },
+    "13": {
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "cd242cb68f549a89217d57371094dd1a1e92d92980c82d555a7d0154d3ff8b61",
+      "duration": 25.0
+    },
+    "14": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "acd3bbeda2ec124c492af9783b35c68ee6f72fd4b5e6f25a1272b67e829adc95",
+      "duration": 25.0
+    },
+    "15": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "0a1242cd6ea9a9f92938c2363bc7c9a5b707c64811934bc82baba9a5c1ac4231",
+      "duration": 25.0
+    },
+    "16": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 16,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "c89f56a0d13b094dc0c9e031085593539cf0573ca61ac349fa740353809eb011",
+      "duration": 25.0
+    },
+    "17": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 17,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "dd0f178eca7b45a33dd9370e1e7faa00fa4e8bbc8f5f533637c9f84f9a62728b",
+      "duration": 25.0
+    },
+    "18": {
+      "frame": {
+        "x": 2048,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 18,
+      "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+      "rgbaSha256": "2324b7d2fc9f28e43dd4d42c7950583ccbe7ee51bcff8633122015c84b7d028d",
+      "duration": 25.0
+    }
+  },
+  "meta": {
+    "image": "sboz-light-kick-low.png",
+    "size": {
+      "w": 3584,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 19,
+    "source_sheet_id": "cmwsynvdl000kt4h5k5af2j30",
+    "source_frame_count": 19,
+    "source_start": 0,
+    "source_end": 18,
+    "playback": "forward",
+    "duration_ms": 600,
+    "impact_ms": 300,
+    "impact_frame": 7
+  }
+}

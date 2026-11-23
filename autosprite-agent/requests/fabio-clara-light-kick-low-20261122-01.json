@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjlj4f00gfrqaofz5yj53q",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE crisp, compact Guile-style SF6 crouching light kick across the clip (strictly one kick only, never twice), pure body motion in empty air: staying low and compact on the baseline without standing up, he shifts slightly onto his support foot and snaps ONE short, quick military low shin poke straight forward along the ground with his front foot (short reach, fists tight in guard); brief clean apex, then smooth retraction back into the exact starting kneeling crouch guard pose. Preserve exact face, beard, plaid shirt, cargo pants, sneakers, scale and pixel art. Keep entire body inside 512x512 with margin. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

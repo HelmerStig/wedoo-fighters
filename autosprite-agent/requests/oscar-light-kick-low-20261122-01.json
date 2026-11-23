@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwowcuk500ft7frnzx9sh0x8",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE crisp, compact Ryu-style Street Fighter 6 crouching light kick across the clip (strictly one kick only, never twice), pure body motion only in empty air: staying low and compact on the ground baseline without standing up, Oscar shifts his weight slightly back onto his rear knee and tucks his front knee in briefly; then he snaps ONE short, quick, crisp low shin-and-ankle poke straight forward along the ground with his front foot (short reach, leg only partially extended low along the floor, upper body upright and both fists held tight in guard by his chest); brief clean apex, then smooth retraction back into the exact starting kneeling crouch guard pose. Keep entire body inside 512x512 with margin. Preserve Oscar's exact face, solid black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

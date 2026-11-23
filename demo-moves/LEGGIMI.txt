@@ -1040,3 +1040,15 @@ il colpo; anomalie documentate nel report, senza ridisegnare i PNG importati.
 Scie ed effetti gia presenti nei sorgenti conservati. 0 crediti AutoSprite.
 Il preparatore Pages ricomprime senza perdita anche i PNG gia indicizzati,
 verificando i valori RGBA decodificati e mantenendo i metadati colore.
+
+CALCIO LEGGERO BASSO - 23 novembre 2026
+Light Kick Low per i nove personaggi. Stesso timing del Calcio leggero:
+impatto 300 ms, durata totale 600 ms. Solo avanti, recupero gia incluso.
+Intervalli salvati AutoSprite applicati una sola volta; Oscar usa 9-40.
+175 celle RGBA confrontate dopo export; scala e padding conservati.
+Loop e CRT seguono le impostazioni della galleria; nessun effetto aggiunto.
+Manifest e timing: animation/light-kick-low-manifest.json e
+animation/light-kick-low-timing.json. Report HTML/CSV e controllo alpha in
+demo-moves/reports/light-kick-low-timing.html.
+Rigenera con python demo-moves/scripts/build-light-kick-low-report.py.
+Nessuna generazione remota eseguita: 0 crediti.

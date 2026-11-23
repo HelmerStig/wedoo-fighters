@@ -1,0 +1,240 @@
+{
+  "frames": {
+    "0": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 0,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "acd58c64c1eaf7a7b6b24dfb4436753d34b7bc0bd3265557aa88665d840dd215",
+      "duration": 37.5
+    },
+    "1": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 1,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "998088849510f7745d2fdf20f71657dfe4e6c2bed73fa5110915eba0068288c4",
+      "duration": 37.5
+    },
+    "2": {
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 2,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "5abbb1a9e23efb027cc91a155c561049f51eab1d614d32219d92c32e8aa34176",
+      "duration": 37.5
+    },
+    "3": {
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 3,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "2f39b96bbe42b6da8ade5832c224b66cdeb5ef0b0fc8975e0c2d53dd342e4c77",
+      "duration": 37.5
+    },
+    "4": {
+      "frame": {
+        "x": 2048,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 4,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "934353238a93a36e447b305f115afa8285adff6aab9777388ef5c66dbd327531",
+      "duration": 37.5
+    },
+    "5": {
+      "frame": {
+        "x": 2560,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 5,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "9067c9d2c136f470663ccf3cbd5040bd3e386a7b253ad158e374bb0bd1fc42b3",
+      "duration": 37.5
+    },
+    "6": {
+      "frame": {
+        "x": 3072,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 6,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "b250b9126ffbcb0ee71c274a19c0e4bcf028e948c5d833febd3f3b35326666e6",
+      "duration": 37.5
+    },
+    "7": {
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 7,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "3c5b242ffc1b57fed253f683da0c0c09441d0cc85332f9396bb3f1d82f5a2191",
+      "duration": 37.5
+    },
+    "8": {
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 8,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "39890d5fa3f4446e9ca6e3458596da61803c93e5fae1e595b257a5967f0a5ceb",
+      "duration": 30.0
+    },
+    "9": {
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 9,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "d55ab546546c1d75c346a34b939914e1e5dd981f23fb28bad24002221a2588f2",
+      "duration": 30.0
+    },
+    "10": {
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 10,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "a0659a76e9ced61716d98a8d52ca6b79681d6096ae6c8cb06cbed0a310e5cccc",
+      "duration": 30.0
+    },
+    "11": {
+      "frame": {
+        "x": 2048,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 11,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "a51f17f61740abb9621f74baa7e47e633b6e9f6958f196661a054a59da14d63a",
+      "duration": 30.0
+    },
+    "12": {
+      "frame": {
+        "x": 2560,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 12,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "ba6ad87419988ae366077c4ba50d6dc7dccb426b30c1fd3cc2021abdeb0a6edf",
+      "duration": 30.0
+    },
+    "13": {
+      "frame": {
+        "x": 3072,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 13,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "7e380bea302bb9c2e3fe32c6df883c13514aa3029d8664365a44d60182d9313e",
+      "duration": 30.0
+    },
+    "14": {
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 14,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "428e8de63afbc3ac60191b73687ae24fa4e89293b308fbdff90bdf3d189724a4",
+      "duration": 30.0
+    },
+    "15": {
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 15,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "ca856f6ec2cbe5b6e3262c2dafbe0546b0cc3255f0c8a7ecfebbad5f43a8aef3",
+      "duration": 30.0
+    },
+    "16": {
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 16,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "c81fdd78aaca75d7551bb78e28199c3b5fb897c1044bdd80c6794740ce3e4b67",
+      "duration": 30.0
+    },
+    "17": {
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "source_frame": 17,
+      "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+      "rgbaSha256": "2a287b4bdca60982dfe2ca4c0337d303c0bdc8371e16e674a2615fa43cb5845e",
+      "duration": 30.0
+    }
+  },
+  "meta": {
+    "image": "marsan-light-kick-low.png",
+    "size": {
+      "w": 3584,
+      "h": 1536
+    },
+    "frame_size": {
+      "w": 512,
+      "h": 512
+    },
+    "frame_count": 18,
+    "source_sheet_id": "cmwsyxpyt000tyymq8d223w9o",
+    "source_frame_count": 29,
+    "source_start": 0,
+    "source_end": 17,
+    "playback": "forward",
+    "duration_ms": 600,
+    "impact_ms": 300,
+    "impact_frame": 8
+  }
+}

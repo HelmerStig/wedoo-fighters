@@ -1,0 +1,22 @@
+{
+  "characterId": "cmv9hw3c3001t83r8jht5u7vy",
+  "request": {
+    "videoTier": "turbo",
+    "turboMode": "first_frame",
+    "durationSec": 2,
+    "frameCount": 48,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Kick Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjgi53001nnw1530lpueer",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE crisp, sturdy Honda-style SF6 crouching light kick across the clip (strictly one kick only, never twice), pure body motion in empty air: staying low and compact on the baseline without standing up, Alberto shifts slightly onto his support foot and drives ONE short, solid low heel-and-foot tap straight forward along the ground (short reach, fists tight in guard by his chest); brief clean apex, then smooth retraction back into the exact starting kneeling crouch guard pose. Preserve exact face, glasses, beard, green sweater, grey jeans, white sneakers, scale and pixel art. Keep entire body inside 512x512 with margin. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}
