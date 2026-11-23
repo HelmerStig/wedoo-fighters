@@ -5,98 +5,198 @@
       "y": 0,
       "w": 512,
       "h": 512,
-      "source_frame": 0
+      "source_frame": 0,
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "47ef03f58795e075370d9525e7e2823c5fe315206a5bd6042ec4187051b349dd"
     },
     "1": {
       "x": 512,
       "y": 0,
       "w": 512,
       "h": 512,
-      "source_frame": 1
+      "source_frame": 1,
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "529361553c8fcd84ec336963189d3ada7194aca6c61961fb72115b8ad0293f27"
     },
     "2": {
       "x": 1024,
       "y": 0,
       "w": 512,
       "h": 512,
-      "source_frame": 2
+      "source_frame": 2,
+      "frame": {
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "b279a019fe3416be806516945448f2d74a75ec34f64e33dbee1f0094e43e7609",
+      "importedRgbaSha256": "2a68940a0df69db1299bd9050f343efcc5edfbe227a94cf25c88b02f73816d1a",
+      "locallyEdited": true
     },
     "3": {
       "x": 1536,
       "y": 0,
       "w": 512,
       "h": 512,
-      "source_frame": 3
+      "source_frame": 3,
+      "frame": {
+        "x": 1536,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "52dce4422604aa4ce04e9dca32cf975d0639011c173bdab25d8f08e9a0b529ba"
     },
     "4": {
       "x": 0,
       "y": 512,
       "w": 512,
       "h": 512,
-      "source_frame": 4
+      "source_frame": 4,
+      "frame": {
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "e9cb81c035372428d2313d7df00b15e2863eba11133e0495757d1e7cc6429067"
     },
     "5": {
       "x": 512,
       "y": 512,
       "w": 512,
       "h": 512,
-      "source_frame": 5
+      "source_frame": 5,
+      "frame": {
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "d55307d731c77d2e3951d043e46f577c551e10e290ec5c7ae36844fe79ffd6fc"
     },
     "6": {
       "x": 1024,
       "y": 512,
       "w": 512,
       "h": 512,
-      "source_frame": 6
+      "source_frame": 6,
+      "frame": {
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "4959da61d973427d44d838b4f7a014f476c02a2ba060eb1ff855204ad085038c"
     },
     "7": {
       "x": 1536,
       "y": 512,
       "w": 512,
       "h": 512,
-      "source_frame": 7
+      "source_frame": 7,
+      "frame": {
+        "x": 1536,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "e4e15185afccdcbf24b3741433d739ab3688eb3dbce944d37dfc4d1292b6c49d"
     },
     "8": {
       "x": 0,
       "y": 1024,
       "w": 512,
       "h": 512,
-      "source_frame": 8
+      "source_frame": 8,
+      "frame": {
+        "x": 0,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "5742d63d09919237aab69637f60ce23adf1ab484d8119c6e701a63cb06ecb05b"
     },
     "9": {
       "x": 512,
       "y": 1024,
       "w": 512,
       "h": 512,
-      "source_frame": 9
+      "source_frame": 9,
+      "frame": {
+        "x": 512,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "e0d9c1419c488fddd09ab41ee2d180535c119bef26215fb8b8451ff4df202fb2"
     },
     "10": {
       "x": 1024,
       "y": 1024,
       "w": 512,
       "h": 512,
-      "source_frame": 10
+      "source_frame": 10,
+      "frame": {
+        "x": 1024,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "275bd81747610a82d431d5e9ae4f92b56ebc57634e00c8abd4cb3de8999f8e7c"
     },
     "11": {
       "x": 1536,
       "y": 1024,
       "w": 512,
       "h": 512,
-      "source_frame": 11
+      "source_frame": 11,
+      "frame": {
+        "x": 1536,
+        "y": 1024,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "5c9c22f7462901d7035b98aff62b42531c658fab5ca03e466660956940fd7c5f"
     },
     "12": {
       "x": 0,
       "y": 1536,
       "w": 512,
       "h": 512,
-      "source_frame": 12
+      "source_frame": 12,
+      "frame": {
+        "x": 0,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "5889c2df46a6ec8e91f23d33bbf3c822ac9bdf166d3ddce9d2e25f5a60ffb21e"
     },
     "13": {
       "x": 512,
       "y": 1536,
       "w": 512,
       "h": 512,
-      "source_frame": 13
+      "source_frame": 13,
+      "frame": {
+        "x": 512,
+        "y": 1536,
+        "w": 512,
+        "h": 512
+      },
+      "rgbaSha256": "028764fbd0f4d158beae4edf0e5ab63927a8c576077f47899b17bcac5326f529"
     }
   },
   "meta": {
@@ -117,6 +217,14 @@
     "source_frame_count": 16,
     "source_frame_start": 0,
     "source_frame_end": 13,
-    "speed_multiplier": 1
+    "speed_multiplier": 1,
+    "local_edits": {
+      "registeredAt": "2026-11-23T16:18:36.787828+00:00",
+      "note": "Rimosso residuo bianco-celeste fra mento e pugno nel frame 3 (da 1); maschera locale, tutti gli altri pixel invariati.",
+      "changedFrames": [
+        2
+      ],
+      "verification": "Reviewed local edits; current decoded RGBA hashes recorded after validating unchanged canvas and frame bounds. Source IDs, frame order and timing preserved."
+    }
   }
 }

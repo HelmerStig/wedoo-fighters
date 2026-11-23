@@ -1052,3 +1052,48 @@ animation/light-kick-low-timing.json. Report HTML/CSV e controllo alpha in
 demo-moves/reports/light-kick-low-timing.html.
 Rigenera con python demo-moves/scripts/build-light-kick-low-report.py.
 Nessuna generazione remota eseguita: 0 crediti.
+
+
+23 novembre 2026 - Calcio medio basso e pulizia sprite
+Medium Kick Low integrato per i nove personaggi: impatto 500 ms, ciclo 800 ms.
+Solo avanti: il recupero e gia incluso. Alberto aggiornato alla versione del 23 novembre, ore 16:16 UTC;
+tutti i fogli selezionati hanno 49 frame. Celle, padding e scala invariati.
+Manifest/timing: animation/medium-kick-low-manifest.json e medium-kick-low-timing.json.
+Report: demo-moves/reports/medium-kick-low-timing.html e CSV; rigenerare con
+python demo-moves/scripts/build-medium-kick-low-report.py.
+Pulizia diretta nei PNG, non nel player: riempimenti bianchi di Elisa
+(crouch 2-3, defeat 1-4, strong-kick 66-67) e Peppo (block 3); trasparenze
+di Marsan in strong-punch-low (13,14,16-19,21-25). Numeri da 1.
+Totale 20 fotogrammi, 13431 pixel; nessun pixel esterno alle maschere modificato.
+Scie, polvere, particelle e flash preservati. Fonte importata e hash correnti
+registrati nei manifest/atlas. Prima/dopo, maschere e prompt ImageGen in
+reports/sprite-cleanup-20261123/index.html (cartella reports nella radice).
+
+23 novembre 2026 - Reintegrazione dei tagli Medium Kick Low
+Ultime versioni e loop salvati riletti da AutoSprite per tutti i nove.
+323 celle: Alberto 35, Fabio Clara 39, Sboz 40, Pippo 39, Peppo 35,
+Oscar 36, Elisa 30, Fra Tavarone 35, Marsan 34. Taglio applicato una volta.
+Impatto 500 ms, totale 800 ms, solo avanti; savedSpeed 2x informativo.
+La trasparenza della punta della scarpa di Alberto e ancora nel sorgente;
+la correzione locale era stata sospesa per consentire questi nuovi tagli.
+
+23 novembre 2026 - Corretta la punta della scarpa di Alberto in Medium Kick Low.
+Frame 12-24 (da 1), 11772 pixel dentro maschere locali; gli altri pixel e
+i 22 frame non interessati sono identici. Piede arretrato ed effetti invariati.
+Report e prompt: reports/alberto-medium-kick-low-foot-fix-20261123/index.html
+Manifest e atlas conservano gli hash importati e registrano i ritocchi locali.
+
+23 novembre 2026 - Heavy Kick Low Sweep
+Calcio potente basso (spazzata), nove personaggi, 271 frame selezionati.
+Impatto sulla prima passata verso destra a 500 ms, ciclo completo 900 ms.
+Solo avanti: rotazione e recupero inclusi. Tagli salvati applicati una volta;
+savedSpeed 2x conservato come metadata senza moltiplicare il timing.
+Manifest/timing: animation/heavy-kick-low-sweep-manifest.json e
+heavy-kick-low-sweep-timing.json. Report HTML/CSV e pose in
+demo-moves/reports/heavy-kick-low-sweep-timing.html; rigenera con
+python demo-moves/scripts/build-heavy-kick-low-sweep-report.py.
+Controllo alpha/bianchi: piccoli residui bianchi sorgente di Peppo nei frame
+3,9,15 (da 1), documentati e non rimossi insieme alle scie. Gli altri otto
+non presentano difetti evidenti nei candidati esaminati. 0 crediti AutoSprite.
+Oscar: piede al bordo destro della cella nel frame 11 (da 1), gia tagliato
+nel sorgente; documentato nel report, scala e padding conservati.

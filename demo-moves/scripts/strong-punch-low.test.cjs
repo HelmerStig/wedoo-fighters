@@ -38,6 +38,6 @@ test('controllo alpha riferito ai fogli correnti e difetti sorgente Marsan docum
  const audit=read('animation/strong-punch-low-alpha-review.json');assert.equal(audit.items.length,9);
  assert.equal(audit.items.reduce((n,i)=>n+i.framesChecked,0),441);
  for(const item of manifest.items){const entry=audit.items.find(e=>e.character===item.character);assert.equal(entry.sourceSheetId,item.sourceSheetId);assert.equal(entry.pngSha256,item.pngSha256);}
- assert.equal(audit.items.find(e=>e.character==='MARSAN').status,'source-defect');
+ const repaired=audit.items.find(e=>e.character==='MARSAN');assert.equal(repaired.status,'locally-repaired');assert.equal(repaired.sourceStatus,'source-defect');assert.equal(repaired.repairedFrames.length,11);assert.ok(repaired.repairedFrames.every(f=>f.outsideMaskChanged===0));
  for(const file of audit.evidence)assert.ok(fs.existsSync(path.join(root,file)));
 });

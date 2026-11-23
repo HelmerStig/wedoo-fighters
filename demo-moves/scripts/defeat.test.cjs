@@ -2,13 +2,13 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const {advanceAnimation}=require('../player-core.js'),root=path.resolve(__dirname,'../..'),read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const manifest=read('animation/defeat-manifest.json'),roster=read('animation/crouch-manifest.json');
 const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'demo-moves/catalog.js'),'utf8'),context);
-test('Defeat usa nove sorgenti corrette, i PNG originali e tutti i frame nel solo ordine avanti',()=>{
+test('Defeat usa nove sorgenti corrette, gli hash correnti e la provenienza originale e tutti i frame nel solo ordine avanti',()=>{
  assert.deepEqual(manifest.items.map(i=>i.character.toLowerCase()).sort(),roster.items.map(i=>i.character.toLowerCase()).sort());
  assert.equal(new Set(manifest.items.map(i=>i.sourceSheetId)).size,9);
  for(const item of manifest.items){
   assert.equal(item.characterId,roster.items.find(c=>c.character===item.character).characterId);
   assert.equal(item.sourceAnimationName,'Defeat');assert.equal(item.playback,'forward');
-  assert.equal(item.frames,49);assert.equal(item.pngSha256,item.sourcePngSha256);
+  assert.equal(item.frames,49);assert.equal(item.importedPngSha256??item.pngSha256,item.sourcePngSha256);if(item.localEdits){assert.ok(item.localEdits.changedFrames.length>0);assert.notEqual(item.pngSha256,item.importedPngSha256);}
   const png=fs.readFileSync(path.join(root,item.png)),atlas=read(item.atlas),frames=Object.values(atlas.frames);
   assert.equal(crypto.createHash('sha256').update(png).digest('hex'),item.pngSha256);assert.equal(atlas.meta.source_sheet_id,item.sourceSheetId);
   assert.equal(frames.length,item.frames);

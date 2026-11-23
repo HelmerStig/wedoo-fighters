@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-23",
+  "animation": "medium-kick-low",
+  "framesChecked": 323,
+  "method": "Automatic alpha and white-component scan of all 323 currently integrated cells; visual review of all contact sheets, alpha-ranked candidates and zoomed confirmed defect. Natural spaces between limbs and source effects are excluded from defect classifications. This does not prove absence of every small pixel artifact.",
+  "findings": [
+    {
+      "character": "alberto",
+      "kind": "transparent-shoe-tip",
+      "examplePlaybackFrame": 13,
+      "frameNumbering": "1-based current exported sequence",
+      "exampleBox": [
+        425,
+        275,
+        468,
+        340
+      ],
+      "note": "Presente durante il plateau di estensione e in transizione; esempio frame13. La suola grigia del piede arretrato e opaca e corretta. Non e un riempimento bianco."
+    }
+  ],
+  "items": [
+    {
+      "character": "alberto",
+      "sourceSheetId": "cmwthb6u700c514dqy5yuxebz",
+      "png": "animation/alberto/alberto-medium-kick-low.png",
+      "pngSha256": "c5237014f03d21cb3e71cda131aac967b1d08608ec6e0a6ec36ad07f169e9048",
+      "framesChecked": 35,
+      "alphaStatus": "confirmed-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Trasparenza confermata sulla punta della scarpa che calcia"
+    },
+    {
+      "character": "fabio-clara",
+      "sourceSheetId": "cmwtet0qa0052jwcv5qvu3ygv",
+      "png": "animation/fabio-clara/fabio-clara-medium-kick-low.png",
+      "pngSha256": "8eed01992b45bf00caeb454989ba43164ea9c0209615bdce264a4d71ab86ffaa",
+      "framesChecked": 39,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "sboz",
+      "sourceSheetId": "cmwteu6aj00587yk410ngozcj",
+      "png": "animation/sboz/sboz-medium-kick-low.png",
+      "pngSha256": "dcd11039372c7a2ea3926b72ef472ece606105a476624775dc17e6259f7b193c",
+      "framesChecked": 40,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "pippo",
+      "sourceSheetId": "cmwthkp66000sllrv9wyk457x",
+      "png": "animation/pippo/pippo-medium-kick-low.png",
+      "pngSha256": "bb304115a9fdc637be13e94ff5e55265e48d88762e1fdf00efc16847552c45bf",
+      "framesChecked": 39,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "peppo",
+      "sourceSheetId": "cmwtgk1gb01k0o7xzucfga4m8",
+      "png": "animation/peppo/peppo-medium-kick-low.png",
+      "pngSha256": "8cb3ddddd00e711523bc9c65613acd6e83992a0d2d21f05090f1abc7de4f2da2",
+      "framesChecked": 35,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "oscar",
+      "sourceSheetId": "cmwtemp0700307yk4jiy30wn2",
+      "png": "animation/oscar/oscar-medium-kick-low.png",
+      "pngSha256": "0b78777e6d45fbbd6311c3f8d3185c4e26d7f54e75714dda177f7bf11b29e8b0",
+      "framesChecked": 36,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "elisa",
+      "sourceSheetId": "cmwthckem01a08hrnu1y7ep8s",
+      "png": "animation/elisa/elisa-medium-kick-low.png",
+      "pngSha256": "2826965ec9c699cf47ed5a5ba6cbcbc6d6c3470fbe322bca7db5efb0ac7e7f4e",
+      "framesChecked": 30,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "fra-tavarone",
+      "sourceSheetId": "cmwtesxov004xjwcvmdu9whzl",
+      "png": "animation/fra-tavarone/fra-tavarone-medium-kick-low.png",
+      "pngSha256": "80bfe2399f0a304e560836ca52ffaeae1473ce23de94ad9630c9ee22c4fb4636",
+      "framesChecked": 35,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    },
+    {
+      "character": "marsan",
+      "sourceSheetId": "cmwthg8i300ke4q0ny9ac0nqx",
+      "png": "animation/marsan/marsan-medium-kick-low.png",
+      "pngSha256": "569d30870f3c6ce088e0c444c55e0b4ff528b1bf6e1574eade531087593e78e5",
+      "framesChecked": 34,
+      "alphaStatus": "no-obvious-defect",
+      "whiteStatus": "no-improper-white-fill-observed",
+      "note": "Nessun difetto evidente nei fotogrammi e candidati esaminati"
+    }
+  ],
+  "assetsModified": false,
+  "resolution": {
+    "character": "alberto",
+    "status": "locally-repaired",
+    "report": "../alberto-medium-kick-low-foot-fix-20261123/index.html",
+    "changedFrames": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "pngSha256": "f09e1d6b4a17544b34ee4d2a3bb870c1329627351ac9fac81576cc77832cd537"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwdtc003583r8bjf9ed1l",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Heavy Kick Low Sweep",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjlj4f00gfrqaofz5yj53q",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE heavy Guile-style military 360-degree spinning low sweep in ONE direction only (NEVER reverse), pure body motion in empty air: staying compact and centered low on the baseline, he plants his rear hand firmly on the floor as a center pivot and spins solidly in ONE uninterrupted 360-degree turn\u2014from facing RIGHT, turning BACK to camera while sweeping the leg forward-right just above the floor, continuing the same spin to face LEFT, then FRONT to camera, and back to facing RIGHT in the starting crouch guard pose. Keep both feet well inside 512x512 with wide margin on left and right edges. Preserve exact face, beard, plaid shirt, cargo pants, sneakers, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

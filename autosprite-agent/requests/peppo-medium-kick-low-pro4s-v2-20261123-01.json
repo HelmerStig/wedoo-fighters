@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwwuu000b72jnin9ee6na",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Kick Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjo8pf00fdz3ri713ys2n1",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE fluid Chun-Li-style SF6 crouching medium split-kick across the clip (one kick only, never twice), pure body motion in empty air: NEVER rise or stand up—keep hips and head strictly low at crouch height throughout wind-up, kick, and recovery. Peppo shifts smoothly onto his low bent support leg and extends ONE long low Wushu split-kick far straight forward along the ground baseline (kicking leg stretched fully straight right just above the floor, torso balanced low with arms poised diagonally for counterweight); brief apex hold at full reach, then smooth retraction back into the starting kneeling crouch guard pose. Keep entire body inside 512x512 with margin. Preserve exact face, beanie, solid black outfit, footwear, scale and pixel art. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}

@@ -741,8 +741,19 @@
       "trimmed": true,
       "png": "animation/peppo/peppo-block.png",
       "atlas": "animation/peppo/peppo-block.json",
-      "pixelVerification": "decoded RGBA comparison per source frame and exported PNG",
-      "pixelHash": "267eea1d71ce8d6a7a06c096080208aa7660eefc089ddd48edb01128aa35d6cc"
+      "pixelVerification": "Original import verified against AutoSprite sources. Current PNG includes reviewed local edits recorded in localEdits; current frame hashes are in the atlas and imported hashes are retained for edited frames.",
+      "pixelHash": "cbf772f64f170910df62620c7f05c4c85ad1f7aa54eb7e89ec8d5634f727b2ed",
+      "pngSha256": "d52cd4f23373f19854c2ed51bac18646dcb4bdb3941cebfb14f5cf14bd3d4e24",
+      "importedPixelHash": "267eea1d71ce8d6a7a06c096080208aa7660eefc089ddd48edb01128aa35d6cc",
+      "importedPngSha256": "5a5df67c0dad8774f50284511f3496b0cf32d7cccc9cda0e28a3aba3e82c794e",
+      "localEdits": {
+        "registeredAt": "2026-11-23T16:18:36.787828+00:00",
+        "note": "Rimosso residuo bianco-celeste fra mento e pugno nel frame 3 (da 1); maschera locale, tutti gli altri pixel invariati.",
+        "changedFrames": [
+          2
+        ],
+        "verification": "Reviewed local edits; current decoded RGBA hashes recorded after validating unchanged canvas and frame bounds. Source IDs, frame order and timing preserved."
+      }
     },
     {
       "character": "PIPPO",

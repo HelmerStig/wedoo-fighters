@@ -24,6 +24,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
 
@@ -53,6 +55,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
 
@@ -82,6 +86,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick)
     - Calcio potente (strong kick)
 
@@ -111,6 +117,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggeroù
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
 
@@ -140,6 +148,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
 
@@ -169,6 +179,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio Leggero
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
@@ -199,6 +211,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (light kick)
     - Calcio potente (strong kick)
 
@@ -228,6 +242,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
 
@@ -257,6 +273,8 @@
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
+    - Calcio medio basso (Medium Kick Low)
+    - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
     - Calcio potente (strong kick)
 

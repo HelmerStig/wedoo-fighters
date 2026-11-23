@@ -1,0 +1,44 @@
+[
+  {
+    "key": "marsan-12",
+    "prompt": "Repair this exact 512x512 fighting-game sprite. It contains accidental transparent holes in the LEFT SIDE OF THE IMAGE bent rear upper arm and elbow sleeve (cream/navy tracksuit), around x168..252 y240..315. Reconstruct ONLY the missing opaque sleeve fabric inside its existing outline. Keep the pose, exact character proportions, canvas registration, all intact pixels, face, limbs, background transparency and original pixel art palette. NO redrawing, scaling, extra effects. Same 512x512 image.",
+    "generatedSha256": "cf106a35b27b2dc7989fb9a0ba69b5038b22812b776c173e9b840209fccae427",
+    "tool": "image_gen built-in",
+    "use": "Masked reconstruction reference; full generated image never replaces a source frame."
+  },
+  {
+    "key": "marsan-16",
+    "prompt": "Precise sprite repair, exact same 512x512 canvas and pose. Reconstruct accidentally transparent patches inside the bent rear arm on image LEFT, navy and cream tracksuit sleeve at x190..270 y220..290; preserve cuff, hand and contours. Also restore the missing cream fabric of the front forearm near x315..360 y280..320 only if damaged. Preserve all intact pixels, clothing texture, face, jeans, framing. Transparent background. No effects added or removed.",
+    "generatedSha256": "8444264ee3e52054b7a17cb4ba7e284580ad27be70cb8139406ad57d3bbfaaa1",
+    "tool": "image_gen built-in",
+    "use": "Masked reconstruction reference; full generated image never replaces a source frame."
+  },
+  {
+    "key": "marsan-20",
+    "prompt": "Repair this existing 512x512 sprite without changing its pose or registration. Accidental transparent holes erased the front hip, upper thigh and knee on image RIGHT: jeans around x265..370 y300..365, connecting pelvis to the bent lower leg. Restore that opaque blue denim anatomy using the surviving hip/leg outlines. There is a tiny transparent spot at the rear cream sleeve near x222 y265: restore fabric there. Keep intact pixels and original style and dimensions. Preserve genuine motion streaks and all effects outside the body, no additions. Transparent background.",
+    "generatedSha256": "2487690c27545db26967f45aac5be1c2e87c8df3ff83a2b7743c485e9610901a",
+    "tool": "image_gen built-in",
+    "use": "Masked reconstruction reference; full generated image never replaces a source frame."
+  },
+  {
+    "key": "marsan-21",
+    "prompt": "Exact repair of this existing 512x512 sprite, same pose/canvas/pixel scale. The FRONT UPPER THIGH on image RIGHT is accidentally transparent: a gap between blue denim hip around x300 y325 and bent knee around x352 y350. Reconstruct the missing opaque jeans thigh within its natural outline, including coherent denim folds and shading, connecting the pelvis to knee. Keep every intact body part, raised arm, back leg, clothing and face unchanged. Preserve effects, do not add new effects. Transparent background.",
+    "generatedSha256": "d3f4b892322a6267376145c865635f2bc53d9fa1aa8d7b13ced1484659a9f30e",
+    "tool": "image_gen built-in",
+    "use": "Masked reconstruction reference; full generated image never replaces a source frame."
+  },
+  {
+    "key": "elisa-white",
+    "prompt": "Remove ONLY the accidental small pure white fill between the two wrists/forearms, around x306..321 y200..220, in this exact sprite. That negative space must become truly transparent like the outer background. Preserve both hands, skin, sleeve edges, clothing, face, proportions, exact 512x512 canvas and pose. No other changes.",
+    "generatedSha256": "641a9f986f64c1a1fe1635b42cf211e154e95f43a19dccacdda5b4f1cb8a9a82",
+    "tool": "image_gen built-in",
+    "use": "Masked reconstruction reference; full generated image never replaces a source frame."
+  },
+  {
+    "key": "peppo-white",
+    "prompt": "Remove ONLY the accidental tiny white/cyan filled triangle around x315..322 y166..175 between the character's chin, fist and forearm. This is negative space and must be truly transparent. Preserve face, hands, skin, sleeves, pose, all other pixels and exact 512x512 canvas. No effects or other changes.",
+    "generatedSha256": "1adb75e3aed0f17132ac53c0c9058ecd1978a1038eb7d952f985703d1d89b61f",
+    "tool": "image_gen built-in",
+    "use": "Masked reconstruction reference; full generated image never replaces a source frame."
+  }
+]

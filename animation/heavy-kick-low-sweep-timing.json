@@ -1,0 +1,89 @@
+{
+  "animation": "heavy-kick-low-sweep",
+  "updatedAt": "2026-11-23",
+  "durationMs": 900,
+  "impactMs": 500,
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwthv01401325ky43tlaj03e",
+      "sourceStart": 0,
+      "sourceEnd": 29,
+      "impactFrame": 11,
+      "impactSourceFrame": 11,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwthv4qj01455ky46lxb1msd",
+      "sourceStart": 0,
+      "sourceEnd": 27,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwthwqtk019w5ky4znjahgzr",
+      "sourceStart": 0,
+      "sourceEnd": 33,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwti8cpg000syjyoilf0axzc",
+      "sourceStart": 0,
+      "sourceEnd": 27,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwthwg2p019s5ky4qv32ga1z",
+      "sourceStart": 0,
+      "sourceEnd": 31,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwths73m00fwwe2yju737uii",
+      "sourceStart": 0,
+      "sourceEnd": 27,
+      "impactFrame": 10,
+      "impactSourceFrame": 10,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwthv2pv013c5ky44z7f58x4",
+      "sourceStart": 0,
+      "sourceEnd": 27,
+      "impactFrame": 9,
+      "impactSourceFrame": 9,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwthv6cf014h5ky45xr2yw0o",
+      "sourceStart": 0,
+      "sourceEnd": 30,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwthwz0b00jdwe2yc4ubxu3i",
+      "sourceStart": 0,
+      "sourceEnd": 31,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "note": "Prima passata principale verso destra scelta visivamente come impatto. Rotazione completa e recupero gia inclusi: solo avanti. Le altre estensioni durante il giro sono conservate."
+    }
+  ]
+}

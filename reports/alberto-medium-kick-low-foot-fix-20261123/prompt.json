@@ -1,0 +1,5 @@
+{
+  "prompt": "Repair only the accidental transparency inside the FAR RIGHT kicking sneaker toe and sole of this exact 512x512 sprite. The existing toe outline at x430..462 y280..347 encloses an unwanted hollow transparent region. Restore a solid opaque gray rubber sole/toe, with subtle pixel-art texture and shading consistent with this sneaker and the intact gray sole of the back foot. Preserve white shoe upper, black side stripes, orange heel detail, shoe contour and foot pose. Keep the rest of this image strictly unchanged: both legs, back foot, face, clothing, scale, padding, exact canvas registration. Transparent background outside the original silhouette. No glow, dust, shadows or effects added.",
+  "tool": "image_gen built-in",
+  "referenceFrame": 12
+}

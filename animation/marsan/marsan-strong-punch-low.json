@@ -244,8 +244,10 @@
       },
       "source_frame": 12,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "edd6a9cc718420041d1d5a0cf974eeec8775d8d2983ea43a9714d16eb871ed82",
-      "duration": 23.80952380952381
+      "rgbaSha256": "a5dce678fa922f3b1ba3b8d6b7c4074edb4750efd4021d2bc9b0f97c6c5ba5f3",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "edd6a9cc718420041d1d5a0cf974eeec8775d8d2983ea43a9714d16eb871ed82",
+      "locallyEdited": true
     },
     "13": {
       "frame": {
@@ -263,8 +265,10 @@
       },
       "source_frame": 13,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "32bbff947716c79d5566a8f2825c7c0367a49cf1eed96473e3c03a3511a0966d",
-      "duration": 23.80952380952381
+      "rgbaSha256": "a9b51f2be316545c863c8fac9e2f70aa9206992d9e2dbdf6325ed0db8a9bd69e",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "32bbff947716c79d5566a8f2825c7c0367a49cf1eed96473e3c03a3511a0966d",
+      "locallyEdited": true
     },
     "14": {
       "frame": {
@@ -301,8 +305,10 @@
       },
       "source_frame": 15,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "d93850f21f3844ac38c96e925ac703cc10cb72f2e5d4ff6a0b6698af124d8b9c",
-      "duration": 23.80952380952381
+      "rgbaSha256": "27adcb0ebea2e74035ff47eec9bf1d011aec925247a4c96e9de1eadef85cea4c",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "d93850f21f3844ac38c96e925ac703cc10cb72f2e5d4ff6a0b6698af124d8b9c",
+      "locallyEdited": true
     },
     "16": {
       "frame": {
@@ -320,8 +326,10 @@
       },
       "source_frame": 16,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "6df95fd0f772fc35f76c717037fda0c103976f5b38424e26f1e3a42146b6ff22",
-      "duration": 23.80952380952381
+      "rgbaSha256": "81800c8b116b08596a8d06c92f26fe26d19df7206df4b36ed3aa6e88573ea5b5",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "6df95fd0f772fc35f76c717037fda0c103976f5b38424e26f1e3a42146b6ff22",
+      "locallyEdited": true
     },
     "17": {
       "frame": {
@@ -339,8 +347,10 @@
       },
       "source_frame": 17,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "d16c905f8169305b6bfb61a8ed9799dc4e974cdcba002e44a37842dfd95c35ac",
-      "duration": 23.80952380952381
+      "rgbaSha256": "04ba31dea122d7002ed1044afceb458a6d66a63e26264c0909c7b9ef53cc18df",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "d16c905f8169305b6bfb61a8ed9799dc4e974cdcba002e44a37842dfd95c35ac",
+      "locallyEdited": true
     },
     "18": {
       "frame": {
@@ -358,8 +368,10 @@
       },
       "source_frame": 18,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "7b7515feef5b6c0ffce1dab66041537078b5c1bfa34b241727f44ed4caf2be9a",
-      "duration": 23.80952380952381
+      "rgbaSha256": "b9311eef731a8af999946cf2b8f34c5a4b58a30f485c05843432d1379e44d02d",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "7b7515feef5b6c0ffce1dab66041537078b5c1bfa34b241727f44ed4caf2be9a",
+      "locallyEdited": true
     },
     "19": {
       "frame": {
@@ -396,8 +408,10 @@
       },
       "source_frame": 20,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "4e4fed5ccbb65793bac2245e81cdbd04aa66536fa46b8612ddec040b0749d0b7",
-      "duration": 23.80952380952381
+      "rgbaSha256": "2350965bf65d73befed10e5214b119ff410b05c2f752fb557b08b146ff521de6",
+      "duration": 23.80952380952381,
+      "importedRgbaSha256": "4e4fed5ccbb65793bac2245e81cdbd04aa66536fa46b8612ddec040b0749d0b7",
+      "locallyEdited": true
     },
     "21": {
       "frame": {
@@ -415,8 +429,10 @@
       },
       "source_frame": 21,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "729cd1323f00589b57d6077a40c4c07b010c72ef0abcdcd79b3862d2e3678a55",
-      "duration": 17.857142857142858
+      "rgbaSha256": "ba9a491e23af17afabdf257c7966041e3256ec7fd4556113202a11f8cbbd4ed2",
+      "duration": 17.857142857142858,
+      "importedRgbaSha256": "729cd1323f00589b57d6077a40c4c07b010c72ef0abcdcd79b3862d2e3678a55",
+      "locallyEdited": true
     },
     "22": {
       "frame": {
@@ -434,8 +450,10 @@
       },
       "source_frame": 22,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "a2ae0b6d388c76c66b20c5ce9b8630b8278a778474ad830e93bb068beb4ea02c",
-      "duration": 17.857142857142858
+      "rgbaSha256": "3a10681024a546505e7a25bcb92d098b02ddd0a451502f7b02bfd45f56735959",
+      "duration": 17.857142857142858,
+      "importedRgbaSha256": "a2ae0b6d388c76c66b20c5ce9b8630b8278a778474ad830e93bb068beb4ea02c",
+      "locallyEdited": true
     },
     "23": {
       "frame": {
@@ -453,8 +471,10 @@
       },
       "source_frame": 23,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "045274a6917aa401604b99f3ce8c03cd92537f264b13f33e91db775ed7859881",
-      "duration": 17.857142857142858
+      "rgbaSha256": "fcf26300fade609f207323ecc80853f0f5380525712215d12209a6c75daa513e",
+      "duration": 17.857142857142858,
+      "importedRgbaSha256": "045274a6917aa401604b99f3ce8c03cd92537f264b13f33e91db775ed7859881",
+      "locallyEdited": true
     },
     "24": {
       "frame": {
@@ -472,8 +492,10 @@
       },
       "source_frame": 24,
       "source_sheet_id": "cmwrt2l7s003s2d513pndla0v",
-      "rgbaSha256": "014505212f3ed8878102c44edcae8564ecd3599c6ffaade659a10bb6d1728812",
-      "duration": 17.857142857142858
+      "rgbaSha256": "ab5016c7d2743d9a8bfdca6d92c254aeecb4b428875788256b3fcfc185d7e4be",
+      "duration": 17.857142857142858,
+      "importedRgbaSha256": "014505212f3ed8878102c44edcae8564ecd3599c6ffaade659a10bb6d1728812",
+      "locallyEdited": true
     },
     "25": {
       "frame": {
@@ -950,6 +972,24 @@
     "playback": "forward",
     "duration_ms": 1000,
     "impact_ms": 500,
-    "impact_frame": 21
+    "impact_frame": 21,
+    "local_edits": {
+      "registeredAt": "2026-11-23T16:22:11.557806+00:00",
+      "note": "Riparate manica e coscia in 11 frame con maschere locali. Pixel esterni invariati; preservati anche 83 pixel chiari delle scie sovrapposte al corpo. Palette, effetti e timing conservati.",
+      "changedFrames": [
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "verification": "Reviewed local edits; current decoded RGBA hashes recorded after validating unchanged canvas and frame bounds. Source IDs, frame order and timing preserved."
+    }
   }
 }

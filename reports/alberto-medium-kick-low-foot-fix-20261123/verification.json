@@ -1,0 +1,183 @@
+{
+  "character": "alberto",
+  "animation": "medium-kick-low",
+  "sourceSheetId": "cmwthb6u700c514dqy5yuxebz",
+  "beforeSha256": "c5237014f03d21cb3e71cda131aac967b1d08608ec6e0a6ec36ad07f169e9048",
+  "afterSha256": "f09e1d6b4a17544b34ee4d2a3bb870c1329627351ac9fac81576cc77832cd537",
+  "changedFrames": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "changedPixels": 11772,
+  "outsideMasksChanged": 0,
+  "records": [
+    {
+      "frame": 11,
+      "changedPixels": 533,
+      "reconstructedColorPixels": 533,
+      "outsideMaskChanged": 0,
+      "roi": [
+        408,
+        307,
+        437,
+        352
+      ]
+    },
+    {
+      "frame": 12,
+      "changedPixels": 803,
+      "reconstructedColorPixels": 803,
+      "outsideMaskChanged": 0,
+      "roi": [
+        433,
+        284,
+        460,
+        348
+      ]
+    },
+    {
+      "frame": 13,
+      "changedPixels": 916,
+      "reconstructedColorPixels": 916,
+      "outsideMaskChanged": 0,
+      "roi": [
+        433,
+        277,
+        463,
+        343
+      ]
+    },
+    {
+      "frame": 14,
+      "changedPixels": 1082,
+      "reconstructedColorPixels": 1082,
+      "outsideMaskChanged": 0,
+      "roi": [
+        433,
+        276,
+        464,
+        345
+      ]
+    },
+    {
+      "frame": 15,
+      "changedPixels": 1066,
+      "reconstructedColorPixels": 1066,
+      "outsideMaskChanged": 0,
+      "roi": [
+        433,
+        277,
+        464,
+        345
+      ]
+    },
+    {
+      "frame": 16,
+      "changedPixels": 1083,
+      "reconstructedColorPixels": 1083,
+      "outsideMaskChanged": 0,
+      "roi": [
+        432,
+        278,
+        463,
+        354
+      ]
+    },
+    {
+      "frame": 17,
+      "changedPixels": 1072,
+      "reconstructedColorPixels": 1072,
+      "outsideMaskChanged": 0,
+      "roi": [
+        432,
+        278,
+        463,
+        347
+      ]
+    },
+    {
+      "frame": 18,
+      "changedPixels": 1089,
+      "reconstructedColorPixels": 1089,
+      "outsideMaskChanged": 0,
+      "roi": [
+        432,
+        278,
+        463,
+        354
+      ]
+    },
+    {
+      "frame": 19,
+      "changedPixels": 1094,
+      "reconstructedColorPixels": 1094,
+      "outsideMaskChanged": 0,
+      "roi": [
+        432,
+        278,
+        463,
+        354
+      ]
+    },
+    {
+      "frame": 20,
+      "changedPixels": 1071,
+      "reconstructedColorPixels": 1071,
+      "outsideMaskChanged": 0,
+      "roi": [
+        432,
+        278,
+        463,
+        344
+      ]
+    },
+    {
+      "frame": 21,
+      "changedPixels": 1007,
+      "reconstructedColorPixels": 1007,
+      "outsideMaskChanged": 0,
+      "roi": [
+        429,
+        288,
+        460,
+        352
+      ]
+    },
+    {
+      "frame": 22,
+      "changedPixels": 626,
+      "reconstructedColorPixels": 626,
+      "outsideMaskChanged": 0,
+      "roi": [
+        417,
+        323,
+        443,
+        374
+      ]
+    },
+    {
+      "frame": 23,
+      "changedPixels": 330,
+      "reconstructedColorPixels": 330,
+      "outsideMaskChanged": 0,
+      "roi": [
+        371,
+        374,
+        393,
+        408
+      ]
+    }
+  ],
+  "method": "Local reconstruction inside reviewed shoe defect masks using the ImageGen repair reference aligned to each pose. The source remover left noisy RGB even in partially transparent pixels. Surviving opaque pixels, all pixels outside masks and every other frame verified identical."
+}

@@ -1,0 +1,89 @@
+{
+  "animation": "medium-kick-low",
+  "updatedAt": "2026-11-23",
+  "durationMs": 800,
+  "impactMs": 500,
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwthb6u700c514dqy5yuxebz",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "impactFrame": 12,
+      "impactSourceFrame": 12,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwtet0qa0052jwcv5qvu3ygv",
+      "sourceStart": 0,
+      "sourceEnd": 38,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwteu6aj00587yk410ngozcj",
+      "sourceStart": 0,
+      "sourceEnd": 39,
+      "impactFrame": 19,
+      "impactSourceFrame": 19,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwthkp66000sllrv9wyk457x",
+      "sourceStart": 0,
+      "sourceEnd": 38,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwtgk1gb01k0o7xzucfga4m8",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "impactFrame": 10,
+      "impactSourceFrame": 10,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwtemp0700307yk4jiy30wn2",
+      "sourceStart": 0,
+      "sourceEnd": 35,
+      "impactFrame": 15,
+      "impactSourceFrame": 15,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwthckem01a08hrnu1y7ep8s",
+      "sourceStart": 0,
+      "sourceEnd": 29,
+      "impactFrame": 11,
+      "impactSourceFrame": 11,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwtesxov004xjwcvmdu9whzl",
+      "sourceStart": 0,
+      "sourceEnd": 34,
+      "impactFrame": 14,
+      "impactSourceFrame": 14,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwthg8i300ke4q0ny9ac0nqx",
+      "sourceStart": 0,
+      "sourceEnd": 33,
+      "impactFrame": 11,
+      "impactSourceFrame": 11,
+      "note": "Posa di massima estensione scelta visivamente nel plateau del calcio; indici relativi al taglio salvato. Ritorno in guardia accovacciata gia incluso; solo avanti."
+    }
+  ]
+}

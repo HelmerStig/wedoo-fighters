@@ -176,11 +176,21 @@
       "atlas": "animation/elisa/elisa-crouch.json",
       "speedMultiplier": 2.5,
       "playback": "forward",
-      "pngSha256": "92f049f559753a48bc4dcb9336d1bc78ec2af0dc5b169e55b93405a78253ae9c",
+      "pngSha256": "1c2408857004cdab2fcc20beeb51849cada63ec8af852250eea827b983263b54",
       "sourcePngSha256": "afea6d319be571ad3ef9c1091f357337c9a24316c37190b50bbe99c5f81720bf",
-      "pixelVerification": "Decoded RGBA comparison of every exported 512x512 cell against the selected downloaded source; no scaling or recentering.",
+      "pixelVerification": "Original import verified against AutoSprite sources. Current PNG includes reviewed local edits recorded in localEdits; current frame hashes are in the atlas and imported hashes are retained for edited frames.",
       "trimmedParentSheetId": "cmwni86by001fh1h8dd1x52nr",
-      "parentSourceFrames": 49
+      "parentSourceFrames": 49,
+      "importedPngSha256": "92f049f559753a48bc4dcb9336d1bc78ec2af0dc5b169e55b93405a78253ae9c",
+      "localEdits": {
+        "registeredAt": "2026-11-23T16:18:35.995791+00:00",
+        "note": "Rimossi riempimenti bianchi fra i polsi nei frame 2-3 (da 1); maschere locali, pixel esterni e timing invariati.",
+        "changedFrames": [
+          1,
+          2
+        ],
+        "verification": "Reviewed local edits; current decoded RGBA hashes recorded after validating unchanged canvas and frame bounds. Source IDs, frame order and timing preserved."
+      }
     },
     {
       "character": "FRA-TAVARONE",

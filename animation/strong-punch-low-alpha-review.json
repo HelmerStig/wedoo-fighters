@@ -1,9 +1,10 @@
 {
-  "updatedAt": "2026-11-22",
+  "updatedAt": "2026-11-23",
   "method": "Automatic alpha inspection of all 441 frames; visual review of motion samples and highest-ranked cases on white, black and alpha backgrounds. Hole counts include natural gaps between limbs and require visual interpretation.",
   "evidence": [
     "demo-moves/reports/strong-punch-low-alpha.png",
-    "demo-moves/reports/strong-punch-low-marsan-alpha.png"
+    "demo-moves/reports/strong-punch-low-marsan-alpha.png",
+    "demo-moves/reports/strong-punch-low-marsan-repair.png"
   ],
   "items": [
     {
@@ -185,10 +186,10 @@
     {
       "character": "MARSAN",
       "sourceSheetId": "cmwrt2l7s003s2d513pndla0v",
-      "pngSha256": "8484becf42a69a55253c2016edeffeb530b6a450f9d0b27302d2d8aeb52d4b86",
+      "pngSha256": "69d7a566dd26171b6fb5c4c1b23d40fbf95a37c33989a36ec8ac0e7a07bb75bb",
       "framesChecked": 49,
-      "status": "source-defect",
-      "note": "Buchi sorgente sulla manica (esempio indice 12) e discontinuita della gamba presso ginocchio (esempio indice 21).",
+      "status": "locally-repaired",
+      "note": "Riparati localmente 11 frame: manica e coscia. Tutti i pixel esterni alle maschere ed effetti incorporati invariati. Le immagini alpha precedenti documentano il sorgente prima della correzione.",
       "suspiciousSamples": [
         {
           "frame": 12,
@@ -201,6 +202,147 @@
           "holes": 1577,
           "semi": 95,
           "score": 1672
+        }
+      ],
+      "sourceStatus": "source-defect",
+      "importedPngSha256": "8484becf42a69a55253c2016edeffeb530b6a450f9d0b27302d2d8aeb52d4b86",
+      "repairedFrames": [
+        {
+          "frame": 12,
+          "kind": "missing-sleeve",
+          "pixels": 1912,
+          "maskPixels": 1912,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-12",
+          "alignment": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 13,
+          "kind": "missing-sleeve",
+          "pixels": 1413,
+          "maskPixels": 1413,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-12",
+          "alignment": [
+            5,
+            -5
+          ]
+        },
+        {
+          "frame": 15,
+          "kind": "missing-sleeve",
+          "pixels": 1542,
+          "maskPixels": 1542,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            -5,
+            -3
+          ]
+        },
+        {
+          "frame": 16,
+          "kind": "missing-sleeve",
+          "pixels": 1344,
+          "maskPixels": 1344,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 17,
+          "kind": "missing-sleeve",
+          "pixels": 1474,
+          "maskPixels": 1474,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            5,
+            2
+          ]
+        },
+        {
+          "frame": 18,
+          "kind": "missing-sleeve",
+          "pixels": 1008,
+          "maskPixels": 1008,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            -4,
+            5
+          ]
+        },
+        {
+          "frame": 20,
+          "kind": "missing-jeans",
+          "pixels": 1599,
+          "maskPixels": 1599,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-20",
+          "alignment": [
+            1,
+            0
+          ],
+          "protectedEffectPixels": 80
+        },
+        {
+          "frame": 21,
+          "kind": "missing-jeans",
+          "pixels": 1006,
+          "maskPixels": 1006,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 3
+        },
+        {
+          "frame": 22,
+          "kind": "missing-jeans",
+          "pixels": 672,
+          "maskPixels": 672,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 0
+        },
+        {
+          "frame": 23,
+          "kind": "missing-jeans",
+          "pixels": 42,
+          "maskPixels": 42,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 0
+        },
+        {
+          "frame": 24,
+          "kind": "missing-jeans",
+          "pixels": 54,
+          "maskPixels": 54,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 0
         }
       ]
     }

@@ -163,9 +163,21 @@
       "frameHeight": 512,
       "trimmed": false,
       "playback": "forward",
-      "pngSha256": "1dcaad311b4bb76e4fc2973f3e5ca44c05e2ef3fdea8b7e85b98cc8d0ec3884c",
+      "pngSha256": "52415d36d8720c3e97543ae3c2941ab6b40435c5e281a3b352ffa1750776f260",
       "sourcePngSha256": "1dcaad311b4bb76e4fc2973f3e5ca44c05e2ef3fdea8b7e85b98cc8d0ec3884c",
-      "pixelVerification": "All exported cells compared with decoded source RGBA after saving; full sheets copied byte-for-byte, no resize, recentering or repainting."
+      "pixelVerification": "Original import verified against AutoSprite sources. Current PNG includes reviewed local edits recorded in localEdits; current frame hashes are in the atlas and imported hashes are retained for edited frames.",
+      "importedPngSha256": "1dcaad311b4bb76e4fc2973f3e5ca44c05e2ef3fdea8b7e85b98cc8d0ec3884c",
+      "localEdits": {
+        "registeredAt": "2026-11-23T16:18:36.221169+00:00",
+        "note": "Rimossi riempimenti bianchi fra i polsi nei frame 1-4 (da 1); maschere locali, pixel esterni ed effetti invariati.",
+        "changedFrames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "verification": "Reviewed local edits; current decoded RGBA hashes recorded after validating unchanged canvas and frame bounds. Source IDs, frame order and timing preserved."
+      }
     },
     {
       "character": "FRA-TAVARONE",

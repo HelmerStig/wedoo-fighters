@@ -59,7 +59,9 @@ const extraAnimations=[
   {manifest:'light-kick-manifest.json',id:'light-kick',name:'Calcio leggero',description:'Calcio leggero e ritorno in guardia',durationMs:600},
   {manifest:'light-kick-low-manifest.json',id:'light-kick-low',name:'Calcio leggero basso',description:'Calcio leggero da accovacciati e ritorno in guardia bassa',durationMs:600},
   {manifest:'medium-kick-manifest.json',id:'medium-kick',name:'Calcio medio',description:'Calcio medio e ritorno in guardia',durationMs:800},
+  {manifest:'medium-kick-low-manifest.json',id:'medium-kick-low',name:'Calcio medio basso',description:'Calcio medio da accovacciati e ritorno in guardia bassa',durationMs:800},
   {manifest:'strong-kick-manifest.json',id:'strong-kick',name:'Calcio potente',description:'Calcio potente e ritorno in guardia',durationMs:900},
+  {manifest:'heavy-kick-low-sweep-manifest.json',id:'heavy-kick-low-sweep',name:'Calcio potente basso (spazzata)',description:'Spazzata bassa con rotazione completa e recupero',durationMs:900},
   {manifest:'hurt-manifest.json',id:'hurt',name:'Hurt',description:'Reazione al colpo e ritorno in guardia',durationMs:500},
   {manifest:'hurt-medium-manifest.json',id:'hurt-medium',name:'Hurt medio',description:'Reazione al colpo medio e recupero',durationMs:500},
   {manifest:'hurt-low-manifest.json',id:'hurt-low',name:'Hurt basso',description:'Reazione al colpo basso e recupero',durationMs:500},
@@ -75,7 +77,9 @@ const punchTiming=await readJson(join(root,'animation/light-punch-timing.json'))
 const lowPunchTiming=await readJson(join(root,'animation/light-punch-low-timing.json'));
 const lightKickTiming=await readJson(join(root,'animation/light-kick-timing.json'));
 const lightLowKickTiming=await readJson(join(root,'animation/light-kick-low-timing.json'));
+const mediumLowKickTiming=await readJson(join(root,'animation/medium-kick-low-timing.json'));
 const mediumKickTiming=await readJson(join(root,'animation/medium-kick-timing.json'));
+const heavyLowSweepTiming=await readJson(join(root,'animation/heavy-kick-low-sweep-timing.json'));
 const strongKickTiming=await readJson(join(root,'animation/strong-kick-timing.json'));
 const mediumPunchTiming=await readJson(join(root,'animation/medium-punch-timing.json'));
 const mediumLowPunchTiming=await readJson(join(root,'animation/medium-punch-low-timing.json'));
@@ -139,15 +143,15 @@ for(const extra of extraAnimations){
       if(!Number.isInteger(peak)||peak<1||peak>=frames.length||!Number.isFinite(ms)||ms<=0)throw Error('Timing parata non valido: '+item.character);
       timing={blockFrame:peak,blockMs:ms,durationMs:frames.length*ms/peak,frameDurations:frames.map(()=>ms/peak)};
     }
-    if(extra.id==='light-punch'||extra.id==='light-punch-low'||extra.id==='light-kick-low'||extra.id==='light-kick'||extra.id==='medium-kick'||extra.id==='strong-kick'){
-      const moveTiming=extra.id==='light-kick-low'?lightLowKickTiming:extra.id==='light-punch-low'?lowPunchTiming:extra.id==='strong-kick'?strongKickTiming:extra.id==='medium-kick'?mediumKickTiming:extra.id==='light-kick'?lightKickTiming:punchTiming;
+    if(extra.id==='light-punch'||extra.id==='light-punch-low'||extra.id==='light-kick-low'||extra.id==='medium-kick-low'||extra.id==='heavy-kick-low-sweep'||extra.id==='light-kick'||extra.id==='medium-kick'||extra.id==='strong-kick'){
+      const moveTiming=extra.id==='heavy-kick-low-sweep'?heavyLowSweepTiming:extra.id==='medium-kick-low'?mediumLowKickTiming:extra.id==='light-kick-low'?lightLowKickTiming:extra.id==='light-punch-low'?lowPunchTiming:extra.id==='strong-kick'?strongKickTiming:extra.id==='medium-kick'?mediumKickTiming:extra.id==='light-kick'?lightKickTiming:punchTiming;
       const entry=moveTiming.items.find(t=>t.character.toLowerCase()===character.id);
       if(!entry||entry.sourceSheetId!==item.sourceSheetId||entry.sourceStart!==item.sourceStart||entry.sourceEnd!==item.sourceEnd)throw Error('Rivedere il frame di impatto per '+item.character);
       const peak=entry.impactFrame;
       if(!Number.isInteger(peak)||peak<1||peak>=frames.length)throw Error('Frame impatto non valido: '+item.character);
       if(moveTiming.durationMs!==extra.durationMs||moveTiming.impactMs<=0||moveTiming.impactMs>=moveTiming.durationMs)throw Error('Timing non valido: '+extra.id);
       timing={impactFrame:peak,impactMs:moveTiming.impactMs,frameDurations:frames.map((_,i)=>i<peak?moveTiming.impactMs/peak:(moveTiming.durationMs-moveTiming.impactMs)/(frames.length-peak))};
-      if(extra.id==='light-punch-low'||extra.id==='light-kick-low'){
+      if(extra.id==='light-punch-low'||extra.id==='light-kick-low'||extra.id==='medium-kick-low'||extra.id==='heavy-kick-low-sweep'){
         const entries=Object.values(atlas.frames);
         if(item.playback!=='forward'||item.frames!==item.sourceEnd-item.sourceStart+1||atlas.meta.source_sheet_id!==item.sourceSheetId||entries.some((f,i)=>f.source_frame!==item.sourceStart+i))throw Error('Sequenza pugno leggero basso incoerente: '+item.character);
         timing.playbackMode='forward';

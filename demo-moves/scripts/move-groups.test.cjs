@@ -7,7 +7,7 @@ const {group,filter}=require('../move-groups.js');
 function characters(){const context={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../catalog.js'),'utf8'),context);return context.window.MOVES_CATALOG.characters;}
 test('ogni mossa contiene tutti e solo i personaggi disponibili, senza alterare frame o velocita',()=>{
   const roster=characters(),groups=group(roster);
-  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','crouch-block','hurt','hurt-medium','hurt-low','hurt-crouched','knockdown','hurt-in-jump','victory','defeat','light-punch','light-punch-low','medium-punch','medium-punch-low','strong-punch','strong-punch-low','light-kick','light-kick-low','medium-kick','strong-kick']);
+  assert.deepEqual(groups.map(g=>g.id),['idle','walk','jump','crouch','block','crouch-block','hurt','hurt-medium','hurt-low','hurt-crouched','knockdown','hurt-in-jump','victory','defeat','light-punch','light-punch-low','medium-punch','medium-punch-low','strong-punch','strong-punch-low','light-kick','light-kick-low','medium-kick','medium-kick-low','strong-kick','heavy-kick-low-sweep']);
   for(const move of groups){
     const expected=roster.filter(c=>c.animations.some(a=>a.id===move.id));
     assert.deepEqual(move.animations.map(a=>a.characterId),Array.from(expected,c=>c.id));

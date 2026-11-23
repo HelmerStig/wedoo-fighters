@@ -1,0 +1,93 @@
+{
+  "updatedAt": "2026-11-23",
+  "animation": "heavy-kick-low-sweep",
+  "framesChecked": 271,
+  "method": "Automatic alpha and white-component scan of all selected cells; visual review of all sequence contact sheets, highest-ranked alpha candidates and white candidates. Natural gaps and embedded effects are excluded.",
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwthv01401325ky43tlaj03e",
+      "pngSha256": "3e7e3b17a1244146b7835cb57c4863753961863ab6361a9639857c7ca9e9ab7a",
+      "framesChecked": 30,
+      "status": "reviewed-no-obvious-defect"
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwthv4qj01455ky46lxb1msd",
+      "pngSha256": "61bae692206e8fcf8c9fea650f0bf4f7316a7123ecf292aabe647426616ad5b5",
+      "framesChecked": 28,
+      "status": "reviewed-no-obvious-defect"
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwthwqtk019w5ky4znjahgzr",
+      "pngSha256": "ad715873e129b42eafc4d33201376c4ed835b251a81841b0696a72fcf8e6e29f",
+      "framesChecked": 34,
+      "status": "reviewed-no-obvious-defect"
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwti8cpg000syjyoilf0axzc",
+      "pngSha256": "9f36e95968c871dcc8086f9f3faada72656c725c0eaaa81a80ac2644cad3815a",
+      "framesChecked": 28,
+      "status": "reviewed-no-obvious-defect"
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwthwg2p019s5ky4qv32ga1z",
+      "pngSha256": "52e8fdeec869ce6a2399e087e56a306d6ea5ab1586d12fdd512c796fb0293b4c",
+      "framesChecked": 32,
+      "status": "source-white-fill"
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwths73m00fwwe2yju737uii",
+      "pngSha256": "f837559289adf52313d25f7eaf50a509e29bf774aa1e5806ca3e4c36ed4be585",
+      "framesChecked": 28,
+      "status": "source-canvas-clipping"
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwthv2pv013c5ky44z7f58x4",
+      "pngSha256": "ae08114e1a017eea2ce47b26dee7a277812bf1871d0b966d0e8cbf0d1d8775c6",
+      "framesChecked": 28,
+      "status": "reviewed-no-obvious-defect"
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwthv6cf014h5ky45xr2yw0o",
+      "pngSha256": "c0f54765d9c3982581d8b3e4fd6e515e6dd619bb4b8e9b151fb8295a93d052ad",
+      "framesChecked": 31,
+      "status": "reviewed-no-obvious-defect"
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwthwz0b00jdwe2yc4ubxu3i",
+      "pngSha256": "ca5ca6e250dc0dbd1dca2a55e1c1d3beadba227f9eb56a18de4d9f9b500713de",
+      "framesChecked": 32,
+      "status": "reviewed-no-obvious-defect"
+    }
+  ],
+  "findings": [
+    {
+      "character": "PEPPO",
+      "kind": "improper-white-fill",
+      "exampleFrames": [
+        2,
+        8,
+        14
+      ],
+      "frameNumbering": "zero-based exported sequence",
+      "note": "Residui bianchi tra braccia e corpo nei frame 3,9,15 (da 1), separati dalle scie. Non corretti durante questa importazione."
+    },
+    {
+      "character": "Oscar",
+      "kind": "source-canvas-clipping",
+      "exampleFrames": [
+        10
+      ],
+      "frameNumbering": "zero-based exported sequence",
+      "note": "Il piede raggiunge il bordo destro nel frame 11 da 1; taglio gia presente nella cella sorgente. Scala e padding conservati."
+    }
+  ]
+}

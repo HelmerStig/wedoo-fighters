@@ -16,7 +16,9 @@
       },
       "source_frame": 0,
       "duration": 20.408163265306122,
-      "rgbaSha256": "1d04f952d53a732d709cd07fcf6cdb66f60b59e24f84c79e193c11a7c13f31cb"
+      "rgbaSha256": "7506f15ab914139328ac9828c6d971ba1946306ff22b06891c685f6a45338eb5",
+      "importedRgbaSha256": "1d04f952d53a732d709cd07fcf6cdb66f60b59e24f84c79e193c11a7c13f31cb",
+      "locallyEdited": true
     },
     "1": {
       "frame": {
@@ -34,7 +36,9 @@
       },
       "source_frame": 1,
       "duration": 20.408163265306122,
-      "rgbaSha256": "350f97c885595203140453ec7ac0245c25761d7a9a35e29883fba19a0cf17dd4"
+      "rgbaSha256": "8d903535ee9bca45f04ea76305df4c0d621485ce0580ed9fc55a027dc241beb8",
+      "importedRgbaSha256": "350f97c885595203140453ec7ac0245c25761d7a9a35e29883fba19a0cf17dd4",
+      "locallyEdited": true
     },
     "2": {
       "frame": {
@@ -52,7 +56,9 @@
       },
       "source_frame": 2,
       "duration": 20.408163265306122,
-      "rgbaSha256": "8015e7352ecaecc66ba7e89a40a4eac54f203031a16d49b727b1a64c0b53d750"
+      "rgbaSha256": "e5de6bb96f3a1532426dff6932cc2e2f7e409473b205717d07a5ab296e734c06",
+      "importedRgbaSha256": "8015e7352ecaecc66ba7e89a40a4eac54f203031a16d49b727b1a64c0b53d750",
+      "locallyEdited": true
     },
     "3": {
       "frame": {
@@ -70,7 +76,9 @@
       },
       "source_frame": 3,
       "duration": 20.408163265306122,
-      "rgbaSha256": "9141fe1212be06cd41748b97e971d8cbeaecc4ed57f2ae6d7b3a4ac035026e7f"
+      "rgbaSha256": "01923ad90f422e5b6f23316373f0e7085c616ee218eda28abc51074dcfdf1310",
+      "importedRgbaSha256": "9141fe1212be06cd41748b97e971d8cbeaecc4ed57f2ae6d7b3a4ac035026e7f",
+      "locallyEdited": true
     },
     "4": {
       "frame": {
@@ -901,6 +909,17 @@
     "fps": 49,
     "duration_ms": 1000,
     "duration_s": 1,
-    "playback": "forward"
+    "playback": "forward",
+    "local_edits": {
+      "registeredAt": "2026-11-23T16:18:36.221169+00:00",
+      "note": "Rimossi riempimenti bianchi fra i polsi nei frame 1-4 (da 1); maschere locali, pixel esterni ed effetti invariati.",
+      "changedFrames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "verification": "Reviewed local edits; current decoded RGBA hashes recorded after validating unchanged canvas and frame bounds. Source IDs, frame order and timing preserved."
+    }
   }
 }

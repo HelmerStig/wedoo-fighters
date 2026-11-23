@@ -1,0 +1,965 @@
+{
+  "date": "2026-11-23",
+  "scope": "Spritesheet effettivamente referenziati dal catalogo demo-moves, nove personaggi; nessuna modifica agli asset.",
+  "characters": [
+    "alberto",
+    "elisa",
+    "fabio-clara",
+    "fra-tavarone",
+    "marsan",
+    "oscar",
+    "peppo",
+    "pippo",
+    "sboz"
+  ],
+  "animations": 216,
+  "playbackFrames": 8059,
+  "uniqueCells": 7781,
+  "frameNumbering": "Fotogrammi di riproduzione numerati da 1; i rettangoli identificano la cella fisica.",
+  "method": "Scansione delle celle uniche a piena risoluzione: alfa >220, RGB minimo230 e differenza canali <=22, componenti >=22px. Seconda scansione esplorativa a passo2, minimo200 e differenza<32, componenti >=120px stimati. Revisione visiva dei candidati rappresentativi e delle pose di tutte le animazioni; sequenze dettagliate dei casi confermati. Le soglie non dimostrano assenza assoluta di difetti più piccoli o meno chiari.",
+  "findings": [
+    {
+      "character": "elisa",
+      "move": "crouch",
+      "frames": [
+        2,
+        3
+      ],
+      "status": "confermato",
+      "description": "Riempimento bianco opaco nello spazio tra i polsi/avambracci. Il primo fotogramma mostra lo stesso spazio trasparente.",
+      "preview": "elisa-crouch.png",
+      "image": "animation/elisa/elisa-crouch.png",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "label": "Crouch"
+    },
+    {
+      "character": "elisa",
+      "move": "defeat",
+      "frames": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "confermato",
+      "description": "Area bianca piatta tra i polsi nella guardia iniziale; scompare quando le braccia si aprono.",
+      "preview": "elisa-defeat.png",
+      "image": "animation/elisa/elisa-defeat.png",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "label": "Defeat"
+    },
+    {
+      "character": "elisa",
+      "move": "strong-kick",
+      "frames": [
+        66,
+        67
+      ],
+      "status": "confermato",
+      "description": "Il riempimento bianco tra i polsi compare durante il ritorno in guardia.",
+      "preview": "elisa-strong-kick.png",
+      "image": "animation/elisa/elisa-strong-kick.png",
+      "rect": [
+        2560,
+        5120,
+        512,
+        512
+      ],
+      "label": "Calcio potente"
+    },
+    {
+      "character": "peppo",
+      "move": "block",
+      "frames": [
+        3
+      ],
+      "status": "confermato",
+      "description": "Piccolo residuo bianco/celeste tra mento, pugno e avambraccio nella transizione verso la parata.",
+      "preview": "peppo-block.png",
+      "image": "animation/peppo/peppo-block.png",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "label": "Parata alta"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "animation/alberto/alberto-block.png",
+      "sha256": "fb542da7347c4ee358a5a8a549466d2088ecfd818eb236889e6b9b862da3dfbf"
+    },
+    {
+      "path": "animation/alberto/alberto-crouch-block.png",
+      "sha256": "f2aff921cf11c960299b78f8ef3a850f63ba861da0774fff4bea11cf38722e6e"
+    },
+    {
+      "path": "animation/alberto/alberto-crouch.png",
+      "sha256": "04b6d434004346e67e27ef1decd04e3378b3c9834725839f84ddfabcc88f1733"
+    },
+    {
+      "path": "animation/alberto/alberto-defeat.png",
+      "sha256": "3cdc1caac38ebd94b47b933e024749df9298e21735a1d2297781592a11d54cd6"
+    },
+    {
+      "path": "animation/alberto/alberto-hurt-crouched.png",
+      "sha256": "2f2b4d24dcd4da726647b0a90cead25d2c753189f37f599201f69a822d8e1ef8"
+    },
+    {
+      "path": "animation/alberto/alberto-hurt-in-jump.png",
+      "sha256": "ae5fff063c23327309c82d1f7f2c8515edcb0193c5f6f69a16ae6125904a78db"
+    },
+    {
+      "path": "animation/alberto/alberto-hurt-low.png",
+      "sha256": "5dea44c0a611d0acbf7f6a94cc9cfb2e3d0e0104fb8ebf15dd1176b96487a8fa"
+    },
+    {
+      "path": "animation/alberto/alberto-hurt-medium.png",
+      "sha256": "0a0b38b71fec897ba9d0f4bf0a57470f5b8b5c0a9a57c684431ebfd6b63ec34f"
+    },
+    {
+      "path": "animation/alberto/alberto-hurt.png",
+      "sha256": "d19a6d8c045f35290d93ca6cf693ef6dc7028a79c68627af489cf75bd7fd4609"
+    },
+    {
+      "path": "animation/alberto/alberto-idle.png",
+      "sha256": "ad55410ff7ae31179cb4a421b58db1a1aac3e8eaff65b604fc3a92b34ad7e7cb"
+    },
+    {
+      "path": "animation/alberto/alberto-jump.png",
+      "sha256": "b6268380256282e18eacc37e3186f04a5002651476ebbd650c607ff085dabcbf"
+    },
+    {
+      "path": "animation/alberto/alberto-knockdown.png",
+      "sha256": "c8e0db1997cceaef2a3b5df18edcd743edbb5d27ed2ce7599d277a200d49c807"
+    },
+    {
+      "path": "animation/alberto/alberto-light-kick-low.png",
+      "sha256": "3f573ece307af85bda56cb08b8023f2d52ea0c7e95e40df535d9cb8e9ed2e029"
+    },
+    {
+      "path": "animation/alberto/alberto-light-kick.png",
+      "sha256": "15f0f9f2aa8bcd9c5bb8acf840a367dff411d2e84541d62ac5407c9e5d7a8683"
+    },
+    {
+      "path": "animation/alberto/alberto-light-punch-low.png",
+      "sha256": "82ddaef55fabcd967d5318b2914645f6269e5760503798fd35be8ecd2a4dd8ef"
+    },
+    {
+      "path": "animation/alberto/alberto-light-punch.png",
+      "sha256": "7e1fd631577b4261686e777e16b2c54fdd88f9804303e95975c6656ddcb4e4c7"
+    },
+    {
+      "path": "animation/alberto/alberto-medium-kick.png",
+      "sha256": "e9ba96d84ca258220c39d9c3d4ae02fa9370598b4a225d478fd6adbd6d091893"
+    },
+    {
+      "path": "animation/alberto/alberto-medium-punch-low.png",
+      "sha256": "29f3378e625e53cd4a61b28c9d5bc12a5ef646d27ecd300ab3f5244043317934"
+    },
+    {
+      "path": "animation/alberto/alberto-medium-punch.png",
+      "sha256": "6bd753a677019d438a534a9af51182663cad64a38c279ce7bbf73cad5abbdcf2"
+    },
+    {
+      "path": "animation/alberto/alberto-strong-kick.png",
+      "sha256": "178c80a0fe0136867e04e4c4180bfe28370f6ab8310c18a9a06d077b31a171ee"
+    },
+    {
+      "path": "animation/alberto/alberto-strong-punch-low.png",
+      "sha256": "e2cdf2c6700b42bc304ab3dde514c0e7dfcd14988a6911e0f70d12cd2b11a087"
+    },
+    {
+      "path": "animation/alberto/alberto-strong-punch.png",
+      "sha256": "71cf9c8afd6598f22b06d40ccecf09c8d507029c2f0f81e89d94d3999532540c"
+    },
+    {
+      "path": "animation/alberto/alberto-victory.png",
+      "sha256": "db00d6f79220f105e82f9bc9d5c71371e190e5f3ef58c4949cf15fd4b6a76f1c"
+    },
+    {
+      "path": "animation/alberto/alberto-walk.png",
+      "sha256": "8e6632bc3031349711b2b6f74d2b4c64d2b36f0540c36a4ea363654c00ecddc6"
+    },
+    {
+      "path": "animation/elisa/elisa-block.png",
+      "sha256": "31f174cd94a00c0c9bc75c9de950ca71682f59a183492e1eb9165788a9790a0a"
+    },
+    {
+      "path": "animation/elisa/elisa-crouch-block.png",
+      "sha256": "dfe0bd7f74e7f66ddce653bb6d73f2fb3a9300b11e9ff493f80f70608e02c4a4"
+    },
+    {
+      "path": "animation/elisa/elisa-crouch.png",
+      "sha256": "92f049f559753a48bc4dcb9336d1bc78ec2af0dc5b169e55b93405a78253ae9c"
+    },
+    {
+      "path": "animation/elisa/elisa-defeat.png",
+      "sha256": "1dcaad311b4bb76e4fc2973f3e5ca44c05e2ef3fdea8b7e85b98cc8d0ec3884c"
+    },
+    {
+      "path": "animation/elisa/elisa-hurt-crouched.png",
+      "sha256": "074580da8690bafaca9c4404f60ea6ed20fad5c9b9c3c95e3f285ac7422eeb0c"
+    },
+    {
+      "path": "animation/elisa/elisa-hurt-in-jump.png",
+      "sha256": "cc392e39e617936e896c6f3f854537dc68bc85d1620b8e6df1893e219d028cde"
+    },
+    {
+      "path": "animation/elisa/elisa-hurt-low.png",
+      "sha256": "8a0386bbe19bd842e57ef5505959d9d1bf82a562215654c8837e1599441acbac"
+    },
+    {
+      "path": "animation/elisa/elisa-hurt-medium.png",
+      "sha256": "d80bd2c56ad16c63620c74239e8b108583311b9d293d98b628213ffa325ca7dc"
+    },
+    {
+      "path": "animation/elisa/elisa-hurt.png",
+      "sha256": "ad2001d267187fa96b7541b37c825c21778454f000d60d8b929c876545adcdcf"
+    },
+    {
+      "path": "animation/elisa/elisa-idle.png",
+      "sha256": "30f4c14081d361fb1ca0f4e9d3c321819a9cb6d0d969f5f470fbc881d85e4fdf"
+    },
+    {
+      "path": "animation/elisa/elisa-jump.png",
+      "sha256": "4028dde7e9c9cab3aea5a223abcdacd911038e94df8615e855ff573abfbce4b1"
+    },
+    {
+      "path": "animation/elisa/elisa-knockdown.png",
+      "sha256": "7f9ac0111a3f990f8b76f80722b5fcd54bdcf56a47b7fd5f9225e934a41c1dba"
+    },
+    {
+      "path": "animation/elisa/elisa-light-kick-low.png",
+      "sha256": "ab75bf4ef71d6011261a3c64a10f04f9192ad526d143ac02d57cb4e175ee7089"
+    },
+    {
+      "path": "animation/elisa/elisa-light-kick.png",
+      "sha256": "e509bfaf112384695160282f852686332f16aaf673119e3ba226af9f8f787eab"
+    },
+    {
+      "path": "animation/elisa/elisa-light-punch-low.png",
+      "sha256": "0897aeb222ef7253441607cc7a8cbe01dd6202305af2fe468ea8519ed46926c5"
+    },
+    {
+      "path": "animation/elisa/elisa-light-punch.png",
+      "sha256": "510079cf8aa801f6cef0ea4783a4680785b6d1e9b5fcd7d5235e797a8c407624"
+    },
+    {
+      "path": "animation/elisa/elisa-medium-kick.png",
+      "sha256": "c17735fbcb972fc40775032b4a76a8098504952a5c5e5baf75e57a43e120ca36"
+    },
+    {
+      "path": "animation/elisa/elisa-medium-punch-low.png",
+      "sha256": "0503b5ab48ed469c966286881d704a8acf25c9db0ac1e853a412027be53127d9"
+    },
+    {
+      "path": "animation/elisa/elisa-medium-punch.png",
+      "sha256": "e0e3dad1b96e283d7dc2951a5547aa05f043c9147b897431a2d2a4108cd3c08a"
+    },
+    {
+      "path": "animation/elisa/elisa-strong-kick.png",
+      "sha256": "cbc3c11a1611c96650a5489306e172f17de37c9d6989644a667429224616644e"
+    },
+    {
+      "path": "animation/elisa/elisa-strong-punch-low.png",
+      "sha256": "862f009adc14aef4b3daa7cd03b4dadeef172133399ff72b77d716b6e66134c1"
+    },
+    {
+      "path": "animation/elisa/elisa-strong-punch.png",
+      "sha256": "03197f01854513c0a2136b835cfd195f0ef798dee3caa7152b6a6b4bd904e65e"
+    },
+    {
+      "path": "animation/elisa/elisa-victory.png",
+      "sha256": "f816b835416e48e871322a1e442c7c7d9238c1f4b203950f082b6d07866ae8c7"
+    },
+    {
+      "path": "animation/elisa/elisa-walk.png",
+      "sha256": "7a86138bdc6f208459be4db17bf882680054476368572ba27c0d7ddf46d271a6"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-block.png",
+      "sha256": "7ecd3746817a4b56f56459426ce70799241e3721eb05c86052a601930d502f75"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-crouch-block.png",
+      "sha256": "0c0637e3c3a68c30248d49ad402007b107af7f4f1d563563a9885f837f2646f8"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-crouch.png",
+      "sha256": "6b8cd6e4ebc456d5d5e5660cbcbe1dab6d5871d40740035bd0976d992bb54fb4"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-defeat.png",
+      "sha256": "dac61bc53dd525ebedc97d2f46368bd3824de82d948458c6cebb6519b0065a80"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-hurt-crouched.png",
+      "sha256": "06aa28fa53686023ac35fb93efe869ae3b48aff30ea360d94f94206422b8a0e6"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-hurt-in-jump.png",
+      "sha256": "cf7ef7382e2dfab12a941a00a9f945b7d457e0fa6a08c72c518da9f362ecf7b5"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-hurt-low.png",
+      "sha256": "416ce0b9d8fbfa7b4d9bed793a95721b524b8f66fc5861bc3a8bc5c8d9fd66e1"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-hurt-medium.png",
+      "sha256": "c9e6947c55451faf668566b141bee2fe7f7c81fcbe6888da91e575e9fe61d7d8"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-hurt.png",
+      "sha256": "355b135b867c0894c19ffbe0f5787ff4a9bb652ca0de59aaffb585f3a5a4cb7a"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-idle.png",
+      "sha256": "b4ab63b79bdf85a8fe09b39c8740e7c57b80ff558f1a621e3a922aad6422b009"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-jump.png",
+      "sha256": "19712ebb6bb2c7f6047b60f6f44f831b9da62b3c17d72a4eed7ee9579c6f5cc2"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-knockdown.png",
+      "sha256": "3a29251055c58b96feeae7469364deb83bbceee69e1b06bd11204e8cfdea7c10"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-light-kick-low.png",
+      "sha256": "0b33c3ce056cf7e537e699b7fea2a89ec3dd767d1d6cd2fd3cdd0ac23b92e410"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-light-kick.png",
+      "sha256": "3e72de946632344ca39461675a1f1593b5456d971e07b3014e006249eb0321d3"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-light-punch-low.png",
+      "sha256": "92864a3392f769862931e0908a9eb0a245c9b2f071ea5ae02a4145b2233a967f"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-light-punch.png",
+      "sha256": "d12ac5fde1db542b7421963fe22b29f8bfa116765eb694a57302937107a63ca5"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-medium-kick.png",
+      "sha256": "359efceab727cf028cd78552614b994ff231409b59a33e5dcc5376d84225ea05"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-medium-punch-low.png",
+      "sha256": "061a23e102168d26cb0ca77518a2e54e4c1cc8b03cfc7ed7368f67d7a3c00690"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-medium-punch.png",
+      "sha256": "d0f8d6098417e483b54b473fa2be636706c926f111d77aaf88a6eb40c7c61265"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-strong-kick.png",
+      "sha256": "f60be531e607947833430b4a08a93706971582ad31867ab8ea5c7a27aea8ad0e"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-strong-punch-low.png",
+      "sha256": "0cf7e1f497700fdf9337a09082c8603aabaccd1f62be079e6cc93ea0251cb63e"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-strong-punch.png",
+      "sha256": "887222cd9e2bf181bce7509c4f6ac226daa1394f70849f77e829bcc40e82e68b"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-victory.png",
+      "sha256": "09e63cfb57ee6ecaa2785e0bb00536e73c7e72eb026c3172d417deb3cf2e092b"
+    },
+    {
+      "path": "animation/fabio-clara/fabio-clara-walk.png",
+      "sha256": "0816684dad7eafbb1fed8ad2189548af70313fb2f586bf84aa320cdae28668ca"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-block.png",
+      "sha256": "cf2769264f4ea79ba598221bd708132115ca57d1dbc305c6613495f05e1985a0"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-crouch-block.png",
+      "sha256": "36a963b5ad5afdd44b3eed6ceb8023baf08744e0b1537fc2655eb09c613a9703"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-crouch.png",
+      "sha256": "e8ca04384a7678d8f5e2290e52b15c40651d4099080360d9440535ee54a14dd0"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-defeat.png",
+      "sha256": "614c081d1984fa6275d8d1b1047e05af407333ddf64ac39b65439e1788053f47"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-hurt-crouched.png",
+      "sha256": "87936a75512b229f779bfa953216e0d0f51b90ed1ed3aecb86018b6d0496f669"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-hurt-in-jump.png",
+      "sha256": "4d72bc9555b271d74566e441c297e9a8fc18a24d8c789c04109bc5a4ca42028c"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-hurt-low.png",
+      "sha256": "87a76a1d433f159cb966ff9506b0c9eac296742e7822505824ae683d669a7139"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-hurt-medium.png",
+      "sha256": "0dc92656f21311885485703c82396cb489ff92662a2657791d8d0d55351d087c"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-hurt.png",
+      "sha256": "ec4a2364c5d4aee17f87dece3f5a575ebcfb69f93fbd0be0e9a4678b210b0dd7"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-idle.png",
+      "sha256": "86997aaa752939b7660c5befdb334f5bcde99ffa2ca4dea854fb20f3726f8d7f"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-jump.png",
+      "sha256": "30951c14b9741b2a6a8ff4d4f4d11a5a0b95b0b662552298e496370309e8ce55"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-knockdown.png",
+      "sha256": "740372737a47eacc5dbf6e45f918aaf9b4e4b0108ca733897523e5ba621d1d40"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-light-kick-low.png",
+      "sha256": "14194e1e5a277f47586fca69a495c92865096d69e68babe6cac343c9145a394d"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-light-kick.png",
+      "sha256": "add54440368120780d68c06adecff4d6ae129d65c70d2e553c7249dd6d02ceb6"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-light-punch-low.png",
+      "sha256": "3816d6e1327e7f8fd1e208eb4176bb22fe0d823b5f76a043b261d940d9c85a0a"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-light-punch.png",
+      "sha256": "b908b85b3a195636750b487dcaf0ab17c5f2abd3b8029362f759c32cd9f37888"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-medium-kick.png",
+      "sha256": "dd0555c5d0fc75ea75b3248cdbb6e1199bb478bebdab72254cf23a93077ab1f3"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-medium-punch-low.png",
+      "sha256": "93d34ff34c697cd174b458909e4d754ddd65f23c6fde8e91b6ba82304320dca8"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-medium-punch.png",
+      "sha256": "61392a303deaa57869128d701a5b96aa6def1705f215ab81ffdc8bf8386762d6"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-strong-kick.png",
+      "sha256": "48e6e19956fca68a25054f586ec0a0ffdcd927e307d095fd6fad8a9e42e11b1e"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-strong-punch-low.png",
+      "sha256": "9332c5de80ae04a4a7aaa48f2b3310231eeea51d44e72c7a0196820bf2bbf72e"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-strong-punch.png",
+      "sha256": "84d0a8996592b0e6894eb4e065c66ada94774f78b08073dbce286e72163fb7e5"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-victory.png",
+      "sha256": "639dec98bc10c5d660c488f1e3af1b7e6b9f986d4d93c5cf79cdd48143f253c0"
+    },
+    {
+      "path": "animation/fra-tavarone/fra-tavarone-walk.png",
+      "sha256": "12ca4f58c6af126193dacbbe4e9dd9df0cb339b3a0e5b38028c32e9cda513c48"
+    },
+    {
+      "path": "animation/marsan/marsan-block.png",
+      "sha256": "02f59c10f439e748d8b1c83917f93fc9511d8baa59fe0a7dbabc4a38c610bbb3"
+    },
+    {
+      "path": "animation/marsan/marsan-crouch-block.png",
+      "sha256": "725626a23c2cd1c8515dead586d2a35363cc3f534239528c2b1be4d800902eab"
+    },
+    {
+      "path": "animation/marsan/marsan-crouch.png",
+      "sha256": "9feb67dc4b2d32be437410604518b70dbc127e0598b48320cab4bc2d6a94a33e"
+    },
+    {
+      "path": "animation/marsan/marsan-defeat.png",
+      "sha256": "6957e57c181c13ce8f41cd8e2e444cfea8f69478b0983334a5ccd82cc98a94fe"
+    },
+    {
+      "path": "animation/marsan/marsan-hurt-crouched.png",
+      "sha256": "db655aa8a8093dccf886d2036ad55f1b80199732e3f9b68d1c7ac134f847435e"
+    },
+    {
+      "path": "animation/marsan/marsan-hurt-in-jump.png",
+      "sha256": "705ae55c27edabefe1c142a2a9ad855b3cb6e7d5224593a0f0638f19bc65f30b"
+    },
+    {
+      "path": "animation/marsan/marsan-hurt-low.png",
+      "sha256": "4309cc45916ad7c1a5b15158d15dbc835e2c79ba3ac8de3b70bc842bc0c9056c"
+    },
+    {
+      "path": "animation/marsan/marsan-hurt-medium.png",
+      "sha256": "96c9df92cff191ec72128f38015845777fa1a10aceb1fad8cda4f85d6bd01cdc"
+    },
+    {
+      "path": "animation/marsan/marsan-hurt.png",
+      "sha256": "23945c4c5df71978fcb4ed9e71299bb0f36d88bddde3a9d0d5f0cac5b129cd27"
+    },
+    {
+      "path": "animation/marsan/marsan-idle.png",
+      "sha256": "b794462e629f78bfdc67686894c9a04acbb601a62a9cd981d44506f7eb0ecde8"
+    },
+    {
+      "path": "animation/marsan/marsan-jump.png",
+      "sha256": "e807ec59ab12e7d9adafd01a5229bacf4ec2339f4a581472d98297fb26152774"
+    },
+    {
+      "path": "animation/marsan/marsan-knockdown.png",
+      "sha256": "40513b37b16452fcfb42668ab9c01626726c0fbd866b5dccb8eba09664c051b4"
+    },
+    {
+      "path": "animation/marsan/marsan-light-kick-low.png",
+      "sha256": "eb158a68b8aba3383095d8c85226a452b353075557fad37e4f9880074ab6e5d2"
+    },
+    {
+      "path": "animation/marsan/marsan-light-kick.png",
+      "sha256": "ed6e9307d52371f6c1ebe6c1c42a8847eb43a6d8b089598d835384289a3511a3"
+    },
+    {
+      "path": "animation/marsan/marsan-light-punch-low.png",
+      "sha256": "88b8d50ae3736cd8e39846646eee1042b30f4aea51fd71b74894ffcd1b461f9e"
+    },
+    {
+      "path": "animation/marsan/marsan-light-punch.png",
+      "sha256": "bb6328247e7904ad76e0971b0e0e3be84752f90701e6af168d9f2e5616d62871"
+    },
+    {
+      "path": "animation/marsan/marsan-medium-kick.png",
+      "sha256": "8d30a393a258b852badb760b8990aff8bf48a30d5d110fe45b9896c93e7def0b"
+    },
+    {
+      "path": "animation/marsan/marsan-medium-punch-low.png",
+      "sha256": "ffa4d566728353be0f02da730f59e75fbd7bfbd04e6fd06dded2b04ab97c9ed9"
+    },
+    {
+      "path": "animation/marsan/marsan-medium-punch.png",
+      "sha256": "193553cefd14401941cd486d36bdb536418fd53fff9250782a8c7d373263c0a4"
+    },
+    {
+      "path": "animation/marsan/marsan-strong-kick.png",
+      "sha256": "b91d675a68ae7b4f551abc57b63c004a7b9aa152b1c865c45013177490bff560"
+    },
+    {
+      "path": "animation/marsan/marsan-strong-punch-low.png",
+      "sha256": "8484becf42a69a55253c2016edeffeb530b6a450f9d0b27302d2d8aeb52d4b86"
+    },
+    {
+      "path": "animation/marsan/marsan-strong-punch.png",
+      "sha256": "85bedba2224297fbde33cc534c1d59d002ab6a24f957983e4188062e02ce3427"
+    },
+    {
+      "path": "animation/marsan/marsan-victory.png",
+      "sha256": "edae79cdd20f957e1fe43b028fb9a03272a2701c8dbe0265ea6a34540d31e09d"
+    },
+    {
+      "path": "animation/marsan/marsan-walk.png",
+      "sha256": "89098a078f45ff7955f632f1b724009aeb5f3ade04fff1829528b54b68c6f930"
+    },
+    {
+      "path": "animation/oscar/oscar-block.png",
+      "sha256": "5ff59ac83413baf400c6eb76ef23c91d3e6546861ebc1e3a6b89ffee828666fb"
+    },
+    {
+      "path": "animation/oscar/oscar-crouch-block.png",
+      "sha256": "c3d4a55b9d0836ba84f151123d2a4d1904e8dbf0120266cbcc3eb3ae9341f6f9"
+    },
+    {
+      "path": "animation/oscar/oscar-crouch.png",
+      "sha256": "181d1b350c18b13622fd594ca4b5ef5d25323b8d257f057642c31209b3b38180"
+    },
+    {
+      "path": "animation/oscar/oscar-defeat.png",
+      "sha256": "d9ddc77d36de84e2104da3f04ea0d049713586dce97f3e0ced6652a1230b89d1"
+    },
+    {
+      "path": "animation/oscar/oscar-hurt-crouched.png",
+      "sha256": "783bc68ad038b9c35c2248364513f3d50517ee77c392cd914ffea3727e8c08d2"
+    },
+    {
+      "path": "animation/oscar/oscar-hurt-in-jump.png",
+      "sha256": "8b2657ac1987df71cad22f6937cf63d4d37ce948e9bdddb6139babd75b6d4ed2"
+    },
+    {
+      "path": "animation/oscar/oscar-hurt-low.png",
+      "sha256": "3b6533c70fb9cf71a52bf84aa7aa427237abb2b769b32e1f7ecfe223f9ae53dd"
+    },
+    {
+      "path": "animation/oscar/oscar-hurt-medium.png",
+      "sha256": "1ea16b102ad8f94f1ec2e3401db61c7a1db8bd96814167e0009eebb720971f30"
+    },
+    {
+      "path": "animation/oscar/oscar-hurt.png",
+      "sha256": "b6dcdac1ec767d44276ea0da4e8abf5b726bb3b09a54f318a91a1b0fc54bd99f"
+    },
+    {
+      "path": "animation/oscar/oscar-idle.png",
+      "sha256": "7f7da4d1a178acb328e35bdc8eb74349cdf4a898aaa1fb44fab175f7dbd9283a"
+    },
+    {
+      "path": "animation/oscar/oscar-jump.png",
+      "sha256": "59d20de1410510504fd53e75a32f0c3c6a6191106d159c83dedb3f1d5f80832e"
+    },
+    {
+      "path": "animation/oscar/oscar-knockdown.png",
+      "sha256": "346ad76a7beaa2643370a47930a09e30d99a6c43e4fd14e128ff106ed8072960"
+    },
+    {
+      "path": "animation/oscar/oscar-light-kick-low.png",
+      "sha256": "225d7958723ccdef6b2ab50a4f93b508a4414fc393009a3d404b40fb0a355187"
+    },
+    {
+      "path": "animation/oscar/oscar-light-kick.png",
+      "sha256": "f648a6c20dd0c1f3f0431e5e32f8b48c97f8ad377302ec84388ac6e1404daa64"
+    },
+    {
+      "path": "animation/oscar/oscar-light-punch-low.png",
+      "sha256": "62ac44685617db0c3b4b86af1eba30c6e7613f5d964b0aca321aec2b75cb0f8c"
+    },
+    {
+      "path": "animation/oscar/oscar-light-punch.png",
+      "sha256": "cb11b5c7aa3729d474fe6c0cea2379388b2ed609e11a256402d37f0b8c1eedc4"
+    },
+    {
+      "path": "animation/oscar/oscar-medium-kick.png",
+      "sha256": "c224c6e0e630660a3e360594bf647a888813b270f14318cb775c4a02acdcfcb9"
+    },
+    {
+      "path": "animation/oscar/oscar-medium-punch-low.png",
+      "sha256": "ce3f12c041ca3d03de38eaffa5d3f534ded6978274fdeeaceb70fb2527e15ac8"
+    },
+    {
+      "path": "animation/oscar/oscar-medium-punch.png",
+      "sha256": "a179d9b230e6fbab5f6bbf93caf82ddb41e58807279a1be0f42858730dc963fd"
+    },
+    {
+      "path": "animation/oscar/oscar-strong-kick.png",
+      "sha256": "33605adc75e82c77e0663dc51685b059476632d35c44554cbf4b7fb2672c8df5"
+    },
+    {
+      "path": "animation/oscar/oscar-strong-punch-low.png",
+      "sha256": "c5b0c50c7585bcf86abb40c8fefbe8c3b2f8e5e1a098b11a1df9de71a4f5a470"
+    },
+    {
+      "path": "animation/oscar/oscar-strong-punch.png",
+      "sha256": "912db05c42385593a5df2b709dc44672a1dd81f82a56bd966ee0dbfd786baf0d"
+    },
+    {
+      "path": "animation/oscar/oscar-victory.png",
+      "sha256": "20394b7bf645340e1ae40aee1cede1f11f94b96e1db4bef0f8c36851cf50a6b8"
+    },
+    {
+      "path": "animation/oscar/oscar-walk.png",
+      "sha256": "80f6f41b5acc55404374c34686a81d8e6fc183246dbb1cc9d1206d745ba6a127"
+    },
+    {
+      "path": "animation/peppo/peppo-block.png",
+      "sha256": "5a5df67c0dad8774f50284511f3496b0cf32d7cccc9cda0e28a3aba3e82c794e"
+    },
+    {
+      "path": "animation/peppo/peppo-crouch-block.png",
+      "sha256": "225b8c04c85cf0c5384d860faa9e80cc989358c4ecb4bbe5d35a2bb2a017b073"
+    },
+    {
+      "path": "animation/peppo/peppo-crouch.png",
+      "sha256": "b029c8caf681607cb5434d799a6749093191b0c7fab2146e4421d536f4f65783"
+    },
+    {
+      "path": "animation/peppo/peppo-defeat.png",
+      "sha256": "1d9e00ddcb31d655d0fb4b7a477dd6ed72b802d9bea2fb902d96e6b4cf28b2f3"
+    },
+    {
+      "path": "animation/peppo/peppo-hurt-crouched.png",
+      "sha256": "e7f5d62966dfb7f4f7ccdff52d3fcc429d6b00029dc16e57e516f65e75645d90"
+    },
+    {
+      "path": "animation/peppo/peppo-hurt-in-jump.png",
+      "sha256": "a4be354956a2d53bc4c8952d2bc5ce03e598a414ead5d2b67da865f8c4704b07"
+    },
+    {
+      "path": "animation/peppo/peppo-hurt-low.png",
+      "sha256": "73c9fed6d84ff81dd6c3c06ae9c4d1ed55f0229b134c050ea2de02d5762b3cc1"
+    },
+    {
+      "path": "animation/peppo/peppo-hurt-medium.png",
+      "sha256": "fa2e33c73afef73536cf1f692126bed8978e57f05dbfb0728e6a79d625c38647"
+    },
+    {
+      "path": "animation/peppo/peppo-hurt.png",
+      "sha256": "c74814b22aaa455d5beb154065b0651d26c3f9f3dc0b9a5bddb5a0f000cd1e05"
+    },
+    {
+      "path": "animation/peppo/peppo-idle.png",
+      "sha256": "5a7af0a57a4cbbbbc9d5ac90b934cdbd485cff1102a37970adcbaa2dc4ca41c5"
+    },
+    {
+      "path": "animation/peppo/peppo-jump.png",
+      "sha256": "d9252bb77b61d4ef93bd18bb2ddba3b25269de531814488c20cb7a4f63af43a6"
+    },
+    {
+      "path": "animation/peppo/peppo-knockdown.png",
+      "sha256": "5aa2311a8815c8519275b7d853626957c6794eb643a80aa3087817dec5684b7e"
+    },
+    {
+      "path": "animation/peppo/peppo-light-kick-low.png",
+      "sha256": "78219ef29d33d855b005dea904724270180069398a34b527d5d41ace361a8301"
+    },
+    {
+      "path": "animation/peppo/peppo-light-kick.png",
+      "sha256": "2dd5c4f81b62ad9efcbd0fe07ff081c56cf02a0e9ea6328601cfbe541be174ee"
+    },
+    {
+      "path": "animation/peppo/peppo-light-punch-low.png",
+      "sha256": "994e1e3192c5ba5eb467b8cc7a491e9623ae580c69f98f0c9a435c1f105f82a0"
+    },
+    {
+      "path": "animation/peppo/peppo-light-punch.png",
+      "sha256": "f03ced95680c820fe42387e31512b9530cdc235f0201d3ddf47ad3699ac983e6"
+    },
+    {
+      "path": "animation/peppo/peppo-medium-kick.png",
+      "sha256": "ab38607c7802bb3c7744d590528429416a6293b3aa71f24fb5e55c991ed71655"
+    },
+    {
+      "path": "animation/peppo/peppo-medium-punch-low.png",
+      "sha256": "ebf3d51f9d74ecb660ad4a4947e0f2a3719ff8457006eb57c0dfcd4eae413f8e"
+    },
+    {
+      "path": "animation/peppo/peppo-medium-punch.png",
+      "sha256": "aa58e25ae90bdc3dc5eff6e469f83dd03548094e75f292eec2ed4ec003c066d7"
+    },
+    {
+      "path": "animation/peppo/peppo-strong-kick.png",
+      "sha256": "b73cf4bb1e7d4ad4b35f4382e98db94cdbf70437fc667854aab642ec9e6d4985"
+    },
+    {
+      "path": "animation/peppo/peppo-strong-punch-low.png",
+      "sha256": "76ebe247e6d6875aa56ae0a81b29a4ab36421e60da149ae076cf1634726ac277"
+    },
+    {
+      "path": "animation/peppo/peppo-strong-punch.png",
+      "sha256": "f41bfb037880d62d68fa1699d91b8838c861537489314bb46f8074c19f82f728"
+    },
+    {
+      "path": "animation/peppo/peppo-victory.png",
+      "sha256": "8f03c5fdad94648a05ab4f75cc46123ad0df80267937ee96de3b8f70c08eeef9"
+    },
+    {
+      "path": "animation/peppo/peppo-walk.png",
+      "sha256": "c21324f16d48b2bed6c6df061485a02bcb1d36425dadf3f546b9a40169474fc3"
+    },
+    {
+      "path": "animation/pippo/pippo-block.png",
+      "sha256": "88d986423334de1c23cc5d85a60e224b9be2bf42f3c58e1ef5fca4ca05532377"
+    },
+    {
+      "path": "animation/pippo/pippo-crouch-block.png",
+      "sha256": "9e0b59e1a4a18c0db63d055d5ffcbb53c4cbe7937bec0e4da3d351d38831b1b8"
+    },
+    {
+      "path": "animation/pippo/pippo-crouch.png",
+      "sha256": "4d617a9e3f25170f0f3ea39b3bb20e4e36c6c3089ae69c81c5d2d64e906da9d9"
+    },
+    {
+      "path": "animation/pippo/pippo-defeat.png",
+      "sha256": "19fda73be2e3f4c16fe8660b8568f8eb0528d94ff84ba95d0fc27a0ce3fbe0e1"
+    },
+    {
+      "path": "animation/pippo/pippo-hurt-crouched.png",
+      "sha256": "f8ea6613e0b61f789b37d7295bf02c2226520d036bbf09d3b4f7baf1753d0289"
+    },
+    {
+      "path": "animation/pippo/pippo-hurt-in-jump.png",
+      "sha256": "6d29a583818ddda1ea04ccbad4ec75782dedaeb5b0c15db54e32f28fefdd1746"
+    },
+    {
+      "path": "animation/pippo/pippo-hurt-low.png",
+      "sha256": "07dde1ff35571d8a8dc9768ed7e99f965cc5375d5c35705265dd061ec37d5840"
+    },
+    {
+      "path": "animation/pippo/pippo-hurt-medium.png",
+      "sha256": "dc3d6b8dcea44263c69a81b0f76968bc0e6b560f27fe968caf4cc129910b9ad6"
+    },
+    {
+      "path": "animation/pippo/pippo-hurt.png",
+      "sha256": "9a28eb438613df081ad094577604f2c4c9e47086b147e8560f5f3a8dd1b6a15f"
+    },
+    {
+      "path": "animation/pippo/pippo-idle.png",
+      "sha256": "ae4c3afe6f3e2e74831400f5c0c51f94749da79112f830c06e530e5c4a00effd"
+    },
+    {
+      "path": "animation/pippo/pippo-jump.png",
+      "sha256": "bc7e1bf98249d6afc0ea5245c0ae954d6711fe499c024dbfbefc41cee5b62b27"
+    },
+    {
+      "path": "animation/pippo/pippo-knockdown.png",
+      "sha256": "45dd6df61eb6b8c149075c9663919bbbbbc90da6e94a1ba0c7f28001faaf9ed2"
+    },
+    {
+      "path": "animation/pippo/pippo-light-kick-low.png",
+      "sha256": "c8ea2f6a9e7bc26cdb2b54aa02851401ad71431983f11e10b45333abb84ad81c"
+    },
+    {
+      "path": "animation/pippo/pippo-light-kick.png",
+      "sha256": "c1ae9cb654f66027809a5c6ce401725dd70b3f17bb75c7586990059f081d611c"
+    },
+    {
+      "path": "animation/pippo/pippo-light-punch-low.png",
+      "sha256": "f0acb1924ec8b816a47f7ea71af06ebeb58d24fe6fed6587b12016d80978b150"
+    },
+    {
+      "path": "animation/pippo/pippo-light-punch.png",
+      "sha256": "3c6cf515a2e4cf0b1da59c2ccd5c3c4b00f516ea2b027e421031443bac05cb02"
+    },
+    {
+      "path": "animation/pippo/pippo-medium-kick.png",
+      "sha256": "4eb5d7cc23b0103dbc1b3bc1321254f88fd37ae5974807452226be2da407ed50"
+    },
+    {
+      "path": "animation/pippo/pippo-medium-punch-low.png",
+      "sha256": "a21d45d18ec2d23e46e7a287e60708444b674b555e7a10e465d9f26501aeb280"
+    },
+    {
+      "path": "animation/pippo/pippo-medium-punch.png",
+      "sha256": "777799c4db695c5ed7cc988838d725d7353cb3e324a95dc2407cdc178157d19b"
+    },
+    {
+      "path": "animation/pippo/pippo-strong-kick.png",
+      "sha256": "19735d783eb5ce0055c5f26343a74d8212a4fcf7b6f76958b35e9d17b8294930"
+    },
+    {
+      "path": "animation/pippo/pippo-strong-punch-low.png",
+      "sha256": "027db66de8f83d2d1f0d957070f82d85f28bfdb83d156050211b2b59f0b8b4c5"
+    },
+    {
+      "path": "animation/pippo/pippo-strong-punch.png",
+      "sha256": "5f5259e7abffa28cf40c0436fd9a66c40ab6c0a848c02282be26ef5f16135fd2"
+    },
+    {
+      "path": "animation/pippo/pippo-victory.png",
+      "sha256": "d8dffb296f23949db2a75d9c34b66bb35656c3bc5ff4d4b336c5ff56278782d1"
+    },
+    {
+      "path": "animation/pippo/pippo-walk.png",
+      "sha256": "1ba9523a5dd1db705e3de225fd4b06ec586a3416690d885d320f10536edd5a82"
+    },
+    {
+      "path": "animation/sboz/sboz-block.png",
+      "sha256": "f55981f069b75add11fc838a73657751ab0322716061fd64e76ddf42b0ddb03c"
+    },
+    {
+      "path": "animation/sboz/sboz-crouch-block.png",
+      "sha256": "ec8b60fe963c709ab48cc69e0d2f922a153b1832adc25affe77f38c085703560"
+    },
+    {
+      "path": "animation/sboz/sboz-crouch.png",
+      "sha256": "1bf99862a33a5800111caa9dd3831248f37e806e6378f05f1110e38f4f9610f7"
+    },
+    {
+      "path": "animation/sboz/sboz-defeat.png",
+      "sha256": "fa6f5997b7fe18f2a26c4e6741f1a86de962948efde751e7bd5901813231a22b"
+    },
+    {
+      "path": "animation/sboz/sboz-hurt-crouched.png",
+      "sha256": "d1a52f9c88867eca357415a6ea953121418894e191e02457a241fa2e1d628268"
+    },
+    {
+      "path": "animation/sboz/sboz-hurt-in-jump.png",
+      "sha256": "b7f93859a197e0a551327f01c0c75c8dbbc09f90137d1408c31bbddcca01602f"
+    },
+    {
+      "path": "animation/sboz/sboz-hurt-low.png",
+      "sha256": "e2ef4ed9659e59ea34f571d1037d5317dbbb931efdb768e676e803b3407e144e"
+    },
+    {
+      "path": "animation/sboz/sboz-hurt-medium.png",
+      "sha256": "6d8cf2c139e620b10bd0e38dc154f8e82fa29334216595e011c9d9b231588600"
+    },
+    {
+      "path": "animation/sboz/sboz-hurt.png",
+      "sha256": "be591ee9329b203aea105f685084f6dbe420239b1b82b74ce1a3ad7f01558c96"
+    },
+    {
+      "path": "animation/sboz/sboz-idle.png",
+      "sha256": "e118831ba9ec7fc3add82b3a979bf076dfa9fbff1871bdd504378fac16a4ee5c"
+    },
+    {
+      "path": "animation/sboz/sboz-jump.png",
+      "sha256": "ae9ed15613e256a1f26d5ba5fe10fd508d5cbed2acab39633e002f39eb303ac1"
+    },
+    {
+      "path": "animation/sboz/sboz-knockdown.png",
+      "sha256": "9fb44d0754215a6caec3da84dfe18573bd718a3faa0bbce2a0344a66abe700a1"
+    },
+    {
+      "path": "animation/sboz/sboz-light-kick-low.png",
+      "sha256": "4c91a132fc872422f12a09d8e3861085b28f9ab9abc1ab9d6c2595f39e88aa38"
+    },
+    {
+      "path": "animation/sboz/sboz-light-kick.png",
+      "sha256": "abd880169413927b506e10e695520ca32aad487a6682c59308272dfa19417035"
+    },
+    {
+      "path": "animation/sboz/sboz-light-punch-low.png",
+      "sha256": "900a339fb72a96277da2f3f439518f8df6cb3ecd9f025f3f258a973e3fbe054c"
+    },
+    {
+      "path": "animation/sboz/sboz-light-punch.png",
+      "sha256": "9e6ba0db61f119c951627f98c90f4c2c2e01a066ff610d0bab062b1fa1c51984"
+    },
+    {
+      "path": "animation/sboz/sboz-medium-kick.png",
+      "sha256": "ee0b512f2b8af1ab09787ea4052ecd57de9f17221f98f0347c755c408604e31a"
+    },
+    {
+      "path": "animation/sboz/sboz-medium-punch-low.png",
+      "sha256": "7e0be98383f48b62acea4aff3a4abef221f8d12fc298195af12f3f6a7d4a9a09"
+    },
+    {
+      "path": "animation/sboz/sboz-medium-punch.png",
+      "sha256": "4b1468f2d4955c08d6e08aa41061fa29667357e66db56d5a61c410d322428a67"
+    },
+    {
+      "path": "animation/sboz/sboz-strong-kick.png",
+      "sha256": "953faa0e4d0c002ef3ddfe7411d3f2f4b80917f35cf284366a1df6076fd4f341"
+    },
+    {
+      "path": "animation/sboz/sboz-strong-punch-low.png",
+      "sha256": "5694b06f0936527da05304455877ebe04b5741b11efde84ef926adf01be80b91"
+    },
+    {
+      "path": "animation/sboz/sboz-strong-punch.png",
+      "sha256": "16722a33be758f960d653a11d3b91d52ca415024745d7e7b5deddb569dbead4f"
+    },
+    {
+      "path": "animation/sboz/sboz-victory.png",
+      "sha256": "0351fa9427c6d5490b31b058ae88c711617e8045e1490c5cb01eb4e4454c9f83"
+    },
+    {
+      "path": "animation/sboz/sboz-walk.png",
+      "sha256": "b877c0c85cf415658724eafa8d3bf85964c4f15599be1b274ba01a34457ef564"
+    }
+  ]
+}

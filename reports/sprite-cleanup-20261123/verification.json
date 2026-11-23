@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-23",
+  "frameNumbering": "JSON frame indices start at 0; report display starts at 1.",
+  "changedFrames": 20,
+  "changedPixels": 13431,
+  "outsideMasksChanged": 0,
+  "method": "ImageGen built-in edits used as reconstruction references; only reviewed original white-fill masks or missing fabric masks were composited. Existing opaque pixels and every pixel outside masks retained. Marsan source palette preserved; complete before/after RGBA cell comparisons verified all untouched frames.",
+  "items": [
+    {
+      "character": "elisa",
+      "move": "crouch",
+      "sourceSha256": "92f049f559753a48bc4dcb9336d1bc78ec2af0dc5b169e55b93405a78253ae9c",
+      "candidateSha256": "1c2408857004cdab2fcc20beeb51849cada63ec8af852250eea827b983263b54",
+      "changes": [
+        {
+          "frame": 1,
+          "kind": "white-fill-removal",
+          "pixels": 109,
+          "maskPixels": 109,
+          "outsideMaskChanged": 0
+        },
+        {
+          "frame": 2,
+          "kind": "white-fill-removal",
+          "pixels": 99,
+          "maskPixels": 99,
+          "outsideMaskChanged": 0
+        }
+      ]
+    },
+    {
+      "character": "elisa",
+      "move": "defeat",
+      "sourceSha256": "1dcaad311b4bb76e4fc2973f3e5ca44c05e2ef3fdea8b7e85b98cc8d0ec3884c",
+      "candidateSha256": "52415d36d8720c3e97543ae3c2941ab6b40435c5e281a3b352ffa1750776f260",
+      "changes": [
+        {
+          "frame": 0,
+          "kind": "white-fill-removal",
+          "pixels": 168,
+          "maskPixels": 168,
+          "outsideMaskChanged": 0
+        },
+        {
+          "frame": 1,
+          "kind": "white-fill-removal",
+          "pixels": 160,
+          "maskPixels": 160,
+          "outsideMaskChanged": 0
+        },
+        {
+          "frame": 2,
+          "kind": "white-fill-removal",
+          "pixels": 161,
+          "maskPixels": 161,
+          "outsideMaskChanged": 0
+        },
+        {
+          "frame": 3,
+          "kind": "white-fill-removal",
+          "pixels": 162,
+          "maskPixels": 162,
+          "outsideMaskChanged": 0
+        }
+      ]
+    },
+    {
+      "character": "elisa",
+      "move": "strong-kick",
+      "sourceSha256": "cbc3c11a1611c96650a5489306e172f17de37c9d6989644a667429224616644e",
+      "candidateSha256": "1d15872e28cadb24c0964aab62cc5bd075ac695c36cb099a8cebb88b4b4026e8",
+      "changes": [
+        {
+          "frame": 65,
+          "kind": "white-fill-removal",
+          "pixels": 209,
+          "maskPixels": 209,
+          "outsideMaskChanged": 0
+        },
+        {
+          "frame": 66,
+          "kind": "white-fill-removal",
+          "pixels": 194,
+          "maskPixels": 194,
+          "outsideMaskChanged": 0
+        }
+      ]
+    },
+    {
+      "character": "peppo",
+      "move": "block",
+      "sourceSha256": "5a5df67c0dad8774f50284511f3496b0cf32d7cccc9cda0e28a3aba3e82c794e",
+      "candidateSha256": "d52cd4f23373f19854c2ed51bac18646dcb4bdb3941cebfb14f5cf14bd3d4e24",
+      "changes": [
+        {
+          "frame": 2,
+          "kind": "white-fill-removal",
+          "pixels": 103,
+          "maskPixels": 103,
+          "outsideMaskChanged": 0
+        }
+      ]
+    },
+    {
+      "character": "marsan",
+      "move": "strong-punch-low",
+      "sourceSha256": "8484becf42a69a55253c2016edeffeb530b6a450f9d0b27302d2d8aeb52d4b86",
+      "candidateSha256": "69d7a566dd26171b6fb5c4c1b23d40fbf95a37c33989a36ec8ac0e7a07bb75bb",
+      "changes": [
+        {
+          "frame": 12,
+          "kind": "missing-sleeve",
+          "pixels": 1912,
+          "maskPixels": 1912,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-12",
+          "alignment": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 13,
+          "kind": "missing-sleeve",
+          "pixels": 1413,
+          "maskPixels": 1413,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-12",
+          "alignment": [
+            5,
+            -5
+          ]
+        },
+        {
+          "frame": 15,
+          "kind": "missing-sleeve",
+          "pixels": 1542,
+          "maskPixels": 1542,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            -5,
+            -3
+          ]
+        },
+        {
+          "frame": 16,
+          "kind": "missing-sleeve",
+          "pixels": 1344,
+          "maskPixels": 1344,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            0,
+            0
+          ]
+        },
+        {
+          "frame": 17,
+          "kind": "missing-sleeve",
+          "pixels": 1474,
+          "maskPixels": 1474,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            5,
+            2
+          ]
+        },
+        {
+          "frame": 18,
+          "kind": "missing-sleeve",
+          "pixels": 1008,
+          "maskPixels": 1008,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-16",
+          "alignment": [
+            -4,
+            5
+          ]
+        },
+        {
+          "frame": 20,
+          "kind": "missing-jeans",
+          "pixels": 1599,
+          "maskPixels": 1599,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-20",
+          "alignment": [
+            1,
+            0
+          ],
+          "protectedEffectPixels": 80
+        },
+        {
+          "frame": 21,
+          "kind": "missing-jeans",
+          "pixels": 1006,
+          "maskPixels": 1006,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 3
+        },
+        {
+          "frame": 22,
+          "kind": "missing-jeans",
+          "pixels": 672,
+          "maskPixels": 672,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 0
+        },
+        {
+          "frame": 23,
+          "kind": "missing-jeans",
+          "pixels": 42,
+          "maskPixels": 42,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 0
+        },
+        {
+          "frame": 24,
+          "kind": "missing-jeans",
+          "pixels": 54,
+          "maskPixels": 54,
+          "outsideMaskChanged": 0,
+          "generation": "marsan-21",
+          "alignment": [
+            0,
+            0
+          ],
+          "protectedEffectPixels": 0
+        }
+      ]
+    }
+  ],
+  "protectedEffectPixelsRestored": 83
+}

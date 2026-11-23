@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9hwqed004o83r8kd5a2z1r",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "ultra",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Medium Kick Low",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwnjnnwr00hnakhz3h8q0a5y",
+        "prompt": "Fixed full-body 16-bit pixel art fighting-game side view, facing RIGHT. Start from the exact supplied low kneeling crouch guard pose. Perform ONE SINGLE aggressive Ken-style SF6 crouching medium kick across the clip (one kick only, never twice), pure body motion in empty air: NEVER rise or stand up\u2014keep hips and head strictly low at crouch height throughout the entire wind-up, kick, and recovery. Marsan shifts low onto his bent support leg and fires ONE fierce, long straight low karate kick far forward along the ground baseline (kicking leg fully extended straight right just above the floor, rear arm braced back for balance, front fist in guard); brief apex hold at full reach, then smooth retraction back into the starting kneeling crouch guard pose. Preserve exact face, hairstyle, varsity jacket, jeans, sneakers, scale and pixel art. Keep entire body inside 512x512 with margin. Locked camera, no zoom, no pan, clean sprite only."
+      }
+    ]
+  }
+}
