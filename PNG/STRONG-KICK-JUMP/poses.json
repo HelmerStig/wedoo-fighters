@@ -1,0 +1,236 @@
+{
+  "move": "strong-kick-jump",
+  "label": "Calcio potente in salto",
+  "date": "2026-11-24",
+  "tool": "built-in image_gen",
+  "unusedReferences": [
+    "COTW_Vox_j.D.png"
+  ],
+  "poses": [
+    {
+      "character": "Alberto",
+      "slug": "alberto",
+      "file": "alberto-strong-kick-jump-pose.png",
+      "characterReference": "PNG/ALBERTO.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Ryu_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        65,
+        120,
+        447,
+        343
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "fb3d38edbb5b76400b7de378aea5a3214cd6bd3bcda2f867a0a622db70b84a9c"
+    },
+    {
+      "character": "Fabio Clara",
+      "slug": "fabio-clara",
+      "file": "fabio-clara-strong-kick-jump-pose.png",
+      "characterReference": "PNG/FABIO-CLARA.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Dee_Jay_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        42,
+        76,
+        474,
+        430
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "a1de69f779db08a23cc4bf0be86a43117ab0c5ff361cf1f5dc679b8662c998a5"
+    },
+    {
+      "character": "Sboz",
+      "slug": "sboz",
+      "file": "sboz-strong-kick-jump-pose.png",
+      "characterReference": "PNG/SBOZ.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Guile_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        36,
+        118,
+        474,
+        372
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "462a7fddc409c1551cef86d45b72587b94dca56bf7dfaf0d5d9aef949e2ec2a3"
+    },
+    {
+      "character": "Pippo",
+      "slug": "pippo",
+      "file": "pippo-strong-kick-jump-pose.png",
+      "characterReference": "PNG/PIPPO.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Terry_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        82,
+        106,
+        439,
+        417
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "9dab33e2a492c99b75590f33d264c6ad3c031746018d2eaacc4bdb8960449feb"
+    },
+    {
+      "character": "Peppo",
+      "slug": "peppo",
+      "file": "peppo-strong-kick-jump-pose.png",
+      "characterReference": "PNG/PEPPO.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Ken_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        51,
+        97,
+        470,
+        378
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "3a2bf22060dac72bffceb23fd99244112ce0290f73cff8cb82e6494b0e5f6ac9"
+    },
+    {
+      "character": "Oscar",
+      "slug": "oscar",
+      "file": "oscar-strong-kick-jump-pose.png",
+      "characterReference": "PNG/OSCARE.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Luke_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        37,
+        87,
+        458,
+        408
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "2d3c25e46b3d0f255b52b4580fa8fbb3ab636ed0d3697fb2d7c1407219c1e8fe"
+    },
+    {
+      "character": "Elisa",
+      "slug": "elisa",
+      "file": "elisa-strong-kick-jump-pose.png",
+      "characterReference": "PNG/Elisa.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Chun-Li_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        46,
+        79,
+        485,
+        444
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "e11c01c1be3097bfd5576f39fcef791959089e05e97945d6c0b00032b651a0ef"
+    },
+    {
+      "character": "Fra Tavarone",
+      "slug": "fra-tavarone",
+      "file": "fra-tavarone-strong-kick-jump-pose.png",
+      "characterReference": "PNG/FRA-TAVARONE.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Cammy_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        18,
+        96,
+        490,
+        393
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "b9fdd21ee7f49cc4ee1aaf2bbb782d19b072e407cec71df969ab48598773ae66"
+    },
+    {
+      "character": "Marsan",
+      "slug": "marsan",
+      "file": "marsan-strong-kick-jump-pose.png",
+      "characterReference": "PNG/MARSAN.png",
+      "poseReference": "REFERENCE/CALCIO POTENTE ALTO/SF6_Marisa_jhk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        37,
+        89,
+        478,
+        392
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "6012f2151002eff3e8a0c915cab67c08637c66e1086b9520344a6f7ba0a21e71"
+    }
+  ]
+}

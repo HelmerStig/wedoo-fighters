@@ -1,0 +1,24 @@
+{
+  "tool": "built-in image_gen",
+  "version": 2,
+  "specs": [
+    {
+      "move": "light-kick-jump",
+      "slug": "oscar",
+      "name": "Oscar",
+      "base": "OSCARE.png",
+      "ref": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Dee_Jay_jlk.png",
+      "fix": "Leg anatomy",
+      "prompt": "Generate ONE corrected 16-bit pixel-art full-body OSCAR LIGHT AIR KICK keyframe. Image 1 is identity/outfit/style reference; image 2 gives the intended raised-knee aerial kick. Preserve Oscar's short dark hair, clean-shaven face, black sweater/trousers/shoes and normal source proportions. Main requirement: BELIEVABLE LEG ANATOMY. Use a natural side/three-quarter view facing RIGHT, torso and pelvis rotating together rather than twisting spine. The front hip raises the lead thigh toward RIGHT, knee visibly bent about 100-120 degrees, shin angled up-right, black shoe naturally attached with toes aligned to shin. The other thigh drops from the OTHER hip and its knee folds back-left, boot trailing below/behind. Separate readable leg silhouettes, no crossed thighs, no backward knees, no corkscrew ankles, no dislocated hips. Keep both arms in a compact ordinary boxing guard. Adapt the reference for anatomical clarity, not its extreme foreshortening. Match base character physical scale and limb lengths; do not enlarge limbs. Crisp deliberate pixel clusters, dark pixel outlines, limited 16-bit shading. One isolated airborne pose, entire body inside conceptual square 512x512 with ample transparent padding. Genuinely transparent background and gaps, no ground, no shadow, no halo, no effects or text."
+    },
+    {
+      "move": "light-kick-jump",
+      "slug": "peppo",
+      "name": "Peppo",
+      "base": "PEPPO.png",
+      "ref": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Cammy_jlk.png",
+      "fix": "Arm and shoulder anatomy",
+      "prompt": "Generate ONE corrected 16-bit pixel-art full-body PEPPO LIGHT AIR KICK keyframe. Image 1 is ONLY identity/clothes/proportions/style; image 2 gives tucked airborne knee/short-kick idea. Preserve black knit beanie, short dark facial hair, black long sleeved top with rolled forearms, black trousers/shoes. Face RIGHT in a clear natural side/three-quarter view. Keep lead knee raised toward right/chest and other leg folded down/back in a compact believable jump. CRITICAL: replace reference's swept-back arms with an ORDINARY NATURAL BOXING GUARD IN FRONT OF BODY. Exactly two arms visibly emerging from left/right shoulders: near elbow bent down beside ribs, near fist by cheek; far elbow bent below shoulder, far fist slightly forward at upper chest level. Both wrists straight and thumbs correctly inward. No arm reaches behind back, no reversed elbows, no hand emerging from waist, no shoulder bent backward, no overlapping extra arm. Keep neck neutral, shoulders relaxed, natural torso/hips/legs. Match base anatomy and physical sprite scale. Crisp intentional 16-bit pixel clusters, limited shading and dark outlines, no smooth painting. One isolated full-body airborne keyframe centered in conceptual square 512x512, hands and shoes fully visible with generous transparent padding. Truly transparent background and gaps. No floor/shadow, haze, halo, trails, effects, lettering or additional figures."
+    }
+  ]
+}

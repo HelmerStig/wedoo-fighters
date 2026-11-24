@@ -1,0 +1,20 @@
+{
+  "tool": "built-in image_gen",
+  "version": 3,
+  "specs": [
+    {
+      "slug": "peppo",
+      "name": "Peppo",
+      "base": "PEPPO.png",
+      "ref": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Guile_jlk.png",
+      "prompt": "Create ONE full-body 16-bit pixel-art PEPPO light air kick keyframe. Image 1 is character identity, clothes, body proportions and pixel-art style reference ONLY: black knit beanie, short dark beard/stubble, black rolled-sleeve shirt, black pants/shoes. Image 2 is the USER-SELECTED Guile light jump kick pose: copy its compact front/side three-quarter airborne silhouette facing RIGHT, torso slightly reclined, lead thigh raised toward RIGHT with knee bent and boot foreshortened forward, other thigh and knee folded underneath/back-left. Both legs BENT, not a fully extended side kick. Match the reference arm arrangement with NATURAL SHOULDER ANATOMY: exactly two arms, rear upper arm lifted beside head with elbow bent and fist above/behind temple, forward arm bent in a readable guard near ribs/chest. No hand emerging from waist, no reversed shoulder/elbow, no arms twisted behind back. Correct natural hips, knees, ankles, wrists and neck; shoes attached in line with lower legs. Keep base source physique, proportions, facial features and clothes; no military overall or gloves. Crisp intentional 16-bit pixel clusters, dark outlines and limited shading matching base, no 3D/photo rendering. One isolated airborne full-body pose, square conceptual 512x512 canvas, standing-height-equivalent about 330px, generous transparent padding all around, no clipping or enlarging crouched pose to fill canvas. Genuinely transparent background and limb gaps, all clothes opaque. No gray/white backdrop, halo, smoke, shadow, ground, effects, text, extra limbs or extra figures."
+    },
+    {
+      "slug": "oscar",
+      "name": "Oscar",
+      "base": "OSCARE.png",
+      "ref": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Marisa_jlk.png",
+      "prompt": "Create ONE full-body 16-bit pixel-art OSCAR light air kick keyframe. Image 1 is character identity/clothes/body proportions/pixel-art style ONLY: clean-shaven man, short black hair, black sweater, black trousers and black shoes. Image 2 is the USER-SELECTED Marisa light jump kick pose and must strongly control silhouette: diagonal forward-diving torso inclined down toward RIGHT, head naturally following spine and looking RIGHT, forward knee tucked high under the right side of chest/hips with lower leg folded back beneath it, rear leg bent back toward LEFT with rear shoe pointing left/back; both feet airborne. BOTH knees remain BENT in the same compact dynamic arrangement as reference, no extended high kick, no scissor split, no crossed or corkscrewed legs. Arms sweep UP/BACK for balance at reference angles, exactly two arms emerging from natural shoulder sockets, elbows and wrists correctly oriented without dislocation. One raised arm can be partly behind torso but its anatomical connection must remain clear; no extra hand. Copy torso inclination and compact knee/leg arrangement faithfully while keeping Oscar's normal build, never Marisa's giant muscles. Natural neck/hips/knees/ankles, preserve source limb lengths and recognizable face/clothing. Match crisp 16-bit pixel clusters, solid outlines and limited shading, not smooth 3D or painterly style. Single isolated full-body pose centered in a square conceptual 512x512 transparent canvas, equivalent standing size around 330 pixels, generous padding, all hands/shoes/hair fully inside. True transparent background/gaps with black clothing fully opaque. No white/gray backing, halo, smoke, ground, shadow, effects, text or extra characters."
+    }
+  ]
+}

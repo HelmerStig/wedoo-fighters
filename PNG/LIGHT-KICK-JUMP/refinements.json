@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "character": "Oscar",
+      "reason": "Bend raised knee to follow Dee Jay light-kick reference",
+      "prompt": "Refine image 1 (Oscar sprite) using image 2 (exact Dee Jay light-air-kick pose). Change ONLY the raised kicking leg so the KNEE IS VISIBLY BENT as in Dee Jay reference, not a straight high kick. Match the reference hip/thigh/shin angles closely: forward thigh raised toward RIGHT, knee bent, lower leg opening steeply UP-RIGHT and boot near head height, foot naturally connected to ankle. Keep Oscar's back three-quarter camera view, head/face, black outfit, guard arms and other folded leg unchanged. Two legs total, correct knee and ankle anatomy. Keep original character scale and crisp 16-bit pixel style, full body inside square 512x512-equivalent canvas with transparent padding. Genuinely transparent background; no white/gray halo, no floor/shadow or effects."
+    }
+  ]
+}

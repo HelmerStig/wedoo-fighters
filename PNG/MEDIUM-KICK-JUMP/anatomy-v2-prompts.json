@@ -1,0 +1,15 @@
+{
+  "tool": "built-in image_gen",
+  "version": 2,
+  "specs": [
+    {
+      "move": "medium-kick-jump",
+      "slug": "marsan",
+      "name": "Marsan",
+      "base": "MARSAN.png",
+      "ref": "REFERENCE/CALCIO MEDIO ALTO/SF6_Cammy_jmk.png",
+      "fix": "Torso, hips and supporting leg anatomy",
+      "prompt": "Generate ONE corrected full-body 16-bit pixel-art MARSAN MEDIUM AIR KICK impact keyframe. Image 1 is character identity/outfit/proportion/style; image 2 suggests the high rightward aerial kick. Preserve short brown hair/stubble, red/navy/cream zip track jacket, blue jeans, brown shoes, exact ordinary source build. Replace the extreme split and backward spinal twist with a BELIEVABLE CONTROLLED MARTIAL-ARTS AIR KICK. Side/three-quarter view, face and chest turned RIGHT with a little chest visible to camera; head aligned naturally to neck. Torso leans back only moderately. Pelvis rotates together with shoulders. Leading leg kicks diagonally upper RIGHT at about 35-45 degrees, straight but not hyperextended, ankle naturally flexed and shoe aligned to calf. OTHER leg has knee clearly BENT behind/below hips and boot trailing down-left: NOT two straight legs in an extreme split. Both fists raised naturally in guard in front of torso, elbows bent without dislocation. Correct hip sockets, natural spine and neck, matched thigh/calf lengths, no stretched torso or impossible shoulder rotation. Keep base character physical scale and original limb proportions. Crisp 16-bit pixel clusters and limited shading matching base, no 3D/photo rendering. One isolated full-body airborne pose inside square conceptual 512x512 with ample transparent padding around hair/hands/shoes. Genuinely transparent background/gaps, no white backing, gray halo, shadow, floor, effects, text or extra limbs."
+    }
+  ]
+}

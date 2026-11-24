@@ -1,0 +1,239 @@
+{
+  "move": "medium-kick-jump",
+  "label": "Calcio medio in salto",
+  "date": "2026-11-24",
+  "tool": "built-in image_gen",
+  "unusedReferences": [],
+  "poses": [
+    {
+      "character": "Alberto",
+      "slug": "alberto",
+      "file": "alberto-medium-kick-jump-pose.png",
+      "characterReference": "PNG/ALBERTO.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Guile_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        78,
+        75,
+        443,
+        415
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "ac6710ba2536fbd05e44833196e534880541d9e8d3d4cc03bc9a9399552886e5"
+    },
+    {
+      "character": "Fabio Clara",
+      "slug": "fabio-clara",
+      "file": "fabio-clara-medium-kick-jump-pose.png",
+      "characterReference": "PNG/FABIO-CLARA.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Marisa_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        24,
+        101,
+        480,
+        379
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "aae08a1eb5e19b18d749f44fb14e230c5a2ddf1a28ba4b014fd635e4778f4a1a"
+    },
+    {
+      "character": "Sboz",
+      "slug": "sboz",
+      "file": "sboz-medium-kick-jump-pose.png",
+      "characterReference": "PNG/SBOZ.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Ryu_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        74,
+        105,
+        439,
+        380
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "10ac560e46faf7903a5005b79cb1bdd19f81ad1894077ef9287e49954ef958b1"
+    },
+    {
+      "character": "Pippo",
+      "slug": "pippo",
+      "file": "pippo-medium-kick-jump-pose.png",
+      "characterReference": "PNG/PIPPO.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Terry_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        66,
+        132,
+        419,
+        372
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "0bae031aa4599b973d380ac2debb7c99f3db66c7a3a7fdb36d8d73d46ede7b70"
+    },
+    {
+      "character": "Peppo",
+      "slug": "peppo",
+      "file": "peppo-medium-kick-jump-pose.png",
+      "characterReference": "PNG/PEPPO.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Luke_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        40,
+        136,
+        484,
+        395
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "0cb48b47f8449fa8eebc699959cea2a528cc14072f3d1728c67087f8d0872d2d"
+    },
+    {
+      "character": "Oscar",
+      "slug": "oscar",
+      "file": "oscar-medium-kick-jump-pose.png",
+      "characterReference": "PNG/OSCARE.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Dee_Jay_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        47,
+        78,
+        465,
+        425
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "3eb4f19c237ea58025845f83399e95f636180607864453c68795b34d14a597a5"
+    },
+    {
+      "character": "Elisa",
+      "slug": "elisa",
+      "file": "elisa-medium-kick-jump-pose.png",
+      "characterReference": "PNG/Elisa.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Chun-Li_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        56,
+        123,
+        464,
+        387
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "085772802281d6de1124fd34714531aa506affb61c98c5ff0ca96a5466c84352"
+    },
+    {
+      "character": "Fra Tavarone",
+      "slug": "fra-tavarone",
+      "file": "fra-tavarone-medium-kick-jump-pose.png",
+      "characterReference": "PNG/FRA-TAVARONE.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Mai_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        48,
+        88,
+        464,
+        432
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "574d99b79ce76606d751ac0e2580e87e2ea9da65800fee52437d13152019e86e"
+    },
+    {
+      "character": "Marsan",
+      "slug": "marsan",
+      "file": "marsan-medium-kick-jump-pose-v2.png",
+      "characterReference": "PNG/MARSAN.png",
+      "poseReference": "REFERENCE/CALCIO MEDIO ALTO/SF6_Cammy_jmk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        98,
+        100,
+        430,
+        395
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "1f3c03ae132ffdec4953f85d0ceee88a3d03a7e9471ff74cbf2fc4b6232b4d00",
+      "version": 2,
+      "previousFile": "marsan-medium-kick-jump-pose.png",
+      "previousPngSha256": "78cf7313a72d3c45f52b0592e097cec2ab07aee60329c17ceaa941c4de0ac2ee",
+      "changes": "Torso, hips and supporting leg anatomy",
+      "promptFile": "anatomy-v2-prompts.json"
+    }
+  ]
+}

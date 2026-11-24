@@ -1,0 +1,21 @@
+CALCIO POTENTE IN SALTO - 9 KEYFRAME
+
+Nove PNG 512x512 trasparenti, pixel art 16 bit, una reference per personaggio.
+Generati con image_gen integrato, mantenendo abiti e proporzioni del PNG base.
+Reference: REFERENCE/CALCIO POTENTE ALTO/
+
+Alberto: SF6_Ryu_jhk.png
+Fabio Clara: SF6_Dee_Jay_jhk.png
+Sboz: SF6_Guile_jhk.png
+Pippo: SF6_Terry_jhk.png
+Peppo: SF6_Ken_jhk.png
+Oscar: SF6_Luke_jhk.png
+Elisa: SF6_Chun-Li_jhk.png
+Fra Tavarone: SF6_Cammy_jhk.png
+Marsan: SF6_Marisa_jhk.png
+
+Anteprima: anteprima.png
+Prompt completi: prompts.json
+Associazioni e SHA256: poses.json
+Stato: keyframe pronti, animazioni ancora da creare e integrare.
+Reference non assegnate: COTW_Vox_j.D.png

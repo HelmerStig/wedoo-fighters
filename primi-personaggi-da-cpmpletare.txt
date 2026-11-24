@@ -26,11 +26,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Fabio Clara
     Basic moves:
@@ -60,11 +63,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Sboz
     Basic moves:
@@ -94,11 +100,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Pippo
     Basic moves:
@@ -128,11 +137,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggeroù
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Peppo
     Basic moves:
@@ -162,11 +174,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Oscar
     Basic moves:
@@ -196,12 +211,15 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio Leggero
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Elisa
     Basic moves:
@@ -231,11 +249,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (light kick)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Fra Tavarone
     Basic moves:
@@ -265,11 +286,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 - Marsan
     Basic moves:
@@ -299,11 +323,14 @@
     - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
+    - Calcio leggero in salto (keyframe pronto; animazione da creare)
     - Calcio leggero basso (Light Kick Low)
     - Calcio medio basso (Medium Kick Low)
     - Calcio potente basso (Heavy Kick Low Sweep)
     - Calcio medio (medium kick v2)
+    - Calcio medio in salto (keyframe pronto; animazione da creare)
     - Calcio potente (strong kick)
+    - Calcio potente in salto (keyframe pronto; animazione da creare)
 
 CALCIO MEDIO - INTEGRATO IL 20 NOVEMBRE 2026
 Tutti i nove personaggi: avanti e ritorno al contrario, senza duplicare il vertice.
@@ -386,3 +413,70 @@ Fra Tavarone: SF6_Guile_jhp.png
 Marsan: SF6_Marisa_jhp.png
 Anteprima: PNG/STRONG-PUNCH-JUMP/anteprima.png
 Prompt: PNG/STRONG-PUNCH-JUMP/prompts.json
+
+CALCIO LEGGERO IN SALTO - KEYFRAME CREATI IL 24 NOVEMBRE 2026
+Nove PNG trasparenti 512x512, pixel art 16 bit.
+Stato: keyframe pronti; animazioni e integrazione demo-moves da eseguire.
+Cartella: PNG/LIGHT-KICK-JUMP/
+Reference: REFERENCE/CALCIO LEGGERO ALTO/
+Alberto: SF6_Luke_jlk.png
+Fabio Clara: SF6_Marisa_jlk.png
+Sboz: SF6_Guile_jlk.png
+Pippo: SF6_Terry_jlk.png
+Peppo: SF6_Guile_jlk.png
+Oscar: SF6_Marisa_jlk.png
+Elisa: SF6_Chun-Li_jlk.png
+Fra Tavarone: SF6_Rashid_jlk.png
+Marsan: SF6_Jamie_jlk.png
+Anteprima: PNG/LIGHT-KICK-JUMP/anteprima.png
+Prompt: PNG/LIGHT-KICK-JUMP/prompts.json
+
+CALCIO MEDIO IN SALTO - KEYFRAME CREATI IL 24 NOVEMBRE 2026
+Nove PNG trasparenti 512x512, pixel art 16 bit.
+Stato: keyframe pronti; animazioni e integrazione demo-moves da eseguire.
+Cartella: PNG/MEDIUM-KICK-JUMP/
+Reference: REFERENCE/CALCIO MEDIO ALTO/
+Alberto: SF6_Guile_jmk.png
+Fabio Clara: SF6_Marisa_jmk.png
+Sboz: SF6_Ryu_jmk.png
+Pippo: SF6_Terry_jmk.png
+Peppo: SF6_Luke_jmk.png
+Oscar: SF6_Dee_Jay_jmk.png
+Elisa: SF6_Chun-Li_jmk.png
+Fra Tavarone: SF6_Mai_jmk.png
+Marsan: SF6_Cammy_jmk.png
+Anteprima: PNG/MEDIUM-KICK-JUMP/anteprima.png
+Prompt: PNG/MEDIUM-KICK-JUMP/prompts.json
+
+CALCIO POTENTE IN SALTO - KEYFRAME CREATI IL 24 NOVEMBRE 2026
+Nove PNG trasparenti 512x512, pixel art 16 bit.
+Stato: keyframe pronti; animazioni e integrazione demo-moves da eseguire.
+Cartella: PNG/STRONG-KICK-JUMP/
+Reference: REFERENCE/CALCIO POTENTE ALTO/
+Alberto: SF6_Ryu_jhk.png
+Fabio Clara: SF6_Dee_Jay_jhk.png
+Sboz: SF6_Guile_jhk.png
+Pippo: SF6_Terry_jhk.png
+Peppo: SF6_Ken_jhk.png
+Oscar: SF6_Luke_jhk.png
+Elisa: SF6_Chun-Li_jhk.png
+Fra Tavarone: SF6_Cammy_jhk.png
+Marsan: SF6_Marisa_jhk.png
+Anteprima: PNG/STRONG-KICK-JUMP/anteprima.png
+Prompt: PNG/STRONG-KICK-JUMP/prompts.json
+Reference alternativa non assegnata: COTW_Vox_j.D.png
+
+CALCI IN SALTO - CORREZIONI ANATOMICHE V2 DEL 24 NOVEMBRE 2026
+Light kick: Oscar (gambe riallineate), Peppo (braccia in guardia naturale).
+Medium kick: Marsan (busto e bacino coerenti, gamba arretrata piegata).
+PNG v2 selezionati in poses.json e anteprime; originali conservati.
+PNG/LIGHT-KICK-JUMP/oscar-light-kick-jump-pose-v2.png
+PNG/LIGHT-KICK-JUMP/peppo-light-kick-jump-pose-v2.png
+PNG/MEDIUM-KICK-JUMP/marsan-medium-kick-jump-pose-v2.png
+
+CALCIO LEGGERO IN SALTO - NUOVE REFERENCE V3 DEL 24 NOVEMBRE 2026
+Peppo: REFERENCE/CALCIO LEGGERO ALTO/SF6_Guile_jlk.png
+Oscar: REFERENCE/CALCIO LEGGERO ALTO/SF6_Marisa_jlk.png
+PNG v3 selezionati nelle anteprime e in poses.json; versioni precedenti conservate.
+Cartella: PNG/LIGHT-KICK-JUMP/
+Prompt: PNG/LIGHT-KICK-JUMP/reference-v3-prompts.json

@@ -1,0 +1,260 @@
+{
+  "move": "light-kick-jump",
+  "label": "Calcio leggero in salto",
+  "date": "2026-11-24",
+  "tool": "built-in image_gen",
+  "unusedReferences": [],
+  "poses": [
+    {
+      "character": "Alberto",
+      "slug": "alberto",
+      "file": "alberto-light-kick-jump-pose.png",
+      "characterReference": "PNG/ALBERTO.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Luke_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        76,
+        81,
+        392,
+        403
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "a5cde6cd26df9f30cabc96af7955c2c18a9f18d6e0f8d83340d6bab5f84d40f3"
+    },
+    {
+      "character": "Fabio Clara",
+      "slug": "fabio-clara",
+      "file": "fabio-clara-light-kick-jump-pose.png",
+      "characterReference": "PNG/FABIO-CLARA.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Marisa_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        55,
+        49,
+        412,
+        405
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "9162739a214ca310beb0a7c3db370c86ed290f6c6b4b82fcdd91ed60dda60309"
+    },
+    {
+      "character": "Sboz",
+      "slug": "sboz",
+      "file": "sboz-light-kick-jump-pose.png",
+      "characterReference": "PNG/SBOZ.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Guile_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        123,
+        88,
+        423,
+        396
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "cb5643051e86078a7d8dfed7eeafc078c19a61d7e7ba1a4f906b8cb5bf45a24c"
+    },
+    {
+      "character": "Pippo",
+      "slug": "pippo",
+      "file": "pippo-light-kick-jump-pose.png",
+      "characterReference": "PNG/PIPPO.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Terry_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        76,
+        76,
+        428,
+        451
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "6b7e8e85183d61481d8d32db8dfe29a7b97fb7df6cbb29c00f61f5121406d2d0"
+    },
+    {
+      "character": "Peppo",
+      "slug": "peppo",
+      "file": "peppo-light-kick-jump-pose-v3.png",
+      "characterReference": "PNG/PEPPO.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Guile_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        137,
+        98,
+        390,
+        377
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "5e40c9999872c75e9354273f3d2c2813a34b754303d892085e198fb7b5263686",
+      "version": 3,
+      "previousFile": "peppo-light-kick-jump-pose-v2.png",
+      "previousPngSha256": "39df66c9fcfc9562e38a4677b9f038b0f2cf8b3dad1b2f5b00ffcada7e300bc3",
+      "changes": "New user-selected light kick reference",
+      "promptFile": "reference-v3-prompts.json",
+      "history": [
+        {
+          "file": "peppo-light-kick-jump-pose-v2.png",
+          "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Cammy_jlk.png",
+          "pngSha256": "39df66c9fcfc9562e38a4677b9f038b0f2cf8b3dad1b2f5b00ffcada7e300bc3",
+          "version": 2
+        }
+      ]
+    },
+    {
+      "character": "Oscar",
+      "slug": "oscar",
+      "file": "oscar-light-kick-jump-pose-v3.png",
+      "characterReference": "PNG/OSCARE.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Marisa_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        74,
+        58,
+        431,
+        414
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "4fe7ffb52a880bf3e7c913945d8b5f04cc301c1fc8121dc2bc097b16e57caba6",
+      "version": 3,
+      "previousFile": "oscar-light-kick-jump-pose-v2.png",
+      "previousPngSha256": "7436ef7ac408c04dd659e11eba9373d9be92ce0c5fd12c0e3ecf7fe3ae825eb4",
+      "changes": "New user-selected light kick reference",
+      "promptFile": "reference-v3-prompts.json",
+      "history": [
+        {
+          "file": "oscar-light-kick-jump-pose-v2.png",
+          "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Dee_Jay_jlk.png",
+          "pngSha256": "7436ef7ac408c04dd659e11eba9373d9be92ce0c5fd12c0e3ecf7fe3ae825eb4",
+          "version": 2
+        }
+      ]
+    },
+    {
+      "character": "Elisa",
+      "slug": "elisa",
+      "file": "elisa-light-kick-jump-pose.png",
+      "characterReference": "PNG/Elisa.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Chun-Li_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        72,
+        40,
+        442,
+        464
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "6455c0d49fa96adbc67b5cd7b2b5f639d39a846aa87db156962e917e24a4b0bb"
+    },
+    {
+      "character": "Fra Tavarone",
+      "slug": "fra-tavarone",
+      "file": "fra-tavarone-light-kick-jump-pose.png",
+      "characterReference": "PNG/FRA-TAVARONE.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Rashid_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        47,
+        75,
+        465,
+        405
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "04cec804e63d87fe4b9f89876503699e135a31589cd8b19640da3cc1334d3386"
+    },
+    {
+      "character": "Marsan",
+      "slug": "marsan",
+      "file": "marsan-light-kick-jump-pose.png",
+      "characterReference": "PNG/MARSAN.png",
+      "poseReference": "REFERENCE/CALCIO LEGGERO ALTO/SF6_Jamie_jlk.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        41,
+        96,
+        459,
+        379
+      ],
+      "tool": "built-in image_gen",
+      "normalization": "Whole square canvas resized with nearest-neighbor; generated alpha preserved.",
+      "status": "ready",
+      "pngSha256": "9f45b6392099a35758a8da8a1c77440dbc60e28435ee789ccc3481a0ebc2b01a"
+    }
+  ]
+}
