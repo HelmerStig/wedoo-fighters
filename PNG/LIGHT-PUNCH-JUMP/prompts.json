@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "sboz": {
+    "characterReference": "PNG/SBOZ.png",
+    "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/7.png"
+  },
+  "existingAssets": {
+    "note": "Gli altri otto PNG erano gia presenti e sono stati conservati senza modifiche. I loro prompt originali non sono disponibili."
+  }
+}

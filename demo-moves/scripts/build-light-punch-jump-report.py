@@ -1,0 +1,23 @@
+"""Build jump jab timing report from the current manifest, atlas and timing markers."""
+from pathlib import Path
+from PIL import Image
+import json, csv, html
+ROOT=Path(__file__).resolve().parents[2]
+REPORT=ROOT/'demo-moves/reports';POSES=REPORT/'light-punch-jump-poses';POSES.mkdir(exist_ok=True)
+read=lambda p:json.loads((ROOT/p).read_text(encoding='utf-8-sig'))
+manifest=read('animation/light-punch-jump-manifest.json');timing=read('animation/light-punch-jump-timing.json')
+rows=[];records=[]
+for item in sorted(manifest['items'],key=lambda i:i['character'].lower()):
+ t=next(t for t in timing['items'] if t['character']==item['character']);assert t['sourceSheetId']==item['sourceSheetId']
+ peak=t['impactFrame'];count=item['frames'];slug=item['character'].lower();atlas=read(item['atlas']);f=atlas['frames'][str(peak)]['frame']
+ im=Image.open(ROOT/item['png']).convert('RGBA');im.crop((f['x'],f['y'],f['x']+512,f['y']+512)).save(POSES/(slug+'.png'))
+ before=timing['impactMs']/peak;after=(timing['durationMs']-timing['impactMs'])/(count-peak)
+ records.append([item['character'],count,item['sourceRangeFrames'],peak+1,t['impactSourceFrame'],timing['impactMs'],timing['durationMs'],round(before,6),round(after,6),item['sourceSheetId'],item['sourceStart'],item['sourceEnd'],item['playback'],item['speedMultiplier']])
+ name=html.escape(item['character']);link='../personaggio.html?id='+slug
+ rows.append(f'<tr><th><a href="{link}">{name}</a></th><td><img src="light-punch-jump-poses/{slug}.png" width="128" height="128" alt="Impatto in salto di {name}" loading="lazy"></td><td>{peak+1} / {count}</td><td>{timing["impactMs"]} ms</td><td>{timing["durationMs"]} ms</td><td>{before:.2f} / {after:.2f} ms</td><td>{item["sourceStart"]}&ndash;{item["sourceEnd"]} ({item["sourceRangeFrames"]} celle)</td><td>{item["speedMultiplier"]}&times; (informativo)</td></tr>')
+with (REPORT/'light-punch-jump-timing.csv').open('w',encoding='utf-8-sig',newline='') as f:
+ w=csv.writer(f);w.writerow(['Personaggio','Frame playback','Celle sorgente','Frame impatto da 1','Frame impatto sorgente da 0','Impatto ms','Totale ms','Durata frame prima ms','Durata frame dopo ms','Source sheet ID','Source start','Source end','Playback','Velocita salvata informativa']);w.writerows(records)
+unique=sum(i['sourceRangeFrames'] for i in manifest['items']);cells=sum(i['frames'] for i in manifest['items'])
+page='''<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pugno leggero in salto · Timing</title><style>body{font:15px/1.5 system-ui;background:#141815;color:#eff3eb;padding:24px;margin:0}main{max-width:1400px;margin:auto}a{color:#ceef80}p{max-width:1000px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:10px;border-bottom:1px solid #3b493c}thead{background:#273329}img{background:#cbd3ca;border-radius:8px;image-rendering:pixelated;object-fit:contain}</style><main><a href="../mosse.html?move=light-punch-jump">Apri la mossa nella demo</a><h1>Pugno leggero in salto · Timing</h1><p>Aggiornamento 24 novembre 2026. Nove personaggi, spritesheet AutoSprite <b>Light Punch Jump</b>. Stesso timing del Pugno leggero: la posa di impatto scelta inizia a <b>250 ms</b> e il ciclo termina a <b>500 ms</b> a velocità 1×. Durate variabili prima e dopo il marcatore. Il frame indicato nella tabella parte da 1; gli intervalli sorgente e i file JSON partono da 0.</p><p>Selezionate le ultime versioni disponibili, mantenendo gli intervalli salvati e applicando il taglio una sola volta. Tutti gli intervalli contengono preparazione e colpo, senza recupero: vengono eseguiti avanti e poi al contrario, senza duplicare il frame di inversione. Le pose estese successive al primo impatto restano nella sequenza. Il ciclo torna alla guardia in aria iniziale, con loop attivo per default. La velocità salvata su AutoSprite è un metadato e non modifica questi timing.</p>'''+f'<p>{unique} celle sorgente e {cells} celle di playback verificate pixel per pixel dopo l’esportazione. Dimensioni originali 512×512, margini, scala e colori conservati. Nessuna generazione AutoSprite: 0 crediti.</p>'+'''<p><a href="light-punch-jump-timing.csv" download>Scarica i timing CSV</a></p><div class="table-wrap"><table><thead><tr><th>Personaggio</th><th>Impatto</th><th>Frame (da 1)</th><th>Impatto</th><th>Totale</th><th>Durata frame prima / dopo</th><th>Intervallo sorgente (da 0)</th><th>Velocità salvata</th></tr></thead><tbody>'''+''.join(rows)+'</tbody></table></div></main></html>'
+(REPORT/'light-punch-jump-timing.html').write_text(page,encoding='utf-8')
+print(f'Report generato: {len(rows)} personaggi, {unique} celle sorgente, {cells} frame playback.')

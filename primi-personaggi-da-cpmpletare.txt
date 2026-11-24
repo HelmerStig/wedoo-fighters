@@ -17,6 +17,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -48,6 +49,7 @@
     
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -79,6 +81,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -110,6 +113,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -141,6 +145,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -172,6 +177,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -204,6 +210,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -235,6 +242,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -266,6 +274,7 @@
 
     Attack:
     - Pugno leggero
+    - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
     - Pugno medio basso (Medium Punch Low)
@@ -288,3 +297,37 @@ CALCIO POTENTE - INTEGRATO IL 20 NOVEMBRE 2026
 Tutti i nove personaggi: strong kick, avanti e ritorno al contrario.
 Impatto 0,50 s; durata totale 0,90 s.
 Report: demo-moves/reports/strong-kick-timing.html
+
+PUGNO LEGGERO IN SALTO - KEYFRAME AGGIORNATI IL 24 NOVEMBRE 2026
+Otto nuovi keyframe v2 generati dalle reference; prime versioni conservate.
+Sboz: mantenuta la versione corrente approvata.
+Stato: keyframe conservati; animazioni Light Punch Jump integrate in demo-moves il 24 novembre 2026.
+Nuovi v2: PNG trasparenti 512x512, pixel art 16 bit, attacco verso destra.
+Cartella: PNG/LIGHT-PUNCH-JUMP/
+Associazioni e file:
+- Alberto: alberto-light-punch-jump-pose-v2.png | reference 5.png
+- Fabio Clara: fabio-clara-light-punch-jump-pose-v2.png | reference 8.png
+- Sboz: sboz-light-punch-jump-pose.png | reference 7.png
+- Pippo: pippo-light-punch-jump-pose-v2.png | reference 1.png
+- Peppo: peppo-light-punch-jump-pose-v2.png | reference 2.png
+- Oscar: oscar-light-punch-jump-pose-v2.png | reference 4.png
+- Elisa: elisa-light-punch-jump-pose-v2.png | reference 6.png
+- Fra Tavarone: fra-tavarone-light-punch-jump-pose-v2.png | reference COTW_Hotaru_j.A.png
+- Marsan: marsan-light-punch-jump-pose-v2.png | reference 3.png
+Reference: REFERENCE/PUGNO LEGGERO ALTO/
+Anteprima: PNG/LIGHT-PUNCH-JUMP/anteprima-v2.png
+Prompt: PNG/LIGHT-PUNCH-JUMP/prompts-v2.json
+Riepilogo asset: PNG/LIGHT-PUNCH-JUMP/poses-v2.json
+
+PUGNO LEGGERO IN SALTO - INTEGRATO IL 24 NOVEMBRE 2026
+Tutti i nove personaggi: ultime versioni AutoSprite Light Punch Jump, intervalli salvati rispettati.
+Preparazione e colpo avanti, recupero al contrario senza duplicare il frame finale.
+Impatto 0,25 s; durata totale 0,50 s a 1x; loop attivo per default.
+152 celle sorgente 512x512 conservate; 295 frame di playback verificati pixel per pixel.
+Il ritorno riutilizza le celle nel PNG tramite atlas, senza duplicarne i pixel.
+Velocita salvata su AutoSprite solo informativa. Nessuna generazione, 0 crediti.
+Report: demo-moves/reports/light-punch-jump-timing.html
+Manifest: animation/light-punch-jump-manifest.json
+Timing: animation/light-punch-jump-timing.json
+Alberto reintegrato: ultima variante Light Punch Jump del 24 novembre 2026, intervallo 0-15, 16 celle e 31 frame avanti/indietro; impatto 0,25 s e durata 0,50 s.
+Oscar reintegrato: ultima variante Light Punch Jump del 24 novembre 2026, intervallo 0-28, 29 celle e 57 frame avanti/indietro; impatto 0,25 s e durata 0,50 s.

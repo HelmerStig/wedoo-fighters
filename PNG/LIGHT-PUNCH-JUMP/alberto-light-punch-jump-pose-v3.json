@@ -1,0 +1,27 @@
+{
+  "tool": "built-in image_gen",
+  "character": "Alberto",
+  "move": "Light Punch Jump",
+  "version": 3,
+  "characterReference": "PNG/ALBERTO.png",
+  "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/4.png",
+  "prompt": "Use case: stylized-concept. Create ONE full-body 16-bit pixel-art fighting-game KEYFRAME of ALBERTO performing a light punch in the air, facing RIGHT. Image 1 is character identity/style ONLY: bald man with black rectangular glasses, dark beard, green sweater, light gray trousers and white/red sneakers. Preserve his exact face, age, clothing, palette and anatomical proportions. Image 2 is the ACTION POSE reference and must strongly dictate the pose: reproduce its forward-tilted almost horizontal diagonal torso, head looking down and RIGHT, compact punching arm directed diagonally down-right with the same elbow bend as the reference, rear guarding hand near cheek, one knee folded high outward behind hips toward upper LEFT, other leg stretching diagonally back toward lower LEFT. Copy the reference's shoulder twist, foreshortening and arrangement of arms and legs carefully. It must look like that specific airborne diving gesture, NOT an upright midair jab, NOT seated with both knees tucked, and NOT a kick. Do not add a longer fully straight punching arm if absent from reference. Natural neck and shoulder connection, correct fingers and thumb, exactly two arms and two legs. Use Alberto's bare hands and normal shoes, not the reference costume. Match source 16-bit pixel art with crisp intentional pixel clusters and limited shading, no smooth painting, no glows. Conceptual 512x512 square canvas, preserve the source character's physical size: equivalent standing anatomical height about 335px, head about 50px; bent pose can be shorter. Full body entirely inside canvas with generous transparent padding on every side, approximately centered; do not enlarge the character to fill frame. Genuinely transparent background, no floor, no shadows, no effects, no lettering, no extra characters, no multiple panels. Deliver one isolated impact pose.",
+  "backgroundCleanupPrompt": "Edit the supplied generated sprite image. BACKGROUND REMOVAL ONLY. Keep the Alberto pixel-art character, body pose, hands, glasses, beard, green sweater, gray pants and sneakers UNCHANGED, same exact composition, size and colors. Remove ALL white background, ALL light gray smoky haze/halo and any shadow outside the sharply outlined character. There must be truly transparent alpha everywhere outside the sprite silhouette, also in gaps between legs and arms. The gray pants themselves and white parts of shoes must remain fully opaque and intact. Crisp pixel-art boundary, no feathered glow, no gray halo, no smoke, no visual effects, no checkerboard painted into image. Output one isolated clean character on a genuinely transparent square canvas.",
+  "file": "alberto-light-punch-jump-pose-v3.png",
+  "canvas": [
+    512,
+    512
+  ],
+  "normalization": "Whole square canvas resized to 512x512 with nearest-neighbor; generated alpha preserved.",
+  "generatedSize": [
+    1254,
+    1254
+  ],
+  "visibleBounds": [
+    69,
+    41,
+    483,
+    430
+  ],
+  "pngSha256": "39e6641da5b29e978fa6bbe144cf35ef150e5868fcc915e55f4289d2bd07da12"
+}

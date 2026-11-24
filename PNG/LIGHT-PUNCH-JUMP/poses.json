@@ -1,0 +1,168 @@
+{
+  "move": "light-punch-jump",
+  "description": "Keyframe di impatto del pugno leggero in salto",
+  "poses": [
+    {
+      "character": "alberto",
+      "file": "alberto-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        169,
+        8,
+        432,
+        306
+      ],
+      "pngSha256": "ff4520ad83a71ab6c48462b22fe292684243e9da0350e033da3f8783e4780e6f",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "fabio-clara",
+      "file": "fabio-clara-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        177,
+        6,
+        425,
+        295
+      ],
+      "pngSha256": "ed0dd0ad919f0fa6c4ed018682fad4ef4a4b4eabaf2b8e8664a5cce640fc8298",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "sboz",
+      "file": "sboz-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        194,
+        10,
+        427,
+        334
+      ],
+      "pngSha256": "c1c976a1999ce8e70e1e15dea1d5b399399663dc5a5b03af2229358cf9632aab",
+      "status": "generated",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/7.png"
+    },
+    {
+      "character": "pippo",
+      "file": "pippo-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        200,
+        12,
+        437,
+        276
+      ],
+      "pngSha256": "b15a6fe2a0538e479272b84076b34d8f0ed2f1104952d684ce066e081405df91",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "peppo",
+      "file": "peppo-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        211,
+        12,
+        441,
+        278
+      ],
+      "pngSha256": "5d18dc7f22190f85b90cec09753a71d9b4c17cd1df09811cb828f53abaf52d77",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "oscar",
+      "file": "oscar-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        197,
+        29,
+        428,
+        312
+      ],
+      "pngSha256": "da98d82483ea809a98e40d2e3e7b87d15747a68931d650554e8ebec707515d2e",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "elisa",
+      "file": "elisa-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        207,
+        8,
+        416,
+        258
+      ],
+      "pngSha256": "ecf052c5d671a2168fe4ddde3929b9b0947680a4b6f35dd1d3bb862b4862e025",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "fra-tavarone",
+      "file": "fra-tavarone-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        185,
+        20,
+        408,
+        271
+      ],
+      "pngSha256": "9b5330b72f370885065a8ed42d7b0e3803fb5adca598dd6c3f755582734b0074",
+      "status": "existing-preserved",
+      "poseReference": null
+    },
+    {
+      "character": "marsan",
+      "file": "marsan-light-punch-jump-pose.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "facing": "right",
+      "visibleBounds": [
+        195,
+        7,
+        423,
+        276
+      ],
+      "pngSha256": "70adc458f83d776fae56c384d7d2c831591a61c46b198b4032c75495f8fe4673",
+      "status": "existing-preserved",
+      "poseReference": null
+    }
+  ]
+}

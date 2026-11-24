@@ -1,0 +1,22 @@
+PUGNO LEGGERO IN SALTO - VERSIONI 2
+
+Otto nuovi keyframe con suffisso -v2.png. Otto originali conservati byte per byte.
+Sboz non rigenerato ne modificato: mantenuta la versione corrente, modificata esternamente durante la generazione.
+Nuovi asset: 512x512, PNG RGBA con trasparenza, attacco rivolto a destra.
+Generazione con image_gen integrato usando il PNG base per identita e stile e una reference distinta per la postura.
+
+Associazioni:
+alberto: 5.png
+fabio-clara: 8.png
+pippo: 1.png
+peppo: 2.png
+oscar: 4.png
+elisa: 6.png
+fra-tavarone: COTW_Hotaru_j.A.png
+marsan: 3.png
+Sboz: 7.png, prima versione approvata con modifiche esterne conservate.
+
+anteprima-v2.png include gli otto nuovi asset e Sboz corrente.
+prompts-v2.json contiene tutti i prompt e le associazioni.
+poses-v2.json contiene dimensioni, riferimenti e SHA256.
+I canvas generati sono ridotti interamente con nearest-neighbor, senza ridimensionamenti anisotropici o modifica manuale dei corpi.

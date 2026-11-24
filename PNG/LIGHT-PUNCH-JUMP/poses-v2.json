@@ -1,0 +1,210 @@
+{
+  "version": 2,
+  "tool": "built-in image_gen",
+  "poses": [
+    {
+      "character": "alberto",
+      "file": "alberto-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/ALBERTO.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/5.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        92,
+        78,
+        439,
+        427
+      ],
+      "facing": "right",
+      "pngSha256": "9dfd5571233ec1e9301158cdb60b4a9f6c27830272a7a3ca55c3cd802e93679c",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "fabio-clara",
+      "file": "fabio-clara-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/FABIO-CLARA.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/8.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        50,
+        79,
+        473,
+        413
+      ],
+      "facing": "right",
+      "pngSha256": "0fa66239223acc186a445b8b265adc5db044d2b4d423f652e0214d31dc075cf4",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "pippo",
+      "file": "pippo-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/PIPPO.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/1.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        121,
+        103,
+        455,
+        407
+      ],
+      "facing": "right",
+      "pngSha256": "7b4aa18929df9b07358df6cd853f310fb90050f76bebd1152bbaf8efec195c06",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "peppo",
+      "file": "peppo-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/PEPPO.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/2.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        118,
+        98,
+        405,
+        416
+      ],
+      "facing": "right",
+      "pngSha256": "85706ff938f6802a6d0a963323ff462c0e5b01d0c2ed88035319a5d7464d56cd",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "oscar",
+      "file": "oscar-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/OSCARE.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/4.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        57,
+        100,
+        456,
+        406
+      ],
+      "facing": "right",
+      "pngSha256": "9448477e8283f9c8c6f413e833b33da2b959d185d79e24d91d550078f7d7cb57",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "elisa",
+      "file": "elisa-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/Elisa.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/6.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        125,
+        110,
+        415,
+        396
+      ],
+      "facing": "right",
+      "pngSha256": "2d98e0c0ac256254fcf2d82190f99506d2e7a393177069b1a18456d91c227599",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "fra-tavarone",
+      "file": "fra-tavarone-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/FRA-TAVARONE.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/COTW_Hotaru_j.A.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        76,
+        110,
+        477,
+        356
+      ],
+      "facing": "right",
+      "pngSha256": "be237809d9d1441f5fa7b54670d64b670d21cdcd55af6c483205112e14fdfafe",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    },
+    {
+      "character": "marsan",
+      "file": "marsan-light-punch-jump-pose-v2.png",
+      "characterReference": "PNG/MARSAN.png",
+      "poseReference": "REFERENCE/PUGNO LEGGERO ALTO/3.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        98,
+        109,
+        433,
+        422
+      ],
+      "facing": "right",
+      "pngSha256": "6573a9f0b7781c15029da103568379c07d6791033d4f99750211ac7107aa2476",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor. No anatomy or nonuniform scaling changes."
+    }
+  ],
+  "originalHashesAtStart": {
+    "alberto-light-punch-jump-pose.png": "ff4520ad83a71ab6c48462b22fe292684243e9da0350e033da3f8783e4780e6f",
+    "elisa-light-punch-jump-pose.png": "ecf052c5d671a2168fe4ddde3929b9b0947680a4b6f35dd1d3bb862b4862e025",
+    "fabio-clara-light-punch-jump-pose.png": "ed0dd0ad919f0fa6c4ed018682fad4ef4a4b4eabaf2b8e8664a5cce640fc8298",
+    "fra-tavarone-light-punch-jump-pose.png": "9b5330b72f370885065a8ed42d7b0e3803fb5adca598dd6c3f755582734b0074",
+    "marsan-light-punch-jump-pose.png": "70adc458f83d776fae56c384d7d2c831591a61c46b198b4032c75495f8fe4673",
+    "oscar-light-punch-jump-pose.png": "da98d82483ea809a98e40d2e3e7b87d15747a68931d650554e8ebec707515d2e",
+    "peppo-light-punch-jump-pose.png": "5d18dc7f22190f85b90cec09753a71d9b4c17cd1df09811cb828f53abaf52d77",
+    "pippo-light-punch-jump-pose.png": "b15a6fe2a0538e479272b84076b34d8f0ed2f1104952d684ce066e081405df91",
+    "sboz-light-punch-jump-pose.png": "c1c976a1999ce8e70e1e15dea1d5b399399663dc5a5b03af2229358cf9632aab"
+  },
+  "externallyChangedFilesRetained": [
+    {
+      "file": "sboz-light-punch-jump-pose.png",
+      "startSha256": "c1c976a1999ce8e70e1e15dea1d5b399399663dc5a5b03af2229358cf9632aab",
+      "currentSha256": "4bdddef6b079a3ef114edcbfbfc016ee5f192d6677d79da29c19c840bfb57317",
+      "note": "Changed externally during generation; current file retained without modification."
+    }
+  ],
+  "sboz": "Non rigenerato. Conservata la versione corrente modificata esternamente durante la generazione."
+}

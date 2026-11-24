@@ -1,0 +1,11 @@
+PUGNO LEGGERO IN SALTO - 9 KEYFRAME
+
+PNG individuali 512x512 con trasparenza, rivolti a destra.
+anteprima.png: confronto dei nove personaggi.
+poses.json: dimensioni, impronte SHA256 e provenienza disponibile.
+prompts.json: prompt e riferimenti usati per Sboz, generato tramite image_gen integrato.
+
+Gli altri otto file erano gia presenti e sono stati conservati senza modifiche.
+I loro prompt e associazioni originali alle reference non erano disponibili.
+Sboz: reference 7.png; riduzione dell intero canvas con nearest-neighbor e sola traslazione per allineare il padding alla serie.
+Nessuna animazione o integrazione AutoSprite eseguita.

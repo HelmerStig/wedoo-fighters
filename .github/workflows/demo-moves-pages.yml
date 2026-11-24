@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: '24'
       - name: Check demo assets and playback
-        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/knockdown.test.cjs demo-moves/scripts/hurt-jump.test.cjs demo-moves/scripts/animation-gallery.test.cjs demo-moves/scripts/light-punch-low.test.cjs demo-moves/scripts/medium-punch-low.test.cjs demo-moves/scripts/strong-punch-low.test.cjs demo-moves/scripts/light-kick-low.test.cjs demo-moves/scripts/medium-kick-low.test.cjs demo-moves/scripts/heavy-kick-low-sweep.test.cjs
+        run: node --test demo-moves/scripts/verify.test.cjs demo-moves/scripts/knockdown.test.cjs demo-moves/scripts/hurt-jump.test.cjs demo-moves/scripts/animation-gallery.test.cjs demo-moves/scripts/light-punch-low.test.cjs demo-moves/scripts/light-punch-jump.test.cjs demo-moves/scripts/medium-punch-low.test.cjs demo-moves/scripts/strong-punch-low.test.cjs demo-moves/scripts/light-kick-low.test.cjs demo-moves/scripts/medium-kick-low.test.cjs demo-moves/scripts/heavy-kick-low-sweep.test.cjs
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'

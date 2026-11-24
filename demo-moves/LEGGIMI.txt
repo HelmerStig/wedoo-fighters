@@ -1108,3 +1108,10 @@ esecuzione utile si riutilizzano i file gia compressi ancora validi.
 Per registrare futuri ritocchi verificati: python
 demo-moves/scripts/register-animation-edits.py animation/NOME-manifest.json
 --characters SLUG --note DESCRIZIONE. Non si modificano automaticamente i PNG.
+
+Pugno leggero in salto (Light Punch Jump) - 24 novembre 2026
+Nove personaggi, intervalli salvati, avanti e ritorno al contrario.
+Impatto a 250 ms, ciclo 500 ms a 1x. Celle del ritorno condivise tramite atlas.
+Report: reports/light-punch-jump-timing.html
+Rigenera il report: python demo-moves/scripts/build-light-punch-jump-report.py
+Manifest e timing: animation/light-punch-jump-{manifest,timing}.json

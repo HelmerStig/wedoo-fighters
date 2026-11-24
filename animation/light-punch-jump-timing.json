@@ -1,0 +1,98 @@
+{
+  "animation": "light-punch-jump",
+  "updatedAt": "2026-11-24",
+  "durationMs": 500,
+  "impactMs": 250,
+  "items": [
+    {
+      "character": "ALBERTO",
+      "sourceSheetId": "cmwumvecx00jopdu14sl03ddh",
+      "sourceStart": 0,
+      "sourceEnd": 15,
+      "impactFrame": 11,
+      "impactSourceFrame": 11,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "FABIO-CLARA",
+      "sourceSheetId": "cmwukgyqe00wtta6hvvyfypg6",
+      "sourceStart": 0,
+      "sourceEnd": 8,
+      "impactFrame": 6,
+      "impactSourceFrame": 6,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "SBOZ",
+      "sourceSheetId": "cmwul7l83003oow2yjszgo5rl",
+      "sourceStart": 0,
+      "sourceEnd": 13,
+      "impactFrame": 10,
+      "impactSourceFrame": 10,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "PIPPO",
+      "sourceSheetId": "cmwukxlr9000p14cc90pt7pw5",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "PEPPO",
+      "sourceSheetId": "cmwukyu0s001414cc1w2i6qjc",
+      "sourceStart": 0,
+      "sourceEnd": 21,
+      "impactFrame": 20,
+      "impactSourceFrame": 20,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "Oscar",
+      "sourceSheetId": "cmwumnds200iemn7gcbrkf46a",
+      "sourceStart": 0,
+      "sourceEnd": 28,
+      "impactFrame": 25,
+      "impactSourceFrame": 25,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "Elisa",
+      "sourceSheetId": "cmwul42j10060ivteye3xnwv5",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 13,
+      "impactSourceFrame": 13,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "FRA-TAVARONE",
+      "sourceSheetId": "cmwuki9ef00mh9x5bo3765z44",
+      "sourceStart": 0,
+      "sourceEnd": 10,
+      "impactFrame": 7,
+      "impactSourceFrame": 7,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    },
+    {
+      "character": "MARSAN",
+      "sourceSheetId": "cmwul5v8v0033ow2y7w0cgj37",
+      "sourceStart": 0,
+      "sourceEnd": 16,
+      "impactFrame": 16,
+      "impactSourceFrame": 16,
+      "playback": "forward-reverse",
+      "note": "Posa di impatto scelta visivamente e confrontata con la sagoma. Intervallo salvato con solo preparazione e colpo: recupero al contrario, senza duplicare il vertice. Eventuali pose estese successive al marcatore sono conservate."
+    }
+  ]
+}
