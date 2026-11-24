@@ -64,7 +64,10 @@ def main():
         entry.update(pngSha256=sha(encoded),colorMetadataPreserved=True)
     if manifest_path.exists():manifest_path.write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
     inventory=json.loads(subprocess.check_output(['node','demo-moves/scripts/build-pages.mjs','--inventory'],cwd=ROOT,text=True))
-    if inventory['bytes']<=990_000_000:
+    # A valid restored cache can remain slightly above the optional 990 MB
+    # target after exhausting useful lossless conversions. Do not retry every
+    # unhelpful PNG on every build when the actual Pages limit is satisfied.
+    if inventory['bytes']<=1_000_000_000:
         print('Pages PNG: already within budget, no new compression needed.');return
     CACHE.mkdir(exist_ok=True)
     projected=inventory['bytes']

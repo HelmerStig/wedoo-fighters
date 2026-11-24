@@ -1097,3 +1097,14 @@ Controllo alpha/bianchi: piccoli residui bianchi sorgente di Peppo nei frame
 non presentano difetti evidenti nei candidati esaminati. 0 crediti AutoSprite.
 Oscar: piede al bordo destro della cella nel frame 11 (da 1), gia tagliato
 nel sorgente; documentato nel report, scala e padding conservati.
+
+23 novembre 2026 - Fix build Pages dopo ritocchi manuali
+Registrati i PNG correnti di Peppo e Oscar per heavy-kick-low-sweep senza
+modificarli: aggiornati hash PNG/frame e conservata provenienza originale.
+Il workflow verifica asset e playback prima della compressione; gli errori
+di integrita vengono segnalati subito. Cache Actions delle copie PNG
+lossless convalidata tramite SHA del sorgente e della copia: dopo la prima
+esecuzione utile si riutilizzano i file gia compressi ancora validi.
+Per registrare futuri ritocchi verificati: python
+demo-moves/scripts/register-animation-edits.py animation/NOME-manifest.json
+--characters SLUG --note DESCRIZIONE. Non si modificano automaticamente i PNG.

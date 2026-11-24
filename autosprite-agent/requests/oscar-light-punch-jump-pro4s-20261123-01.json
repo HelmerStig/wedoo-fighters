@@ -1,0 +1,21 @@
+{
+  "characterId": "cmv9im946000t14mbeyraqs7u",
+  "request": {
+    "videoTier": "pro",
+    "durationSec": 4,
+    "frameCount": 49,
+    "frameSize": 512,
+    "withSound": false,
+    "removeBg": "default",
+    "animations": [
+      {
+        "kind": "custom",
+        "name": "Light Punch Jump",
+        "rawPrompt": true,
+        "loop": false,
+        "poseId": "cmwqb4bwa0020853whn2hsctk",
+        "prompt": "Fixed full-body 16-bit pixel art side view, facing RIGHT. Start from the exact supplied mid-air tucked jump pose. Animate ONE SINGLE smooth, deliberate mid-air lead jab shadowboxing alone in completely empty air (strictly ONE single arm extension only, never a second punch, zero visual overlays around the fist): staying suspended at the exact same mid-air height in the upper-center of the canvas with knees tucked (NEVER fall down), Oscar first coils his lead shoulder gently back; then he smoothly extends his FAR left arm once straight forward and slightly downward (~25 degrees) to the right while keeping his NEAR right fist tucked in guard near his chin; he holds full arm extension cleanly for a moment, then smoothly pulls the arm back into the exact starting tucked mid-air jump guard pose. Keep entire body well inside 512x512 with wide margin. Preserve Oscar's face, solid black outfit, sneakers, scale and pixel art. Locked camera, no zoom, no pan, plain clean sprite only."
+      }
+    ]
+  }
+}

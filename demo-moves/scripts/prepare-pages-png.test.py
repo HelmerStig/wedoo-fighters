@@ -1,5 +1,6 @@
 """Palette conversion must preserve every RGBA value, including transparent RGB."""
-import importlib.util,unittest,io
+import importlib.util,unittest,io,json,tempfile
+from unittest.mock import patch
 from pathlib import Path
 from PIL import Image,PngImagePlugin
 import struct
@@ -7,6 +8,24 @@ spec=importlib.util.spec_from_file_location('pages_png',Path(__file__).with_name
 module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 class PaletteTests(unittest.TestCase):
+    def test_valid_near_limit_cache_skips_futile_recompression(self):
+        with tempfile.TemporaryDirectory(prefix='wedoo-pages-budget-') as temp:
+            root=Path(temp)
+            # No files inventory is needed unless compression actually starts.
+            # A restored 995 MB package already meets the real Pages limit.
+            inventory=json.dumps({'bytes':995_000_000}).encode()
+            with patch.object(module,'ROOT',root),patch.object(module,'CACHE',root/'cache'),patch.object(module.subprocess,'check_output',return_value=inventory):
+                module.main()
+            self.assertFalse((root/'cache').exists())
+
+    def test_package_above_real_limit_still_fails_without_lossless_savings(self):
+        with tempfile.TemporaryDirectory(prefix='wedoo-pages-budget-') as temp:
+            root=Path(temp)
+            inventory=json.dumps({'bytes':1_000_000_001,'files':[],'optimized':{}}).encode()
+            with patch.object(module,'ROOT',root),patch.object(module,'CACHE',root/'cache'),patch.object(module.subprocess,'check_output',return_value=inventory):
+                with self.assertRaisesRegex(RuntimeError,'below 1 GB'):
+                    module.main()
+
     def test_existing_palette_recompression_preserves_alpha_and_hidden_rgb(self):
         image=Image.new('P',(256,2));image.putpalette([v for i in range(256) for v in (i,255-i,i//2)])
         image.putdata(list(range(256))*2);image.info['transparency']=bytes(range(256))
