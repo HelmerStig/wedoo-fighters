@@ -1,0 +1,21 @@
+PUGNO FORTE IN SALTO - 9 KEYFRAME
+
+Nove PNG individuali 512x512 con trasparenza, pixel art 16 bit.
+Ogni personaggio usa una reference distinta della cartella REFERENCE/PUGNO POTENTE ALTO.
+Le viste di spalle e le inclinazioni della reference sono mantenute; il colpo e rivolto a destra, in alto a destra o in basso a destra secondo la posa.
+
+Alberto: SF6_Ken_jhp.png
+Fabio Clara: SF6_Zangief_jhp.png
+Sboz: SF6_Terry_jhp.png
+Pippo: SF6_Ryu_jhp.png
+Peppo: SF6_Ed_jhp.png
+Oscar: COTW_Terry_Bogard_j.C.png
+Elisa: SF6_Cammy_jhp.png
+Fra Tavarone: SF6_Guile_jhp.png
+Marsan: SF6_Marisa_jhp.png
+
+anteprima.png: confronto dei nove keyframe.
+poses.json: associazioni, dimensioni e SHA256 dei PNG.
+prompts.json: prompt completi; generazione con image_gen integrato.
+Riduzione tecnica dell intero canvas con nearest-neighbor; nessuna deformazione del corpo.
+Stato: sole pose di impatto; animazioni AutoSprite e integrazione demo-moves non eseguite.

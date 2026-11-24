@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "character": "Elisa",
+      "operation": "Remove generated white/gray backdrop, preserve character and pose",
+      "prompt": "BACKGROUND REMOVAL ONLY. Keep the supplied Elisa pixel-art character exactly as drawn: identical pose, scale, face, long brown hair, blue cardigan, gray pants and black boots. Remove the entire white and gray backdrop, ALL haze, ALL halo/shadow outside the character, including every gap between arms and body or legs. Output genuine transparency everywhere outside the crisp character silhouette. Preserve the gray pants, white shirt and skin fully opaque. No painting a checkerboard; no white backing; no glow; no smoke. Do not alter her anatomy, limb positions or any costume detail. Preserve the same square canvas and full-body framing."
+    }
+  ]
+}

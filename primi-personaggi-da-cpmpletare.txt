@@ -20,8 +20,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -52,8 +54,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -84,8 +88,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -116,8 +122,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggeroù
     - Calcio leggero basso (Light Kick Low)
@@ -148,8 +156,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -180,8 +190,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -213,8 +225,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -245,8 +259,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -277,8 +293,10 @@
     - Pugno leggero in salto (Light Punch Jump)
     - Pugno leggero basso (Light Punch Low)
     - Pugno medio
+    - Pugno medio in salto (keyframe pronto; animazione da creare)
     - Pugno medio basso (Medium Punch Low)
     - Pugno forte
+    - Pugno forte in salto (keyframe pronto; animazione da creare)
     - Pugno forte basso (Strong Punch Low)
     - Calcio leggero
     - Calcio leggero basso (Light Kick Low)
@@ -331,3 +349,40 @@ Manifest: animation/light-punch-jump-manifest.json
 Timing: animation/light-punch-jump-timing.json
 Alberto reintegrato: ultima variante Light Punch Jump del 24 novembre 2026, intervallo 0-15, 16 celle e 31 frame avanti/indietro; impatto 0,25 s e durata 0,50 s.
 Oscar reintegrato: ultima variante Light Punch Jump del 24 novembre 2026, intervallo 0-28, 29 celle e 57 frame avanti/indietro; impatto 0,25 s e durata 0,50 s.
+
+PUGNO MEDIO IN SALTO - KEYFRAME CREATI IL 24 NOVEMBRE 2026
+Nove pose di impatto, una reference distinta per personaggio.
+Stato: keyframe pronti; animazioni AutoSprite e integrazione demo-moves ancora da eseguire.
+PNG trasparenti 512x512, pixel art 16 bit.
+Cartella: PNG/MEDIUM-PUNCH-JUMP/
+Reference: REFERENCE/PUGNO MEDIO ALTO/
+Associazioni:
+- Alberto: SF6_Ryu_jmp.png | alberto-medium-punch-jump-pose.png
+- Fabio Clara: SF6_Akuma_jmp.png | fabio-clara-medium-punch-jump-pose.png
+- Sboz: SF6_Guile_jmp.png | sboz-medium-punch-jump-pose.png
+- Pippo: SF6_Terry_jmp.png | pippo-medium-punch-jump-pose.png
+- Peppo: SF6_Ed_jmp.png | peppo-medium-punch-jump-pose.png
+- Oscar: SF6_Marisa_jmp.png | oscar-medium-punch-jump-pose.png
+- Elisa: SF6_Cammy_jmp.png | elisa-medium-punch-jump-pose.png
+- Fra Tavarone: SF6_Rashid_jmp.png | fra-tavarone-medium-punch-jump-pose.png
+- Marsan: SF6_Jamie_jmp.png | marsan-medium-punch-jump-pose.png
+Anteprima: PNG/MEDIUM-PUNCH-JUMP/anteprima.png
+Prompt: PNG/MEDIUM-PUNCH-JUMP/prompts.json
+Riepilogo asset: PNG/MEDIUM-PUNCH-JUMP/poses.json
+
+PUGNO FORTE IN SALTO - KEYFRAME CREATI IL 24 NOVEMBRE 2026
+Nove PNG trasparenti 512x512, una reference distinta per personaggio.
+Stato: keyframe pronti; animazioni e integrazione demo-moves da eseguire.
+Cartella: PNG/STRONG-PUNCH-JUMP/
+Reference: REFERENCE/PUGNO POTENTE ALTO/
+Alberto: SF6_Ken_jhp.png
+Fabio Clara: SF6_Zangief_jhp.png
+Sboz: SF6_Terry_jhp.png
+Pippo: SF6_Ryu_jhp.png
+Peppo: SF6_Ed_jhp.png
+Oscar: COTW_Terry_Bogard_j.C.png
+Elisa: SF6_Cammy_jhp.png
+Fra Tavarone: SF6_Guile_jhp.png
+Marsan: SF6_Marisa_jhp.png
+Anteprima: PNG/STRONG-PUNCH-JUMP/anteprima.png
+Prompt: PNG/STRONG-PUNCH-JUMP/prompts.json

@@ -1,0 +1,224 @@
+{
+  "move": "medium-punch-jump",
+  "label": "Pugno medio in salto",
+  "tool": "built-in image_gen",
+  "date": "2026-11-24",
+  "poses": [
+    {
+      "character": "Alberto",
+      "slug": "alberto",
+      "file": "alberto-medium-punch-jump-pose.png",
+      "characterReference": "PNG/ALBERTO.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Ryu_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        154,
+        47,
+        359,
+        458
+      ],
+      "pngSha256": "d4766d7c9d221d354b7fe16f1514966c8eead6380ce324300d25cb4bdcbba0d0",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Fabio Clara",
+      "slug": "fabio-clara",
+      "file": "fabio-clara-medium-punch-jump-pose.png",
+      "characterReference": "PNG/FABIO-CLARA.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Akuma_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        102,
+        92,
+        411,
+        376
+      ],
+      "pngSha256": "a073a0186a51c7ce62c10687eef845c39847a3c77d6dee339c566c5d3b9ca4dc",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Sboz",
+      "slug": "sboz",
+      "file": "sboz-medium-punch-jump-pose.png",
+      "characterReference": "PNG/SBOZ.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Guile_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        91,
+        80,
+        426,
+        451
+      ],
+      "pngSha256": "45b58c3da809666749e439e29093091de6772773bf61a59d5c186e8533ca2ada",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Pippo",
+      "slug": "pippo",
+      "file": "pippo-medium-punch-jump-pose.png",
+      "characterReference": "PNG/PIPPO.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Terry_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        88,
+        48,
+        440,
+        464
+      ],
+      "pngSha256": "5cd2b7f60f30d770724f357aa437c492390ccad7e83f9fa4623c4fe48101baf9",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Peppo",
+      "slug": "peppo",
+      "file": "peppo-medium-punch-jump-pose.png",
+      "characterReference": "PNG/PEPPO.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Ed_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        76,
+        88,
+        384,
+        422
+      ],
+      "pngSha256": "19a081cf360c8c829c2f737297fb6ebd9a8a12996635b84e5307a470240f6e4c",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Oscar",
+      "slug": "oscar",
+      "file": "oscar-medium-punch-jump-pose.png",
+      "characterReference": "PNG/OSCARE.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Marisa_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        79,
+        82,
+        454,
+        453
+      ],
+      "pngSha256": "2d6d2d5b541728407863ad608058cb7f2ae8aaea9a948f75dee913e0886e18d9",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Elisa",
+      "slug": "elisa",
+      "file": "elisa-medium-punch-jump-pose.png",
+      "characterReference": "PNG/Elisa.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Cammy_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        125,
+        43,
+        405,
+        451
+      ],
+      "pngSha256": "c0d6168475dfb18d0d8085b9d414c77c65e9655fda71654cd1746e1225499c9d",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Fra Tavarone",
+      "slug": "fra-tavarone",
+      "file": "fra-tavarone-medium-punch-jump-pose.png",
+      "characterReference": "PNG/FRA-TAVARONE.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Rashid_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        111,
+        77,
+        420,
+        445
+      ],
+      "pngSha256": "d4d5a4b81216f94009268e122006be4785cd375e84e3dedc853e8c76b663aa63",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    },
+    {
+      "character": "Marsan",
+      "slug": "marsan",
+      "file": "marsan-medium-punch-jump-pose.png",
+      "characterReference": "PNG/MARSAN.png",
+      "poseReference": "REFERENCE/PUGNO MEDIO ALTO/SF6_Jamie_jmp.png",
+      "canvas": [
+        512,
+        512
+      ],
+      "generatedSize": [
+        1254,
+        1254
+      ],
+      "visibleBoundsAlpha128": [
+        103,
+        57,
+        404,
+        429
+      ],
+      "pngSha256": "e6ca2e7446c0bdf3a02cd8b89c3bc213b46d6e0ed3e271d5baea5b3fe265de3e",
+      "normalization": "Whole square canvas resized to 512x512 using nearest-neighbor; generated alpha preserved. No nonuniform scaling or anatomy changes.",
+      "status": "keyframe-ready-animation-not-created"
+    }
+  ]
+}

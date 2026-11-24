@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "edits": [
+    {
+      "character": "Peppo",
+      "operation": "Background removal",
+      "prompt": "BACKGROUND REMOVAL ONLY. Preserve the entire supplied Peppo pixel-art sprite exactly: pose, scale, composition, black beanie, black shirt and pants, black shoes, skin, hands and every clothing detail. Remove ALL white/gray background, smoky haze, shadows and halo outside the sharply outlined character, including all gaps between limbs. Output genuinely transparent alpha everywhere outside the character. Keep black fabric fully opaque; do not erase parts of arms or legs. No white backdrop, no painted checkerboard, no glow, no smoke. Same square full-body canvas; all character pixels preserved."
+    }
+  ]
+}

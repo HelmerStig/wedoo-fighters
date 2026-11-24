@@ -1,0 +1,23 @@
+PUGNO MEDIO IN SALTO - 9 KEYFRAME
+
+Nove PNG individuali 512x512 con trasparenza, pixel art 16 bit.
+Ogni personaggio usa una reference distinta della cartella REFERENCE/PUGNO MEDIO ALTO.
+Le viste di spalle e le inclinazioni della reference sono mantenute; il colpo e rivolto a destra, in alto a destra o in basso a destra secondo la posa.
+
+Alberto: SF6_Ryu_jmp.png
+Fabio Clara: SF6_Akuma_jmp.png
+Sboz: SF6_Guile_jmp.png
+Pippo: SF6_Terry_jmp.png
+Peppo: SF6_Ed_jmp.png
+Oscar: SF6_Marisa_jmp.png
+Elisa: SF6_Cammy_jmp.png
+Fra Tavarone: SF6_Rashid_jmp.png
+Marsan: SF6_Jamie_jmp.png
+
+anteprima.png: confronto dei nove keyframe.
+poses.json: associazioni, dimensioni e SHA256 dei PNG.
+prompts.json: prompt completi; generazione con image_gen integrato.
+Riduzione tecnica dell intero canvas con nearest-neighbor; nessuna deformazione del corpo.
+Stato: sole pose di impatto; animazioni AutoSprite e integrazione demo-moves non eseguite.
+
+cleanup-prompts.json: passaggio image_gen aggiuntivo per rimuovere il fondale generato su Elisa, conservandone la posa.
